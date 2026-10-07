@@ -37,7 +37,8 @@
     "writing",
     "vocabulary",
     "grammar",
-    "communication"
+    "communication",
+    "pronunciation"
   ],
   "canDos": [
     {
@@ -84,7 +85,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-02",
@@ -118,7 +120,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -128,7 +132,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-03",
@@ -162,7 +167,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -172,7 +179,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-04",
@@ -206,7 +214,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -216,7 +226,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-05",
@@ -251,7 +262,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -261,7 +274,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-06",
@@ -295,7 +309,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -305,7 +321,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-07",
@@ -335,7 +352,9 @@
         "taskCompletion": 0.8,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -345,7 +364,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-08",
@@ -378,7 +398,9 @@
         "taskCompletion": 0.85,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-03"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -388,7 +410,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-09",
@@ -421,7 +444,9 @@
         "taskCompletion": 0.8,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-03"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -431,7 +456,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-10",
@@ -465,7 +491,9 @@
         "taskCompletion": 0.8,
         "confidence": 4
       },
-      "recovery": [],
+      "recovery": [
+        "SP-A2-03"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -475,7 +503,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-11",
@@ -520,7 +549,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-12",
@@ -568,7 +598,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-13",
@@ -616,7 +647,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-14",
@@ -663,7 +695,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-15",
@@ -711,7 +744,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-A2-16",
@@ -752,7 +786,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-01",
@@ -808,7 +843,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-02",
@@ -867,7 +903,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-03",
@@ -919,7 +956,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-04",
@@ -976,7 +1014,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-05",
@@ -1026,7 +1065,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-06",
@@ -1076,7 +1116,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-07",
@@ -1131,7 +1172,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-08",
@@ -1181,7 +1223,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-09",
@@ -1231,7 +1274,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-10",
@@ -1282,7 +1326,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-11",
@@ -1335,7 +1380,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "SP-B1-12",
@@ -1393,7 +1439,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "LI-A2-01",
@@ -1425,7 +1472,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "LI-A2-02",
@@ -1459,7 +1507,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "LI-A2-03",
@@ -1493,7 +1542,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-01"
+      ]
     },
     {
       "id": "LI-A2-04",
@@ -1528,7 +1581,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "LI-A2-05",
@@ -1562,7 +1616,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-01"
+      ]
     },
     {
       "id": "LI-A2-06",
@@ -1602,7 +1660,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-03"
+      ]
     },
     {
       "id": "LI-A2-07",
@@ -1636,7 +1698,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-03"
+      ]
     },
     {
       "id": "LI-A2-08",
@@ -1670,7 +1736,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-07"
+      ]
     },
     {
       "id": "LI-A2-09",
@@ -1704,7 +1774,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-07"
+      ]
     },
     {
       "id": "LI-A2-10",
@@ -1742,15 +1816,19 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-08"
+      ]
     },
     {
       "id": "LI-B1-01",
       "skill": "listening",
       "level": "B1",
       "priority": "critical",
-      "canDo": "I can understand the main idea of normal speech on familiar topics.",
-      "spanish": "Puedo comprender la idea principal del habla normal sobre temas familiares.",
+      "canDo": "I can understand the main idea of clear standard speech on familiar topics.",
+      "spanish": "Puedo comprender la idea principal de un discurso claro y estándar sobre temas familiares.",
       "prerequisites": [
         "LI-A2-07",
         "LI-A2-08"
@@ -1780,7 +1858,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-07",
+        "LI-A2-08"
+      ]
     },
     {
       "id": "LI-B1-02",
@@ -1814,7 +1897,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-B1-01"
+      ]
     },
     {
       "id": "LI-B1-03",
@@ -1848,7 +1935,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-B1-01"
+      ]
     },
     {
       "id": "LI-B1-04",
@@ -1885,7 +1976,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-09"
+      ]
     },
     {
       "id": "LI-B1-05",
@@ -1920,7 +2015,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-B1-01"
+      ]
     },
     {
       "id": "LI-B1-06",
@@ -1958,7 +2057,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-A2-10"
+      ]
     },
     {
       "id": "LI-B1-07",
@@ -1993,7 +2096,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-B1-05"
+      ]
     },
     {
       "id": "LI-B1-08",
@@ -2030,7 +2137,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "LI-B1-01"
+      ]
     },
     {
       "id": "RE-A2-01",
@@ -2062,7 +2173,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "RE-A2-02",
@@ -2097,7 +2209,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "RE-A2-03",
@@ -2131,7 +2244,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "RE-A2-04",
@@ -2165,7 +2279,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "RE-A2-05",
@@ -2201,7 +2316,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-01"
+      ]
     },
     {
       "id": "RE-A2-06",
@@ -2238,7 +2357,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-05"
+      ]
     },
     {
       "id": "RE-A2-07",
@@ -2272,7 +2395,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-01"
+      ]
     },
     {
       "id": "RE-A2-08",
@@ -2307,7 +2434,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-02"
+      ]
     },
     {
       "id": "RE-B1-01",
@@ -2341,7 +2472,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-06"
+      ]
     },
     {
       "id": "RE-B1-02",
@@ -2375,7 +2510,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-B1-01"
+      ]
     },
     {
       "id": "RE-B1-03",
@@ -2409,7 +2548,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-07"
+      ]
     },
     {
       "id": "RE-B1-04",
@@ -2443,7 +2586,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A2-08"
+      ]
     },
     {
       "id": "RE-B1-05",
@@ -2477,7 +2624,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-B1-01"
+      ]
     },
     {
       "id": "RE-B1-06",
@@ -2511,7 +2662,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-B1-01"
+      ]
     },
     {
       "id": "RE-B1-07",
@@ -2548,7 +2703,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-B1-01",
+        "RE-B1-03"
+      ]
     },
     {
       "id": "WR-A2-01",
@@ -2588,7 +2748,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative"
     },
     {
       "id": "WR-A2-02",
@@ -2627,7 +2788,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-A2-03",
@@ -2665,7 +2828,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-01"
+      ]
     },
     {
       "id": "WR-A2-04",
@@ -2708,7 +2875,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-A2-05",
@@ -2750,7 +2919,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-A2-06",
@@ -2792,7 +2963,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-A2-07",
@@ -2831,7 +3004,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-A2-08",
@@ -2872,7 +3047,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": []
     },
     {
       "id": "WR-B1-01",
@@ -2920,7 +3097,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-03",
+        "WR-A2-08"
+      ]
     },
     {
       "id": "WR-B1-02",
@@ -2969,7 +3151,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-03"
+      ]
     },
     {
       "id": "WR-B1-03",
@@ -3016,7 +3202,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-06"
+      ]
     },
     {
       "id": "WR-B1-04",
@@ -3061,7 +3251,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-08"
+      ]
     },
     {
       "id": "WR-B1-05",
@@ -3105,7 +3299,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-06"
+      ]
     },
     {
       "id": "WR-B1-06",
@@ -3150,7 +3348,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-A2-08"
+      ]
     },
     {
       "id": "WR-B1-07",
@@ -3199,7 +3401,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "communicative",
+      "recovery": [
+        "WR-B1-01",
+        "WR-B1-06"
+      ]
     },
     {
       "id": "VO-A2-01",
@@ -3232,7 +3439,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "VO-A2-02",
@@ -3266,7 +3474,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": []
     },
     {
       "id": "VO-A2-03",
@@ -3300,7 +3510,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "VO-A2-04",
@@ -3331,7 +3542,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "VO-A2-05",
@@ -3368,7 +3580,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": []
     },
     {
       "id": "VO-A2-06",
@@ -3404,7 +3618,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": []
     },
     {
       "id": "VO-A2-07",
@@ -3436,7 +3652,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "VO-B1-01",
@@ -3474,7 +3691,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "VO-A2-06"
+      ]
     },
     {
       "id": "VO-B1-02",
@@ -3518,7 +3739,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "VO-B1-01"
+      ]
     },
     {
       "id": "VO-B1-03",
@@ -3558,7 +3783,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": []
     },
     {
       "id": "VO-B1-04",
@@ -3593,7 +3820,9 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": []
     },
     {
       "id": "VO-B1-05",
@@ -3631,15 +3860,19 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "VO-B1-02"
+      ]
     },
     {
       "id": "VO-B1-06",
       "skill": "vocabulary",
       "level": "B1",
       "priority": "critical",
-      "canDo": "I can use vocabulary without translating every word mentally.",
-      "spanish": "Puedo usar vocabulario sin traducir mentalmente cada palabra.",
+      "canDo": "I can retrieve and use familiar vocabulary quickly in familiar contexts.",
+      "spanish": "Puedo recuperar y usar vocabulario conocido con rapidez en contextos familiares.",
       "prerequisites": [
         "VO-B1-01",
         "VO-B1-05"
@@ -3653,10 +3886,10 @@
       },
       "evidence": {
         "type": "production",
-        "task": "Respond to familiar prompts with limited preparation and natural retrieval."
+        "task": "Use familiar vocabulary spontaneously in a short speaking or writing task."
       },
       "mastery": {
-        "fluency": 0.6,
+        "fluency": 0.7,
         "confidence": 4
       },
       "feedback": {
@@ -3668,7 +3901,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "VO-B1-01",
+        "VO-B1-05"
+      ]
     },
     {
       "id": "CO-A2-01",
@@ -3701,7 +3939,9 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": []
     },
     {
       "id": "CO-A2-02",
@@ -3736,7 +3976,9 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": []
     },
     {
       "id": "CO-A2-03",
@@ -3768,7 +4010,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction"
     },
     {
       "id": "CO-A2-04",
@@ -3800,7 +4043,8 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction"
     },
     {
       "id": "CO-A2-05",
@@ -3838,7 +4082,12 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-A2-03",
+        "CO-A2-04"
+      ]
     },
     {
       "id": "CO-A2-06",
@@ -3874,7 +4123,12 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-A2-01",
+        "CO-A2-02"
+      ]
     },
     {
       "id": "CO-B1-01",
@@ -3910,7 +4164,12 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-A2-01",
+        "CO-A2-06"
+      ]
     },
     {
       "id": "CO-B1-02",
@@ -3947,7 +4206,11 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-A2-06"
+      ]
     },
     {
       "id": "CO-B1-03",
@@ -3981,7 +4244,11 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-B1-02"
+      ]
     },
     {
       "id": "CO-B1-04",
@@ -4018,7 +4285,9 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": []
     },
     {
       "id": "CO-B1-05",
@@ -4052,7 +4321,9 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": []
     },
     {
       "id": "CO-B1-06",
@@ -4089,7 +4360,12 @@
         "maxCorrections": 2,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "interaction",
+      "recovery": [
+        "CO-B1-02",
+        "CO-B1-04"
+      ]
     },
     {
       "id": "GR-A2-01",
@@ -4115,7 +4391,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "GR-A2-02",
@@ -4141,7 +4418,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "GR-A2-03",
@@ -4169,7 +4447,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-01"
+      ]
     },
     {
       "id": "GR-A2-04",
@@ -4197,7 +4479,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-A2-05",
@@ -4225,7 +4511,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-01"
+      ]
     },
     {
       "id": "GR-A2-06",
@@ -4251,7 +4541,8 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource"
     },
     {
       "id": "GR-A2-07",
@@ -4279,7 +4570,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-A2-08",
@@ -4307,7 +4602,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-A2-09",
@@ -4335,7 +4634,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-01"
+      ]
     },
     {
       "id": "GR-A2-10",
@@ -4363,7 +4666,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-A2-11",
@@ -4391,7 +4698,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-A2-12",
@@ -4419,7 +4730,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-05"
+      ]
     },
     {
       "id": "GR-A2-13",
@@ -4448,7 +4763,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03",
+        "GR-A2-07"
+      ]
     },
     {
       "id": "GR-B1-01",
@@ -4478,7 +4798,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-07",
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-B1-02",
@@ -4507,7 +4832,12 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-B1-01",
+        "GR-A2-07"
+      ]
     },
     {
       "id": "GR-B1-03",
@@ -4535,7 +4865,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-08"
+      ]
     },
     {
       "id": "GR-B1-04",
@@ -4563,7 +4897,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-06"
+      ]
     },
     {
       "id": "GR-B1-05",
@@ -4591,7 +4929,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-13"
+      ]
     },
     {
       "id": "GR-B1-06",
@@ -4619,7 +4961,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-13"
+      ]
     },
     {
       "id": "GR-B1-07",
@@ -4647,7 +4993,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-13"
+      ]
     },
     {
       "id": "GR-B1-08",
@@ -4675,7 +5025,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-07"
+      ]
     },
     {
       "id": "GR-B1-09",
@@ -4703,7 +5057,11 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
-      }
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-03"
+      ]
     },
     {
       "id": "GR-B1-10",
@@ -4731,7 +5089,384 @@
         "maxCorrections": 3,
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource",
+      "recovery": [
+        "GR-A2-13"
+      ]
+    },
+    {
+      "id": "PR-A2-01",
+      "skill": "pronunciation",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can pronounce familiar words clearly enough to be understood.",
+      "spanish": "Puedo pronunciar palabras conocidas con suficiente claridad para que me entiendan.",
+      "prerequisites": [],
+      "languageResources": {
+        "vocabulary": [
+          "familiar-words"
+        ],
+        "pronunciation": [
+          "word-stress",
+          "clear-sounds"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "Read and say familiar words and short phrases in context."
+      },
+      "mastery": {
+        "intelligibility": 0.8
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
       }
+    },
+    {
+      "id": "PR-A2-02",
+      "skill": "pronunciation",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can use understandable word stress in familiar words and phrases.",
+      "spanish": "Puedo usar un acento de palabra comprensible en palabras y frases conocidas.",
+      "prerequisites": [
+        "PR-A2-01"
+      ],
+      "languageResources": {
+        "pronunciation": [
+          "word-stress",
+          "rhythm"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "Repeat and then use target words and short phrases in meaningful sentences."
+      },
+      "mastery": {
+        "intelligibility": 0.8,
+        "prosody": 0.7
+      },
+      "recovery": [
+        "PR-A2-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "PR-A2-03",
+      "skill": "pronunciation",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can use basic intonation to make simple questions and statements understandable.",
+      "spanish": "Puedo usar una entonación básica para que mis preguntas y afirmaciones sean comprensibles.",
+      "prerequisites": [
+        "PR-A2-01"
+      ],
+      "languageResources": {
+        "pronunciation": [
+          "intonation",
+          "sentence-stress"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "Ask and answer simple questions using appropriate basic intonation."
+      },
+      "mastery": {
+        "intelligibility": 0.8,
+        "prosody": 0.7
+      },
+      "recovery": [
+        "PR-A2-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "PR-A2-04",
+      "skill": "pronunciation",
+      "level": "A2+",
+      "priority": "high",
+      "canDo": "I can make myself understood in short conversations even when my accent is noticeable.",
+      "spanish": "Puedo hacerme entender en conversaciones breves aunque mi acento sea perceptible.",
+      "prerequisites": [
+        "PR-A2-02",
+        "PR-A2-03"
+      ],
+      "languageResources": {
+        "pronunciation": [
+          "intelligibility",
+          "stress",
+          "intonation"
+        ]
+      },
+      "evidence": {
+        "type": "conversation",
+        "task": "Complete a short role-play with familiar questions and answers."
+      },
+      "mastery": {
+        "intelligibility": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "PR-A2-02",
+        "PR-A2-03"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "PR-B1-01",
+      "skill": "pronunciation",
+      "level": "B1",
+      "priority": "critical",
+      "canDo": "I can speak clearly enough to be understood in extended speech.",
+      "spanish": "Puedo hablar con suficiente claridad para que me entiendan durante una intervención más larga.",
+      "prerequisites": [
+        "PR-A2-04"
+      ],
+      "languageResources": {
+        "pronunciation": [
+          "intelligibility",
+          "connected-speech",
+          "stress"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 60,
+          "max": 180
+        },
+        "task": "Give an extended response on a familiar topic."
+      },
+      "mastery": {
+        "intelligibility": 0.85,
+        "fluency": 0.7,
+        "confidence": 4
+      },
+      "recovery": [
+        "PR-A2-04"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "PR-B1-02",
+      "skill": "pronunciation",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can use word stress and sentence stress to make my meaning clearer.",
+      "spanish": "Puedo usar el acento de palabra y de oración para hacer más claro mi significado.",
+      "prerequisites": [
+        "PR-A2-03",
+        "PR-B1-01"
+      ],
+      "languageResources": {
+        "pronunciation": [
+          "word-stress",
+          "sentence-stress",
+          "intonation"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "Repeat and then use key sentences, emphasizing the important words."
+      },
+      "mastery": {
+        "prosody": 0.75,
+        "intelligibility": 0.85
+      },
+      "recovery": [
+        "PR-A2-03",
+        "PR-B1-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "WR-A2-09",
+      "skill": "writing",
+      "level": "A2+",
+      "priority": "high",
+      "canDo": "I can respond to a short message with relevant information.",
+      "spanish": "Puedo responder un mensaje corto con información pertinente.",
+      "prerequisites": [
+        "WR-A2-03"
+      ],
+      "languageResources": {
+        "grammar": [
+          "question-forms",
+          "present-simple"
+        ],
+        "vocabulary": [
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "task": "Reply to a short personal or practical message with relevant details."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "clarity": 0.8
+      },
+      "recovery": [
+        "WR-A2-03"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "WR-B1-08",
+      "skill": "writing",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can respond to an email or message, answering questions and adding relevant details.",
+      "spanish": "Puedo responder un correo o mensaje, contestar preguntas y añadir detalles pertinentes.",
+      "prerequisites": [
+        "WR-A2-09",
+        "WR-B1-02"
+      ],
+      "languageResources": {
+        "grammar": [
+          "question-forms",
+          "connectors"
+        ],
+        "vocabulary": [
+          "email-language"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "task": "Reply to a familiar-topic email or message and address all key points."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "coherence": 0.75,
+        "clarity": 0.8
+      },
+      "recovery": [
+        "WR-A2-09",
+        "WR-B1-02"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "CO-B1-07",
+      "skill": "communication",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can make and respond to suggestions and help reach an agreement.",
+      "spanish": "Puedo hacer y responder sugerencias y ayudar a llegar a un acuerdo.",
+      "prerequisites": [
+        "CO-B1-01",
+        "CO-B1-02",
+        "CO-B1-05"
+      ],
+      "languageResources": {
+        "vocabulary": [
+          "suggestions",
+          "agreement",
+          "disagreement"
+        ],
+        "connectors": [
+          "so",
+          "because",
+          "however"
+        ]
+      },
+      "evidence": {
+        "type": "conversation",
+        "task": "Discuss two options, respond to a suggestion and reach a simple agreement."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [
+        "CO-B1-01",
+        "CO-B1-05"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "interaction"
     }
   ],
   "metaCanDos": [
@@ -4816,5 +5551,31 @@
       ],
       "rule": "Prefer a short explanation and meaningful examples over a long grammar lesson."
     }
+  },
+  "assessmentModel": {
+    "communicativeDomains": [
+      "listening-comprehension",
+      "reading-comprehension",
+      "spoken-production",
+      "spoken-interaction",
+      "written-production",
+      "written-interaction"
+    ],
+    "supportingResources": [
+      "grammar",
+      "vocabulary",
+      "pronunciation"
+    ],
+    "transversal": "confidence",
+    "principle": "Communicative performance is primary; grammar, vocabulary and pronunciation are evaluated as resources that support successful communication.",
+    "evidenceRule": "Every Can-Do must be observable through a task, response, interaction or production. Internal states such as mental translation are not used as the sole evidence.",
+    "recoveryRule": "When a Can-Do is not achieved, the engine should return to a prerequisite or lower-level support target before retrying.",
+    "alignmentNote": "A2+ is an internal HODIE bridge between CEFR A2 and B1; it is not an official CEFR level."
+  },
+  "sourceAlignment": {
+    "primary": "Council of Europe CEFR / Companion Volume",
+    "assessmentReference": "Cambridge English B1 Preliminary",
+    "practicalCanDoReference": "British Council LearnEnglish B1",
+    "note": "These references guide functional outcomes and assessment design; HODIE is not an official CEFR or Cambridge certification system."
   }
 }
