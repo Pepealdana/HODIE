@@ -16,7 +16,7 @@ const TRANSITIONS = {
   next: []
 };
 
-function transitionSession(session, nextState) {
+function transitionSession(session, nextState, options = {}) {
   if (!session?.id) throw new Error("Session must include an id.");
   if (!SESSION_STATES.includes(nextState)) {
     throw new Error(`Unknown session state: ${nextState}`);
@@ -27,34 +27,38 @@ function transitionSession(session, nextState) {
     throw new Error(`Invalid session transition: ${current} -> ${nextState}`);
   }
 
+  const at = options.now
+    ? new Date(options.now).toISOString()
+    : new Date().toISOString();
+
   return {
     ...session,
     state: nextState,
     stateHistory: [
       ...(session.stateHistory || [{ state: current, at: null }]),
-      { state: nextState, at: new Date().toISOString() }
+      { state: nextState, at }
     ]
   };
 }
 
-function startSession(session) {
-  return transitionSession(session, "started");
+function startSession(session, options = {}) {
+  return transitionSession(session, "started", options);
 }
 
-function requestEvidence(session) {
-  return transitionSession(session, "awaiting-evidence");
+function requestEvidence(session, options = {}) {
+  return transitionSession(session, "awaiting-evidence", options);
 }
 
-function completeSession(session) {
-  return transitionSession(session, "completed");
+function completeSession(session, options = {}) {
+  return transitionSession(session, "completed", options);
 }
 
-function markRetryRequired(session) {
-  return transitionSession(session, "retry-required");
+function markRetryRequired(session, options = {}) {
+  return transitionSession(session, "retry-required", options);
 }
 
-function markNext(session) {
-  return transitionSession(session, "next");
+function markNext(session, options = {}) {
+  return transitionSession(session, "next", options);
 }
 
 export {
