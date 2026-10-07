@@ -32,6 +32,16 @@ function validateSessionEvidence(matrix, library, session, rawEvidence) {
   const allowedActivityIds = session.evidenceContract?.activityIds || [];
   requireField(allowedActivityIds.includes(rawEvidence.activityId), "Evidence activityId does not belong to the learning session.");
 
+  const assessmentActivityId = session.evidenceContract?.assessmentActivityId;
+  requireField(
+    typeof assessmentActivityId === "string" && assessmentActivityId,
+    "Session evidence contract must declare an assessmentActivityId."
+  );
+  requireField(
+    rawEvidence.activityId === assessmentActivityId,
+    "Evidence activityId must be the session assessment activity."
+  );
+
   const activity = getActivity(library, rawEvidence.activityId);
   requireField(activity, `Unknown activity: ${rawEvidence.activityId}`);
   requireField(activity.canDoId === session.target.canDoId, "Evidence activity does not belong to the session Can-Do.");
