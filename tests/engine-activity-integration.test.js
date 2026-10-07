@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { createNextActivityPlan, registerEvidence } from "../src/learning-engine.js";
+import { registerEvidence } from "../src/learning-engine.js";
+import { createNextActivityPlan } from "../src/learning-planner.js";
 
 const read = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), "utf8"));
 const matrix = read("../data/can-do-matrix.json");
