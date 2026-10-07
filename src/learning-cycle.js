@@ -2,7 +2,7 @@ import { registerEvidence } from "./learning-engine.js";
 import { createSession, createSessionForCanDo } from "./learning-session.js";
 
 function runLearningCycle(matrix, library, profile, rawEvidence, options = {}) {
-  const result = registerEvidence(matrix, profile, rawEvidence);
+  const result = registerEvidence(matrix, profile, rawEvidence, options);
 
   const nextSession = result.retryRequired
     ? createSessionForCanDo(matrix, library, result.profile, result.canDo.id, {
