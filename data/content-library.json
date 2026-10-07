@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "activities": [
+    {
+      "id": "ACT-SP-A2-01-01",
+      "canDoId": "SP-A2-01",
+      "activityType": "independent-production",
+      "level": "A2",
+      "skill": "speaking",
+      "context": "professional",
+      "title": "Introduce yourself",
+      "objective": "Introduce yourself using basic personal and professional information.",
+      "instructions": "Speak in English for 30 to 60 seconds.",
+      "task": "Say your name, your job, what you teach or work with, and one thing you enjoy doing.",
+      "support": {
+        "optionalSentenceStarters": [
+          "My name is...",
+          "I am a...",
+          "I work with...",
+          "I enjoy..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "grammar": 0.8,
+          "fluency": 0.8,
+          "vocabulary": 0.8,
+          "pronunciation": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": ["en", "es"],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": ["introduction","work","technology","teacher"]
+      }
+    },
+    {
+      "id": "ACT-SP-A2-02-01",
+      "canDoId": "SP-A2-02",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "speaking",
+      "context": "family",
+      "title": "Talk about your family",
+      "objective": "Talk about close family members using simple connected sentences.",
+      "instructions": "Speak in English for 45 to 90 seconds.",
+      "task": "Talk about two family members. Say who they are, what they usually do, and one thing they like.",
+      "support": {
+        "optionalSentenceStarters": [
+          "I live with...",
+          "My son...",
+          "He likes...",
+          "She usually..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "grammar": 0.8,
+          "fluency": 0.8,
+          "vocabulary": 0.8,
+          "pronunciation": 0.8
+        },
+        "independent": false
+      },
+      "feedback": {
+        "languages": ["en", "es"],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 7,
+        "tags": ["family","daily-life","speaking"]
+      }
+    }
+  ]
+}
