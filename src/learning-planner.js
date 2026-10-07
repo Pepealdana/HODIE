@@ -1,7 +1,6 @@
 import { registerEvidence } from "./learning-engine.js";
 import { createActivityPlan } from "./activity-generator.js";
 import {
-  selectNextLearningTarget,
   selectNextActivityTarget
 } from "./adaptive-planner.js";
 
@@ -17,13 +16,10 @@ function createNextActivityPlan(matrix, library, result, options = {}) {
   const retry = Boolean(result.retryRequired);
   const target = retry
     ? result.canDo
-    : (
-        selectNextActivityTarget(matrix, library, result.profile, options) ||
-        selectNextLearningTarget(matrix, result.profile, options)
-      );
+    : selectNextActivityTarget(matrix, library, result.profile, options);
 
   if (!target?.id) {
-    throw new Error("No next Can-Do is available after evidence.");
+    throw new Error("No activity-backed next Can-Do is available after evidence.");
   }
 
   return createActivityPlan(matrix, library, target.id, {
