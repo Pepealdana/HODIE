@@ -14,6 +14,7 @@ const emptyProfile = {
 };
 
 const failed = runLearningCycle(matrix, library, emptyProfile, {
+  sessionId: "session-failed-1",
   canDoId: "SP-A2-02",
   independent: false,
   contextId: "family-1",
@@ -40,6 +41,8 @@ assert.equal(failed.nextSession.target.canDoId, "SP-A2-02");
 assert.equal(failed.nextSession.mode, "recovery");
 assert.equal(failed.nextSession.stages.at(-1).kind, "retry");
 assert.equal(failed.nextSession.stages.at(-1).activity.id, "ACT-SP-A2-02-01");
+assert.equal(failed.nextSession.state, "planned");
+assert.equal(failed.nextSession.evidenceContract.canDoId, "SP-A2-02");
 
 assert.equal(emptyProfile.evidence.length, 0);
 assert.equal(emptyProfile.reviews.length, 0);
