@@ -1,5 +1,9 @@
 import { registerEvidence } from "./learning-engine.js";
 import { createActivityPlan } from "./activity-generator.js";
+import {
+  selectNextLearningTarget,
+  selectNextActivityTarget
+} from "./adaptive-planner.js";
 
 /**
  * Integration boundary between evidence registration and activity generation.
@@ -10,10 +14,22 @@ function createNextActivityPlan(matrix, library, result, options = {}) {
     throw new Error("Evidence result must include a Can-Do.");
   }
 
-  return createActivityPlan(matrix, library, result.canDo.id, {
+  const retry = result.retryRequired || result.gap?.type !== "none";
+  const target = retry
+    ? result.canDo
+    : (
+        selectNextActivityTarget(matrix, library, result.profile, options) ||
+        selectNextLearningTarget(matrix, result.profile, options)
+      );
+
+  if (!target?.id) {
+    throw new Error("No next Can-Do is available after evidence.");
+  }
+
+  return createActivityPlan(matrix, library, target.id, {
     profile: result.profile,
-    gap: result.gap,
-    retryRequired: result.retryRequired,
+    gap: retry ? result.gap : { type: "none", target: null },
+    retryRequired: retry,
     ...options
   });
 }
