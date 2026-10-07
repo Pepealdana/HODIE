@@ -5,8 +5,9 @@
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
     "test:content": "node tests/content-model.test.js",
-    "test": "npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration",
+    "test": "npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner",
     "test:generator": "node tests/activity-generator.test.js",
-    "test:integration": "node tests/engine-activity-integration.test.js"
+    "test:integration": "node tests/engine-activity-integration.test.js",
+    "test:planner": "node tests/adaptive-planner.test.js"
   }
 }
