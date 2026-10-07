@@ -1,0 +1,8 @@
+{
+  "name": "hodie",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:engine": "node tests/learning-engine.test.js"
+  }
+}
