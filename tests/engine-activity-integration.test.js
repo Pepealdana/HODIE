@@ -23,4 +23,26 @@ assert.equal(plan.gap.target, "be");
 assert.equal(plan.stages.at(-1).kind, "retry");
 assert.equal(plan.stages.at(-1).activity.id, "ACT-SP-A2-02-01");
 
+const successProfile = { evidence: [], reviews: [] };
+const successResult = registerEvidence(matrix, successProfile, {
+  canDoId: "SP-A2-01",
+  independent: true,
+  contextId: "work-1",
+  confidence: 4,
+  dimensions: {
+    taskCompletion: 1,
+    grammar: 0.9,
+    fluency: 0.9,
+    vocabulary: 0.9,
+    pronunciation: 0.9
+  }
+});
+const nextPlan = createNextActivityPlan(matrix, library, successResult, {
+  now: "2026-10-07T12:00:00.000Z",
+  contextTerms: ["technology", "teacher", "work"]
+});
+assert.equal(nextPlan.canDoId, "SP-A2-02");
+assert.equal(nextPlan.stages.length, 1);
+assert.equal(nextPlan.stages[0].kind, "target");
+
 console.log("HODIE Learning Engine -> Activity Generator integration: PASS");
