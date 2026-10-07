@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test:engine": "node tests/learning-engine.test.js"
+    "test:engine": "node tests/learning-engine.test.js",
+    "test": "npm run test:engine"
   }
 }
