@@ -30,6 +30,8 @@ function normalizeEvidence(evidence = {}) {
 
   return {
     canDoId: evidence.canDoId,
+    sessionId: evidence.sessionId || null,
+    activityId: evidence.activityId || null,
     level: evidence.level || "attempt",
     independent: Boolean(evidence.independent),
     contextId: evidence.contextId || "default",
