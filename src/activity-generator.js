@@ -87,10 +87,11 @@ function createActivityPlan(matrix, library, canDoId, options = {}) {
     if (targeted) recoveryActivities.push(targeted);
     else if (gap.target) recoveryActivities.push(createSyntheticRecovery(canDo, gap));
 
-    for (const recoveryId of recoveryIds) {
-      if (recoveryActivities.some((item) => item.canDoId === recoveryId)) continue;
-      const activity = findContent(library, recoveryId, ["controlled-practice", "recognition", "guided-production"]);
-      if (activity) recoveryActivities.push(activity);
+    if (!recoveryActivities.length) {
+      for (const recoveryId of recoveryIds) {
+        const activity = findContent(library, recoveryId, ["controlled-practice", "recognition", "guided-production"]);
+        if (activity) recoveryActivities.push(activity);
+      }
     }
   }
 
