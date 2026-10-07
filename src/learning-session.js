@@ -1,5 +1,4 @@
 import {
-  selectNextLearningTarget,
   selectNextActivityTarget,
   explainSelection
 } from "./adaptive-planner.js";
@@ -81,12 +80,10 @@ function createSession(matrix, library, profile, options = {}) {
     now: options.now
   };
 
-  const target =
-    selectNextActivityTarget(matrix, library, profile, planningOptions) ||
-    selectNextLearningTarget(matrix, profile, planningOptions);
+  const target = selectNextActivityTarget(matrix, library, profile, planningOptions);
 
   if (!target) {
-    throw new Error("No eligible Can-Do is available for the current profile.");
+    throw new Error("No activity-backed Can-Do is available for the current profile.");
   }
 
   return buildSession(matrix, library, profile, target, options);
