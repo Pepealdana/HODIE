@@ -24,5 +24,8 @@ assert.ok(session.durationMinutes > 0);
 assert.ok(session.stages.length >= 1);
 assert.equal(session.completion.evidenceRequired, true);
 assert.equal(session.completion.progressMutation, "register-evidence");
+assert.equal(session.state, "planned");
+assert.ok(session.evidenceContract.sessionId === session.id);
+assert.ok(session.evidenceContract.activityIds.length >= 1);
 
 console.log("HODIE Learning Session v1: PASS");
