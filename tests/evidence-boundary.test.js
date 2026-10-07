@@ -55,6 +55,7 @@ assert.equal(submitted.evidence.sessionId, session.id);
 assert.equal(submitted.evidence.activityId, "ACT-SP-A2-02-01");
 assert.equal(submitted.profile.evidence.length, 1);
 assert.equal(submitted.nextReviewAt, "2026-10-08T12:00:00.000Z");
+assert.equal(session.evidenceContract.assessmentActivityId, "ACT-SP-A2-02-01");
 
 assert.throws(
   () =>
@@ -68,6 +69,32 @@ assert.throws(
     ),
   /does not belong to the learning session/
 );
+
+const recoverySession = createSessionForCanDo(matrix, library, profile, "SP-A2-02", {
+  sessionId: "session-boundary-recovery",
+  now: "2026-10-07T12:00:00.000Z",
+  gap: { type: "grammar", target: "be" },
+  retryRequired: true
+});
+const recoveryActivityId = recoverySession.stages.find((stage) => stage.kind === "recovery")?.activity.id;
+
+if (recoveryActivityId) {
+  const recoveryEvidence = { ...rawEvidence, sessionId: recoverySession.id, activityId: recoveryActivityId };
+  const activeRecoverySession = requestEvidence(startSession(recoverySession));
+
+  assert.throws(
+    () =>
+      submitSessionEvidence(
+        matrix,
+        library,
+        activeRecoverySession,
+        profile,
+        recoveryEvidence,
+        { now: "2026-10-07T12:00:00.000Z" }
+      ),
+    /must be the session assessment activity/
+  );
+}
 
 assert.throws(
   () =>
