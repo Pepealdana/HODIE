@@ -99,6 +99,7 @@ function createActivityPlan(matrix, library, canDoId, options = {}) {
     canDoId,
     status: getStatus(canDo, options.profile || { evidence: [] }),
     gap,
+    retryRequired: Boolean(options.retryRequired),
     stages: [
       ...recoveryActivities.map((activity) => ({
         kind: "recovery",
