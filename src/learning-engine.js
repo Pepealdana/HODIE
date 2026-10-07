@@ -10,6 +10,8 @@ const STATUS_ORDER = ["notStarted", "emerging", "developing", "functional", "con
 const EVIDENCE_ORDER = ["attempt", "supported", "independent", "consistent", "transfer"];
 
 const DEFAULT_REVIEW_DAYS = [1, 2, 4, 7, 14, 30];
+const MASTERY_CONFIDENCE_MIN = 4;
+const SUCCESS_SCORE_MIN = 0.75;
 
 function clamp(value, min = 0, max = 1) {
   return Math.min(max, Math.max(min, Number(value) || 0));
@@ -30,6 +32,7 @@ function normalizeEvidence(evidence = {}) {
     level: evidence.level || "attempt",
     independent: Boolean(evidence.independent),
     contextId: evidence.contextId || "default",
+    transfer: Boolean(evidence.transfer),
     confidence: Number(evidence.confidence) || 0,
     dimensions,
     errors: Array.isArray(evidence.errors) ? evidence.errors : [],
@@ -47,13 +50,17 @@ function evidenceScore(evidence) {
   return average(Object.values(evidence.dimensions));
 }
 
-function determineEvidenceLevel(evidence) {
+function determineEvidenceLevel(evidence, history = []) {
   const score = evidenceScore(evidence);
+  const repeatedIndependent = history.some((item) =>
+    item.independent &&
+    evidenceScore(item) >= SUCCESS_SCORE_MIN &&
+    item.contextId !== evidence.contextId
+  );
 
-  if (evidence.independent && evidence.contextId !== "default" && score >= 0.75) {
-    return "transfer";
-  }
-  if (evidence.independent && score >= 0.75) return "independent";
+  if (evidence.independent && evidence.transfer && score >= SUCCESS_SCORE_MIN) return "transfer";
+  if (evidence.independent && score >= SUCCESS_SCORE_MIN && repeatedIndependent) return "consistent";
+  if (evidence.independent && score >= SUCCESS_SCORE_MIN) return "independent";
   if (score >= 0.6) return "supported";
   return "attempt";
 }
@@ -71,7 +78,9 @@ function getStatus(canDo, profile) {
   if (!history.length) return "notStarted";
 
   const normalized = history.map(normalizeEvidence);
-  const independent = normalized.filter((e) => e.independent && evidenceScore(e) >= 0.75);
+  const independent = normalized.filter((e) =>
+    e.independent && evidenceScore(e) >= SUCCESS_SCORE_MIN && e.confidence >= MASTERY_CONFIDENCE_MIN
+  );
   const contexts = new Set(independent.map((e) => e.contextId));
   const latest = normalized[normalized.length - 1];
 
@@ -124,13 +133,23 @@ function identifyGap(canDo, evidence) {
 function chooseRecovery(canDo, matrix, gap) {
   if (!canDo) return [];
 
-  const candidates = canDo.recovery?.length
-    ? canDo.recovery
-    : (canDo.prerequisites || []);
+  const explicit = canDo.recovery?.filter((id) => getCanDo(matrix, id)) || [];
+  if (gap.target) {
+    const targeted = (matrix.canDos || []).filter((item) => {
+      const resources = item.languageResources || {};
+      const values = [
+        ...(resources.grammar || []),
+        ...(resources.vocabulary || []),
+        ...(resources.connectors || [])
+      ].map((value) => String(value).toLowerCase());
+      return values.includes(String(gap.target).toLowerCase());
+    }).map((item) => item.id);
+    if (targeted.length) return targeted.slice(0, 2);
+    if (explicit.includes(gap.target)) return [gap.target];
+  }
 
-  if (gap.target && candidates.includes(gap.target)) return [gap.target];
-
-  return candidates.slice(0, 2).filter((id) => getCanDo(matrix, id));
+  if (explicit.length) return explicit.slice(0, 2);
+  return (canDo.prerequisites || []).slice(0, 2).filter((id) => getCanDo(matrix, id));
 }
 
 function reviewDelayDays(status, success) {
@@ -190,7 +209,8 @@ function registerEvidence(matrix, profile, rawEvidence) {
   const canDo = getCanDo(matrix, evidence.canDoId);
   if (!canDo) throw new Error(`Unknown Can-Do: ${evidence.canDoId}`);
 
-  evidence.level = determineEvidenceLevel(evidence);
+  const previousHistory = getHistory(profile, evidence.canDoId).map(normalizeEvidence);
+  evidence.level = determineEvidenceLevel(evidence, previousHistory);
 
   const nextProfile = {
     ...profile,
@@ -200,7 +220,7 @@ function registerEvidence(matrix, profile, rawEvidence) {
 
   const status = getStatus(canDo, nextProfile);
   const score = evidenceScore(evidence);
-  const success = evidence.independent && score >= 0.75;
+  const success = evidence.independent && score >= SUCCESS_SCORE_MIN;
 
   const gap = identifyGap(canDo, evidence);
   const recovery = success ? [] : chooseRecovery(canDo, matrix, gap);
@@ -219,6 +239,7 @@ function registerEvidence(matrix, profile, rawEvidence) {
     gap,
     recovery,
     retryRequired: !success && canDo.feedback?.requireRetryForPriorityErrors !== false,
+    confidenceMinimumForMastery: MASTERY_CONFIDENCE_MIN,
     nextReviewAt
   };
 }
@@ -263,6 +284,8 @@ function getProgressProfile(matrix, profile) {
 export {
   STATUS_ORDER,
   EVIDENCE_ORDER,
+  MASTERY_CONFIDENCE_MIN,
+  SUCCESS_SCORE_MIN,
   normalizeEvidence,
   evidenceScore,
   determineEvidenceLevel,
