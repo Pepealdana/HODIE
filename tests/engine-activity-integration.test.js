@@ -45,4 +45,31 @@ assert.equal(nextPlan.canDoId, "SP-A2-02");
 assert.equal(nextPlan.stages.length, 1);
 assert.equal(nextPlan.stages[0].kind, "target");
 
+const minorGapProfile = { evidence: [], reviews: [] };
+const minorGapResult = registerEvidence(matrix, minorGapProfile, {
+  canDoId: "SP-A2-01",
+  independent: true,
+  contextId: "work-2",
+  confidence: 4,
+  dimensions: {
+    taskCompletion: 1,
+    grammar: 1,
+    fluency: 1,
+    vocabulary: 0.6,
+    pronunciation: 1
+  }
+}, { now: "2026-10-07T12:00:00.000Z" });
+
+assert.equal(minorGapResult.retryRequired, false);
+assert.notEqual(minorGapResult.gap.type, "none");
+
+const minorGapPlan = createNextActivityPlan(matrix, library, minorGapResult, {
+  now: "2026-10-07T12:00:00.000Z",
+  contextTerms: ["technology", "teacher", "work"]
+});
+
+assert.equal(minorGapPlan.canDoId, "SP-A2-02");
+assert.equal(minorGapPlan.retryRequired, false);
+assert.equal(minorGapPlan.stages.length, 1);
+
 console.log("HODIE Learning Engine -> Activity Generator integration: PASS");
