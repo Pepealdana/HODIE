@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
-    "test": "npm run test:engine"
+    "test:content": "node tests/content-model.test.js",
+    "test": "npm run test:engine && npm run test:content"
   }
 }
