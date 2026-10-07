@@ -10,8 +10,9 @@ import {
 
 const base = { id: "session-test", state: "planned" };
 
-const started = startSession(base);
+const started = startSession(base, { now: "2026-10-07T12:00:00.000Z" });
 assert.equal(started.state, "started");
+assert.equal(started.stateHistory.at(-1).at, "2026-10-07T12:00:00.000Z");
 const awaiting = requestEvidence(started);
 assert.equal(awaiting.state, "awaiting-evidence");
 const completed = completeSession(awaiting);
