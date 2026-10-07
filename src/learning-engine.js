@@ -248,28 +248,6 @@ function registerEvidence(matrix, profile, rawEvidence, options = {}) {
   };
 }
 
-function createActivityPlan(matrix, profile, canDoId, options = {}) {
-  const canDo = getCanDo(matrix, canDoId);
-  if (!canDo) throw new Error(`Unknown Can-Do: ${canDoId}`);
-
-  const gap = options.gap || { type: "none", target: null };
-  const recovery = gap.type !== "none" ? chooseRecovery(canDo, matrix, gap) : [];
-
-  return {
-    id: `activity-${canDo.id}-${Date.now()}`,
-    canDoId: canDo.id,
-    level: canDo.level,
-    skill: canDo.skill,
-    objective: canDo.canDo,
-    mode: options.mode || canDo.evidence?.type || canDo.skill,
-    support: options.support || recovery,
-    task: canDo.evidence?.task || canDo.canDo,
-    feedbackLanguages: canDo.feedback?.languages || ["en", "es"],
-    retryRequired: Boolean(options.retryRequired),
-    languageResources: canDo.languageResources || {}
-  };
-}
-
 function getProgressProfile(matrix, profile) {
   const result = {};
   for (const canDo of matrix.canDos || []) {
@@ -298,6 +276,5 @@ export {
   chooseRecovery,
   selectNextCanDo,
   registerEvidence,
-  createActivityPlan,
   getProgressProfile
 };
