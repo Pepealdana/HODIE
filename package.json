@@ -5,10 +5,11 @@
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
     "test:content": "node tests/content-model.test.js",
-    "test": "npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:session",
+    "test": "npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:session && npm run test:cycle",
     "test:generator": "node tests/activity-generator.test.js",
     "test:integration": "node tests/engine-activity-integration.test.js",
     "test:planner": "node tests/adaptive-planner.test.js",
-    "test:session": "node tests/learning-session.test.js"
+    "test:session": "node tests/learning-session.test.js",
+    "test:cycle": "node tests/learning-cycle.test.js"
   }
 }
