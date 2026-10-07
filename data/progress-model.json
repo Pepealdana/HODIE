@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "HODIE",
+  "name": "Functional Progress Model v1",
+  "purpose": "Translate Can-Do evidence into an interpretable functional progress profile without reducing English ability to a single score.",
+  "principles": [
+    "Communication is primary; grammar, vocabulary and pronunciation support communication.",
+    "Progress is evidence-based, not lesson-count-based.",
+    "Knowledge, ability and confidence are separate dimensions.",
+    "A learner can be progressing in one skill while remaining weak in another.",
+    "Mastery requires repeated successful evidence, not one successful attempt.",
+    "Failure routes the learner to a specific gap or prerequisite.",
+    "The model estimates functional CEFR-aligned progress; it does not certify CEFR."
+  ],
+  "domains": {
+    "communicative": [
+      "speaking",
+      "listening",
+      "reading",
+      "writing"
+    ],
+    "interaction": [
+      "communication"
+    ],
+    "resources": [
+      "grammar",
+      "vocabulary",
+      "pronunciation"
+    ],
+    "transversal": [
+      "confidence"
+    ]
+  },
+  "evidenceLevels": [
+    {
+      "id": "attempt",
+      "description": "Learner attempts the Can-Do; evidence may be incomplete."
+    },
+    {
+      "id": "supported",
+      "description": "Learner succeeds with meaningful prompts, models or scaffolding."
+    },
+    {
+      "id": "independent",
+      "description": "Learner succeeds independently on a familiar task."
+    },
+    {
+      "id": "consistent",
+      "description": "Learner succeeds independently on repeated tasks with different content."
+    },
+    {
+      "id": "transfer",
+      "description": "Learner uses the ability in a new but related context with limited preparation."
+    }
+  ],
+  "evidenceDimensions": {
+    "speaking": [
+      "taskCompletion",
+      "grammar",
+      "fluency",
+      "vocabulary",
+      "pronunciation",
+      "interaction",
+      "confidence"
+    ],
+    "listening": [
+      "accuracy",
+      "gist",
+      "details",
+      "inference",
+      "confidence"
+    ],
+    "reading": [
+      "accuracy",
+      "gist",
+      "details",
+      "inference",
+      "confidence"
+    ],
+    "writing": [
+      "taskCompletion",
+      "accuracy",
+      "coherence",
+      "clarity",
+      "vocabulary",
+      "grammar",
+      "confidence"
+    ],
+    "communication": [
+      "taskCompletion",
+      "interaction",
+      "repair",
+      "confidence"
+    ],
+    "vocabulary": [
+      "recall",
+      "use",
+      "spontaneousUse"
+    ],
+    "grammar": [
+      "accuracy",
+      "communicativeUse"
+    ],
+    "pronunciation": [
+      "intelligibility",
+      "prosody",
+      "confidence"
+    ]
+  },
+  "scoring": {
+    "scale": {
+      "min": 0,
+      "max": 1
+    },
+    "note": "Dimension scores are normalized evidence measures, not percentages of English knowledge.",
+    "communicativeWeights": {
+      "speaking": 0.28,
+      "listening": 0.24,
+      "reading": 0.16,
+      "writing": 0.14,
+      "communication": 0.12,
+      "vocabulary": 0.03,
+      "grammar": 0.02,
+      "pronunciation": 0.01
+    },
+    "rule": "Use domain-level profiles for decisions; the overall index is secondary and never replaces individual skill status."
+  },
+  "canDoStatus": {
+    "notStarted": "No meaningful evidence yet.",
+    "emerging": "Attempted or partially successful; requires substantial support.",
+    "developing": "Can complete the task with some support or inconsistent performance.",
+    "functional": "Can complete the task independently on familiar content.",
+    "consolidated": "Can complete the task independently and consistently across varied familiar content.",
+    "transferred": "Can use the ability successfully in a new related context."
+  },
+  "mastery": {
+    "minimumEvidenceAttempts": 2,
+    "requiredIndependentEvidence": 2,
+    "requireDifferentContext": true,
+    "defaultConfidenceMinimum": 4,
+    "rule": "A Can-Do should not become mastered from a single high score. Repeated independent evidence is required.",
+    "resourceRule": "Grammar and vocabulary mastery is demonstrated through use in meaningful production, not isolated recognition alone."
+  },
+  "gapDetection": {
+    "order": [
+      "task-failure",
+      "communication-strategy-gap",
+      "resource-gap",
+      "fluency-gap",
+      "confidence-gap"
+    ],
+    "rule": "Prefer the smallest actionable gap that explains the failed Can-Do.",
+    "example": "If a learner cannot explain a project because key vocabulary is missing, target vocabulary before assigning a broad grammar lesson."
+  },
+  "confidence": {
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "role": "Transversal diagnostic and progression indicator; confidence never substitutes for performance evidence.",
+    "interpretation": {
+      "1": "Could not do it.",
+      "2": "Could do it with a lot of help.",
+      "3": "Could do it with some help.",
+      "4": "Could do it independently.",
+      "5": "Could do it comfortably."
+    }
+  },
+  "review": {
+    "intervalsDays": [
+      1,
+      2,
+      4,
+      7,
+      14,
+      30
+    ],
+    "trigger": "Review after success, repeated failure, or observed forgetting.",
+    "rule": "Spacing applies to Can-Dos and language resources according to evidence, not simply to lesson completion."
+  },
+  "personalization": {
+    "principle": "Prioritize high-value Can-Dos connected to the learner's real life, work and goals.",
+    "initialUserContext": [
+      "technology",
+      "programming",
+      "robotics",
+      "teaching",
+      "STEAM",
+      "professional communication"
+    ],
+    "fallback": "Use general familiar-life contexts when professional context is not relevant."
+  },
+  "progression": {
+    "A2": "bilingual-by-default; build reliable everyday communication and basic interaction.",
+    "A2Plus": "English-first with Spanish support; connect ideas, experiences, work, opinions and short interactions.",
+    "B1": "English-first; handle familiar personal/professional communication with increasing independence and connected speech/writing.",
+    "promotionRule": "Do not promote by completing a fixed lesson count. Promotion depends on the relevant Can-Do evidence profile."
+  }
+}
