@@ -17,7 +17,6 @@ function clamp(value, min = 0, max = 1) {
   return Math.min(max, Math.max(min, Number(value) || 0));
 }
 
-import { createActivityPlan as generateActivityPlan } from "./activity-generator.js";
 
 function getCanDo(matrix, id) {
   return (matrix.canDos || []).find((item) => item.id === id) || null;
@@ -268,16 +267,6 @@ function createActivityPlan(matrix, profile, canDoId, options = {}) {
   };
 }
 
-function createNextActivityPlan(matrix, library, result, options = {}) {
-  if (!result?.canDo?.id) throw new Error("Evidence result must include a Can-Do.");
-  return generateActivityPlan(matrix, library, result.canDo.id, {
-    profile: result.profile,
-    gap: result.gap,
-    retryRequired: result.retryRequired,
-    ...options
-  });
-}
-
 function getProgressProfile(matrix, profile) {
   const result = {};
   for (const canDo of matrix.canDos || []) {
@@ -307,6 +296,5 @@ export {
   selectNextCanDo,
   registerEvidence,
   createActivityPlan,
-  getProgressProfile,
-  createNextActivityPlan
+  getProgressProfile
 };
