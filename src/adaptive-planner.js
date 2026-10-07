@@ -109,6 +109,15 @@ function skillBalancePenalty(skill, recentEvidence) {
   return Math.min(1.5, recentCount * 0.35);
 }
 
+
+function progressionBonus(profile, canDo) {
+  const recent = profile.evidence?.[profile.evidence.length - 1];
+  if (!recent?.canDoId) return 0;
+
+  const followsRecent = (canDo.prerequisites || []).includes(recent.canDoId);
+  return followsRecent ? 2.5 : 0;
+}
+
 function calculateTargetScore(matrix, profile, canDo, options = {}) {
   const now = options.now ? new Date(options.now) : new Date();
   const status = getStatus(canDo, profile);
@@ -122,6 +131,7 @@ function calculateTargetScore(matrix, profile, canDo, options = {}) {
   if (hasRecentGap(profile, canDo.id, options.recentGapLimit || 5)) score += 2;
 
   score += contextMatch(canDo, options.contextTerms || []);
+  score += progressionBonus(profile, canDo);
   score -= skillBalancePenalty(canDo.skill, recentEvidence);
 
   if (status === "transferred") score -= 2;
@@ -197,6 +207,7 @@ export {
   PRIORITY_WEIGHTS,
   STATUS_NEED,
   SKILL_WEIGHTS,
+  progressionBonus,
   calculateTargetScore,
   rankLearningTargets,
   selectNextLearningTarget,
