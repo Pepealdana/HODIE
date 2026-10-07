@@ -14,7 +14,7 @@ function createNextActivityPlan(matrix, library, result, options = {}) {
     throw new Error("Evidence result must include a Can-Do.");
   }
 
-  const retry = result.retryRequired || result.gap?.type !== "none";
+  const retry = Boolean(result.retryRequired);
   const target = retry
     ? result.canDo
     : (
@@ -35,7 +35,7 @@ function createNextActivityPlan(matrix, library, result, options = {}) {
 }
 
 function registerEvidenceAndCreateActivityPlan(matrix, profile, library, rawEvidence, options = {}) {
-  const result = registerEvidence(matrix, profile, rawEvidence);
+  const result = registerEvidence(matrix, profile, rawEvidence, options);
   const plan = createNextActivityPlan(matrix, library, result, options);
   return { result, plan };
 }
