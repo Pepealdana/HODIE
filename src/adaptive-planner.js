@@ -195,6 +195,11 @@ function explainSelection(matrix, profile, canDo, options = {}) {
     reasons.push("matches the learner's real-life context");
   }
 
+  const recent = profile.evidence?.[profile.evidence.length - 1];
+  if (recent?.canDoId && (canDo.prerequisites || []).includes(recent.canDoId)) {
+    reasons.push("continues from the most recent Can-Do");
+  }
+
   return {
     canDoId: canDo.id,
     skill: canDo.skill,
