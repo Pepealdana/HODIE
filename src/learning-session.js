@@ -16,7 +16,7 @@ const DEFAULT_SESSION_MINUTES = {
   pronunciation: 5
 };
 
-function createSession(matrix, library, profile, options = {}) {
+function buildSession(matrix, library, profile, target, options = {}) {
   const planningOptions = {
     levels: options.levels || ["A2", "A2+", "B1"],
     contextTerms: options.contextTerms || [],
@@ -24,14 +24,6 @@ function createSession(matrix, library, profile, options = {}) {
     recentGapLimit: options.recentGapLimit || 5,
     now: options.now
   };
-
-  const target =
-    selectNextActivityTarget(matrix, library, profile, planningOptions) ||
-    selectNextLearningTarget(matrix, profile, planningOptions);
-
-  if (!target) {
-    throw new Error("No eligible Can-Do is available for the current profile.");
-  }
 
   const rationale = explainSelection(matrix, profile, target, planningOptions);
   const plan = createActivityPlan(matrix, library, target.id, {
@@ -69,7 +61,41 @@ function createSession(matrix, library, profile, options = {}) {
   };
 }
 
+function createSession(matrix, library, profile, options = {}) {
+  const planningOptions = {
+    levels: options.levels || ["A2", "A2+", "B1"],
+    contextTerms: options.contextTerms || [],
+    recentEvidenceLimit: options.recentEvidenceLimit || 8,
+    recentGapLimit: options.recentGapLimit || 5,
+    now: options.now
+  };
+
+  const target =
+    selectNextActivityTarget(matrix, library, profile, planningOptions) ||
+    selectNextLearningTarget(matrix, profile, planningOptions);
+
+  if (!target) {
+    throw new Error("No eligible Can-Do is available for the current profile.");
+  }
+
+  return buildSession(matrix, library, profile, target, options);
+}
+
+
+function createSessionForCanDo(matrix, library, profile, canDoId, options = {}) {
+  const target = (matrix.canDos || []).find((canDo) => canDo.id === canDoId);
+  if (!target) {
+    throw new Error(`Unknown Can-Do: ${canDoId}`);
+  }
+
+  return buildSession(matrix, library, profile, target, {
+    ...options,
+    mode: options.mode || "recovery"
+  });
+}
+
 export {
   DEFAULT_SESSION_MINUTES,
-  createSession
+  createSession,
+  createSessionForCanDo
 };
