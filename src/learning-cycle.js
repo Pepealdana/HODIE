@@ -4,7 +4,7 @@ import { createSession, createSessionForCanDo } from "./learning-session.js";
 function runLearningCycle(matrix, library, profile, rawEvidence, options = {}) {
   const result = registerEvidence(matrix, profile, rawEvidence);
 
-  const nextSession = result.retryRequired || result.gap.type !== "none"
+  const nextSession = result.retryRequired
     ? createSessionForCanDo(matrix, library, result.profile, result.canDo.id, {
         ...options,
         gap: result.gap,
