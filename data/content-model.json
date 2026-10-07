@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "HODIE",
+  "name": "Content Model v1",
+  "purpose": "Represent reusable learning activities independently from the engine and interface.",
+  "principles": [
+    "Content is mapped to one primary Can-Do.",
+    "Every activity declares its evidence target.",
+    "Support is explicit and removable.",
+    "Feedback is actionable and bilingual when appropriate.",
+    "Personal contexts increase relevance but do not reduce transfer.",
+    "Content can be reused by multiple activity types."
+  ],
+  "activitySchema": {
+    "required": ["id","canDoId","activityType","level","skill","title","objective","instructions","task","evidence","feedback","retry"],
+    "fields": {
+      "id": "Unique stable activity identifier.",
+      "canDoId": "Primary Can-Do being practiced or assessed.",
+      "activityType": "Reference to an activity type from activity-model.json.",
+      "level": "A2, A2+ or B1.",
+      "skill": "Primary HODIE skill.",
+      "context": "Optional real-world context.",
+      "title": "Short learner-facing title.",
+      "objective": "Observable learning objective.",
+      "instructions": "What the learner must do.",
+      "task": "Actual prompt or interaction task.",
+      "support": "Optional hints, model, vocabulary or grammar support.",
+      "expectedResponse": "Optional response shape, key points or acceptance criteria.",
+      "evidence": "How the response will be evaluated.",
+      "feedback": "Rules and templates for feedback.",
+      "retry": "What happens after important errors.",
+      "metadata": "Tags, estimated duration and content version."
+    }
+  },
+  "evidenceSchema": {
+    "observable": true,
+    "dimensions": "Must use dimensions compatible with progress-model.json.",
+    "independent": "Whether the learner completed the target without substantive support.",
+    "confidence": "Optional learner self-report from 1 to 5.",
+    "errors": "Structured errors with priority, type, target and message.",
+    "contextId": "Identifies the situation in which evidence was produced."
+  },
+  "feedbackSchema": {
+    "languages": ["en", "es"],
+    "principle": "Explain clearly in Spanish when needed, but keep practice and demonstration in English.",
+    "maxPriorityCorrections": 2,
+    "retryAfterPriorityError": true,
+    "format": ["what","why","betterVersion","retry"]
+  },
+  "retrySchema": {
+    "requiredAfterPriorityError": true,
+    "preserveOriginalCanDo": true,
+    "recoveryFirst": true,
+    "returnToOriginalTask": true
+  }
+}
