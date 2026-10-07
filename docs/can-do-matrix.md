@@ -103,3 +103,50 @@ The machine-readable matrix lives in:
 `data/can-do-matrix.json`
 
 It is intentionally separate from the user interface and from the Learning Engine so that content can evolve without rewriting engine logic.
+
+
+## Bilingual learning and feedback policy
+
+HODIE is **not an English-only application**.
+
+The learner may use Spanish as a scaffold, especially at A2. The objective is not to force English into every interface element; the objective is to maximize meaningful use of English.
+
+### Language roles
+
+- **Interface:** Spanish-first initially.
+- **Instructions:** English with Spanish support when needed.
+- **Activities:** English.
+- **Learner production:** English.
+- **Error feedback:** English + Spanish.
+- **Retry:** English.
+- **B1:** English-first, with Spanish support available when useful.
+
+### Feedback principles
+
+HODIE feedback should be:
+
+1. **Concrete** — identify the important error.
+2. **Short** — avoid unnecessary grammar lectures.
+3. **Bilingual** — explain the point in English and Spanish.
+4. **Meaningful** — use short examples connected to the learner's context.
+5. **Actionable** — tell the learner what pattern to use.
+6. **Adaptive** — explain more only when the learner continues to make the same error.
+7. **Selective** — do not correct every error during fluency-focused speaking.
+8. **Interactive** — important corrections should lead to a retry.
+
+Example:
+
+> ❌ **I have 20 years working as a teacher.**  
+> ✅ **I have worked as a teacher for 20 years.**
+>
+> **Why? / ¿Por qué?**  
+> **English:** Use **have + past participle + for** for an experience or situation that continues until now.  
+> **Español:** Usa **have + participio pasado + for** para una experiencia o situación que continúa hasta ahora.
+>
+> **Examples:**  
+> *I have worked here for 20 years.*  
+> *I have taught technology for many years.*
+>
+> **Try again.**
+
+The Spanish explanation is a bridge, not a substitute for English practice.
