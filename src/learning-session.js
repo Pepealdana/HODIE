@@ -37,8 +37,10 @@ function buildSession(matrix, library, profile, target, options = {}) {
     DEFAULT_SESSION_MINUTES[target.skill] ||
     7;
 
+  const sessionId = options.sessionId || `session-${target.id}-${Date.now()}`;
+
   return {
-    id: `session-${target.id}-${Date.now()}`,
+    id: sessionId,
     version: "1.0.0",
     mode: options.mode || "standard",
     durationMinutes: minutes,
@@ -52,6 +54,15 @@ function buildSession(matrix, library, profile, target, options = {}) {
     why: rationale,
     stages: plan.stages,
     selection: plan.selection,
+    state: "planned",
+    lifecycle: ["planned", "started", "awaiting-evidence", "completed"],
+    evidenceContract: {
+      required: true,
+      sessionId,
+      canDoId: target.id,
+      activityIds: plan.stages.map((stage) => stage.activity.id),
+      progressMutation: "register-evidence"
+    },
     completion: {
       evidenceRequired: true,
       retryOnPriorityError:
