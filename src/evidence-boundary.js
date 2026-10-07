@@ -42,9 +42,9 @@ function validateSessionEvidence(matrix, library, session, rawEvidence) {
   return { activity, canDo };
 }
 
-function submitSessionEvidence(matrix, library, session, rawEvidence, options = {}) {
+function submitSessionEvidence(matrix, library, session, profile, rawEvidence, options = {}) {
   validateSessionEvidence(matrix, library, session, rawEvidence);
-  const result = registerEvidence(matrix, { evidence: [], reviews: [], ...(options.profile || {}) }, rawEvidence, options);
+  const result = registerEvidence(matrix, profile, rawEvidence, options);
   return {
     ...result,
     evidence: result.profile.evidence[result.profile.evidence.length - 1]
