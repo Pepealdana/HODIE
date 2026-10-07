@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "HODIE",
+  "name": "Evidence Contract v1",
+  "purpose": "Define the stable contract between a learning session, learner performance, progress registration and the next adaptive session.",
+  "principles": [
+    "Evidence belongs to a Can-Do and, when available, to the session and activity that produced it.",
+    "A session completion does not imply success; observable performance evidence is required.",
+    "Evidence is append-only; progress is derived from evidence history.",
+    "Session identity provides traceability without coupling the pedagogical engine to the UI.",
+    "Confidence is diagnostic and never replaces performance evidence."
+  ],
+  "sessionStates": [
+    "planned",
+    "started",
+    "awaiting-evidence",
+    "completed",
+    "retry-required",
+    "next"
+  ],
+  "evidenceRequired": [
+    "canDoId",
+    "sessionId",
+    "activityId",
+    "contextId",
+    "timestamp",
+    "independent",
+    "confidence",
+    "dimensions",
+    "errors"
+  ],
+  "evidenceFields": {
+    "sessionId": "Stable identifier of the session that produced the evidence.",
+    "activityId": "Stable identifier of the activity that produced the evidence.",
+    "canDoId": "Primary Can-Do being demonstrated.",
+    "contextId": "Situation/context in which performance occurred.",
+    "timestamp": "ISO-8601 timestamp.",
+    "independent": "Whether the learner performed without substantive support.",
+    "confidence": "Learner self-report from 1 to 5.",
+    "dimensions": "Normalized observable performance dimensions from 0 to 1.",
+    "errors": "Structured actionable errors."
+  },
+  "lifecycle": "planned -> started -> awaiting-evidence -> completed -> register-evidence -> retry-required | next",
+  "immutability": "Raw evidence records are append-only. Derived status, gaps and reviews may be recalculated from history."
+}
