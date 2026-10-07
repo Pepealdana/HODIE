@@ -20,7 +20,8 @@ The Learning Engine should use this cycle to decide what the learner needs next.
 - **Writing**
 - **Vocabulary** — progresses from recognition to spontaneous use.
 - **Grammar** — serves communication rather than existing as an isolated course sequence.
-- **Communication** — interaction, repair, clarification, follow-up questions and conversational resilience.
+- **Communication** — interaction, repair, clarification, follow-up questions, negotiation and conversational resilience.
+- **Pronunciation** — intelligibility, word/sentence stress and basic intonation; a supporting resource for spoken communication.
 - **Confidence** — HODIE-specific 1–5 dimension; not an official CEFR scale.
 
 ## Evidence
@@ -32,7 +33,7 @@ Examples:
 - Speaking: recorded response or conversation.
 - Listening: gist/detail questions.
 - Reading: functional comprehension.
-- Writing: connected text.
+- Writing: connected text and written interaction such as replying to messages/emails.
 - Vocabulary: contextual production.
 - Grammar: communicative production.
 - Communication: interaction/repair task.
@@ -150,3 +151,10 @@ Example:
 > **Try again.**
 
 The Spanish explanation is a bridge, not a substitute for English practice.
+
+
+## Reference alignment
+
+The matrix is checked against the Council of Europe CEFR/Companion Volume, Cambridge English B1 Preliminary and British Council B1 practical Can-Do descriptions. Cambridge's B1 Speaking framework explicitly considers Grammar and Vocabulary, Discourse Management, Pronunciation and Interactive Communication; HODIE therefore treats pronunciation and interaction as explicit components rather than assuming they are covered automatically by Speaking.
+
+The current machine-readable matrix contains **133 Can-Dos**, including 6 explicit pronunciation Can-Dos and additional written-interaction and negotiation outcomes. See `docs/can-do-validation.md` for the full validation report.
