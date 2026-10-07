@@ -36,7 +36,8 @@ const failed = runLearningCycle(matrix, library, emptyProfile, {
 assert.equal(failed.result.canDo.id, "SP-A2-02");
 assert.equal(failed.result.gap.target, "be");
 assert.equal(failed.result.retryRequired, true);
-assert.equal(failed.nextSession.canDoId, "SP-A2-02");
+assert.equal(failed.nextSession.target.canDoId, "SP-A2-02");
+assert.equal(failed.nextSession.mode, "recovery");
 assert.equal(failed.nextSession.stages.at(-1).kind, "retry");
 assert.equal(failed.nextSession.stages.at(-1).activity.id, "ACT-SP-A2-02-01");
 
