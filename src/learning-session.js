@@ -60,6 +60,7 @@ function buildSession(matrix, library, profile, target, options = {}) {
       sessionId,
       canDoId: target.id,
       activityIds: plan.stages.map((stage) => stage.activity.id),
+      assessmentActivityId: plan.stages.find((stage) => stage.kind === "target")?.activity.id || null,
       progressMutation: "register-evidence"
     },
     completion: {
