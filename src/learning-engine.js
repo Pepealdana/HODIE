@@ -207,7 +207,7 @@ function selectNextCanDo(matrix, profile, options = {}) {
   return candidates[0]?.canDo || null;
 }
 
-function registerEvidence(matrix, profile, rawEvidence) {
+function registerEvidence(matrix, profile, rawEvidence, options = {}) {
   const evidence = normalizeEvidence(rawEvidence);
   const canDo = getCanDo(matrix, evidence.canDoId);
   if (!canDo) throw new Error(`Unknown Can-Do: ${evidence.canDoId}`);
@@ -229,7 +229,8 @@ function registerEvidence(matrix, profile, rawEvidence) {
   const recovery = success ? [] : chooseRecovery(canDo, matrix, gap);
 
   const days = reviewDelayDays(status, success);
-  const nextReviewAt = new Date(Date.now() + days * 86400000).toISOString();
+  const now = options.now ? new Date(options.now) : new Date();
+  const nextReviewAt = new Date(now.getTime() + days * 86400000).toISOString();
 
   nextProfile.reviews = [
     ...nextProfile.reviews.filter((r) => r.canDoId !== canDo.id),
