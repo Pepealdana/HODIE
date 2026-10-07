@@ -98,12 +98,12 @@ function prerequisiteReady(matrix, profile, canDo) {
   });
 }
 
-function skillBalancePenalty(skill, recentEvidence) {
+function skillBalancePenalty(matrix, skill, recentEvidence) {
   if (!recentEvidence.length) return 0;
 
   const recentCount = recentEvidence.filter((evidence) => {
-    const id = String(evidence.canDoId || "");
-    return id.startsWith(skill.slice(0, 2).toUpperCase());
+    const canDo = getCanDo(matrix, evidence.canDoId);
+    return canDo?.skill === skill;
   }).length;
 
   return Math.min(1.5, recentCount * 0.35);
@@ -132,7 +132,7 @@ function calculateTargetScore(matrix, profile, canDo, options = {}) {
 
   score += contextMatch(canDo, options.contextTerms || []);
   score += progressionBonus(profile, canDo);
-  score -= skillBalancePenalty(canDo.skill, recentEvidence);
+  score -= skillBalancePenalty(matrix, canDo.skill, recentEvidence);
 
   if (status === "transferred") score -= 2;
   if (status === "consolidated" && !isDue(profile, canDo.id, now)) score -= 0.5;
