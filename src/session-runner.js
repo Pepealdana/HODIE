@@ -12,7 +12,7 @@ function runSessionEvidenceCycle(
 ) {
   const completedSession =
     session.state === "awaiting-evidence"
-      ? completeSession(session)
+      ? completeSession(session, options)
       : session;
 
   const result = submitSessionEvidence(
@@ -25,8 +25,8 @@ function runSessionEvidenceCycle(
   );
 
   const finalSession = result.retryRequired
-    ? markRetryRequired(completedSession)
-    : markNext(completedSession);
+    ? markRetryRequired(completedSession, options)
+    : markNext(completedSession, options);
 
   const nextSession = result.retryRequired
     ? createSessionForCanDo(
