@@ -36,8 +36,10 @@ const masteredIds = new Set([
   "B1-SP-1", "B1-LI-1", "B1-RE-1", "B1-WR-1", "B1-CO-1", "B1-M1"
 ]);
 
-const getStatus = (canDo, profile) =>
-  masteredIds.has(canDo.id) ? "consolidated" : "developing";
+const getStatus = (canDo, profile) => {
+  const count = (profile.evidence || []).filter((item) => item.canDoId === canDo.id && item.independent).length;
+  return count >= 2 ? "consolidated" : count >= 1 ? "functional" : "notStarted";
+};
 
 const empty = { evidence: [], reviews: [] };
 
