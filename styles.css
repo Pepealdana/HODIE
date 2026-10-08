@@ -50,7 +50,7 @@ button:focus-visible, textarea:focus-visible, input:focus-visible, summary:focus
 .theme-toggle:hover { border-color: var(--navy); background: var(--surface-alt); }
 .theme-toggle:focus-visible { outline: 3px solid rgba(59,110,168,.35); outline-offset: 2px; }
 .theme-logo { display: block; width: 100%; height: auto; }
-.theme-logo-dark { display: none; }
+.brand-mark .theme-logo-dark { display: none; }
 .brand-mark { display: block; width: min(300px, 68vw); line-height: 0; }
 .brand-mark img { display: block; width: 100%; height: auto; }
 h1 { margin: 2px 0 0; font-size: 1.2rem; line-height: 1.15; }
@@ -372,5 +372,5 @@ html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .category-focus-grammar .category-icon { background: #1d314d; color: #78a8e5; }
 [data-theme="dark"] .theme-toggle { background: #172033; color: #f4f6f8; border-color: #526077; }
 [data-theme="dark"] .theme-toggle:hover { background: #202b3d; border-color: #8995a6; }
-[data-theme="dark"] .theme-logo-dark { display: block; }
-[data-theme="dark"] .theme-logo-light { display: none; }
+[data-theme="dark"] .brand-mark .theme-logo-dark { display: block; }
+[data-theme="dark"] .brand-mark .theme-logo-light { display: none; }
