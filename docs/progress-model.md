@@ -97,3 +97,14 @@ El motor combinará prioridad del Can-Do, evidencia actual, errores recientes, c
 ### APROBADA COMO MODELO BASE
 
 La siguiente fase es adaptar el Learning Engine para seleccionar Can-Dos, registrar evidencia, detectar gaps, recuperar prerrequisitos, producir feedback bilingüe, exigir retry, actualizar estados y programar revisión.
+## 14. Phase 3 — Progression & Retention
+
+The progression and maintenance policy is implemented in `src/progression-retention.js` and documented in `docs/progression-retention-v1.md`.
+
+It separates:
+- **Can-Do mastery**: functional/consolidated/transferred status;
+- **level readiness**: evidence coverage across communicative domains;
+- **retention state**: current, due, atRisk or unscheduled.
+
+A review being overdue does **not** erase mastery. New evidence must demonstrate deterioration before the Can-Do status changes.
+
