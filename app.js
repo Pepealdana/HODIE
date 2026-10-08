@@ -78,7 +78,9 @@ function renderMission() {
       <div class="task">
         <p><strong>Task</strong></p>
         <p>${escapeHtml(activity.task)}</p>
-        <p class="spanish">${escapeHtml(activity.instructions)}</p>
+        <p class="spanish"><strong>Tarea:</strong> ${escapeHtml(activity.taskEs || "")}</p>
+        <p class="spanish"><strong>Instructions:</strong> ${escapeHtml(activity.instructions)}</p>
+        <p class="spanish"><strong>Instrucciones:</strong> ${escapeHtml(activity.instructionsEs || "")}</p>
       </div>
       ${starters.length ? `
         <div class="support">
@@ -101,19 +103,25 @@ function renderActiveMission() {
       <p class="kicker">Mission in progress</p>
       <h2>${escapeHtml(activity.title)}</h2>
       <p>${escapeHtml(activity.task)}</p>
+      <p class="spanish"><strong>En español:</strong> ${escapeHtml(activity.taskEs || "")}</p>
       <div>
         <label for="response"><strong>Your English</strong></label>
+        <p class="spanish">Tu respuesta en inglés</p>
         <textarea id="response" placeholder="Write what you would say. In a future version, this area will also accept your voice."></textarea>
       </div>
       <div class="rating">
         <strong>How confident are you?</strong>
+        <p class="spanish">¿Qué tan seguro te sientes?</p>
         <div class="rating-options">
           ${[1,2,3,4,5].map((n) => `
             <label><input type="radio" name="confidence" value="${n}" ${n === 3 ? "checked" : ""}>${n}</label>
           `).join("")}
         </div>
       </div>
-      <div class="notice">For this validation UI, evidence is self-assessed. Later HODIE will combine this with observable performance such as speaking/listening evidence.</div>
+      <div class="notice">
+        <p>For this validation UI, evidence is self-assessed. Later HODIE will combine this with observable performance such as speaking/listening evidence.</p>
+        <p class="spanish">En esta interfaz de validación, la evidencia es autoevaluada. Más adelante HODIE combinará esta autoevaluación con evidencia observable, como el desempeño al hablar y escuchar.</p>
+      </div>
       <div class="actions">
         <button class="primary" id="submitButton" type="button">Submit evidence</button>
       </div>
