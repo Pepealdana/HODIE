@@ -106,7 +106,7 @@ function renderPracticeHome() {
     }
   ];
 
-  app.innerHTML = \`
+  app.innerHTML = `
     <section class="card practice-home">
       <div class="home-intro">
         <p class="kicker">Today's practice · \${escapeHtml(session.target.level)}</p>
@@ -126,14 +126,14 @@ function renderPracticeHome() {
         </div>
 
         <div class="mode-groups">
-          \${modeGroups.map((group) => \`
+          \${modeGroups.map((group) => `
             <section class="mode-group" aria-labelledby="mode-\${group.title.toLowerCase()}">
               <div class="mode-group-title">
                 <strong id="mode-\${group.title.toLowerCase()}">\${group.title}</strong>
                 <span>\${group.titleEs}</span>
               </div>
               <div class="mode-grid">
-                \${group.items.map(([value, en, es, meta]) => \`
+                \${group.items.map(([value, en, es, meta]) => `
                   <button class="mode-button" data-mode="\${value}" type="button" aria-label="\${en}: \${es}">
                     <span class="mode-copy">
                       <strong>\${en}</strong>
@@ -142,10 +142,10 @@ function renderPracticeHome() {
                     <span class="mode-meta">\${meta}</span>
                     <span class="mode-arrow" aria-hidden="true">→</span>
                   </button>
-                \`).join("")}
+                `).join("")}
               </div>
             </section>
-          \`).join("")}
+          `).join("")}
         </div>
       </div>
 
@@ -158,7 +158,7 @@ function renderPracticeHome() {
         \${renderProgress()}
       </div>
     </section>
-  \`;
+  `;
 
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
@@ -182,7 +182,7 @@ function prepareSessionForPractice() {
     return requestEvidence(startSession(session));
   }
 
-  throw new Error(\`This session cannot start from state: \${session.state}\`);
+  throw new Error(`This session cannot start from state: \${session.state}`);
 }
 
 function startPractice(mode) {
@@ -194,7 +194,7 @@ function startPractice(mode) {
   });
 
   if (!activities.length) {
-    renderError(new Error(\`No micro-practice is available for \${getModeLabel(mode)} yet.\`));
+    renderError(new Error(`No micro-practice is available for \${getModeLabel(mode)} yet.`));
     return;
   }
 
