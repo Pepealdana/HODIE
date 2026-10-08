@@ -246,7 +246,13 @@
         "required-information",
         "speaking"
       ],
-      "primarySkill": "speaking"
+      "primarySkill": "speaking",
+      "audioText": "I am a technology and robotics teacher.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      }
     },
     {
       "id": "MIC-SP-A2-01-07",
