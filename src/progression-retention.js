@@ -72,10 +72,28 @@ function getSkillCoverage(items, profile, getStatus) {
   return result;
 }
 
-function getMetaReadiness(items, profile, getStatus) {
-  const meta = items.filter((item) => item.canDoType === "meta");
-  if (!meta.length) return true;
-  return meta.some((item) => mastered(getStatusForCanDo(item, profile, getStatus)));
+function getMetaReadiness(matrix, items, profile, getStatus) {
+  const inlineMeta = items.filter((item) => item.canDoType === "meta");
+
+  if (inlineMeta.length) {
+    return inlineMeta.some((item) =>
+      mastered(getStatusForCanDo(item, profile, getStatus))
+    );
+  }
+
+  const metaCanDos = (matrix.metaCanDos || [])
+    .filter((item) => item.level === items[0]?.level);
+
+  if (!metaCanDos.length) return true;
+
+  return metaCanDos.some((meta) =>
+    (meta.dependsOn || []).length > 0 &&
+    meta.dependsOn.every((id) => {
+      const dependency = getCanDo(matrix, id);
+      return dependency &&
+        mastered(getStatusForCanDo(dependency, profile, getStatus));
+    })
+  );
 }
 
 function meetsSkillMinimum(skillCoverage, threshold) {
@@ -89,7 +107,7 @@ function evaluateLevel(matrix, profile, level, getStatus, policy = DEFAULT_POLIC
   const rules = policy[level] || DEFAULT_POLICY.B1;
   const coverage = getCoverage(items, profile, getStatus);
   const skillCoverage = getSkillCoverage(items, profile, getStatus);
-  const metaReady = !rules.requireMetaCanDo || getMetaReadiness(items, profile, getStatus);
+  const metaReady = !rules.requireMetaCanDo || getMetaReadiness(matrix, items, profile, getStatus);
   const skillMinimumMet = meetsSkillMinimum(skillCoverage, rules.skillMinimumCoverage);
 
   const ready = Boolean(
