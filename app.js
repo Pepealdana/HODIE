@@ -201,136 +201,68 @@ function renderPracticeHome() {
   const savedPractice = getSavedPracticeLabel();
   const savedExperience = getSavedExperienceLabel();
   const level = session.target.level;
-  const recommended = chooseLearningSurface(matrix, experienceLibrary, profile, {
+  const hasEvidence = Array.isArray(profile?.evidence) && profile.evidence.length > 0;
+
+  const adaptiveRecommendation = chooseLearningSurface(matrix, experienceLibrary, profile, {
     level,
     context: "professional",
     contextLibrary,
     contextTerms: ["technology", "teaching", "professional"]
   });
+
+  // First-time users should enter through the core practice loop.
+  // Once evidence exists, the adaptive orchestrator may recommend another surface.
+  const recommended = hasEvidence
+    ? adaptiveRecommendation
+    : {
+        surface: "practice",
+        mode: "mixed",
+        reason: "Start with a short mixed practice and build from there."
+      };
+
   const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
   const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
 
-  const modeGroups = [
-    {
-      title: "Practice",
-      titleEs: "Práctica",
-      items: [
-        ["mixed", "Mixed", "Un poco de todo", "Recommended"],
-        ["review", "Review", "Refuerza lo que necesitas", "Adaptive"]
-      ]
-    },
-    {
-      title: "Skills",
-      titleEs: "Habilidades",
-      items: [
-        ["speaking", "Speaking", "Hablar", "Voice first"],
-        ["listening", "Listening", "Escuchar", "Audio first"],
-        ["writing", "Writing", "Escribir", "Write"],
-        ["grammar", "Grammar", "Gramática", "Practice"],
-        ["vocabulary", "Vocabulary", "Vocabulario", "Practice"]
-      ]
-    }
+  const primaryModes = [
+    ["mixed", "Practice", "Práctica", "▤", "Start with short actions"],
+    ["conversation", "Conversation", "Conversación", "●", "Use English in context"],
+    ["simulation", "Simulation", "Simulación", "◆", "Practice a real situation"],
+    ["review", "Review", "Repaso", "◷", "Reinforce what you need"]
   ];
+
+  const focusModes = [
+    ["speaking", "Speaking", "Hablar", "◉"],
+    ["listening", "Listening", "Escuchar", "◖"],
+    ["writing", "Writing", "Escribir", "✎"],
+    ["grammar", "Grammar", "Gramática", "A"],
+    ["vocabulary", "Vocabulary", "Vocabulario", "Aa"]
+  ];
+
+  const recommendedTitle = recommended.surface === "practice"
+    ? recommended.mode === "review" ? "Review what needs reinforcement" : "Start today's practice"
+    : recommended.surface === "conversation" ? "Have a conversation"
+    : "Try a simulation";
+
+  const recommendedAction = recommended.surface === "practice"
+    ? () => startPractice(recommended.mode)
+    : () => startExperience(recommended.experienceId);
 
   app.innerHTML = `
     <section class="card learning-home">
       <div class="home-intro">
-        <p class="kicker">Today's learning · ${escapeHtml(level)}</p>
+        <p class="kicker">Today's practice · ${escapeHtml(level)}</p>
         <h2>${escapeHtml(targetActivity?.title || "Practice English")}</h2>
         <p class="spanish activity-title-es">${escapeHtml(targetActivity?.titleEs || "")}</p>
         <p class="can-do-line">${escapeHtml(statement)}</p>
         <p class="spanish">${escapeHtml(spanish)}</p>
       </div>
 
-      <section class="recommended-learning">
-        <div>
-          <p class="kicker">Recommended now</p>
-          <h3>${escapeHtml(
-            recommended.surface === "practice"
-              ? recommended.mode === "review" ? "Review what needs reinforcement" : "Mixed practice"
-              : recommended.surface === "conversation" ? "Have a conversation" : "Try a simulation"
-          )}</h3>
-          <p class="spanish">${escapeHtml(recommended.reason)}</p>
-        </div>
-        <button class="primary compact" id="recommendedLearningButton" type="button">Start</button>
-      </section>
-
-      <div class="learning-sections">
-        <section class="experience-section">
-          <div class="section-heading">
-            <div>
-              <p class="choice-title">Practice</p>
-              <p class="spanish">Short actions for skills and language resources.</p>
-            </div>
-          </div>
-          <div class="mode-groups">
-            ${modeGroups.map((group) => `
-              <section class="mode-group" aria-labelledby="mode-${group.title.toLowerCase()}">
-                <div class="mode-group-title">
-                  <strong id="mode-${group.title.toLowerCase()}">${group.title}</strong>
-                  <span>${group.titleEs}</span>
-                </div>
-                <div class="mode-grid">
-                  ${group.items.map(([value, en, es, meta]) => `
-                    <button class="mode-button" data-mode="${value}" type="button" aria-label="${en}: ${es}">
-                      <span class="mode-copy">
-                        <strong>${en}</strong>
-                        <span>${es}</span>
-                        <small class="mode-meta">${meta}</small>
-                      </span>
-                      <span class="mode-arrow" aria-hidden="true">→</span>
-                    </button>
-                  `).join("")}
-                </div>
-              </section>
-            `).join("")}
-          </div>
-        </section>
-
-        <section class="experience-section">
-          <div class="section-heading">
-            <div>
-              <p class="choice-title">Conversations</p>
-              <p class="spanish">Use English in open responses. No AI yet: HODIE guides and gives local feedback.</p>
-            </div>
-          </div>
-          <div class="experience-grid">
-            ${conversations.map((item) => `
-              <button class="experience-card" data-experience="${item.id}" type="button">
-                <span class="experience-kind">Conversation</span>
-                <strong>${item.title}</strong>
-                <span class="spanish">${item.titleEs}</span>
-                <small>${item.description}</small>
-              </button>
-            `).join("")}
-          </div>
-        </section>
-
-        <section class="experience-section">
-          <div class="section-heading">
-            <div>
-              <p class="choice-title">Simulations</p>
-              <p class="spanish">Role-play real situations: interviews, classes and presentations.</p>
-            </div>
-          </div>
-          <div class="experience-grid">
-            ${simulations.map((item) => `
-              <button class="experience-card" data-experience="${item.id}" type="button">
-                <span class="experience-kind">${escapeHtml(item.role || "Simulation")}</span>
-                <strong>${escapeHtml(item.title)}</strong>
-                <span class="spanish">${escapeHtml(item.titleEs)}</span>
-                <small>${escapeHtml(item.description)}</small>
-              </button>
-            `).join("")}
-          </div>
-        </section>
-      </div>
-
       ${savedPractice ? `
         <div class="resume-practice">
           <div>
-            <strong>Resume practice</strong>
-            <p class="spanish">${escapeHtml(savedPractice.mode)} · ${savedPractice.current}/${savedPractice.total}</p>
+            <p class="kicker">Continue where you left off</p>
+            <strong>${escapeHtml(savedPractice.mode)}</strong>
+            <p class="spanish">${savedPractice.current}/${savedPractice.total}</p>
           </div>
           <button class="secondary compact" id="resumePracticeButton" type="button">Continue</button>
         </div>
@@ -339,16 +271,107 @@ function renderPracticeHome() {
       ${savedExperience ? `
         <div class="resume-experience">
           <div>
-            <strong>Resume ${escapeHtml(savedExperience.title)}</strong>
+            <p class="kicker">Continue conversation</p>
+            <strong>${escapeHtml(savedExperience.title)}</strong>
             <p class="spanish">Turn ${savedExperience.current}/${savedExperience.total}</p>
           </div>
           <button class="secondary compact" id="resumeExperienceButton" type="button">Continue</button>
         </div>
       ` : ""}
 
+      <section class="recommended-learning recommended-primary" aria-label="Today's recommended practice">
+        <div>
+          <p class="kicker">Today's recommended practice</p>
+          <h3>${escapeHtml(recommendedTitle)}</h3>
+          <p class="spanish">${escapeHtml(recommended.reason)}</p>
+        </div>
+        <button class="primary" id="recommendedLearningButton" type="button">Start practice <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="quick-choices" aria-label="Other ways to practice">
+        <div class="section-heading">
+          <div>
+            <p class="choice-title">Choose another way to practice</p>
+            <p class="spanish">Pick a different experience when you need it.</p>
+          </div>
+        </div>
+        <div class="category-grid primary-categories">
+          ${primaryModes.map(([value, en, es, icon, hint]) => `
+            <button class="category-card category-${value}" data-primary-mode="${value}" type="button">
+              <span class="category-icon" aria-hidden="true">${icon}</span>
+              <span class="category-copy">
+                <strong>${en}</strong>
+                <span>${es}</span>
+                <small>${hint}</small>
+              </span>
+              <span class="category-arrow" aria-hidden="true">›</span>
+            </button>
+          `).join("")}
+        </div>
+      </section>
+
+      <details class="choice-disclosure">
+        <summary>Focus on a specific skill or resource</summary>
+        <div class="category-grid focus-categories">
+          ${focusModes.map(([value, en, es, icon]) => `
+            <button class="category-card category-focus-${value}" data-mode="${value}" type="button">
+              <span class="category-icon" aria-hidden="true">${icon}</span>
+              <span class="category-copy">
+                <strong>${en}</strong>
+                <span>${es}</span>
+              </span>
+              <span class="category-arrow" aria-hidden="true">›</span>
+            </button>
+          `).join("")}
+        </div>
+      </details>
+
+      <details class="choice-disclosure advanced-choices">
+        <summary>Explore conversations and simulations</summary>
+        <div class="experience-sections">
+          <section class="experience-section">
+            <div class="section-heading">
+              <div>
+                <p class="choice-title">Conversations</p>
+                <p class="spanish">Open responses with light structure.</p>
+              </div>
+            </div>
+            <div class="experience-grid">
+              ${conversations.map((item) => `
+                <button class="experience-card category-conversation" data-experience="${item.id}" type="button">
+                  <span class="experience-kind">Conversation</span>
+                  <strong>${escapeHtml(item.title)}</strong>
+                  <span class="spanish">${escapeHtml(item.titleEs)}</span>
+                  <small>${escapeHtml(item.description)}</small>
+                </button>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="experience-section">
+            <div class="section-heading">
+              <div>
+                <p class="choice-title">Simulations</p>
+                <p class="spanish">Real situations: interviews, classes and presentations.</p>
+              </div>
+            </div>
+            <div class="experience-grid">
+              ${simulations.map((item) => `
+                <button class="experience-card category-simulation" data-experience="${item.id}" type="button">
+                  <span class="experience-kind">${escapeHtml(item.role || "Simulation")}</span>
+                  <strong>${escapeHtml(item.title)}</strong>
+                  <span class="spanish">${escapeHtml(item.titleEs)}</span>
+                  <small>${escapeHtml(item.description)}</small>
+                </button>
+              `).join("")}
+            </div>
+          </section>
+        </div>
+      </details>
+
       <aside class="quick-principle" aria-label="HODIE learning principle">
         <strong>Practice, communicate, remember.</strong>
-        <span>HODIE connects practice, conversation, feedback, progression and retention.</span>
+        <span>Use English first. Feedback helps you improve.</span>
       </aside>
 
       <div class="home-progress">
@@ -357,12 +380,26 @@ function renderPracticeHome() {
     </section>
   `;
 
-  document.querySelector("#recommendedLearningButton").addEventListener("click", () => {
-    if (recommended.surface === "practice") startPractice(recommended.mode);
-    else startExperience(recommended.experienceId);
+  document.querySelector("#recommendedLearningButton").addEventListener("click", recommendedAction);
+
+  document.querySelectorAll("[data-primary-mode]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.dataset.primaryMode;
+      if (value === "conversation") {
+        const item = conversations[0];
+        if (item) startExperience(item.id);
+        return;
+      }
+      if (value === "simulation") {
+        const item = simulations[0];
+        if (item) startExperience(item.id);
+        return;
+      }
+      startPractice(value);
+    });
   });
 
-  document.querySelectorAll(".mode-button").forEach((button) => {
+  document.querySelectorAll("[data-mode]").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
   document.querySelectorAll("[data-experience]").forEach((button) => {
