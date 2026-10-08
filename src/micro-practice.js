@@ -13,7 +13,9 @@ function selectMicroActivities(library, { canDoId, mode = "mixed", limit = 6 } =
     writing:"writing"
   }[mode];
 
-  const preferredOrder = ["choose","complete","order","match","listening","speak","mini-production"];
+  const preferredOrder = mode === "mixed"
+    ? ["choose","complete","order","listening","speak","match","mini-production"]
+    : ["choose","complete","order","match","listening","speak","mini-production"];
   const mini = activities.find((item) => item.type === "mini-production");
   const filtered = modeSkill
     ? activities.filter((item) => item.skill === modeSkill || item.type === modeSkill)
