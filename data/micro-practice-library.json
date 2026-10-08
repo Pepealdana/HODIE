@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "activities": [
     {
       "id": "MIC-SP-A2-01-01",
@@ -563,6 +563,80 @@
       ],
       "reviewPriority": "high",
       "primarySkill": "listening"
+    },
+    {
+      "id": "MIC-SP-A2-01-14",
+      "canDoId": "SP-A2-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "professional",
+      "level": "A2",
+      "title": "Write it",
+      "titleEs": "Escríbelo",
+      "prompt": "Write 2–3 sentences about yourself: your job, what you work with, and one thing you enjoy.",
+      "promptEs": "Escribe 2–3 oraciones sobre ti: tu trabajo, con qué trabajas y una cosa que disfrutas.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. Your writing includes the key information for the task.",
+        "readyEs": "Bien. Tu texto incluye la información clave de la tarea.",
+        "short": "Revise your text and include your job, what or who you work with, and one thing you enjoy.",
+        "shortEs": "Revisa tu texto e incluye tu trabajo, con qué o con quién trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "writing",
+        "production",
+        "professional"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 3,
+        "criteria": [
+          {
+            "id": "profession",
+            "label": "States a job or profession.",
+            "patterns": [
+              "\\b(i am|i'm)\\s+(a|an)\\s+[a-z]+(?:\\s+[a-z]+){0,4}\\b",
+              "\\b(i teach|i work as|my job is)\\b"
+            ],
+            "missingMessage": "State your job or profession.",
+            "missingMessageEs": "Indica tu trabajo o profesión."
+          },
+          {
+            "id": "work-context",
+            "label": "Says where or with whom they work.",
+            "patterns": [
+              "\\b(i work at|i work in|i work with|i teach at|i teach|i work for)\\b"
+            ],
+            "missingMessage": "Say where or with whom you work.",
+            "missingMessageEs": "Di dónde trabajas o con quién trabajas."
+          },
+          {
+            "id": "personal-preference",
+            "label": "States one thing they enjoy, like or love.",
+            "patterns": [
+              "\\b(i enjoy|i like|i love|i really enjoy|i really like)\\b"
+            ],
+            "missingMessage": "Add one thing you enjoy, like or love.",
+            "missingMessageEs": "Agrega una cosa que disfrutas, te gusta o te encanta."
+          }
+        ],
+        "errorType": "task-completion"
+      },
+      "reviewTargets": [
+        "profession",
+        "work-context",
+        "personal-preference",
+        "writing"
+      ],
+      "reviewPriority": "high"
     }
   ]
 }
