@@ -50,7 +50,11 @@
           "technology",
           "teacher"
         ]
-      }
+      },
+      "titleEs": "Preséntate",
+      "objectiveEs": "Preséntate usando información personal y profesional básica.",
+      "instructionsEs": "Habla en inglés durante 30 a 60 segundos.",
+      "taskEs": "Di tu nombre, tu trabajo, qué enseñas o con qué trabajas y una cosa que disfrutas hacer."
     },
     {
       "id": "ACT-SP-A2-02-01",
@@ -99,7 +103,11 @@
           "daily-life",
           "speaking"
         ]
-      }
+      },
+      "titleEs": "Habla sobre tu familia",
+      "objectiveEs": "Habla sobre familiares cercanos usando oraciones sencillas conectadas.",
+      "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
+      "taskEs": "Habla sobre dos familiares. Di quiénes son, qué hacen normalmente y una cosa que les gusta."
     },
     {
       "id": "ACT-SP-A2-03-01",
@@ -150,7 +158,11 @@
           "speaking",
           "present-simple"
         ]
-      }
+      },
+      "titleEs": "Describe tu rutina diaria",
+      "objectiveEs": "Describe un día normal entre semana usando oraciones en presente simple y expresiones de tiempo.",
+      "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
+      "taskEs": "Describe un día normal entre semana. Di a qué hora te levantas, qué haces durante el día y qué haces normalmente en la noche."
     },
     {
       "id": "ACT-SP-A2-04-01",
@@ -202,7 +214,11 @@
           "preferences",
           "speaking"
         ]
-      }
+      },
+      "titleEs": "Habla sobre lo que te gusta y lo que no te gusta",
+      "objectiveEs": "Habla sobre tus gustos y disgustos personales y da razones sencillas.",
+      "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
+      "taskEs": "Habla sobre tres cosas que te gustan y dos que no te gustan. Da una razón sencilla para al menos dos de ellas."
     }
   ]
 }
