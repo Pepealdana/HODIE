@@ -69,6 +69,7 @@ function renderMission() {
       <div>
         <p class="kicker">Today's mission · ${session.target.skill} · ${session.target.level}</p>
         <h2>${escapeHtml(activity.title)}</h2>
+      <p class="spanish activity-title-es">${escapeHtml(activity.titleEs || "")}</p>
       </div>
       <div>
         <p><strong>Can-Do</strong></p>
@@ -79,8 +80,8 @@ function renderMission() {
         <p><strong>Task</strong></p>
         <p>${escapeHtml(activity.task)}</p>
         <p class="spanish"><strong>Tarea:</strong> ${escapeHtml(activity.taskEs || "")}</p>
-        <p class="spanish"><strong>Instructions:</strong> ${escapeHtml(activity.instructions)}</p>
-        <p class="spanish"><strong>Instrucciones:</strong> ${escapeHtml(activity.instructionsEs || "")}</p>
+        <p class="spanish"><strong>Instructions in English:</strong> ${escapeHtml(activity.instructions)}</p>
+        <p class="spanish"><strong>Instrucciones en español:</strong> ${escapeHtml(activity.instructionsEs || "")}</p>
       </div>
       ${starters.length ? `
         <div class="support">
@@ -102,6 +103,7 @@ function renderActiveMission() {
     <section class="card mission">
       <p class="kicker">Mission in progress</p>
       <h2>${escapeHtml(activity.title)}</h2>
+      <p class="spanish activity-title-es">${escapeHtml(activity.titleEs || "")}</p>
       <p>${escapeHtml(activity.task)}</p>
       <p class="spanish"><strong>En español:</strong> ${escapeHtml(activity.taskEs || "")}</p>
       <div>
@@ -112,6 +114,7 @@ function renderActiveMission() {
       <div class="rating">
         <strong>How confident are you?</strong>
         <p class="spanish">¿Qué tan seguro te sientes?</p>
+        <p class="spanish confidence-guide">1 = necesito mucha ayuda · 3 = puedo hacerlo con algo de ayuda · 5 = puedo hacerlo con confianza</p>
         <div class="rating-options">
           ${[1,2,3,4,5].map((n) => `
             <label><input type="radio" name="confidence" value="${n}" ${n === 3 ? "checked" : ""}>${n}</label>
