@@ -25,7 +25,7 @@ function activityMatchesFocus(activity, config) {
   if (!config) return false;
 
   if (config.kind === "skill") {
-    if (config.skill === "speaking") return activity.type === "speak";
+    if (config.skill === "speaking") return activity.skill === "speaking" && ["speak", "mini-production"].includes(activity.type);
     if (config.skill === "listening") return activity.type === "listening";
     if (config.skill === "writing") return activity.skill === "writing" && activity.type === "mini-production";
     if (config.skill === "reading") return activity.skill === "reading" && activity.type !== "mini-production";
