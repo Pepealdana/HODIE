@@ -79,13 +79,31 @@ function renderPracticeHome() {
   const targetActivity = session.stages.find((stage) => stage.kind === "target")?.activity;
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
-  const modes = [
-    ["mixed", "Mixed", "Un poco de todo"],
-    ["speaking", "Speaking", "Hablar"],
-    ["listening", "Listening", "Escuchar"],
-    ["grammar", "Grammar", "Gramática"],
-    ["vocabulary", "Vocabulary", "Vocabulario"],
-    ["review", "Review", "Repasar lo que necesitas"]
+  const modeGroups = [
+    {
+      title: "Practice",
+      titleEs: "Modo de práctica",
+      items: [
+        ["mixed", "Mixed", "Un poco de todo"],
+        ["review", "Review", "Lo que necesitas reforzar"]
+      ]
+    },
+    {
+      title: "Focus",
+      titleEs: "Enfocar una habilidad",
+      items: [
+        ["speaking", "Speaking", "Hablar"],
+        ["listening", "Listening", "Escuchar"]
+      ]
+    },
+    {
+      title: "Language",
+      titleEs: "Recursos del idioma",
+      items: [
+        ["grammar", "Grammar", "Gramática"],
+        ["vocabulary", "Vocabulary", "Vocabulario"]
+      ]
+    }
   ];
 
   app.innerHTML = `
@@ -101,16 +119,24 @@ function renderPracticeHome() {
       <div class="practice-choice">
         <div>
           <p class="choice-title">How do you want to practice?</p>
-          <p class="spanish">Puedes escoger o dejar que HODIE mezcle las habilidades.</p>
+          <p class="spanish">Puedes elegir un modo o enfocar una habilidad.</p>
         </div>
-        <div class="mode-grid">
-          ${modes.map(([value, en, es]) => `
-            <button class="mode-button ${value === "mixed" ? "selected" : ""}" data-mode="${value}" type="button">
-              <strong>${en}</strong>
-              <span>${es}</span>
-            </button>
-          `).join("")}
-        </div>
+        ${modeGroups.map((group) => `
+          <div class="mode-group">
+            <div class="mode-group-title">
+              <strong>${group.title}</strong>
+              <span>${group.titleEs}</span>
+            </div>
+            <div class="mode-grid">
+              ${group.items.map(([value, en, es]) => `
+                <button class="mode-button ${value === "mixed" ? "selected" : ""}" data-mode="${value}" type="button">
+                  <strong>${en}</strong>
+                  <span>${es}</span>
+                </button>
+              `).join("")}
+            </div>
+          </div>
+        `).join("")}
       </div>
 
       <div class="quick-principle">
@@ -142,7 +168,8 @@ function startPractice(mode) {
   const activities = selectMicroActivities(microLibrary, {
     canDoId: session.target.canDoId,
     mode,
-    limit: 6
+    limit: 6,
+    profile
   });
 
   if (!activities.length) {
@@ -325,6 +352,17 @@ function showFeedback(activity, result, response, options = {}) {
       <p>${escapeHtml(result.feedback || "")}</p>
       <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
       ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
+      ${result.corrections?.length ? `
+        <div class="feedback-corrections">
+          ${result.corrections.map((error) => `
+            <div class="correction-item">
+              <strong>${escapeHtml(error.correction || error.expected || "")}</strong>
+              <p>${escapeHtml(error.message || "")}</p>
+              ${error.messageEs ? `<p class="spanish">${escapeHtml(error.messageEs)}</p>` : ""}
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
     </div>
     ${success && !options.final ? `<p class="auto-next">Next...</p>` : ""}
     ${!success && !options.final ? `<button class="secondary compact" id="retryMicroButton" type="button">Try again</button>` : ""}
@@ -414,11 +452,11 @@ function finishPractice() {
 
 function submitFinalEvidence(response) {
   const activity = practice.activities[practice.index];
+  const finalResult = evaluateMicroActivity(activity, response);
   const scores = practice.results.map((item) => item.score);
   const microAverage = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : 0;
-  const responseLength = response.trim().length;
-  const independent = microAverage >= 0.7 && responseLength >= (activity.requirements?.minResponseCharacters || 40);
-  const base = Math.min(0.95, Math.max(0.55, microAverage));
+  const base = Math.min(0.95, Math.max(0.55, microAverage || finalResult.score || 0));
+  const independent = finalResult.correct === true;
 
   const evidence = {
     canDoId: session.target.canDoId,
@@ -429,13 +467,16 @@ function submitFinalEvidence(response) {
     independent,
     confidence: 3,
     dimensions: {
-      taskCompletion: independent ? 0.86 : 0.58,
-      grammar: base,
-      fluency: base,
-      vocabulary: base,
+      taskCompletion: independent ? 0.9 : Math.min(0.65, finalResult.score || 0),
+      grammar: finalResult.correct ? Math.max(0.8, base) : base,
+      fluency: finalResult.correct ? Math.max(0.8, base) : base,
+      vocabulary: finalResult.correct ? Math.max(0.8, base) : base,
       pronunciation: practice.results.some((item) => item.activityId === "MIC-SP-A2-01-06") ? base : 0.6
     },
-    errors: [],
+    errors: [
+      ...practice.results.flatMap((item) => item.errors || []),
+      ...(finalResult.errors || [])
+    ],
     supportUsed: []
   };
 
