@@ -139,6 +139,7 @@ function getRetentionEntry(matrix, profile, canDoId, options = {}) {
 
 function retentionBonus(retention) {
   if (!retention) return 0;
+  if (!["consolidated", "transferred"].includes(retention.status)) return 0;
   if (retention.retentionState === "atRisk") return 4;
   if (retention.retentionState === "due") return 3;
   return 0;
