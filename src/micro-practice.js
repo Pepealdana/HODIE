@@ -127,13 +127,12 @@ function selectMicroActivities(
   if (mode === "review") return selectReviewActivities(activities, limit, profile, mini);
 
   const filtered = activities.filter((item) => activityMatchesFocus(item, config));
-  const pool = filtered.length ? filtered : activities.filter((item) => item.type !== "mini-production");
-  const ordered = [...pool].sort((a, b) => rankMixed(a) - rankMixed(b));
-  const targetCount = Math.max(1, limit - (mini ? 1 : 0));
-  const selected = ordered.slice(0, targetCount);
+  const ordered = [...filtered].sort((a, b) => rankMixed(a) - rankMixed(b));
 
-  if (mini && selected.length < limit) selected.push(mini);
-  return selected.slice(0, limit);
+  // Focused modes remain faithful to their category.
+  // Never substitute a Speaking production task into Listening, Grammar, etc.
+  // If content is not available yet, return [] so the UI can explain it.
+  return ordered.slice(0, limit);
 }
 
 function evaluateMicroActivity(activity, response) {
