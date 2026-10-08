@@ -7,14 +7,32 @@
       "mixed": {
         "role": "practice-mode",
         "goal": "Build a varied practice session around the current Can-Do and recent evidence.",
-        "selection": ["skillBalance", "recentGap", "context", "novelty", "demonstration"],
-        "mustNot": ["behave as a grammar-only queue", "repeat the same activity type by default"]
+        "selection": [
+          "skillBalance",
+          "recentGap",
+          "context",
+          "novelty",
+          "demonstration"
+        ],
+        "mustNot": [
+          "behave as a grammar-only queue",
+          "repeat the same activity type by default"
+        ]
       },
       "review": {
         "role": "practice-mode",
         "goal": "Recover, reinforce or retain capacities identified from evidence.",
-        "selection": ["priorityErrors", "recentGaps", "weakDimensions", "retentionDue", "retentionAtRisk"],
-        "mustNot": ["use a fixed generic exercise list", "advance a Can-Do solely because a review activity was completed"]
+        "selection": [
+          "priorityErrors",
+          "recentGaps",
+          "weakDimensions",
+          "retentionDue",
+          "retentionAtRisk"
+        ],
+        "mustNot": [
+          "use a fixed generic exercise list",
+          "advance a Can-Do solely because a review activity was completed"
+        ]
       }
     },
     "communicativeSkills": {
@@ -31,13 +49,48 @@
     }
   },
   "focusRules": {
-    "speaking": { "allowedPrimarySkills": ["speaking", "communication"] },
-    "listening": { "allowedPrimarySkills": ["listening", "communication"] },
-    "reading": { "allowedPrimarySkills": ["reading", "communication"] },
-    "writing": { "allowedPrimarySkills": ["writing", "communication"] },
-    "grammar": { "allowedResources": ["grammar"], "mustRemainContextual": true },
-    "vocabulary": { "allowedResources": ["vocabulary"], "mustRemainContextual": true },
-    "pronunciation": { "allowedResources": ["pronunciation"], "mustIncludeProduction": true }
+    "speaking": {
+      "allowedPrimarySkills": [
+        "speaking",
+        "communication"
+      ]
+    },
+    "listening": {
+      "allowedPrimarySkills": [
+        "listening",
+        "communication"
+      ]
+    },
+    "reading": {
+      "allowedPrimarySkills": [
+        "reading",
+        "communication"
+      ]
+    },
+    "writing": {
+      "allowedPrimarySkills": [
+        "writing",
+        "communication"
+      ]
+    },
+    "grammar": {
+      "allowedResources": [
+        "grammar"
+      ],
+      "mustRemainContextual": true
+    },
+    "vocabulary": {
+      "allowedResources": [
+        "vocabulary"
+      ],
+      "mustRemainContextual": true
+    },
+    "pronunciation": {
+      "allowedResources": [
+        "pronunciation"
+      ],
+      "mustIncludeProduction": true
+    }
   },
   "microActivityRoles": {
     "choose": "recognition",
@@ -52,7 +105,16 @@
     "reading": "written-comprehension",
     "writing": "written-production"
   },
-  "progression": ["recognize", "retrieve", "construct", "understand", "produce", "interact", "repair", "transfer"],
+  "progression": [
+    "recognize",
+    "retrieve",
+    "construct",
+    "understand",
+    "produce",
+    "interact",
+    "repair",
+    "transfer"
+  ],
   "rules": [
     "Can-Do is the unit of capability.",
     "Micro-activity is the unit of practice.",
@@ -61,5 +123,28 @@
     "Review is evidence-driven.",
     "Mixed is balanced and adaptive.",
     "Confidence is diagnostic and must not by itself invalidate adequate performance evidence."
+  ],
+  "experienceModes": {
+    "practice": {
+      "role": "skill-and-resource-practice",
+      "authoritativeEvidence": "only through the existing session/evidence boundary"
+    },
+    "conversation": {
+      "role": "open-response-communication-practice",
+      "v1": "guided-open without AI",
+      "authoritativeEvidence": false
+    },
+    "simulation": {
+      "role": "situated-role-play-practice",
+      "v1": "scripted role-play",
+      "authoritativeEvidence": false
+    }
+  },
+  "learningSystemRules": [
+    "Practice, conversation and simulation are differentiated experiences over the same learning map.",
+    "The learner may choose an experience; the orchestrator may recommend one.",
+    "Open conversation and simulation are practice-only in v1 without an explicit assessment boundary.",
+    "Progression and retention are controlled by evidence, not experience completion.",
+    "Mobile-first means one primary action, large touch targets and minimal typing for speaking/listening."
   ]
 }
