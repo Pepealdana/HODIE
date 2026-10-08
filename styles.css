@@ -17,6 +17,16 @@ h1 { margin: 2px 0 0; font-size: 1.25rem; line-height: 1.15; }
 .badge { border: 1px solid #c9d1dd; background: #fff; border-radius: 999px; padding: 6px 10px; font-size: .78rem; font-weight: 800; }
 .card { background: #fff; border: 1px solid #d9dee7; border-radius: 18px; padding: 20px; box-shadow: 0 8px 24px rgba(23,32,51,.06); }
 .practice-home, .practice-card { display: grid; gap: 24px; }
+.practice-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.practice-nav-hint { color: #7a8494; font-size: .78rem; }
+.resume-practice { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 14px; border: 1px solid #c9d1dd; border-radius: 12px; background: #f5f7fa; }
+.resume-practice p { margin-top: 2px; font-size: .84rem; }
+.audio-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.model-label { margin: 0; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #596579; }
+.audio-hint { font-size: .84rem; }
+.production-guidance { display: grid; gap: 6px; padding: 13px 15px; border-radius: 10px; background: #f5f7fa; }
+.production-guidance ul { margin: 0; padding-left: 20px; color: #596579; }
+.production-guidance li + li { margin-top: 3px; }
 .home-intro { display: grid; gap: 8px; }
 .kicker { margin: 0; color: #596579; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 h2 { margin: 0; font-size: 1.65rem; line-height: 1.15; }
