@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "project": "HODIE",
   "name": "Content Model v1.1",
   "purpose": "Represent reusable learning activities independently from the engine and interface.",
@@ -29,7 +29,8 @@
       "titleEs",
       "objectiveEs",
       "instructionsEs",
-      "taskEs"
+      "taskEs",
+      "evaluation"
     ],
     "fields": {
       "id": "Unique stable activity identifier.",
@@ -51,7 +52,9 @@
       "titleEs": "Spanish support translation of the learner-facing title.",
       "objectiveEs": "Spanish support translation of the observable learning objective.",
       "instructionsEs": "Spanish support translation of what the learner must do.",
-      "taskEs": "Spanish support translation of the actual prompt or interaction task."
+      "taskEs": "Spanish support translation of the actual prompt or interaction task.",
+      "evaluation": "Observable acceptance criteria, constraints and error mapping for deterministic or structured evaluation.",
+      "reviewTargets": "Language features or communicative targets that make the activity useful for adaptive Review."
     }
   },
   "evidenceSchema": {
@@ -82,5 +85,36 @@
     "preserveOriginalCanDo": true,
     "recoveryFirst": true,
     "returnToOriginalTask": true
+  },
+  "evaluationSchema": {
+    "required": [
+      "observable",
+      "criteriaOrAcceptedResponse",
+      "errorMapping"
+    ],
+    "rules": [
+      "Minimum response length is a task constraint, never the sole evidence of competence.",
+      "Free production uses observable criteria.",
+      "Deterministic tasks should expose the expected answer and correction target.",
+      "Errors are structured and limited to the most useful corrections.",
+      "Authoritative Can-Do evidence is generated only through the session Evidence Boundary."
+    ]
+  },
+  "errorSchema": {
+    "required": [
+      "type",
+      "target",
+      "severity",
+      "priority",
+      "message",
+      "messageEs",
+      "retry"
+    ],
+    "priorityOrder": [
+      "critical",
+      "high",
+      "medium",
+      "low"
+    ]
   }
 }
