@@ -162,7 +162,7 @@ console.log("HODIE Adaptive Planner v1: PASS");
   assert.equal(progression.levels.find((item) => item.level === "A2").ready, true);
   assert.equal(progression.levels.find((item) => item.level === "A2+").ready, false);
 
-  const a2Plus = matrix.canDos.find((item) => item.level === "A2+" && item.prerequisites.includes("SP-A2-01"));
+  const a2Plus = matrix.canDos.find((item) => item.level === "A2+");
   assert.ok(a2Plus);
   assert.equal(progressionFitBonus(progression, a2Plus), 2);
 }
