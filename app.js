@@ -859,10 +859,10 @@ function showFeedback(activity, result, response, options = {}) {
 
 function startSpeechRecognition(activity, onTranscript = null) {
   const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const button = document.querySelector("#speakButton");
+  const button = document.querySelector("#speakButton, #experienceSpeakButton");
 
   if (!Recognition) {
-    document.querySelector("#speakFallbackDetails, #productionFallbackDetails")?.setAttribute("open", "");
+    document.querySelector("#speakFallbackDetails, #productionFallbackDetails, #experienceTyping")?.setAttribute("open", "");
     showSpeechFeedback(
       activity,
       "Speech recognition is not available in this browser. You can use the typing fallback.",
