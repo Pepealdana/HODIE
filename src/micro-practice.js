@@ -58,32 +58,32 @@ function detectLanguageCorrections(activity, response) {
       pattern: /\bI\s+am\s+(teacher|student|programmer|developer|engineer|professor)\b/i,
       replacement: "I am a $1",
       target: "article",
-      message: "In English, singular jobs usually need an article after "I am".",
-      messageEs: "En inglés, los trabajos en singular normalmente necesitan un artículo después de "I am".",
+      message: 'In English, singular jobs usually need an article after "I am".',
+      messageEs: 'En inglés, los trabajos en singular normalmente necesitan un artículo después de "I am".',
       examples: ["I am a teacher.", "I am an engineer."]
     },
     {
       pattern: /\bI\s+work\s+on\s+a\s+(school|company|office)\b/i,
       replacement: "I work at a $1",
       target: "work-place",
-      message: "For a workplace such as a school, "work at" is a natural choice.",
-      messageEs: "Para un lugar de trabajo como una escuela, "work at" es una opción natural.",
+      message: 'For a workplace such as a school, "work at" is a natural choice.',
+      messageEs: 'Para un lugar de trabajo como una escuela, "work at" es una opción natural.',
       examples: ["I work at a school.", "I work at an office."]
     },
     {
       pattern: /\bI\s+enjoy\s+to\s+([a-z]+)\b/i,
       replacement: "I enjoy $1ing",
       target: "enjoy-ing",
-      message: "After "enjoy", use a verb with -ing.",
-      messageEs: "Después de "enjoy", usamos el verbo con -ing.",
+      message: 'After "enjoy", use a verb with -ing.',
+      messageEs: 'Después de "enjoy", usamos el verbo con -ing.',
       examples: ["I enjoy reading.", "I enjoy building robots."]
     },
     {
       pattern: /\b(my\s+students?)\s+is\b/i,
       replacement: "$1 are",
       target: "be-plural",
-      message: "The plural subject "students" takes "are".",
-      messageEs: "El sujeto plural "students" usa "are".",
+      message: 'The plural subject "students" takes "are".',
+      messageEs: 'El sujeto plural "students" usa "are".',
       examples: ["My students are very important.", "My students are creative."]
     }
   ];
