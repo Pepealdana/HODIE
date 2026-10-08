@@ -32,6 +32,46 @@ let practice = null;
 let experienceLibrary;
 let contextLibrary;
 let experienceSession = null;
+let deferredInstallPrompt = null;
+
+function setupInstallPrompt() {
+  const prompt = document.querySelector("#installPrompt");
+  if (!prompt) return;
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    prompt.hidden = false;
+    prompt.innerHTML = `
+      <div>
+        <strong>Install HODIE</strong>
+        <span class="spanish">Use it like an app and keep learning from your device.</span>
+      </div>
+      <button class="primary compact" id="installButton" type="button">Install</button>
+    `;
+    document.querySelector("#installButton").addEventListener("click", async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      prompt.hidden = true;
+    });
+  });
+
+  window.addEventListener("appinstalled", () => {
+    deferredInstallPrompt = null;
+    prompt.hidden = true;
+  });
+}
+
+async function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  try {
+    await navigator.serviceWorker.register("./service-worker.js", { scope: "./" });
+  } catch (error) {
+    console.warn("HODIE Service Worker registration failed.", error);
+  }
+}
 
 async function loadData() {
   const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse] = await Promise.all([
@@ -1104,6 +1144,8 @@ function escapeHtml(value) {
 
 async function boot() {
   try {
+    setupInstallPrompt();
+    registerServiceWorker();
     await loadData();
     loadProfile();
 
