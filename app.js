@@ -82,86 +82,107 @@ function renderPracticeHome() {
   const modeGroups = [
     {
       title: "Practice",
-      titleEs: "Modo de práctica",
+      titleEs: "Modo",
       items: [
-        ["mixed", "Mixed", "Un poco de todo"],
-        ["review", "Review", "Lo que necesitas reforzar"]
+        ["mixed", "Mixed", "Un poco de todo", "Recommended"],
+        ["review", "Review", "Refuerza lo que necesitas", "Adaptive"]
       ]
     },
     {
       title: "Focus",
-      titleEs: "Enfocar una habilidad",
+      titleEs: "Habilidad",
       items: [
-        ["speaking", "Speaking", "Hablar"],
-        ["listening", "Listening", "Escuchar"]
+        ["speaking", "Speaking", "Hablar", "Focus"],
+        ["listening", "Listening", "Escuchar", "Focus"]
       ]
     },
     {
       title: "Language",
-      titleEs: "Recursos del idioma",
+      titleEs: "Recursos",
       items: [
-        ["grammar", "Grammar", "Gramática"],
-        ["vocabulary", "Vocabulary", "Vocabulario"]
+        ["grammar", "Grammar", "Gramática", "Practice"],
+        ["vocabulary", "Vocabulary", "Vocabulario", "Practice"]
       ]
     }
   ];
 
-  app.innerHTML = `
+  app.innerHTML = \`
     <section class="card practice-home">
       <div class="home-intro">
-        <p class="kicker">Today's practice · ${escapeHtml(session.target.level)}</p>
-        <h2>${escapeHtml(targetActivity?.title || "Practice English")}</h2>
-        <p class="spanish activity-title-es">${escapeHtml(targetActivity?.titleEs || "")}</p>
-        <p class="can-do-line">${escapeHtml(statement)}</p>
-        <p class="spanish">${escapeHtml(spanish)}</p>
+        <p class="kicker">Today's practice · \${escapeHtml(session.target.level)}</p>
+        <h2>\${escapeHtml(targetActivity?.title || "Practice English")}</h2>
+        <p class="spanish activity-title-es">\${escapeHtml(targetActivity?.titleEs || "")}</p>
+        <p class="can-do-line">\${escapeHtml(statement)}</p>
+        <p class="spanish">\${escapeHtml(spanish)}</p>
       </div>
 
       <div class="practice-choice">
-        <div>
-          <p class="choice-title">How do you want to practice?</p>
-          <p class="spanish">Puedes elegir un modo o enfocar una habilidad.</p>
-        </div>
-        ${modeGroups.map((group) => `
-          <div class="mode-group">
-            <div class="mode-group-title">
-              <strong>${group.title}</strong>
-              <span>${group.titleEs}</span>
-            </div>
-            <div class="mode-grid">
-              ${group.items.map(([value, en, es]) => `
-                <button class="mode-button ${value === "mixed" ? "selected" : ""}" data-mode="${value}" type="button">
-                  <strong>${en}</strong>
-                  <span>${es}</span>
-                </button>
-              `).join("")}
-            </div>
+        <div class="choice-heading">
+          <div>
+            <p class="choice-title">Choose how to practice</p>
+            <p class="spanish">Toca una opción para empezar. No necesitas otro botón.</p>
           </div>
-        `).join("")}
+          <span class="choice-hint">Tap → practice</span>
+        </div>
+
+        <div class="mode-groups">
+          \${modeGroups.map((group) => \`
+            <section class="mode-group" aria-labelledby="mode-\${group.title.toLowerCase()}">
+              <div class="mode-group-title">
+                <strong id="mode-\${group.title.toLowerCase()}">\${group.title}</strong>
+                <span>\${group.titleEs}</span>
+              </div>
+              <div class="mode-grid">
+                \${group.items.map(([value, en, es, meta]) => \`
+                  <button class="mode-button" data-mode="\${value}" type="button" aria-label="\${en}: \${es}">
+                    <span class="mode-copy">
+                      <strong>\${en}</strong>
+                      <span>\${es}</span>
+                    </span>
+                    <span class="mode-meta">\${meta}</span>
+                    <span class="mode-arrow" aria-hidden="true">→</span>
+                  </button>
+                \`).join("")}
+              </div>
+            </section>
+          \`).join("")}
+        </div>
       </div>
 
-      <div class="quick-principle">
+      <aside class="quick-principle" aria-label="HODIE practice principle">
         <strong>Practice, don't just study.</strong>
         <span>Act → get feedback → try again → move on.</span>
-      </div>
+      </aside>
 
-      ${renderProgress()}
-
-      <div class="actions">
-        <button class="primary" id="practiceButton" type="button">Start practice</button>
+      <div class="home-progress">
+        \${renderProgress()}
       </div>
     </section>
-  `;
+  \`;
 
-  let selectedMode = "mixed";
   document.querySelectorAll(".mode-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      selectedMode = button.dataset.mode;
-      document.querySelectorAll(".mode-button").forEach((item) => item.classList.remove("selected"));
-      button.classList.add("selected");
-    });
+    button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
+}
 
-  document.querySelector("#practiceButton").addEventListener("click", () => startPractice(selectedMode));
+function prepareSessionForPractice() {
+  if (session.state === "planned") {
+    return requestEvidence(startSession(session));
+  }
+
+  if (session.state === "started") {
+    return requestEvidence(session);
+  }
+
+  if (session.state === "awaiting-evidence") {
+    return session;
+  }
+
+  if (session.state === "retry-required") {
+    return requestEvidence(startSession(session));
+  }
+
+  throw new Error(\`This session cannot start from state: \${session.state}\`);
 }
 
 function startPractice(mode) {
@@ -173,13 +194,17 @@ function startPractice(mode) {
   });
 
   if (!activities.length) {
-    renderError(new Error(`No micro-practice is available for ${getModeLabel(mode)} yet.`));
+    renderError(new Error(\`No micro-practice is available for \${getModeLabel(mode)} yet.\`));
     return;
   }
 
-  session = startSession(session);
-  session = requestEvidence(session);
-  saveSession();
+  try {
+    session = prepareSessionForPractice();
+    saveSession();
+  } catch (error) {
+    renderError(error);
+    return;
+  }
 
   practice = {
     mode,
