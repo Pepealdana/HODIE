@@ -1239,6 +1239,13 @@ async function boot() {
 
     levelBadge.textContent = session.target.level;
     renderPracticeHome();
+
+    // Mobile browsers can settle the responsive viewport after the first paint.
+    // Recalculate once after the Home has been rendered so its initial layout
+    // matches the same layout obtained after navigation.
+    requestAnimationFrame(() => {
+      window.dispatchEvent(new Event("resize"));
+    });
   } catch (error) {
     renderError(error);
   }
