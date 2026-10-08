@@ -318,7 +318,8 @@
             "missingMessageEs": "Agrega una cosa que disfrutas, te gusta o te encanta."
           }
         ],
-        "errorType": "task-completion"
+        "errorType": "task-completion",
+        "practiceMinimumCriteria": 2
       },
       "reviewTargets": [
         "profession",
@@ -634,7 +635,8 @@
             "missingMessageEs": "Agrega una cosa que disfrutas, te gusta o te encanta."
           }
         ],
-        "errorType": "task-completion"
+        "errorType": "task-completion",
+        "practiceMinimumCriteria": 2
       },
       "reviewTargets": [
         "profession",
@@ -643,6 +645,385 @@
         "writing"
       ],
       "reviewPriority": "high"
+    },
+    {
+      "id": "MIC-SP-A2-01-15",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Grammar in context",
+      "titleEs": "Gramática en contexto",
+      "prompt": "I ___ with students every day.",
+      "promptEs": "Practice this in English.",
+      "answer": "work",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "grammar",
+        "professional"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "work",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work",
+        "grammar"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "options": [
+        "work",
+        "works",
+        "working"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-16",
+      "canDoId": "SP-A2-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Grammar in context",
+      "titleEs": "Gramática en contexto",
+      "prompt": "My students ___ in class every day.",
+      "promptEs": "Practice this in English.",
+      "answer": "work",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "grammar",
+        "professional"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "work",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work",
+        "grammar"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "acceptableAnswers": [
+        "work"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-17",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Grammar in context",
+      "titleEs": "Gramática en contexto",
+      "prompt": "I enjoy ___ robots.",
+      "promptEs": "Practice this in English.",
+      "answer": "building",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "grammar",
+        "professional"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "building",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "building",
+        "grammar"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "options": [
+        "building",
+        "build",
+        "builds"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-18",
+      "canDoId": "SP-A2-01",
+      "type": "order",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Grammar in context",
+      "titleEs": "Gramática en contexto",
+      "prompt": "I work with students.",
+      "promptEs": "Practice this in English.",
+      "answer": [
+        "I",
+        "work",
+        "with",
+        "students"
+      ],
+      "feedback": {
+        "correct": "Correct. \"I work with students.\"",
+        "correctEs": "Correcto. \"I work with students.\"",
+        "incorrect": "Start with \"I\" and then use \"work with\".",
+        "incorrectEs": "Comienza con \"I\" y luego usa \"work with\"."
+      },
+      "tags": [
+        "grammar",
+        "professional"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "I work with students",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "I work with students",
+        "grammar"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "tokens": [
+        "I",
+        "work",
+        "with",
+        "students"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-19",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Useful work word",
+      "titleEs": "Palabra útil de trabajo",
+      "prompt": "I teach technology and ___.",
+      "promptEs": "Practice this in English.",
+      "answer": "robotics",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "vocabulary",
+        "professional"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "robotics",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "robotics",
+        "vocabulary"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "options": [
+        "robotics",
+        "Monday",
+        "quickly"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-20",
+      "canDoId": "SP-A2-01",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Useful work word",
+      "titleEs": "Palabra útil de trabajo",
+      "prompt": "What does \"teacher\" mean?",
+      "promptEs": "Practice this in English.",
+      "answer": "profesor",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "vocabulary",
+        "professional"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "profesor",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "profesor",
+        "vocabulary"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "options": [
+        "profesor",
+        "estudiante",
+        "escuela"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-21",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Useful work word",
+      "titleEs": "Palabra útil de trabajo",
+      "prompt": "I work at a ___.",
+      "promptEs": "Practice this in English.",
+      "answer": "school",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "vocabulary",
+        "professional"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "school",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "school",
+        "vocabulary"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "options": [
+        "school",
+        "robot",
+        "students"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-22",
+      "canDoId": "SP-A2-01",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Useful work word",
+      "titleEs": "Palabra útil de trabajo",
+      "prompt": "What does \"work with\" mean?",
+      "promptEs": "Practice this in English.",
+      "answer": "trabajar con",
+      "feedback": {
+        "correct": "Correct.",
+        "correctEs": "Correcto.",
+        "incorrect": "Try again.",
+        "incorrectEs": "Inténtalo de nuevo."
+      },
+      "tags": [
+        "vocabulary",
+        "professional"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "trabajar con",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "trabajar con",
+        "vocabulary"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "options": [
+        "trabajar con",
+        "trabajar en",
+        "enseñar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-23",
+      "canDoId": "SP-A2-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "professional",
+      "level": "A2",
+      "title": "Say a work sentence",
+      "titleEs": "Di una oración de trabajo",
+      "prompt": "Say: \"I work with students and build robots.\"",
+      "promptEs": "Practice this in English.",
+      "answer": "I work with students and build robots.",
+      "feedback": {
+        "correct": "Good. You included the key information.",
+        "correctEs": "Bien. Incluiste la información clave.",
+        "partial": "Try again and include the missing key words.",
+        "partialEs": "Inténtalo otra vez e incluye las palabras clave que faltan."
+      },
+      "tags": [
+        "speaking",
+        "professional"
+      ],
+      "errorType": "speaking",
+      "errorTarget": "I work with students and build robots.",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "I work with students and build robots.",
+        "speaking"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [],
+      "targetPhrase": "I work with students and build robots.",
+      "requiredTokens": [
+        "i",
+        "work",
+        "students",
+        "robots"
+      ],
+      "audioText": "I work with students and build robots.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      }
     }
   ]
 }
