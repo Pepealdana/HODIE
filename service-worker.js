@@ -1,4 +1,4 @@
-const CACHE = "hodie-shell-v3";
+const CACHE = "hodie-shell-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -74,6 +74,29 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+
+  const pathname = url.pathname;
+  const isShellCode = pathname.endsWith("/index.html")
+    || pathname.endsWith("/styles.css")
+    || pathname.endsWith("/app.js")
+    || pathname.endsWith("/service-worker.js");
+
+  // Keep HTML/CSS/JS fresh so local and network origins do not remain
+  // on different app versions during development. Offline falls back to cache.
+  if (isShellCode || event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200 && response.type === "basic") {
+            const copy = response.clone();
+            caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
