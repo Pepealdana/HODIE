@@ -81,7 +81,12 @@ const writingErrors = evaluateMicroActivity(
 );
 assert.equal(writingErrors.correct, true);
 assert.ok(writingErrors.errors.some((error) => error.target === "article"));
-assert.ok(writingErrors.errors.some((error) => error.target === "work-place"));
+const workPlaceErrors = evaluateMicroActivity(
+  writingActivity,
+  "I am a teacher. I work on a school and I enjoy reading."
+);
+assert.ok(workPlaceErrors.errors.some((error) => error.target === "work-place"));
+assert.ok(writingErrors.errors.some((error) => error.target === "enjoy-ing"));
 assert.ok(writingErrors.corrections.length >= 1);
 assert.equal(writingErrors.retryRecommended, false);
 
