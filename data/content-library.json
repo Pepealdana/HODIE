@@ -54,7 +54,41 @@
       "titleEs": "Preséntate",
       "objectiveEs": "Preséntate usando información personal y profesional básica.",
       "instructionsEs": "Habla en inglés durante 30 a 60 segundos.",
-      "taskEs": "Di tu nombre, tu trabajo, qué enseñas o con qué trabajas y una cosa que disfrutas hacer."
+      "taskEs": "Di tu nombre, tu trabajo, qué enseñas o con qué trabajas y una cosa que disfrutas hacer.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "name",
+            "label": "gives basic personal identification",
+            "type": "content-point"
+          },
+          {
+            "id": "profession",
+            "label": "states job or profession",
+            "type": "content-point"
+          },
+          {
+            "id": "work-context",
+            "label": "states what or who they work with",
+            "type": "content-point"
+          },
+          {
+            "id": "interest",
+            "label": "states one thing they enjoy",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 3,
+        "minimumResponseCharacters": 40,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "introduction",
+        "work",
+        "technology",
+        "teacher"
+      ]
     },
     {
       "id": "ACT-SP-A2-02-01",
@@ -107,7 +141,40 @@
       "titleEs": "Habla sobre tu familia",
       "objectiveEs": "Habla sobre familiares cercanos usando oraciones sencillas conectadas.",
       "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
-      "taskEs": "Habla sobre dos familiares. Di quiénes son, qué hacen normalmente y una cosa que les gusta."
+      "taskEs": "Habla sobre dos familiares. Di quiénes son, qué hacen normalmente y una cosa que les gusta.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "family-member-1",
+            "label": "describes one family member",
+            "type": "content-point"
+          },
+          {
+            "id": "family-member-2",
+            "label": "describes a second family member",
+            "type": "content-point"
+          },
+          {
+            "id": "routine",
+            "label": "gives simple information about what they do",
+            "type": "content-point"
+          },
+          {
+            "id": "preference",
+            "label": "states one family preference",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 3,
+        "minimumResponseCharacters": 40,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "family",
+        "daily-life",
+        "speaking"
+      ]
     },
     {
       "id": "ACT-SP-A2-03-01",
@@ -162,7 +229,41 @@
       "titleEs": "Describe tu rutina diaria",
       "objectiveEs": "Describe un día normal entre semana usando oraciones en presente simple y expresiones de tiempo.",
       "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
-      "taskEs": "Describe un día normal entre semana. Di a qué hora te levantas, qué haces durante el día y qué haces normalmente en la noche."
+      "taskEs": "Describe un día normal entre semana. Di a qué hora te levantas, qué haces durante el día y qué haces normalmente en la noche.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "start",
+            "label": "says when they get up",
+            "type": "content-point"
+          },
+          {
+            "id": "day",
+            "label": "describes activities during the day",
+            "type": "content-point"
+          },
+          {
+            "id": "evening",
+            "label": "describes an evening activity",
+            "type": "content-point"
+          },
+          {
+            "id": "time",
+            "label": "uses at least one time expression",
+            "type": "language-resource"
+          }
+        ],
+        "minimumCriteria": 3,
+        "minimumResponseCharacters": 40,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "daily-routine",
+        "daily-life",
+        "speaking",
+        "present-simple"
+      ]
     },
     {
       "id": "ACT-SP-A2-04-01",
@@ -218,7 +319,36 @@
       "titleEs": "Habla sobre lo que te gusta y lo que no te gusta",
       "objectiveEs": "Habla sobre tus gustos y disgustos personales y da razones sencillas.",
       "instructionsEs": "Habla en inglés durante 45 a 90 segundos.",
-      "taskEs": "Habla sobre tres cosas que te gustan y dos que no te gustan. Da una razón sencilla para al menos dos de ellas."
+      "taskEs": "Habla sobre tres cosas que te gustan y dos que no te gustan. Da una razón sencilla para al menos dos de ellas.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "likes",
+            "label": "gives three likes",
+            "type": "content-point"
+          },
+          {
+            "id": "dislikes",
+            "label": "gives two dislikes",
+            "type": "content-point"
+          },
+          {
+            "id": "reasons",
+            "label": "gives reasons for at least two preferences",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 3,
+        "minimumResponseCharacters": 40,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "likes",
+        "dislikes",
+        "preferences",
+        "speaking"
+      ]
     }
   ]
 }
