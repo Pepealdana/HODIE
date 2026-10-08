@@ -23,7 +23,7 @@ const MIXED_SKILL_ORDER = ["speaking", "listening", "vocabulary", "grammar", "re
 
 function activityMatchesFocus(activity, config) {
   if (!config) return false;
-  if (config.kind === "skill") return activity.skill === config.skill || activity.primarySkill === config.skill;
+  if (config.kind === "skill") return activity.skill === config.skill;
   if (config.kind === "resource") {
     return activity.skill === config.resource ||
       activity.resources?.includes(config.resource) ||
