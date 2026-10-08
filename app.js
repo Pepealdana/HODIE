@@ -50,7 +50,7 @@ function applyTheme(theme) {
   }
 
   const themeColor = document.querySelector('meta[name="theme-color"]');
-  if (themeColor) themeColor.setAttribute("content", dark ? "#172033" : "#172033");
+  if (themeColor) themeColor.setAttribute("content", "#172033");
 }
 
 function setupTheme() {
