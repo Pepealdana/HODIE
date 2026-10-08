@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "Micro Practice Model v1",
+  "purpose": "Define short, action-first practice steps that provide immediate feedback and can be combined into a learning session.",
+  "principles": [
+    "Micro-practice is for learning; integrated tasks are for demonstrating.",
+    "Feedback is immediate whenever the activity can be evaluated deterministically.",
+    "The learner should act before navigating to another screen.",
+    "Spanish is support, not the target language of production.",
+    "A session may mix skills and activity types.",
+    "Micro-practice does not directly mutate Can-Do mastery unless explicitly marked as evidence-producing."
+  ],
+  "activityTypes": {
+    "choose": "Select one answer.",
+    "complete": "Complete a short sentence.",
+    "order": "Put words or chunks in the correct order.",
+    "match": "Match language with meaning or context.",
+    "listening": "Listen and answer.",
+    "speak": "Speak and receive immediate observable feedback.",
+    "mini-production": "Produce a short personal response; may generate assessment evidence."
+  },
+  "modes": {
+    "mixed": "Adaptive mixture of activity types and skills.",
+    "speaking": "Speaking-focused practice.",
+    "listening": "Listening-focused practice.",
+    "grammar": "Grammar-focused practice in context.",
+    "vocabulary": "Vocabulary-focused practice.",
+    "reading": "Reading-focused practice.",
+    "writing": "Writing-focused practice.",
+    "review": "Adaptive review of recent gaps and retention needs."
+  },
+  "flow": [
+    "action",
+    "immediate-feedback",
+    "retry-if-useful",
+    "next-action",
+    "integrated-demonstration"
+  ],
+  "evidenceRule": "Micro-practice contributes diagnostic signals; Can-Do status changes through the existing Evidence Boundary and Learning Engine."
+}
