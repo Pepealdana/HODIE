@@ -105,34 +105,66 @@ console.log("HODIE Adaptive Planner v1: PASS");
 }
 
 {
+  const a2Items = matrix.canDos.filter((item) => item.level === "A2");
   const progressingProfile = {
-    evidence: [
+    evidence: a2Items.flatMap((item) => ([
       {
-        canDoId: "SP-A2-01",
+        canDoId: item.id,
         independent: true,
         confidence: 4,
         contextId: "work",
-        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+        dimensions: {
+          taskCompletion: 0.9,
+          accuracy: 0.9,
+          coherence: 0.9,
+          clarity: 0.9,
+          fluency: 0.9,
+          vocabulary: 0.9,
+          grammar: 0.9,
+          pronunciation: 0.9,
+          interaction: 0.9,
+          recall: 0.9,
+          use: 0.9,
+          spontaneousUse: 0.9,
+          intelligibility: 0.9,
+          prosody: 0.9
+        }
       },
       {
-        canDoId: "SP-A2-01",
+        canDoId: item.id,
         independent: true,
         confidence: 4,
         contextId: "home",
-        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+        dimensions: {
+          taskCompletion: 0.9,
+          accuracy: 0.9,
+          coherence: 0.9,
+          clarity: 0.9,
+          fluency: 0.9,
+          vocabulary: 0.9,
+          grammar: 0.9,
+          pronunciation: 0.9,
+          interaction: 0.9,
+          recall: 0.9,
+          use: 0.9,
+          spontaneousUse: 0.9,
+          intelligibility: 0.9,
+          prosody: 0.9
+        }
       }
-    ],
+    ])),
     reviews: []
   };
 
   const progression = getProgressionContext(matrix, progressingProfile, { now });
-  assert.equal(progression.currentLevel, "A2");
-  assert.equal(progression.nextTargetLevel, "A2+");
+  assert.equal(progression.currentLevel, "A2+");
+  assert.equal(progression.nextTargetLevel, "B1");
   assert.equal(progression.levels.find((item) => item.level === "A2").ready, true);
+  assert.equal(progression.levels.find((item) => item.level === "A2+").ready, false);
 
   const a2Plus = matrix.canDos.find((item) => item.level === "A2+" && item.prerequisites.includes("SP-A2-01"));
   assert.ok(a2Plus);
-  assert.equal(progressionFitBonus(progression, a2Plus), 2);
+  assert.equal(progressionFitBonus({ ...progression, nextTargetLevel: "A2+" }, a2Plus), 2);
 }
 
 {
