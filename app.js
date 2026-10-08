@@ -527,9 +527,10 @@ function showFeedback(activity, result, response, options = {}) {
         <div class="feedback-corrections">
           ${result.corrections.map((error) => `
             <div class="correction-item">
-              <strong>${escapeHtml(error.correction || error.expected || "")}</strong>
+              <strong>Suggested: ${escapeHtml(error.correction || error.expected || "")}</strong>
               <p>${escapeHtml(error.message || "")}</p>
               ${error.messageEs ? `<p class="spanish">${escapeHtml(error.messageEs)}</p>` : ""}
+              ${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}
             </div>
           `).join("")}
         </div>
