@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
   <meta name="description" content="HODIE — a local-first English learning environment. Today. Not tomorrow.">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("hodie-theme-v1");
+      const theme = saved === "dark" || saved === "light"
+        ? saved
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/icon-light-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/icon-light-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon-light-180.png">
@@ -16,12 +25,13 @@
   <main class="app-shell">
     <header class="brand">
       <a class="brand-mark" href="./" aria-label="HODIE — Today. Not tomorrow.">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/hodie-logo-dark.png">
-          <img src="./assets/brand/hodie-logo.png" alt="HODIE — Today. Not tomorrow." width="760" height="260">
-        </picture>
+        <img class="theme-logo theme-logo-light" src="./assets/brand/hodie-logo.png" alt="HODIE — Today. Not tomorrow." width="760" height="260">
+        <img class="theme-logo theme-logo-dark" src="./assets/brand/hodie-logo-dark.png" alt="" aria-hidden="true" width="760" height="260">
       </a>
-      <span class="badge" id="levelBadge">A2</span>
+      <div class="brand-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+        <span class="badge" id="levelBadge">A2</span>
+      </div>
     </header>
 
     <section id="app" aria-live="polite">
