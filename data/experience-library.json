@@ -18,7 +18,8 @@
       "contexts": [
         "work",
         "daily-life",
-        "personal"
+        "personal",
+        "professional"
       ],
       "correctionPolicy": "after-turn",
       "evidencePolicy": "practice-only",
