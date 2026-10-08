@@ -861,8 +861,7 @@ function renderInteraction(activity) {
       `}
 
       <p class="spanish requirement-note">
-        Minimum: ${activity.requirements?.minResponseCharacters || activity.evaluation?.minimumResponseCharacters || 0} characters.
-        This is a guide for this task, not a measure of your English level.
+        Aim for 2–3 sentences. This is a guide for the task, not a measure of your English level.
       </p>
     `;
 
