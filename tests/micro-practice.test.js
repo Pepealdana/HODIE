@@ -16,10 +16,14 @@ assert.ok(mixed.some((item) => item.resources?.includes("vocabulary")));
 const grammar = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 4 });
 assert.ok(grammar.length >= 3);
 assert.ok(grammar.every((item) => item.resources?.includes("grammar")));
+assert.ok(grammar.every((item) => ["choose", "complete", "order", "match"].includes(item.type)));
+assert.ok(grammar.every((item) => item.type !== "mini-production"));
 
 const vocabulary = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "vocabulary", limit: 4 });
 assert.ok(vocabulary.length >= 2);
 assert.ok(vocabulary.every((item) => item.resources?.includes("vocabulary")));
+assert.ok(vocabulary.every((item) => ["choose", "complete", "order", "match"].includes(item.type)));
+assert.ok(vocabulary.every((item) => item.type !== "mini-production"));
 
 const listening = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "listening", limit: 4 });
 assert.equal(listening.length, 3);
@@ -28,7 +32,7 @@ assert.ok(listening.every((item) => item.skill === "listening"));
 
 const speaking = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 4 });
 assert.equal(speaking.length, 2);
-assert.ok(speaking.every((item) => ["speak", "mini-production"].includes(item.type)));
+assert.ok(speaking.every((item) => item.type === "speak"));
 
 const writing = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "writing", limit: 4 });
 assert.equal(writing.length, 1);
@@ -65,3 +69,22 @@ assert.equal(nonsense.correct, false);
 assert.ok(nonsense.errors.some((error) => error.target === "profession"));
 
 console.log("HODIE Micro Practice Engine: PASS");
+
+
+const grammarActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 6 });
+assert.ok(grammarActivities.length >= 6);
+
+const writingActivity = library.activities.find((item) => item.skill === "writing" && item.type === "mini-production");
+const writingErrors = evaluateMicroActivity(
+  writingActivity,
+  "I am teacher. I work on a school. I enjoy to read books. My students is very important."
+);
+assert.equal(writingErrors.correct, true);
+assert.ok(writingErrors.errors.some((error) => error.target === "article"));
+assert.ok(writingErrors.errors.some((error) => error.target === "work-place"));
+assert.ok(writingErrors.corrections.length >= 1);
+assert.equal(writingErrors.retryRecommended, false);
+
+const speakingActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 6 });
+assert.ok(speakingActivities.length >= 2);
+assert.ok(speakingActivities.every((item) => item.type === "speak"));
