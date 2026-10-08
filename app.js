@@ -3,16 +3,19 @@ import { startSession, requestEvidence } from "./src/session-state.js";
 import { runSessionEvidenceCycle } from "./src/session-runner.js";
 import { getStatus } from "./src/learning-engine.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
+import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
   library: "./data/content-library.json",
-  micro: "./data/micro-practice-library.json"
+  micro: "./data/micro-practice-library.json",
+  experiences: "./data/experience-library.json"
 };
 
 const STORAGE_KEY = "hodie-progress-v1";
 const SESSION_KEY = "hodie-session-v1";
 const PRACTICE_STATE_KEY = "hodie-practice-v1";
+const EXPERIENCE_STATE_KEY = "hodie-experience-v1";
 
 const app = document.querySelector("#app");
 const levelBadge = document.querySelector("#levelBadge");
@@ -24,19 +27,23 @@ let microLibrary;
 let profile;
 let session;
 let practice = null;
+let experienceLibrary;
+let experienceSession = null;
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
-    fetch(DATA.micro)
+    fetch(DATA.micro),
+    fetch(DATA.experiences)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
   library = await libraryResponse.json();
   microLibrary = await microResponse.json();
+  experienceLibrary = await experienceResponse.json();
 }
 
 function loadProfile() {
@@ -147,28 +154,26 @@ function renderPracticeHome() {
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
   const savedPractice = getSavedPracticeLabel();
+  const level = session.target.level;
+  const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
+  const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
+
   const modeGroups = [
     {
       title: "Practice",
-      titleEs: "Modo",
+      titleEs: "Práctica",
       items: [
         ["mixed", "Mixed", "Un poco de todo", "Recommended"],
         ["review", "Review", "Refuerza lo que necesitas", "Adaptive"]
       ]
     },
     {
-      title: "Focus",
-      titleEs: "Habilidad",
+      title: "Skills",
+      titleEs: "Habilidades",
       items: [
-        ["speaking", "Speaking", "Hablar", "Focus"],
-        ["listening", "Listening", "Escuchar", "Focus"],
-        ["writing", "Writing", "Escribir", "Focus"]
-      ]
-    },
-    {
-      title: "Language",
-      titleEs: "Recursos",
-      items: [
+        ["speaking", "Speaking", "Hablar", "Voice first"],
+        ["listening", "Listening", "Escuchar", "Audio first"],
+        ["writing", "Writing", "Escribir", "Write"],
         ["grammar", "Grammar", "Gramática", "Practice"],
         ["vocabulary", "Vocabulary", "Vocabulario", "Practice"]
       ]
@@ -176,46 +181,84 @@ function renderPracticeHome() {
   ];
 
   app.innerHTML = `
-    <section class="card practice-home">
+    <section class="card learning-home">
       <div class="home-intro">
-        <p class="kicker">Today's practice · ${escapeHtml(session.target.level)}</p>
+        <p class="kicker">Today's learning · ${escapeHtml(level)}</p>
         <h2>${escapeHtml(targetActivity?.title || "Practice English")}</h2>
         <p class="spanish activity-title-es">${escapeHtml(targetActivity?.titleEs || "")}</p>
         <p class="can-do-line">${escapeHtml(statement)}</p>
         <p class="spanish">${escapeHtml(spanish)}</p>
       </div>
 
-      <div class="practice-choice">
-        <div class="choice-heading">
-          <div>
-            <p class="choice-title">Choose how to practice</p>
-            <p class="spanish">Toca una opción para empezar. No necesitas otro botón.</p>
+      <div class="learning-sections">
+        <section class="experience-section">
+          <div class="section-heading">
+            <div>
+              <p class="choice-title">Practice</p>
+              <p class="spanish">Short actions for skills and language resources.</p>
+            </div>
           </div>
-          <span class="choice-hint">Tap → practice</span>
-        </div>
+          <div class="mode-groups">
+            ${modeGroups.map((group) => `
+              <section class="mode-group" aria-labelledby="mode-${group.title.toLowerCase()}">
+                <div class="mode-group-title">
+                  <strong id="mode-${group.title.toLowerCase()}">${group.title}</strong>
+                  <span>${group.titleEs}</span>
+                </div>
+                <div class="mode-grid">
+                  ${group.items.map(([value, en, es, meta]) => `
+                    <button class="mode-button" data-mode="${value}" type="button" aria-label="${en}: ${es}">
+                      <span class="mode-copy">
+                        <strong>${en}</strong>
+                        <span>${es}</span>
+                        <small class="mode-meta">${meta}</small>
+                      </span>
+                      <span class="mode-arrow" aria-hidden="true">→</span>
+                    </button>
+                  `).join("")}
+                </div>
+              </section>
+            `).join("")}
+          </div>
+        </section>
 
-        <div class="mode-groups">
-          ${modeGroups.map((group) => `
-            <section class="mode-group" aria-labelledby="mode-${group.title.toLowerCase()}">
-              <div class="mode-group-title">
-                <strong id="mode-${group.title.toLowerCase()}">${group.title}</strong>
-                <span>${group.titleEs}</span>
-              </div>
-              <div class="mode-grid">
-                ${group.items.map(([value, en, es, meta]) => `
-                  <button class="mode-button" data-mode="${value}" type="button" aria-label="${en}: ${es}">
-                    <span class="mode-copy">
-                      <strong>${en}</strong>
-                      <span>${es}</span>
-                      <small class="mode-meta">${meta}</small>
-                    </span>
-                    <span class="mode-arrow" aria-hidden="true">→</span>
-                  </button>
-                `).join("")}
-              </div>
-            </section>
-          `).join("")}
-        </div>
+        <section class="experience-section">
+          <div class="section-heading">
+            <div>
+              <p class="choice-title">Conversations</p>
+              <p class="spanish">Use English in open responses. No AI yet: HODIE guides and gives local feedback.</p>
+            </div>
+          </div>
+          <div class="experience-grid">
+            ${conversations.map((item) => `
+              <button class="experience-card" data-experience="${item.id}" type="button">
+                <span class="experience-kind">Conversation</span>
+                <strong>${item.title}</strong>
+                <span class="spanish">${item.titleEs}</span>
+                <small>${item.description}</small>
+              </button>
+            `).join("")}
+          </div>
+        </section>
+
+        <section class="experience-section">
+          <div class="section-heading">
+            <div>
+              <p class="choice-title">Simulations</p>
+              <p class="spanish">Role-play real situations: interviews, classes and presentations.</p>
+            </div>
+          </div>
+          <div class="experience-grid">
+            ${simulations.map((item) => `
+              <button class="experience-card" data-experience="${item.id}" type="button">
+                <span class="experience-kind">${escapeHtml(item.role || "Simulation")}</span>
+                <strong>${escapeHtml(item.title)}</strong>
+                <span class="spanish">${escapeHtml(item.titleEs)}</span>
+                <small>${escapeHtml(item.description)}</small>
+              </button>
+            `).join("")}
+          </div>
+        </section>
       </div>
 
       ${savedPractice ? `
@@ -228,9 +271,9 @@ function renderPracticeHome() {
         </div>
       ` : ""}
 
-      <aside class="quick-principle" aria-label="HODIE practice principle">
-        <strong>Practice, don't just study.</strong>
-        <span>Act → get feedback → try again → move on.</span>
+      <aside class="quick-principle" aria-label="HODIE learning principle">
+        <strong>Practice, communicate, remember.</strong>
+        <span>HODIE connects practice, conversation, feedback, progression and retention.</span>
       </aside>
 
       <div class="home-progress">
@@ -242,8 +285,201 @@ function renderPracticeHome() {
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
-
+  document.querySelectorAll("[data-experience]").forEach((button) => {
+    button.addEventListener("click", () => startExperience(button.dataset.experience));
+  });
   document.querySelector("#resumePracticeButton")?.addEventListener("click", resumeSavedPractice);
+}
+
+function saveExperienceState() {
+  if (!experienceSession) return;
+  localStorage.setItem(EXPERIENCE_STATE_KEY, JSON.stringify(experienceSession));
+}
+
+function clearExperienceState() {
+  localStorage.removeItem(EXPERIENCE_STATE_KEY);
+}
+
+function startExperience(experienceId) {
+  const experience = getExperience(experienceLibrary, experienceId);
+  if (!experience) {
+    renderError(new Error("Learning experience not found."));
+    return;
+  }
+
+  experienceSession = createExperienceSession(experienceLibrary, experienceId);
+  saveExperienceState();
+  renderExperience();
+}
+
+function renderExperience() {
+  const experience = getExperience(experienceLibrary, experienceSession?.experienceId);
+  if (!experience || !experienceSession) {
+    renderPracticeHome();
+    return;
+  }
+
+  if (isExperienceComplete(experience, experienceSession)) {
+    renderExperienceComplete(experience);
+    return;
+  }
+
+  const stage = experience.stages[experienceSession.index];
+  app.innerHTML = `
+    <section class="card experience-session">
+      <div class="practice-nav">
+        <button class="secondary compact" id="experienceBackButton" type="button">← Back to learning</button>
+        <span class="practice-nav-hint">Saved on this device</span>
+      </div>
+
+      <div class="experience-topline">
+        <span class="kicker">${escapeHtml(experience.kind)} · ${experienceSession.index + 1}/${experience.stages.length}</span>
+        <span class="practice-skill">${escapeHtml(experience.role || "HODIE")}</span>
+      </div>
+
+      <div class="experience-context">
+        <p class="experience-kind">${escapeHtml(experience.title)}</p>
+        <h2>${escapeHtml(stage.title)}</h2>
+        <p class="spanish">${escapeHtml(stage.titleEs)}</p>
+      </div>
+
+      <div class="micro-prompt">
+        <p class="prompt-en">${escapeHtml(stage.prompt)}</p>
+        <p class="spanish">${escapeHtml(stage.promptEs)}</p>
+      </div>
+
+      <div class="conversation-response">
+        <button class="primary" id="experienceSpeakButton" type="button">🎙 Speak</button>
+        <details class="speak-fallback-details" id="experienceTyping">
+          <summary>Type your answer instead</summary>
+          <textarea id="experienceResponse" class="production-input" placeholder="Answer in English..."></textarea>
+          <button class="secondary compact" id="experienceCheckButton" type="button">Send answer</button>
+        </details>
+        <p class="spanish experience-note">This is open practice. HODIE checks useful signals and gives feedback; it does not require one exact answer.</p>
+      </div>
+
+      <div id="experienceFeedback" aria-live="polite"></div>
+
+      <div class="micro-progress">
+        <div class="progress-track"><div class="progress-fill" style="width:${((experienceSession.index) / experience.stages.length) * 100}%"></div></div>
+      </div>
+    </section>
+  `;
+
+  document.querySelector("#experienceBackButton").addEventListener("click", () => {
+    saveExperienceState();
+    renderPracticeHome();
+  });
+
+  const submit = (response) => handleExperienceResponse(experience, stage, response);
+  document.querySelector("#experienceCheckButton").addEventListener("click", () => {
+    submit(document.querySelector("#experienceResponse").value.trim());
+  });
+  document.querySelector("#experienceSpeakButton").addEventListener("click", () => {
+    startSpeechRecognition(
+      { id: `${experience.id}-${stage.id}`, targetPhrase: stage.prompt, context: experience.contexts?.[0] || "general" },
+      (transcript) => {
+        const input = document.querySelector("#experienceResponse");
+        if (input) input.value = transcript;
+        submit(transcript);
+      }
+    );
+  });
+}
+
+function handleExperienceResponse(experience, stage, response) {
+  const result = evaluateExperienceTurn(experience, stage, response);
+  const feedback = document.querySelector("#experienceFeedback");
+  if (!result.canContinue) {
+    feedback.innerHTML = `
+      <div class="instant-feedback feedback-retry">
+        <strong>Try again</strong>
+        <p>Please answer in English before continuing.</p>
+        <p class="spanish">Escribe o di una respuesta en inglés antes de continuar.</p>
+      </div>
+    `;
+    return;
+  }
+
+  feedback.innerHTML = `
+    <div class="instant-feedback feedback-success">
+      <strong>Keep going</strong>
+      <p>Your idea is recorded. Now notice the feedback below.</p>
+      <p class="spanish">Tu idea está registrada. Ahora revisa la retroalimentación.</p>
+      ${result.missing.length ? `<p>Useful idea to add: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
+      ${result.corrections.length ? `
+        <div class="feedback-corrections">
+          ${result.corrections.map((error) => `
+            <div class="correction-item">
+              <strong>Suggested: ${escapeHtml(error.correction || error.expected || "")}</strong>
+              <p>${escapeHtml(error.message || "")}</p>
+              <p class="spanish">${escapeHtml(error.messageEs || "")}</p>
+              ${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
+      <div class="actions">
+        <button class="primary compact" id="nextExperienceButton" type="button">${experienceSession.index + 1 >= experience.stages.length ? "Finish" : "Next"}</button>
+      </div>
+    </div>
+  `;
+
+  document.querySelector("#nextExperienceButton").addEventListener("click", () => {
+    experienceSession = advanceExperienceSession(experienceSession, result);
+    saveExperienceState();
+    renderExperience();
+  });
+}
+
+function renderExperienceComplete(experience) {
+  const summary = summarizeExperience(experience, experienceSession);
+  app.innerHTML = `
+    <section class="card experience-session">
+      <p class="kicker">${escapeHtml(experience.kind)} complete</p>
+      <h2>${escapeHtml(experience.title)}</h2>
+      <p class="spanish">${escapeHtml(experience.titleEs)}</p>
+
+      <div class="notice success">
+        <strong>Experience completed</strong>
+        <p>${summary.turns}/${summary.totalTurns} turns completed.</p>
+        <p class="spanish">Completaste ${summary.turns} de ${summary.totalTurns} intervenciones.</p>
+      </div>
+
+      ${summary.corrections.length ? `
+        <div class="experience-summary">
+          <h3>Useful corrections</h3>
+          ${summary.corrections.slice(0, 6).map((error) => `
+            <div class="correction-item">
+              <strong>${escapeHtml(error.correction || error.expected || "")}</strong>
+              <p>${escapeHtml(error.message || "")}</p>
+              <p class="spanish">${escapeHtml(error.messageEs || "")}</p>
+            </div>
+          `).join("")}
+        </div>
+      ` : `
+        <p>No priority corrections were detected in this experience.</p>
+      `}
+
+      <p class="spanish">Esta experiencia es práctica comunicativa. Todavía no cambia por sí sola tu nivel: el progreso oficial requiere evidencia dentro del motor de aprendizaje.</p>
+
+      <div class="actions">
+        <button class="primary" id="experienceHomeButton" type="button">Back to learning</button>
+        <button class="secondary" id="experienceAgainButton" type="button">Try again</button>
+      </div>
+    </section>
+  `;
+
+  document.querySelector("#experienceHomeButton").addEventListener("click", () => {
+    clearExperienceState();
+    experienceSession = null;
+    renderPracticeHome();
+  });
+  document.querySelector("#experienceAgainButton").addEventListener("click", () => {
+    experienceSession = createExperienceSession(experienceLibrary, experience.id);
+    saveExperienceState();
+    renderExperience();
+  });
 }
 
 function prepareSessionForPractice() {
@@ -843,6 +1079,7 @@ resetButton.addEventListener("click", () => {
   if (!confirm("Reset HODIE local progress?")) return;
   localStorage.removeItem(STORAGE_KEY);
   clearSavedSession();
+  clearExperienceState();
   clearSavedPracticeState();
   location.reload();
 });
