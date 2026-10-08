@@ -326,8 +326,8 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
   --focus: #78a8e5;
   --shadow: 0 10px 28px rgba(0,0,0,.24);
 }
-[data-theme="dark"] html,
-[data-theme="dark"] body { background: #101827; }
+html[data-theme="dark"],
+html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .theme-logo-light { display: none; }
 [data-theme="dark"] .theme-logo-dark { display: block; }
 [data-theme="dark"] .primary { background: #D9A441; color: #172033; }
