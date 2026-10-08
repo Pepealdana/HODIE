@@ -138,8 +138,8 @@ function renderPracticeHome() {
                     <span class="mode-copy">
                       <strong>${en}</strong>
                       <span>${es}</span>
+                      <small class="mode-meta">${meta}</small>
                     </span>
-                    <span class="mode-meta">${meta}</span>
                     <span class="mode-arrow" aria-hidden="true">→</span>
                   </button>
                 `).join("")}
@@ -425,47 +425,105 @@ function showFeedback(activity, result, response, options = {}) {
 
 function startSpeechRecognition(activity) {
   const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const button = document.querySelector("#speakButton");
+
   if (!Recognition) {
-    showFeedback(activity, {
-      correct:false,
-      score:0,
-      feedback:activity.feedback.unavailable,
-      feedbackEs:activity.feedback.unavailableEs
-    });
+    showSpeechFeedback(
+      activity,
+      "Speech recognition is not available in this browser.",
+      "El reconocimiento de voz no está disponible en este navegador. Esto no significa que el micrófono esté dañado."
+    );
     return;
   }
+
+  const handleRecognitionError = (event) => {
+    const messages = {
+      "not-allowed": [
+        "Microphone access was denied. Allow microphone access and try again.",
+        "El acceso al micrófono fue rechazado. Permite el micrófono en el navegador e inténtalo de nuevo."
+      ],
+      "service-not-allowed": [
+        "The browser did not allow the speech recognition service.",
+        "El navegador no permitió utilizar el servicio de reconocimiento de voz."
+      ],
+      "audio-capture": [
+        "The microphone could not be accessed.",
+        "No se pudo acceder al micrófono."
+      ],
+      "no-speech": [
+        "No speech was detected. Try speaking a little closer to the microphone.",
+        "No se detectó voz. Intenta hablar un poco más cerca del micrófono."
+      ],
+      "network": [
+        "The speech recognition service could not be reached.",
+        "No se pudo conectar con el servicio de reconocimiento de voz."
+      ],
+      "aborted": [
+        "Speech recognition was interrupted. Try again.",
+        "El reconocimiento de voz se interrumpió. Inténtalo de nuevo."
+      ]
+    };
+
+    const [message, messageEs] = messages[event?.error] || [
+      "Speech recognition could not complete. You can type your answer instead.",
+      "El reconocimiento de voz no pudo completarse. Puedes escribir tu respuesta."
+    ];
+
+    showSpeechFeedback(activity, message, messageEs);
+  };
 
   const recognition = new Recognition();
   recognition.lang = "en-US";
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
-  const button = document.querySelector("#speakButton");
   button.textContent = "Listening...";
   button.disabled = true;
 
   recognition.onresult = (event) => {
-    const transcript = event.results[0][0].transcript;
+    const transcript = event.results?.[0]?.[0]?.transcript?.trim() || "";
     const fallback = document.querySelector("#speakFallback");
     if (fallback) fallback.value = transcript;
-    evaluateCurrent(transcript);
+
+    if (transcript) {
+      evaluateCurrent(transcript);
+    } else {
+      showSpeechFeedback(
+        activity,
+        "No speech was recognized. You can try again or type your answer.",
+        "No se reconoció voz. Puedes intentarlo de nuevo o escribir tu respuesta."
+      );
+    }
   };
 
-  recognition.onerror = () => {
-    showFeedback(activity, {
-      correct:false,
-      score:0,
-      feedback:activity.feedback.unavailable,
-      feedbackEs:activity.feedback.unavailableEs
-    });
-  };
+  recognition.onerror = handleRecognitionError;
 
   recognition.onend = () => {
     button.textContent = "🎙 Speak";
     button.disabled = false;
   };
 
-  recognition.start();
+  try {
+    recognition.start();
+  } catch (error) {
+    showSpeechFeedback(
+      activity,
+      "The microphone session could not start. Check browser permissions and try again.",
+      "No se pudo iniciar la sesión del micrófono. Revisa los permisos del navegador e inténtalo de nuevo."
+    );
+    button.textContent = "🎙 Speak";
+    button.disabled = false;
+  }
+}
+
+function showSpeechFeedback(activity, message, messageEs) {
+  showFeedback(activity, {
+    correct: false,
+    score: 0,
+    feedback: message,
+    feedbackEs: messageEs,
+    errors: []
+  });
 }
 
 function speakText(text) {
