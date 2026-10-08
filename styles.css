@@ -353,6 +353,7 @@ html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .experience-card:hover { background: #202b3d; }
 [data-theme="dark"] .danger { background: #172033; color: #f07b86; border-color: #70404a; }
 [data-theme="dark"] .recommended-learning { border-color: #526077; background: #1b2637; }
+[data-theme="dark"] .recommended-primary { border-left-color: #D9A441; }
 [data-theme="dark"] .mode-button,
 [data-theme="dark"] .experience-card { background: #172033; color: #f4f6f8; }
 [data-theme="dark"] .resume-practice,
