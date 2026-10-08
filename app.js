@@ -150,6 +150,10 @@ function startPractice(mode) {
     return;
   }
 
+  session = startSession(session);
+  session = requestEvidence(session);
+  saveSession();
+
   practice = {
     mode,
     activities,
