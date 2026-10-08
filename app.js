@@ -1049,7 +1049,7 @@ function startSpeechRecognition(activity, onTranscript = null) {
   recognition.onerror = handleRecognitionError;
 
   recognition.onend = () => {
-    button.textContent = "🎙 Speak";
+    button.textContent = "Speak";
     button.disabled = false;
   };
 
@@ -1061,7 +1061,7 @@ function startSpeechRecognition(activity, onTranscript = null) {
       "The microphone session could not start. Check browser permissions and try again.",
       "No se pudo iniciar la sesión del micrófono. Revisa los permisos del navegador e inténtalo de nuevo."
     );
-    button.textContent = "🎙 Speak";
+    button.textContent = "Speak";
     button.disabled = false;
   }
 }
