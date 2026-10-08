@@ -161,7 +161,8 @@ function renderPracticeHome() {
       titleEs: "Habilidad",
       items: [
         ["speaking", "Speaking", "Hablar", "Focus"],
-        ["listening", "Listening", "Escuchar", "Focus"]
+        ["listening", "Listening", "Escuchar", "Focus"],
+        ["writing", "Writing", "Escribir", "Focus"]
       ]
     },
     {
