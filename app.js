@@ -446,6 +446,7 @@ function renderInteraction(activity) {
   if (activity.type === "mini-production") {
     const isWriting = activity.skill === "writing";
     const criteria = activity.evaluation?.criteria || [];
+
     container.innerHTML = `
       <div class="production-guidance">
         <strong>${isWriting ? "Your writing should include:" : "Your response should include:"}</strong>
@@ -453,17 +454,43 @@ function renderInteraction(activity) {
           ${criteria.map((criterion) => `<li>${escapeHtml(criterion.label)}</li>`).join("")}
         </ul>
       </div>
-      <textarea id="productionAnswer" class="production-input" placeholder="${isWriting ? "Write your answer in English..." : "Say or write your answer in English..."}"></textarea>
-      <p class="spanish requirement-note">Minimum: ${activity.requirements?.minResponseCharacters || activity.evaluation?.minimumResponseCharacters || 0} characters. This is a guide for this task, not a measure of your English level.</p>
-      <div class="actions">
-        <button class="primary" id="finishButton" type="button">${isWriting ? "Check writing" : "Finish practice"}</button>
-      </div>
+
+      ${isWriting ? `
+        <textarea id="productionAnswer" class="production-input" placeholder="Write your answer in English..."></textarea>
+        <button class="primary compact" id="finishButton" type="button">Check writing</button>
+      ` : `
+        <button class="primary speak-button" id="speakButton" type="button">Speak</button>
+        <details class="speak-fallback-details" id="productionFallbackDetails">
+          <summary>Can't use voice? Type instead</summary>
+          <textarea id="productionAnswer" class="production-input" placeholder="Type what you would say in English..."></textarea>
+          <button class="secondary compact" id="finishButton" type="button">Check typed response</button>
+        </details>
+      `}
+
+      <p class="spanish requirement-note">
+        Minimum: ${activity.requirements?.minResponseCharacters || activity.evaluation?.minimumResponseCharacters || 0} characters.
+        This is a guide for this task, not a measure of your English level.
+      </p>
     `;
-    document.querySelector("#finishButton").addEventListener("click", () => {
-      const response = document.querySelector("#productionAnswer").value.trim();
+
+    const evaluateProduction = (response) => {
       const result = evaluateMicroActivity(activity, response);
       showFeedback(activity, result, response, { final: true });
+    };
+
+    document.querySelector("#finishButton")?.addEventListener("click", () => {
+      evaluateProduction(document.querySelector("#productionAnswer").value.trim());
     });
+
+    if (!isWriting) {
+      document.querySelector("#speakButton").addEventListener("click", () =>
+        startSpeechRecognition(activity, (transcript) => {
+          const input = document.querySelector("#productionAnswer");
+          if (input) input.value = transcript;
+          evaluateProduction(transcript);
+        })
+      );
+    }
   }
 }
 
@@ -547,15 +574,16 @@ function showFeedback(activity, result, response, options = {}) {
   }
 }
 
-function startSpeechRecognition(activity) {
+function startSpeechRecognition(activity, onTranscript = null) {
   const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const button = document.querySelector("#speakButton");
 
   if (!Recognition) {
+    document.querySelector("#speakFallbackDetails, #productionFallbackDetails")?.setAttribute("open", "");
     showSpeechFeedback(
       activity,
-      "Speech recognition is not available in this browser.",
-      "El reconocimiento de voz no está disponible en este navegador. Esto no significa que el micrófono esté dañado."
+      "Speech recognition is not available in this browser. You can use the typing fallback.",
+      "El reconocimiento de voz no está disponible en este navegador. Puedes usar la opción para escribir como alternativa."
     );
     return;
   }
@@ -610,7 +638,11 @@ function startSpeechRecognition(activity) {
     if (fallback) fallback.value = transcript;
 
     if (transcript) {
-      evaluateCurrent(transcript);
+      if (typeof onTranscript === "function") {
+        onTranscript(transcript);
+      } else {
+        evaluateCurrent(transcript);
+      }
     } else {
       showSpeechFeedback(
         activity,
