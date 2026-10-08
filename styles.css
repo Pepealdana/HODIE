@@ -322,53 +322,80 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
 }
 
 @media (max-width: 760px) {
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   .app-shell {
     width: 100%;
-    max-width: 100vw;
-    min-width: 0;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .brand,
-  #app,
-  .learning-home,
   .card {
     width: 100%;
     max-width: 100%;
-    min-width: 0;
+    overflow: hidden;
   }
 
-  .learning-home {
+  .learning-home,
+  .practice-card,
+  .practice-home,
+  .experience-session {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     grid-template-columns: minmax(0, 1fr);
   }
 
   .learning-home > *,
-  .learning-home section,
-  .learning-home details,
-  .learning-home aside {
+  .practice-card > *,
+  .practice-home > *,
+  .experience-session > * {
     width: 100%;
     max-width: 100%;
     min-width: 0;
   }
 
-  .category-grid,
-  .mode-grid,
-  .experience-grid {
+  .practice-topline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .practice-skill {
+    max-width: 120px;
+    overflow-wrap: anywhere;
+  }
+
+  .resume-practice,
+  .resume-experience,
+  .recommended-learning {
     width: 100%;
     max-width: 100%;
     min-width: 0;
   }
 
-  .category-card,
-  .mode-button,
-  .experience-card {
+  .resume-practice > div,
+  .resume-experience > div,
+  .recommended-learning > div {
     min-width: 0;
     max-width: 100%;
+  }
+
+  .resume-practice button,
+  .resume-experience button,
+  .recommended-learning button {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .practice-card h2,
+  .practice-card .micro-prompt,
+  .practice-card #microInteraction,
+  .practice-card #microFeedback {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }
 
