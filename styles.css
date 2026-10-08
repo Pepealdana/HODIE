@@ -6,7 +6,7 @@
   font-synthesis: none;
 }
 * { box-sizing: border-box; }
-body { margin: 0; min-width: 320px; background: #eef1f5; }
+body { margin: 0; min-width: 320px; width: 100%; background: #eef1f5; overflow-x: hidden; }
 button, textarea, input { font: inherit; }
 button { cursor: pointer; }
 button:disabled { cursor: default; opacity: .55; }
@@ -121,4 +121,63 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
   .choice-hint { display: none; }
   .mode-grid { grid-template-columns: 1fr; }
   .mode-button { min-height: 70px; }
+}
+
+
+.learning-home { display: grid; gap: 22px; }
+.learning-sections { display: grid; gap: 22px; }
+.experience-section { display: grid; gap: 12px; }
+.section-heading { display: flex; justify-content: space-between; gap: 12px; }
+.experience-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.experience-card {
+  width: 100%;
+  min-height: 128px;
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #c9d1dd;
+  border-radius: 14px;
+  background: #fff;
+  color: #172033;
+}
+.experience-card:hover { border-color: #172033; box-shadow: 0 5px 14px rgba(23,32,51,.08); }
+.experience-card strong { font-size: 1.02rem; }
+.experience-card small { color: #596579; line-height: 1.4; }
+.experience-kind { margin: 0; color: #596579; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.experience-session { display: grid; gap: 18px; }
+.experience-topline { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.experience-context { display: grid; gap: 4px; }
+.experience-context h2 { margin: 0; }
+.conversation-response { display: grid; gap: 10px; }
+.experience-note { font-size: .82rem; }
+.experience-summary { display: grid; gap: 8px; }
+.experience-summary h3 { margin: 0; font-size: 1rem; }
+.resume-experience { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 14px; border: 1px solid #c9d1dd; border-radius: 12px; background: #f5f7fa; }
+.resume-experience p { margin-top: 2px; font-size: .84rem; }
+
+@media (max-width: 520px) {
+  .app-shell { padding: 14px 10px 22px; gap: 12px; }
+  .brand { padding: 2px 0; }
+  .brand h1 { font-size: clamp(1.05rem, 5.2vw, 1.35rem); }
+  .eyebrow { font-size: .7rem; }
+  .badge { padding: 5px 9px; }
+  .card { padding: 15px; border-radius: 14px; }
+  h2 { font-size: clamp(1.35rem, 7vw, 1.7rem); overflow-wrap: anywhere; }
+  .can-do-line, .prompt-en { font-size: 1rem; }
+  .practice-nav, .experience-topline { align-items: flex-start; }
+  .practice-nav-hint { display: none; }
+  .practice-topline { align-items: flex-start; }
+  .mode-grid, .experience-grid { grid-template-columns: 1fr; }
+  .mode-button { min-height: 72px; padding: 12px; }
+  .mode-meta { font-size: .62rem; }
+  .micro-prompt { padding: 13px; }
+  .answer-grid { grid-template-columns: 1fr; }
+  .answer-button { min-height: 48px; }
+  .production-input { min-height: 150px; }
+  .resume-practice, .resume-experience { align-items: flex-start; flex-direction: column; }
+  .resume-practice button, .resume-experience button { width: 100%; }
+  .actions > button { width: 100%; }
+  footer { flex-direction: column; align-items: stretch; }
 }
