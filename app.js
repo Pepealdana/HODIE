@@ -154,6 +154,7 @@ function renderPracticeHome() {
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
   const savedPractice = getSavedPracticeLabel();
+  const savedExperience = getSavedExperienceLabel();
   const level = session.target.level;
   const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
   const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
@@ -271,6 +272,16 @@ function renderPracticeHome() {
         </div>
       ` : ""}
 
+      ${savedExperience ? `
+        <div class="resume-experience">
+          <div>
+            <strong>Resume ${escapeHtml(savedExperience.title)}</strong>
+            <p class="spanish">Turn ${savedExperience.current}/${savedExperience.total}</p>
+          </div>
+          <button class="secondary compact" id="resumeExperienceButton" type="button">Continue</button>
+        </div>
+      ` : ""}
+
       <aside class="quick-principle" aria-label="HODIE learning principle">
         <strong>Practice, communicate, remember.</strong>
         <span>HODIE connects practice, conversation, feedback, progression and retention.</span>
@@ -289,6 +300,7 @@ function renderPracticeHome() {
     button.addEventListener("click", () => startExperience(button.dataset.experience));
   });
   document.querySelector("#resumePracticeButton")?.addEventListener("click", resumeSavedPractice);
+  document.querySelector("#resumeExperienceButton")?.addEventListener("click", renderExperience);
 }
 
 function saveExperienceState() {
@@ -298,6 +310,17 @@ function saveExperienceState() {
 
 function clearExperienceState() {
   localStorage.removeItem(EXPERIENCE_STATE_KEY);
+}
+
+function getSavedExperienceLabel() {
+  if (!experienceSession) return null;
+  const experience = getExperience(experienceLibrary, experienceSession.experienceId);
+  if (!experience || isExperienceComplete(experience, experienceSession)) return null;
+  return {
+    title: experience.title,
+    current: experienceSession.index + 1,
+    total: experience.stages.length
+  };
 }
 
 function startExperience(experienceId) {
@@ -1054,6 +1077,16 @@ async function boot() {
   try {
     await loadData();
     loadProfile();
+
+    const savedExperience = localStorage.getItem(EXPERIENCE_STATE_KEY);
+    if (savedExperience) {
+      try {
+        const parsedExperience = JSON.parse(savedExperience);
+        if (parsedExperience?.experienceId) experienceSession = parsedExperience;
+      } catch {
+        clearExperienceState();
+      }
+    }
 
     const saved = localStorage.getItem(SESSION_KEY);
     if (saved) {
