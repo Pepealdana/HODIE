@@ -4,7 +4,11 @@ import {
   rankLearningTargets,
   selectNextLearningTarget,
   selectNextActivityTarget,
-  explainSelection
+  explainSelection,
+  getProgressionContext,
+  getRetentionEntry,
+  retentionBonus,
+  progressionFitBonus
 } from "../src/adaptive-planner.js";
 
 const read = (path) =>
@@ -65,3 +69,111 @@ assert.equal(explanation.canDoId, "SP-A2-02");
 assert.ok(explanation.reasons.length > 0);
 
 console.log("HODIE Adaptive Planner v1: PASS");
+
+
+{
+  const masteredProfile = {
+    evidence: [
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "work",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      },
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "home",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      }
+    ],
+    reviews: [
+      {
+        canDoId: "SP-A2-01",
+        nextReviewAt: "2026-09-01T12:00:00.000Z",
+        intervalDays: 30
+      }
+    ]
+  };
+
+  const retention = getRetentionEntry(matrix, masteredProfile, "SP-A2-01", { now });
+  assert.equal(retention.status, "consolidated");
+  assert.equal(retention.retentionState, "due");
+  assert.equal(retentionBonus(retention), 3);
+}
+
+{
+  const progressingProfile = {
+    evidence: [
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "work",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      },
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "home",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      }
+    ],
+    reviews: []
+  };
+
+  const progression = getProgressionContext(matrix, progressingProfile, { now });
+  assert.equal(progression.currentLevel, "A2");
+  assert.equal(progression.nextTargetLevel, "A2+");
+  assert.equal(progression.levels.find((item) => item.level === "A2").ready, true);
+
+  const a2Plus = matrix.canDos.find((item) => item.level === "A2+" && item.prerequisites.includes("SP-A2-01"));
+  assert.ok(a2Plus);
+  assert.equal(progressionFitBonus(progression, a2Plus), 2);
+}
+
+{
+  const atRiskProfile = {
+    evidence: [
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "work",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      },
+      {
+        canDoId: "SP-A2-01",
+        independent: true,
+        confidence: 4,
+        contextId: "home",
+        dimensions: { taskCompletion: 0.9, grammar: 0.9, fluency: 0.9 }
+      }
+    ],
+    reviews: [
+      {
+        canDoId: "SP-A2-01",
+        nextReviewAt: "2026-08-01T12:00:00.000Z",
+        intervalDays: 30
+      }
+    ]
+  };
+
+  const rankedMaintenance = rankLearningTargets(matrix, atRiskProfile, { now });
+  const maintenanceTarget = rankedMaintenance.find((item) => item.canDo.id === "SP-A2-01");
+  assert.ok(maintenanceTarget);
+  assert.ok(maintenanceTarget.score > 0);
+
+  const maintenanceExplanation = explainSelection(
+    matrix,
+    atRiskProfile,
+    matrix.canDos.find((item) => item.id === "SP-A2-01"),
+    { now }
+  );
+  assert.ok(maintenanceExplanation.reasons.includes("retention is at risk"));
+}
+
+console.log("HODIE Adaptive Planner v2 progression/retention: PASS");
