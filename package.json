@@ -5,7 +5,7 @@
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
     "test:content": "node tests/content-model.test.js",
-    "test": "npm run test:app && npm run test:experiences && npm run test:micro && npm run test:feedback && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical",
+    "test": "npm run test:app && npm run test:experiences && npm run test:orchestrator && npm run test:micro && npm run test:feedback && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical",
     "test:generator": "node tests/activity-generator.test.js",
     "test:integration": "node tests/engine-activity-integration.test.js",
     "test:planner": "node tests/adaptive-planner.test.js",
@@ -19,6 +19,7 @@
     "test:feedback": "node tests/error-engine.test.js",
     "test:taxonomy": "node tests/practice-taxonomy.test.js",
     "test:app": "node --check app.js",
-    "test:experiences": "node tests/experience-engine.test.js"
+    "test:experiences": "node tests/experience-engine.test.js",
+    "test:orchestrator": "node tests/learning-orchestrator.test.js"
   }
 }
