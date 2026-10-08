@@ -1,4 +1,8 @@
 import { getStatus } from "./learning-engine.js";
+import {
+  evaluateProgression,
+  getRetentionProfile
+} from "./progression-retention.js";
 
 /**
  * HODIE Adaptive Planner v1
@@ -118,6 +122,35 @@ function progressionBonus(profile, canDo) {
   return followsRecent ? 2.5 : 0;
 }
 
+function getProgressionContext(matrix, profile, options = {}) {
+  return evaluateProgression(
+    matrix,
+    profile,
+    getStatus,
+    options.progressionPolicy
+  );
+}
+
+function getRetentionEntry(matrix, profile, canDoId, options = {}) {
+  const now = options.now ? new Date(options.now) : new Date();
+  return getRetentionProfile(matrix, profile, getStatus, now)
+    .find((item) => item.canDoId === canDoId) || null;
+}
+
+function retentionBonus(retention) {
+  if (!retention) return 0;
+  if (retention.retentionState === "atRisk") return 4;
+  if (retention.retentionState === "due") return 3;
+  return 0;
+}
+
+function progressionFitBonus(progression, canDo) {
+  if (!progression) return 0;
+  if (canDo.level === progression.nextTargetLevel) return 2;
+  if (canDo.level === progression.currentLevel) return 0.5;
+  return 0;
+}
+
 function calculateTargetScore(matrix, profile, canDo, options = {}) {
   const now = options.now ? new Date(options.now) : new Date();
   const status = getStatus(canDo, profile);
@@ -127,11 +160,16 @@ function calculateTargetScore(matrix, profile, canDo, options = {}) {
   score += STATUS_NEED[status] || 0;
   score *= SKILL_WEIGHTS[canDo.skill] || 1;
 
+  const progression = getProgressionContext(matrix, profile, options);
+  const retention = getRetentionEntry(matrix, profile, canDo.id, options);
+
   if (isDue(profile, canDo.id, now)) score += 3;
   if (hasRecentGap(profile, canDo.id, options.recentGapLimit || 5)) score += 2;
 
   score += contextMatch(canDo, options.contextTerms || []);
   score += progressionBonus(profile, canDo);
+  score += progressionFitBonus(progression, canDo);
+  score += retentionBonus(retention);
   score -= skillBalancePenalty(matrix, canDo.skill, recentEvidence);
 
   if (status === "transferred") score -= 2;
@@ -173,6 +211,8 @@ function explainSelection(matrix, profile, canDo, options = {}) {
 
   const now = options.now ? new Date(options.now) : new Date();
   const status = getStatus(canDo, profile);
+  const progression = getProgressionContext(matrix, profile, options);
+  const retention = getRetentionEntry(matrix, profile, canDo.id, options);
   const reasons = [];
 
   if (["critical", "high"].includes(canDo.priority)) {
@@ -185,6 +225,16 @@ function explainSelection(matrix, profile, canDo, options = {}) {
 
   if (isDue(profile, canDo.id, now)) {
     reasons.push("review is due");
+  }
+
+  if (retention?.retentionState === "atRisk") {
+    reasons.push("retention is at risk");
+  } else if (retention?.retentionState === "due") {
+    reasons.push("maintenance review is due");
+  }
+
+  if (progression?.nextTargetLevel === canDo.level) {
+    reasons.push("supports the next progression target");
   }
 
   if (hasRecentGap(profile, canDo.id, options.recentGapLimit || 5)) {
@@ -217,5 +267,9 @@ export {
   rankLearningTargets,
   selectNextLearningTarget,
   selectNextActivityTarget,
-  explainSelection
+  explainSelection,
+  getProgressionContext,
+  getRetentionEntry,
+  retentionBonus,
+  progressionFitBonus
 };
