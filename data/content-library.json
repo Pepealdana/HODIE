@@ -32,7 +32,10 @@
         "confidenceRequiredForMastery": 4
       },
       "feedback": {
-        "languages": ["en", "es"],
+        "languages": [
+          "en",
+          "es"
+        ],
         "maxPriorityCorrections": 2
       },
       "retry": {
@@ -41,7 +44,12 @@
       },
       "metadata": {
         "durationMinutes": 5,
-        "tags": ["introduction","work","technology","teacher"]
+        "tags": [
+          "introduction",
+          "work",
+          "technology",
+          "teacher"
+        ]
       }
     },
     {
@@ -74,7 +82,10 @@
         "independent": false
       },
       "feedback": {
-        "languages": ["en", "es"],
+        "languages": [
+          "en",
+          "es"
+        ],
         "maxPriorityCorrections": 2
       },
       "retry": {
@@ -83,7 +94,114 @@
       },
       "metadata": {
         "durationMinutes": 7,
-        "tags": ["family","daily-life","speaking"]
+        "tags": [
+          "family",
+          "daily-life",
+          "speaking"
+        ]
+      }
+    },
+    {
+      "id": "ACT-SP-A2-03-01",
+      "canDoId": "SP-A2-03",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "speaking",
+      "context": "daily-life",
+      "title": "Describe your daily routine",
+      "objective": "Describe a normal weekday using simple present sentences and time expressions.",
+      "instructions": "Speak in English for 45 to 90 seconds.",
+      "task": "Describe a normal weekday. Say when you get up, what you do during the day, and what you usually do in the evening.",
+      "support": {
+        "optionalSentenceStarters": [
+          "I usually get up at...",
+          "Then I...",
+          "In the afternoon, I...",
+          "In the evening, I..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "grammar": 0.8,
+          "fluency": 0.8,
+          "vocabulary": 0.8,
+          "pronunciation": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 7,
+        "tags": [
+          "daily-routine",
+          "daily-life",
+          "speaking",
+          "present-simple"
+        ]
+      }
+    },
+    {
+      "id": "ACT-SP-A2-04-01",
+      "canDoId": "SP-A2-04",
+      "activityType": "independent-production",
+      "level": "A2",
+      "skill": "speaking",
+      "context": "personal",
+      "title": "Talk about likes and dislikes",
+      "objective": "Talk about personal likes and dislikes and give simple reasons.",
+      "instructions": "Speak in English for 45 to 90 seconds.",
+      "task": "Talk about three things you like and two things you dislike. Give a simple reason for at least two of them.",
+      "support": {
+        "optionalSentenceStarters": [
+          "I like...",
+          "I really enjoy...",
+          "I don't like...",
+          "I prefer...",
+          "Because..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "grammar": 0.8,
+          "fluency": 0.8,
+          "vocabulary": 0.8,
+          "pronunciation": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 7,
+        "tags": [
+          "likes",
+          "dislikes",
+          "preferences",
+          "speaking"
+        ]
       }
     }
   ]
