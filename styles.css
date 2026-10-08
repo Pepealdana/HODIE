@@ -215,7 +215,39 @@ p { margin: 0; }
 
 .practice-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .practice-nav-hint { color: var(--subtle); font-size: .76rem; }
-.practice-card, .practice-home, .experience-session { display: grid; gap: 18px; }
+.practice-card, .practice-home, .experience-session {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+.practice-card > *,
+.practice-home > *,
+.experience-session > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.practice-card h2,
+.practice-card p,
+.practice-card .practice-topline,
+.practice-card #microInteraction,
+.practice-card #microFeedback {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.practice-topline {
+  min-width: 0;
+}
+.practice-skill {
+  min-width: 0;
+  max-width: 45%;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.answer-button {
+  min-width: 0;
+  max-width: 100%;
+}
 .practice-topline, .experience-topline { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .practice-skill { color: var(--muted); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 850; }
 .micro-prompt { display: grid; gap: 5px; padding: 16px; background: var(--surface-alt); border-radius: 12px; border: 1px solid #d8dde4; min-width: 0; }
