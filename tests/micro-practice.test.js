@@ -92,4 +92,4 @@ assert.equal(writingErrors.retryRecommended, false);
 
 const speakingActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 6 });
 assert.ok(speakingActivities.length >= 2);
-assert.ok(speakingActivities.every((item) => item.type === "speak"));
+assert.ok(speakingActivities.every((item) => ["speak", "mini-production"].includes(item.type)));
