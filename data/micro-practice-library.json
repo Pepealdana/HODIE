@@ -28,6 +28,19 @@
         "be",
         "profession",
         "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "be",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "be",
+        "profession"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
       ]
     },
     {
@@ -54,6 +67,19 @@
       "tags": [
         "prepositions",
         "work",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "work-at",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "work-at",
+        "prepositions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
         "grammar"
       ]
     },
@@ -88,6 +114,18 @@
         "word-order",
         "enjoy",
         "programming"
+      ],
+      "errorType": "word-order",
+      "errorTarget": "sentence-order",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "sentence-order",
+        "word-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
       ]
     },
     {
@@ -115,6 +153,18 @@
       },
       "tags": [
         "work-with",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "work-with",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-with",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
         "vocabulary"
       ]
     },
@@ -146,7 +196,16 @@
         "listening",
         "technology",
         "robotics"
-      ]
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening"
     },
     {
       "id": "MIC-SP-A2-01-06",
@@ -178,7 +237,16 @@
         "speaking",
         "voice",
         "profession"
-      ]
+      ],
+      "errorType": "communication",
+      "errorTarget": "required-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "required-information",
+        "speaking"
+      ],
+      "primarySkill": "speaking"
     },
     {
       "id": "MIC-SP-A2-01-07",
@@ -204,7 +272,55 @@
         "speaking",
         "production",
         "professional"
-      ]
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 3,
+        "criteria": [
+          {
+            "id": "profession",
+            "label": "Say what you do or your profession.",
+            "patterns": [
+              "\\b(i am|i'm)\\s+(a|an)\\s+[a-z]+(?:\\s+[a-z]+){0,3}\\b",
+              "\\b(i teach|i work as)\\b"
+            ],
+            "missingMessage": "Tell me what you do. For example: \"I am a technology teacher.\"",
+            "missingMessageEs": "Di a qué te dedicas. Por ejemplo: \"I am a technology teacher.\""
+          },
+          {
+            "id": "work-context",
+            "label": "Say where or with whom you work.",
+            "patterns": [
+              "\\b(i work at|i work in|i work with|i teach at|i teach)\\b"
+            ],
+            "missingMessage": "Add where or with whom you work.",
+            "missingMessageEs": "Agrega dónde trabajas o con quién trabajas."
+          },
+          {
+            "id": "personal-preference",
+            "label": "Say one thing you enjoy, like or love.",
+            "patterns": [
+              "\\b(i enjoy|i like|i love)\\b"
+            ],
+            "missingMessage": "Add one thing you enjoy, like or love.",
+            "missingMessageEs": "Agrega una cosa que disfrutas, te gusta o te encanta."
+          }
+        ],
+        "errorType": "task-completion"
+      },
+      "reviewTargets": [
+        "profession",
+        "work-context",
+        "personal-preference",
+        "speaking"
+      ],
+      "reviewPriority": "high"
     }
   ]
 }
