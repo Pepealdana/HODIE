@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "activities": [
     {
       "id": "MIC-SP-A2-01-01",
@@ -321,6 +321,248 @@
         "speaking"
       ],
       "reviewPriority": "high"
+    },
+    {
+      "id": "MIC-SP-A2-01-08",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Choose the right verb",
+      "titleEs": "Elige el verbo correcto",
+      "prompt": "I ___ technology and robotics.",
+      "promptEs": "Yo ___ tecnología y robótica.",
+      "options": [
+        "teach",
+        "teaches",
+        "teaching"
+      ],
+      "answer": "teach",
+      "feedback": {
+        "correct": "Correct. With \"I\", use the base verb: \"teach\".",
+        "correctEs": "Correcto. Con \"I\", usamos el verbo en su forma base: \"teach\".",
+        "incorrect": "With \"I\", use the base verb.",
+        "incorrectEs": "Con \"I\", usamos el verbo en su forma base."
+      },
+      "tags": [
+        "present-simple",
+        "teach",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "present-simple",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "present-simple",
+        "teach"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-09",
+      "canDoId": "SP-A2-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Complete with be",
+      "titleEs": "Completa con be",
+      "prompt": "My students ___ very important to me.",
+      "promptEs": "Mis estudiantes ___ muy importantes para mí.",
+      "answer": "are",
+      "acceptableAnswers": [
+        "are"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Students\" is plural, so we use \"are\".",
+        "correctEs": "Correcto. \"Students\" es plural, por eso usamos \"are\".",
+        "incorrect": "Try \"are\" because \"students\" is plural.",
+        "incorrectEs": "Prueba con \"are\" porque \"students\" es plural."
+      },
+      "tags": [
+        "be",
+        "plural",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "be-plural",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "be-plural",
+        "be"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-10",
+      "canDoId": "SP-A2-01",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Match the work word",
+      "titleEs": "Relaciona la palabra de trabajo",
+      "prompt": "What does \"students\" mean?",
+      "promptEs": "¿Qué significa \"students\"?",
+      "options": [
+        "estudiantes",
+        "profesores",
+        "escuelas"
+      ],
+      "answer": "estudiantes",
+      "feedback": {
+        "correct": "Correct. \"Students\" means estudiantes.",
+        "correctEs": "Correcto. \"Students\" significa estudiantes.",
+        "incorrect": "\"Students\" means estudiantes.",
+        "incorrectEs": "\"Students\" significa estudiantes."
+      },
+      "tags": [
+        "students",
+        "work",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "students",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "students",
+        "work"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-11",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Choose the useful word",
+      "titleEs": "Elige la palabra adecuada",
+      "prompt": "I work with ___.",
+      "promptEs": "Trabajo con ___.",
+      "options": [
+        "students",
+        "Monday",
+        "quickly"
+      ],
+      "answer": "students",
+      "feedback": {
+        "correct": "Correct. \"Students\" fits the work context.",
+        "correctEs": "Correcto. \"Students\" encaja en el contexto laboral.",
+        "incorrect": "Think about who you work with.",
+        "incorrectEs": "Piensa con quién trabajas."
+      },
+      "tags": [
+        "students",
+        "work-with",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "work-with",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-with",
+        "students"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-12",
+      "canDoId": "SP-A2-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "audioText": "I work at a school in Madrid.",
+      "prompt": "Where does the speaker work?",
+      "promptEs": "¿Dónde trabaja la persona que habla?",
+      "options": [
+        "At a school",
+        "At a hospital",
+        "At a bank"
+      ],
+      "answer": "At a school",
+      "feedback": {
+        "correct": "Correct. The speaker works at a school.",
+        "correctEs": "Correcto. La persona trabaja en una escuela.",
+        "incorrect": "Listen for the place: \"at a school\".",
+        "incorrectEs": "Escucha el lugar: \"at a school\"."
+      },
+      "tags": [
+        "listening",
+        "school",
+        "work-at"
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "work-place",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "work-place",
+        "listening"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening"
+    },
+    {
+      "id": "MIC-SP-A2-01-13",
+      "canDoId": "SP-A2-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "audioText": "I enjoy working with students and building robots.",
+      "prompt": "What does the speaker enjoy?",
+      "promptEs": "¿Qué disfruta la persona que habla?",
+      "options": [
+        "Working with students and building robots",
+        "Playing tennis",
+        "Cooking dinner"
+      ],
+      "answer": "Working with students and building robots",
+      "feedback": {
+        "correct": "Correct. The speaker enjoys working with students and building robots.",
+        "correctEs": "Correcto. La persona disfruta trabajar con estudiantes y construir robots.",
+        "incorrect": "Listen for the activities the speaker enjoys.",
+        "incorrectEs": "Escucha las actividades que disfruta la persona."
+      },
+      "tags": [
+        "listening",
+        "students",
+        "robots",
+        "enjoy"
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "personal-preference",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "personal-preference",
+        "listening"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening"
     }
   ]
 }
