@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "interface-only",
+  "principle": "AI is an optional capability provider. It never owns progress, mastery, retention, or evidence mutation.",
+  "providerFlow": [
+    "experience-engine",
+    "conversation-provider",
+    "rule-based-or-ai-provider",
+    "raw-interaction-analysis",
+    "evidence-boundary",
+    "learning-engine"
+  ],
+  "providers": ["rule-based", "ai"],
+  "operations": {
+    "start": "Create an experience state without mutating progress.",
+    "respond": "Return a learner-facing turn plus optional raw analysis.",
+    "analyze": "Return structured observations; observations are not authoritative evidence.",
+    "finish": "Return a summary; only explicit assessment sessions may enter the evidence boundary."
+  },
+  "requiredCapabilities": [
+    "targetLanguageResponse",
+    "optionalCorrection",
+    "followUpQuestion",
+    "contextAwareness",
+    "structuredObservations"
+  ],
+  "safetyAndCost": {
+    "localFirst": true,
+    "externalCallRequiredForCorePractice": false,
+    "progressMutationByProvider": false,
+    "providerSecretsInClient": false
+  }
+}
