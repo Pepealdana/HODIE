@@ -1,13 +1,32 @@
 const normalize = (value) => String(value ?? "").trim().toLowerCase().replace(/[.!?,]/g, "").replace(/\s+/g, " ");
 
-function selectMicroActivities(library, { canDoId, mode = "mixed", limit = 5 } = {}) {
+function selectMicroActivities(library, { canDoId, mode = "mixed", limit = 6 } = {}) {
   const activities = (library.activities || []).filter((item) => !canDoId || item.canDoId === canDoId);
   if (!activities.length) return [];
-  const modeSkill = { speaking:"speaking", listening:"listening", grammar:"grammar", vocabulary:"vocabulary", reading:"reading", writing:"writing" }[mode];
-  const filtered = modeSkill ? activities.filter((item) => item.skill === modeSkill || item.type === modeSkill) : activities;
-  const pool = filtered.length ? filtered : activities;
+
+  const modeSkill = {
+    speaking:"speaking",
+    listening:"listening",
+    grammar:"grammar",
+    vocabulary:"vocabulary",
+    reading:"reading",
+    writing:"writing"
+  }[mode];
+
   const preferredOrder = ["choose","complete","order","match","listening","speak","mini-production"];
-  return [...pool].sort((a,b) => preferredOrder.indexOf(a.type) - preferredOrder.indexOf(b.type)).slice(0, limit);
+  const mini = activities.find((item) => item.type === "mini-production");
+  const filtered = modeSkill
+    ? activities.filter((item) => item.skill === modeSkill || item.type === modeSkill)
+    : activities;
+
+  const pool = filtered.length ? filtered : activities;
+  const ordered = [...pool].sort((a,b) => preferredOrder.indexOf(a.type) - preferredOrder.indexOf(b.type));
+  const withoutMini = ordered.filter((item) => item.type !== "mini-production");
+  const targetCount = Math.max(1, limit - (mini ? 1 : 0));
+  const selected = withoutMini.slice(0, targetCount);
+
+  if (mini && !selected.some((item) => item.id === mini.id)) selected.push(mini);
+  return selected.slice(0, limit);
 }
 
 function evaluateMicroActivity(activity, response) {
