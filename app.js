@@ -186,6 +186,7 @@ function startPractice(mode) {
     activities,
     index: 0,
     results: [],
+    finalAttempts: 0,
     currentResponse: null
   };
 
@@ -377,8 +378,14 @@ function showFeedback(activity, result, response, options = {}) {
     return;
   }
 
+  practice.results.push({
+    activityId: activity.id,
+    score: result.score,
+    correct: success,
+    errors: result.errors || []
+  });
+
   if (success) {
-    practice.results.push({ activityId: activity.id, score: result.score, correct: true });
     window.setTimeout(() => {
       practice.index += 1;
       renderMicroActivity();
@@ -453,10 +460,11 @@ function finishPractice() {
 function submitFinalEvidence(response) {
   const activity = practice.activities[practice.index];
   const finalResult = evaluateMicroActivity(activity, response);
+  practice.finalAttempts += 1;
   const scores = practice.results.map((item) => item.score);
   const microAverage = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : 0;
   const base = Math.min(0.95, Math.max(0.55, microAverage || finalResult.score || 0));
-  const independent = finalResult.correct === true;
+  const independent = finalResult.correct === true && practice.finalAttempts === 1;
 
   const evidence = {
     canDoId: session.target.canDoId,
@@ -470,8 +478,7 @@ function submitFinalEvidence(response) {
       taskCompletion: independent ? 0.9 : Math.min(0.65, finalResult.score || 0),
       grammar: finalResult.correct ? Math.max(0.8, base) : base,
       fluency: finalResult.correct ? Math.max(0.8, base) : base,
-      vocabulary: finalResult.correct ? Math.max(0.8, base) : base,
-      pronunciation: practice.results.some((item) => item.activityId === "MIC-SP-A2-01-06") ? base : 0.6
+      vocabulary: finalResult.correct ? Math.max(0.8, base) : base
     },
     errors: [
       ...practice.results.flatMap((item) => item.errors || []),
