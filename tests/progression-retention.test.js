@@ -41,6 +41,23 @@ const getStatus = (canDo, profile) =>
 
 const empty = { evidence: [], reviews: [] };
 
+const allMasteredProfile = { evidence: [], reviews: [] };
+const masteredGetStatus = (canDo) => masteredIds.has(canDo.id) ? "consolidated" : "developing";
+
+{
+  const a2 = evaluateLevel(matrix, allMasteredProfile, "A2", masteredGetStatus);
+  assert.equal(a2.ready, true);
+  assert.equal(a2.coverage, 1);
+  assert.equal(a2.skillMinimumMet, true);
+  assert.equal(a2.metaReady, true);
+
+  const progression = evaluateProgression(matrix, allMasteredProfile, masteredGetStatus);
+  assert.equal(progression.currentLevel, "B1");
+  assert.equal(progression.readiness, "functional");
+  assert.equal(progression.levels.find((item) => item.level === "B1").ready, true);
+}
+
+
 {
   const result = evaluateLevel(matrix, empty, "A2", getStatus);
   assert.equal(result.ready, false);
