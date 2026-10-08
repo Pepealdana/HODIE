@@ -23,13 +23,101 @@ const MIXED_SKILL_ORDER = ["speaking", "listening", "vocabulary", "grammar", "re
 
 function activityMatchesFocus(activity, config) {
   if (!config) return false;
-  if (config.kind === "skill") return activity.skill === config.skill;
-  if (config.kind === "resource") {
-    return activity.skill === config.resource ||
-      activity.resources?.includes(config.resource) ||
-      activity.languageResource === config.resource;
+
+  if (config.kind === "skill") {
+    if (config.skill === "speaking") return activity.type === "speak";
+    if (config.skill === "listening") return activity.type === "listening";
+    if (config.skill === "writing") return activity.skill === "writing" && activity.type === "mini-production";
+    if (config.skill === "reading") return activity.skill === "reading" && activity.type !== "mini-production";
+    return activity.skill === config.skill;
   }
+
+  if (config.kind === "resource") {
+    const matchesResource =
+      activity.resources?.includes(config.resource) ||
+      activity.languageResource === config.resource ||
+      activity.skill === config.resource;
+
+    if (!matchesResource) return false;
+
+    if (config.resource === "grammar" || config.resource === "vocabulary") {
+      return ["choose", "complete", "order", "match"].includes(activity.type);
+    }
+
+    return true;
+  }
+
   return true;
+}
+
+function detectLanguageCorrections(activity, response) {
+  if (!response || typeof response !== "string") return [];
+
+  const rules = [
+    {
+      pattern: /\bI\s+am\s+(teacher|student|programmer|developer|engineer|professor)\b/i,
+      replacement: "I am a $1",
+      target: "article",
+      message: "In English, singular jobs usually need an article after "I am".",
+      messageEs: "En inglés, los trabajos en singular normalmente necesitan un artículo después de "I am".",
+      examples: ["I am a teacher.", "I am an engineer."]
+    },
+    {
+      pattern: /\bI\s+work\s+on\s+a\s+(school|company|office)\b/i,
+      replacement: "I work at a $1",
+      target: "work-place",
+      message: "For a workplace such as a school, "work at" is a natural choice.",
+      messageEs: "Para un lugar de trabajo como una escuela, "work at" es una opción natural.",
+      examples: ["I work at a school.", "I work at an office."]
+    },
+    {
+      pattern: /\bI\s+enjoy\s+to\s+([a-z]+)\b/i,
+      replacement: "I enjoy $1ing",
+      target: "enjoy-ing",
+      message: "After "enjoy", use a verb with -ing.",
+      messageEs: "Después de "enjoy", usamos el verbo con -ing.",
+      examples: ["I enjoy reading.", "I enjoy building robots."]
+    },
+    {
+      pattern: /\b(my\s+students?)\s+is\b/i,
+      replacement: "$1 are",
+      target: "be-plural",
+      message: "The plural subject "students" takes "are".",
+      messageEs: "El sujeto plural "students" usa "are".",
+      examples: ["My students are very important.", "My students are creative."]
+    }
+  ];
+
+  let corrected = response;
+  const errors = [];
+
+  for (const rule of rules) {
+    const match = corrected.match(rule.pattern);
+    if (!match) continue;
+    const next = corrected.replace(rule.pattern, rule.replacement);
+    if (next === corrected) continue;
+
+    errors.push(createError({
+      activity,
+      type: "grammar",
+      target: rule.target,
+      actual: match[0],
+      expected: rule.replacement,
+      severity: "low",
+      priority: "low",
+      message: rule.message,
+      messageEs: rule.messageEs,
+      correction: next,
+      examples: rule.examples,
+      retry: false
+    }));
+    corrected = next;
+    if (errors.length >= 2) break;
+  }
+
+  if (!errors.length) return [];
+  errors[0].correctedText = corrected;
+  return errors;
 }
 
 function rankMixed(activity) {
@@ -230,9 +318,11 @@ function evaluateMicroActivity(activity, response) {
     const criteria = evaluateCriteria(activity.evaluation?.criteria || [], response);
     const met = criteria.filter((criterion) => criterion.matched);
     const minimumCriteria = activity.evaluation?.minimumCriteria ?? criteria.length;
+    const practiceMinimumCriteria = activity.evaluation?.practiceMinimumCriteria ?? minimumCriteria;
     const characterMinimum = activity.evaluation?.minimumResponseCharacters || 0;
     const enoughLength = value.length >= characterMinimum;
-    const correct = met.length >= minimumCriteria && enoughLength;
+    const taskComplete = met.length >= minimumCriteria && enoughLength;
+    const correct = met.length >= practiceMinimumCriteria && enoughLength;
     const errors = [];
 
     for (const criterion of criteria.filter((item) => !item.matched)) {
@@ -249,6 +339,9 @@ function evaluateMicroActivity(activity, response) {
         retry: true
       }));
     }
+
+    const languageErrors = detectLanguageCorrections(activity, response);
+    errors.push(...languageErrors);
 
     if (!enoughLength) {
       errors.push(createError({
@@ -274,6 +367,8 @@ function evaluateMicroActivity(activity, response) {
       score,
       retryRecommended: !correct,
       criteria,
+      taskComplete,
+      languageErrors,
       feedback: correct ? activity.feedback?.ready : activity.feedback?.short,
       feedbackEs: correct ? activity.feedback?.readyEs : activity.feedback?.shortEs,
       errors
