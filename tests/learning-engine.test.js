@@ -34,6 +34,16 @@ profile = first.profile;
 assert.equal(first.canDo.status, "functional");
 assert.equal(first.canDo.evidenceLevel, "independent");
 
+const lowConfidence = registerEvidence(miniMatrix, first.profile, {
+  canDoId:"SP-A2-01",
+  independent:true,
+  contextId:"work-2",
+  confidence:3,
+  dimensions:{taskCompletion:.9,grammar:.8,fluency:.8,vocabulary:.8,pronunciation:.8}
+});
+assert.equal(lowConfidence.canDo.status, "functional");
+assert.equal(lowConfidence.canDo.evidenceLevel, "consistent");
+
 const second = registerEvidence(miniMatrix, profile, {canDoId:"SP-A2-01",independent:true,contextId:"work-1",confidence:4,dimensions:{taskCompletion:.9,grammar:.8,fluency:.8,vocabulary:.8,pronunciation:.8}});
 profile = second.profile;
 assert.equal(second.canDo.evidenceLevel, "consistent");
