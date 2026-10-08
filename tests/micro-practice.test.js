@@ -14,8 +14,21 @@ assert.ok(mixed.some((item) => item.resources?.includes("grammar")));
 assert.ok(mixed.some((item) => item.resources?.includes("vocabulary")));
 
 const grammar = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 4 });
-assert.equal(grammar.at(-1).type, "mini-production");
-assert.ok(grammar.slice(0, -1).every((item) => item.skill === "grammar"));
+assert.ok(grammar.length >= 3);
+assert.ok(grammar.every((item) => item.resources?.includes("grammar")));
+
+const vocabulary = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "vocabulary", limit: 4 });
+assert.ok(vocabulary.length >= 2);
+assert.ok(vocabulary.every((item) => item.resources?.includes("vocabulary")));
+
+const listening = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "listening", limit: 4 });
+assert.equal(listening.length, 3);
+assert.ok(listening.every((item) => item.type === "listening"));
+assert.ok(listening.every((item) => item.skill === "listening"));
+
+const speaking = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 4 });
+assert.equal(speaking.length, 2);
+assert.ok(speaking.every((item) => ["speak", "mini-production"].includes(item.type)));
 
 const correct = evaluateMicroActivity(library.activities[0], "am");
 assert.equal(correct.correct, true);
