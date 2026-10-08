@@ -18,6 +18,7 @@ const STORAGE_KEY = "hodie-progress-v1";
 const SESSION_KEY = "hodie-session-v1";
 const PRACTICE_STATE_KEY = "hodie-practice-v1";
 const EXPERIENCE_STATE_KEY = "hodie-experience-v1";
+const THEME_KEY = "hodie-theme-v1";
 
 const app = document.querySelector("#app");
 const levelBadge = document.querySelector("#levelBadge");
@@ -33,6 +34,33 @@ let experienceLibrary;
 let contextLibrary;
 let experienceSession = null;
 let deferredInstallPrompt = null;
+
+
+function applyTheme(theme) {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = nextTheme;
+  localStorage.setItem(THEME_KEY, nextTheme);
+
+  const toggle = document.querySelector("#themeToggle");
+  if (toggle) {
+    const dark = nextTheme === "dark";
+    toggle.textContent = dark ? "☀" : "☾";
+    toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    toggle.setAttribute("aria-pressed", String(dark));
+  }
+
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) themeColor.setAttribute("content", dark ? "#172033" : "#172033");
+}
+
+function setupTheme() {
+  const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  applyTheme(current);
+  document.querySelector("#themeToggle")?.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+  });
+}
 
 function setupInstallPrompt() {
   const prompt = document.querySelector("#installPrompt");
@@ -1181,6 +1209,7 @@ function escapeHtml(value) {
 
 async function boot() {
   try {
+    setupTheme();
     setupInstallPrompt();
     registerServiceWorker();
     await loadData();
