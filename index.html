@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172033">
+  <title>HODIE — Today. Not tomorrow.</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand">
+      <div>
+        <p class="eyebrow">HODIE</p>
+        <h1>Today. Not tomorrow.</h1>
+      </div>
+      <span class="badge" id="levelBadge">A2</span>
+    </header>
+
+    <section id="app" aria-live="polite">
+      <div class="loading">Loading your mission...</div>
+    </section>
+
+    <footer>
+      <span>Learning vertical slice · local-first</span>
+      <button id="resetButton" class="text-button" type="button">Reset progress</button>
+    </footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
