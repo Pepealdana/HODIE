@@ -1,4 +1,4 @@
-const CACHE = "hodie-shell-v1";
+const CACHE = "hodie-shell-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -16,7 +16,29 @@ const APP_SHELL = [
   "./data/feedback-model.json",
   "./data/evidence-model.json",
   "./data/progress-model.json",
-  "./data/content-model.json"
+  "./data/content-model.json",
+  "./src/activity-generator.js",
+  "./src/adaptive-planner.js",
+  "./src/communication-repair.js",
+  "./src/conversation-provider.js",
+  "./src/error-engine.js",
+  "./src/error-memory.js",
+  "./src/evidence-boundary.js",
+  "./src/experience-engine.js",
+  "./src/learning-budget.js",
+  "./src/learning-context.js",
+  "./src/learning-engine.js",
+  "./src/learning-orchestrator.js",
+  "./src/learning-planner.js",
+  "./src/learning-session.js",
+  "./src/longitudinal-model.js",
+  "./src/micro-practice.js",
+  "./src/progression-retention.js",
+  "./src/session-composer.js",
+  "./src/session-runner.js",
+  "./src/session-state.js",
+  "./src/skill-graph.js",
+  "./src/transfer-engine.js"
 ];
 
 self.addEventListener("install", (event) => {
