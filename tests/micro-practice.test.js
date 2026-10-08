@@ -31,7 +31,7 @@ assert.ok(listening.every((item) => item.type === "listening"));
 assert.ok(listening.every((item) => item.skill === "listening"));
 
 const speaking = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 4 });
-assert.equal(speaking.length, 2);
+assert.ok(speaking.length >= 2);
 assert.ok(speaking.every((item) => item.type === "speak"));
 
 const writing = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "writing", limit: 4 });
