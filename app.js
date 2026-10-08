@@ -316,7 +316,7 @@ function renderMicroActivity() {
   app.innerHTML = `
     <section class="card practice-card">
       <div class="practice-nav">
-        <button class="secondary compact" id="backToPracticeButton" type="button">← Back</button>
+        <button class="secondary compact practice-back" id="backToPracticeButton" type="button">← Back to modes</button>
         <span class="practice-nav-hint">Your progress is saved</span>
       </div>
 
@@ -419,12 +419,15 @@ function renderInteraction(activity) {
         <p class="model-sentence">${escapeHtml(activity.targetPhrase)}</p>
         <div class="audio-actions">
           <button class="secondary compact" id="normalAudioButton" type="button">▶ Listen</button>
-          <button class="secondary compact" id="slowAudioButton" type="button">🐢 Slow</button>
+          <button class="secondary compact" id="slowAudioButton" type="button">Slow</button>
         </div>
-        <p class="spanish audio-hint">Listen first, then try to say it yourself.</p>
-        <button class="primary speak-button" id="speakButton" type="button">🎙 Speak</button>
-        <textarea id="speakFallback" class="speak-fallback" placeholder="If voice recognition is unavailable, type what you would say."></textarea>
-        <button class="secondary compact" id="checkSpeakButton" type="button">Check typed answer</button>
+        <p class="spanish audio-hint">Listen first. Then say it yourself.</p>
+        <button class="primary speak-button" id="speakButton" type="button">Speak</button>
+        <details class="speak-fallback-details" id="speakFallbackDetails">
+          <summary>Can't use voice? Type instead</summary>
+          <textarea id="speakFallback" class="speak-fallback" placeholder="Type what you would say in English..."></textarea>
+          <button class="secondary compact" id="checkSpeakButton" type="button">Check typed answer</button>
+        </details>
       </div>
     `;
     document.querySelector("#normalAudioButton").addEventListener("click", () =>
@@ -511,11 +514,16 @@ function showFeedback(activity, result, response, options = {}) {
 
   if (options.final) {
     practice.finalAttempts += 1;
-    if (success) {
-      submitFinalEvidence(response);
-    } else {
-      document.querySelector("#finishButton")?.focus();
-    }
+    const buttonLabel = success ? "Continue to progress" : "Continue with this attempt";
+    const feedbackArea = document.querySelector("#microFeedback");
+    feedbackArea.insertAdjacentHTML("beforeend", `
+      <div class="actions final-feedback-actions">
+        <button class="primary compact" id="submitEvidenceButton" type="button">${buttonLabel}</button>
+        ${!success ? '<button class="secondary compact" id="retryFinalButton" type="button">Try again</button>' : ""}
+      </div>
+    `);
+    document.querySelector("#submitEvidenceButton").addEventListener("click", () => submitFinalEvidence(response));
+    document.querySelector("#retryFinalButton")?.addEventListener("click", () => renderMicroActivity());
     return;
   }
 
@@ -672,7 +680,7 @@ function submitFinalEvidence(response) {
   const scores = practice.results.map((item) => item.score);
   const microAverage = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : 0;
   const base = Math.min(0.95, Math.max(0.55, microAverage || finalResult.score || 0));
-  const independent = finalResult.correct === true && practice.finalAttempts === 1;
+  const independent = finalResult.taskComplete === true && practice.finalAttempts === 1;
 
   const evidence = {
     canDoId: session.target.canDoId,
@@ -683,8 +691,8 @@ function submitFinalEvidence(response) {
     independent,
     confidence: 3,
     dimensions: {
-      taskCompletion: independent ? 0.9 : Math.min(0.65, finalResult.score || 0),
-      grammar: finalResult.correct ? Math.max(0.8, base) : base,
+      taskCompletion: finalResult.taskComplete ? 0.9 : Math.min(0.65, finalResult.score || 0),
+      grammar: finalResult.languageErrors?.length ? Math.min(0.7, base) : Math.max(0.8, base),
       fluency: finalResult.correct ? Math.max(0.8, base) : base,
       vocabulary: finalResult.correct ? Math.max(0.8, base) : base
     },
