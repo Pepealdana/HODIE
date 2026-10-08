@@ -56,6 +56,12 @@ for (const activity of library.activities) {
   if (activity.retry?.preserveOriginalTask !== true) {
     errors.push(`${activity.id}: retry.preserveOriginalTask must be true`);
   }
+
+  for (const bilingualField of ["titleEs", "objectiveEs", "instructionsEs", "taskEs"]) {
+    if (typeof activity[bilingualField] !== "string" || !activity[bilingualField].trim()) {
+      errors.push(`${activity.id}: bilingual field "${bilingualField}" is required`);
+    }
+  }
 }
 
 assert.equal(errors.length, 0, errors.join("\n"));
