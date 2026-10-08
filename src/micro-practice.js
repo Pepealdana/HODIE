@@ -1,4 +1,4 @@
-import { buildFeedback, createError, evaluateCriteria, prioritizeErrors } from "./error-engine.js";
+import { buildFeedback, createError, evaluateCriteria, normalizeErrors, prioritizeErrors } from "./error-engine.js";
 
 const normalize = (value) =>
   String(value ?? "")
@@ -381,7 +381,7 @@ function evaluateMicroActivity(activity, response) {
   return {
     ...result,
     ...feedback,
-    errors: prioritizeErrors(result.errors || [], 2)
+    errors: normalizeErrors(result.errors || [])
   };
 }
 
