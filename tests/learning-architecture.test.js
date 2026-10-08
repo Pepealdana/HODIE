@@ -16,7 +16,7 @@ const graph = buildSkillGraph(matrix);
 assert.ok(graph.length >= matrix.canDos.length);
 assert.ok(getNextNodes(graph, "SP-A2-01").length >= 1 || getNextNodes(graph, "SP-A2-01").length === 0);
 
-const context = selectLearningContext(contexts, ["technology", "robotics", "teacher"]);
+const context = selectLearningContext(contexts, ["technology", "programming", "teacher"]);
 assert.equal(context.id, "technology");
 
 const profile = {
