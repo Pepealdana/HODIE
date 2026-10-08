@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "project": "HODIE",
-  "name": "Content Model v1",
+  "name": "Content Model v1.1",
   "purpose": "Represent reusable learning activities independently from the engine and interface.",
   "principles": [
     "Content is mapped to one primary Can-Do.",
@@ -9,10 +9,28 @@
     "Support is explicit and removable.",
     "Feedback is actionable and bilingual when appropriate.",
     "Personal contexts increase relevance but do not reduce transfer.",
-    "Content can be reused by multiple activity types."
+    "Content can be reused by multiple activity types.",
+    "All learner-facing activity guidance has an English version and a Spanish support translation at A2."
   ],
   "activitySchema": {
-    "required": ["id","canDoId","activityType","level","skill","title","objective","instructions","task","evidence","feedback","retry"],
+    "required": [
+      "id",
+      "canDoId",
+      "activityType",
+      "level",
+      "skill",
+      "title",
+      "objective",
+      "instructions",
+      "task",
+      "evidence",
+      "feedback",
+      "retry",
+      "titleEs",
+      "objectiveEs",
+      "instructionsEs",
+      "taskEs"
+    ],
     "fields": {
       "id": "Unique stable activity identifier.",
       "canDoId": "Primary Can-Do being practiced or assessed.",
@@ -24,12 +42,16 @@
       "objective": "Observable learning objective.",
       "instructions": "What the learner must do.",
       "task": "Actual prompt or interaction task.",
-      "support": "Optional hints, model, vocabulary or grammar support.",
+      "support": "Optional hints, model, vocabulary or grammar support. Target-language sentence starters remain in English because they are practice material.",
       "expectedResponse": "Optional response shape, key points or acceptance criteria.",
       "evidence": "How the response will be evaluated.",
       "feedback": "Rules and templates for feedback.",
       "retry": "What happens after important errors.",
-      "metadata": "Tags, estimated duration and content version."
+      "metadata": "Tags, estimated duration and content version.",
+      "titleEs": "Spanish support translation of the learner-facing title.",
+      "objectiveEs": "Spanish support translation of the observable learning objective.",
+      "instructionsEs": "Spanish support translation of what the learner must do.",
+      "taskEs": "Spanish support translation of the actual prompt or interaction task."
     }
   },
   "evidenceSchema": {
@@ -41,11 +63,19 @@
     "contextId": "Identifies the situation in which evidence was produced."
   },
   "feedbackSchema": {
-    "languages": ["en", "es"],
+    "languages": [
+      "en",
+      "es"
+    ],
     "principle": "Explain clearly in Spanish when needed, but keep practice and demonstration in English.",
     "maxPriorityCorrections": 2,
     "retryAfterPriorityError": true,
-    "format": ["what","why","betterVersion","retry"]
+    "format": [
+      "what",
+      "why",
+      "betterVersion",
+      "retry"
+    ]
   },
   "retrySchema": {
     "requiredAfterPriorityError": true,
