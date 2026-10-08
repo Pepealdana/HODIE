@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "principle": "Context is a learning variable, not decoration. HODIE reuses the same capability across contexts to build transfer.",
+  "contexts": [
+    {"id":"daily-life","label":"Daily life","labelEs":"Vida cotidiana","tags":["daily-life","routine","personal"]},
+    {"id":"family","label":"Family","labelEs":"Familia","tags":["family","personal","daily-life"]},
+    {"id":"professional","label":"Professional","labelEs":"Profesional","tags":["work","professional","career","communication"]},
+    {"id":"teaching","label":"Teaching","labelEs":"Enseñanza","tags":["teacher","school","education","students"]},
+    {"id":"technology","label":"Technology","labelEs":"Tecnología","tags":["technology","programming","software","digital"]},
+    {"id":"robotics","label":"Robotics","labelEs":"Robótica","tags":["robotics","arduino","maker","engineering"]},
+    {"id":"steam","label":"STEAM","labelEs":"STEAM","tags":["steam","projects","education","technology"]},
+    {"id":"interview","label":"Interview","labelEs":"Entrevista","tags":["interview","career","professional"]},
+    {"id":"travel","label":"Travel","labelEs":"Viajes","tags":["travel","daily-life","communication"]},
+    {"id":"general","label":"General","labelEs":"General","tags":[]}
+  ]
+}
