@@ -23,9 +23,9 @@
   --shadow: 0 10px 28px rgba(23,32,51,.08);
 }
 * { box-sizing: border-box; }
-html { min-width: 320px; max-width: 100%; background: #f4f6f8; }
-body { margin: 0; min-width: 320px; max-width: 100%; min-height: 100vh; background: #f4f6f8; overflow-x: hidden; }
-#app { min-width: 0; max-width: 100%; }
+html { width: 100%; min-width: 320px; max-width: 100%; background: #f4f6f8; }
+body { margin: 0; width: 100%; min-width: 320px; max-width: 100%; min-height: 100vh; background: #f4f6f8; overflow-x: hidden; }
+#app { width: 100%; min-width: 0; max-width: 100%; }
 button, textarea, input { font: inherit; }
 button { cursor: pointer; }
 button:disabled { cursor: default; opacity: .55; }
@@ -80,7 +80,7 @@ p { margin: 0; }
 .compact { min-height: 40px; padding: 8px 12px; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
-.learning-home { display: grid; gap: 20px; min-width: 0; }
+.learning-home { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; min-width: 0; }
 .learning-home > *,
 .practice-card > *,
 .experience-session > * { min-width: 0; }
@@ -312,7 +312,7 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
 @media (min-width: 760px) {
   .app-shell { padding: 32px 24px 34px; }
   .card { padding: 30px; }
-  .learning-home { grid-template-columns: minmax(0,1fr) minmax(300px,.55fr); align-items: start; }
+  .learning-home { align-items: start; }
   .home-intro, .recommended-learning, .resume-practice, .resume-experience, .learning-sections, .quick-principle, .home-progress, .quick-choices, .choice-disclosure { grid-column: 1 / -1; }
   .recommended-learning { max-width: 760px; }
 }
