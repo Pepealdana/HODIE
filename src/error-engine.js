@@ -97,7 +97,7 @@ function buildFeedback(activity, result, errors = [], options = {}) {
       headlineEs: "✓ Bien",
       message: result.feedback || activity?.feedback?.correct || "Good work.",
       messageEs: result.feedbackEs || activity?.feedback?.correctEs || "Buen trabajo.",
-      corrections: [],
+      corrections: selected,
       retryRecommended: false
     };
   }
