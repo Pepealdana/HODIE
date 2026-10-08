@@ -112,4 +112,50 @@ assert.deepEqual(getRetentionPlan("transferred"), {
   reason: "longer maintenance interval after transfer evidence"
 });
 
+
+{
+  const realMetaMatrix = {
+    ...matrix,
+    canDos: matrix.canDos.map((item) =>
+      item.id === "B1-M1" ? { ...item, canDoType: "communicative" } : item
+    ),
+    metaCanDos: [
+      {
+        id: "B1-MASTER",
+        level: "B1",
+        dependsOn: ["B1-SP-1"]
+      }
+    ]
+  };
+
+  const notReady = evaluateLevel(
+    realMetaMatrix,
+    {
+      evidence: [
+        {
+          canDoId: "B1-SP-1",
+          independent: true,
+          confidence: 4
+        }
+      ]
+    },
+    "B1",
+    getStatus
+  );
+  assert.equal(notReady.metaReady, false);
+
+  const ready = evaluateLevel(
+    realMetaMatrix,
+    {
+      evidence: [
+        { canDoId: "B1-SP-1", independent: true, confidence: 4 },
+        { canDoId: "B1-SP-1", independent: true, confidence: 4 }
+      ]
+    },
+    "B1",
+    getStatus
+  );
+  assert.equal(ready.metaReady, true);
+}
+
 console.log("progression-retention tests: OK");
