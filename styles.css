@@ -118,13 +118,50 @@ p { margin: 0; }
   gap: 11px;
   padding: 13px 14px;
   text-align: left;
-  border: 1px solid var(--line);
+  border: 1px solid var(--category-border, var(--line));
   border-radius: 14px;
-  background: var(--surface);
+  background: var(--category-bg, var(--surface));
   color: var(--navy);
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  box-shadow: 0 3px 10px rgba(23,32,51,.035);
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
 }
-.category-card:hover { transform: translateY(-1px); border-color: #aeb8c6; box-shadow: 0 5px 14px rgba(23,32,51,.07); }
+.category-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--category-border-strong, #aeb8c6);
+  box-shadow: 0 8px 18px rgba(23,32,51,.10);
+}
+.category-card:focus-visible {
+  outline: 3px solid var(--category-border-strong, var(--focus));
+  outline-offset: 2px;
+}
+.category-mixed {
+  --category-bg: #fff7e6;
+  --category-border: #ffe1a3;
+  --category-border-strong: #d9a441;
+  --category-icon-bg: #ffe6ad;
+  --category-icon-color: #925900;
+}
+.category-conversation {
+  --category-bg: #f6f0ff;
+  --category-border: #e2d2ff;
+  --category-border-strong: #8a63d2;
+  --category-icon-bg: #e5d6ff;
+  --category-icon-color: #6840a8;
+}
+.category-simulation {
+  --category-bg: #edf6ff;
+  --category-border: #c9e3ff;
+  --category-border-strong: #438bd4;
+  --category-icon-bg: #d4eaff;
+  --category-icon-color: #1767b6;
+}
+.category-review {
+  --category-bg: #eafaf3;
+  --category-border: #c0efd9;
+  --category-border-strong: #269b70;
+  --category-icon-bg: #c9f2df;
+  --category-icon-color: #08784f;
+}
 .category-icon {
   width: 40px;
   height: 40px;
@@ -141,10 +178,12 @@ p { margin: 0; }
 .category-copy > span { color: var(--muted); font-size: .82rem; }
 .category-copy small { color: var(--subtle); font-size: .72rem; line-height: 1.3; }
 .category-arrow { color: var(--muted); font-size: 1.25rem; }
-.category-mixed .category-icon { background: #fff3d7; color: #a87512; }
-.category-conversation .category-icon { background: #f0e9ff; color: #7653b6; }
-.category-simulation .category-icon { background: #eeeafd; color: #6856a9; }
-.category-review .category-icon { background: #eef0ff; color: #5969bd; }
+.category-card .category-icon {
+  background: var(--category-icon-bg, #eef2f6);
+  color: var(--category-icon-color, var(--navy));
+}
+.category-arrow { transition: transform .15s ease, color .15s ease; }
+.category-card:hover .category-arrow { transform: translateX(2px); color: var(--category-icon-color, var(--navy)); }
 .category-focus-speaking .category-icon { background: #fff3d7; color: #a87512; }
 .category-focus-listening .category-icon { background: #e8f5f2; color: var(--success); }
 .category-focus-writing .category-icon { background: #fdebed; color: var(--danger); }
@@ -486,15 +525,52 @@ html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .install-prompt .spanish { color: #b8c1cf; }
 [data-theme="dark"] .install-prompt .primary { background: #D9A441; color: #172033; }
 [data-theme="dark"] footer { color: #8995a6; }
-[data-theme="dark"] .category-card { background: #172033; border-color: #465267; color: #f4f6f8; }
-[data-theme="dark"] .category-card:hover { border-color: #8995a6; background: #202b3d; }
+[data-theme="dark"] .category-card {
+  background: var(--category-bg-dark, #172033);
+  border-color: var(--category-border-dark, #465267);
+  color: #f4f6f8;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+[data-theme="dark"] .category-card:hover {
+  background: var(--category-bg-hover-dark, #202b3d);
+  border-color: var(--category-border-strong-dark, #8995a6);
+  box-shadow: 0 8px 20px rgba(0,0,0,.22);
+}
 [data-theme="dark"] .category-copy > span,
-[data-theme="dark"] .category-copy small { color: #b8c1cf; }
-[data-theme="dark"] .category-mixed .category-icon { background: #3a2d18; color: #e2b052; }
-[data-theme="dark"] .category-conversation .category-icon,
+[data-theme="dark"] .category-copy small { color: #c2ccda; }
+[data-theme="dark"] .category-mixed {
+  --category-bg-dark: #292719;
+  --category-bg-hover-dark: #342d1d;
+  --category-border-dark: #6b521f;
+  --category-border-strong-dark: #d9a441;
+  --category-icon-bg: #6b501b;
+  --category-icon-color: #ffe2a0;
+}
+[data-theme="dark"] .category-conversation {
+  --category-bg-dark: #211a38;
+  --category-bg-hover-dark: #2b2049;
+  --category-border-dark: #59408f;
+  --category-border-strong-dark: #a78bfa;
+  --category-icon-bg: #51319b;
+  --category-icon-color: #f0e8ff;
+}
+[data-theme="dark"] .category-simulation {
+  --category-bg-dark: #12263c;
+  --category-bg-hover-dark: #193653;
+  --category-border-dark: #245c91;
+  --category-border-strong-dark: #60a5fa;
+  --category-icon-bg: #1769ad;
+  --category-icon-color: #e4f3ff;
+}
+[data-theme="dark"] .category-review {
+  --category-bg-dark: #102d2a;
+  --category-bg-hover-dark: #164039;
+  --category-border-dark: #18745d;
+  --category-border-strong-dark: #34d399;
+  --category-icon-bg: #087f5b;
+  --category-icon-color: #d1fae5;
+}
 [data-theme="dark"] .category-vocabulary .category-icon { background: #30284a; color: #b9a1ee; }
-[data-theme="dark"] .category-simulation .category-icon { background: #302d4d; color: #b2a7e5; }
-[data-theme="dark"] .category-review .category-icon { background: #28304d; color: #9eabe8; }
 [data-theme="dark"] .category-focus-listening .category-icon { background: #18352a; color: #55bd87; }
 [data-theme="dark"] .category-focus-writing .category-icon { background: #3d2027; color: #f07b86; }
 [data-theme="dark"] .category-focus-grammar .category-icon { background: #1d314d; color: #78a8e5; }
