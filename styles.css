@@ -4,12 +4,15 @@
   background: #f4f6f8;
   line-height: 1.5;
   font-synthesis: none;
-  --ink: #172033;
-  --muted: #596579;
+  --navy: #172033;
+  --gold: #D9A441;
+  --light: #F4F6F8;
+  --ink: #101828;
+  --muted: #667085;
   --subtle: #7a8494;
   --surface: #ffffff;
-  --surface-alt: #edf1f5;
-  --line: #c5ccd7;
+  --surface-alt: #F4F6F8;
+  --line: #d0d5dd;
   --accent: #D9A441;
   --success: #16825D;
   --success-bg: #edf7f0;
@@ -51,10 +54,10 @@ p { margin: 0; }
   font-weight: 850;
   border: 1px solid transparent;
 }
-.primary { background: var(--ink); color: #fff; }
-.primary:hover { background: #263149; }
-.secondary { background: var(--surface); color: var(--ink); border-color: var(--line); }
-.secondary:hover { background: var(--surface-alt); border-color: var(--ink); }
+.primary { background: var(--gold); color: var(--navy); border-color: var(--gold); box-shadow: 0 5px 14px rgba(217,164,65,.20); }
+.primary:hover { background: #e2b052; border-color: #e2b052; }
+.secondary { background: var(--surface); color: var(--navy); border-color: var(--line); }
+.secondary:hover { background: var(--surface-alt); border-color: var(--navy); }
 .danger { background: var(--surface); color: var(--danger); border-color: #dfb8b8; }
 .compact { min-height: 40px; padding: 8px 12px; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -63,24 +66,85 @@ p { margin: 0; }
 .home-intro { display: grid; gap: 7px; max-width: 720px; }
 .activity-title-es { margin-top: -3px; }
 .can-do-line { font-size: 1.04rem; }
-
 .recommended-learning {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 17px;
-  border: 1px solid #9fa9b7;
-  border-radius: 14px;
-  background: #f1f4f7;
+  padding: 18px;
+  border: 1px solid #d0d5dd;
+  border-radius: 16px;
+  background: var(--light);
+}
+.recommended-primary {
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(23,32,51,.06);
 }
 .recommended-learning > div { display: grid; gap: 4px; }
-.recommended-learning .primary { flex: 0 0 auto; min-width: 112px; }
+.recommended-learning .primary { flex: 0 0 auto; min-width: 150px; }
 
-.learning-sections { display: grid; gap: 20px; }
-.experience-section { display: grid; gap: 11px; }
+.quick-choices { display: grid; gap: 11px; }
 .section-heading { display: flex; justify-content: space-between; gap: 12px; }
 .choice-title { font-weight: 850; }
+.category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.category-card {
+  min-height: 82px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 14px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--navy);
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.category-card:hover { transform: translateY(-1px); border-color: #aeb8c6; box-shadow: 0 5px 14px rgba(23,32,51,.07); }
+.category-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  background: #eef2f6;
+  color: var(--navy);
+}
+.category-copy { display: grid; gap: 2px; min-width: 0; }
+.category-copy strong { font-size: .98rem; }
+.category-copy > span { color: var(--muted); font-size: .82rem; }
+.category-copy small { color: var(--subtle); font-size: .72rem; line-height: 1.3; }
+.category-arrow { color: var(--muted); font-size: 1.25rem; }
+.category-mixed .category-icon { background: #fff3d7; color: #a87512; }
+.category-conversation .category-icon { background: #f0e9ff; color: #7653b6; }
+.category-simulation .category-icon { background: #eeeafd; color: #6856a9; }
+.category-review .category-icon { background: #eef0ff; color: #5969bd; }
+.category-focus-speaking .category-icon { background: #fff3d7; color: #a87512; }
+.category-focus-listening .category-icon { background: #e8f5f2; color: var(--success); }
+.category-focus-writing .category-icon { background: #fdebed; color: var(--danger); }
+.category-focus-grammar .category-icon { background: #eaf1fb; color: var(--focus); }
+.category-focus-vocabulary .category-icon { background: #f0e9ff; color: #7653b6; }
+
+.choice-disclosure {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.choice-disclosure summary {
+  cursor: pointer;
+  font-weight: 850;
+  color: var(--navy);
+  padding: 2px 0;
+}
+.choice-disclosure summary::marker { color: var(--gold); }
+.choice-disclosure[open] summary { margin-bottom: 13px; }
+.focus-categories { padding-top: 0; }
+.advanced-choices { margin-top: -2px; }
+.experience-sections { display: grid; gap: 18px; }
+.experience-section { display: grid; gap: 10px; }
 .mode-groups { display: grid; gap: 16px; }
 .mode-group { display: grid; gap: 8px; }
 .mode-group-title { display: flex; align-items: baseline; gap: 8px; }
@@ -100,7 +164,7 @@ p { margin: 0; }
   background: var(--surface);
   color: var(--ink);
 }
-.mode-button:hover, .experience-card:hover { border-color: var(--ink); background: #fbfcfd; }
+.mode-button:hover, .experience-card:hover { border-color: var(--navy); background: #fbfcfd; }
 .mode-copy { display: grid; gap: 2px; min-width: 0; }
 .mode-copy > span { color: var(--muted); font-size: .83rem; }
 .mode-meta { color: var(--subtle); font-size: .66rem; font-weight: 850; text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
@@ -111,19 +175,15 @@ p { margin: 0; }
 .experience-card small { color: var(--muted); line-height: 1.4; }
 .experience-kind { margin: 0; color: var(--muted); font-size: .69rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 
-.choice-disclosure { border-top: 1px solid var(--line); padding-top: 15px; }
-.choice-disclosure summary { cursor: pointer; font-weight: 850; color: var(--ink); }
-.choice-disclosure .mode-groups { padding-top: 14px; }
-
 .resume-practice, .resume-experience {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 13px 14px;
-  border: 1px solid #aeb8c6;
-  border-radius: 12px;
-  background: #f7f8fa;
+  border: 1px solid #c9d0da;
+  border-radius: 13px;
+  background: var(--surface);
 }
 .resume-practice p, .resume-experience p { margin-top: 2px; font-size: .84rem; }
 .quick-principle { display: grid; gap: 2px; padding: 12px 14px; border-left: 3px solid var(--accent); background: #faf8f2; }
@@ -170,7 +230,7 @@ p { margin: 0; }
 
 .progress-row { display: flex; justify-content: space-between; gap: 12px; font-size: .88rem; }
 .progress-track { height: 8px; background: #d9dee5; border-radius: 999px; overflow: hidden; }
-.progress-fill { height: 100%; background: var(--ink); width: 0; transition: width .2s ease; }
+.progress-fill { height: 100%; background: var(--gold); width: 0; transition: width .2s ease; }
 .micro-progress { margin-top: 2px; }
 
 .install-prompt {
@@ -178,15 +238,16 @@ p { margin: 0; }
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 12px 14px;
-  border: 1px solid #9fa9b7;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--surface);
+  color: var(--navy);
+  box-shadow: none;
 }
 .install-prompt > div { display: grid; gap: 1px; }
 .install-prompt .spanish { color: #dfe5ed; }
-.install-prompt .primary { background: #fff; color: var(--ink); }
+.install-prompt .primary { background: var(--navy); color: #fff; box-shadow: none; }
 
 footer { margin-top: auto; display: flex; justify-content: space-between; gap: 12px; color: var(--subtle); font-size: .72rem; }
 .text-button { border: 0; background: transparent; color: var(--muted); padding: 3px 0; text-decoration: underline; }
@@ -200,16 +261,17 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
 }
 
 @media (max-width: 620px) {
-  .mode-grid, .experience-grid, .answer-grid { grid-template-columns: 1fr; }
+  .mode-grid, .experience-grid, .answer-grid, .category-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
   .app-shell { padding: 12px 10px 20px; gap: 10px; }
   .card { padding: 15px; border-radius: 14px; }
-  .brand-mark { width: min(235px, 72vw); }
+  .brand-mark { width: min(210px, 64vw); }
   .badge { padding: 5px 9px; }
   .recommended-learning { align-items: stretch; flex-direction: column; }
-  .recommended-learning .primary { width: 100%; }
+  .recommended-learning .primary { width: 100%; min-height: 50px; }
+  .category-card { min-height: 76px; }
   .mode-button { min-height: 68px; }
   .answer-button { min-height: 52px; }
   .production-input { min-height: 155px; }
@@ -244,8 +306,8 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
     --shadow: 0 10px 28px rgba(0,0,0,.24);
   }
   html, body { background: #101827; }
-  .primary { background: #f4f6f8; color: #172033; }
-  .primary:hover { background: #ffffff; }
+  .primary { background: #D9A441; color: #172033; }
+  .primary:hover { background: #e2b052; }
   .secondary { background: #172033; color: #f4f6f8; }
   .secondary:hover, .mode-button:hover, .experience-card:hover { background: #202b3d; }
   .danger { background: #172033; color: #f07b86; border-color: #70404a; }
@@ -260,6 +322,20 @@ footer { margin-top: auto; display: flex; justify-content: space-between; gap: 1
   .notice { background: #202b3d; color: #dbe2eb; }
   .install-prompt { background: #f4f6f8; color: #172033; border-color: #526077; }
   .install-prompt .spanish { color: #465267; }
-  .install-prompt .primary { background: #172033; color: #f4f6f8; }
+  .install-prompt .primary { background: #D9A441; color: #172033; }
   footer { color: #8995a6; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .category-card { background: #172033; border-color: #465267; color: #f4f6f8; }
+  .category-card:hover { border-color: #8995a6; background: #202b3d; }
+  .category-copy > span, .category-copy small { color: #b8c1cf; }
+  .category-mixed .category-icon { background: #3a2d18; color: #e2b052; }
+  .category-conversation .category-icon,
+  .category-vocabulary .category-icon { background: #30284a; color: #b9a1ee; }
+  .category-simulation .category-icon { background: #302d4d; color: #b2a7e5; }
+  .category-review .category-icon { background: #28304d; color: #9eabe8; }
+  .category-focus-listening .category-icon { background: #18352a; color: #55bd87; }
+  .category-focus-writing .category-icon { background: #3d2027; color: #f07b86; }
+  .category-focus-grammar .category-icon { background: #1d314d; color: #78a8e5; }
 }
