@@ -427,8 +427,12 @@ function renderInteraction(activity) {
         <button class="secondary compact" id="checkSpeakButton" type="button">Check typed answer</button>
       </div>
     `;
-    document.querySelector("#normalAudioButton").addEventListener("click", () => speakText(activity.audioText || activity.targetPhrase, 0.88));
-    document.querySelector("#slowAudioButton").addEventListener("click", () => speakText(activity.audioText || activity.targetPhrase, 0.62));
+    document.querySelector("#normalAudioButton").addEventListener("click", () =>
+      speakText(activity.audioText || activity.targetPhrase, activity.audio?.normalRate ?? 0.88)
+    );
+    document.querySelector("#slowAudioButton").addEventListener("click", () =>
+      speakText(activity.audioText || activity.targetPhrase, activity.audio?.slowRate ?? 0.62)
+    );
     document.querySelector("#speakButton").addEventListener("click", () => startSpeechRecognition(activity));
     document.querySelector("#checkSpeakButton").addEventListener("click", () => {
       evaluateCurrent(document.querySelector("#speakFallback").value);
