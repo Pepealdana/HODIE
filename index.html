@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
+  <meta name="description" content="HODIE — a local-first English learning environment. Today. Not tomorrow.">
   <title>HODIE — Today. Not tomorrow.</title>
+  <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -16,6 +18,8 @@
       </div>
       <span class="badge" id="levelBadge">A2</span>
     </header>
+
+    <div id="installPrompt" class="install-prompt" hidden></div>
 
     <section id="app" aria-live="polite">
       <div class="loading">Preparing today's practice...</div>
