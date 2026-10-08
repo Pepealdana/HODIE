@@ -77,7 +77,7 @@ assert.ok(grammarActivities.length >= 6);
 const writingActivity = library.activities.find((item) => item.skill === "writing" && item.type === "mini-production");
 const writingErrors = evaluateMicroActivity(
   writingActivity,
-  "I am teacher. I work on a school. I enjoy to read books. My students is very important."
+  "I am teacher. I work with students. I enjoy to read books. My students is very important."
 );
 assert.equal(writingErrors.correct, true);
 assert.ok(writingErrors.errors.some((error) => error.target === "article"));
