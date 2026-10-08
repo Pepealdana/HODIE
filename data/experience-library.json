@@ -1,0 +1,427 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "HODIE Learning Experiences v1",
+  "purpose": "Differentiated conversations and simulations that reuse the learning engine without AI.",
+  "experiences": [
+    {
+      "id": "EXP-CONV-FREE-A2-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Free conversation",
+      "titleEs": "Conversación libre",
+      "description": "An open-response conversation with a light structure. HODIE does not force a model answer.",
+      "descriptionEs": "Una conversación con respuestas abiertas y una estructura ligera. HODIE no obliga a usar una respuesta modelo.",
+      "levels": [
+        "A2",
+        "A2+"
+      ],
+      "contexts": [
+        "work",
+        "daily-life",
+        "personal"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "stages": [
+        {
+          "id": "turn-1",
+          "title": "Start the conversation",
+          "titleEs": "Comienza la conversación",
+          "prompt": "Tell me about your work.",
+          "promptEs": "Háblame de tu trabajo.",
+          "criteria": [
+            {
+              "id": "work",
+              "label": "Mention your job or what you do",
+              "patterns": [
+                "\\b(i am|i'm|i work|i teach)\\b"
+              ],
+              "missingMessage": "Tell me what you do.",
+              "missingMessageEs": "Di a qué te dedicas."
+            }
+          ]
+        },
+        {
+          "id": "turn-2",
+          "title": "Go deeper",
+          "titleEs": "Profundiza",
+          "prompt": "What do you enjoy about your work?",
+          "promptEs": "¿Qué disfrutas de tu trabajo?",
+          "criteria": [
+            {
+              "id": "preference",
+              "label": "Express a preference or opinion",
+              "patterns": [
+                "\\b(i like|i love|i enjoy|i don't like|i think)\\b"
+              ],
+              "missingMessage": "Give your opinion or say what you enjoy.",
+              "missingMessageEs": "Da tu opinión o di qué disfrutas."
+            }
+          ]
+        },
+        {
+          "id": "turn-3",
+          "title": "Talk about a challenge",
+          "titleEs": "Habla de un reto",
+          "prompt": "What is one difficult thing about your work?",
+          "promptEs": "¿Qué es algo difícil de tu trabajo?",
+          "criteria": [
+            {
+              "id": "challenge",
+              "label": "Describe a difficulty, problem or challenge",
+              "patterns": [
+                "\\b(difficult|hard|problem|challenge|difficulties)\\b"
+              ],
+              "missingMessage": "Mention one difficulty or challenge.",
+              "missingMessageEs": "Menciona una dificultad o reto."
+            }
+          ]
+        },
+        {
+          "id": "turn-4",
+          "title": "Look ahead",
+          "titleEs": "Mira hacia el futuro",
+          "prompt": "What would you like to improve in the future?",
+          "promptEs": "¿Qué te gustaría mejorar en el futuro?",
+          "criteria": [
+            {
+              "id": "future",
+              "label": "Talk about a future intention or goal",
+              "patterns": [
+                "\\b(want to|would like to|going to|will|hope to)\\b"
+              ],
+              "missingMessage": "Say what you want or would like to do.",
+              "missingMessageEs": "Di qué quieres o te gustaría hacer."
+            }
+          ]
+        },
+        {
+          "id": "turn-5",
+          "title": "Keep the conversation going",
+          "titleEs": "Mantén la conversación",
+          "prompt": "Ask me one question about work or technology.",
+          "promptEs": "Hazme una pregunta sobre trabajo o tecnología.",
+          "criteria": [
+            {
+              "id": "question",
+              "label": "Ask a question",
+              "patterns": [
+                "\\?",
+                "\\b(what|why|how|where|when|do|does|can|are|is)\\b"
+              ],
+              "missingMessage": "Ask me one question.",
+              "missingMessageEs": "Hazme una pregunta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-INTERVIEW-A2-01",
+      "kind": "simulation",
+      "mode": "role-play",
+      "title": "Job interview",
+      "titleEs": "Entrevista de trabajo",
+      "description": "A structured interview for a technology and education role.",
+      "descriptionEs": "Una entrevista estructurada para un cargo relacionado con tecnología y educación.",
+      "levels": [
+        "A2",
+        "A2+",
+        "B1"
+      ],
+      "contexts": [
+        "professional",
+        "interview"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "role": "Interviewer",
+      "stages": [
+        {
+          "id": "q1",
+          "title": "Tell me about yourself",
+          "titleEs": "Háblame de ti",
+          "prompt": "Tell me about yourself and your current work.",
+          "promptEs": "Háblame de ti y de tu trabajo actual.",
+          "criteria": [
+            {
+              "id": "identity",
+              "label": "Introduce yourself and your work",
+              "patterns": [
+                "\\b(i am|i'm|i work|i teach)\\b"
+              ],
+              "missingMessage": "Introduce yourself and say what you do.",
+              "missingMessageEs": "Preséntate y di a qué te dedicas."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "title": "Experience",
+          "titleEs": "Experiencia",
+          "prompt": "What experience do you have in technology or education?",
+          "promptEs": "¿Qué experiencia tienes en tecnología o educación?",
+          "criteria": [
+            {
+              "id": "experience",
+              "label": "Mention experience or years of work",
+              "patterns": [
+                "\\b(experience|years|worked|work|teaching|technology)\\b"
+              ],
+              "missingMessage": "Mention your experience.",
+              "missingMessageEs": "Menciona tu experiencia."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "title": "Strength",
+          "titleEs": "Fortaleza",
+          "prompt": "What is one strength you bring to this job?",
+          "promptEs": "¿Qué fortaleza aportarías a este trabajo?",
+          "criteria": [
+            {
+              "id": "strength",
+              "label": "Describe one personal or professional strength",
+              "patterns": [
+                "\\b(good at|strong|strength|can|organized|creative|patient|learn)\\b"
+              ],
+              "missingMessage": "Describe one strength.",
+              "missingMessageEs": "Describe una fortaleza."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "title": "Example",
+          "titleEs": "Ejemplo",
+          "prompt": "Tell me about a project you are proud of.",
+          "promptEs": "Háblame de un proyecto del que estés orgulloso.",
+          "criteria": [
+            {
+              "id": "project",
+              "label": "Describe a project or achievement",
+              "patterns": [
+                "\\b(project|built|created|developed|made|students|robot)\\b"
+              ],
+              "missingMessage": "Describe one project or achievement.",
+              "missingMessageEs": "Describe un proyecto o logro."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "title": "Final question",
+          "titleEs": "Pregunta final",
+          "prompt": "Do you have a question for the interviewer?",
+          "promptEs": "¿Tienes alguna pregunta para el entrevistador?",
+          "criteria": [
+            {
+              "id": "question",
+              "label": "Ask a relevant question",
+              "patterns": [
+                "\\?",
+                "\\b(what|why|how|where|when|can|could|would)\\b"
+              ],
+              "missingMessage": "Ask one relevant question.",
+              "missingMessageEs": "Haz una pregunta pertinente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-CLASS-A2-01",
+      "kind": "simulation",
+      "mode": "role-play",
+      "title": "Teach a mini class",
+      "titleEs": "Da una mini clase",
+      "description": "Explain a simple technology topic as if you were teaching students.",
+      "descriptionEs": "Explica un tema sencillo de tecnología como si estuvieras enseñando a estudiantes.",
+      "levels": [
+        "A2",
+        "A2+",
+        "B1"
+      ],
+      "contexts": [
+        "teaching",
+        "technology",
+        "STEAM"
+      ],
+      "role": "Student",
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "stages": [
+        {
+          "id": "c1",
+          "title": "Introduce the topic",
+          "titleEs": "Presenta el tema",
+          "prompt": "What are you going to teach today?",
+          "promptEs": "¿Qué vas a enseñar hoy?",
+          "criteria": [
+            {
+              "id": "topic",
+              "label": "Name the topic you will teach",
+              "patterns": [
+                "\\b(i will|i'm going to|today|teach|explain)\\b"
+              ],
+              "missingMessage": "Name the topic you will teach.",
+              "missingMessageEs": "Di qué tema vas a enseñar."
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": "Explain it",
+          "titleEs": "Explícalo",
+          "prompt": "Explain the topic in simple English.",
+          "promptEs": "Explica el tema en inglés sencillo.",
+          "criteria": [
+            {
+              "id": "explanation",
+              "label": "Give an explanation or definition",
+              "patterns": [
+                "\\b(is|means|use|used|because|when|can)\\b"
+              ],
+              "missingMessage": "Give a simple explanation.",
+              "missingMessageEs": "Da una explicación sencilla."
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": "Give an example",
+          "titleEs": "Da un ejemplo",
+          "prompt": "Give your students one example.",
+          "promptEs": "Dales un ejemplo a tus estudiantes.",
+          "criteria": [
+            {
+              "id": "example",
+              "label": "Give a technology-related example",
+              "patterns": [
+                "\\b(example|for example|use|robot|sensor|arduino|computer|program)\\b"
+              ],
+              "missingMessage": "Give one example.",
+              "missingMessageEs": "Da un ejemplo."
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": "Check understanding",
+          "titleEs": "Comprueba la comprensión",
+          "prompt": "Ask your students one question to check understanding.",
+          "promptEs": "Haz una pregunta para comprobar la comprensión.",
+          "criteria": [
+            {
+              "id": "question",
+              "label": "Ask a question",
+              "patterns": [
+                "\\?",
+                "\\b(what|why|how|can|do|does|is|are)\\b"
+              ],
+              "missingMessage": "Ask a question.",
+              "missingMessageEs": "Haz una pregunta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-PRESENT-A2-01",
+      "kind": "simulation",
+      "mode": "presentation",
+      "title": "Explain a robotics project",
+      "titleEs": "Explica un proyecto de robótica",
+      "description": "A short presentation about a real or imagined robotics project.",
+      "descriptionEs": "Una presentación corta sobre un proyecto real o imaginario de robótica.",
+      "levels": [
+        "A2+",
+        "B1"
+      ],
+      "contexts": [
+        "robotics",
+        "technology",
+        "STEAM",
+        "professional"
+      ],
+      "role": "Presenter",
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "stages": [
+        {
+          "id": "p1",
+          "title": "The project",
+          "titleEs": "El proyecto",
+          "prompt": "Introduce your robotics project. What is it?",
+          "promptEs": "Presenta tu proyecto de robótica. ¿Qué es?",
+          "criteria": [
+            {
+              "id": "project",
+              "label": "Name and describe the project",
+              "patterns": [
+                "\\b(project|robot|system|build|built|create|created)\\b"
+              ],
+              "missingMessage": "Name and describe the project.",
+              "missingMessageEs": "Nombra y describe el proyecto."
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "title": "How it works",
+          "titleEs": "Cómo funciona",
+          "prompt": "Explain how it works.",
+          "promptEs": "Explica cómo funciona.",
+          "criteria": [
+            {
+              "id": "process",
+              "label": "Describe a part, action or process",
+              "patterns": [
+                "\\b(sensor|motor|arduino|program|code|use|works|when|then|can)\\b"
+              ],
+              "missingMessage": "Explain one part or process.",
+              "missingMessageEs": "Explica una parte o proceso."
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "title": "The purpose",
+          "titleEs": "El propósito",
+          "prompt": "Why is the project useful?",
+          "promptEs": "¿Por qué es útil el proyecto?",
+          "criteria": [
+            {
+              "id": "purpose",
+              "label": "Explain a purpose or benefit",
+              "patterns": [
+                "\\b(help|useful|because|students|problem|solution|learn)\\b"
+              ],
+              "missingMessage": "Explain one benefit or purpose.",
+              "missingMessageEs": "Explica un beneficio o propósito."
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "title": "The challenge",
+          "titleEs": "El reto",
+          "prompt": "What problem did you have, or what would you improve?",
+          "promptEs": "¿Qué problema tuviste o qué mejorarías?",
+          "criteria": [
+            {
+              "id": "challenge",
+              "label": "Mention a problem, challenge or improvement",
+              "patterns": [
+                "\\b(problem|challenge|difficult|improve|change|would|need)\\b"
+              ],
+              "missingMessage": "Mention a problem or improvement.",
+              "missingMessageEs": "Menciona un problema o mejora."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
