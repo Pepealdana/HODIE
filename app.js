@@ -4,6 +4,7 @@ import { runSessionEvidenceCycle } from "./src/session-runner.js";
 import { getStatus } from "./src/learning-engine.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
+import { chooseLearningSurface } from "./src/learning-orchestrator.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -156,6 +157,10 @@ function renderPracticeHome() {
   const savedPractice = getSavedPracticeLabel();
   const savedExperience = getSavedExperienceLabel();
   const level = session.target.level;
+  const recommended = chooseLearningSurface(matrix, experienceLibrary, profile, {
+    level,
+    context: "professional"
+  });
   const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
   const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
 
@@ -190,6 +195,19 @@ function renderPracticeHome() {
         <p class="can-do-line">${escapeHtml(statement)}</p>
         <p class="spanish">${escapeHtml(spanish)}</p>
       </div>
+
+      <section class="recommended-learning">
+        <div>
+          <p class="kicker">Recommended now</p>
+          <h3>${escapeHtml(
+            recommended.surface === "practice"
+              ? recommended.mode === "review" ? "Review what needs reinforcement" : "Mixed practice"
+              : recommended.surface === "conversation" ? "Have a conversation" : "Try a simulation"
+          )}</h3>
+          <p class="spanish">${escapeHtml(recommended.reason)}</p>
+        </div>
+        <button class="primary compact" id="recommendedLearningButton" type="button">Start</button>
+      </section>
 
       <div class="learning-sections">
         <section class="experience-section">
@@ -292,6 +310,11 @@ function renderPracticeHome() {
       </div>
     </section>
   `;
+
+  document.querySelector("#recommendedLearningButton").addEventListener("click", () => {
+    if (recommended.surface === "practice") startPractice(recommended.mode);
+    else startExperience(recommended.experienceId);
+  });
 
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
