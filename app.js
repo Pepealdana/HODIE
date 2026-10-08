@@ -142,7 +142,7 @@ function startPractice(mode) {
   const activities = selectMicroActivities(microLibrary, {
     canDoId: session.target.canDoId,
     mode,
-    limit: 5
+    limit: 6
   });
 
   if (!activities.length) {
