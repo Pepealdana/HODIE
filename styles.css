@@ -303,7 +303,7 @@ p { margin: 0; }
   box-shadow: none;
 }
 .install-prompt > div { display: grid; gap: 1px; }
-.install-prompt .spanish { color: #dfe5ed; }
+.install-prompt .spanish { color: var(--muted); }
 .install-prompt .primary { background: var(--navy); color: #fff; box-shadow: none; }
 
 footer { margin-top: auto; display: flex; justify-content: space-between; gap: 12px; color: var(--subtle); font-size: .72rem; }
