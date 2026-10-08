@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.0.0",
-  "name": "Micro Practice Model v1",
-  "purpose": "Define short, action-first practice steps that provide immediate feedback and can be combined into a learning session.",
+  "schemaVersion": "2.0.0",
+  "name": "Micro Practice Model v2",
+  "purpose": "Define short, action-first practice units that are distinct from session modes, communicative skills, language resources and authoritative evidence.",
   "principles": [
     "Micro-practice is for learning; integrated tasks are for demonstrating.",
     "Feedback is immediate whenever the activity can be evaluated deterministically.",
@@ -11,23 +11,28 @@
     "Micro-practice does not directly mutate Can-Do mastery unless explicitly marked as evidence-producing."
   ],
   "activityTypes": {
-    "choose": "Select one answer.",
-    "complete": "Complete a short sentence.",
-    "order": "Put words or chunks in the correct order.",
-    "match": "Match language with meaning or context.",
-    "listening": "Listen and answer.",
-    "speak": "Speak and receive immediate observable feedback.",
-    "mini-production": "Produce a short personal response; may generate assessment evidence."
+    "choose": "Recognition.",
+    "complete": "Retrieval.",
+    "order": "Construction.",
+    "match": "Meaning association.",
+    "listening": "Spoken comprehension.",
+    "speak": "Controlled spoken production.",
+    "interaction": "Meaning exchange.",
+    "reading": "Written comprehension.",
+    "writing": "Written production.",
+    "repair": "Error recovery.",
+    "mini-production": "Short demonstration."
   },
   "modes": {
     "mixed": "Adaptive mixture of activity types and skills.",
+    "review": "Evidence-driven recovery and retention.",
     "speaking": "Speaking-focused practice.",
     "listening": "Listening-focused practice.",
-    "grammar": "Grammar-focused practice in context.",
-    "vocabulary": "Vocabulary-focused practice.",
     "reading": "Reading-focused practice.",
     "writing": "Writing-focused practice.",
-    "review": "Adaptive review of recent gaps and retention needs."
+    "grammar": "Grammar-focused contextual practice.",
+    "vocabulary": "Vocabulary-focused contextual practice.",
+    "pronunciation": "Pronunciation-focused production practice."
   },
   "flow": [
     "action",
@@ -36,5 +41,34 @@
     "next-action",
     "integrated-demonstration"
   ],
-  "evidenceRule": "Micro-practice contributes diagnostic signals; Can-Do status changes through the existing Evidence Boundary and Learning Engine."
+  "evidenceRule": "Micro-practice contributes diagnostic signals; Can-Do status changes through the existing Evidence Boundary and Learning Engine.",
+  "selectionRules": {
+    "mixed": [
+      "prefer skill diversity",
+      "include at least one communicative activity when available",
+      "include a demonstration when the session is evidence-producing"
+    ],
+    "review": [
+      "use recent priority errors",
+      "use weak dimensions",
+      "use due or at-risk retention",
+      "vary activity type after repeated failure"
+    ],
+    "focus": [
+      "respect the requested skill or resource",
+      "keep contextual application",
+      "do not silently convert a resource focus into a different skill"
+    ]
+  },
+  "feedback": {
+    "immediate": true,
+    "structuredErrors": true,
+    "maxPriorityCorrections": 2,
+    "retryAfter": [
+      "critical",
+      "high",
+      "task-completion"
+    ],
+    "varyAfterRepeatedFailure": true
+  }
 }
