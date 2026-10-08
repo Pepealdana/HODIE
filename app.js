@@ -12,6 +12,7 @@ const DATA = {
 
 const STORAGE_KEY = "hodie-progress-v1";
 const SESSION_KEY = "hodie-session-v1";
+const PRACTICE_STATE_KEY = "hodie-practice-v1";
 
 const app = document.querySelector("#app");
 const levelBadge = document.querySelector("#levelBadge");
@@ -58,6 +59,72 @@ function clearSavedSession() {
   localStorage.removeItem(SESSION_KEY);
 }
 
+function savePracticeState() {
+  if (!practice || !session?.id) return;
+  localStorage.setItem(PRACTICE_STATE_KEY, JSON.stringify({
+    sessionId: session.id,
+    mode: practice.mode,
+    activityIds: practice.activities.map((activity) => activity.id),
+    index: practice.index,
+    results: practice.results,
+    finalAttempts: practice.finalAttempts,
+    currentResponse: practice.currentResponse
+  }));
+}
+
+function loadSavedPracticeState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PRACTICE_STATE_KEY));
+    if (!saved?.sessionId || !saved?.mode || !Array.isArray(saved.activityIds)) return null;
+    if (!session?.id || saved.sessionId !== session.id) return null;
+    return saved;
+  } catch {
+    return null;
+  }
+}
+
+function clearSavedPracticeState() {
+  localStorage.removeItem(PRACTICE_STATE_KEY);
+}
+
+function getSavedPracticeLabel() {
+  const saved = loadSavedPracticeState();
+  if (!saved) return null;
+  return {
+    mode: getModeLabel(saved.mode),
+    current: Number(saved.index) + 1,
+    total: saved.activityIds.length
+  };
+}
+
+function resumeSavedPractice() {
+  const saved = loadSavedPracticeState();
+  if (!saved) {
+    renderPracticeHome();
+    return;
+  }
+
+  const activitiesById = new Map(microLibrary.activities.map((activity) => [activity.id, activity]));
+  const activities = saved.activityIds.map((id) => activitiesById.get(id)).filter(Boolean);
+
+  if (activities.length !== saved.activityIds.length || !activities.length) {
+    clearSavedPracticeState();
+    renderPracticeHome();
+    return;
+  }
+
+  practice = {
+    mode: saved.mode,
+    activities,
+    index: Math.min(Math.max(Number(saved.index) || 0, 0), activities.length - 1),
+    results: Array.isArray(saved.results) ? saved.results : [],
+    finalAttempts: Number(saved.finalAttempts) || 0,
+    currentResponse: saved.currentResponse || null
+  };
+
+  renderMicroActivity();
+}
+
 function getVerticalProgress() {
   const ids = ["SP-A2-01", "SP-A2-02", "SP-A2-03", "SP-A2-04"];
   const completed = ids.filter((id) => {
@@ -79,6 +146,7 @@ function renderPracticeHome() {
   const targetActivity = session.stages.find((stage) => stage.kind === "target")?.activity;
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
+  const savedPractice = getSavedPracticeLabel();
   const modeGroups = [
     {
       title: "Practice",
@@ -149,6 +217,16 @@ function renderPracticeHome() {
         </div>
       </div>
 
+      ${savedPractice ? `
+        <div class="resume-practice">
+          <div>
+            <strong>Resume practice</strong>
+            <p class="spanish">${escapeHtml(savedPractice.mode)} · ${savedPractice.current}/${savedPractice.total}</p>
+          </div>
+          <button class="secondary compact" id="resumePracticeButton" type="button">Continue</button>
+        </div>
+      ` : ""}
+
       <aside class="quick-principle" aria-label="HODIE practice principle">
         <strong>Practice, don't just study.</strong>
         <span>Act → get feedback → try again → move on.</span>
@@ -163,6 +241,8 @@ function renderPracticeHome() {
   document.querySelectorAll(".mode-button").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
+
+  document.querySelector("#resumePracticeButton")?.addEventListener("click", resumeSavedPractice);
 }
 
 function prepareSessionForPractice() {
@@ -215,6 +295,8 @@ function startPractice(mode) {
     currentResponse: null
   };
 
+  clearSavedPracticeState();
+  savePracticeState();
   renderMicroActivity();
 }
 
@@ -228,8 +310,15 @@ function renderMicroActivity() {
   const progress = practice.index + 1;
   const total = practice.activities.length;
 
+  savePracticeState();
+
   app.innerHTML = `
     <section class="card practice-card">
+      <div class="practice-nav">
+        <button class="secondary compact" id="backToPracticeButton" type="button">← Back</button>
+        <span class="practice-nav-hint">Your progress is saved</span>
+      </div>
+
       <div class="practice-topline">
         <span class="kicker">${escapeHtml(getModeLabel(practice.mode))} · ${progress}/${total}</span>
         <span class="practice-skill">${escapeHtml(activity.skill)}</span>
@@ -251,6 +340,11 @@ function renderMicroActivity() {
       </div>
     </section>
   `;
+
+  document.querySelector("#backToPracticeButton").addEventListener("click", () => {
+    savePracticeState();
+    renderPracticeHome();
+  });
 
   renderInteraction(activity);
 }
@@ -320,12 +414,20 @@ function renderInteraction(activity) {
   if (activity.type === "speak") {
     container.innerHTML = `
       <div class="speak-card">
+        <p class="model-label">Model pronunciation</p>
         <p class="model-sentence">${escapeHtml(activity.targetPhrase)}</p>
+        <div class="audio-actions">
+          <button class="secondary compact" id="normalAudioButton" type="button">▶ Listen</button>
+          <button class="secondary compact" id="slowAudioButton" type="button">🐢 Slow</button>
+        </div>
+        <p class="spanish audio-hint">Listen first, then try to say it yourself.</p>
         <button class="primary speak-button" id="speakButton" type="button">🎙 Speak</button>
         <textarea id="speakFallback" class="speak-fallback" placeholder="If voice recognition is unavailable, type what you would say."></textarea>
         <button class="secondary compact" id="checkSpeakButton" type="button">Check typed answer</button>
       </div>
     `;
+    document.querySelector("#normalAudioButton").addEventListener("click", () => speakText(activity.audioText || activity.targetPhrase, 0.88));
+    document.querySelector("#slowAudioButton").addEventListener("click", () => speakText(activity.audioText || activity.targetPhrase, 0.62));
     document.querySelector("#speakButton").addEventListener("click", () => startSpeechRecognition(activity));
     document.querySelector("#checkSpeakButton").addEventListener("click", () => {
       evaluateCurrent(document.querySelector("#speakFallback").value);
@@ -334,11 +436,19 @@ function renderInteraction(activity) {
   }
 
   if (activity.type === "mini-production") {
+    const isWriting = activity.skill === "writing";
+    const criteria = activity.evaluation?.criteria || [];
     container.innerHTML = `
-      <textarea id="productionAnswer" class="production-input" placeholder="Say or write your answer in English..."></textarea>
-      <p class="spanish requirement-note">Minimum: ${activity.requirements?.minResponseCharacters || 0} characters. This is a guide for this task, not a measure of your English level.</p>
+      <div class="production-guidance">
+        <strong>${isWriting ? "Your writing should include:" : "Your response should include:"}</strong>
+        <ul>
+          ${criteria.map((criterion) => `<li>${escapeHtml(criterion.label)}</li>`).join("")}
+        </ul>
+      </div>
+      <textarea id="productionAnswer" class="production-input" placeholder="${isWriting ? "Write your answer in English..." : "Say or write your answer in English..."}"></textarea>
+      <p class="spanish requirement-note">Minimum: ${activity.requirements?.minResponseCharacters || activity.evaluation?.minimumResponseCharacters || 0} characters. This is a guide for this task, not a measure of your English level.</p>
       <div class="actions">
-        <button class="primary" id="finishButton" type="button">Finish practice</button>
+        <button class="primary" id="finishButton" type="button">${isWriting ? "Check writing" : "Finish practice"}</button>
       </div>
     `;
     document.querySelector("#finishButton").addEventListener("click", () => {
@@ -414,6 +524,7 @@ function showFeedback(activity, result, response, options = {}) {
   if (success) {
     window.setTimeout(() => {
       practice.index += 1;
+      savePracticeState();
       renderMicroActivity();
     }, 850);
   } else {
@@ -526,18 +637,27 @@ function showSpeechFeedback(activity, message, messageEs) {
   });
 }
 
-function speakText(text) {
-  if (!("speechSynthesis" in window)) return;
+function speakText(text, rate = 0.88) {
+  if (!("speechSynthesis" in window)) {
+    showSpeechFeedback(
+      practice?.activities?.[practice.index],
+      "Text-to-speech is not available in this browser.",
+      "La lectura en voz alta no está disponible en este navegador."
+    );
+    return;
+  }
+
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
-  utterance.rate = 0.88;
+  utterance.rate = rate;
   window.speechSynthesis.speak(utterance);
 }
 
 function finishPractice() {
   const last = practice.activities[practice.activities.length - 1];
   if (last?.type === "mini-production") return;
+  clearSavedPracticeState();
   renderPracticeComplete();
 }
 
@@ -576,6 +696,7 @@ function submitFinalEvidence(response) {
     saveProfile();
     session = cycle.session;
     clearSavedSession();
+    clearSavedPracticeState();
     renderResult(cycle);
   } catch (error) {
     renderError(error);
@@ -676,6 +797,7 @@ resetButton.addEventListener("click", () => {
   if (!confirm("Reset HODIE local progress?")) return;
   localStorage.removeItem(STORAGE_KEY);
   clearSavedSession();
+  clearSavedPracticeState();
   location.reload();
 });
 
