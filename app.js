@@ -109,11 +109,11 @@ function renderPracticeHome() {
   app.innerHTML = `
     <section class="card practice-home">
       <div class="home-intro">
-        <p class="kicker">Today's practice · \${escapeHtml(session.target.level)}</p>
-        <h2>\${escapeHtml(targetActivity?.title || "Practice English")}</h2>
-        <p class="spanish activity-title-es">\${escapeHtml(targetActivity?.titleEs || "")}</p>
-        <p class="can-do-line">\${escapeHtml(statement)}</p>
-        <p class="spanish">\${escapeHtml(spanish)}</p>
+        <p class="kicker">Today's practice · ${escapeHtml(session.target.level)}</p>
+        <h2>${escapeHtml(targetActivity?.title || "Practice English")}</h2>
+        <p class="spanish activity-title-es">${escapeHtml(targetActivity?.titleEs || "")}</p>
+        <p class="can-do-line">${escapeHtml(statement)}</p>
+        <p class="spanish">${escapeHtml(spanish)}</p>
       </div>
 
       <div class="practice-choice">
@@ -126,20 +126,20 @@ function renderPracticeHome() {
         </div>
 
         <div class="mode-groups">
-          \${modeGroups.map((group) => `
-            <section class="mode-group" aria-labelledby="mode-\${group.title.toLowerCase()}">
+          ${modeGroups.map((group) => `
+            <section class="mode-group" aria-labelledby="mode-${group.title.toLowerCase()}">
               <div class="mode-group-title">
-                <strong id="mode-\${group.title.toLowerCase()}">\${group.title}</strong>
-                <span>\${group.titleEs}</span>
+                <strong id="mode-${group.title.toLowerCase()}">${group.title}</strong>
+                <span>${group.titleEs}</span>
               </div>
               <div class="mode-grid">
-                \${group.items.map(([value, en, es, meta]) => `
-                  <button class="mode-button" data-mode="\${value}" type="button" aria-label="\${en}: \${es}">
+                ${group.items.map(([value, en, es, meta]) => `
+                  <button class="mode-button" data-mode="${value}" type="button" aria-label="${en}: ${es}">
                     <span class="mode-copy">
-                      <strong>\${en}</strong>
-                      <span>\${es}</span>
+                      <strong>${en}</strong>
+                      <span>${es}</span>
                     </span>
-                    <span class="mode-meta">\${meta}</span>
+                    <span class="mode-meta">${meta}</span>
                     <span class="mode-arrow" aria-hidden="true">→</span>
                   </button>
                 `).join("")}
@@ -155,7 +155,7 @@ function renderPracticeHome() {
       </aside>
 
       <div class="home-progress">
-        \${renderProgress()}
+        ${renderProgress()}
       </div>
     </section>
   `;
@@ -182,7 +182,7 @@ function prepareSessionForPractice() {
     return requestEvidence(startSession(session));
   }
 
-  throw new Error(`This session cannot start from state: \${session.state}`);
+  throw new Error(`This session cannot start from state: ${session.state}`);
 }
 
 function startPractice(mode) {
@@ -194,7 +194,7 @@ function startPractice(mode) {
   });
 
   if (!activities.length) {
-    renderError(new Error(`No micro-practice is available for \${getModeLabel(mode)} yet.`));
+    renderError(new Error(`No micro-practice is available for ${getModeLabel(mode)} yet.`));
     return;
   }
 
