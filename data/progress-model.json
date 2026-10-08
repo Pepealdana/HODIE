@@ -1,8 +1,8 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "project": "HODIE",
   "name": "Functional Progress Model v1",
-  "purpose": "Translate Can-Do evidence into an interpretable functional progress profile without reducing English ability to a single score.",
+  "purpose": "Translate Can-Do evidence into an interpretable functional progress profile and determine level readiness and retention without reducing English ability to a single score.",
   "principles": [
     "Communication is primary; grammar, vocabulary and pronunciation support communication.",
     "Progress is evidence-based, not lesson-count-based.",
@@ -176,10 +176,17 @@
       4,
       7,
       14,
-      30
+      30,
+      60
     ],
     "trigger": "Review after success, repeated failure, or observed forgetting.",
-    "rule": "Spacing applies to Can-Dos and language resources according to evidence, not simply to lesson completion."
+    "rule": "Spacing applies to Can-Dos and language resources according to evidence, not simply to lesson completion.",
+    "retentionStates": [
+      "current",
+      "due",
+      "atRisk",
+      "unscheduled"
+    ]
   },
   "personalization": {
     "principle": "Prioritize high-value Can-Dos connected to the learner's real life, work and goals.",
@@ -197,6 +204,36 @@
     "A2": "bilingual-by-default; build reliable everyday communication and basic interaction.",
     "A2Plus": "English-first with Spanish support; connect ideas, experiences, work, opinions and short interactions.",
     "B1": "English-first; handle familiar personal/professional communication with increasing independence and connected speech/writing.",
-    "promotionRule": "Do not promote by completing a fixed lesson count. Promotion depends on the relevant Can-Do evidence profile."
+    "promotionRule": "Do not promote by completing a fixed lesson count. Readiness depends on relevant Can-Do evidence across communicative domains. HODIE does not certify CEFR.",
+    "policy": {
+      "A2": {
+        "coverageThreshold": 0.7,
+        "skillMinimumCoverage": 0.5,
+        "requireMetaCanDo": true
+      },
+      "A2+": {
+        "coverageThreshold": 0.7,
+        "skillMinimumCoverage": 0.5,
+        "requireMetaCanDo": false
+      },
+      "B1": {
+        "coverageThreshold": 0.65,
+        "skillMinimumCoverage": 0.5,
+        "requireMetaCanDo": true
+      }
+    },
+    "dependency": "A2+ requires A2 readiness; B1 requires A2 and A2+ readiness."
+  },
+  "retention": {
+    "intervalsDaysByStatus": {
+      "notStarted": 1,
+      "emerging": 1,
+      "developing": 2,
+      "functional": 7,
+      "consolidated": 30,
+      "transferred": 60
+    },
+    "overdueRiskMultiplier": 2,
+    "rule": "Do not downgrade mastery merely because a review is overdue. Downgrade only when new evidence demonstrates deterioration."
   }
 }
