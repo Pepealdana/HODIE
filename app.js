@@ -10,7 +10,8 @@ const DATA = {
   matrix: "./data/can-do-matrix.json",
   library: "./data/content-library.json",
   micro: "./data/micro-practice-library.json",
-  experiences: "./data/experience-library.json"
+  experiences: "./data/experience-library.json",
+  contexts: "./data/learning-contexts.json"
 };
 
 const STORAGE_KEY = "hodie-progress-v1";
@@ -29,22 +30,25 @@ let profile;
 let session;
 let practice = null;
 let experienceLibrary;
+let contextLibrary;
 let experienceSession = null;
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse, experienceResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
     fetch(DATA.micro),
-    fetch(DATA.experiences)
+    fetch(DATA.experiences),
+    fetch(DATA.contexts)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
   library = await libraryResponse.json();
   microLibrary = await microResponse.json();
   experienceLibrary = await experienceResponse.json();
+  contextLibrary = await contextResponse.json();
 }
 
 function loadProfile() {
@@ -159,7 +163,9 @@ function renderPracticeHome() {
   const level = session.target.level;
   const recommended = chooseLearningSurface(matrix, experienceLibrary, profile, {
     level,
-    context: "professional"
+    context: "professional",
+    contextLibrary,
+    contextTerms: ["technology", "teaching", "professional"]
   });
   const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
   const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
