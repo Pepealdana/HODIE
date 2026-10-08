@@ -30,6 +30,17 @@ const speaking = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "sp
 assert.equal(speaking.length, 2);
 assert.ok(speaking.every((item) => ["speak", "mini-production"].includes(item.type)));
 
+const writing = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "writing", limit: 4 });
+assert.equal(writing.length, 1);
+assert.equal(writing[0].type, "mini-production");
+assert.equal(writing[0].skill, "writing");
+assert.ok(writing[0].evaluation?.criteria?.length >= 3);
+
+const speakActivity = library.activities.find((item) => item.type === "speak");
+assert.equal(speakActivity.audioText, speakActivity.targetPhrase);
+assert.equal(speakActivity.audio?.language, "en-US");
+assert.ok(speakActivity.audio?.slowRate < speakActivity.audio?.normalRate);
+
 const correct = evaluateMicroActivity(library.activities[0], "am");
 assert.equal(correct.correct, true);
 assert.equal(correct.score, 1);
