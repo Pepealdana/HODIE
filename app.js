@@ -370,6 +370,7 @@ function showFeedback(activity, result, response, options = {}) {
   `;
 
   if (options.final) {
+    practice.finalAttempts += 1;
     if (success) {
       submitFinalEvidence(response);
     } else {
@@ -460,7 +461,6 @@ function finishPractice() {
 function submitFinalEvidence(response) {
   const activity = practice.activities[practice.index];
   const finalResult = evaluateMicroActivity(activity, response);
-  practice.finalAttempts += 1;
   const scores = practice.results.map((item) => item.score);
   const microAverage = scores.length ? scores.reduce((sum, value) => sum + value, 0) / scores.length : 0;
   const base = Math.min(0.95, Math.max(0.55, microAverage || finalResult.score || 0));
