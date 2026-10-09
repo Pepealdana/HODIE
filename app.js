@@ -1082,9 +1082,15 @@ function startSpeechRecognition(activity, onTranscript = null) {
   recognition.onerror = handleRecognitionError;
 
   recognition.onend = () => {
-    if (activeSpeechRecognition === recognition) activeSpeechRecognition = null;
-    button.textContent = button.id === "experienceSpeakButton" ? "🎙 Start speaking" : "Speak";
-    button.disabled = false;
+    // A stale recognizer may end after the learner has opened another screen.
+    // It must not change the controls of a newer active recording.
+    if (activeSpeechRecognition !== recognition) return;
+
+    activeSpeechRecognition = null;
+    if (button.isConnected) {
+      button.textContent = button.id === "experienceSpeakButton" ? "🎙 Start speaking" : "Speak";
+      button.disabled = false;
+    }
     const stopButton = document.querySelector("#experienceStopButton");
     if (stopButton) stopButton.disabled = true;
   };
