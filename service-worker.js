@@ -1,4 +1,4 @@
-const CACHE = "hodie-shell-v6";
+const CACHE = "hodie-shell-v7";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -32,6 +32,8 @@ const APP_SHELL = [
   "./data/evidence-model.json",
   "./data/progress-model.json",
   "./data/content-model.json",
+  "./data/knowledge-library.json",
+  "./data/integrated-units.json",
   "./src/activity-generator.js",
   "./src/adaptive-planner.js",
   "./src/communication-repair.js",
@@ -46,6 +48,9 @@ const APP_SHELL = [
   "./src/learning-orchestrator.js",
   "./src/learning-planner.js",
   "./src/learning-session.js",
+  "./src/learning-profile.js",
+  "./src/knowledge-graph.js",
+  "./src/integrated-unit.js",
   "./src/longitudinal-model.js",
   "./src/micro-practice.js",
   "./src/progression-retention.js",
@@ -58,7 +63,9 @@ const APP_SHELL = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting())
+    caches.open(CACHE)
+      .then((cache) => cache.addAll(APP_SHELL))
+      .then(() => self.skipWaiting())
   );
 });
 
@@ -76,37 +83,49 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
 
   const pathname = url.pathname;
-  const isShellCode = pathname.endsWith("/index.html")
-    || pathname.endsWith("/styles.css")
-    || pathname.endsWith("/app.js")
-    || pathname.endsWith("/service-worker.js");
+  const isAppCodeOrData = /\\.(?:html|css|js|json|webmanifest)$/.test(pathname);
+  const isNavigation = event.request.mode === "navigate";
 
-  // Keep HTML/CSS/JS fresh so local and network origins do not remain
-  // on different app versions during development. Offline falls back to cache.
-  if (isShellCode || event.request.mode === "navigate") {
+  // Network-first for app code, data, and navigation. This keeps online
+  // clients current while preserving the last successful response for offline use.
+  if (isAppCodeOrData || isNavigation) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
           if (response && response.status === 200 && response.type === "basic") {
             const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+            event.waitUntil(
+              caches.open(CACHE).then((cache) => cache.put(event.request, copy))
+            );
           }
           return response;
         })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+        .catch(async () => {
+          const cached = await caches.match(event.request);
+          if (cached) return cached;
+          if (isNavigation) {
+            const shell = await caches.match("./index.html");
+            if (shell) return shell;
+          }
+          return Response.error();
+        })
     );
     return;
   }
 
+  // Cache-first for static assets such as icons and logos; fetch and cache on miss.
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;
       return fetch(event.request).then((response) => {
-        if (!response || response.status !== 200 || response.type !== "basic") return response;
-        const copy = response.clone();
-        caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+        if (response && response.status === 200 && response.type === "basic") {
+          const copy = response.clone();
+          event.waitUntil(
+            caches.open(CACHE).then((cache) => cache.put(event.request, copy))
+          );
+        }
         return response;
-      }).catch(() => caches.match("./index.html"));
+      });
     })
   );
 });
