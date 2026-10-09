@@ -83,20 +83,18 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
 
   const pathname = url.pathname;
-  const isAppCodeOrData = /\\.(?:html|css|js|json|webmanifest)$/.test(pathname);
+  const isAppCodeOrData = /\.(?:html|css|js|json|webmanifest)$/.test(pathname);
   const isNavigation = event.request.mode === "navigate";
 
-  // Network-first for app code, data, and navigation. This keeps online
-  // clients current while preserving the last successful response for offline use.
+  // Network-first for app code, data, and navigation. Online clients receive
+  // current files; the last successful response remains available offline.
   if (isAppCodeOrData || isNavigation) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
           if (response && response.status === 200 && response.type === "basic") {
             const copy = response.clone();
-            event.waitUntil(
-              caches.open(CACHE).then((cache) => cache.put(event.request, copy))
-            );
+            caches.open(CACHE).then((cache) => cache.put(event.request, copy));
           }
           return response;
         })
@@ -113,16 +111,14 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Cache-first for static assets such as icons and logos; fetch and cache on miss.
+  // Cache-first for static assets such as icons and logos; fetch on cache miss.
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;
       return fetch(event.request).then((response) => {
         if (response && response.status === 200 && response.type === "basic") {
           const copy = response.clone();
-          event.waitUntil(
-            caches.open(CACHE).then((cache) => cache.put(event.request, copy))
-          );
+          caches.open(CACHE).then((cache) => cache.put(event.request, copy));
         }
         return response;
       });
