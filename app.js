@@ -247,7 +247,9 @@ function renderPracticeHome() {
     level,
     context: "professional",
     contextLibrary,
-    contextTerms: ["technology", "teaching", "professional"]
+    contextTerms: ["technology", "teaching", "professional"],
+    knowledgeGraph,
+    availableModes: ["mixed", "speaking", "listening", "writing", "grammar", "vocabulary"]
   });
 
   // First-time users should enter through the core practice loop.
@@ -413,6 +415,13 @@ function renderPracticeHome() {
         <strong>Practice, communicate, remember.</strong>
         <span>Use English first. Feedback helps you improve.</span>
       </aside>
+
+      <section class="shared-knowledge-summary" aria-label="Shared learning knowledge">
+        <p class="kicker">Connected learning</p>
+        <strong>${knowledgeGraph?.nodes.length || 0} knowledge links</strong>
+        <p class="spanish">Vocabulary, grammar, communication functions and pronunciation connect to Can-Do goals and practice activities.</p>
+        <small>${summarizeLearningProfile(profile).totalActivities} practice starts tracked · ${knowledgeGraph?.valid ? "knowledge links validated" : "knowledge links need review"}</small>
+      </section>
 
       <div class="home-progress">
         ${renderProgress()}
