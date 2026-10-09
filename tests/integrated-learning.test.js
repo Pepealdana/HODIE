@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { buildKnowledgeGraph, getKnowledgeForActivity, validateKnowledgeGraph } from "../src/knowledge-graph.js";
-import { recordLearningEvent, summarizeLearningProfile, recommendBalancedMode } from "../src/learning-profile.js";
+import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile, recommendBalancedMode } from "../src/learning-profile.js";
 import { chooseLearningSurface } from "../src/learning-orchestrator.js";
 
 const read = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), "utf8"));
@@ -28,10 +28,15 @@ profile = recordLearningEvent(profile, { mode: "writing", canDoId: "SP-A2-01", k
 profile = recordLearningEvent(profile, { mode: "writing", canDoId: "SP-A2-01", knowledgeIds: ["FUNC-INTRODUCE-01"] });
 profile = recordLearningEvent(profile, { mode: "writing", canDoId: "SP-A2-01", knowledgeIds: ["FUNC-INTRODUCE-01"] });
 profile = recordLearningEvent(profile, { mode: "writing", canDoId: "SP-A2-01", knowledgeIds: ["FUNC-INTRODUCE-01"] });
+profile = recordKnowledgeOutcome(profile, { activityId: "MIC-TEST", mode: "writing", canDoId: "SP-A2-01", knowledgeIds: ["FUNC-INTRODUCE-01"], correct: false, score: 0.4, errors: [{ type: "grammar" }] });
+profile = recordKnowledgeOutcome(profile, { activityId: "MIC-TEST-2", mode: "writing", canDoId: "SP-A2-01", knowledgeIds: ["FUNC-INTRODUCE-01"], correct: true, score: 1, errors: [] });
 const summary = summarizeLearningProfile(profile);
 assert.equal(summary.totalActivities, 4);
 assert.equal(summary.skillCounts.writing, 4);
 assert.equal(summary.resourceCounts["FUNC-INTRODUCE-01"], 4);
+assert.equal(summary.knowledgePerformance["FUNC-INTRODUCE-01"].attempts, 2);
+assert.equal(summary.knowledgePerformance["FUNC-INTRODUCE-01"].correct, 1);
+assert.equal(summary.knowledgePerformance["FUNC-INTRODUCE-01"].errors, 1);
 const balanced = recommendBalancedMode(profile, ["mixed", "speaking", "listening", "writing", "grammar", "vocabulary"]);
 assert.ok(balanced);
 assert.notEqual(balanced, "writing");
