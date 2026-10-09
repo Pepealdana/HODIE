@@ -19,5 +19,8 @@ assert.match(app, /function applyTheme\(theme\)/);
 assert.match(app, /THEME_KEY/);
 assert.match(app, /resumePracticeButton/);
 assert.match(app, /startExperience/);
+assert.match(app, /const experienceFeedback = document\.querySelector\("#experienceFeedback"\)/);
+assert.match(app, /function evaluateCurrent\(response\) \{\s*if \(!practice \|\| practice\.answered\) return;/);
+assert.match(app, /practice\.answered = false;/);
 
 console.log("HODIE UX contract: PASS");
