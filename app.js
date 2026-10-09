@@ -826,6 +826,7 @@ function renderInteraction(activity) {
       <div class="speak-card">
         <p class="model-label">Model pronunciation</p>
         <p class="model-sentence">${escapeHtml(activity.targetPhrase)}</p>
+        ${activity.pronunciationHint ? `<div class="pronunciation-guide"><strong>How to read it · Cómo suena aproximadamente</strong><p>${escapeHtml(activity.pronunciationHint)}</p><small>Guía aproximada para hispanohablantes; escucha también el audio.</small></div>` : ""}
         <div class="audio-actions">
           <button class="secondary compact" id="normalAudioButton" type="button">▶ Listen</button>
           <button class="secondary compact" id="slowAudioButton" type="button">Slow</button>
@@ -876,6 +877,16 @@ function renderInteraction(activity) {
         </details>
       `}
 
+      <details class="learning-hints" open>
+        <summary>${isWriting ? "Help me build my answer" : "Help me prepare what to say"} <span class="spanish">Pistas para responder</span></summary>
+        <div class="hint-content">
+          <p><strong>Start with · Puedes comenzar con</strong></p>
+          <div class="hint-chips"><span>I am...</span><span>I work...</span><span>I teach...</span><span>I have...</span><span>I like...</span><span>I enjoy...</span></div>
+          <p><strong>Connect your ideas · Une las ideas</strong></p>
+          <div class="hint-chips"><span>and = y</span><span>but = pero</span><span>because = porque</span><span>then = luego</span></div>
+          <details class="model-answer"><summary>Show an example · Ver ejemplo</summary><p>I am a technology teacher. I work at a school. I enjoy building robotics projects with students.</p><p class="spanish">Soy profesor de tecnología. Trabajo en un colegio. Disfruto construir proyectos de robótica con estudiantes.</p></details>
+        </div>
+      </details>
       <p class="spanish requirement-note">
         Aim for 2–3 sentences. This is a guide for the task, not a measure of your English level.
       </p>
