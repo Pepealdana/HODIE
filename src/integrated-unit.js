@@ -10,9 +10,10 @@ function evaluateIntegratedStep(step, response) {
   }
   const text = String(response ?? "").trim();
   const words = text.split(/\s+/).filter(Boolean);
-  const requiredWords = (step.knowledgeIds || []).flatMap(() => []).length;
+  const minimumWords = step.kind === "write" ? 6 : 4;
+  const completed = words.length >= minimumWords;
   const score = Math.min(1, words.length / (step.kind === "write" ? 12 : 8));
-  return { correct: words.length >= (step.kind === "write" ? 6 : 4), score, wordCount: words.length, feedback: words.length >= 4 ? "Good start. Check that each sentence has a clear subject and verb." : step.hint, feedbackEs: words.length >= 4 ? "Buen comienzo. Comprueba que cada oración tenga un sujeto y un verbo claros." : step.hintEs, requiredWords };
+  return { correct: null, completed, score, wordCount: words.length, feedback: completed ? "Response saved. Compare it with the example and check your subject–verb agreement." : step.hint, feedbackEs: completed ? "Respuesta guardada. Compárala con el ejemplo y revisa la concordancia entre sujeto y verbo." : step.hintEs };
 }
 
 function createIntegratedUnitState(unit, saved = null) {
@@ -39,7 +40,7 @@ function advanceIntegratedStep(state) {
 
 function summarizeIntegratedUnit(state) {
   const results = state?.results || [];
-  return { completedSteps: results.length, totalSteps: state?.unit?.steps?.length || 0, correctSteps: results.filter((item) => item.correct).length, skills: [...new Set(results.map((item) => item.skill))], knowledgeIds: [...new Set(results.flatMap((item) => item.knowledgeIds || []))] };
+  return { completedSteps: results.length, totalSteps: state?.unit?.steps?.length || 0, correctSteps: results.filter((item) => item.correct === true).length, selfReviewSteps: results.filter((item) => item.correct === null).length, skills: [...new Set(results.map((item) => item.skill))], knowledgeIds: [...new Set(results.flatMap((item) => item.knowledgeIds || []))] };
 }
 
 export { getIntegratedUnit, evaluateIntegratedStep, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit };
