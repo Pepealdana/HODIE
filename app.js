@@ -123,12 +123,16 @@ async function loadData() {
   library = await libraryResponse.json();
   microLibrary = await microResponse.json();
   experienceLibrary = await experienceResponse.json();
-  contextLibrary = await contextResponse.json();\n  knowledgeLibrary = await knowledgeResponse.json();\n  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary);\n  if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
+  contextLibrary = await contextResponse.json();
+  knowledgeLibrary = await knowledgeResponse.json();
+  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary);
+  if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
 }
 
 function loadProfile() {
   try {
-    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [], learningHistory: [] };\n    if (!Array.isArray(profile.learningHistory)) profile.learningHistory = [];
+    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [], learningHistory: [] };
+    if (!Array.isArray(profile.learningHistory)) profile.learningHistory = [];
   } catch {
     profile = { evidence: [], reviews: [], learningHistory: [] };
   }
@@ -471,6 +475,14 @@ function startExperience(experienceId) {
     return;
   }
 
+  profile = recordLearningEvent(profile, {
+    mode: experience.kind === "simulation" ? "simulation" : "conversation",
+    surface: experience.kind,
+    skill: "speaking",
+    canDoId: session?.target?.canDoId,
+    knowledgeIds: getKnowledgeForCanDo(knowledgeGraph, session?.target?.canDoId).map((node) => node.id)
+  });
+  saveProfile();
   experienceSession = createExperienceSession(experienceLibrary, experienceId);
   saveExperienceState();
   renderExperience();
@@ -686,6 +698,14 @@ function startPractice(mode) {
     renderError(error);
     return;
   }
+
+  profile = recordLearningEvent(profile, {
+    mode,
+    surface: "practice",
+    canDoId: session.target.canDoId,
+    knowledgeIds: [...new Set(activities.flatMap((activity) => getKnowledgeForCanDo(knowledgeGraph, activity.canDoId).map((node) => node.id)))]
+  });
+  saveProfile();
 
   practice = {
     mode,
