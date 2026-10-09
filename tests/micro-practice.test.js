@@ -68,6 +68,26 @@ const nonsense = evaluateMicroActivity(production, "this is my app english");
 assert.equal(nonsense.correct, false);
 assert.ok(nonsense.errors.some((error) => error.target === "profession"));
 
+// Every target exposed by the current A2 speaking vertical slice must have executable practice.
+for (const [canDoId, productionResponse] of [
+  ["SP-A2-01", "I am a technology teacher. I work with students and I enjoy programming."],
+  ["SP-A2-02", "My family is small. I live with my parents and my sister."],
+  ["SP-A2-03", "I get up at six. I have breakfast and I go to work in the morning."],
+  ["SP-A2-04", "I like building robots, but I don't like getting up early because I am tired."]
+]) {
+  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId);
+  assert.ok(targetActivities.length >= 7, `Missing micro-practice coverage for ${canDoId}`);
+  const targetMixed = selectMicroActivities(library, { canDoId, mode: "mixed", limit: 6 });
+  assert.equal(targetMixed.length, 6, `Mixed practice should be available for ${canDoId}`);
+  assert.equal(targetMixed.at(-1).type, "mini-production", `Production should finish mixed practice for ${canDoId}`);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "listening", limit: 4 }).length >= 1);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "speaking", limit: 4 }).length >= 1);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "writing", limit: 4 }).length >= 1);
+  const productionActivity = targetActivities.find((item) => item.type === "mini-production" && item.skill === "speaking");
+  assert.ok(productionActivity, `Missing speaking production for ${canDoId}`);
+  assert.equal(evaluateMicroActivity(productionActivity, productionResponse).correct, true, `Expected sample response to satisfy ${canDoId}`);
+}
+
 console.log("HODIE Micro Practice Engine: PASS");
 
 
