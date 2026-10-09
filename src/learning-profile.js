@@ -24,6 +24,23 @@ function inferSkill(mode, surface) {
   return "integrated";
 }
 
+function recordKnowledgeOutcome(profile = {}, outcome = {}) {
+  if (!outcome.activityId) return profile;
+  const record = {
+    activityId: outcome.activityId,
+    mode: outcome.mode || "mixed",
+    canDoId: outcome.canDoId || null,
+    skill: outcome.skill || inferSkill(outcome.mode),
+    knowledgeIds: Array.isArray(outcome.knowledgeIds) ? [...new Set(outcome.knowledgeIds)] : [],
+    correct: Boolean(outcome.correct),
+    score: Number.isFinite(outcome.score) ? Math.max(0, Math.min(1, outcome.score)) : 0,
+    errors: Array.isArray(outcome.errors) ? outcome.errors : [],
+    independent: Boolean(outcome.independent),
+    at: outcome.at || new Date().toISOString()
+  };
+  const evidence = [...(profile.knowledgeEvidence || []), record].slice(-300);
+  return { ...profile, knowledgeEvidence: evidence };
+}
 function summarizeLearningProfile(profile = {}, options = {}) {
   const history = Array.isArray(profile.learningHistory) ? profile.learningHistory : [];
   const limit = options.recentLimit || 12;
@@ -37,6 +54,19 @@ function summarizeLearningProfile(profile = {}, options = {}) {
     modeCounts[event.mode] = (modeCounts[event.mode] || 0) + 1;
     for (const id of event.knowledgeIds || []) resourceCounts[id] = (resourceCounts[id] || 0) + 1;
   }
+  const knowledgePerformance = {};
+  for (const item of profile.knowledgeEvidence || []) {
+    for (const id of item.knowledgeIds || []) {
+      const current = knowledgePerformance[id] || { attempts: 0, correct: 0, errors: 0, scoreTotal: 0, lastAt: null };
+      current.attempts += 1;
+      current.correct += item.correct ? 1 : 0;
+      current.errors += item.errors.length;
+      current.scoreTotal += item.score;
+      current.lastAt = item.at;
+      knowledgePerformance[id] = current;
+    }
+  }
+  for (const value of Object.values(knowledgePerformance)) value.averageScore = value.attempts ? value.scoreTotal / value.attempts : 0;
   const recentSkillCounts = {};
   for (const event of recent) {
     const skill = event.skill || inferSkill(event.mode, event.surface);
@@ -72,4 +102,4 @@ function recommendBalancedMode(profile = {}, availableModes = ["mixed", "speakin
   return scores[0].mode;
 }
 
-export { recordLearningEvent, summarizeLearningProfile, recommendBalancedMode, inferSkill };
+export { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile, recommendBalancedMode, inferSkill };
