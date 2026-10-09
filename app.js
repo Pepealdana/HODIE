@@ -106,7 +106,7 @@ function setupInstallPrompt() {
 async function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   try {
-    const registration = await navigator.serviceWorker.register("./service-worker.js", { scope: "./" });
+    const registration = await navigator.serviceWorker.register("./service-worker.js", { scope: "./", updateViaCache: "none" });
     // Ask the browser to check for a newer worker when HODIE is opened.
     await registration.update();
   } catch (error) {
