@@ -34,7 +34,9 @@ let profile;
 let session;
 let practice = null;
 let experienceLibrary;
-let contextLibrary;\nlet knowledgeLibrary;\nlet knowledgeGraph;
+let contextLibrary;
+let knowledgeLibrary;
+let knowledgeGraph;
 let experienceSession = null;
 let deferredInstallPrompt = null;
 
