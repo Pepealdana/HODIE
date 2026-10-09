@@ -947,6 +947,7 @@ function showFeedback(activity, result, response, options = {}) {
       <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
       ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
       ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
+      ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
       ${result.corrections?.length ? `
         <div class="feedback-corrections">
           ${result.corrections.map((error) => `
@@ -1053,6 +1054,7 @@ function startSpeechRecognition(activity, onTranscript = null) {
   activeSpeechRecognition = recognition;
   recognition.lang = "en-US";
   recognition.interimResults = false;
+  recognition.continuous = button.id === "experienceSpeakButton";
   recognition.maxAlternatives = 1;
 
   button.textContent = "Listening...";
