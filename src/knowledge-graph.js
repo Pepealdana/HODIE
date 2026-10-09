@@ -25,14 +25,14 @@ function buildKnowledgeGraph(matrix, microLibrary, contentLibrary, knowledgeLibr
           activity.skill === resource
         )
       ).map((activity) => activity.id),
-      contentActivityIds: contentActivities.filter((activity) =>
-        (node.canDoIds || []).includes(activity.canDoId) &&
-        (node.resources || []).some((resource) =>
-          activity.resources?.includes(resource) ||
-          activity.languageResource === resource ||
-          activity.skill === resource
-        )
-      ).map((activity) => activity.id)
+      contentActivityIds: contentActivities.filter((activity) => {
+        if (!(node.canDoIds || []).includes(activity.canDoId)) return false;
+        const tags = (activity.metadata?.tags || []).map((tag) => String(tag).toLowerCase());
+        const items = (node.items || []).map((item) => String(item).toLowerCase());
+        return (node.resources || []).some((resource) => activity.resources?.includes(resource) || activity.languageResource === resource || activity.skill === resource) ||
+          items.some((item) => tags.includes(item)) ||
+          tags.some((tag) => (node.label + " " + (node.labelEs || "")).toLowerCase().includes(tag));
+      }).map((activity) => activity.id)
     };
   });
 
