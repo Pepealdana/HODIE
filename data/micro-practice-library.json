@@ -252,7 +252,8 @@
         "normalRate": 0.88,
         "slowRate": 0.62,
         "language": "en-US"
-      }
+      },
+      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
     },
     {
       "id": "MIC-SP-A2-01-07",
@@ -1023,7 +1024,8 @@
         "normalRate": 0.88,
         "slowRate": 0.62,
         "language": "en-US"
-      }
+      },
+      "pronunciationHint": "ai work with STÚ-dents and bild RÓ-bots"
     },
     {
       "id": "MIC-SP-A2-02-01",
@@ -1277,7 +1279,8 @@
         "slowRate": 0.62,
         "language": "en-US"
       },
-      "resources": []
+      "resources": [],
+      "pronunciationHint": "ai jav a smol FÁ-mi-li. ai liv with mai PÉ-rents"
     },
     {
       "id": "MIC-SP-A2-02-07",
@@ -1683,7 +1686,8 @@
         "slowRate": 0.62,
         "language": "en-US"
       },
-      "resources": []
+      "resources": [],
+      "pronunciationHint": "ai get ap at siks and gou tu work in de MÓR-ning"
     },
     {
       "id": "MIC-SP-A2-03-07",
@@ -2087,7 +2091,8 @@
         "slowRate": 0.62,
         "language": "en-US"
       },
-      "resources": []
+      "resources": [],
+      "pronunciationHint": "ai laik BÍL-ding RÓ-bots, bat ai dount laik GÉ-ting ap ÉR-li"
     },
     {
       "id": "MIC-SP-A2-04-07",
