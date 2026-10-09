@@ -114,7 +114,8 @@ async function loadData() {
     fetch(DATA.library),
     fetch(DATA.micro),
     fetch(DATA.experiences),
-    fetch(DATA.contexts)
+    fetch(DATA.contexts),
+    fetch(DATA.knowledge)
   ]);
   if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
