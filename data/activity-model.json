@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "HODIE",
+  "name": "Activity Model v1",
+  "purpose": "Define reusable practice types that convert Can-Do targets and detected gaps into observable English use.",
+  "principles": [
+    "Every activity serves a Can-Do or an identified recovery gap.",
+    "Production and comprehension are both required; grammar drills are supporting activities.",
+    "Activities should move from support to independent production.",
+    "Important errors lead to a retry of the original communicative task.",
+    "Spanish may scaffold explanation, but target-language production remains in English.",
+    "Activities should use the learner's real contexts whenever practical."
+  ],
+  "activityTypes": [
+    {"id":"recognition","purpose":"Notice or identify language needed for an upcoming task.","primarySkills":["vocabulary","grammar","pronunciation"],"mode":"support"},
+    {"id":"controlled-practice","purpose":"Practice a language resource with limited choices before freer use.","primarySkills":["grammar","vocabulary","pronunciation"],"mode":"support"},
+    {"id":"listening-comprehension","purpose":"Understand gist, details, intention or key information in spoken English.","primarySkills":["listening"],"mode":"comprehension"},
+    {"id":"reading-comprehension","purpose":"Understand functional, personal or professional written English.","primarySkills":["reading"],"mode":"comprehension"},
+    {"id":"guided-production","purpose":"Produce English with prompts, models or useful language support.","primarySkills":["speaking","writing"],"mode":"production"},
+    {"id":"independent-production","purpose":"Produce English independently to demonstrate a Can-Do.","primarySkills":["speaking","writing"],"mode":"production"},
+    {"id":"interaction","purpose":"Respond, ask follow-up questions, clarify, repair, suggest or negotiate meaning.","primarySkills":["communication","speaking","listening"],"mode":"interaction"},
+    {"id":"repair-retry","purpose":"Practice the identified gap and immediately retry the failed communicative task.","primarySkills":["speaking","writing","communication"],"mode":"recovery"},
+    {"id":"pronunciation","purpose":"Improve intelligibility, stress, rhythm or intonation in meaningful language.","primarySkills":["pronunciation","speaking","listening"],"mode":"support"},
+    {"id":"integrated-task","purpose":"Combine comprehension and production around one realistic situation.","primarySkills":["speaking","listening","reading","writing","communication"],"mode":"integrated"}
+  ],
+  "selectionRules": {
+    "failedCanDo":"Prefer repair-retry after targeted recovery practice.",
+    "resourceGap":"Prefer recognition or controlled-practice before guided production.",
+    "communicativeCanDo":"Prefer guided-production, independent-production or interaction.",
+    "listeningCanDo":"Prefer listening-comprehension followed by a short response when appropriate.",
+    "readingCanDo":"Prefer reading-comprehension followed by a meaningful response when appropriate.",
+    "writingCanDo":"Prefer guided or independent production, including written interaction.",
+    "pronunciationGap":"Prefer pronunciation activity embedded in the target phrase or task.",
+    "transfer":"Prefer integrated-task or interaction in a new familiar context."
+  },
+  "evidence": {
+    "principle":"Activity completion is not mastery. Evidence must be attached to the relevant Can-Do.",
+    "minimum":"Every assessment activity must produce observable evidence or a meaningful learner response."
+  }
+}

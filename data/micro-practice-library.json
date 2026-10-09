@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1.0.0",
+  "activities": [
+    {
+      "id": "MIC-SP-A2-01-01",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Choose the right form",
+      "titleEs": "Elige la forma correcta",
+      "prompt": "I ___ a technology teacher.",
+      "promptEs": "Yo ___ profesor de tecnología.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answer": "am",
+      "feedback": {
+        "correct": "Correct. We use \"am\" with \"I\".",
+        "correctEs": "Correcto. Usamos \"am\" con \"I\".",
+        "incorrect": "Not quite. With \"I\", use \"am\".",
+        "incorrectEs": "No exactamente. Con \"I\", usamos \"am\"."
+      },
+      "tags": [
+        "be",
+        "profession",
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-02",
+      "canDoId": "SP-A2-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Complete the sentence",
+      "titleEs": "Completa la oración",
+      "prompt": "I work ___ a school.",
+      "promptEs": "Trabajo ___ una escuela.",
+      "answer": "at",
+      "acceptableAnswers": [
+        "at"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Work at a school\" is the natural expression here.",
+        "correctEs": "Correcto. \"Work at a school\" es la expresión natural aquí.",
+        "incorrect": "Try again. We normally say \"work at a school\".",
+        "incorrectEs": "Inténtalo de nuevo. Normalmente decimos \"work at a school\"."
+      },
+      "tags": [
+        "prepositions",
+        "work",
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-03",
+      "canDoId": "SP-A2-01",
+      "type": "order",
+      "skill": "grammar",
+      "context": "personal",
+      "level": "A2",
+      "title": "Build the sentence",
+      "titleEs": "Construye la oración",
+      "prompt": "Put these words in order.",
+      "promptEs": "Ordena estas palabras.",
+      "tokens": [
+        "enjoy",
+        "I",
+        "programming"
+      ],
+      "answer": [
+        "I",
+        "enjoy",
+        "programming"
+      ],
+      "feedback": {
+        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
+        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
+        "incorrect": "Start with the subject: \"I...\"",
+        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+      },
+      "tags": [
+        "word-order",
+        "enjoy",
+        "programming"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-04",
+      "canDoId": "SP-A2-01",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Match the meaning",
+      "titleEs": "Relaciona el significado",
+      "prompt": "What does \"I work with students\" mean?",
+      "promptEs": "¿Qué significa \"I work with students\"?",
+      "options": [
+        "Trabajo con estudiantes.",
+        "Trabajo en una oficina.",
+        "Estudio con profesores."
+      ],
+      "answer": "Trabajo con estudiantes.",
+      "feedback": {
+        "correct": "Correct. \"work with\" tells us who you work with.",
+        "correctEs": "Correcto. \"work with\" indica con quién trabajas.",
+        "incorrect": "Look at \"work with\". It means \"trabajar con\".",
+        "incorrectEs": "Fíjate en \"work with\". Significa \"trabajar con\"."
+      },
+      "tags": [
+        "work-with",
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-05",
+      "canDoId": "SP-A2-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "title": "Listen and identify",
+      "titleEs": "Escucha e identifica",
+      "audioText": "I teach technology and robotics at a school.",
+      "prompt": "What does the speaker teach?",
+      "promptEs": "¿Qué enseña la persona que habla?",
+      "options": [
+        "Technology and robotics",
+        "English",
+        "Law"
+      ],
+      "answer": "Technology and robotics",
+      "feedback": {
+        "correct": "Correct. The speaker teaches technology and robotics.",
+        "correctEs": "Correcto. La persona enseña tecnología y robótica.",
+        "incorrect": "Listen for the key words: \"technology and robotics\".",
+        "incorrectEs": "Escucha las palabras clave: \"technology and robotics\"."
+      },
+      "tags": [
+        "listening",
+        "technology",
+        "robotics"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-06",
+      "canDoId": "SP-A2-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "professional",
+      "level": "A2",
+      "title": "Say it",
+      "titleEs": "Dilo en voz alta",
+      "prompt": "Say: \"I am a technology and robotics teacher.\"",
+      "promptEs": "Di en voz alta: \"I am a technology and robotics teacher.\"",
+      "targetPhrase": "I am a technology and robotics teacher.",
+      "requiredTokens": [
+        "i",
+        "technology",
+        "robotics",
+        "teacher"
+      ],
+      "feedback": {
+        "correct": "Good. Your speech included the key information.",
+        "correctEs": "Bien. Tu respuesta incluyó la información clave.",
+        "partial": "Good start. Try again and include the missing key words.",
+        "partialEs": "Buen comienzo. Inténtalo otra vez e incluye las palabras clave que faltan.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "speaking",
+        "voice",
+        "profession"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-01-07",
+      "canDoId": "SP-A2-01",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "professional",
+      "level": "A2",
+      "title": "Make it yours",
+      "titleEs": "Hazlo tuyo",
+      "prompt": "Say or write 2–3 sentences about yourself: your job, what you work with, and one thing you enjoy.",
+      "promptEs": "Di o escribe 2–3 oraciones sobre ti: tu trabajo, con qué trabajas y una cosa que disfrutas.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. You produced a personal response.",
+        "readyEs": "Bien. Produjiste una respuesta personal.",
+        "short": "Add a little more. Include your job, what you work with, and one thing you enjoy.",
+        "shortEs": "Agrega un poco más. Incluye tu trabajo, con qué trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "speaking",
+        "production",
+        "professional"
+      ]
+    }
+  ]
+}
