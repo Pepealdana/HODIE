@@ -24,8 +24,10 @@ assert.equal(evaluateIntegratedStep(vocabulary, "Un estudiante").correct, false)
 const grammar = unit.steps[2];
 assert.equal(evaluateIntegratedStep(grammar, "build").correct, true);
 assert.equal(evaluateIntegratedStep(grammar, "builds").correct, false);
-assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").correct, true);
-assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").correct, true);
+assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").correct, null);
+assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").completed, true);
+assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").correct, null);
+assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").completed, true);
 
 let state = createIntegratedUnitState(unit);
 state = submitIntegratedStep(state, "Un sensor");
