@@ -4,23 +4,23 @@ function getIntegratedUnit(library, unitId) {
 
 function evaluateProduction(step, response) {
   const text = String(response ?? "").trim();
-  const words = text.split(/\\s+/).filter(Boolean);
+  const words = text.split(/\s+/).filter(Boolean);
   const minimumWords = step.kind === "write" ? 6 : 4;
   const sentences = text.split(/[.!?]+/).map((sentence) => sentence.trim()).filter(Boolean);
   const normalized = text.toLowerCase();
   const targetTerms = step.keyTerms || ["robot", "sensor", "build", "use", "students"];
   const matchedTerms = targetTerms.filter((term) => {
     const family = {
-      build: /\\bbuild(?:s|ing|t)?\\b/i,
-      use: /\\buse(?:s|d)?\\b/i,
-      student: /\\bstudents?\\b/i,
-      robot: /\\brobots?\\b/i,
-      sensor: /\\bsensors?\\b/i
+      build: /\bbuild(?:s|ing|t)?\b/i,
+      use: /\buse(?:s|d)?\b/i,
+      student: /\bstudents?\b/i,
+      robot: /\brobots?\b/i,
+      sensor: /\bsensors?\b/i
     };
-    return (family[term] || new RegExp("\\\\b" + term + "s?\\\\b", "i")).test(text);
+    return (family[term] || new RegExp("\\b" + term + "s?\\b", "i")).test(text);
   });
   const grammarIssues = [];
-  if (/\\bthe students\\s+(?:builds|uses|has|is|does)\\b/i.test(normalized)) {
+  if (/\bthe students\s+(?:builds|uses|has|is|does)\b/i.test(normalized)) {
     grammarIssues.push({
       id: "plural-subject",
       passed: false,
@@ -28,7 +28,7 @@ function evaluateProduction(step, response) {
       feedbackEs: "Con «the students», usa el verbo base: «The students build…»"
     });
   }
-  if (/\\bthe robot\\s+(?:build|use|have|are|do)\\b/i.test(normalized)) {
+  if (/\bthe robot\s+(?:build|use|have|are|do)\b/i.test(normalized)) {
     grammarIssues.push({
       id: "singular-subject",
       passed: false,
@@ -36,7 +36,7 @@ function evaluateProduction(step, response) {
       feedbackEs: "Con «the robot», recuerda la forma con -s: «The robot uses…»"
     });
   }
-  if (/\\bi\\s+is\\b/i.test(normalized)) {
+  if (/\bi\s+is\b/i.test(normalized)) {
     grammarIssues.push({
       id: "i-am",
       passed: false,
