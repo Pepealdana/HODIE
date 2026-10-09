@@ -32,7 +32,7 @@ function recordKnowledgeOutcome(profile = {}, outcome = {}) {
     canDoId: outcome.canDoId || null,
     skill: outcome.skill || inferSkill(outcome.mode),
     knowledgeIds: Array.isArray(outcome.knowledgeIds) ? [...new Set(outcome.knowledgeIds)] : [],
-    correct: Boolean(outcome.correct),
+    correct: outcome.correct === null ? null : Boolean(outcome.correct),
     score: Number.isFinite(outcome.score) ? Math.max(0, Math.min(1, outcome.score)) : 0,
     errors: Array.isArray(outcome.errors) ? outcome.errors : [],
     independent: Boolean(outcome.independent),
@@ -58,9 +58,9 @@ function summarizeLearningProfile(profile = {}, options = {}) {
   for (const item of profile.knowledgeEvidence || []) {
     for (const id of item.knowledgeIds || []) {
       const current = knowledgePerformance[id] || { attempts: 0, correct: 0, errors: 0, scoreTotal: 0, lastAt: null };
-      current.attempts += 1;
-      current.correct += item.correct ? 1 : 0;
-      current.errors += item.errors.length;
+      current.attempts += item.correct === null ? 0 : 1;
+      current.correct += item.correct === true ? 1 : 0;
+      current.errors += item.correct === false ? item.errors.length : 0;
       current.scoreTotal += item.score;
       current.lastAt = item.at;
       knowledgePerformance[id] = current;
