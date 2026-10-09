@@ -697,6 +697,7 @@ function startPractice(mode) {
 }
 
 function renderMicroActivity() {
+  practice.answered = false;
   const activity = practice.activities[practice.index];
   if (!activity) {
     finishPractice();
@@ -902,6 +903,10 @@ function bindTextAnswer() {
 }
 
 function evaluateCurrent(response) {
+  if (!practice || practice.answered) return;
+  practice.answered = true;
+  document.querySelectorAll("#microInteraction button, #microInteraction input, #microInteraction textarea")
+    .forEach((control) => { control.disabled = true; });
   const activity = practice.activities[practice.index];
   const result = evaluateMicroActivity(activity, response);
   practice.currentResponse = response;
@@ -1068,6 +1073,22 @@ function startSpeechRecognition(activity, onTranscript = null) {
 }
 
 function showSpeechFeedback(activity, message, messageEs) {
+  const experienceFeedback = document.querySelector("#experienceFeedback");
+  if (experienceFeedback) {
+    experienceFeedback.innerHTML = `
+      <div class="instant-feedback feedback-retry">
+        <strong>Voice input needs attention</strong>
+        <p>${escapeHtml(message)}</p>
+        <p class="spanish">${escapeHtml(messageEs)}</p>
+        <p>You can type your answer instead.</p>
+        <p class="spanish">Puedes escribir tu respuesta en lugar de usar la voz.</p>
+      </div>
+    `;
+    document.querySelector("#experienceTyping")?.setAttribute("open", "");
+    return;
+  }
+
+  if (!document.querySelector("#microFeedback")) return;
   showFeedback(activity, {
     correct: false,
     score: 0,
