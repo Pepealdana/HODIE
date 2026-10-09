@@ -578,3 +578,12 @@ html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .theme-toggle:hover { background: #202b3d; border-color: #8995a6; }
 [data-theme="dark"] .brand-mark .theme-logo-dark { display: block; }
 [data-theme="dark"] .brand-mark .theme-logo-light { display: none; }
+
+
+/* Dark-mode readability: disclosure headings */
+[data-theme="dark"] .choice-disclosure summary {
+  color: #f4f6f8;
+}
+[data-theme="dark"] .choice-disclosure summary::marker {
+  color: #e2b052;
+}
