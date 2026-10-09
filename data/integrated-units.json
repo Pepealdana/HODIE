@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "units": [
+    {
+      "id": "UNIT-A2-ROBOTICS-01",
+      "level": "A2",
+      "title": "A robotics project at school",
+      "titleEs": "Un proyecto de robótica en el colegio",
+      "canDoIds": [
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "knowledgeIds": [
+        "VOC-TECH-01",
+        "GRAM-SUBJECT-VERB-01",
+        "FUNC-DESCRIBE-PROJECT-01",
+        "PRON-INTELLIGIBILITY-01",
+        "FUNC-CLARIFY-01"
+      ],
+      "estimatedMinutes": 12,
+      "objective": "Describe a simple robotics project using familiar words and clear sentences.",
+      "objectiveEs": "Describe un proyecto sencillo de robótica usando palabras conocidas y oraciones claras.",
+      "steps": [
+        {
+          "id": "vocabulary",
+          "kind": "choose",
+          "skill": "vocabulary",
+          "title": "Meet the words",
+          "titleEs": "Conoce las palabras",
+          "instruction": "Choose the best Spanish meaning.",
+          "instructionEs": "Elige el significado correcto en español.",
+          "prompt": "A sensor",
+          "options": [
+            "Un sensor",
+            "Un estudiante",
+            "Una clase"
+          ],
+          "answer": "Un sensor",
+          "hint": "A sensor helps a robot detect something.",
+          "hintEs": "Un sensor ayuda a un robot a detectar algo.",
+          "explanation": "A sensor detects information, such as light or distance.",
+          "explanationEs": "Un sensor detecta información, como luz o distancia.",
+          "knowledgeIds": [
+            "VOC-TECH-01"
+          ]
+        },
+        {
+          "id": "reading",
+          "kind": "choose",
+          "skill": "reading",
+          "title": "Read about the project",
+          "titleEs": "Lee sobre el proyecto",
+          "instruction": "Read the text and answer the question.",
+          "instructionEs": "Lee el texto y responde la pregunta.",
+          "text": "Our students build a small robot. The robot uses a sensor to detect an object. The students test the robot and improve the project.",
+          "textEs": "Nuestros estudiantes construyen un robot pequeño. El robot usa un sensor para detectar un objeto. Los estudiantes prueban el robot y mejoran el proyecto.",
+          "prompt": "What does the robot use?",
+          "options": [
+            "A camera",
+            "A sensor",
+            "A computer teacher"
+          ],
+          "answer": "A sensor",
+          "hint": "Find the sentence that begins with “The robot…”.",
+          "hintEs": "Busca la oración que comienza con «The robot…».",
+          "explanation": "The text says: “The robot uses a sensor to detect an object.”",
+          "explanationEs": "El texto dice: «The robot uses a sensor to detect an object».",
+          "knowledgeIds": [
+            "VOC-TECH-01",
+            "FUNC-DESCRIBE-PROJECT-01"
+          ]
+        },
+        {
+          "id": "grammar",
+          "kind": "choose",
+          "skill": "grammar",
+          "title": "Notice the grammar",
+          "titleEs": "Observa la gramática",
+          "instruction": "Choose the sentence that agrees with the subject.",
+          "instructionEs": "Elige la oración que concuerda con el sujeto.",
+          "prompt": "The students ___ a robot.",
+          "options": [
+            "builds",
+            "build",
+            "building"
+          ],
+          "answer": "build",
+          "hint": "With “I / you / we / they” and plural nouns, use the base verb.",
+          "hintEs": "Con «I / you / we / they» y sujetos plurales, usa el verbo base.",
+          "explanation": "“Students” is plural, so we say “The students build”. For one student: “The student builds”.",
+          "explanationEs": "«Students» es plural, por eso decimos «The students build». Para un estudiante: «The student builds».",
+          "knowledgeIds": [
+            "GRAM-SUBJECT-VERB-01",
+            "VOC-TECH-01"
+          ]
+        },
+        {
+          "id": "writing",
+          "kind": "write",
+          "skill": "writing",
+          "title": "Write about a project",
+          "titleEs": "Escribe sobre un proyecto",
+          "instruction": "Write two or three short sentences about a robot or a technology project.",
+          "instructionEs": "Escribe dos o tres oraciones cortas sobre un robot o un proyecto de tecnología.",
+          "prompt": "What does your robot do? What does it use?",
+          "hint": "You can start with: “Our robot…” / “It uses…” / “The students build…”. Connect ideas with “and” or “because”.",
+          "hintEs": "Puedes comenzar con: «Our robot…» / «It uses…» / «The students build…». Une ideas con «and» o «because».",
+          "model": "Our robot uses a sensor. The students build it at school. It detects an object.",
+          "modelEs": "Nuestro robot usa un sensor. Los estudiantes lo construyen en el colegio. Detecta un objeto.",
+          "knowledgeIds": [
+            "VOC-TECH-01",
+            "GRAM-SUBJECT-VERB-01",
+            "FUNC-DESCRIBE-PROJECT-01"
+          ]
+        },
+        {
+          "id": "speaking",
+          "kind": "speak",
+          "skill": "speaking",
+          "title": "Explain your project",
+          "titleEs": "Explica tu proyecto",
+          "instruction": "Say or type two or three sentences about the project.",
+          "instructionEs": "Di o escribe dos o tres oraciones sobre el proyecto.",
+          "prompt": "Describe a robot or a project you would like to build.",
+          "hint": "Use at least two: robot, sensor, build, use, students. Speak slowly and pause between sentences.",
+          "hintEs": "Usa al menos dos: robot, sensor, build, use, students. Habla despacio y haz pausas entre oraciones.",
+          "model": "I want to build a robot. It uses a sensor. The students test it.",
+          "modelEs": "Quiero construir un robot. Usa un sensor. Los estudiantes lo prueban.",
+          "knowledgeIds": [
+            "VOC-TECH-01",
+            "GRAM-SUBJECT-VERB-01",
+            "FUNC-DESCRIBE-PROJECT-01",
+            "PRON-INTELLIGIBILITY-01"
+          ]
+        }
+      ]
+    }
+  ]
+}
