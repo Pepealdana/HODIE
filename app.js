@@ -554,7 +554,7 @@ function renderExperience() {
       }
     );
     const stopButton = document.querySelector("#experienceStopButton");
-    if (stopButton) stopButton.disabled = false;
+    if (stopButton) stopButton.disabled = !activeSpeechRecognition;
   });
   document.querySelector("#experienceStopButton")?.addEventListener("click", () => activeSpeechRecognition?.stop());
 }
@@ -946,6 +946,7 @@ function showFeedback(activity, result, response, options = {}) {
       <p>${escapeHtml(result.feedback || "")}</p>
       <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
       ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
+      ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
       ${result.corrections?.length ? `
         <div class="feedback-corrections">
           ${result.corrections.map((error) => `
