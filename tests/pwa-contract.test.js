@@ -38,7 +38,6 @@ assert.match(worker, /data\/integrated-units\.json/);
 assert.match(worker, /src\/knowledge-graph\.js/);
 assert.match(worker, /src\/learning-profile\.js/);
 assert.match(worker, /src\/integrated-unit\.js/);
-assert.match(worker, /registration\.update/); // app must request update on launch
 assert.match(app, /registration\.update\(\)/);
 assert.match(app, /updateViaCache:\s*"none"/);
 assert.doesNotMatch(worker, /assets\/icon\.svg/);
