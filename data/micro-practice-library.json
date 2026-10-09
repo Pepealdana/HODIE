@@ -1024,6 +1024,1215 @@
         "slowRate": 0.62,
         "language": "en-US"
       }
+    },
+    {
+      "id": "MIC-SP-A2-02-01",
+      "canDoId": "SP-A2-02",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "family",
+      "level": "A2",
+      "title": "Choose the family verb",
+      "titleEs": "Elige el verbo sobre la familia",
+      "prompt": "I ___ two sisters.",
+      "promptEs": "Yo ___ dos hermanas.",
+      "options": [
+        "have",
+        "has",
+        "am"
+      ],
+      "answer": "have",
+      "feedback": {
+        "correct": "Correct. Use have with I.",
+        "correctEs": "Correcto. Usa have con I.",
+        "incorrect": "With I, use have.",
+        "incorrectEs": "Con I, usa have."
+      },
+      "tags": [
+        "family",
+        "have",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "have",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "have",
+        "family"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-02-02",
+      "canDoId": "SP-A2-02",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "family",
+      "level": "A2",
+      "title": "Complete the family sentence",
+      "titleEs": "Completa la oración sobre la familia",
+      "prompt": "My parents ___ in Madrid.",
+      "promptEs": "Mis padres ___ en Madrid.",
+      "answer": "live",
+      "acceptableAnswers": [
+        "live"
+      ],
+      "feedback": {
+        "correct": "Correct. Use the base verb with the plural subject.",
+        "correctEs": "Correcto. Usa el verbo base con el sujeto plural.",
+        "incorrect": "Try again: My parents live in Madrid.",
+        "incorrectEs": "Inténtalo otra vez: My parents live in Madrid."
+      },
+      "tags": [
+        "family",
+        "present-simple",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "present-simple",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "present-simple",
+        "family"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-02-03",
+      "canDoId": "SP-A2-02",
+      "type": "order",
+      "skill": "grammar",
+      "context": "family",
+      "level": "A2",
+      "title": "Build a family sentence",
+      "titleEs": "Construye una oración sobre tu familia",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "My",
+        "family",
+        "is",
+        "small"
+      ],
+      "answer": [
+        "My",
+        "family",
+        "is",
+        "small"
+      ],
+      "feedback": {
+        "correct": "Correct. You made a simple sentence about your family.",
+        "correctEs": "Correcto. Construiste una oración sencilla sobre tu familia.",
+        "incorrect": "Start with the subject: My family...",
+        "incorrectEs": "Comienza con el sujeto: My family..."
+      },
+      "tags": [
+        "family",
+        "word-order",
+        "grammar"
+      ],
+      "errorType": "word-order",
+      "errorTarget": "sentence-order",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "sentence-order",
+        "family"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-02-04",
+      "canDoId": "SP-A2-02",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "family",
+      "level": "A2",
+      "title": "Match the family word",
+      "titleEs": "Relaciona la palabra de familia",
+      "prompt": "What does “my cousin” mean?",
+      "promptEs": "¿Qué significa “my cousin”?",
+      "options": [
+        "Mi primo o prima",
+        "Mi vecino",
+        "Mi profesor"
+      ],
+      "answer": "Mi primo o prima",
+      "feedback": {
+        "correct": "Correct. Cousin means primo or prima.",
+        "correctEs": "Correcto. Cousin significa primo o prima.",
+        "incorrect": "Cousin means primo or prima.",
+        "incorrectEs": "Cousin significa primo o prima."
+      },
+      "tags": [
+        "family",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "work-with",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "family",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-02-05",
+      "canDoId": "SP-A2-02",
+      "type": "listening",
+      "skill": "listening",
+      "context": "family",
+      "level": "A2",
+      "title": "Listen and identify family members",
+      "titleEs": "Escucha e identifica familiares",
+      "audioText": "I live with my parents and my younger sister.",
+      "prompt": "Who does the speaker live with?",
+      "promptEs": "¿Con quién vive la persona?",
+      "options": [
+        "My parents and younger sister",
+        "My friends",
+        "My grandparents"
+      ],
+      "answer": "My parents and younger sister",
+      "feedback": {
+        "correct": "Correct. The speaker lives with their parents and younger sister.",
+        "correctEs": "Correcto. La persona vive con sus padres y su hermana menor.",
+        "incorrect": "Listen for the family members.",
+        "incorrectEs": "Escucha cuáles familiares menciona."
+      },
+      "tags": [
+        "listening",
+        "family"
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening"
+    },
+    {
+      "id": "MIC-SP-A2-02-06",
+      "canDoId": "SP-A2-02",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "family",
+      "level": "A2",
+      "title": "Say something about your family",
+      "titleEs": "Di algo sobre tu familia",
+      "prompt": "Say: “I have a small family. I live with my parents.”",
+      "promptEs": "Di: “Tengo una familia pequeña. Vivo con mis padres.”",
+      "targetPhrase": "I have a small family. I live with my parents.",
+      "requiredTokens": [
+        "family",
+        "live",
+        "parents"
+      ],
+      "feedback": {
+        "correct": "Good. You included key information about your family.",
+        "correctEs": "Bien. Incluiste información clave sobre tu familia.",
+        "partial": "Try again and include family, live, and parents.",
+        "partialEs": "Inténtalo otra vez e incluye family, live y parents.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "speaking",
+        "family",
+        "voice"
+      ],
+      "errorType": "communication",
+      "errorTarget": "required-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "required-information",
+        "speaking"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "I have a small family. I live with my parents.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      },
+      "resources": []
+    },
+    {
+      "id": "MIC-SP-A2-02-07",
+      "canDoId": "SP-A2-02",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "family",
+      "level": "A2",
+      "title": "Describe your family",
+      "titleEs": "Describe tu familia",
+      "prompt": "Describe your family in two or three sentences.",
+      "promptEs": "Describe a tu familia en dos o tres oraciones.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. You produced a personal response.",
+        "readyEs": "Bien. Produjiste una respuesta personal.",
+        "short": "Add a little more. Include your job, what you work with, and one thing you enjoy.",
+        "shortEs": "Agrega un poco más. Incluye tu trabajo, con qué trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "speaking",
+        "family",
+        "production"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "family-members",
+            "label": "Mention one or more family members.",
+            "patterns": [
+              "\\b(my (mother|father|parents|sister|brother|family|wife|son|daughter|children|cousin))\\b",
+              "\\b(i live with)\\b"
+            ],
+            "missingMessage": "Mention a family member. For example: I live with my wife and children.",
+            "missingMessageEs": "Menciona un familiar. Por ejemplo: I live with my wife and children."
+          },
+          {
+            "id": "family-description",
+            "label": "Describe your family.",
+            "patterns": [
+              "\\b(my family is|we are|there are)\\b",
+              "\\b(small|big|large|friendly|close) family\\b"
+            ],
+            "missingMessage": "Add a short description of your family.",
+            "missingMessageEs": "Agrega una descripción breve de tu familia."
+          },
+          {
+            "id": "family-detail",
+            "label": "Add a detail about living together or a relationship.",
+            "patterns": [
+              "\\b(i live|we live|he lives|she lives|they live|we enjoy|we like)\\b"
+            ],
+            "missingMessage": "Add one detail about where or how your family lives.",
+            "missingMessageEs": "Agrega un detalle sobre dónde o cómo vive tu familia."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "family",
+        "speaking"
+      ],
+      "reviewPriority": "high",
+      "errorTarget": "family-description"
+    },
+    {
+      "id": "MIC-SP-A2-02-08",
+      "canDoId": "SP-A2-02",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "family",
+      "level": "A2",
+      "title": "Write about your family",
+      "titleEs": "Escribe sobre tu familia",
+      "prompt": "Write two or three sentences about your family.",
+      "promptEs": "Escribe dos o tres oraciones sobre tu familia.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. Your writing includes the key information for the task.",
+        "readyEs": "Bien. Tu texto incluye la información clave de la tarea.",
+        "short": "Revise your text and include your job, what or who you work with, and one thing you enjoy.",
+        "shortEs": "Revisa tu texto e incluye tu trabajo, con qué o con quién trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "writing",
+        "family",
+        "production"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "family-members",
+            "label": "Mention family members.",
+            "patterns": [
+              "\\b(my (mother|father|parents|sister|brother|family|wife|son|daughter|children|cousin))\\b",
+              "\\b(i live with)\\b"
+            ],
+            "missingMessage": "Mention a family member.",
+            "missingMessageEs": "Menciona un familiar."
+          },
+          {
+            "id": "family-description",
+            "label": "Describe your family.",
+            "patterns": [
+              "\\b(my family is|we are|there are)\\b",
+              "\\b(small|big|large|friendly|close) family\\b"
+            ],
+            "missingMessage": "Describe your family.",
+            "missingMessageEs": "Describe a tu familia."
+          },
+          {
+            "id": "family-detail",
+            "label": "Add one more detail.",
+            "patterns": [
+              "\\b(i live|we live|he lives|she lives|they live|we enjoy|we like)\\b"
+            ],
+            "missingMessage": "Add one more detail about your family.",
+            "missingMessageEs": "Agrega otro detalle sobre tu familia."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "family",
+        "writing"
+      ],
+      "reviewPriority": "high"
+    },
+    {
+      "id": "MIC-SP-A2-03-01",
+      "canDoId": "SP-A2-03",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the routine verb",
+      "titleEs": "Elige el verbo de rutina",
+      "prompt": "I ___ up at six o’clock.",
+      "promptEs": "Yo ___ a las seis.",
+      "options": [
+        "get",
+        "gets",
+        "am"
+      ],
+      "answer": "get",
+      "feedback": {
+        "correct": "Correct. Say “I get up”.",
+        "correctEs": "Correcto. Di “I get up”.",
+        "incorrect": "With I, say “I get up”.",
+        "incorrectEs": "Con I, di “I get up”."
+      },
+      "tags": [
+        "routine",
+        "present-simple",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "present-simple",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "routine",
+        "present-simple"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-03-02",
+      "canDoId": "SP-A2-03",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the routine",
+      "titleEs": "Completa la rutina",
+      "prompt": "I have breakfast ___ the morning.",
+      "promptEs": "Desayuno ___ la mañana.",
+      "answer": "in",
+      "acceptableAnswers": [
+        "in"
+      ],
+      "feedback": {
+        "correct": "Correct. We say “in the morning”.",
+        "correctEs": "Correcto. Decimos “in the morning”.",
+        "incorrect": "Use “in the morning”.",
+        "incorrectEs": "Usa “in the morning”."
+      },
+      "tags": [
+        "routine",
+        "time",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "preposition-time",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "routine",
+        "prepositions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-03-03",
+      "canDoId": "SP-A2-03",
+      "type": "order",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Build a routine sentence",
+      "titleEs": "Construye una oración sobre tu rutina",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "I",
+        "have",
+        "breakfast",
+        "at",
+        "seven"
+      ],
+      "answer": [
+        "I",
+        "have",
+        "breakfast",
+        "at",
+        "seven"
+      ],
+      "feedback": {
+        "correct": "Correct. You described part of your routine.",
+        "correctEs": "Correcto. Describiste parte de tu rutina.",
+        "incorrect": "Start with I and put the time at the end.",
+        "incorrectEs": "Comienza con I y coloca la hora al final."
+      },
+      "tags": [
+        "routine",
+        "word-order",
+        "grammar"
+      ],
+      "errorType": "word-order",
+      "errorTarget": "sentence-order",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "routine",
+        "sentence-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-03-04",
+      "canDoId": "SP-A2-03",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Match the routine phrase",
+      "titleEs": "Relaciona la expresión de rutina",
+      "prompt": "What does “get up” mean?",
+      "promptEs": "¿Qué significa “get up”?",
+      "options": [
+        "Levantarse",
+        "Almorzar",
+        "Acostarse"
+      ],
+      "answer": "Levantarse",
+      "feedback": {
+        "correct": "Correct. Get up means levantarse.",
+        "correctEs": "Correcto. Get up significa levantarse.",
+        "incorrect": "Get up means levantarse.",
+        "incorrectEs": "Get up significa levantarse."
+      },
+      "tags": [
+        "routine",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "work-with",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "routine",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-03-05",
+      "canDoId": "SP-A2-03",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen for the time",
+      "titleEs": "Escucha la hora",
+      "audioText": "I get up at six, have breakfast, and go to school at seven.",
+      "prompt": "When does the speaker get up?",
+      "promptEs": "¿A qué hora se levanta la persona?",
+      "options": [
+        "At six",
+        "At seven",
+        "At eight"
+      ],
+      "answer": "At six",
+      "feedback": {
+        "correct": "Correct. The speaker gets up at six.",
+        "correctEs": "Correcto. La persona se levanta a las seis.",
+        "incorrect": "Listen for the first time mentioned.",
+        "incorrectEs": "Escucha la primera hora mencionada."
+      },
+      "tags": [
+        "listening",
+        "routine"
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "time-information",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "time-information",
+        "listening"
+      ],
+      "primarySkill": "listening"
+    },
+    {
+      "id": "MIC-SP-A2-03-06",
+      "canDoId": "SP-A2-03",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Say your daily routine",
+      "titleEs": "Di tu rutina diaria",
+      "prompt": "Say: “I get up at six and go to work in the morning.”",
+      "promptEs": "Di: “Me levanto a las seis y voy al trabajo por la mañana.”",
+      "targetPhrase": "I get up at six and go to work in the morning.",
+      "requiredTokens": [
+        "get up",
+        "six",
+        "work",
+        "morning"
+      ],
+      "feedback": {
+        "correct": "Good. You included actions and time.",
+        "correctEs": "Bien. Incluiste acciones y una hora.",
+        "partial": "Try again and include your routine actions and time.",
+        "partialEs": "Inténtalo otra vez e incluye acciones de tu rutina y una hora.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "speaking",
+        "routine",
+        "voice"
+      ],
+      "errorType": "communication",
+      "errorTarget": "routine-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "routine",
+        "speaking"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "I get up at six and go to work in the morning.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      },
+      "resources": []
+    },
+    {
+      "id": "MIC-SP-A2-03-07",
+      "canDoId": "SP-A2-03",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Describe your daily routine",
+      "titleEs": "Describe tu rutina diaria",
+      "prompt": "Describe your daily routine in two or three sentences.",
+      "promptEs": "Describe tu rutina diaria en dos o tres oraciones.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. You produced a personal response.",
+        "readyEs": "Bien. Produjiste una respuesta personal.",
+        "short": "Add a little more. Include your job, what you work with, and one thing you enjoy.",
+        "shortEs": "Agrega un poco más. Incluye tu trabajo, con qué trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "speaking",
+        "routine",
+        "production"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "routine-start",
+            "label": "Mention when your routine starts.",
+            "patterns": [
+              "\\b(i get up|i wake up|i start my day)\\b"
+            ],
+            "missingMessage": "Say when your day starts.",
+            "missingMessageEs": "Di cuándo comienza tu día."
+          },
+          {
+            "id": "routine-activity",
+            "label": "Mention a daily activity.",
+            "patterns": [
+              "\\b(i have breakfast|i go to work|i teach|i study|i work|i go to school)\\b"
+            ],
+            "missingMessage": "Mention one daily activity.",
+            "missingMessageEs": "Menciona una actividad diaria."
+          },
+          {
+            "id": "routine-time",
+            "label": "Add a time or sequence word.",
+            "patterns": [
+              "\\b(at \\d|at six|at seven|in the morning|every day|then|after)\\b"
+            ],
+            "missingMessage": "Add a time or sequence word.",
+            "missingMessageEs": "Agrega una hora o una palabra de secuencia."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "routine",
+        "speaking"
+      ],
+      "reviewPriority": "high",
+      "errorTarget": "routine-description"
+    },
+    {
+      "id": "MIC-SP-A2-03-08",
+      "canDoId": "SP-A2-03",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Write about your daily routine",
+      "titleEs": "Escribe sobre tu rutina diaria",
+      "prompt": "Write two or three sentences about your daily routine.",
+      "promptEs": "Escribe dos o tres oraciones sobre tu rutina diaria.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. Your writing includes the key information for the task.",
+        "readyEs": "Bien. Tu texto incluye la información clave de la tarea.",
+        "short": "Revise your text and include your job, what or who you work with, and one thing you enjoy.",
+        "shortEs": "Revisa tu texto e incluye tu trabajo, con qué o con quién trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "writing",
+        "routine",
+        "production"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "routine-start",
+            "label": "Mention when your routine starts.",
+            "patterns": [
+              "\\b(i get up|i wake up|i start my day)\\b"
+            ],
+            "missingMessage": "Say when your day starts.",
+            "missingMessageEs": "Di cuándo comienza tu día."
+          },
+          {
+            "id": "routine-activity",
+            "label": "Mention a daily activity.",
+            "patterns": [
+              "\\b(i have breakfast|i go to work|i teach|i study|i work|i go to school)\\b"
+            ],
+            "missingMessage": "Mention one daily activity.",
+            "missingMessageEs": "Menciona una actividad diaria."
+          },
+          {
+            "id": "routine-time",
+            "label": "Add a time or sequence word.",
+            "patterns": [
+              "\\b(at \\d|at six|at seven|in the morning|every day|then|after)\\b"
+            ],
+            "missingMessage": "Add a time or sequence word.",
+            "missingMessageEs": "Agrega una hora o una palabra de secuencia."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "routine",
+        "writing"
+      ],
+      "reviewPriority": "high"
+    },
+    {
+      "id": "MIC-SP-A2-04-01",
+      "canDoId": "SP-A2-04",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Choose the preference verb",
+      "titleEs": "Elige el verbo de preferencia",
+      "prompt": "I enjoy ___ robots.",
+      "promptEs": "Disfruto ___ robots.",
+      "options": [
+        "building",
+        "build",
+        "builds"
+      ],
+      "answer": "building",
+      "feedback": {
+        "correct": "Correct. After enjoy, use -ing.",
+        "correctEs": "Correcto. Después de enjoy, usa -ing.",
+        "incorrect": "After enjoy, use the -ing form: building.",
+        "incorrectEs": "Después de enjoy, usa la forma -ing: building."
+      },
+      "tags": [
+        "preferences",
+        "verb-pattern",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "enjoy-ing",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "enjoy-ing",
+        "preferences"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-04-02",
+      "canDoId": "SP-A2-04",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Complete the preference",
+      "titleEs": "Completa la preferencia",
+      "prompt": "I like ___ to music.",
+      "promptEs": "Me gusta ___ música.",
+      "answer": "listening",
+      "acceptableAnswers": [
+        "listening"
+      ],
+      "feedback": {
+        "correct": "Correct. Say “I like listening to music”.",
+        "correctEs": "Correcto. Di “I like listening to music”.",
+        "incorrect": "Use the -ing form after like here.",
+        "incorrectEs": "Usa la forma -ing después de like en esta oración."
+      },
+      "tags": [
+        "preferences",
+        "verb-pattern",
+        "grammar"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "like-ing",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "like-ing",
+        "preferences"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-04-03",
+      "canDoId": "SP-A2-04",
+      "type": "order",
+      "skill": "grammar",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Build a sentence about dislikes",
+      "titleEs": "Construye una oración sobre lo que no te gusta",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "I",
+        "don't",
+        "like",
+        "getting",
+        "up",
+        "early"
+      ],
+      "answer": [
+        "I",
+        "don't",
+        "like",
+        "getting",
+        "up",
+        "early"
+      ],
+      "feedback": {
+        "correct": "Correct. You expressed a dislike.",
+        "correctEs": "Correcto. Expresaste algo que no te gusta.",
+        "incorrect": "Start with I and keep “don't like” together.",
+        "incorrectEs": "Comienza con I y mantén “don't like” unido."
+      },
+      "tags": [
+        "preferences",
+        "word-order",
+        "grammar"
+      ],
+      "errorType": "word-order",
+      "errorTarget": "sentence-order",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "preferences",
+        "sentence-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-04-04",
+      "canDoId": "SP-A2-04",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Match the preference",
+      "titleEs": "Relaciona la preferencia",
+      "prompt": "What does “I prefer reading” mean?",
+      "promptEs": "¿Qué significa “I prefer reading”?",
+      "options": [
+        "Prefiero leer",
+        "Necesito leer",
+        "Dejo de leer"
+      ],
+      "answer": "Prefiero leer",
+      "feedback": {
+        "correct": "Correct. Prefer means preferir.",
+        "correctEs": "Correcto. Prefer significa preferir.",
+        "incorrect": "“I prefer reading” means “Prefiero leer”.",
+        "incorrectEs": "“I prefer reading” significa “Prefiero leer”."
+      },
+      "tags": [
+        "preferences",
+        "vocabulary"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "work-with",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "preferences",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ]
+    },
+    {
+      "id": "MIC-SP-A2-04-05",
+      "canDoId": "SP-A2-04",
+      "type": "listening",
+      "skill": "listening",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Listen for likes and dislikes",
+      "titleEs": "Escucha gustos y disgustos",
+      "audioText": "I love reading, but I don't like cooking.",
+      "prompt": "What does the speaker dislike?",
+      "promptEs": "¿Qué cosa no le gusta a la persona?",
+      "options": [
+        "Reading",
+        "Cooking",
+        "Listening to music"
+      ],
+      "answer": "Cooking",
+      "feedback": {
+        "correct": "Correct. The speaker does not like cooking.",
+        "correctEs": "Correcto. A la persona no le gusta cocinar.",
+        "incorrect": "Listen for “I don't like”.",
+        "incorrectEs": "Escucha la expresión “I don't like”."
+      },
+      "tags": [
+        "listening",
+        "preferences"
+      ],
+      "errorType": "listening-comprehension",
+      "errorTarget": "preference-detail",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "preference-detail",
+        "listening"
+      ],
+      "primarySkill": "listening"
+    },
+    {
+      "id": "MIC-SP-A2-04-06",
+      "canDoId": "SP-A2-04",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Say what you like",
+      "titleEs": "Di lo que te gusta",
+      "prompt": "Say: “I like building robots, but I don't like getting up early.”",
+      "promptEs": "Di: “Me gusta construir robots, pero no me gusta levantarme temprano.”",
+      "targetPhrase": "I like building robots, but I don't like getting up early.",
+      "requiredTokens": [
+        "like",
+        "robots",
+        "don't like",
+        "early"
+      ],
+      "feedback": {
+        "correct": "Good. You expressed a like and a dislike.",
+        "correctEs": "Bien. Expresaste algo que te gusta y algo que no.",
+        "partial": "Try again and include both a like and a dislike.",
+        "partialEs": "Inténtalo otra vez e incluye algo que te gusta y algo que no.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "speaking",
+        "preferences",
+        "voice"
+      ],
+      "errorType": "communication",
+      "errorTarget": "preference-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "preferences",
+        "speaking"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "I like building robots, but I don't like getting up early.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      },
+      "resources": []
+    },
+    {
+      "id": "MIC-SP-A2-04-07",
+      "canDoId": "SP-A2-04",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Talk about your preferences",
+      "titleEs": "Habla de tus preferencias",
+      "prompt": "Say two or three sentences about things you like and dislike.",
+      "promptEs": "Di dos o tres oraciones sobre cosas que te gustan y no te gustan.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. You produced a personal response.",
+        "readyEs": "Bien. Produjiste una respuesta personal.",
+        "short": "Add a little more. Include your job, what you work with, and one thing you enjoy.",
+        "shortEs": "Agrega un poco más. Incluye tu trabajo, con qué trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "speaking",
+        "preferences",
+        "production"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "likes",
+            "label": "Mention something you like or enjoy.",
+            "patterns": [
+              "\\b(i like|i love|i enjoy|i prefer)\\b"
+            ],
+            "missingMessage": "Say one thing you like or enjoy.",
+            "missingMessageEs": "Di una cosa que te gusta o disfrutas."
+          },
+          {
+            "id": "dislikes",
+            "label": "Mention something you do not like.",
+            "patterns": [
+              "\\b(i don't like|i do not like|i dislike|i hate)\\b"
+            ],
+            "missingMessage": "Mention one thing you don't like.",
+            "missingMessageEs": "Menciona una cosa que no te gusta."
+          },
+          {
+            "id": "detail",
+            "label": "Connect your ideas or add a reason.",
+            "patterns": [
+              "\\b(because|but|and)\\b"
+            ],
+            "missingMessage": "Connect your ideas with but, and, or because.",
+            "missingMessageEs": "Conecta tus ideas con but, and o because."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "preferences",
+        "speaking"
+      ],
+      "reviewPriority": "high",
+      "errorTarget": "preference-description"
+    },
+    {
+      "id": "MIC-SP-A2-04-08",
+      "canDoId": "SP-A2-04",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "preferences",
+      "level": "A2",
+      "title": "Write about your preferences",
+      "titleEs": "Escribe sobre tus preferencias",
+      "prompt": "Write two or three sentences about things you like and dislike.",
+      "promptEs": "Escribe dos o tres oraciones sobre cosas que te gustan y no te gustan.",
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "feedback": {
+        "ready": "Good. Your writing includes the key information for the task.",
+        "readyEs": "Bien. Tu texto incluye la información clave de la tarea.",
+        "short": "Revise your text and include your job, what or who you work with, and one thing you enjoy.",
+        "shortEs": "Revisa tu texto e incluye tu trabajo, con qué o con quién trabajas y una cosa que disfrutas."
+      },
+      "tags": [
+        "writing",
+        "preferences",
+        "production"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 35,
+        "minimumCriteria": 3,
+        "practiceMinimumCriteria": 2,
+        "errorType": "task-completion",
+        "criteria": [
+          {
+            "id": "likes",
+            "label": "Mention something you like or enjoy.",
+            "patterns": [
+              "\\b(i like|i love|i enjoy|i prefer)\\b"
+            ],
+            "missingMessage": "Say one thing you like or enjoy.",
+            "missingMessageEs": "Di una cosa que te gusta o disfrutas."
+          },
+          {
+            "id": "dislikes",
+            "label": "Mention something you do not like.",
+            "patterns": [
+              "\\b(i don't like|i do not like|i dislike|i hate)\\b"
+            ],
+            "missingMessage": "Mention one thing you don't like.",
+            "missingMessageEs": "Menciona una cosa que no te gusta."
+          },
+          {
+            "id": "detail",
+            "label": "Connect your ideas or add a reason.",
+            "patterns": [
+              "\\b(because|but|and)\\b"
+            ],
+            "missingMessage": "Connect your ideas with but, and, or because.",
+            "missingMessageEs": "Conecta tus ideas con but, and o because."
+          }
+        ]
+      },
+      "reviewTargets": [
+        "preferences",
+        "writing"
+      ],
+      "reviewPriority": "high"
     }
   ]
 }
