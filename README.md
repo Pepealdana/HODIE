@@ -1119,6 +1119,21 @@ The final criterion remains actual learning progress.
         ├── Offline
         └── Accessibility
 
+### Current runnable scope (v1)
+
+The size of the Can-Do matrix is not the same as the amount of content already executable in the interface.
+
+- **Can-Do descriptors:** 133 in the matrix.
+- **Currently executable targets:** four A2 speaking targets, `SP-A2-01` through `SP-A2-04`.
+- **Micro-practice:** 47 activities across those four targets; each target has mixed, speaking, listening and writing practice.
+- **Conversation and simulation:** four rule-based experiences (one open conversation and three simulations).
+- **Persistence:** progress and resumable sessions are stored locally in the browser.
+- **Voice:** speech recognition depends on browser support and microphone permission; typing remains available as a fallback.
+- **AI:** the provider interface exists, but an AI service is not wired into the app.
+- **Not yet covered end-to-end:** the remaining 129 Can-Do descriptors, full B1 content coverage, and direct Reading/Pronunciation modes in the home interface.
+
+The app should not imply that all 133 descriptors are already fully teachable. Expand content and tests before marking additional Can-Dos as executable.
+
 ---
 
 ## 42. Architectural invariants
