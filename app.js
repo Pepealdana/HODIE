@@ -5,13 +5,16 @@ import { getStatus } from "./src/learning-engine.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 import { chooseLearningSurface } from "./src/learning-orchestrator.js";
+import { buildKnowledgeGraph, getKnowledgeForCanDo } from "./src/knowledge-graph.js";
+import { recordLearningEvent, summarizeLearningProfile } from "./src/learning-profile.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
   library: "./data/content-library.json",
   micro: "./data/micro-practice-library.json",
   experiences: "./data/experience-library.json",
-  contexts: "./data/learning-contexts.json"
+  contexts: "./data/learning-contexts.json",
+  knowledge: "./data/knowledge-library.json"
 };
 
 const STORAGE_KEY = "hodie-progress-v1";
@@ -31,7 +34,7 @@ let profile;
 let session;
 let practice = null;
 let experienceLibrary;
-let contextLibrary;
+let contextLibrary;\nlet knowledgeLibrary;\nlet knowledgeGraph;
 let experienceSession = null;
 let deferredInstallPrompt = null;
 
@@ -104,28 +107,28 @@ async function registerServiceWorker() {
 }
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
     fetch(DATA.micro),
     fetch(DATA.experiences),
     fetch(DATA.contexts)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
   library = await libraryResponse.json();
   microLibrary = await microResponse.json();
   experienceLibrary = await experienceResponse.json();
-  contextLibrary = await contextResponse.json();
+  contextLibrary = await contextResponse.json();\n  knowledgeLibrary = await knowledgeResponse.json();\n  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary);\n  if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
 }
 
 function loadProfile() {
   try {
-    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [] };
+    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [], learningHistory: [] };\n    if (!Array.isArray(profile.learningHistory)) profile.learningHistory = [];
   } catch {
-    profile = { evidence: [], reviews: [] };
+    profile = { evidence: [], reviews: [], learningHistory: [] };
   }
 }
 
