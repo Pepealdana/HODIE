@@ -78,6 +78,7 @@ function summarizeLearningProfile(profile = {}, options = {}) {
     skillCounts,
     modeCounts,
     resourceCounts,
+    knowledgePerformance,
     recentSkillCounts,
     lastActivityAt: history.at(-1)?.at || null
   };
