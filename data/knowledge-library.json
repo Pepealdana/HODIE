@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Shared knowledge nodes connect language resources, Can-Do objectives, and practice activities. Extend this library as HODIE content grows.",
+  "knowledge": [
+    {
+      "id": "VOC-PERSONAL-01",
+      "type": "vocabulary",
+      "level": "A2",
+      "label": "People and professional identity",
+      "labelEs": "Personas e identidad profesional",
+      "items": [
+        "teacher",
+        "student",
+        "technology teacher",
+        "robotics",
+        "work with",
+        "enjoy"
+      ],
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "listening",
+        "reading",
+        "communication"
+      ]
+    },
+    {
+      "id": "GRAM-BE-01",
+      "type": "grammar",
+      "level": "A2",
+      "label": "Verb be in introductions",
+      "labelEs": "Verbo be para presentarse",
+      "items": [
+        "I am",
+        "you are",
+        "he is",
+        "she is"
+      ],
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "communication"
+      ]
+    },
+    {
+      "id": "GRAM-ARTICLE-JOBS-01",
+      "type": "grammar",
+      "level": "A2",
+      "label": "Articles with professions",
+      "labelEs": "Artículos con profesiones",
+      "items": [
+        "a teacher",
+        "a student",
+        "an engineer"
+      ],
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "dependsOn": [
+        "VOC-PERSONAL-01"
+      ],
+      "transferTo": [
+        "speaking",
+        "writing"
+      ]
+    },
+    {
+      "id": "FUNC-INTRODUCE-01",
+      "type": "function",
+      "level": "A2",
+      "label": "Introduce yourself",
+      "labelEs": "Presentarse",
+      "items": [
+        "My name is…",
+        "I am a…",
+        "I work with…"
+      ],
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "resources": [
+        "vocabulary",
+        "grammar"
+      ],
+      "dependsOn": [
+        "VOC-PERSONAL-01",
+        "GRAM-BE-01",
+        "GRAM-ARTICLE-JOBS-01"
+      ],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "communication"
+      ]
+    },
+    {
+      "id": "VOC-FAMILY-01",
+      "type": "vocabulary",
+      "level": "A2",
+      "label": "Family and everyday life",
+      "labelEs": "Familia y vida cotidiana",
+      "items": [
+        "family",
+        "son",
+        "daughter",
+        "live",
+        "like"
+      ],
+      "canDoIds": [
+        "SP-A2-02"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "listening",
+        "reading"
+      ]
+    },
+    {
+      "id": "GRAM-PRESENT-SIMPLE-01",
+      "type": "grammar",
+      "level": "A2",
+      "label": "Present simple for routines and interests",
+      "labelEs": "Presente simple para rutinas e intereses",
+      "items": [
+        "I work",
+        "I like",
+        "he likes",
+        "she works"
+      ],
+      "canDoIds": [
+        "SP-A2-02",
+        "SP-A2-03"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "reading",
+        "listening"
+      ]
+    },
+    {
+      "id": "FUNC-DESCRIBE-01",
+      "type": "function",
+      "level": "A2",
+      "label": "Describe interests and routines",
+      "labelEs": "Describir intereses y rutinas",
+      "items": [
+        "I enjoy…",
+        "I usually…",
+        "In my free time…"
+      ],
+      "canDoIds": [
+        "SP-A2-02",
+        "SP-A2-03"
+      ],
+      "resources": [
+        "vocabulary",
+        "grammar"
+      ],
+      "dependsOn": [
+        "GRAM-PRESENT-SIMPLE-01"
+      ],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "communication"
+      ]
+    },
+    {
+      "id": "VOC-TECH-01",
+      "type": "vocabulary",
+      "level": "A2",
+      "label": "Technology and robotics",
+      "labelEs": "Tecnología y robótica",
+      "items": [
+        "robot",
+        "sensor",
+        "build",
+        "create",
+        "project",
+        "students"
+      ],
+      "canDoIds": [
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "listening",
+        "reading",
+        "communication"
+      ]
+    },
+    {
+      "id": "GRAM-SUBJECT-VERB-01",
+      "type": "grammar",
+      "level": "A2",
+      "label": "Subject–verb agreement",
+      "labelEs": "Concordancia sujeto-verbo",
+      "items": [
+        "The student builds",
+        "The students build"
+      ],
+      "canDoIds": [
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "dependsOn": [
+        "VOC-TECH-01"
+      ],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "reading"
+      ]
+    },
+    {
+      "id": "FUNC-DESCRIBE-PROJECT-01",
+      "type": "function",
+      "level": "A2",
+      "label": "Describe a project",
+      "labelEs": "Describir un proyecto",
+      "items": [
+        "We are building…",
+        "It uses a sensor",
+        "The robot can…"
+      ],
+      "canDoIds": [
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "resources": [
+        "vocabulary",
+        "grammar",
+        "pronunciation"
+      ],
+      "dependsOn": [
+        "VOC-TECH-01",
+        "GRAM-SUBJECT-VERB-01"
+      ],
+      "transferTo": [
+        "speaking",
+        "writing",
+        "reading",
+        "communication"
+      ]
+    },
+    {
+      "id": "PRON-INTELLIGIBILITY-01",
+      "type": "pronunciation",
+      "level": "A2",
+      "label": "Clear pronunciation of familiar phrases",
+      "labelEs": "Pronunciación clara de frases conocidas",
+      "items": [
+        "word stress",
+        "sentence rhythm",
+        "final sounds"
+      ],
+      "canDoIds": [
+        "SP-A2-01",
+        "SP-A2-02",
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "resources": [
+        "pronunciation"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "listening",
+        "communication"
+      ]
+    },
+    {
+      "id": "FUNC-CLARIFY-01",
+      "type": "function",
+      "level": "A2",
+      "label": "Ask for repetition or clarification",
+      "labelEs": "Pedir repetición o aclaración",
+      "items": [
+        "Could you repeat that?",
+        "What does … mean?",
+        "Can you speak more slowly?"
+      ],
+      "canDoIds": [
+        "SP-A2-01",
+        "SP-A2-02",
+        "SP-A2-03",
+        "SP-A2-04"
+      ],
+      "resources": [
+        "vocabulary",
+        "pronunciation"
+      ],
+      "dependsOn": [],
+      "transferTo": [
+        "speaking",
+        "listening",
+        "communication"
+      ]
+    }
+  ]
+}
