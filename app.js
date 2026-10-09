@@ -6,7 +6,7 @@ import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./sr
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 import { chooseLearningSurface } from "./src/learning-orchestrator.js";
 import { buildKnowledgeGraph, getKnowledgeForCanDo } from "./src/knowledge-graph.js";
-import { recordLearningEvent, summarizeLearningProfile } from "./src/learning-profile.js";
+import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile } from "./src/learning-profile.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -988,6 +988,19 @@ function showFeedback(activity, result, response, options = {}) {
     document.querySelector("#retryFinalButton")?.addEventListener("click", () => renderMicroActivity());
     return;
   }
+
+  profile = recordKnowledgeOutcome(profile, {
+    activityId: activity.id,
+    mode: practice.mode,
+    canDoId: activity.canDoId,
+    skill: activity.skill,
+    knowledgeIds: getKnowledgeForActivity(knowledgeGraph, activity).map((node) => node.id),
+    correct: success,
+    score: result.score,
+    errors: result.errors || [],
+    independent: true
+  });
+  saveProfile();
 
   practice.results.push({
     activityId: activity.id,
