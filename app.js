@@ -34,6 +34,7 @@ let experienceLibrary;
 let contextLibrary;
 let experienceSession = null;
 let deferredInstallPrompt = null;
+let activeSpeechRecognition = null;
 
 
 function applyTheme(theme) {
@@ -507,13 +508,23 @@ function renderExperience() {
         <p class="spanish">${escapeHtml(stage.promptEs)}</p>
       </div>
 
+      <details class="learning-hints" open>
+        <summary>Need help answering? <span class="spanish">¿Necesitas ayuda?</span></summary>
+        <div class="hint-content">
+          <p><strong>Sentence starters · Puedes comenzar así</strong></p>
+          <div class="hint-chips"><span>I am...</span><span>I work...</span><span>I teach...</span><span>I have...</span><span>I like...</span><span>I would like to...</span></div>
+          <p><strong>Connect your ideas · Une las ideas</strong></p>
+          <div class="hint-chips"><span>and = y</span><span>but = pero</span><span>because = porque</span><span>then = luego</span></div>
+          <details class="model-answer"><summary>Show an example · Ver ejemplo</summary><p>I am a technology teacher. I work at a school. I enjoy building robotics projects with students.</p><p class="spanish">Soy profesor de tecnología. Trabajo en un colegio. Disfruto construir proyectos de robótica con estudiantes.</p></details>
+        </div>
+      </details>
       <div class="conversation-response">
-        <button class="primary" id="experienceSpeakButton" type="button">🎙 Speak</button>
-        <details class="speak-fallback-details" id="experienceTyping">
-          <summary>Type your answer instead</summary>
-          <textarea id="experienceResponse" class="production-input" placeholder="Answer in English..."></textarea>
-          <button class="secondary compact" id="experienceCheckButton" type="button">Send answer</button>
-        </details>
+        <div class="actions voice-controls">
+          <button class="primary" id="experienceSpeakButton" type="button">🎙 Start speaking</button>
+          <button class="secondary compact" id="experienceStopButton" type="button" disabled>Stop recording</button>
+        </div>
+        <textarea id="experienceResponse" class="production-input" placeholder="You can type or edit your answer here..."></textarea>
+        <button class="secondary compact" id="experienceCheckButton" type="button">Send answer</button>
         <p class="spanish experience-note">This is open practice. HODIE checks useful signals and gives feedback; it does not require one exact answer.</p>
       </div>
 
@@ -540,10 +551,12 @@ function renderExperience() {
       (transcript) => {
         const input = document.querySelector("#experienceResponse");
         if (input) input.value = transcript;
-        submit(transcript);
       }
     );
+    const stopButton = document.querySelector("#experienceStopButton");
+    if (stopButton) stopButton.disabled = !activeSpeechRecognition;
   });
+  document.querySelector("#experienceStopButton")?.addEventListener("click", () => activeSpeechRecognition?.stop());
 }
 
 function handleExperienceResponse(experience, stage, response) {
@@ -813,6 +826,7 @@ function renderInteraction(activity) {
       <div class="speak-card">
         <p class="model-label">Model pronunciation</p>
         <p class="model-sentence">${escapeHtml(activity.targetPhrase)}</p>
+        ${activity.pronunciationHint ? `<div class="pronunciation-guide"><strong>How to read it · Cómo suena aproximadamente</strong><p>${escapeHtml(activity.pronunciationHint)}</p><small>Guía aproximada para hispanohablantes; escucha también el audio.</small></div>` : ""}
         <div class="audio-actions">
           <button class="secondary compact" id="normalAudioButton" type="button">▶ Listen</button>
           <button class="secondary compact" id="slowAudioButton" type="button">Slow</button>
@@ -863,6 +877,16 @@ function renderInteraction(activity) {
         </details>
       `}
 
+      <details class="learning-hints" open>
+        <summary>${isWriting ? "Help me build my answer" : "Help me prepare what to say"} <span class="spanish">Pistas para responder</span></summary>
+        <div class="hint-content">
+          <p><strong>Start with · Puedes comenzar con</strong></p>
+          <div class="hint-chips"><span>I am...</span><span>I work...</span><span>I teach...</span><span>I have...</span><span>I like...</span><span>I enjoy...</span></div>
+          <p><strong>Connect your ideas · Une las ideas</strong></p>
+          <div class="hint-chips"><span>and = y</span><span>but = pero</span><span>because = porque</span><span>then = luego</span></div>
+          <details class="model-answer"><summary>Show an example · Ver ejemplo</summary><p>I am a technology teacher. I work at a school. I enjoy building robotics projects with students.</p><p class="spanish">Soy profesor de tecnología. Trabajo en un colegio. Disfruto construir proyectos de robótica con estudiantes.</p></details>
+        </div>
+      </details>
       <p class="spanish requirement-note">
         Aim for 2–3 sentences. This is a guide for the task, not a measure of your English level.
       </p>
@@ -922,6 +946,7 @@ function showFeedback(activity, result, response, options = {}) {
       <p>${escapeHtml(result.feedback || "")}</p>
       <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
       ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
+      ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
       ${result.corrections?.length ? `
         <div class="feedback-corrections">
           ${result.corrections.map((error) => `
@@ -1025,15 +1050,17 @@ function startSpeechRecognition(activity, onTranscript = null) {
   };
 
   const recognition = new Recognition();
+  activeSpeechRecognition = recognition;
   recognition.lang = "en-US";
   recognition.interimResults = false;
+  recognition.continuous = button.id === "experienceSpeakButton";
   recognition.maxAlternatives = 1;
 
   button.textContent = "Listening...";
   button.disabled = true;
 
   recognition.onresult = (event) => {
-    const transcript = event.results?.[0]?.[0]?.transcript?.trim() || "";
+    const transcript = Array.from(event.results || []).map((result) => result?.[0]?.transcript || "").join(" ").trim();
     const fallback = document.querySelector("#speakFallback");
     if (fallback) fallback.value = transcript;
 
@@ -1055,8 +1082,16 @@ function startSpeechRecognition(activity, onTranscript = null) {
   recognition.onerror = handleRecognitionError;
 
   recognition.onend = () => {
-    button.textContent = "Speak";
-    button.disabled = false;
+    // Only the active recognizer may alter the currently visible controls.
+    if (activeSpeechRecognition !== recognition) return;
+
+    activeSpeechRecognition = null;
+    if (button.isConnected) {
+      button.textContent = button.id === "experienceSpeakButton" ? "🎙 Start speaking" : "Speak";
+      button.disabled = false;
+    }
+    const stopButton = document.querySelector("#experienceStopButton");
+    if (stopButton) stopButton.disabled = true;
   };
 
   try {
@@ -1067,8 +1102,11 @@ function startSpeechRecognition(activity, onTranscript = null) {
       "The microphone session could not start. Check browser permissions and try again.",
       "No se pudo iniciar la sesión del micrófono. Revisa los permisos del navegador e inténtalo de nuevo."
     );
-    button.textContent = "Speak";
+    activeSpeechRecognition = null;
+    button.textContent = button.id === "experienceSpeakButton" ? "🎙 Start speaking" : "Speak";
     button.disabled = false;
+    const stopButton = document.querySelector("#experienceStopButton");
+    if (stopButton) stopButton.disabled = true;
   }
 }
 

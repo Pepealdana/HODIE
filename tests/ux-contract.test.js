@@ -24,3 +24,11 @@ assert.match(app, /function evaluateCurrent\(response\) \{\s*if \(!practice \|\|
 assert.match(app, /practice\.answered = false;/);
 
 console.log("HODIE UX contract: PASS");
+
+assert.match(html, /name="google" content="notranslate"/);
+assert.match(html, /translate="no"/);
+assert.match(app, /learning-hints/);
+assert.match(app, /experienceStopButton/);
+assert.match(app, /What can I improve\?/);
+assert.match(app, /activity\.pronunciationHint/);
+console.log("HODIE learning-support and translation opt-out contract: PASS");

@@ -587,3 +587,23 @@ html[data-theme="dark"] body { background: #101827; }
 [data-theme="dark"] .choice-disclosure summary::marker {
   color: #e2b052;
 }
+
+
+/* Guided learning support */
+.learning-hints { border: 1px solid var(--line); border-radius: 14px; background: var(--surface-alt); padding: 13px 15px; }
+.learning-hints > summary, .model-answer > summary, .feedback-next-step > summary { cursor: pointer; font-weight: 800; }
+.learning-hints > summary .spanish { font-weight: 500; margin-left: .25rem; }
+.hint-content { display: grid; gap: 10px; padding-top: 13px; }
+.hint-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.hint-chips span { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 9px; padding: 6px 9px; background: var(--surface); font-size: .9rem; }
+.model-answer { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 7px; }
+.model-answer p { line-height: 1.55; }
+.voice-controls { align-items: center; }
+.conversation-response { display: grid; gap: 12px; }
+.conversation-response textarea { width: 100%; }
+.experience-note { font-size: .88rem; }
+.pronunciation-guide { display: grid; gap: 5px; margin: 12px 0; padding: 12px; border-left: 3px solid var(--gold); border-radius: 8px; background: var(--surface-alt); }
+.pronunciation-guide small { color: var(--muted); }
+.feedback-next-step { margin-top: 12px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.feedback-next-step p { margin-top: 8px; }
+@media (max-width: 520px) { .learning-hints { padding: 11px; } .hint-chips span { font-size: .84rem; } .voice-controls > button { flex: 1 1 auto; } }
