@@ -10,10 +10,40 @@ const mixed = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "mixed
 assert.equal(mixed.at(-1).type, "mini-production");
 assert.ok(mixed.some((item) => item.type === "listening"));
 assert.ok(mixed.some((item) => item.type === "speak"));
+assert.ok(mixed.some((item) => item.resources?.includes("grammar")));
+assert.ok(mixed.some((item) => item.resources?.includes("vocabulary")));
 
 const grammar = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 4 });
-assert.equal(grammar.at(-1).type, "mini-production");
-assert.ok(grammar.slice(0, -1).every((item) => item.skill === "grammar"));
+assert.ok(grammar.length >= 3);
+assert.ok(grammar.every((item) => item.resources?.includes("grammar")));
+assert.ok(grammar.every((item) => ["choose", "complete", "order", "match"].includes(item.type)));
+assert.ok(grammar.every((item) => item.type !== "mini-production"));
+
+const vocabulary = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "vocabulary", limit: 4 });
+assert.ok(vocabulary.length >= 2);
+assert.ok(vocabulary.every((item) => item.resources?.includes("vocabulary")));
+assert.ok(vocabulary.every((item) => ["choose", "complete", "order", "match"].includes(item.type)));
+assert.ok(vocabulary.every((item) => item.type !== "mini-production"));
+
+const listening = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "listening", limit: 4 });
+assert.equal(listening.length, 3);
+assert.ok(listening.every((item) => item.type === "listening"));
+assert.ok(listening.every((item) => item.skill === "listening"));
+
+const speaking = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 4 });
+assert.ok(speaking.length >= 2);
+assert.ok(speaking.every((item) => ["speak", "mini-production"].includes(item.type)));
+
+const writing = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "writing", limit: 4 });
+assert.equal(writing.length, 1);
+assert.equal(writing[0].type, "mini-production");
+assert.equal(writing[0].skill, "writing");
+assert.ok(writing[0].evaluation?.criteria?.length >= 3);
+
+const speakActivity = library.activities.find((item) => item.type === "speak");
+assert.equal(speakActivity.audioText, speakActivity.targetPhrase);
+assert.equal(speakActivity.audio?.language, "en-US");
+assert.ok(speakActivity.audio?.slowRate < speakActivity.audio?.normalRate);
 
 const correct = evaluateMicroActivity(library.activities[0], "am");
 assert.equal(correct.correct, true);
@@ -26,10 +56,60 @@ assert.equal(wrong.retryRecommended, true);
 const production = library.activities.find((item) => item.type === "mini-production");
 const short = evaluateMicroActivity(production, "I am a teacher.");
 assert.equal(short.correct, false);
+assert.ok(short.errors.length >= 1);
 const enough = evaluateMicroActivity(
   production,
   "I am a technology teacher. I work with students and I enjoy programming."
 );
 assert.equal(enough.correct, true);
+assert.equal(enough.errors.length, 0);
+
+const nonsense = evaluateMicroActivity(production, "this is my app english");
+assert.equal(nonsense.correct, false);
+assert.ok(nonsense.errors.some((error) => error.target === "profession"));
+
+// Every target exposed by the current A2 speaking vertical slice must have executable practice.
+for (const [canDoId, productionResponse] of [
+  ["SP-A2-01", "I am a technology teacher. I work with students and I enjoy programming."],
+  ["SP-A2-02", "My family is small. I live with my parents and my sister."],
+  ["SP-A2-03", "I get up at six. I have breakfast and I go to work in the morning."],
+  ["SP-A2-04", "I like building robots, but I don't like getting up early because I am tired."]
+]) {
+  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId);
+  assert.ok(targetActivities.length >= 7, `Missing micro-practice coverage for ${canDoId}`);
+  const targetMixed = selectMicroActivities(library, { canDoId, mode: "mixed", limit: 6 });
+  assert.equal(targetMixed.length, 6, `Mixed practice should be available for ${canDoId}`);
+  assert.equal(targetMixed.at(-1).type, "mini-production", `Production should finish mixed practice for ${canDoId}`);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "listening", limit: 4 }).length >= 1);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "speaking", limit: 4 }).length >= 1);
+  assert.ok(selectMicroActivities(library, { canDoId, mode: "writing", limit: 4 }).length >= 1);
+  const productionActivity = targetActivities.find((item) => item.type === "mini-production" && item.skill === "speaking");
+  assert.ok(productionActivity, `Missing speaking production for ${canDoId}`);
+  assert.equal(evaluateMicroActivity(productionActivity, productionResponse).correct, true, `Expected sample response to satisfy ${canDoId}`);
+}
 
 console.log("HODIE Micro Practice Engine: PASS");
+
+
+const grammarActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 6 });
+assert.ok(grammarActivities.length >= 6);
+
+const writingActivity = library.activities.find((item) => item.skill === "writing" && item.type === "mini-production");
+const writingErrors = evaluateMicroActivity(
+  writingActivity,
+  "I am teacher. I work with students. I enjoy to read books. My students is very important."
+);
+assert.equal(writingErrors.correct, true);
+assert.ok(writingErrors.errors.some((error) => error.target === "article"));
+const workPlaceErrors = evaluateMicroActivity(
+  writingActivity,
+  "I am a teacher. I work on a school and I enjoy reading."
+);
+assert.ok(workPlaceErrors.errors.some((error) => error.target === "work-place"));
+assert.ok(writingErrors.errors.some((error) => error.target === "enjoy-ing"));
+assert.ok(writingErrors.corrections.length >= 1);
+assert.equal(writingErrors.retryRecommended, false);
+
+const speakingActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 6 });
+assert.ok(speakingActivities.length >= 2);
+assert.ok(speakingActivities.every((item) => ["speak", "mini-production"].includes(item.type)));

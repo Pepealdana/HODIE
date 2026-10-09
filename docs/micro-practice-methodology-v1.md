@@ -1,4 +1,4 @@
-# HODIE Micro-Practice Methodology v1
+# HODIE Micro-Practice Methodology v2
 
 ## Purpose
 
@@ -58,7 +58,7 @@ HODIE can:
 4. review a retention need;
 5. finish with a short integrated demonstration when evidence is appropriate.
 
-The default should be **Mixed**.
+The default should be **Mixed**. Review is a separate evidence-driven mode.
 
 ## Immediate feedback
 
@@ -163,3 +163,45 @@ Micro-practice provides action and diagnostic signals. The existing evidence bou
 HODIE should minimize interface friction without minimizing pedagogical depth.
 
 **Less clicking. More English.**
+
+
+## Practice taxonomy
+
+HODIE separates four concepts:
+
+1. Mode: Mixed or Review.
+2. Focus: Speaking, Listening, Reading, Writing or Communication.
+3. Resource: Grammar, Vocabulary or Pronunciation.
+4. Activity mechanic: choose, complete, order, match, listening, speak, interaction, repair, reading, writing or mini-production.
+
+A resource focus must remain contextual. Grammar and vocabulary are not treated as equivalent to communicative skills.
+
+## Error and feedback loop
+
+A failed response produces structured error data when possible.
+
+The correction flow is:
+
+response → evaluation → error classification → priority → feedback → retry or variation
+
+Feedback has three levels:
+
+- instant: confirm or correct the response;
+- targeted: explain what, why and the better version;
+- summary: identify the main strength and next action.
+
+The learner should normally receive no more than two priority corrections at once.
+
+## Production criteria
+
+Free production is evaluated with observable criteria. Character count can guide task completion but cannot by itself determine Can-Do competence.
+
+Example criteria for an introduction:
+
+- say what you do;
+- say where or with whom you work;
+- express one preference or interest.
+
+## Confidence versus performance
+
+Confidence remains a diagnostic dimension. Adequate independent performance can be functional even when confidence is below the consolidation threshold.

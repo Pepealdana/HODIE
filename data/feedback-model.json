@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "HODIE Feedback Model v1",
+  "principle": "Feedback should improve the next attempt, not merely explain the previous one.",
+  "levels": {
+    "instant": {
+      "when": "Deterministic micro-activity is evaluated.",
+      "content": ["correct-or-incorrect", "correction-or-confirmation"],
+      "maxPriorityCorrections": 1
+    },
+    "targeted": {
+      "when": "A meaningful error is detected.",
+      "content": ["what", "why", "betterVersion", "retry"],
+      "maxPriorityCorrections": 2
+    },
+    "summary": {
+      "when": "A practice set or integrated demonstration ends.",
+      "content": ["strength", "priorityGap", "nextAction", "retentionOrRecovery"],
+      "maxPriorityCorrections": 2
+    }
+  },
+  "languagePolicy": {
+    "A2": { "interface": "Spanish support", "practice": "English", "feedback": "English first with Spanish explanation when useful" },
+    "A2+": { "interface": "English first", "practice": "English", "feedback": "English first with Spanish support" },
+    "B1": { "interface": "English first", "practice": "English", "feedback": "English first; Spanish only when it materially improves understanding" }
+  },
+  "retryRules": {
+    "immediateRetry": ["critical", "high", "task-completion"],
+    "optionalRetry": ["medium"],
+    "defer": ["low"],
+    "fluencyException": "During fluent production, do not interrupt for low-impact form errors.",
+    "maxAttemptsBeforeVariation": 2,
+    "afterRepeatedFailure": "Switch activity type or reduce support before asking for the same response again."
+  },
+  "correctionPrinciples": [
+    "Correct meaning-blocking errors first.",
+    "Do not overwhelm A2 learners with every possible error.",
+    "Keep explanations concrete and short.",
+    "Always distinguish error from confidence.",
+    "Do not treat a task constraint such as minimum characters as CEFR evidence.",
+    "When possible, make the learner produce the corrected form."
+  ]
+}

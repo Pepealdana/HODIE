@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "HODIE Error Model v1",
+  "purpose": "Represent learner errors consistently so HODIE can explain, prioritize, retry and route recovery.",
+  "severity": {
+    "critical": "Blocks the task or substantially changes meaning.",
+    "high": "Important error that should normally trigger targeted correction.",
+    "medium": "Useful correction but not a reason to interrupt fluent production.",
+    "low": "Minor form or style issue suitable for later review."
+  },
+  "types": ["grammar", "vocabulary", "word-order", "pronunciation", "fluency", "listening-comprehension", "reading-comprehension", "writing", "communication", "task-completion", "confidence"],
+  "errorSchema": {
+    "id": "Stable error occurrence identifier.",
+    "type": "Error category.",
+    "target": "Specific language feature or communicative target.",
+    "actual": "Observed learner response.",
+    "expected": "Expected response or feature.",
+    "severity": "critical|high|medium|low.",
+    "priority": "critical|high|medium|low.",
+    "message": "Short English explanation.",
+    "messageEs": "Spanish support explanation.",
+    "correction": "Useful corrected form when available.",
+    "examples": "Short examples showing correct use.",
+    "retry": "Whether immediate retry is recommended.",
+    "contextId": "Context in which the error occurred."
+  },
+  "priorityRules": [
+    "Prioritize errors that block task completion.",
+    "Prioritize errors that prevent the learner from expressing the Can-Do.",
+    "Prefer one or two high-value corrections over exhaustive correction.",
+    "Do not interrupt fluency practice for low-impact form errors.",
+    "Repeated errors increase review priority.",
+    "A correction should lead to an action whenever retry is pedagogically useful."
+  ],
+  "feedbackSequence": ["acknowledge", "show-correction", "explain-why", "give-example", "retry-or-continue"]
+}

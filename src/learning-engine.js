@@ -82,12 +82,13 @@ function getStatus(canDo, profile) {
 
   const normalized = history.map(normalizeEvidence);
   const independent = normalized.filter((e) =>
-    e.independent && evidenceScore(e) >= SUCCESS_SCORE_MIN && e.confidence >= MASTERY_CONFIDENCE_MIN
+    e.independent && evidenceScore(e) >= SUCCESS_SCORE_MIN
   );
+  const masteryEligible = independent.filter((e) => e.confidence >= MASTERY_CONFIDENCE_MIN);
   const contexts = new Set(independent.map((e) => e.contextId));
   const latest = normalized[normalized.length - 1];
 
-  if (independent.length >= 2 && contexts.size >= 2) {
+  if (masteryEligible.length >= 2 && new Set(masteryEligible.map((e) => e.contextId)).size >= 2) {
     if (latest.level === "transfer" || normalized.some((e) => e.level === "transfer")) {
       return "transferred";
     }
