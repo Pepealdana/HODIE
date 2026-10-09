@@ -1082,8 +1082,7 @@ function startSpeechRecognition(activity, onTranscript = null) {
   recognition.onerror = handleRecognitionError;
 
   recognition.onend = () => {
-    // A stale recognizer may end after the learner has opened another screen.
-    // It must not change the controls of a newer active recording.
+    // Only the active recognizer may alter the currently visible controls.
     if (activeSpeechRecognition !== recognition) return;
 
     activeSpeechRecognition = null;
