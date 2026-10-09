@@ -3,6 +3,7 @@ import { evaluateProgression, getRetentionProfile } from "./progression-retentio
 import { selectExperiences } from "./experience-engine.js";
 import { getTopErrors } from "./error-memory.js";
 import { selectLearningContext } from "./learning-context.js";
+import { recommendBalancedMode } from "./learning-profile.js";
 
 function countRecentErrors(profile = {}, limit = 6) {
   return (profile.evidence || []).slice(-limit).reduce(
@@ -52,6 +53,26 @@ function chooseLearningSurface(matrix, experienceLibrary, profile = {}, options 
     };
   }
 
+  const history = Array.isArray(profile.learningHistory) ? profile.learningHistory : [];
+  const recentModes = history.slice(-4).map((event) => event.mode);
+  const repeatedFocus = recentModes.length >= 3 &&
+    recentModes.every((mode) => mode === recentModes[0]) &&
+    ["speaking", "listening", "writing", "grammar", "vocabulary"].includes(recentModes[0]);
+
+  if (repeatedFocus) {
+    const balancedMode = recommendBalancedMode(profile, options.availableModes || ["mixed", "speaking", "listening", "writing", "grammar", "vocabulary"]);
+    if (balancedMode && balancedMode !== recentModes[0]) {
+      return {
+        surface: "practice",
+        mode: balancedMode,
+        level,
+        context,
+        reason: "You have practised " + recentModes[0] + " several times in a row. This activity adds variety and helps transfer knowledge to another skill.",
+        balance: { previousMode: recentModes[0], recommendedMode: balancedMode },
+        connectedKnowledge: (options.knowledgeGraph?.nodes || []).filter((node) => node.canDoIds?.some((id) => history.slice(-4).some((event) => event.canDoId === id))).map((node) => node.id)
+      };
+    }
+  }
   const conversation = selectExperiences(
     experienceLibrary,
     { kind: "conversation", level, context }

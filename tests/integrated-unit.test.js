@@ -1,0 +1,52 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { getIntegratedUnit, evaluateIntegratedStep, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit } from "../src/integrated-unit.js";
+import { buildKnowledgeGraph } from "../src/knowledge-graph.js";
+
+const read = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), "utf8"));
+const unitLibrary = read("../data/integrated-units.json");
+const matrix = read("../data/can-do-matrix.json");
+const micro = read("../data/micro-practice-library.json");
+const content = read("../data/content-library.json");
+const knowledgeLibrary = read("../data/knowledge-library.json");
+const graph = buildKnowledgeGraph(matrix, micro, content, knowledgeLibrary);
+const unit = getIntegratedUnit(unitLibrary, "UNIT-A2-ROBOTICS-01");
+assert.ok(unit, "The integrated A2 robotics unit must exist.");
+assert.equal(unit.steps.length, 5);
+assert.deepEqual(unit.steps.map((step) => step.skill), ["vocabulary", "reading", "grammar", "writing", "speaking"]);
+assert.ok(unit.canDoIds.every((id) => matrix.canDos.some((item) => item.id === id)));
+assert.ok(unit.knowledgeIds.every((id) => graph.nodes.some((node) => node.id === id)), "Every unit knowledge reference must exist in the knowledge graph.");
+assert.ok(unit.steps.every((step) => step.knowledgeIds.every((id) => unit.knowledgeIds.includes(id))), "Each step must reuse knowledge declared by the unit.");
+
+const vocabulary = unit.steps[0];
+assert.equal(evaluateIntegratedStep(vocabulary, "Un sensor").correct, true);
+assert.equal(evaluateIntegratedStep(vocabulary, "Un estudiante").correct, false);
+const grammar = unit.steps[2];
+assert.equal(evaluateIntegratedStep(grammar, "build").correct, true);
+assert.equal(evaluateIntegratedStep(grammar, "builds").correct, false);
+assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").correct, null);
+assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").completed, true);
+assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").correct, null);
+assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").completed, true);
+
+let state = createIntegratedUnitState(unit);
+state = submitIntegratedStep(state, "Un sensor");
+assert.equal(state.results.length, 1);
+assert.equal(state.lastResult.correct, true);
+state = advanceIntegratedStep(state);
+assert.equal(state.index, 1);
+state = submitIntegratedStep(state, "A sensor");
+state = advanceIntegratedStep(state);
+state = submitIntegratedStep(state, "build");
+state = advanceIntegratedStep(state);
+state = submitIntegratedStep(state, "Our robot uses a sensor. The students build it.");
+state = advanceIntegratedStep(state);
+state = submitIntegratedStep(state, "I want to build a robot.");
+state = advanceIntegratedStep(state);
+assert.equal(state.complete, true);
+const summary = summarizeIntegratedUnit(state);
+assert.equal(summary.completedSteps, 5);
+assert.equal(summary.totalSteps, 5);
+assert.ok(summary.skills.includes("reading") && summary.skills.includes("speaking"));
+
+console.log("HODIE Integrated A2 Robotics Unit: PASS");

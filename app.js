@@ -5,13 +5,18 @@ import { getStatus } from "./src/learning-engine.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 import { chooseLearningSurface } from "./src/learning-orchestrator.js";
+import { buildKnowledgeGraph, getKnowledgeForCanDo } from "./src/knowledge-graph.js";
+import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile } from "./src/learning-profile.js";
+import { getIntegratedUnit, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit } from "./src/integrated-unit.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
   library: "./data/content-library.json",
   micro: "./data/micro-practice-library.json",
   experiences: "./data/experience-library.json",
-  contexts: "./data/learning-contexts.json"
+  contexts: "./data/learning-contexts.json",
+  knowledge: "./data/knowledge-library.json",
+  units: "./data/integrated-units.json"
 };
 
 const STORAGE_KEY = "hodie-progress-v1";
@@ -19,6 +24,7 @@ const SESSION_KEY = "hodie-session-v1";
 const PRACTICE_STATE_KEY = "hodie-practice-v1";
 const EXPERIENCE_STATE_KEY = "hodie-experience-v1";
 const THEME_KEY = "hodie-theme-v1";
+const INTEGRATED_UNIT_STATE_KEY = "hodie-integrated-unit-v1";
 
 const app = document.querySelector("#app");
 const levelBadge = document.querySelector("#levelBadge");
@@ -32,6 +38,10 @@ let session;
 let practice = null;
 let experienceLibrary;
 let contextLibrary;
+let knowledgeLibrary;
+let knowledgeGraph;
+let integratedUnitLibrary;
+let integratedUnitState = null;
 let experienceSession = null;
 let deferredInstallPrompt = null;
 let activeSpeechRecognition = null;
@@ -105,14 +115,16 @@ async function registerServiceWorker() {
 }
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse, unitsResponse] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
     fetch(DATA.micro),
     fetch(DATA.experiences),
-    fetch(DATA.contexts)
+    fetch(DATA.contexts),
+    fetch(DATA.knowledge),
+    fetch(DATA.units)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok || !unitsResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
@@ -120,13 +132,18 @@ async function loadData() {
   microLibrary = await microResponse.json();
   experienceLibrary = await experienceResponse.json();
   contextLibrary = await contextResponse.json();
+  knowledgeLibrary = await knowledgeResponse.json();
+  integratedUnitLibrary = await unitsResponse.json();
+  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary);
+  if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
 }
 
 function loadProfile() {
   try {
-    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [] };
+    profile = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { evidence: [], reviews: [], learningHistory: [] };
+    if (!Array.isArray(profile.learningHistory)) profile.learningHistory = [];
   } catch {
-    profile = { evidence: [], reviews: [] };
+    profile = { evidence: [], reviews: [], learningHistory: [] };
   }
 }
 
@@ -238,7 +255,9 @@ function renderPracticeHome() {
     level,
     context: "professional",
     contextLibrary,
-    contextTerms: ["technology", "teaching", "professional"]
+    contextTerms: ["technology", "teaching", "professional"],
+    knowledgeGraph,
+    availableModes: ["mixed", "speaking", "listening", "writing", "grammar", "vocabulary"]
   });
 
   // First-time users should enter through the core practice loop.
@@ -317,6 +336,14 @@ function renderPracticeHome() {
           <p class="spanish">${escapeHtml(recommended.reason)}</p>
         </div>
         <button class="primary" id="recommendedLearningButton" type="button">Start practice <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="integrated-unit-card" aria-label="Integrated learning unit">
+        <p class="kicker">Learn and reuse</p>
+        <h3>A robotics project at school</h3>
+        <p class="spanish">Aprende vocabulario, lee, observa la gramática, escribe y habla sobre el mismo tema.</p>
+        <p>One connected unit · ${getIntegratedUnit(integratedUnitLibrary, "UNIT-A2-ROBOTICS-01")?.steps.length || 0} steps · about 12 minutes</p>
+        <button class="primary" id="startIntegratedUnitButton" type="button">Start integrated unit →</button>
       </section>
 
       <section class="quick-choices" aria-label="Other ways to practice">
@@ -405,6 +432,13 @@ function renderPracticeHome() {
         <span>Use English first. Feedback helps you improve.</span>
       </aside>
 
+      <section class="shared-knowledge-summary" aria-label="Shared learning knowledge">
+        <p class="kicker">Connected learning</p>
+        <strong>${knowledgeGraph?.nodes.length || 0} knowledge links</strong>
+        <p class="spanish">Vocabulary, grammar, communication functions and pronunciation connect to Can-Do goals and practice activities.</p>
+        <small>${summarizeLearningProfile(profile).totalActivities} practice starts tracked · ${knowledgeGraph?.valid ? "knowledge links validated" : "knowledge links need review"}</small>
+      </section>
+
       <div class="home-progress">
         ${renderProgress()}
       </div>
@@ -412,6 +446,7 @@ function renderPracticeHome() {
   `;
 
   document.querySelector("#recommendedLearningButton").addEventListener("click", recommendedAction);
+  document.querySelector("#startIntegratedUnitButton")?.addEventListener("click", startIntegratedUnit);
 
   document.querySelectorAll("[data-primary-mode]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -440,6 +475,83 @@ function renderPracticeHome() {
   document.querySelector("#resumeExperienceButton")?.addEventListener("click", renderExperience);
 }
 
+function startIntegratedUnit() {
+  const unit = getIntegratedUnit(integratedUnitLibrary, "UNIT-A2-ROBOTICS-01");
+  if (!unit) { renderError(new Error("Integrated unit not found.")); return; }
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(INTEGRATED_UNIT_STATE_KEY)); } catch { saved = null; }
+  integratedUnitState = createIntegratedUnitState(unit, saved);
+  if (integratedUnitState.complete) integratedUnitState = createIntegratedUnitState(unit);
+  profile = recordLearningEvent(profile, { mode: "mixed", surface: "integrated-unit", skill: "integrated", canDoId: unit.canDoIds[0], knowledgeIds: unit.knowledgeIds });
+  saveProfile();
+  saveIntegratedUnitState();
+  renderIntegratedUnitStep();
+}
+
+function saveIntegratedUnitState() {
+  if (integratedUnitState) localStorage.setItem(INTEGRATED_UNIT_STATE_KEY, JSON.stringify({ unitId: integratedUnitState.unitId, index: integratedUnitState.index, results: integratedUnitState.results, responses: integratedUnitState.responses, complete: integratedUnitState.complete }));
+}
+
+function renderIntegratedUnitStep() {
+  const state = integratedUnitState;
+  if (!state?.unit) { renderPracticeHome(); return; }
+  if (state.complete) { renderIntegratedUnitComplete(); return; }
+  const step = state.unit.steps[state.index];
+  const previous = state.lastResult?.stepId === step.id ? state.lastResult : null;
+  const choiceStep = step.kind === "choose";
+  app.innerHTML = `
+    <section class="card integrated-unit-session">
+      <button class="secondary compact" id="integratedUnitExitButton" type="button">← Back to learning</button>
+      <p class="kicker">Integrated unit · Step ${state.index + 1} of ${state.unit.steps.length}</p>
+      <h2>${escapeHtml(step.title)}</h2>
+      <p class="spanish">${escapeHtml(step.titleEs)}</p>
+      <p>${escapeHtml(step.instruction)}</p>
+      <p class="spanish">${escapeHtml(step.instructionEs)}</p>
+      ${step.text ? `<div class="reading-passage"><p>${escapeHtml(step.text)}</p><p class="spanish">${escapeHtml(step.textEs || "")}</p></div>` : ""}
+      <h3>${escapeHtml(step.prompt)}</h3>
+      ${choiceStep ? `<div class="integrated-unit-options">${step.options.map((option) => `<button type="button" class="secondary integrated-option" data-unit-answer="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}</div>` : `<label for="integratedUnitResponse">${step.kind === "speak" ? "Your answer (type or use the microphone)" : "Your answer"}</label><textarea id="integratedUnitResponse" rows="4" placeholder="Write your answer in English...">${escapeHtml(state.responses[step.id] || "")}</textarea>${step.kind === "speak" ? `<button class="secondary compact" id="integratedUnitMicButton" type="button">Use microphone</button>` : ""}`}
+      <details class="learning-hint" open><summary>Hint / Ayuda</summary><p>${escapeHtml(step.hint)}</p><p class="spanish">${escapeHtml(step.hintEs || "")}</p></details>
+      ${previous ? `<div class="instant-feedback ${previous.correct === null ? "feedback-neutral" : previous.correct ? "feedback-success" : "feedback-retry"}"><strong>${previous.correct === null ? "Response saved · compare with the example" : previous.correct ? "Good work" : "Keep practising"}</strong><p>${escapeHtml(previous.feedback || "")}</p><p class="spanish">${escapeHtml(previous.feedbackEs || "")}</p>${step.model ? `<p><strong>Example:</strong> ${escapeHtml(step.model)}</p><p class="spanish">${escapeHtml(step.modelEs || "")}</p>` : ""}</div><button class="primary" id="integratedUnitNextButton" type="button">${state.index + 1 === state.unit.steps.length ? "Finish unit" : "Next step →"}</button>` : `<button class="primary" id="integratedUnitCheckButton" type="button">${choiceStep ? "Check answer" : "Submit answer"}</button>`}
+    </section>
+  `;
+  document.querySelector("#integratedUnitExitButton").addEventListener("click", () => { saveIntegratedUnitState(); renderPracticeHome(); });
+  document.querySelectorAll("[data-unit-answer]").forEach((button) => button.addEventListener("click", () => {
+    document.querySelectorAll("[data-unit-answer]").forEach((item) => item.classList.remove("selected"));
+    button.classList.add("selected");
+    integratedUnitState.responses[step.id] = button.dataset.unitAnswer;
+  }));
+  document.querySelector("#integratedUnitCheckButton")?.addEventListener("click", () => {
+    const response = choiceStep ? integratedUnitState.responses[step.id] : document.querySelector("#integratedUnitResponse")?.value || "";
+    if (!String(response || "").trim()) { document.querySelector("#integratedUnitResponse")?.focus(); return; }
+    integratedUnitState = submitIntegratedStep(integratedUnitState, response);
+    const result = integratedUnitState.lastResult;
+    profile = recordKnowledgeOutcome(profile, { activityId: state.unit.id + ":" + step.id, mode: step.skill, skill: step.skill, canDoId: state.unit.canDoIds[0], knowledgeIds: step.knowledgeIds, correct: result.correct, score: result.score, errors: result.correct === false ? [{ type: step.skill, stepId: step.id }] : [], independent: true });
+    saveProfile();
+    saveIntegratedUnitState();
+    renderIntegratedUnitStep();
+  });
+  document.querySelector("#integratedUnitMicButton")?.addEventListener("click", () => {
+    const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!Recognition) { window.alert("Speech recognition is not available in this browser. Type your answer instead."); return; }
+    const recognition = new Recognition(); recognition.lang = "en-US"; recognition.interimResults = false; recognition.maxAlternatives = 1;
+    recognition.onresult = (event) => { const field = document.querySelector("#integratedUnitResponse"); if (field) field.value = event.results[0][0].transcript; };
+    recognition.onerror = () => window.alert("Speech recognition stopped. You can type your answer instead.");
+    recognition.start();
+  });
+  document.querySelector("#integratedUnitNextButton")?.addEventListener("click", () => {
+    integratedUnitState = advanceIntegratedStep(integratedUnitState);
+    delete integratedUnitState.lastResult;
+    saveIntegratedUnitState();
+    renderIntegratedUnitStep();
+  });
+}
+
+function renderIntegratedUnitComplete() {
+  const summary = summarizeIntegratedUnit(integratedUnitState);
+  app.innerHTML = `<section class="card integrated-unit-complete"><p class="kicker">Unit complete</p><h2>${escapeHtml(integratedUnitState.unit.title)}</h2><p class="spanish">${escapeHtml(integratedUnitState.unit.titleEs)}</p><p>You practised ${summary.skills.join(", ")} and reused shared vocabulary and grammar.</p><p class="spanish">Practicaste varias habilidades usando el mismo vocabulario y la misma gramática.</p><p><strong>${summary.completedSteps}/${summary.totalSteps}</strong> steps completed · <strong>${summary.correctSteps}</strong> objective checks passed · <strong>${summary.selfReviewSteps}</strong> production responses to self-review</p><p>Key language: robot · sensor · build · use · students</p><button class="primary" id="integratedUnitHomeButton" type="button">Back to learning</button><button class="secondary" id="integratedUnitRepeatButton" type="button">Repeat unit</button></section>`;
+  document.querySelector("#integratedUnitHomeButton").addEventListener("click", renderPracticeHome);
+  document.querySelector("#integratedUnitRepeatButton").addEventListener("click", () => { integratedUnitState = createIntegratedUnitState(integratedUnitState.unit); saveIntegratedUnitState(); renderIntegratedUnitStep(); });
+}
 function saveExperienceState() {
   if (!experienceSession) return;
   localStorage.setItem(EXPERIENCE_STATE_KEY, JSON.stringify(experienceSession));
@@ -467,6 +579,14 @@ function startExperience(experienceId) {
     return;
   }
 
+  profile = recordLearningEvent(profile, {
+    mode: experience.kind === "simulation" ? "simulation" : "conversation",
+    surface: experience.kind,
+    skill: "speaking",
+    canDoId: session?.target?.canDoId,
+    knowledgeIds: getKnowledgeForCanDo(knowledgeGraph, session?.target?.canDoId).map((node) => node.id)
+  });
+  saveProfile();
   experienceSession = createExperienceSession(experienceLibrary, experienceId);
   saveExperienceState();
   renderExperience();
@@ -694,6 +814,14 @@ function startPractice(mode) {
     renderError(error);
     return;
   }
+
+  profile = recordLearningEvent(profile, {
+    mode,
+    surface: "practice",
+    canDoId: session.target.canDoId,
+    knowledgeIds: [...new Set(activities.flatMap((activity) => getKnowledgeForCanDo(knowledgeGraph, activity.canDoId).map((node) => node.id)))]
+  });
+  saveProfile();
 
   practice = {
     mode,
@@ -978,6 +1106,19 @@ function showFeedback(activity, result, response, options = {}) {
     document.querySelector("#retryFinalButton")?.addEventListener("click", () => renderMicroActivity());
     return;
   }
+
+  profile = recordKnowledgeOutcome(profile, {
+    activityId: activity.id,
+    mode: practice.mode,
+    canDoId: activity.canDoId,
+    skill: activity.skill,
+    knowledgeIds: getKnowledgeForActivity(knowledgeGraph, activity).map((node) => node.id),
+    correct: success,
+    score: result.score,
+    errors: result.errors || [],
+    independent: true
+  });
+  saveProfile();
 
   practice.results.push({
     activityId: activity.id,
