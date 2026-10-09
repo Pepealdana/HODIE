@@ -26,6 +26,10 @@ assert.equal(evaluateIntegratedStep(grammar, "build").correct, true);
 assert.equal(evaluateIntegratedStep(grammar, "builds").correct, false);
 assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").correct, null);
 assert.equal(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").completed, true);
+assert.ok(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").checks.every((check) => typeof check.passed === "boolean"));
+assert.ok(evaluateIntegratedStep(unit.steps[3], "Our robot uses a sensor. The students build it.").score > 0.8);
+assert.ok(evaluateIntegratedStep(unit.steps[3], "the students builds a robot").checks.some((check) => check.id === "plural-subject" && check.passed === false));
+assert.equal(evaluateIntegratedStep(unit.steps[3], "the students builds a robot").correct, null);
 assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").correct, null);
 assert.equal(evaluateIntegratedStep(unit.steps[4], "I want to build a robot.").completed, true);
 
