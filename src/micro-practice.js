@@ -1,4 +1,5 @@
 import { buildFeedback, createError, evaluateCriteria, normalizeErrors, prioritizeErrors } from "./error-engine.js";
+import { analyzeLanguage } from "./linguistic-engine.js";
 
 const normalize = (value) =>
   String(value ?? "")
@@ -52,103 +53,25 @@ function activityMatchesFocus(activity, config) {
 
 function detectLanguageCorrections(activity, response) {
   if (!response || typeof response !== "string") return [];
-
-  const rules = [
-    {
-      pattern: /\bte(?:cher|caher)\b/i,
-      replacement: "teacher",
-      target: "spelling-teacher",
-      message: 'The correct spelling is "teacher".',
-      messageEs: 'La escritura correcta es "teacher" (profesor/a).',
-      examples: ["I am a teacher."]
-    },
-    {
-      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/gi,
-      replacement: "$1I",
-      target: "capital-i",
-      message: 'The pronoun "I" is always capitalized in English.',
-      messageEs: 'El pronombre "I" siempre se escribe con mayúscula en inglés.',
-      examples: ["I am a teacher.", "I enjoy teaching."]
-    },
-    {
-      pattern: /\bI\s+am\s+(?!a\b|an\b)(technology\s+and\s+robotics\s+teacher|technology\s+teacher|robotics\s+teacher|teacher|student|programmer|developer|engineer|professor)\b/i,
-      replacement: (_match, job) => "I am " + (/^engineer$/i.test(job) ? "an" : "a") + " " + job.toLowerCase(),
-      target: "article",
-      message: 'Use "a/an" before a singular job or role.',
-      messageEs: 'Usa "a/an" antes de una profesión o un rol en singular.',
-      examples: ["I am a teacher.", "I am an engineer.", "I am a technology teacher."]
-    },
-    {
-      pattern: /\bI\s+am\s+a\s+(engineer)\b/i,
-      replacement: "I am an $1",
-      target: "article-choice",
-      message: 'Use "an" before "engineer" because it begins with a vowel sound.',
-      messageEs: 'Usa "an" antes de "engineer" porque comienza con sonido vocálico.',
-      examples: ["I am an engineer."]
-    },
-    {
-      pattern: /\bI\s+work\s+on\s+a\s+(school|company|office)\b/i,
-      replacement: "I work at a $1",
-      target: "work-place",
-      message: 'For a workplace such as a school, "work at" is a natural choice.',
-      messageEs: 'Para un lugar de trabajo como una escuela, "work at" es una opción natural.',
-      examples: ["I work at a school.", "I work at an office."]
-    },
-    {
-      pattern: /\bI\s+enjoy\s+to\s+(build|teach|read|make|work|learn)\b/i,
-      replacement: (_match, verb) => "I enjoy " + ({ build: "building", teach: "teaching", read: "reading", make: "making", work: "working", learn: "learning" })[verb.toLowerCase()],
-      target: "enjoy-ing",
-      message: 'After "enjoy", use a verb with -ing.',
-      messageEs: 'Después de "enjoy", usamos el verbo con -ing.',
-      examples: ["I enjoy reading.", "I enjoy building robots."]
-    },
-    {
-      pattern: /\b(my students|the students|students)\s+(is|has|does|works|teaches|builds|uses)\b/i,
-      replacement: (_match, subject, verb) => subject + " " + ({ is: "are", has: "have", does: "do", works: "work", teaches: "teach", builds: "build", uses: "use" })[verb.toLowerCase()],
-      target: "plural-agreement",
-      message: 'A plural subject such as "students" needs a plural verb form.',
-      messageEs: 'Un sujeto plural como "students" necesita la forma plural del verbo.',
-      examples: ["My students are creative.", "The students build a robot."]
-    },
-    {
-      pattern: /\b(the robot|a robot|my school|the school)\s+(build|use|have|are|do|work|teach)\b/i,
-      replacement: (_match, subject, verb) => subject + " " + ({ build: "builds", use: "uses", have: "has", are: "is", do: "does", work: "works", teach: "teaches" })[verb.toLowerCase()],
-      target: "singular-agreement",
-      message: 'A singular subject such as "the robot" usually needs the third-person present form.',
-      messageEs: 'Un sujeto singular como "the robot" normalmente necesita la forma de tercera persona en presente.',
-      examples: ["The robot uses a sensor.", "My school teaches robotics."]
-    }
-  ];
-
-  let corrected = response;
-  const errors = [];
-
-  for (const rule of rules) {
-    const match = corrected.match(rule.pattern);
-    if (!match) continue;
-    const next = corrected.replace(rule.pattern, rule.replacement);
-    if (next === corrected) continue;
-
-    errors.push(createError({
-      activity,
-      type: "grammar",
-      target: rule.target,
-      actual: match[0],
-      expected: next,
-      severity: "low",
-      priority: "low",
-      message: rule.message,
-      messageEs: rule.messageEs,
-      correction: match[0].replace(rule.pattern, rule.replacement),
-      examples: rule.examples,
-      retry: false
-    }));
-    corrected = next;
-    if (errors.length >= 3) break;
-  }
-
+  const analysis = analyzeLanguage(response, { maxCorrections: 3 });
+  const errors = analysis.errors.map((error) => createError({
+    activity,
+    type: error.type,
+    target: error.target,
+    actual: error.actual,
+    expected: error.expected,
+    severity: error.severity,
+    priority: error.priority,
+    message: error.message,
+    messageEs: error.messageEs,
+    correction: error.correction,
+    examples: error.examples,
+    retry: error.retry,
+    contextId: activity?.context || "practice"
+  })).map((error, index) => ({ ...error, ruleId: analysis.errors[index].ruleId, start: analysis.errors[index].start, end: analysis.errors[index].end, confidence: analysis.errors[index].confidence }));
   if (!errors.length) return [];
-  errors[0].correctedText = corrected;
+  errors[0].correctedText = analysis.correctedText;
+  errors[0].unknownWords = analysis.unknownWords;
   return errors;
 }
 
