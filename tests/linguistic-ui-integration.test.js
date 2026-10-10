@@ -13,8 +13,12 @@ assert.match(app, /function applyLinguisticReview\(response, result = \{\}, skil
 assert.match(app, /applyLinguisticReview\(response, evaluated, "speaking"\)/);
 assert.match(app, /applyLinguisticReview\(response, linkedEvaluation, activity\.skill\)/);
 assert.match(app, /maxCorrections: 1/);
-assert.match(app, /Rule-based review covers only implemented patterns/);
-assert.match(worker, /hodie-shell-v26/);
+assert.match(app, /searchLinguisticKnowledge\(text/);
+assert.match(app, /Not fully checked · Revisión parcial/);
+assert.match(app, /Review transcript · Revisar transcripción/);
+assert.match(app, /Related learning tip · Recurso relacionado/);
+assert.match(app, /No known rule matched this response/);
+assert.match(worker, /hodie-shell-v27/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 console.log("HODIE linguistic UI integration contract: PASS");

@@ -61,6 +61,34 @@ assert.equal(validAlternatives.errors.length, 0, "valid grammar alternatives mus
 const punctuation = analyzeLanguage("I am teacher. I enjoy to teach.");
 assert.equal(punctuation.correctedText, "I am a teacher. I enjoy teaching.");
 
+const knownA2Negation = analyzeLanguage("She doesn't works on Sundays.");
+assert.equal(knownA2Negation.correctedText, "She doesn't work on Sundays.");
+assert.ok(knownA2Negation.errors.some((error) => error.ruleId === "DO-NEG-BASE-001"));
+const validA2Negation = analyzeLanguage("She doesn't work on Sundays.");
+assert.equal(validA2Negation.correctedText, "She doesn't work on Sundays.");
+assert.equal(validA2Negation.errors.length, 0);
+const knownPastNegation = analyzeLanguage("I didn't went to school yesterday.");
+assert.equal(knownPastNegation.correctedText, "I didn't go to school yesterday.");
+assert.ok(knownPastNegation.errors.some((error) => error.ruleId === "DID-NEG-BASE-001"));
+const validPastNegation = analyzeLanguage("I didn't go to school yesterday.");
+assert.equal(validPastNegation.errors.length, 0);
+const knownModalError = analyzeLanguage("I can to build a robot.");
+assert.equal(knownModalError.correctedText, "I can build a robot.");
+assert.ok(knownModalError.errors.some((error) => error.ruleId === "MODAL-TO-BASE-001"));
+assert.equal(analyzeLanguage("I want to build a robot.").errors.length, 0, "do not confuse want to with a modal pattern");
+assert.equal(analyzeLanguage("I have to work today.").errors.length, 0, "do not confuse have to with a modal pattern");
+
+const unverifiedPhrase = analyzeLanguage("I enjoy boarding robotics project.");
+assert.equal(unverifiedPhrase.correctedText, "I enjoy boarding robotics project.", "do not guess whether speech recognition meant building");
+assert.equal(unverifiedPhrase.evaluationStatus, "no-issue-detected");
+assert.equal(unverifiedPhrase.evaluationScope, "partial-deterministic-rule-based");
+assert.match(unverifiedPhrase.evaluationNote, /not a complete grammar check/i);
+const validOpenPhrase = analyzeLanguage("I enjoy building robotics projects.");
+assert.equal(validOpenPhrase.errors.length, 0);
+assert.equal(validOpenPhrase.evaluationStatus, "no-issue-detected");
+const emptyAnalysis = analyzeLanguage("   ");
+assert.equal(emptyAnalysis.evaluationStatus, "not-evaluated");
+
 const matrix = JSON.parse(fs.readFileSync(new URL("../data/can-do-matrix.json", import.meta.url), "utf8"));
 const knowledge = JSON.parse(fs.readFileSync(new URL("../data/knowledge-library.json", import.meta.url), "utf8"));
 const micro = JSON.parse(fs.readFileSync(new URL("../data/micro-practice-library.json", import.meta.url), "utf8"));
