@@ -1257,7 +1257,9 @@
         "articles-general",
         "plural-nouns",
         "object-pronouns",
-        "subject-pronouns"
+        "subject-pronouns",
+        "capital-i",
+        "spelling-teacher"
       ],
       "vocabularyDomains": [
         "identity",
@@ -1293,7 +1295,9 @@
         "articles-general",
         "plural-nouns",
         "prepositions-place",
-        "prepositions-time"
+        "prepositions-time",
+        "article-a-an",
+        "article-profession"
       ],
       "vocabularyDomains": [
         "classroom",
@@ -1396,7 +1400,8 @@
         "complex-structures",
         "discourse-pragmatics",
         "connectors",
-        "contrast-connectors"
+        "contrast-connectors",
+        "repeated-connector"
       ],
       "vocabularyDomains": [
         "argumentation",
@@ -1429,7 +1434,62 @@
       ],
       "severity": "medium",
       "priority": "high",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "I am a teacher.",
+          "es": "Soy profesor."
+        },
+        {
+          "en": "I enjoy teaching.",
+          "es": "Disfruto enseñar."
+        }
+      ],
+      "exceptions": [
+        "The pronoun I is always capitalized, including I'm.",
+        "Other first-person forms such as me and my are not capitalized unless they begin a sentence."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am a teacher.",
+          "reason": "I is correctly capitalized."
+        },
+        {
+          "text": "My students help me.",
+          "reason": "My and me are not capitalized in the middle of a sentence."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct: i am ready.",
+          "promptEs": "Corrige: i am ready.",
+          "answer": "I am ready."
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence beginning with I.",
+          "promptEs": "Escribe una oración que comience con I."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "capitalization",
+          "capital-i",
+          "writing-accuracy"
+        ]
+      }
     },
     {
       "id": "SPELL-TEACHER-001",
@@ -1441,14 +1501,70 @@
       "explanation": "The word is spelled teacher.",
       "explanationEs": "La palabra se escribe teacher.",
       "examples": [
-        "I am a teacher."
+        "I am a teacher.",
+        "My teacher is helpful."
       ],
       "incorrect": [
         "I am a techer."
       ],
       "severity": "medium",
       "priority": "medium",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "I am a teacher.",
+          "es": "Soy profesor."
+        },
+        {
+          "en": "My teacher is helpful.",
+          "es": "Mi profesor es servicial."
+        }
+      ],
+      "exceptions": [
+        "This spelling record covers the noun teacher, not every word with a similar sound.",
+        "Do not change a correctly spelled word just because another variant exists."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am a teacher.",
+          "reason": "Teacher is spelled correctly."
+        },
+        {
+          "text": "My teacher helps me.",
+          "reason": "Teacher is spelled correctly."
+        }
+      ],
+      "practice": [
+        {
+          "type": "spell",
+          "prompt": "Complete: teac___ (a person who teaches).",
+          "promptEs": "Completa: teac___ (una persona que enseña).",
+          "answer": "teacher"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with teacher.",
+          "promptEs": "Escribe una oración con teacher."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "spelling",
+          "teacher",
+          "writing-accuracy"
+        ]
+      }
     },
     {
       "id": "ART-JOB-001",
@@ -1468,7 +1584,62 @@
       ],
       "severity": "high",
       "priority": "high",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "I am a teacher.",
+          "es": "Soy profesor."
+        },
+        {
+          "en": "She is an engineer.",
+          "es": "Ella es ingeniera."
+        }
+      ],
+      "exceptions": [
+        "A singular countable job noun normally needs a/an after be.",
+        "Plural jobs do not take a/an: They are teachers."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am a teacher.",
+          "reason": "Correct article before a singular job."
+        },
+        {
+          "text": "They are teachers.",
+          "reason": "Plural job noun correctly has no a/an."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "She is ___ engineer.",
+          "promptEs": "Ella es ___ ingeniera.",
+          "answer": "an"
+        },
+        {
+          "type": "write",
+          "prompt": "Describe your job using a/an.",
+          "promptEs": "Describe tu profesión usando a/an."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "articles",
+          "jobs",
+          "a-an"
+        ]
+      }
     },
     {
       "id": "ART-A-AN-001",
@@ -1488,7 +1659,63 @@
       ],
       "severity": "medium",
       "priority": "high",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "an engineer",
+          "es": "un ingeniero / una ingeniera"
+        },
+        {
+          "en": "a university",
+          "es": "una universidad"
+        }
+      ],
+      "exceptions": [
+        "Choose by the first sound, not the first letter: a university, an hour.",
+        "Plural nouns and uncountable nouns do not normally use a/an."
+      ],
+      "negativeCases": [
+        {
+          "text": "an engineer",
+          "reason": "Correct vowel sound."
+        },
+        {
+          "text": "a university",
+          "reason": "University begins with a /juː/ consonant sound."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "___ hour",
+          "promptEs": "___ hora",
+          "answer": "an"
+        },
+        {
+          "type": "choose",
+          "prompt": "___ useful tool",
+          "promptEs": "___ herramienta útil",
+          "answer": "a"
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "articles",
+          "a-an",
+          "pronunciation"
+        ]
+      }
     },
     {
       "id": "BE-SUBJECT-001",
@@ -1509,7 +1736,66 @@
       ],
       "severity": "high",
       "priority": "high",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "I am ready.",
+          "es": "Estoy listo."
+        },
+        {
+          "en": "They are students.",
+          "es": "Ellos son estudiantes."
+        }
+      ],
+      "exceptions": [
+        "Am pairs with I; is with he/she/it and singular noun phrases; are with you/we/they and plural noun phrases.",
+        "Contractions are valid: I'm, she's, they're."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am ready.",
+          "reason": "Correct I + am."
+        },
+        {
+          "text": "They are students.",
+          "reason": "Correct plural subject + are."
+        },
+        {
+          "text": "She's a teacher.",
+          "reason": "The contraction is valid."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "They ___ ready.",
+          "promptEs": "Ellos están listos.",
+          "answer": "are"
+        },
+        {
+          "type": "write",
+          "prompt": "Write one sentence with I am and one with they are.",
+          "promptEs": "Escribe una oración con I am y otra con they are."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "be",
+          "be-agreement",
+          "subject-verb-agreement"
+        ]
+      }
     },
     {
       "id": "SVA-PLURAL-001",
@@ -1619,14 +1905,69 @@
       "explanation": "Do not repeat the same connector twice in a row unless quoting or deliberately repeating it.",
       "explanationEs": "No repitas el mismo conector dos veces seguidas, salvo que estés citando o repitiendo deliberadamente.",
       "examples": [
-        "I teach robotics and I enjoy it."
+        "I teach robotics and I enjoy it.",
+        "She studies English and practises every day."
       ],
       "incorrect": [
         "I teach and and enjoy it."
       ],
       "severity": "low",
       "priority": "low",
-      "status": "tested"
+      "status": "tested",
+      "examplesBilingual": [
+        {
+          "en": "I teach robotics and I enjoy it.",
+          "es": "Enseño robótica y lo disfruto."
+        },
+        {
+          "en": "She studies English and practises every day.",
+          "es": "Ella estudia inglés y practica todos los días."
+        }
+      ],
+      "exceptions": [
+        "Repeated and can be deliberate for emphasis or lists; do not remove it automatically without context.",
+        "A sentence may contain multiple conjunctions when they connect different clauses."
+      ],
+      "negativeCases": [
+        {
+          "text": "I teach robotics and I enjoy it.",
+          "reason": "The connector is not accidentally repeated."
+        },
+        {
+          "text": "I bought pens, books and sensors.",
+          "reason": "A list with and is correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "edit",
+          "prompt": "Edit only an accidental repeated connector.",
+          "promptEs": "Corrige solo un conector repetido por accidente."
+        },
+        {
+          "type": "write",
+          "prompt": "Join two related ideas with and.",
+          "promptEs": "Une dos ideas relacionadas con and."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "connectors",
+          "repetition",
+          "writing-accuracy"
+        ]
+      }
     },
     {
       "id": "SPELL-OPEN-001",
