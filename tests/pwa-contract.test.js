@@ -27,7 +27,7 @@ assert.ok(manifest.icons.every((icon) => icon.type === "image/png"));
 
 assert.match(worker, /skipWaiting/);
 assert.match(worker, /clients\.claim/);
-assert.match(worker, /hodie-shell-v16/);
+assert.match(worker, /hodie-shell-v17/);
 assert.match(worker, /assets\/brand\/hodie-logo\.png/);
 assert.match(worker, /assets\/brand\/hodie-logo-dark\.png/);
 assert.match(worker, /assets\/icons\/icon-light-512\.png/);
