@@ -232,15 +232,33 @@ function analyzeLanguage(input, options = {}) {
     .sort((a, b) => (PRIORITY[b.priority] || 0) - (PRIORITY[a.priority] || 0))
     .slice(0, Math.max(1, options.maxCorrections || 3));
 
+  const evaluationStatus = !originalText.trim()
+    ? "not-evaluated"
+    : prioritized.length
+      ? "issues-detected"
+      : "no-issue-detected";
+
   return {
     schemaVersion: catalog.schemaVersion,
     originalText,
     correctedText: text,
     errors: prioritized,
     unknownWords,
+    evaluationStatus,
+    evaluationScope: "partial-deterministic-rule-based",
+    evaluationNote: evaluationStatus === "no-issue-detected"
+      ? "No known rule matched this response. This is not a complete grammar check."
+      : evaluationStatus === "issues-detected"
+        ? "Known patterns were detected; other errors may remain."
+        : "No response was provided for evaluation.",
+    evaluationNoteEs: evaluationStatus === "no-issue-detected"
+      ? "Ninguna regla conocida coincidió con esta respuesta. Esto no es una revisión gramatical completa."
+      : evaluationStatus === "issues-detected"
+        ? "Se detectaron patrones conocidos; pueden quedar otros errores."
+        : "No se proporcionó una respuesta para evaluar.",
     hasHighConfidenceCorrection: prioritized.some((error) => error.confidence === "high"),
     catalogCoverage: { grammarRules: catalog.grammarRules.length, testedRules: catalog.grammarRules.filter((rule) => rule.status === "tested").length, plannedRules: catalog.grammarRules.filter((rule) => rule.status === "draft").length, vocabularyEntries: vocabulary.length },
-    policy: "Unknown words are not errors by themselves; uncertain cases are left unchanged."
+    policy: "Unknown words are not errors by themselves; uncertain cases are left unchanged. No detected issue does not prove that a response is correct."
   };
 }
 
