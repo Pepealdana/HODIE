@@ -43,3 +43,6 @@ Data-only matchers support narrow, deterministic patterns. Rules requiring synta
 ## Validation gate
 
 Run `npm test`. The linguistic test suite checks unique IDs, required bilingual metadata, referenced rule IDs, valid matchers, expected corrections, and examples that must remain unchanged. Keep the status at `draft` until the rule has implementation and reviewed test coverage.
+
+
+Matcher expressions are validated as regular expressions at catalog-validation time; keep the pattern narrow and review the negative cases before changing a rule to `tested`.
