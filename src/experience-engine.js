@@ -150,7 +150,7 @@ function buildLanguageNotes(experience, stage, text) {
       priority: "low",
       message: rule.message,
       messageEs: rule.messageEs,
-      correction: next,
+      correction: match[0].replace(rule.pattern, rule.replacement),
       examples: rule.examples,
       retry: false
     }));
