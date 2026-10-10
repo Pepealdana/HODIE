@@ -1,12 +1,16 @@
 import assert from "node:assert/strict";
 import { analyzeLanguage, validateLinguisticCatalog, linguisticCatalog } from "../src/linguistic-engine.js";
 import { buildKnowledgeGraph, getLinguisticResourcesForCanDo } from "../src/knowledge-graph.js";
+import { collectErrorMemory } from "../src/error-memory.js";
 import fs from "node:fs";
 
 const catalog = JSON.parse(fs.readFileSync(new URL("../data/linguistic-catalog.json", import.meta.url), "utf8"));
 const validation = validateLinguisticCatalog(catalog);
 assert.equal(validation.valid, true, validation.errors.join("\n"));
-assert.ok(validation.ruleCount >= 12);
+assert.ok(validation.ruleCount >= 25);
+assert.ok(validation.testedRuleCount >= 10);
+assert.ok(validation.draftRuleCount >= 10);
+assert.ok(validation.communicativeFunctionCount >= 10);
 assert.ok(catalog.communicativeFunctions.some((item) => item.skills.includes("speaking") && item.skills.includes("writing")));
 assert.ok(catalog.grammarRules.every((rule) => rule.explanation && rule.explanationEs && rule.examples && rule.incorrect));
 
@@ -57,6 +61,17 @@ assert.ok(linked.functions.some((fn) => fn.id === "INTRODUCE_SELF"));
 assert.ok(linked.rules.some((rule) => rule.id === "ART-JOB-001"));
 assert.ok(linked.vocabulary.some((entry) => entry.lemma === "teacher"));
 assert.ok(linked.functions[0].skills.includes("speaking") && linked.functions[0].skills.includes("writing"));
+
+const plannedPastRule = catalog.grammarRules.find((rule) => rule.id === "GRAM-PAST-001");
+assert.equal(plannedPastRule.status, "draft");
+assert.equal(analyzeLanguage("Yesterday I teach a class.").correctedText, "Yesterday I teach a class.", "unimplemented draft rules must not silently correct learner text");
+
+const memory = collectErrorMemory({ knowledgeEvidence: [
+  { at: "2026-10-01T00:00:00Z", surface: "writing", errors: [{ type: "grammar", target: "article-profession", ruleId: "ART-JOB-001", actual: "I am teacher", expected: "I am a teacher" }] },
+  { at: "2026-10-02T00:00:00Z", surface: "conversation", errors: [{ type: "grammar", target: "article-profession", ruleId: "ART-JOB-001", actual: "I am teacher", expected: "I am a teacher" }] }
+] });
+assert.equal(memory[0].target, "ART-JOB-001", "error memory should group by stable rule id across practice surfaces");
+assert.equal(memory[0].count, 2);
 
 assert.equal(linguisticCatalog.schemaVersion, catalog.schemaVersion);
 console.log("HODIE linguistic catalog and open-vocabulary engine: PASS");
