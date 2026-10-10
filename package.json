@@ -5,7 +5,7 @@
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
     "test:content": "node tests/content-model.test.js",
-    "test": "npm run build:linguistic-catalog && npm run test:app && npm run test:runtime && npm run test:pwa && npm run test:ux && npm run test:experiences && npm run test:orchestrator && npm run test:integrated-learning && npm run test:integrated-unit && npm run test:architecture && npm run test:composer && npm run test:ai-contract && npm run test:micro && npm run test:feedback && npm run test:error-memory && npm run test:feedback-contract && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical && npm run test:linguistic-scale && npm run test:linguistic && npm run test:linguistic-ui && npm run test:linguistic-activity-coverage",
+    "test": "npm run build:linguistic-catalog && npm run test:app && npm run test:runtime && npm run test:pwa && npm run test:ux && npm run test:experiences && npm run test:orchestrator && npm run test:integrated-learning && npm run test:integrated-unit && npm run test:architecture && npm run test:composer && npm run test:ai-contract && npm run test:micro && npm run test:feedback && npm run test:error-memory && npm run test:feedback-contract && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical && npm run test:linguistic-scale && npm run test:knowledge-index && npm run test:linguistic && npm run test:linguistic-ui && npm run test:linguistic-activity-coverage",
     "test:generator": "node tests/activity-generator.test.js",
     "test:integration": "node tests/engine-activity-integration.test.js",
     "test:planner": "node tests/adaptive-planner.test.js",
@@ -35,6 +35,7 @@
     "test:linguistic-ui": "node tests/linguistic-ui-integration.test.js",
     "build:linguistic-catalog": "node scripts/build-linguistic-catalog.js",
     "test:linguistic-scale": "node tests/linguistic-scale.test.js",
-    "test:linguistic-activity-coverage": "node tests/linguistic-activity-coverage.test.js"
+    "test:linguistic-activity-coverage": "node tests/linguistic-activity-coverage.test.js",
+    "test:knowledge-index": "node tests/linguistic-knowledge-index.test.js"
   }
 }

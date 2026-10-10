@@ -47,3 +47,16 @@ npm test
 ```
 
 The test suite verifies deterministic corrections and examples that must remain unchanged. The current implementation is still partial CEFR coverage; the remaining A1/A2 rules and B1/B2 complex structures should be implemented only after their own exceptions and contrastive cases are approved.
+
+
+## Global linguistic knowledge vs. activity progression
+
+The knowledge catalog is globally searchable and activity-independent. Each grammar rule has \`knowledgeAccess.scope=global\`, \`searchable=true\` and \`activityIndependent=true\`. Free writing and conversation can be checked against every tested correction rule even when the text was not produced inside a linked activity. Activity links support targeted practice and recommendations; they are not a gate for correction.
+
+Rule lifecycle and knowledge availability are separate. \`tested\` means a deterministic correction is permitted. \`draft\` means the rule, examples, exceptions and exercises remain searchable and available for explanatory feedback, but the rule cannot silently rewrite text.
+
+\`src/linguistic-knowledge-index.js\` builds an in-memory inverted index over grammar rules, vocabulary, communicative functions and activity categories. It supports exact phrase, token, prefix and Spanish-meaning searches, and returns progression depth metadata. The index is built once per module load.
+
+\`data/linguistic-activity-blueprints.json\` defines activity archetypes by category, interaction mode, skill, progression and feedback contract. The activity level gates depth, time, support and mastery requirements—not the availability of knowledge for correction.
+
+The March 2026 pack adds 166 bilingual vocabulary entries and 12 communicative functions focused on technology, programming, learning, work, discourse markers, phrasal verbs, daily life and B1–B2 precision. Run \`npm run build:linguistic-catalog\` and \`npm test\` to rebuild and verify.
