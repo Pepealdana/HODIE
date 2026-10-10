@@ -11,6 +11,7 @@ assert.ok(validation.ruleCount >= 25);
 assert.ok(validation.testedRuleCount >= 10);
 assert.ok(validation.draftRuleCount >= 10);
 assert.ok(validation.communicativeFunctionCount >= 10);
+assert.ok(validation.vocabularyCount >= 25);
 assert.ok(catalog.communicativeFunctions.some((item) => item.skills.includes("speaking") && item.skills.includes("writing")));
 assert.ok(catalog.grammarRules.every((rule) => rule.explanation && rule.explanationEs && rule.examples && rule.incorrect));
 
