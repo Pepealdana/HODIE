@@ -319,32 +319,57 @@ function evaluateMicroActivity(activity, response) {
     };
   } else if (activity.type === "speak") {
     const tokens = activity.requiredTokens || [];
-    const missing = tokens.filter((token) => !value.includes(normalize(token)));
-    const correct = missing.length === 0;
-    const score = correct ? 1 : missing.length < Math.ceil(tokens.length / 2) ? 0.5 : 0;
+    const heardWords = value.match(/[\p{L}\p{N}’'-]+/gu) || [];
+    const exactMatch = (token) => heardWords.includes(normalize(token));
+    const nearMatch = (token) => {
+      const normalized = normalize(token);
+      if (normalized.length > 4 && normalized.endsWith("s")) {
+        const heard = heardWords.find((word) => word === normalized.slice(0, -1));
+        if (heard) return heard;
+      }
+      return null;
+    };
+    const missing = tokens.filter((token) => !exactMatch(token) && !nearMatch(token));
+    const nearMatches = tokens.map((token) => ({ target: token, heard: nearMatch(token) })).filter((item) => item.heard);
+    const correct = missing.length === 0 && nearMatches.length === 0;
+    const score = correct ? 1 : missing.length === 0 ? 0.75 : missing.length < Math.ceil(tokens.length / 2) ? 0.5 : 0;
+
+    const errors = missing.length
+      ? [createError({
+          activity,
+          type: "communication",
+          target: "required-information",
+          actual: response,
+          expected: tokens.join(", "),
+          severity: "medium",
+          priority: "medium",
+          message: "Include the missing key word: " + missing.join(", ") + ".",
+          messageEs: "Incluye la palabra clave que falta: " + missing.join(", ") + ".",
+          correction: missing.join(", "),
+          retry: true
+        })]
+      : nearMatches.map((item) => createError({
+          activity,
+          type: "pronunciation",
+          target: "speech-near-match",
+          actual: item.heard,
+          expected: item.target,
+          severity: "low",
+          priority: "low",
+          message: 'The transcript heard "' + item.heard + '" instead of "' + item.target + '". Try making the final sound clearer.',
+          messageEs: 'La transcripción reconoció "' + item.heard + '" en lugar de "' + item.target + '". Intenta pronunciar con más claridad el sonido final.',
+          correction: item.target + " (heard as " + item.heard + ")",
+          retry: true
+        }));
 
     result = {
       correct,
       score,
       retryRecommended: !correct,
       missing,
-      feedback: correct ? activity.feedback?.correct : activity.feedback?.partial,
-      feedbackEs: correct ? activity.feedback?.correctEs : activity.feedback?.partialEs,
-      errors: correct
-        ? []
-        : [createError({
-            activity,
-            type: "communication",
-            target: "required-information",
-            actual: response,
-            expected: tokens.join(", "),
-            severity: "medium",
-            priority: "medium",
-            message: activity.feedback?.partial || "Include the missing key information.",
-            messageEs: activity.feedback?.partialEs || "Incluye la información clave que falta.",
-            correction: missing.join(", "),
-            retry: true
-          })]
+      feedback: correct ? activity.feedback?.correct : missing.length ? activity.feedback?.partial : "Almost there. Repeat the word and make its ending clearer.",
+      feedbackEs: correct ? activity.feedback?.correctEs : missing.length ? activity.feedback?.partialEs : "Casi lo logras. Repite la palabra y pronuncia con más claridad su terminación.",
+      errors
     };
   } else if (activity.type === "mini-production") {
     const criteria = evaluateCriteria(activity.evaluation?.criteria || [], response);
