@@ -86,9 +86,32 @@ function escapeRegex(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function transformVerbForm(value, type) {
+  const original = String(value || ""), lower = original.toLowerCase();
+  const base = {went:"go",gone:"go",saw:"see",seen:"see",built:"build",made:"make",had:"have",did:"do",done:"do",wrote:"write",written:"write",ate:"eat",eaten:"eat",took:"take",taken:"take",chose:"choose",chosen:"choose"};
+  const participle = {go:"gone",went:"gone",see:"seen",saw:"seen",build:"built",built:"built",make:"made",made:"made",have:"had",had:"had",do:"done",did:"done",write:"written",wrote:"written",eat:"eaten",ate:"eaten",take:"taken",took:"taken",choose:"chosen",chose:"chosen"};
+  let result=lower;
+  if(type==="thirdPersonToBase"){
+    if(["has","is","does","goes"].includes(lower)) result=({has:"have",is:"be",does:"do",goes:"go"})[lower];
+    else if(/ies$/.test(lower)) result=lower.slice(0,-3)+"y";
+    else if(/(ches|shes|xes|zes|sses)$/.test(lower)) result=lower.slice(0,-2);
+    else if(/s$/.test(lower)) result=lower.slice(0,-1);
+  } else if(type==="pastToBase"){
+    if(base[lower]) result=base[lower];
+    else if(/ied$/.test(lower)) result=lower.slice(0,-3)+"y";
+    else if(/ed$/.test(lower)){result=lower.slice(0,-2);if(/(.)\1$/.test(result))result=result.slice(0,-1);}
+  } else if(type==="toGerund"){
+    const forms={be:"being",have:"having",make:"making",take:"taking",write:"writing",use:"using",come:"coming",go:"going",run:"running",swim:"swimming",get:"getting",sit:"sitting",put:"putting",lie:"lying",die:"dying",tie:"tying"};
+    if(forms[lower])result=forms[lower];else if(/ie$/.test(lower))result=lower.slice(0,-2)+"ying";else if(/e$/.test(lower)&&!/ee$/.test(lower))result=lower.slice(0,-1)+"ing";else if(/[aeiou][^aeiou]$/.test(lower)&&lower.length<=5)result=lower+lower.slice(-1)+"ing";else result=lower+"ing";
+  } else if(type==="pastParticiple") result=participle[lower]||(/e$/.test(lower)?lower+"d":lower+"ed");
+  if(original===original.toUpperCase())return result.toUpperCase();
+  if(original[0]&&original[0]===original[0].toUpperCase())return result[0].toUpperCase()+result.slice(1);
+  return result;
+}
+
 function applyCatalogMatcher(text, rule) {
   const matcher = rule?.matcher;
-  if (!matcher?.pattern || typeof matcher.replacement !== "string") return { text, errors: [] };
+  if (!matcher?.pattern || (typeof matcher.replacement !== "string" && !matcher.transform)) return { text, errors: [] };
 
   let regex;
   try {
@@ -105,7 +128,16 @@ function applyCatalogMatcher(text, rule) {
   const errors = [];
   for (const match of text.matchAll(regex)) {
     if (match.index < cursor) continue;
-    let replacement = match[0].replace(regex, matcher.replacement);
+    let replacement;
+    if (matcher.transform && Number.isInteger(matcher.transform.capture) && match[matcher.transform.capture]) {
+      const captureIndex = matcher.transform.capture;
+      const transformed = transformVerbForm(match[captureIndex], matcher.transform.type);
+      replacement = String(matcher.replacement || "$&").replace(/\$(\d+)/g, (token, index) =>
+        Number(index) === 0 ? match[0] : Number(index) === captureIndex ? transformed : (match[Number(index)] ?? "")
+      );
+    } else {
+      replacement = match[0].replace(regex, matcher.replacement);
+    }
     replacement = preserveCase(match[0], replacement);
     if (replacement === match[0]) continue;
     nextText += text.slice(cursor, match.index) + replacement;
@@ -245,12 +277,13 @@ function validateLinguisticCatalog(value = catalog) {
   }
   const implemented = new Set(["capital-i","spelling-teacher","article-profession","article-a-an","be-agreement","plural-agreement","third-person-singular","enjoy-gerund","work-place","repeated-connector","adjective-noun-order","open-vocabulary-policy","like-gerund","compound-job-connector"]);
   for (const rule of value.grammarRules) {
-    const hasDataMatcher = Boolean(rule.matcher?.pattern && typeof rule.matcher.replacement === "string");
+    const hasDataMatcher = Boolean(rule.matcher?.pattern && (typeof rule.matcher.replacement === "string" || (rule.matcher.transform && Number.isInteger(rule.matcher.transform.capture))));
     if (rule.status === "tested" && !implemented.has(rule.implementation) && !hasDataMatcher) {
       errors.push("Missing rule implementation for tested rule: " + rule.id + " (" + rule.implementation + ")");
     }
     if (rule.matcher) {
-      if (!rule.matcher.pattern || typeof rule.matcher.replacement !== "string") errors.push(rule.id + ": matcher requires pattern and replacement");
+      if (!rule.matcher.pattern || (typeof rule.matcher.replacement !== "string" && !(rule.matcher.transform && Number.isInteger(rule.matcher.transform.capture)))) errors.push(rule.id + ": matcher requires pattern and replacement or a transform");
+      if (rule.matcher.transform && !["thirdPersonToBase","pastToBase","toGerund","pastParticiple"].includes(rule.matcher.transform.type)) errors.push(rule.id + ": unsupported matcher transform");
       try {
         const flags = String(rule.matcher.flags || "gi");
         if (/[^dgimsuvy]/.test(flags) || new Set(flags).size !== flags.length) throw new Error("invalid flags");

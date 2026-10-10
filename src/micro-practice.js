@@ -1,5 +1,6 @@
 import { buildFeedback, createError, evaluateCriteria, normalizeErrors, prioritizeErrors } from "./error-engine.js";
 import { analyzeLanguage } from "./linguistic-engine.js";
+import { getLinguisticResourcesForActivity } from "./linguistic-activity-links.js";
 
 const normalize = (value) =>
   String(value ?? "")
@@ -365,6 +366,7 @@ function evaluateMicroActivity(activity, response) {
   return {
     ...result,
     ...feedback,
+    linguisticLinks: getLinguisticResourcesForActivity(activity),
     errors: normalizeErrors(result.errors || [])
   };
 }

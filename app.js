@@ -10,6 +10,7 @@ import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile }
 import { getIntegratedUnit, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit } from "./src/integrated-unit.js";
 import { createFeedbackContract } from "./src/feedback-contract.js";
 import { analyzeLanguage } from "./src/linguistic-engine.js";
+import { getLinguisticResourcesForActivity } from "./src/linguistic-activity-links.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -702,32 +703,13 @@ function renderExperience() {
 
 function applyLinguisticReview(response, result = {}, skill = "writing") {
   const text = String(response ?? "").trim();
-  if (!text || !["writing", "speaking"].includes(skill)) return result;
-
-  // Keep the linguistic engine as a conservative, data-backed reviewer.
-  // Unknown vocabulary and ambiguous phrases are deliberately left unchanged.
-  const review = analyzeLanguage(text, {
-    vocabulary: linguisticLibrary?.vocabularyEntries || [],
-    maxCorrections: 1
-  });
-  if (!review.errors.length || review.correctedText === text) return result;
-
-  const corrections = review.errors.map((error) => ({
-    ...error,
-    id: `LING-${error.ruleId}`,
-    correctedText: review.correctedText,
-    source: "linguistic-catalog"
-  }));
-  return {
-    ...result,
-    errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections],
-    correctedText: review.correctedText,
-    linguisticReview: {
-      schemaVersion: review.schemaVersion,
-      ruleIds: review.errors.map((error) => error.ruleId),
-      note: "Rule-based review covers only implemented patterns; it is not a complete grammar check."
-    }
-  };
+  const activity = { id: `HODIE-${skill}-response`, canDoId: session?.canDoId || practice?.canDoId || "SP-A2-01", level: profile?.level || "A2", skill, type: skill === "writing" ? "mini-production" : "conversation" };
+  const linguisticLinks = getLinguisticResourcesForActivity(activity);
+  if (!text || !["writing", "speaking"].includes(skill)) return { ...result, linguisticLinks };
+  const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 1 });
+  if (!review.errors.length || review.correctedText === text) return { ...result, linguisticLinks };
+  const corrections = review.errors.map(error => ({ ...error, id: `LING-${error.ruleId}`, correctedText: review.correctedText, source: "linguistic-catalog" }));
+  return { ...result, linguisticLinks, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, ruleIds: review.errors.map(error => error.ruleId), note: "Rule-based review covers only implemented patterns; it is not a complete grammar check." } };
 }
 
 function handleExperienceResponse(experience, stage, response) {
