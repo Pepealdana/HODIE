@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HODIE Linguistic Pack",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "packId",
+    "title",
+    "communicativeFunctions",
+    "grammarRules",
+    "vocabularyEntries",
+    "testCases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "packId": {
+      "type": "string",
+      "pattern": "^[A-Z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "communicativeFunctions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "level",
+          "label",
+          "labelEs",
+          "skills",
+          "structures",
+          "vocabularyDomains",
+          "contexts"
+        ]
+      }
+    },
+    "grammarRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "implementation",
+          "level",
+          "category",
+          "title",
+          "titleEs",
+          "explanation",
+          "explanationEs",
+          "examples",
+          "incorrect",
+          "status"
+        ]
+      }
+    },
+    "vocabularyEntries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "lemma",
+          "partOfSpeech",
+          "level",
+          "domain",
+          "meaningEs",
+          "forms",
+          "collocations",
+          "examples"
+        ]
+      }
+    },
+    "testCases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "expectRules",
+          "expectCorrection"
+        ]
+      }
+    }
+  }
+}
