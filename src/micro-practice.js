@@ -320,7 +320,11 @@ function evaluateMicroActivity(activity, response) {
   } else if (activity.type === "speak") {
     const tokens = activity.requiredTokens || [];
     const heardWords = value.match(/[\p{L}\p{N}’'-]+/gu) || [];
-    const exactMatch = (token) => heardWords.includes(normalize(token));
+    const exactMatch = (token) => {
+      const normalizedWords = normalize(token).split(" ");
+      if (normalizedWords.length === 1) return heardWords.includes(normalizedWords[0]);
+      return heardWords.join(" ").includes(normalizedWords.join(" "));
+    };
     const nearMatch = (token) => {
       const normalized = normalize(token);
       if (normalized.length > 4 && normalized.endsWith("s")) {
