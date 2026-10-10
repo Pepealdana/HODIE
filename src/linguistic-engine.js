@@ -88,7 +88,7 @@ function escapeRegex(value) {
 
 function transformVerbForm(value, type) {
   const original = String(value || ""), lower = original.toLowerCase();
-  const base = {went:"go",gone:"go",saw:"see",seen:"see",built:"build",made:"make",had:"have",did:"do",done:"do",wrote:"write",written:"write",ate:"eat",eaten:"eat",took:"take",taken:"take",chose:"choose",chosen:"choose"};
+  const base = {went:"go",gone:"go",saw:"see",seen:"see",built:"build",made:"make",had:"have",did:"do",done:"do",wrote:"write",written:"write",ate:"eat",eaten:"eat",took:"take",taken:"take",chose:"choose",chosen:"choose",used:"use",liked:"like",loved:"love",lived:"live",moved:"move"};
   const participle = {go:"gone",went:"gone",see:"seen",saw:"seen",build:"built",built:"built",make:"made",made:"made",have:"had",had:"had",do:"done",did:"done",write:"written",wrote:"written",eat:"eaten",ate:"eaten",take:"taken",took:"taken",choose:"chosen",chose:"chosen"};
   let result=lower;
   if(type==="thirdPersonToBase"){
