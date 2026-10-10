@@ -64,7 +64,7 @@ const imperfect = evaluateExperienceTurn(
   "I enjoy to work with students."
 );
 assert.equal(imperfect.canContinue, true);
-assert.ok(imperfect.corrections.some((error) => error.target === "enjoy-ing"));
+assert.ok(imperfect.corrections.some((error) => error.target === "enjoy-gerund"));
 session = advanceExperienceSession(session, imperfect);
 
 for (let i = 2; i < conversation.stages.length; i += 1) {
