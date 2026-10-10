@@ -35,7 +35,8 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
   const rawCorrections = [
     ...(Array.isArray(result.corrections) ? result.corrections : []),
     ...(Array.isArray(result.languageErrors) ? result.languageErrors : []),
-    ...(Array.isArray(result.languageNotes) ? result.languageNotes : [])
+    ...(Array.isArray(result.languageNotes) ? result.languageNotes : []),
+    ...(Array.isArray(result.errors) ? result.errors.filter((item) => !["task-completion", "listening-comprehension", "reading-comprehension"].includes(item.type)) : [])
   ];
   const corrections = [];
   const seenCorrections = new Set();
@@ -51,7 +52,8 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
   const rawMissing = [
     ...(Array.isArray(result.missing) ? result.missing : []),
     ...(Array.isArray(result.criteria) ? result.criteria.filter((item) => item.matched === false) : []),
-    ...(Array.isArray(result.checks) ? result.checks.filter((item) => item.passed === false) : [])
+    ...(Array.isArray(result.checks) ? result.checks.filter((item) => item.passed === false) : []),
+    ...(Array.isArray(result.errors) ? result.errors.filter((item) => item.type === "task-completion") : [])
   ];
   const missing = [];
   const seenMissing = new Set();
@@ -68,8 +70,8 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
   const explicitlyIncorrect = result.correct === false || result.success === false;
   let status = "partial";
   if (!responseProvided) status = "empty";
+  else if (result.correct === null || (activity.type === "mini-production" && source === "checklist")) status = "self-review";
   else if (correct) status = "correct";
-  else if (result.correct === null) status = "self-review";
   else if (explicitlyIncorrect) status = "needs-work";
   else if (result.available === false) status = "unavailable";
   if (!STATUS.has(status)) status = "partial";
