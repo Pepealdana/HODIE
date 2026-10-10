@@ -42,6 +42,69 @@
       "contexts": [
         "personal",
         "classroom"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ]
+      },
+      "searchTerms": [
+        "ASK_BASIC_QUESTIONS_A1",
+        "Ask and answer basic personal questions",
+        "Hacer y responder preguntas personales básicas",
+        "be",
+        "question-forms",
+        "pronouns",
+        "present-simple",
+        "modals",
+        "question-order",
+        "articles-general",
+        "plural-nouns",
+        "object-pronouns",
+        "subject-pronouns",
+        "capital-i",
+        "spelling-teacher",
+        "identity",
+        "family",
+        "communication",
+        "people",
+        "personal",
+        "classroom"
       ]
     },
     {
@@ -79,6 +142,65 @@
       "contexts": [
         "classroom",
         "home"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ]
+      },
+      "searchTerms": [
+        "DESCRIBE_OBJECTS_A1",
+        "Name and describe familiar objects",
+        "Nombrar y describir objetos conocidos",
+        "articles",
+        "plurals",
+        "there-is-are",
+        "adjectives",
+        "articles-general",
+        "plural-nouns",
+        "prepositions-place",
+        "prepositions-time",
+        "article-a-an",
+        "article-profession",
+        "classroom",
+        "technology",
+        "places",
+        "home"
       ]
     },
     {
@@ -111,6 +233,63 @@
         "technology"
       ],
       "contexts": [
+        "personal",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ]
+      },
+      "searchTerms": [
+        "DESCRIBE_CURRENT_ACTIONS_A2",
+        "Describe current actions and routines",
+        "Describir acciones actuales y rutinas",
+        "present-continuous",
+        "present-simple",
+        "past-simple",
+        "modals",
+        "prepositions-time",
+        "object-pronouns",
+        "daily-life",
+        "work",
+        "learning",
+        "technology",
         "personal",
         "professional"
       ]
@@ -149,6 +328,64 @@
       "contexts": [
         "education",
         "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ]
+      },
+      "searchTerms": [
+        "REPORT_EXPERIENCE_B1",
+        "Report experiences and project results",
+        "Contar experiencias y resultados de proyectos",
+        "present-perfect",
+        "past-simple",
+        "passive-voice",
+        "connectors",
+        "indirect-questions",
+        "first-conditional",
+        "contrast-connectors",
+        "projects",
+        "science",
+        "technology",
+        "work",
+        "education",
+        "professional"
       ]
     },
     {
@@ -182,6 +419,63 @@
         "projects"
       ],
       "contexts": [
+        "academic",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "B2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ]
+      },
+      "searchTerms": [
+        "BUILD_ARGUMENT_B2",
+        "Develop a qualified argument and coherent explanation",
+        "Desarrollar un argumento matizado y una explicación coherente",
+        "argumentation",
+        "textual-cohesion",
+        "complex-structures",
+        "discourse-pragmatics",
+        "connectors",
+        "contrast-connectors",
+        "repeated-connector",
+        "science",
+        "communication",
+        "projects",
         "academic",
         "professional"
       ]
@@ -267,7 +561,59 @@
         "pattern": "\\b(two|three|four|five|many|several)\\s+(student|teacher|robot|project|sensor)\\b",
         "flags": "gi",
         "replacement": "$1 $2s"
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "PLURAL-COUNT-001",
+        "plural-after-number",
+        "plurals",
+        "Use plural nouns after numbers greater than one",
+        "Usa sustantivos en plural después de números mayores que uno",
+        "count-nouns",
+        "numbers"
+      ]
     },
     {
       "id": "THERE-BE-COUNT-001",
@@ -348,7 +694,59 @@
         "pattern": "\\bthere\\s+are\\s+(a|an)\\s+(robot|sensor|student|teacher|project)\\b",
         "flags": "gi",
         "replacement": "there is $1 $2"
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "THERE-BE-COUNT-001",
+        "there-be-singular-count",
+        "there-is-are",
+        "Use there is with one singular count noun",
+        "Usa there is con un sustantivo contable singular",
+        "singular",
+        "places"
+      ]
     },
     {
       "id": "DOES-BASE-001",
@@ -433,7 +831,60 @@
           "type": "thirdPersonToBase",
           "capture": 3
         }
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "DOES-BASE-001",
+        "does-question-base-verb",
+        "question-forms",
+        "Use the base verb after does in questions",
+        "Usa el verbo base después de does en preguntas",
+        "present-simple",
+        "does",
+        "questions"
+      ]
     },
     {
       "id": "MODAL-BASE-001",
@@ -518,7 +969,59 @@
           "type": "thirdPersonToBase",
           "capture": 2
         }
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "MODAL-BASE-001",
+        "modal-base-verb",
+        "modals",
+        "Use the base verb after a modal",
+        "Usa el verbo base después de un modal",
+        "ability",
+        "advice"
+      ]
     },
     {
       "id": "PAST-DID-BASE-001",
@@ -603,7 +1106,59 @@
           "type": "pastToBase",
           "capture": 3
         }
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "PAST-DID-BASE-001",
+        "did-base-verb",
+        "past-simple",
+        "Use the base verb after did",
+        "Usa el verbo base después de did",
+        "did",
+        "questions"
+      ]
     },
     {
       "id": "PRES-CONT-BASE-001",
@@ -688,7 +1243,59 @@
           "type": "toGerund",
           "capture": 2
         }
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "PRES-CONT-BASE-001",
+        "present-continuous-ing",
+        "present-continuous",
+        "Use an -ing form after be in the present continuous",
+        "Usa la forma -ing después de be en presente continuo",
+        "actions",
+        "now"
+      ]
     },
     {
       "id": "GRAM-B1-FIRST-CONDITIONAL-002",
@@ -754,7 +1361,59 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "draft"
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-B1-FIRST-CONDITIONAL-002",
+        "first-conditional",
+        "conditionals",
+        "Use the first conditional for realistic future possibilities",
+        "Usa el primer condicional para posibilidades futuras reales",
+        "future",
+        "cause-effect"
+      ]
     },
     {
       "id": "GRAM-B1-CONNECTORS-002",
@@ -820,7 +1479,59 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "draft"
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-B1-CONNECTORS-002",
+        "contrast-connectors",
+        "connectors",
+        "Choose connectors by meaning and clause structure",
+        "Elige conectores según el significado y la estructura",
+        "cohesion",
+        "contrast"
+      ]
     },
     {
       "id": "GRAM-B2-ARGUMENT-CLAIMS-001",
@@ -886,7 +1597,59 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "draft"
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-B2-ARGUMENT-CLAIMS-001",
+        "argument-claims",
+        "argumentation",
+        "Support a claim with reasons and qualified evidence",
+        "Sustenta una afirmación con razones y evidencia matizada",
+        "evidence",
+        "qualification"
+      ]
     },
     {
       "id": "GRAM-B2-COHESION-001",
@@ -952,7 +1715,59 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "draft"
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-B2-COHESION-001",
+        "textual-cohesion",
+        "Maintain cohesion with reference and lexical links",
+        "Mantén la cohesión mediante referencias y enlaces léxicos",
+        "cohesion",
+        "reference",
+        "transitions"
+      ]
     },
     {
       "id": "GRAM-QUESTION-001",
@@ -1027,7 +1842,59 @@
           "question-order",
           "do-support"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-QUESTION-001",
+        "question-order",
+        "syntax",
+        "Basic question word order",
+        "Orden básico de preguntas",
+        "question-forms",
+        "do-support"
+      ]
     },
     {
       "id": "GRAM-PREP-TIME-001",
@@ -1107,7 +1974,59 @@
           "time",
           "in-on-at"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-PREP-TIME-001",
+        "planned:gram-prep-time-001",
+        "prepositions-time",
+        "Use in/on/at for common time expressions",
+        "Usa in/on/at en expresiones temporales",
+        "time",
+        "in-on-at"
+      ]
     },
     {
       "id": "GRAM-PREP-PLACE-001",
@@ -1187,7 +2106,59 @@
           "place",
           "spatial-relations"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-PREP-PLACE-001",
+        "planned:gram-prep-place-001",
+        "prepositions-place",
+        "Use common prepositions of place",
+        "Usa preposiciones frecuentes de lugar",
+        "place",
+        "spatial-relations"
+      ]
     },
     {
       "id": "GRAM-PRES-PERF-001",
@@ -1267,7 +2238,59 @@
           "past-participle",
           "experience"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-PRES-PERF-001",
+        "planned:gram-pres-perf-001",
+        "present-perfect",
+        "Build the present perfect",
+        "Forma el presente perfecto",
+        "past-participle",
+        "experience"
+      ]
     },
     {
       "id": "GRAM-PASSIVE-001",
@@ -1343,7 +2366,59 @@
           "past-participle",
           "process"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-PASSIVE-001",
+        "passive-voice",
+        "verb-forms",
+        "Basic passive voice",
+        "Voz pasiva básica",
+        "past-participle",
+        "process"
+      ]
     },
     {
       "id": "GRAM-INDIRECT-QUESTION-001",
@@ -1422,7 +2497,59 @@
           "word-order",
           "politeness"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-INDIRECT-QUESTION-001",
+        "planned:gram-indirect-question-001",
+        "indirect-questions",
+        "Use statement word order in indirect questions",
+        "Usa orden afirmativo en preguntas indirectas",
+        "word-order",
+        "politeness"
+      ]
     },
     {
       "id": "GRAM-DO-QUESTIONS-001",
@@ -1502,7 +2629,59 @@
           "do-support",
           "present-simple"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-DO-QUESTIONS-001",
+        "planned:gram-do-questions-001",
+        "question-forms",
+        "Form present simple questions with do/does",
+        "Forma preguntas en presente simple con do/does",
+        "do-support",
+        "present-simple"
+      ]
     },
     {
       "id": "GRAM-PLURAL-S-001",
@@ -1583,7 +2762,59 @@
           "plural-nouns",
           "count-nouns"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-PLURAL-S-001",
+        "planned:gram-plural-s-001",
+        "plural-nouns",
+        "Form regular plural nouns",
+        "Forma plurales regulares",
+        "plurals",
+        "count-nouns"
+      ]
     },
     {
       "id": "GRAM-ARTICLE-GENERAL-001",
@@ -1663,7 +2894,59 @@
           "articles-general",
           "the"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2-B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-ARTICLE-GENERAL-001",
+        "planned:gram-article-general-001",
+        "articles-general",
+        "Distinguish general plural nouns from specific nouns",
+        "Distingue plurales generales de nombres específicos",
+        "articles",
+        "the"
+      ]
     },
     {
       "id": "GRAM-OBJECT-PRONOUN-001",
@@ -1743,7 +3026,59 @@
           "object-pronouns",
           "reference"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-OBJECT-PRONOUN-001",
+        "planned:gram-object-pronoun-001",
+        "pronouns",
+        "Use object pronouns after verbs and prepositions",
+        "Usa pronombres de objeto después de verbos y preposiciones",
+        "object-pronouns",
+        "reference"
+      ]
     },
     {
       "id": "GRAM-SINCE-FOR-001",
@@ -1823,7 +3158,59 @@
           "since-for",
           "duration"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-SINCE-FOR-001",
+        "planned:gram-since-for-001",
+        "present-perfect",
+        "Use since for a starting point and for for a duration",
+        "Usa since para punto inicial y for para duración",
+        "since-for",
+        "duration"
+      ]
     },
     {
       "id": "GRAM-ALTHOUGH-001",
@@ -1903,7 +3290,59 @@
           "contrast-connectors",
           "cohesion"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-ALTHOUGH-001",
+        "planned:gram-although-001",
+        "contrast-connectors",
+        "Use although and however appropriately",
+        "Usa although y however adecuadamente",
+        "connectors",
+        "cohesion"
+      ]
     },
     {
       "id": "GRAM-COND-001",
@@ -1979,7 +3418,59 @@
           "first-conditional",
           "future"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-COND-001",
+        "first-conditional",
+        "sentence-structure",
+        "First Conditional",
+        "Primer condicional",
+        "conditionals",
+        "future"
+      ]
     },
     {
       "id": "GRAM-SUBJECT-PRONOUNS-001",
@@ -2062,7 +3553,58 @@
       "severity": "medium",
       "priority": "high",
       "status": "draft",
-      "implementationReadiness": "content complete; implementation and contrastive tests pending"
+      "implementationReadiness": "content complete; implementation and contrastive tests pending",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "GRAM-SUBJECT-PRONOUNS-001",
+        "subject-pronouns",
+        "Use subject pronouns before verbs",
+        "Usa pronombres sujeto antes de los verbos",
+        "pronouns",
+        "sentence-subject"
+      ]
     },
     {
       "id": "CAP-I-001",
@@ -2137,7 +3679,58 @@
           "capital-i",
           "writing-accuracy"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "CAP-I-001",
+        "capital-i",
+        "capitalization",
+        "Capitalize the pronoun I",
+        "Escribe I con mayúscula",
+        "writing-accuracy"
+      ]
     },
     {
       "id": "SPELL-TEACHER-001",
@@ -2212,7 +3805,59 @@
           "teacher",
           "writing-accuracy"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "SPELL-TEACHER-001",
+        "spelling-teacher",
+        "spelling",
+        "Spell teacher correctly",
+        "Escribe teacher correctamente",
+        "teacher",
+        "writing-accuracy"
+      ]
     },
     {
       "id": "ART-JOB-001",
@@ -2287,7 +3932,59 @@
           "jobs",
           "a-an"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "ART-JOB-001",
+        "article-profession",
+        "articles",
+        "Use an article before a singular job",
+        "Usa un artículo antes de una profesión singular",
+        "jobs",
+        "a-an"
+      ]
     },
     {
       "id": "ART-A-AN-001",
@@ -2363,7 +4060,59 @@
           "a-an",
           "pronunciation"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "ART-A-AN-001",
+        "article-a-an",
+        "articles",
+        "Choose a or an by sound",
+        "Elige a o an según el sonido",
+        "a-an",
+        "pronunciation"
+      ]
     },
     {
       "id": "BE-SUBJECT-001",
@@ -2443,7 +4192,59 @@
           "be-agreement",
           "subject-verb-agreement"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "BE-SUBJECT-001",
+        "be-agreement",
+        "verb-forms",
+        "Match be to the subject",
+        "Conjuga be según el sujeto",
+        "be",
+        "subject-verb-agreement"
+      ]
     },
     {
       "id": "CONN-REPEAT-001",
@@ -2517,7 +4318,59 @@
           "repetition",
           "writing-accuracy"
         ]
-      }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "CONN-REPEAT-001",
+        "repeated-connector",
+        "connectors",
+        "Avoid accidental repeated connectors",
+        "Evita repetir conectores por accidente",
+        "repetition",
+        "writing-accuracy"
+      ]
     }
   ],
   "vocabularyEntries": [
@@ -2544,7 +4397,61 @@
           "es": "Mi padre es amable."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "family",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "father",
+        "padre",
+        "family",
+        "noun",
+        "fathers"
+      ]
     },
     {
       "id": "VOC-A1-FAMILY-MOTHER",
@@ -2569,7 +4476,61 @@
           "es": "Mi madre trabaja en un colegio."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "family",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "mother",
+        "madre",
+        "family",
+        "noun",
+        "mothers"
+      ]
     },
     {
       "id": "VOC-A1-FAMILY-CHILD",
@@ -2594,7 +4555,61 @@
           "es": "A mi hijo le gustan los robots."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "family",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "child",
+        "niño/a; hijo/a",
+        "family",
+        "noun",
+        "children"
+      ]
     },
     {
       "id": "VOC-A1-PEOPLE-FRIEND",
@@ -2619,7 +4634,61 @@
           "es": "Mi amigo estudia inglés."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "people",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "friend",
+        "amigo/a",
+        "people",
+        "noun",
+        "friends"
+      ]
     },
     {
       "id": "VOC-A1-CLASSROOM-BOOK",
@@ -2644,7 +4713,61 @@
           "es": "Este libro es útil."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "classroom",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "book",
+        "libro",
+        "classroom",
+        "noun",
+        "books"
+      ]
     },
     {
       "id": "VOC-A1-CLASSROOM-PEN",
@@ -2669,7 +4792,61 @@
           "es": "Tengo un bolígrafo."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "classroom",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "pen",
+        "bolígrafo",
+        "classroom",
+        "noun",
+        "pens"
+      ]
     },
     {
       "id": "VOC-A1-CLASSROOM-CHAIR",
@@ -2694,7 +4871,61 @@
           "es": "La silla está cerca de la mesa."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "classroom",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "chair",
+        "silla",
+        "classroom",
+        "noun",
+        "chairs"
+      ]
     },
     {
       "id": "VOC-A1-CLASSROOM-TABLE",
@@ -2719,7 +4950,61 @@
           "es": "El sensor está sobre la mesa."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "classroom",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "table",
+        "mesa",
+        "classroom",
+        "noun",
+        "tables"
+      ]
     },
     {
       "id": "VOC-A1-PLACES-HOME",
@@ -2744,7 +5029,61 @@
           "es": "Estudio inglés en casa."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "places",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "home",
+        "casa; hogar",
+        "places",
+        "noun",
+        "homes"
+      ]
     },
     {
       "id": "VOC-A1-PLACES-SCHOOL",
@@ -2769,7 +5108,61 @@
           "es": "Trabajo en un colegio."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "places",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "school",
+        "colegio; escuela",
+        "places",
+        "noun",
+        "schools"
+      ]
     },
     {
       "id": "VOC-A1-TIME-TODAY",
@@ -2793,7 +5186,60 @@
           "es": "Estoy estudiando hoy."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "time",
+        "adverb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "today",
+        "hoy",
+        "time",
+        "adverb"
+      ]
     },
     {
       "id": "VOC-A1-TIME-TOMORROW",
@@ -2817,7 +5263,60 @@
           "es": "Tenemos clase mañana."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "time",
+        "adverb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "tomorrow",
+        "mañana",
+        "time",
+        "adverb"
+      ]
     },
     {
       "id": "VOC-A1-VERB-NEED",
@@ -2844,7 +5343,63 @@
           "es": "Necesito ayuda con este ejercicio."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "need",
+        "necesitar",
+        "daily-life",
+        "verb",
+        "needs",
+        "needed",
+        "needing"
+      ]
     },
     {
       "id": "VOC-A1-VERB-WANT",
@@ -2871,7 +5426,63 @@
           "es": "Quiero aprender inglés."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "want",
+        "querer",
+        "daily-life",
+        "verb",
+        "wants",
+        "wanted",
+        "wanting"
+      ]
     },
     {
       "id": "VOC-A1-VERB-LIVE",
@@ -2898,7 +5509,63 @@
           "es": "Vivo en Colombia."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "identity",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "live",
+        "vivir",
+        "identity",
+        "verb",
+        "lives",
+        "liveed",
+        "liveing"
+      ]
     },
     {
       "id": "VOC-A1-VERB-LEARN",
@@ -2925,7 +5592,62 @@
           "es": "Aprendo inglés todos los días."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "learn",
+        "aprender",
+        "learning",
+        "verb",
+        "learns",
+        "learned"
+      ]
     },
     {
       "id": "VOC-A1-QUESTION-WHERE",
@@ -2949,7 +5671,60 @@
           "es": "¿Dónde vives?"
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "adverb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "where",
+        "dónde",
+        "communication",
+        "adverb"
+      ]
     },
     {
       "id": "VOC-A1-QUESTION-WHAT",
@@ -2973,7 +5748,60 @@
           "es": "¿Cómo te llamas?"
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "what",
+        "qué; cuál",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A2-TECH-SENSOR",
@@ -2998,7 +5826,60 @@
           "es": "El sensor mide la temperatura."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "sensor",
+        "technology",
+        "noun",
+        "sensors"
+      ]
     },
     {
       "id": "VOC-A2-TECH-CIRCUIT",
@@ -3023,7 +5904,61 @@
           "es": "Probamos el circuito."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "circuit",
+        "circuito",
+        "technology",
+        "noun",
+        "circuits"
+      ]
     },
     {
       "id": "VOC-A2-LEARNING-IMPROVE",
@@ -3050,7 +5985,63 @@
           "es": "La práctica me ayuda a mejorar mi inglés."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "improve",
+        "mejorar",
+        "learning",
+        "verb",
+        "improves",
+        "improveed",
+        "improveing"
+      ]
     },
     {
       "id": "VOC-B1-ACADEMIC-EVIDENCE",
@@ -3075,7 +6066,61 @@
           "es": "Necesitamos más evidencia."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "science",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "evidence",
+        "evidencia",
+        "science",
+        "noun",
+        "evidences"
+      ]
     },
     {
       "id": "VOC-B2-ARGUMENT-CLAIM",
@@ -3100,7 +6145,61 @@
           "es": "La afirmación necesita evidencia más sólida."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "argumentation",
+        "noun",
+        "b2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "B2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "claim",
+        "afirmación; tesis",
+        "argumentation",
+        "noun",
+        "claims"
+      ]
     },
     {
       "id": "VOC-B2-COHESION-NEVERTHELESS",
@@ -3124,7 +6223,60 @@
           "es": "La muestra era pequeña; aun así, el resultado es útil."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "adverb",
+        "b2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "B2",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "nevertheless",
+        "sin embargo; aun así",
+        "communication",
+        "adverb"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-I",
@@ -3148,7 +6300,60 @@
           "es": "Estoy listo."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "I",
+        "yo",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-YOU",
@@ -3172,7 +6377,60 @@
           "es": "Tú eres mi amigo."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "you",
+        "tú; usted; ustedes",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-HE",
@@ -3196,7 +6454,60 @@
           "es": "Él trabaja en un colegio."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "he",
+        "él",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-SHE",
@@ -3220,7 +6531,60 @@
           "es": "Ella enseña robótica."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "she",
+        "ella",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-IT",
@@ -3244,7 +6608,60 @@
           "es": "Es un robot pequeño."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "it",
+        "ello; pronombre para cosas y sujetos impersonales",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-WE",
@@ -3268,7 +6685,60 @@
           "es": "Estudiamos inglés."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "we",
+        "nosotros/as",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-THEY",
@@ -3292,7 +6762,60 @@
           "es": "Ellos son estudiantes."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "they",
+        "ellos/as",
+        "communication",
+        "pronoun"
+      ]
     },
     {
       "id": "VOC-A1-PRONOUN-ME",
@@ -3316,7 +6839,60 @@
           "es": "Ella me ayudó."
         }
       ],
-      "openClass": true
+      "openClass": true,
+      "tags": [
+        "communication",
+        "pronoun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stages": [
+          {
+            "id": "recognition",
+            "label": "Recognition",
+            "labelEs": "Reconocer",
+            "minimumEvidence": 0
+          },
+          {
+            "id": "guided",
+            "label": "Guided",
+            "labelEs": "Uso guiado",
+            "minimumEvidence": 1
+          },
+          {
+            "id": "independent",
+            "label": "Independent",
+            "labelEs": "Uso independiente",
+            "minimumEvidence": 2
+          },
+          {
+            "id": "nuance",
+            "label": "Nuance",
+            "labelEs": "Matices y precisión",
+            "minimumEvidence": 4
+          },
+          {
+            "id": "transfer",
+            "label": "Transfer",
+            "labelEs": "Transferencia",
+            "minimumEvidence": 6
+          }
+        ],
+        "correctionIgnoresProgression": true
+      },
+      "searchTerms": [
+        "me",
+        "me; mí",
+        "communication",
+        "pronoun"
+      ]
     }
   ],
   "testCases": [

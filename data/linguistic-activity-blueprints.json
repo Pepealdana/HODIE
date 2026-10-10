@@ -1,0 +1,459 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": {
+    "knowledgeScope": "global",
+    "activityDifficulty": "progression-gated",
+    "correctionScope": "all tested rules regardless of activity links",
+    "draftRuleBehavior": "searchable, explainable, not executable"
+  },
+  "depthStages": [
+    {
+      "id": "recognition",
+      "label": "Recognition",
+      "labelEs": "Reconocer",
+      "minimumEvidence": 0
+    },
+    {
+      "id": "guided",
+      "label": "Guided",
+      "labelEs": "Uso guiado",
+      "minimumEvidence": 1
+    },
+    {
+      "id": "independent",
+      "label": "Independent",
+      "labelEs": "Uso independiente",
+      "minimumEvidence": 2
+    },
+    {
+      "id": "nuance",
+      "label": "Nuance",
+      "labelEs": "Matices y precisión",
+      "minimumEvidence": 4
+    },
+    {
+      "id": "transfer",
+      "label": "Transfer",
+      "labelEs": "Transferencia",
+      "minimumEvidence": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": "grammar",
+      "label": "Grammar",
+      "labelEs": "Gramática",
+      "primaryModes": [
+        "choose",
+        "complete",
+        "order",
+        "transform",
+        "spot-error",
+        "correct-or-not",
+        "explain-why",
+        "sentence-building"
+      ],
+      "skills": [
+        "reading",
+        "writing",
+        "speaking"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "recognize forms and build short accurate sentences"
+        },
+        {
+          "level": "A2",
+          "focus": "choose forms in familiar contexts and contrast present/past"
+        },
+        {
+          "level": "B1",
+          "focus": "combine structures and explain form choices"
+        },
+        {
+          "level": "B2",
+          "focus": "control nuance, complex clauses, register and exceptions"
+        }
+      ],
+      "feedback": [
+        "correct-form",
+        "brief-bilingual-rule",
+        "exception-note",
+        "retry-with-new-example"
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "label": "Vocabulary",
+      "labelEs": "Vocabulario",
+      "primaryModes": [
+        "match-meaning",
+        "active-recall",
+        "word-family",
+        "collocation-match",
+        "context-gap",
+        "semantic-sort",
+        "definition-guess",
+        "use-in-sentence"
+      ],
+      "skills": [
+        "reading",
+        "listening",
+        "speaking",
+        "writing"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "recognize and retrieve everyday words"
+        },
+        {
+          "level": "A2",
+          "focus": "use collocations and common phrases"
+        },
+        {
+          "level": "B1",
+          "focus": "choose words by context and register"
+        },
+        {
+          "level": "B2",
+          "focus": "distinguish near-synonyms, connotation and precision"
+        }
+      ],
+      "feedback": [
+        "meaning-en-es",
+        "pronunciation-support",
+        "collocation",
+        "word-family",
+        "contextual-example"
+      ]
+    },
+    {
+      "id": "listening",
+      "label": "Listening",
+      "labelEs": "Comprensión auditiva",
+      "primaryModes": [
+        "gist",
+        "detail",
+        "sequence-audio",
+        "dictation-chunks",
+        "minimal-pair",
+        "listen-and-choose",
+        "listen-and-retell",
+        "note-taking"
+      ],
+      "skills": [
+        "listening"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "short clear phrases and key words"
+        },
+        {
+          "level": "A2",
+          "focus": "familiar conversations and specific details"
+        },
+        {
+          "level": "B1",
+          "focus": "normal-speed speech, connected speech and implied meaning"
+        },
+        {
+          "level": "B2",
+          "focus": "extended speech, stance, nuance and competing viewpoints"
+        }
+      ],
+      "feedback": [
+        "replay-segment",
+        "transcript-after-attempt",
+        "key-phrase",
+        "comprehension-strategy"
+      ]
+    },
+    {
+      "id": "speaking",
+      "label": "Speaking",
+      "labelEs": "Expresión oral",
+      "primaryModes": [
+        "guided-response",
+        "timed-monologue",
+        "picture-description",
+        "retell",
+        "compare-options",
+        "explain-process",
+        "opinion-plus-reason",
+        "presentation"
+      ],
+      "skills": [
+        "speaking"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "personal details and short prepared utterances"
+        },
+        {
+          "level": "A2",
+          "focus": "connected sentences on familiar topics"
+        },
+        {
+          "level": "B1",
+          "focus": "sustained turns, narratives and explanations"
+        },
+        {
+          "level": "B2",
+          "focus": "structured argument, spontaneous elaboration and register"
+        }
+      ],
+      "feedback": [
+        "one-priority-correction",
+        "model-answer",
+        "retry-same-goal",
+        "delayed-feedback-mode"
+      ]
+    },
+    {
+      "id": "writing",
+      "label": "Writing",
+      "labelEs": "Expresión escrita",
+      "primaryModes": [
+        "sentence-expansion",
+        "guided-paragraph",
+        "message",
+        "email",
+        "narrative",
+        "process-description",
+        "edit-a-draft",
+        "argument-paragraph",
+        "paraphrase"
+      ],
+      "skills": [
+        "writing"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "sentences, basic word order and punctuation"
+        },
+        {
+          "level": "A2",
+          "focus": "connected paragraphs and everyday messages"
+        },
+        {
+          "level": "B1",
+          "focus": "cohesion, tense consistency, professional email and summaries"
+        },
+        {
+          "level": "B2",
+          "focus": "argumentation, concession, hedging, synthesis and style"
+        }
+      ],
+      "feedback": [
+        "global-tested-correction",
+        "prioritized-feedback",
+        "bilingual-explanation",
+        "preserve-valid-alternatives"
+      ]
+    },
+    {
+      "id": "reading",
+      "label": "Reading",
+      "labelEs": "Comprensión lectora",
+      "primaryModes": [
+        "gist",
+        "scan-for-detail",
+        "sequence-events",
+        "reference-resolution",
+        "infer-meaning",
+        "evidence-finding",
+        "cohesion-map",
+        "compare-viewpoints"
+      ],
+      "skills": [
+        "reading"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "short texts and explicit information"
+        },
+        {
+          "level": "A2",
+          "focus": "main idea and everyday detail"
+        },
+        {
+          "level": "B1",
+          "focus": "inference, reference and paragraph links"
+        },
+        {
+          "level": "B2",
+          "focus": "stance, argument structure, implication and tone"
+        }
+      ],
+      "feedback": [
+        "evidence-in-text",
+        "key-vocabulary",
+        "strategy-hint",
+        "retry-question"
+      ]
+    },
+    {
+      "id": "conversation",
+      "label": "Conversation",
+      "labelEs": "Conversación",
+      "primaryModes": [
+        "free-dialogue",
+        "follow-up-question",
+        "role-play",
+        "clarification-repair",
+        "interview",
+        "fluency-mode",
+        "correction-mode",
+        "reflection"
+      ],
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "greetings, personal information and simple follow-up"
+        },
+        {
+          "level": "A2",
+          "focus": "familiar topics and routine exchanges"
+        },
+        {
+          "level": "B1",
+          "focus": "maintain a conversation, repair misunderstandings and tell stories"
+        },
+        {
+          "level": "B2",
+          "focus": "negotiate meaning, qualify opinions and sustain discussion"
+        }
+      ],
+      "feedback": [
+        "immediate-or-delayed",
+        "one-priority-correction",
+        "conversation-memory",
+        "communication-repair"
+      ]
+    },
+    {
+      "id": "simulation",
+      "label": "Simulation",
+      "labelEs": "Simulación",
+      "primaryModes": [
+        "job-interview",
+        "classroom-explanation",
+        "project-demo",
+        "meeting",
+        "travel-situation",
+        "problem-solving",
+        "debate",
+        "presentation-qa"
+      ],
+      "skills": [
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "interaction"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "scripted everyday roles"
+        },
+        {
+          "level": "A2",
+          "focus": "guided real-world situations"
+        },
+        {
+          "level": "B1",
+          "focus": "professional scenarios with obstacles"
+        },
+        {
+          "level": "B2",
+          "focus": "ambiguous scenarios, trade-offs and stakeholder perspectives"
+        }
+      ],
+      "feedback": [
+        "task-completion",
+        "language-feedback",
+        "strategy-feedback",
+        "retry-with-changed-conditions"
+      ]
+    },
+    {
+      "id": "review",
+      "label": "Review and retention",
+      "labelEs": "Repaso y retención",
+      "primaryModes": [
+        "spaced-recall",
+        "error-clinic",
+        "mixed-retrieval",
+        "old-vs-new-contrast",
+        "transfer-challenge",
+        "confidence-rating"
+      ],
+      "skills": [
+        "reading",
+        "writing",
+        "speaking",
+        "listening"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "retrieve high-frequency forms"
+        },
+        {
+          "level": "A2",
+          "focus": "mix familiar structures"
+        },
+        {
+          "level": "B1",
+          "focus": "retrieve under less support"
+        },
+        {
+          "level": "B2",
+          "focus": "select precise forms in novel contexts"
+        }
+      ],
+      "feedback": [
+        "error-memory",
+        "retention-schedule",
+        "evidence-based-unlock",
+        "revisit-weakness"
+      ]
+    }
+  ],
+  "integrationContract": {
+    "alwaysAvailable": [
+      "grammarRules",
+      "vocabularyEntries",
+      "communicativeFunctions",
+      "examples",
+      "exceptions",
+      "collocations",
+      "correctionRules"
+    ],
+    "activityScoped": [
+      "practiceDepth",
+      "timeLimit",
+      "supportLevel",
+      "complexity",
+      "masteryThreshold"
+    ],
+    "neverGateByActivity": [
+      "global-text-correction",
+      "knowledge-search",
+      "vocabulary-recognition"
+    ],
+    "unknownWordPolicy": "Do not mark an unfamiliar word as wrong only because it is absent from the catalog."
+  }
+}
