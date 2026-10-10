@@ -11,7 +11,7 @@ assert.match(app, /applyLinguisticReview\(response, evaluated, "speaking"\)/);
 assert.match(app, /applyLinguisticReview\(response, evaluated, activity\.skill\)/);
 assert.match(app, /maxCorrections: 1/);
 assert.match(app, /Rule-based review covers only implemented patterns/);
-assert.match(worker, /hodie-shell-v24/);
+assert.match(worker, /hodie-shell-v25/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 console.log("HODIE linguistic UI integration contract: PASS");
