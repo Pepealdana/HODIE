@@ -6,6 +6,9 @@ const worker = fs.readFileSync(new URL("../service-worker.js", import.meta.url),
 const index = fs.readFileSync(new URL("../index.html", import.meta.url), "utf8");
 
 assert.match(app, /import \{ analyzeLanguage \} from "\.\/src\/linguistic-engine\.js"/);
+assert.match(app, /linguisticLinks: getLinguisticResourcesForActivity\(activity\)/);
+assert.match(app, /correctionIndependentOfActivity: true/);
+assert.match(app, /knowledgeAvailability: "global"/);
 assert.match(app, /function applyLinguisticReview\(response, result = \{\}, skill = "writing"\)/);
 assert.match(app, /applyLinguisticReview\(response, evaluated, "speaking"\)/);
 assert.match(app, /applyLinguisticReview\(response, evaluated, activity\.skill\)/);
