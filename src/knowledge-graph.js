@@ -72,16 +72,22 @@ function getKnowledgeForCanDo(graph, canDoId) {
 function getLinguisticResourcesForCanDo(graph, canDoId) {
   const functions = (graph?.communicativeFunctions || []).filter((item) => (item.canDoIds || []).includes(canDoId));
   const structures = new Set(functions.flatMap((item) => item.structures || []));
-  const categoriesForStructure = {
-    be: ["verb-forms"], "present-simple": ["subject-verb-agreement"], articles: ["articles"],
-    capitalization: ["capitalization"], spelling: ["spelling"], syntax: ["syntax"],
-    connectors: ["connectors"], "verb-patterns": ["verb-patterns"], "like-love-enjoy": ["verb-patterns"],
-    "enjoy-ing": ["verb-patterns"], prepositions: ["prepositions"], collocations: ["collocations"],
-    "past-simple": ["past-simple"], "there-is-are": ["there-is-are"]
+  const implementationsForStructure = {
+    be: ["be-agreement"], articles: ["article-profession", "article-a-an"],
+    capitalization: ["capital-i"], spelling: ["spelling-teacher"],
+    "present-simple": ["plural-agreement", "third-person-singular"],
+    "subject-verb-agreement": ["plural-agreement", "third-person-singular"],
+    "like-love-enjoy": ["enjoy-gerund", "like-gerund"],
+    "verb-patterns": ["enjoy-gerund", "like-gerund"],
+    "enjoy-ing": ["enjoy-gerund"], prepositions: ["work-place"],
+    collocations: ["work-place"], connectors: ["repeated-connector"],
+    syntax: ["adjective-noun-order"], "sequence-connectors": ["sequence-connectors"],
+    "past-simple": ["past-simple"], "there-is-are": ["there-is-are"],
+    "question-forms": ["question-order"], "modal-ability": ["modal-ability"]
   };
-  const categories = new Set([...structures].flatMap((structure) => categoriesForStructure[structure] || [structure]));
+  const implementations = new Set([...structures].flatMap((structure) => implementationsForStructure[structure] || []));
   const rules = (graph?.linguisticRules || []).filter((rule) =>
-    structures.has(rule.implementation) || categories.has(rule.category)
+    implementations.has(rule.implementation) || structures.has(rule.category) || structures.has(rule.implementation)
   );
   const domains = new Set(functions.flatMap((item) => item.vocabularyDomains || []));
   const vocabulary = (graph?.vocabularyEntries || []).filter((item) => domains.has(item.domain));
