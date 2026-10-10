@@ -26720,6 +26720,14 @@
       "text": "I have to work today.",
       "expectRules": [],
       "expectCorrection": "I have to work today."
+    },
+    {
+      "id": "TC-DID-NEG-BASE-002",
+      "text": "I didn't used the computer.",
+      "expectRules": [
+        "DID-NEG-BASE-001"
+      ],
+      "expectCorrection": "I didn't use the computer."
     }
   ],
   "cefrDimensions": {
