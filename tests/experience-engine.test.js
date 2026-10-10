@@ -47,7 +47,7 @@ const spellingAndArticle = evaluateExperienceTurn(conversation, conversation.sta
 assert.equal(spellingAndArticle.correctedText, "I am a teacher");
 assert.ok(spellingAndArticle.corrections.some((error) => error.target === "spelling-teacher"));
 assert.ok(spellingAndArticle.corrections.some((error) => error.target === "capital-i"));
-assert.ok(spellingAndArticle.corrections.some((error) => error.target === "job-article"));
+assert.ok(spellingAndArticle.corrections.some((error) => error.target === "article-profession"));
 const validJobTitle = evaluateExperienceTurn(conversation, conversation.stages[0], "I am a technology and robotics teacher.");
 assert.equal(validJobTitle.correctedText, "I am a technology and robotics teacher.");
 assert.equal(validJobTitle.corrections.length, 0);
