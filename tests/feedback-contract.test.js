@@ -46,6 +46,7 @@ const missingContract = createFeedbackContract({
 assert.equal(missingContract.missing.length, 1);
 assert.equal(missingContract.missing[0].label, "Express a preference or opinion");
 assert.doesNotMatch(missingContract.missing[0].label, /^ERR-/);
+assert.equal(missingContract.corrections.some((item) => item.type === "task-completion"), false);
 
 // Real case 2: known rule-based grammar error in conversation.
 const grammarResult = evaluateExperienceTurn(conversation, conversation.stages[1], "I enjoy to work with students.");
