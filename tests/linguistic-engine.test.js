@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { analyzeLanguage, validateLinguisticCatalog, linguisticCatalog } from "../src/linguistic-engine.js";
+import { buildKnowledgeGraph, getLinguisticResourcesForCanDo } from "../src/knowledge-graph.js";
 import fs from "node:fs";
 
 const catalog = JSON.parse(fs.readFileSync(new URL("../data/linguistic-catalog.json", import.meta.url), "utf8"));
@@ -43,6 +44,19 @@ assert.equal(validAlternatives.errors.length, 0, "valid grammar alternatives mus
 
 const punctuation = analyzeLanguage("I am teacher. I enjoy to teach.");
 assert.equal(punctuation.correctedText, "I am a teacher. I enjoy teaching.");
+
+const matrix = JSON.parse(fs.readFileSync(new URL("../data/can-do-matrix.json", import.meta.url), "utf8"));
+const knowledge = JSON.parse(fs.readFileSync(new URL("../data/knowledge-library.json", import.meta.url), "utf8"));
+const micro = JSON.parse(fs.readFileSync(new URL("../data/micro-practice-library.json", import.meta.url), "utf8"));
+const contentLibrary = JSON.parse(fs.readFileSync(new URL("../data/content-library.json", import.meta.url), "utf8"));
+const graph = buildKnowledgeGraph(matrix, micro, contentLibrary, knowledge, catalog);
+assert.equal(graph.valid, true, graph.errors.join("\\n"));
+assert.equal(graph.linguisticCatalogVersion, catalog.schemaVersion);
+const linked = getLinguisticResourcesForCanDo(graph, "SP-A2-01");
+assert.ok(linked.functions.some((fn) => fn.id === "INTRODUCE_SELF"));
+assert.ok(linked.rules.some((rule) => rule.id === "ART-JOB-001"));
+assert.ok(linked.vocabulary.some((entry) => entry.lemma === "teacher"));
+assert.ok(linked.functions[0].skills.includes("speaking") && linked.functions[0].skills.includes("writing"));
 
 assert.equal(linguisticCatalog.schemaVersion, catalog.schemaVersion);
 console.log("HODIE linguistic catalog and open-vocabulary engine: PASS");
