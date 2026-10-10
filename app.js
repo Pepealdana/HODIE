@@ -8,6 +8,7 @@ import { chooseLearningSurface } from "./src/learning-orchestrator.js";
 import { buildKnowledgeGraph, getKnowledgeForCanDo } from "./src/knowledge-graph.js";
 import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile } from "./src/learning-profile.js";
 import { getIntegratedUnit, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit } from "./src/integrated-unit.js";
+import { createFeedbackContract } from "./src/feedback-contract.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -681,6 +682,26 @@ function renderExperience() {
 
 function handleExperienceResponse(experience, stage, response) {
   const result = evaluateExperienceTurn(experience, stage, response);
+  const feedbackContract = createFeedbackContract({
+    activity: { id: `${experience.id}-${stage.id}`, type: "conversation", skill: "speaking" },
+    surface: "conversation",
+    skill: "speaking",
+    response,
+    result,
+    source: "rule-based"
+  });
+  if (feedbackContract.responseProvided) {
+    profile = recordKnowledgeOutcome(profile, {
+      activityId: `${experience.id}-${stage.id}`,
+      mode: "speaking",
+      skill: "speaking",
+      correct: null,
+      score: result.score,
+      errors: result.errors || [],
+      independent: true
+    });
+    saveProfile();
+  }
   const feedback = document.querySelector("#experienceFeedback");
   if (!result.canContinue) {
     feedback.innerHTML = `
@@ -693,9 +714,9 @@ function handleExperienceResponse(experience, stage, response) {
     return;
   }
 
-  const strengths = result.strengths || [];
-  const languageNotes = result.languageNotes || [];
-  const missingLabels = (result.missing || []).map((item) => item.label || item.id);
+  const strengths = feedbackContract.strengths;
+  const languageNotes = feedbackContract.corrections;
+  const missingLabels = feedbackContract.missing.map((item) => item.label || item.id);
   feedback.innerHTML = `
     <section class="instant-feedback feedback-success experience-turn-feedback" aria-labelledby="turnFeedbackTitle">
       <div class="feedback-heading">
@@ -707,8 +728,8 @@ function handleExperienceResponse(experience, stage, response) {
         </div>
       </div>
       <div class="feedback-metrics" aria-label="Response signals">
-        <div><strong>${result.wordCount}</strong><span>words · palabras</span></div>
-        <div><strong>${result.sentenceCount}</strong><span>sentences · oraciones</span></div>
+        <div><strong>${feedbackContract.metrics.wordCount}</strong><span>words · palabras</span></div>
+        <div><strong>${feedbackContract.metrics.sentenceCount}</strong><span>sentences · oraciones</span></div>
       </div>
       <div class="feedback-section">
         <h4>What went well · Lo que hiciste bien</h4>
@@ -732,7 +753,7 @@ function handleExperienceResponse(experience, stage, response) {
         <p>${escapeHtml(result.nextStep?.instruction || "Add one more detail to your answer.")}</p>
         <p class="spanish">${escapeHtml(result.nextStep?.titleEs || "Sigue practicando")}: ${escapeHtml(result.nextStep?.instructionEs || "Añade un detalle más a tu respuesta.")}</p>
       </div>
-      <p class="feedback-limit">Practice guidance only. It does not assign an official CEFR level.</p>
+      <p class="feedback-limit">Feedback source: rule-based. Practice guidance only; it does not assign an official CEFR level.</p>
       <div class="actions">
         <button class="primary compact" id="nextExperienceButton" type="button">${experienceSession.index + 1 >= experience.stages.length ? "View conversation review" : "Next question"}</button>
       </div>
@@ -1117,17 +1138,27 @@ function evaluateCurrent(response) {
 
 function showFeedback(activity, result, response, options = {}) {
   const feedback = document.querySelector("#microFeedback");
+  const isOpenProduction = activity.type === "mini-production";
+  const feedbackContract = createFeedbackContract({
+    activity,
+    surface: activity.type === "listening" ? "listening" : isOpenProduction && activity.skill === "writing" ? "writing" : activity.skill === "speaking" || activity.type === "speak" ? "speaking" : "practice",
+    skill: activity.skill,
+    response,
+    result,
+    source: isOpenProduction ? "checklist" : activity.type === "listening" || ["choose", "complete", "order", "match"].includes(activity.type) ? "answer-key" : "rule-based"
+  });
   const success = result.correct || result.score >= 1;
   feedback.innerHTML = `
     <div class="instant-feedback ${success ? "feedback-success" : "feedback-retry"}">
       <strong>${success ? "✓ Good" : "Try again"}</strong>
+      <p class="feedback-status-label">${isOpenProduction ? "Guided self-review · Autoevaluación guiada" : feedbackContract.status === "correct" ? "Correct · Correcto" : feedbackContract.status === "needs-work" ? "Needs another attempt · Necesita otro intento" : "Practice feedback · Retroalimentación de práctica"}</p>
       <p>${escapeHtml(result.feedback || "")}</p>
       <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
       ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
       ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
-      ${result.corrections?.length ? `
+      ${feedbackContract.corrections.length ? `
         <div class="feedback-corrections">
-          ${result.corrections.map((error) => `
+          ${feedbackContract.corrections.map((error) => `
             <div class="correction-item">
               <strong>Suggested: ${escapeHtml(error.correction || error.expected || "")}</strong>
               <p>${escapeHtml(error.message || "")}</p>
