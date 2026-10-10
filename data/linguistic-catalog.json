@@ -1153,6 +1153,508 @@
         "I teach robotics."
       ],
       "openClass": true
+    },
+    {
+      "id": "VOC-STUDENT",
+      "lemma": "student",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "estudiante",
+      "forms": [
+        "student",
+        "students"
+      ],
+      "collocations": [
+        "a student",
+        "technology students"
+      ],
+      "examples": [
+        "My students build robots."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SCHOOL",
+      "lemma": "school",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "escuela",
+      "forms": [
+        "school",
+        "schools"
+      ],
+      "collocations": [
+        "at school",
+        "work at a school"
+      ],
+      "examples": [
+        "I work at a school."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECT",
+      "lemma": "project",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "projects",
+      "meaningEs": "proyecto",
+      "forms": [
+        "project",
+        "projects"
+      ],
+      "collocations": [
+        "work on a project",
+        "finish a project"
+      ],
+      "examples": [
+        "I work on a robotics project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-CLASS",
+      "lemma": "class",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "clase",
+      "forms": [
+        "class",
+        "classes"
+      ],
+      "collocations": [
+        "teach a class",
+        "in class"
+      ],
+      "examples": [
+        "I teach a technology class."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LESSON",
+      "lemma": "lesson",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "lección",
+      "forms": [
+        "lesson",
+        "lessons"
+      ],
+      "collocations": [
+        "plan a lesson",
+        "learn a lesson"
+      ],
+      "examples": [
+        "I plan a lesson."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARN",
+      "lemma": "learn",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "aprender",
+      "forms": [
+        "learn",
+        "learns",
+        "learned",
+        "learnt",
+        "learning"
+      ],
+      "collocations": [
+        "learn English",
+        "learn by doing"
+      ],
+      "examples": [
+        "I learn English every day."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EXPLAIN",
+      "lemma": "explain",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "explicar",
+      "forms": [
+        "explain",
+        "explains",
+        "explained",
+        "explaining"
+      ],
+      "collocations": [
+        "explain an idea",
+        "explain a process"
+      ],
+      "examples": [
+        "I can explain a project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-IMPROVE",
+      "lemma": "improve",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "mejorar",
+      "forms": [
+        "improve",
+        "improves",
+        "improved",
+        "improving"
+      ],
+      "collocations": [
+        "improve my English",
+        "improve a skill"
+      ],
+      "examples": [
+        "I want to improve my English."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PRACTISE",
+      "lemma": "practise",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "practicar",
+      "forms": [
+        "practise",
+        "practises",
+        "practised",
+        "practising"
+      ],
+      "collocations": [
+        "practise speaking",
+        "practise every day"
+      ],
+      "examples": [
+        "I practise speaking English."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COLLEAGUE",
+      "lemma": "colleague",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "work",
+      "meaningEs": "colega",
+      "forms": [
+        "colleague",
+        "colleagues"
+      ],
+      "collocations": [
+        "work with colleagues",
+        "help a colleague"
+      ],
+      "examples": [
+        "I work with my colleagues."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-RESPONSIBILITY",
+      "lemma": "responsibility",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "work",
+      "meaningEs": "responsabilidad",
+      "forms": [
+        "responsibility",
+        "responsibilities"
+      ],
+      "collocations": [
+        "job responsibilities",
+        "take responsibility"
+      ],
+      "examples": [
+        "I have many responsibilities."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DIFFICULT",
+      "lemma": "difficult",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "problems",
+      "meaningEs": "difícil",
+      "forms": [
+        "difficult",
+        "more difficult",
+        "most difficult"
+      ],
+      "collocations": [
+        "a difficult problem",
+        "difficult to explain"
+      ],
+      "examples": [
+        "Some tasks are difficult."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROBLEM",
+      "lemma": "problem",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "problems",
+      "meaningEs": "problema",
+      "forms": [
+        "problem",
+        "problems"
+      ],
+      "collocations": [
+        "solve a problem",
+        "describe a problem"
+      ],
+      "examples": [
+        "We solved the problem."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SOLUTION",
+      "lemma": "solution",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "problems",
+      "meaningEs": "solución",
+      "forms": [
+        "solution",
+        "solutions"
+      ],
+      "collocations": [
+        "find a solution",
+        "suggest a solution"
+      ],
+      "examples": [
+        "We found a solution."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DESIGN",
+      "lemma": "design",
+      "partOfSpeech": "verb/noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "diseñar; diseño",
+      "forms": [
+        "design",
+        "designs",
+        "designed",
+        "designing"
+      ],
+      "collocations": [
+        "design a robot",
+        "design a project"
+      ],
+      "examples": [
+        "We design robots."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TEST",
+      "lemma": "test",
+      "partOfSpeech": "verb/noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "probar; prueba",
+      "forms": [
+        "test",
+        "tests",
+        "tested",
+        "testing"
+      ],
+      "collocations": [
+        "test a robot",
+        "test the code"
+      ],
+      "examples": [
+        "We test the robot."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SENSOR",
+      "lemma": "sensor",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sensor",
+      "forms": [
+        "sensor",
+        "sensors"
+      ],
+      "collocations": [
+        "use a sensor",
+        "distance sensor"
+      ],
+      "examples": [
+        "The robot uses a sensor."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-CODE",
+      "lemma": "code",
+      "partOfSpeech": "verb/noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "programar; código",
+      "forms": [
+        "code",
+        "codes",
+        "coded",
+        "coding"
+      ],
+      "collocations": [
+        "write code",
+        "test the code"
+      ],
+      "examples": [
+        "I write code."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-IDEA",
+      "lemma": "idea",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "idea",
+      "forms": [
+        "idea",
+        "ideas"
+      ],
+      "collocations": [
+        "share an idea",
+        "explain an idea"
+      ],
+      "examples": [
+        "I have an idea."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-REASON",
+      "lemma": "reason",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "razón",
+      "forms": [
+        "reason",
+        "reasons"
+      ],
+      "collocations": [
+        "give a reason",
+        "explain why"
+      ],
+      "examples": [
+        "I enjoy teaching because I help students."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-OPINION",
+      "lemma": "opinion",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "opinions",
+      "meaningEs": "opinión",
+      "forms": [
+        "opinion",
+        "opinions"
+      ],
+      "collocations": [
+        "in my opinion",
+        "express an opinion"
+      ],
+      "examples": [
+        "In my opinion, practice is important."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMPARE",
+      "lemma": "compare",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "comparar",
+      "forms": [
+        "compare",
+        "compares",
+        "compared",
+        "comparing"
+      ],
+      "collocations": [
+        "compare two options",
+        "compare results"
+      ],
+      "examples": [
+        "We compare two robots."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-REPEAT",
+      "lemma": "repeat",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "repetir",
+      "forms": [
+        "repeat",
+        "repeats",
+        "repeated",
+        "repeating"
+      ],
+      "collocations": [
+        "repeat the question",
+        "repeat more slowly"
+      ],
+      "examples": [
+        "Could you repeat that, please?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-UNDERSTAND",
+      "lemma": "understand",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "entender",
+      "forms": [
+        "understand",
+        "understands",
+        "understood",
+        "understanding"
+      ],
+      "collocations": [
+        "understand a question",
+        "understand the main idea"
+      ],
+      "examples": [
+        "I don't understand the question."
+      ],
+      "openClass": true
     }
   ],
   "testCases": [
