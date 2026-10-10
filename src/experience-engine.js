@@ -79,7 +79,7 @@ function buildLanguageNotes(experience, stage, text) {
   rules.push(
     {
       id: "compound-job-connector",
-      pattern: /\\b(a\\s+technology)\\s+an\\s+(robotics\\s+teacher)\\b/i,
+      pattern: /\b(a\s+technology)\s+an\s+(robotics\s+teacher)\b/i,
       replacement: (match, first, second) => `${first} and ${second}`,
       message: 'Use "and" to join the two parts of this job title; do not repeat the article here.',
       messageEs: 'Usa "and" para unir las dos partes de esta profesión; no repitas el artículo en esta estructura.',
@@ -87,7 +87,7 @@ function buildLanguageNotes(experience, stage, text) {
     },
     {
       id: "plural-subject-agreement",
-      pattern: /\\b(my students|the students|students)\\s+(is|has|does|works|teaches|builds|uses)\\b/i,
+      pattern: /\b(my students|the students|students)\s+(is|has|does|works|teaches|builds|uses)\b/i,
       replacement: (match, subject, verb) => {
         const pluralVerb = { is: "are", has: "have", does: "do", works: "work", teaches: "teach", builds: "build", uses: "use" };
         return `${subject} ${pluralVerb[verb.toLowerCase()] || verb.toLowerCase()}`;
@@ -98,7 +98,7 @@ function buildLanguageNotes(experience, stage, text) {
     },
     {
       id: "singular-subject-agreement",
-      pattern: /\\b(the robot|a robot|my school|the school)\\s+(build|use|have|are|do|work|teach)\\b/i,
+      pattern: /\b(the robot|a robot|my school|the school)\s+(build|use|have|are|do|work|teach)\b/i,
       replacement: (match, subject, verb) => {
         const singularVerb = { build: "builds", use: "uses", have: "has", are: "is", do: "does", work: "works", teach: "teaches" };
         return `${subject} ${singularVerb[verb.toLowerCase()] || verb.toLowerCase()}`;
@@ -109,7 +109,7 @@ function buildLanguageNotes(experience, stage, text) {
     },
     {
       id: "repeated-connector",
-      pattern: /\\b(and|but|because|so)\\s+\\1\\b/i,
+      pattern: /\b(and|but|because|so)\s+\1\b/i,
       replacement: (match, connector) => connector.toLowerCase(),
       message: 'Avoid repeating the same connector twice in a row.',
       messageEs: 'Evita repetir el mismo conector dos veces seguidas.',
