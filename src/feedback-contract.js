@@ -32,7 +32,7 @@ function normalizeMissing(item = {}) {
 function createFeedbackContract({ activity = {}, surface = "practice", skill = null, response = "", result = {}, source = null } = {}) {
   const text = String(response ?? "").trim();
   const responseProvided = text.length > 0;
-  const isLanguageCorrection = (item) => !["task-completion", "listening-comprehension", "reading-comprehension"].includes(item?.type);
+  const isLanguageCorrection = (item) => item?.type !== "task-completion";
   const rawCorrections = [
     ...(Array.isArray(result.corrections) ? result.corrections.filter(isLanguageCorrection) : []),
     ...(Array.isArray(result.languageErrors) ? result.languageErrors.filter(isLanguageCorrection) : []),
