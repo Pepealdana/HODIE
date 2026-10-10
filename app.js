@@ -752,15 +752,15 @@ function handleExperienceResponse(experience, stage, response) {
   const missingLabels = feedbackContract.missing.map((item) => item.label || item.id);
   const firstCorrection = languageNotes[0];
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
-  const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Good response · Buena respuesta";
+  const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Practice feedback · Comentario de práctica";
   const feedbackBody = firstCorrection
     ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>"
     : missingLabels.length
       ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
-      : "<p>No issue matched HODIE's current rules. This is not a complete grammar check.</p><p class=\"spanish\">Ninguna regla actual de HODIE detectó un error. Esto no es una revisión gramatical completa.</p>";
+      : "<p>No issue matched HODIE's current rules. This does not mean every sentence is correct. Review the transcript and edit any word that does not express what you meant.</p><p class=\"spanish\">Ninguna regla actual de HODIE detectó un error. Eso no significa que todas las frases sean correctas. Revisa la transcripción y edita las palabras que no expresen lo que querías decir.</p>";
   const nextTip = !languageNotes.length && !missingLabels.length && result.nextStep?.instruction ? "<p class=\"next-tip\"><strong>Next tip · Siguiente consejo:</strong> " + escapeHtml(result.nextStep.instruction) + " <span class=\"spanish\">" + escapeHtml(result.nextStep.instructionEs || "") + "</span></p>" : "";
   feedback.innerHTML =
-    '<section class="instant-feedback ' + (languageNotes.length || missingLabels.length ? "feedback-retry" : "feedback-success") + ' experience-turn-feedback">' +
+    '<section class="instant-feedback ' + (languageNotes.length || missingLabels.length ? "feedback-retry" : "feedback-neutral") + ' experience-turn-feedback">' +
       '<strong>' + feedbackTitle + '</strong>' +
       inlineCorrection +
       feedbackBody +

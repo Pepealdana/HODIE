@@ -48,6 +48,13 @@ const ambiguousWorkPhrase = analyzeLanguage("I work on a school.");
 assert.equal(ambiguousWorkPhrase.correctedText, "I work on a school.", "context-dependent prepositions must not be rewritten without enough context");
 assert.equal(ambiguousWorkPhrase.errors.length, 0);
 
+const malformedWorkplacePhrase = analyzeLanguage("I work as at school.");
+assert.equal(malformedWorkplacePhrase.correctedText, "I work at a school.", "remove the invalid as at sequence in a clear workplace statement");
+assert.ok(malformedWorkplacePhrase.errors.some((error) => error.ruleId === "WORK-PLACE-001"));
+const validJobAndWorkplace = analyzeLanguage("I work as a teacher at a school.");
+assert.equal(validJobAndWorkplace.correctedText, "I work as a teacher at a school.", "preserve valid work as + job + at + workplace phrasing");
+assert.equal(validJobAndWorkplace.errors.length, 0);
+
 const validAlternatives = analyzeLanguage("I like to teach, and I like teaching.");
 assert.equal(validAlternatives.errors.length, 0, "valid grammar alternatives must not be flagged");
 
