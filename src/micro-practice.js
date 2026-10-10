@@ -55,7 +55,7 @@ function detectLanguageCorrections(activity, response) {
 
   const rules = [
     {
-      pattern: /\btecher\b/i,
+      pattern: /\bte(?:cher|caher)\b/i,
       replacement: "teacher",
       target: "spelling-teacher",
       message: "The correct spelling is \"teacher\".",
