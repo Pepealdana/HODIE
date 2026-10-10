@@ -113,18 +113,18 @@ const writingErrors = evaluateMicroActivity(
   "I am teacher. I work with students. I enjoy to read books. My students is very important."
 );
 assert.equal(writingErrors.correct, true);
-assert.ok(writingErrors.errors.some((error) => error.target === "article"));
+assert.ok(writingErrors.errors.some((error) => error.target === "article-profession"));
 const workPlaceErrors = evaluateMicroActivity(
   writingActivity,
   "I am a teacher. I work on a school and I enjoy reading."
 );
 assert.ok(workPlaceErrors.errors.some((error) => error.target === "work-place"));
-assert.ok(writingErrors.errors.some((error) => error.target === "enjoy-ing"));
+assert.ok(writingErrors.errors.some((error) => error.target === "enjoy-gerund"));
 assert.ok(writingErrors.corrections.length >= 1);
 const typoWriting = evaluateMicroActivity(writingActivity, "i am tecaher");
 assert.ok(typoWriting.errors.some((error) => error.target === "capital-i"));
 assert.ok(typoWriting.errors.some((error) => error.target === "spelling-teacher"));
-assert.ok(typoWriting.errors.some((error) => error.target === "article"));
+assert.ok(typoWriting.errors.some((error) => error.target === "article-profession"));
 assert.match(typoWriting.errors.find((error) => error.correctedText)?.correctedText || "", /I am a teacher/i);
 assert.equal(writingErrors.retryRecommended, false);
 
