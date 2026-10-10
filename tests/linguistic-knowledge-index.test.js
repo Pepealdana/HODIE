@@ -8,6 +8,8 @@ assert.ok(stats.vocabularyEntries>=300,"expanded vocabulary should be globally i
 assert.equal(stats.globalAvailability,true);
 assert.equal(stats.activityIndependentCorrection,true);
 assert.ok(stats.indexedTokens>1000);
+import catalog from "../data/linguistic-catalog.json" with { type: "json" };
+assert.ok([...catalog.grammarRules,...catalog.vocabularyEntries,...catalog.communicativeFunctions].every(x=>!Array.isArray(x.depthProfile?.stages)),"depth stage definitions must be normalized to a shared stage set");
 assert.ok(searchLinguisticKnowledge("present perfect",{types:["grammar"],includeDrafts:true,limit:100}).some(x=>x.status==="draft"),"draft rules must be searchable");
 assert.ok(searchLinguisticKnowledge("repositor",{types:["vocabulary"]}).some(x=>x.lemma==="repository"),"prefix search should find vocabulary");
 assert.ok(searchLinguisticKnowledge("contraargumento",{types:["vocabulary"]}).some(x=>x.lemma==="counterargument"),"Spanish meaning should be searchable");
