@@ -607,3 +607,29 @@ html[data-theme="dark"] body { background: #101827; }
 .feedback-next-step { margin-top: 12px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .feedback-next-step p { margin-top: 8px; }
 @media (max-width: 520px) { .learning-hints { padding: 11px; } .hint-chips span { font-size: .84rem; } .voice-controls > button { flex: 1 1 auto; } }
+
+
+/* Actionable offline conversation feedback */
+.experience-turn-feedback { display: grid; gap: 16px; margin-top: 16px; padding: 18px; }
+.feedback-heading { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; }
+.feedback-heading h3, .feedback-section h4, .experience-summary h3 { margin: 0 0 8px; }
+.feedback-heading p, .feedback-section p { margin: 6px 0; }
+.feedback-status-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--success-bg); color: var(--success); font-weight: 900; }
+.feedback-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.feedback-metrics > div { display: grid; gap: 3px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.feedback-metrics strong { font-size: 1.35rem; }
+.feedback-metrics span { color: var(--muted); font-size: .84rem; }
+.feedback-section { display: grid; gap: 9px; padding-top: 13px; border-top: 1px solid var(--line); }
+.feedback-list { display: grid; gap: 10px; margin: 0; padding-left: 21px; }
+.feedback-list li { padding-left: 2px; }
+.feedback-list li p { margin: 4px 0; }
+.feedback-example { padding: 10px 12px; border-left: 3px solid var(--accent); border-radius: 7px; background: var(--surface); font-weight: 750; }
+.feedback-limit { margin: 0; color: var(--muted); font-size: .82rem; }
+.experience-summary { display: grid; gap: 14px; margin: 18px 0; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-alt); }
+.experience-summary > p { margin: 0; }
+.experience-summary .correction-item { margin-top: 6px; }
+@media (max-width: 520px) {
+  .experience-turn-feedback, .experience-summary { padding: 13px; gap: 13px; }
+  .feedback-heading { grid-template-columns: 1fr; }
+  .feedback-metrics > div { padding: 10px; }
+}
