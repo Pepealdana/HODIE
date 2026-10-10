@@ -23,7 +23,7 @@ function normalizeMissing(item = {}) {
   if (typeof item === "string") return { id: item, label: item, message: item, messageEs: "" };
   return {
     id: item.id || item.target || null,
-    label: item.label || item.id || item.target || "Missing requirement",
+    label: item.label || item.missingMessage || item.message || item.target || item.id || "Missing requirement",
     message: item.missingMessage || item.message || "",
     messageEs: item.missingMessageEs || item.messageEs || ""
   };
@@ -53,7 +53,16 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
     ...(Array.isArray(result.missing) ? result.missing : []),
     ...(Array.isArray(result.criteria) ? result.criteria.filter((item) => item.matched === false) : []),
     ...(Array.isArray(result.checks) ? result.checks.filter((item) => item.passed === false) : []),
-    ...(Array.isArray(result.errors) ? result.errors.filter((item) => item.type === "task-completion") : [])
+    ...(Array.isArray(result.errors) ? result.errors.filter((item) => {
+      if (item.type !== "task-completion") return false;
+      const target = item.target || item.id;
+      const represented = [
+        ...(Array.isArray(result.missing) ? result.missing : []),
+        ...(Array.isArray(result.criteria) ? result.criteria : []),
+        ...(Array.isArray(result.checks) ? result.checks : [])
+      ].some((candidate) => (candidate.id || candidate.target) === target);
+      return !represented;
+    }) : [])
   ];
   const missing = [];
   const seenMissing = new Set();
