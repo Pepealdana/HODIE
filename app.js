@@ -1198,6 +1198,19 @@ function showFeedback(activity, result, response, options = {}) {
     ${!success && !options.final ? `<button class="secondary compact" id="retryMicroButton" type="button">Try again</button>` : ""}
   `;
 
+  // Bind visible controls before profile persistence; UI navigation must remain usable.
+  document.querySelector("#nextMicroButton")?.addEventListener("click", () => {
+    practice.index += 1;
+    savePracticeState();
+    renderMicroActivity();
+    app.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  document.querySelector("#retryMicroButton")?.addEventListener("click", () => {
+    practice.answered = false;
+    renderMicroActivity();
+    app.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   if (options.final) {
     practice.finalAttempts += 1;
     const buttonLabel = success ? "Continue to progress" : "Continue with this attempt";
@@ -1233,19 +1246,7 @@ function showFeedback(activity, result, response, options = {}) {
     errors: result.errors || []
   });
 
-  if (success) {
-    document.querySelector("#nextMicroButton")?.addEventListener("click", () => {
-      practice.index += 1;
-      savePracticeState();
-      renderMicroActivity();
-      app.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  } else {
-    document.querySelector("#retryMicroButton")?.addEventListener("click", () => {
-      renderMicroActivity();
-      app.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
+
 }
 
 function startSpeechRecognition(activity, onTranscript = null) {
