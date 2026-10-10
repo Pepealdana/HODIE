@@ -1069,7 +1069,7 @@ function renderInteraction(activity) {
         </details>
       `}
 
-      <details class="learning-hints" open>
+      <details class="learning-hints">
         <summary>${isWriting ? "Help me build my answer" : "Help me prepare what to say"} <span class="spanish">Pistas para responder</span></summary>
         <div class="hint-content">
           <p><strong>Start with · Puedes comenzar con</strong></p>
