@@ -79,7 +79,7 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
   const correct = result.correct === true || result.success === true;
   const explicitlyIncorrect = result.correct === false || result.success === false;
   const inferredSource = source || (Array.isArray(result.checks) ? "checklist" : (result.correct === true || result.correct === false ? "answer-key" : "rule-based"));
-  const evaluationStatus = !responseProvided
+  const evaluationStatus = result.evaluationStatus || (!responseProvided
     ? "not-evaluated"
     : corrections.length
       ? "issues-detected"
@@ -89,7 +89,7 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
           ? "objective-incorrect"
           : result.available === false
             ? "unavailable"
-            : "not-fully-evaluated";
+            : "not-fully-evaluated");
   let status = "partial";
   if (!responseProvided) status = "empty";
   else if (result.correct === null || (activity.type === "mini-production" && source === "checklist")) status = "self-review";
