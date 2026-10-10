@@ -694,6 +694,7 @@ function handleExperienceResponse(experience, stage, response) {
     profile = recordKnowledgeOutcome(profile, {
       activityId: `${experience.id}-${stage.id}`,
       mode: "speaking",
+      surface: "conversation",
       skill: "speaking",
       correct: null,
       score: result.score,
