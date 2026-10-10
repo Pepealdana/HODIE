@@ -887,7 +887,13 @@ function startPractice(mode) {
     mode,
     limit: 6,
     profile
-  });
+  }).map((activity) => ({
+    ...activity,
+    // Learning links tailor the activity; they never limit the correction engine.
+    linguisticLinks: getLinguisticResourcesForActivity(activity),
+    knowledgeAvailability: "global",
+    correctionIndependentOfActivity: true
+  }));
 
   if (!activities.length) {
     renderError(new Error(`No micro-practice is available for ${getModeLabel(mode)} yet.`));
@@ -1149,9 +1155,15 @@ function evaluateCurrent(response) {
     .forEach((control) => { control.disabled = true; });
   const activity = practice.activities[practice.index];
   const evaluated = evaluateMicroActivity(activity, response);
+  const linkedEvaluation = {
+    ...evaluated,
+    linguisticLinks: activity.linguisticLinks || getLinguisticResourcesForActivity(activity),
+    knowledgeAvailability: "global",
+    correctionIndependentOfActivity: true
+  };
   const result = activity.type === "mini-production"
-    ? applyLinguisticReview(response, evaluated, activity.skill)
-    : evaluated;
+    ? applyLinguisticReview(response, linkedEvaluation, activity.skill)
+    : linkedEvaluation;
   practice.currentResponse = response;
   showFeedback(activity, result, response);
 }
