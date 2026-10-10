@@ -1022,6 +1022,31 @@
       "severity": "medium",
       "priority": "medium",
       "status": "tested"
+    },
+    {
+      "id": "SPELL-ROBOTICS-001",
+      "implementation": "catalog-regex",
+      "level": "A2",
+      "category": "spelling",
+      "title": "Correct a reviewed spelling variant of robotics",
+      "titleEs": "Corrige una variante ortográfica revisada de robotics",
+      "explanation": "The standard spelling in this context is robotics.",
+      "explanationEs": "La forma ortográfica estándar en este contexto es robotics.",
+      "examples": [
+        "I teach robotics."
+      ],
+      "incorrect": [
+        "I teach roboticks."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\broboticks\\b",
+        "flags": "gi",
+        "replacement": "robotics",
+        "confidence": "high"
+      }
     }
   ],
   "vocabularyEntries": [
@@ -1777,6 +1802,20 @@
         "CONN-JOB-001"
       ],
       "expectCorrection": "I am a technology and robotics teacher."
+    },
+    {
+      "id": "TC-CATALOG-MATCHER-01",
+      "text": "I teach roboticks.",
+      "expectRules": [
+        "SPELL-ROBOTICS-001"
+      ],
+      "expectCorrection": "I teach robotics."
+    },
+    {
+      "id": "TC-CATALOG-MATCHER-VALID-01",
+      "text": "I teach robotics.",
+      "expectRules": [],
+      "expectCorrection": "I teach robotics."
     }
   ],
   "cefrDimensions": {
