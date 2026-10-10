@@ -635,6 +635,25 @@
       "severity": "low",
       "priority": "low",
       "status": "policy"
+    },
+    {
+      "id": "CONN-JOB-001",
+      "implementation": "compound-job-connector",
+      "level": "A2",
+      "category": "syntax",
+      "title": "Join compound job titles with and",
+      "titleEs": "Une profesiones compuestas con and",
+      "explanation": "Use and to join the two fields in this compound job title.",
+      "explanationEs": "Usa and para unir las dos áreas de esta profesión compuesta.",
+      "examples": [
+        "I am a technology and robotics teacher."
+      ],
+      "incorrect": [
+        "I am a technology an robotics teacher."
+      ],
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested"
     }
   ],
   "vocabularyEntries": [
@@ -880,6 +899,14 @@
       "text": "I'm a teacher and I like to teach.",
       "expectRules": [],
       "expectCorrection": "I'm a teacher and I like to teach."
+    },
+    {
+      "id": "TC-COMPOUND-JOB-01",
+      "text": "I am a technology an robotics teacher.",
+      "expectRules": [
+        "CONN-JOB-001"
+      ],
+      "expectCorrection": "I am a technology and robotics teacher."
     }
   ],
   "cefrDimensions": {
