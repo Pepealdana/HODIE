@@ -29,6 +29,7 @@ function recordKnowledgeOutcome(profile = {}, outcome = {}) {
   const record = {
     activityId: outcome.activityId,
     mode: outcome.mode || "mixed",
+    surface: outcome.surface || outcome.skill || outcome.mode || "practice",
     canDoId: outcome.canDoId || null,
     skill: outcome.skill || inferSkill(outcome.mode),
     knowledgeIds: Array.isArray(outcome.knowledgeIds) ? [...new Set(outcome.knowledgeIds)] : [],
