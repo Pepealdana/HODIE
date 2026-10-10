@@ -1,4 +1,5 @@
 import { evaluateCriteria, prioritizeErrors, createError } from "./error-engine.js";
+import { analyzeLanguage } from "./linguistic-engine.js";
 
 const EXPERIENCE_KINDS = new Set(["conversation", "simulation"]);
 const EXPERIENCE_MODES = new Set(["guided-open", "role-play", "presentation"]);
@@ -41,115 +42,23 @@ function createExperienceSession(library, id, options = {}) {
 }
 
 function buildLanguageNotes(experience, stage, text) {
-  const rules = [
-    {
-      id: "spelling-teacher",
-      pattern: /\bte(?:cher|caher)\b/i,
-      replacement: () => "teacher",
-      message: 'The correct spelling is "teacher".',
-      messageEs: 'La escritura correcta es "teacher" (profesor/a).',
-      examples: ["I am a teacher."]
-    },
-    {
-      id: "capital-i",
-      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/,
-      replacement: (_match, prefix) => prefix + "I",
-      message: 'The pronoun "I" is always capitalized in English.',
-      messageEs: 'El pronombre "I" siempre se escribe con mayúscula en inglés.',
-      examples: ["I am a teacher.", "I enjoy teaching."]
-    },
-    {
-      id: "job-article",
-      pattern: /\bI\s+am\s+(?!a\b|an\b)(technology\s+and\s+robotics\s+teacher|technology\s+teacher|robotics\s+teacher|teacher|student|programmer|developer|engineer|professor)\b/i,
-      replacement: (_match, job) => "I am " + (/^engineer$/i.test(job) ? "an" : "a") + " " + job.toLowerCase(),
-      message: 'Use "a/an" before a singular job or role.',
-      messageEs: 'Usa "a/an" antes de una profesión o un rol en singular.',
-      examples: ["I am a teacher.", "I am an engineer.", "I am a technology teacher."]
-    },
-    {
-      id: "article-choice",
-      pattern: /\bI\s+am\s+a\s+(engineer)\b/i,
-      replacement: "I am an $1",
-      message: 'Use "an" before "engineer" because it begins with a vowel sound.',
-      messageEs: 'Usa "an" antes de "engineer" porque comienza con sonido vocálico.',
-      examples: ["I am an engineer."]
-    },
-    {
-      id: "work-place",
-      pattern: /\bI\s+work\s+on\s+a\s+(school|company|office)\b/i,
-      replacement: (_match, place) => "I work at a " + place.toLowerCase(),
-      message: 'For a workplace such as a school, "work at" is a natural choice.',
-      messageEs: 'Para un lugar de trabajo como una escuela, normalmente es más natural decir "work at".',
-      examples: ["I work at a school.", "I work at an office."]
-    },
-    {
-      id: "enjoy-ing",
-      pattern: /\bI\s+enjoy\s+to\s+(build|teach|read|make|work|learn)\b/i,
-      replacement: (_match, verb) => "I enjoy " + ({ build: "building", teach: "teaching", read: "reading", make: "making", work: "working", learn: "learning" })[verb.toLowerCase()],
-      message: 'After "enjoy", use a verb with -ing.',
-      messageEs: 'Después de "enjoy", usa un verbo terminado en -ing.',
-      examples: ["I enjoy reading.", "I enjoy building robots."]
-    },
-    {
-      id: "plural-subject-agreement",
-      pattern: /\b(my students|the students|students)\s+(is|has|does|works|teaches|builds|uses)\b/i,
-      replacement: (_match, subject, verb) => subject + " " + ({ is: "are", has: "have", does: "do", works: "work", teaches: "teach", builds: "build", uses: "use" })[verb.toLowerCase()],
-      message: 'A plural subject such as "students" needs a plural verb form.',
-      messageEs: 'Un sujeto plural como "students" necesita la forma plural del verbo.',
-      examples: ["My students are creative.", "The students build a robot."]
-    },
-    {
-      id: "singular-subject-agreement",
-      pattern: /\b(the robot|a robot|my school|the school)\s+(build|use|have|are|do|work|teach)\b/i,
-      replacement: (_match, subject, verb) => subject + " " + ({ build: "builds", use: "uses", have: "has", are: "is", do: "does", work: "works", teach: "teaches" })[verb.toLowerCase()],
-      message: 'A singular subject such as "the robot" usually needs the third-person present form.',
-      messageEs: 'Un sujeto singular como "the robot" normalmente necesita la forma de tercera persona en presente.',
-      examples: ["The robot uses a sensor.", "My school teaches robotics."]
-    },
-    {
-      id: "compound-job-connector",
-      pattern: /\b(a\s+technology)\s+an\s+(robotics\s+teacher)\b/i,
-      replacement: (_match, first, second) => first + " and " + second,
-      message: 'Use "and" to join the two parts of this job title.',
-      messageEs: 'Usa "and" para unir las dos partes de esta profesión.',
-      examples: ["I am a technology and robotics teacher."]
-    },
-    {
-      id: "repeated-connector",
-      pattern: /\b(and|but|because|so)\s+\1\b/i,
-      replacement: (_match, connector) => connector.toLowerCase(),
-      message: "Avoid repeating the same connector twice in a row.",
-      messageEs: "Evita repetir el mismo conector dos veces seguidas.",
-      examples: ["I teach robotics and I enjoy it."]
-    }
-  ];
-
-  const notes = [];
-  let corrected = text;
-  for (const rule of rules) {
-    const match = corrected.match(rule.pattern);
-    if (!match) continue;
-    const replacement = rule.replacement(...match);
-    const next = corrected.replace(rule.pattern, replacement);
-    if (next === corrected) continue;
-    notes.push(createError({
-      activity: { id: `${experience.id}-${stage.id}`, context: experience.contexts?.[0] || "general" },
-      type: "grammar",
-      target: rule.id,
-      actual: match[0],
-      expected: replacement,
-      severity: "low",
-      priority: "low",
-      message: rule.message,
-      messageEs: rule.messageEs,
-      correction: match[0].replace(rule.pattern, rule.replacement),
-      examples: rule.examples,
-      retry: false
-    }));
-    corrected = next;
-    if (notes.length >= 3) break;
-  }
-  return { notes: prioritizeErrors(notes, 3), correctedText: corrected };
+  const analysis = analyzeLanguage(text, { maxCorrections: 3 });
+  const notes = analysis.errors.map((error) => createError({
+    activity: { id: `${experience.id}-${stage.id}`, context: experience.contexts?.[0] || "general" },
+    type: error.type,
+    target: error.target,
+    actual: error.actual,
+    expected: error.expected,
+    severity: error.severity,
+    priority: error.priority,
+    message: error.message,
+    messageEs: error.messageEs,
+    correction: error.correction,
+    examples: error.examples,
+    retry: error.retry,
+    contextId: experience.contexts?.[0] || "general"
+  })).map((error, index) => ({ ...error, ruleId: analysis.errors[index].ruleId, start: analysis.errors[index].start, end: analysis.errors[index].end, confidence: analysis.errors[index].confidence }));
+  return { notes: prioritizeErrors(notes, 3), correctedText: analysis.correctedText, unknownWords: analysis.unknownWords };
 }
 
 function buildNextStep({ text, matched, missing, languageNotes, wordCount, sentenceCount }) {
@@ -220,7 +129,7 @@ function evaluateExperienceTurn(experience, stage, response) {
     };
   }
 
-  const { notes: languageNotes, correctedText } = buildLanguageNotes(experience, stage, text);
+  const { notes: languageNotes, correctedText, unknownWords } = buildLanguageNotes(experience, stage, text);
   const words = text.match(/[\p{L}\p{N}’'-]+/gu) || [];
   const sentences = text.split(/[.!?]+/).map((part) => part.trim()).filter(Boolean);
   const wordCount = words.length;
@@ -282,6 +191,7 @@ function evaluateExperienceTurn(experience, stage, response) {
     corrections: languageNotes,
     languageNotes,
     correctedText,
+    unknownWords,
     wordCount,
     sentenceCount,
     score,
