@@ -1,7 +1,7 @@
 import catalog from "../data/linguistic-catalog.json" with { type: "json" };
 import contentLibrary from "../data/content-library.json" with { type: "json" };
 import microLibrary from "../data/micro-practice-library.json" with { type: "json" };
-const ALIASES={"question-forms":["question-forms","indirect-questions"],"modals":["modals"],"past-simple":["past-simple"],"present-perfect":["present-perfect"],"passive-voice":["passive-voice"],"there-is-are":["there-is-are"],"plurals":["plurals"],"present-continuous":["present-continuous"]};
+const ALIASES={"question-forms":["question-forms","indirect-questions","do-support","question-order"],"modals":["modals"],"past-simple":["past-simple"],"present-perfect":["present-perfect","present-perfect-experience","present-perfect-past-simple"],"passive-voice":["passive-voice"],"there-is-are":["there-is-are"],"plurals":["plurals","plural-nouns"],"plural-nouns":["plurals","plural-nouns"],"present-continuous":["present-continuous"],"articles":["articles","articles-general"],"prepositions-place":["prepositions-place"],"prepositions-time":["prepositions-time"],"pronouns":["pronouns","object-pronouns"],"connectors":["connectors","contrast-connectors"],"contrast-connectors":["connectors","contrast-connectors"],"conditionals":["conditionals","first-conditional"]};
 const norm=v=>String(v??"").toLowerCase().replace(/[^a-z0-9 -]/g," ").replace(/\s+/g," ").trim();
 const rank=l=>({A1:1,A2:2,B1:3,B2:4,C1:5,C2:6})[String(l||"").toUpperCase()]||2;
 function getLinguisticResourcesForActivity(activity={}) {

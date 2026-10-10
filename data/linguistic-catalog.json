@@ -1252,7 +1252,11 @@
         "question-forms",
         "pronouns",
         "present-simple",
-        "modals"
+        "modals",
+        "question-order",
+        "articles-general",
+        "plural-nouns",
+        "object-pronouns"
       ],
       "vocabularyDomains": [
         "identity",
@@ -1284,7 +1288,11 @@
         "articles",
         "plurals",
         "there-is-are",
-        "adjectives"
+        "adjectives",
+        "articles-general",
+        "plural-nouns",
+        "prepositions-place",
+        "prepositions-time"
       ],
       "vocabularyDomains": [
         "classroom",
@@ -1315,7 +1323,9 @@
         "present-continuous",
         "present-simple",
         "past-simple",
-        "modals"
+        "modals",
+        "prepositions-time",
+        "object-pronouns"
       ],
       "vocabularyDomains": [
         "daily-life",
@@ -1349,7 +1359,9 @@
         "past-simple",
         "passive-voice",
         "connectors",
-        "indirect-questions"
+        "indirect-questions",
+        "first-conditional",
+        "contrast-connectors"
       ],
       "vocabularyDomains": [
         "projects",
@@ -1381,7 +1393,9 @@
         "argumentation",
         "textual-cohesion",
         "complex-structures",
-        "discourse-pragmatics"
+        "discourse-pragmatics",
+        "connectors",
+        "contrast-connectors"
       ],
       "vocabularyDomains": [
         "argumentation",
@@ -1748,7 +1762,62 @@
       ],
       "severity": "medium",
       "priority": "medium",
-      "status": "draft"
+      "status": "draft",
+      "examplesBilingual": [
+        {
+          "en": "Where do you work?",
+          "es": "¿Dónde trabajas?"
+        },
+        {
+          "en": "Does she teach English?",
+          "es": "¿Ella enseña inglés?"
+        }
+      ],
+      "exceptions": [
+        "Questions with be invert be and subject: Are you ready?",
+        "After does, use the base verb."
+      ],
+      "negativeCases": [
+        {
+          "text": "Where do you work?",
+          "reason": "Correct do-support."
+        },
+        {
+          "text": "Are you ready?",
+          "reason": "Be-questions do not use do/does."
+        }
+      ],
+      "practice": [
+        {
+          "type": "order",
+          "prompt": "Arrange: where / do / you / work",
+          "promptEs": "Ordena: where / do / you / work"
+        },
+        {
+          "type": "write",
+          "prompt": "Ask a classmate where they live.",
+          "promptEs": "Pregunta a un compañero dónde vive."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "question-forms",
+          "question-order",
+          "do-support"
+        ]
+      }
     },
     {
       "id": "GRAM-CAN-001",
@@ -1921,14 +1990,71 @@
       "explanation": "Use if + present simple, will + base verb for a real future possibility.",
       "explanationEs": "Usa if + presente simple, will + verbo base para una posibilidad futura real.",
       "examples": [
-        "If we practise, we will improve."
+        "If we practise, we will improve.",
+        "If the sensor fails, we will stop."
       ],
       "incorrect": [
         "If we will practise, we will improve."
       ],
       "severity": "medium",
       "priority": "medium",
-      "status": "draft"
+      "status": "draft",
+      "examplesBilingual": [
+        {
+          "en": "If we practise, we will improve.",
+          "es": "Si practicamos, mejoraremos."
+        },
+        {
+          "en": "If the sensor fails, we will stop.",
+          "es": "Si falla el sensor, nos detendremos."
+        }
+      ],
+      "exceptions": [
+        "In the first conditional, the if-clause normally uses present simple, not will.",
+        "Other conditional meanings use other structures."
+      ],
+      "negativeCases": [
+        {
+          "text": "If we practise, we will improve.",
+          "reason": "Correct first conditional."
+        },
+        {
+          "text": "If it rains, we will stay inside.",
+          "reason": "Correct first conditional."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "If the sensor ___ (fail), we will stop.",
+          "promptEs": "Si falla el sensor, nos detendremos.",
+          "answer": "fails"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a realistic if-clause and result.",
+          "promptEs": "Escribe una condición realista y su resultado."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "conditionals",
+          "first-conditional",
+          "future"
+        ]
+      }
     },
     {
       "id": "GRAM-RELATIVE-001",
@@ -1968,7 +2094,63 @@
       ],
       "severity": "medium",
       "priority": "medium",
-      "status": "draft"
+      "status": "draft",
+      "examplesBilingual": [
+        {
+          "en": "The robot was designed by students.",
+          "es": "El robot fue diseñado por estudiantes."
+        },
+        {
+          "en": "The project is tested every week.",
+          "es": "El proyecto se prueba cada semana."
+        }
+      ],
+      "exceptions": [
+        "Active voice is correct when the agent is the focus: Students designed the robot.",
+        "Progressive passive uses be + being + past participle."
+      ],
+      "negativeCases": [
+        {
+          "text": "The robot was designed by students.",
+          "reason": "Correct passive voice."
+        },
+        {
+          "text": "Students designed the robot.",
+          "reason": "Correct active voice."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "The circuit was ___ (test) yesterday.",
+          "promptEs": "El circuito fue ___ ayer.",
+          "answer": "tested"
+        },
+        {
+          "type": "write",
+          "prompt": "Describe how a device is made.",
+          "promptEs": "Describe cómo se fabrica un dispositivo."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "passive-voice",
+          "past-participle",
+          "process"
+        ]
+      }
     },
     {
       "id": "GRAM-COHESION-001",
@@ -2069,8 +2251,8 @@
       "explanation": "Most countable nouns form the plural with -s or -es.",
       "explanationEs": "La mayoría de sustantivos contables forman el plural con -s o -es.",
       "examples": [
-        "one robot",
-        "two robots"
+        "One robot is ready.",
+        "Two robots are ready."
       ],
       "incorrect": [
         "two robot"
@@ -2081,6 +2263,63 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "One robot is ready.",
+          "es": "Un robot está listo."
+        },
+        {
+          "en": "Two robots are ready.",
+          "es": "Dos robots están listos."
+        }
+      ],
+      "exceptions": [
+        "Nouns ending in s, sh, ch, x or z often take -es.",
+        "Consonant + y changes to -ies; some plurals are irregular.",
+        "Uncountable nouns usually do not take a plural in their usual meaning."
+      ],
+      "negativeCases": [
+        {
+          "text": "two robots",
+          "reason": "Correct regular plural."
+        },
+        {
+          "text": "two children",
+          "reason": "Correct irregular plural."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "Three ___ (sensor) are ready.",
+          "promptEs": "Tres ___ están listos.",
+          "answer": "sensors"
+        },
+        {
+          "type": "write",
+          "prompt": "Name three objects in your classroom.",
+          "promptEs": "Nombra tres objetos de tu salón."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "plurals",
+          "plural-nouns",
+          "count-nouns"
+        ]
       }
     },
     {
@@ -2140,6 +2379,7 @@
       "explanation": "Use do/does before the subject; use the base verb after does.",
       "explanationEs": "Usa do/does antes del sujeto y el verbo base después de does.",
       "examples": [
+        "Do you work here?",
         "Does she teach robotics?"
       ],
       "incorrect": [
@@ -2151,6 +2391,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "Do you work here?",
+          "es": "¿Trabajas aquí?"
+        },
+        {
+          "en": "Does she teach robotics?",
+          "es": "¿Ella enseña robótica?"
+        }
+      ],
+      "exceptions": [
+        "Use do with I/you/we/they and does with he/she/it.",
+        "After does, use the base verb; be-questions do not use do/does."
+      ],
+      "negativeCases": [
+        {
+          "text": "Does she teach robotics?",
+          "reason": "Correct does + base verb."
+        },
+        {
+          "text": "She teaches robotics.",
+          "reason": "Correct present-simple statement."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "Does he ___ (work) here?",
+          "promptEs": "¿Él ___ aquí?",
+          "answer": "work"
+        },
+        {
+          "type": "write",
+          "prompt": "Ask about a daily routine.",
+          "promptEs": "Haz una pregunta sobre una rutina diaria."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "question-forms",
+          "do-support",
+          "present-simple"
+        ]
       }
     },
     {
@@ -2488,9 +2784,8 @@
       "explanation": "Use at for clock times, on for days and dates, and in for months, years and parts of the day.",
       "explanationEs": "Usa at para horas, on para días y fechas e in para meses, años y partes del día.",
       "examples": [
-        "at seven",
-        "on Monday",
-        "in October"
+        "I study in the evening.",
+        "The meeting is on Friday."
       ],
       "incorrect": [
         "in Monday"
@@ -2501,6 +2796,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "I study in the evening.",
+          "es": "Estudio por la noche."
+        },
+        {
+          "en": "The meeting is on Friday.",
+          "es": "La reunión es el viernes."
+        }
+      ],
+      "exceptions": [
+        "Fixed expressions can be idiomatic: at night, in the morning.",
+        "Prepositions are not interchangeable across all time phrases."
+      ],
+      "negativeCases": [
+        {
+          "text": "at seven",
+          "reason": "Correct clock-time phrase."
+        },
+        {
+          "text": "in October",
+          "reason": "Correct month phrase."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "The class starts ___ nine.",
+          "promptEs": "La clase empieza ___ las nueve.",
+          "answer": "at"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with on + a day.",
+          "promptEs": "Escribe una oración con on + un día."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "prepositions-time",
+          "time",
+          "in-on-at"
+        ]
       }
     },
     {
@@ -2513,7 +2864,8 @@
       "explanation": "In, on, under, next to and between describe different spatial relationships.",
       "explanationEs": "In, on, under, next to y between describen relaciones espaciales diferentes.",
       "examples": [
-        "The sensor is under the table"
+        "The sensor is under the table.",
+        "The lab is next to the library."
       ],
       "incorrect": [
         "The sensor is between the table"
@@ -2524,6 +2876,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "The sensor is under the table.",
+          "es": "El sensor está debajo de la mesa."
+        },
+        {
+          "en": "The lab is next to the library.",
+          "es": "El laboratorio está al lado de la biblioteca."
+        }
+      ],
+      "exceptions": [
+        "In, on, under, next to and between encode different spatial relations.",
+        "Choose a preposition based on the intended physical relationship."
+      ],
+      "negativeCases": [
+        {
+          "text": "The sensor is under the table.",
+          "reason": "Correct spatial relation."
+        },
+        {
+          "text": "The lab is next to the library.",
+          "reason": "Correct spatial relation."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "The book is ___ the table (surface).",
+          "promptEs": "El libro está ___ la mesa (superficie).",
+          "answer": "on"
+        },
+        {
+          "type": "write",
+          "prompt": "Describe where two objects are.",
+          "promptEs": "Describe dónde están dos objetos."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "prepositions-place",
+          "place",
+          "spatial-relations"
+        ]
       }
     },
     {
@@ -2582,7 +2990,8 @@
       "explanation": "Use have/has + past participle for experiences and past actions connected to now.",
       "explanationEs": "Usa have/has + participio para experiencias y acciones pasadas relacionadas con el presente.",
       "examples": [
-        "I have finished the project"
+        "I have finished the project.",
+        "They have tested the circuit."
       ],
       "incorrect": [
         "I have finish the project"
@@ -2593,6 +3002,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "I have finished the project.",
+          "es": "He terminado el proyecto."
+        },
+        {
+          "en": "They have tested the circuit.",
+          "es": "Han probado el circuito."
+        }
+      ],
+      "exceptions": [
+        "Use past simple with finished past-time expressions such as yesterday or last week.",
+        "Have/has must be followed by a past participle."
+      ],
+      "negativeCases": [
+        {
+          "text": "I have finished the project.",
+          "reason": "Correct present perfect."
+        },
+        {
+          "text": "I finished the project yesterday.",
+          "reason": "Correct past simple with a finished time."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "They have ___ (test) the circuit.",
+          "promptEs": "Ellos han ___ el circuito.",
+          "answer": "tested"
+        },
+        {
+          "type": "write",
+          "prompt": "Write about a recent achievement.",
+          "promptEs": "Escribe sobre un logro reciente."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-perfect",
+          "past-participle",
+          "experience"
+        ]
       }
     },
     {
@@ -2721,7 +3186,8 @@
       "explanation": "Although introduces a subordinate contrast clause; however often links clauses with punctuation.",
       "explanationEs": "Although introduce una subordinada concesiva; however suele conectar oraciones con puntuación apropiada.",
       "examples": [
-        "Although it was hard, we finished"
+        "Although it was hard, we finished.",
+        "It was hard. However, we finished."
       ],
       "incorrect": [
         "Although it was hard, but we finished"
@@ -2732,6 +3198,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "Although it was hard, we finished.",
+          "es": "Aunque fue difícil, terminamos."
+        },
+        {
+          "en": "It was hard. However, we finished.",
+          "es": "Fue difícil. Sin embargo, terminamos."
+        }
+      ],
+      "exceptions": [
+        "Do not normally add but to the same clause introduced by although.",
+        "However commonly needs punctuation separating clauses."
+      ],
+      "negativeCases": [
+        {
+          "text": "Although it was hard, we finished.",
+          "reason": "Correct although clause."
+        },
+        {
+          "text": "It was hard. However, we finished.",
+          "reason": "Correct however punctuation."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "___ it was late, we continued.",
+          "promptEs": "___ era tarde, continuamos.",
+          "answer": "Although"
+        },
+        {
+          "type": "write",
+          "prompt": "Join two contrasting ideas with although.",
+          "promptEs": "Une dos ideas contrastantes con although."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "connectors",
+          "contrast-connectors",
+          "cohesion"
+        ]
       }
     },
     {
@@ -2767,7 +3289,8 @@
       "explanation": "Indirect questions use subject + verb order after Could you tell me.",
       "explanationEs": "Las preguntas indirectas usan sujeto + verbo después de Could you tell me.",
       "examples": [
-        "Could you tell me where the lab is?"
+        "Could you tell me where the lab is?",
+        "Do you know what the task is?"
       ],
       "incorrect": [
         "Could you tell me where is the lab?"
@@ -2778,6 +3301,61 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "Could you tell me where the lab is?",
+          "es": "¿Podrías decirme dónde está el laboratorio?"
+        },
+        {
+          "en": "Do you know what the task is?",
+          "es": "¿Sabes cuál es la tarea?"
+        }
+      ],
+      "exceptions": [
+        "Direct questions keep inversion: Where is the lab?",
+        "Embedded yes/no questions commonly use if or whether."
+      ],
+      "negativeCases": [
+        {
+          "text": "Could you tell me where the lab is?",
+          "reason": "Correct embedded question order."
+        },
+        {
+          "text": "Where is the lab?",
+          "reason": "Correct direct question inversion."
+        }
+      ],
+      "practice": [
+        {
+          "type": "order",
+          "prompt": "Could you tell me / where / the lab / is?",
+          "promptEs": "Ordena la pregunta indirecta."
+        },
+        {
+          "type": "write",
+          "prompt": "Ask politely where a room is.",
+          "promptEs": "Pregunta cortésmente dónde queda un salón."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "indirect-questions",
+          "word-order",
+          "politeness"
+        ]
       }
     },
     {
@@ -2790,7 +3368,8 @@
       "explanation": "Plural countable nouns can appear without the when speaking generally; the signals a specific group.",
       "explanationEs": "Los plurales contables pueden ir sin the en sentido general; the identifica un grupo específico.",
       "examples": [
-        "Robots can help people"
+        "Robots can help people.",
+        "The robots in this lab are new."
       ],
       "incorrect": [
         "The robots can help people (general meaning)"
@@ -2801,6 +3380,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "Robots can help people.",
+          "es": "Los robots pueden ayudar a las personas."
+        },
+        {
+          "en": "The robots in this lab are new.",
+          "es": "Los robots de este laboratorio son nuevos."
+        }
+      ],
+      "exceptions": [
+        "The is appropriate for a specific group: The robots in this lab.",
+        "General singular count nouns usually need an article."
+      ],
+      "negativeCases": [
+        {
+          "text": "Robots can help people.",
+          "reason": "Correct general plural."
+        },
+        {
+          "text": "The robots in this lab are new.",
+          "reason": "Correct specific group."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "___ robots can help in dangerous places.",
+          "promptEs": "___ robots pueden ayudar en lugares peligrosos.",
+          "answer": "Robots"
+        },
+        {
+          "type": "write",
+          "prompt": "Compare a general statement with a specific group.",
+          "promptEs": "Compara una afirmación general con un grupo específico."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "articles",
+          "articles-general",
+          "the"
+        ]
       }
     },
     {
@@ -2929,7 +3564,8 @@
       "explanation": "Use me, him, her, us and them as objects, not I/he/she/we/they.",
       "explanationEs": "Usa me, him, her, us y them como objetos, no I/he/she/we/they.",
       "examples": [
-        "She helped me"
+        "She helped me.",
+        "I worked with them."
       ],
       "incorrect": [
         "She helped I"
@@ -2940,6 +3576,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "She helped me.",
+          "es": "Ella me ayudó."
+        },
+        {
+          "en": "I worked with them.",
+          "es": "Trabajé con ellos."
+        }
+      ],
+      "exceptions": [
+        "Use subject pronouns before a verb: She helped me, not Her helped me.",
+        "Object pronouns follow verbs and prepositions."
+      ],
+      "negativeCases": [
+        {
+          "text": "She helped me.",
+          "reason": "Correct object pronoun."
+        },
+        {
+          "text": "I worked with them.",
+          "reason": "Correct object pronoun after a preposition."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "The teacher helped ___. (I)",
+          "promptEs": "El profesor me ayudó.",
+          "answer": "me"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence using him, her or them.",
+          "promptEs": "Escribe una oración con him, her o them."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "pronouns",
+          "object-pronouns",
+          "reference"
+        ]
       }
     },
     {
@@ -3068,7 +3760,8 @@
       "explanation": "Use since + starting point and for + duration in common present-perfect contexts.",
       "explanationEs": "Usa since + punto inicial y for + duración.",
       "examples": [
-        "I have worked here for five years"
+        "I have worked here for five years.",
+        "I have lived here since 2021."
       ],
       "incorrect": [
         "I have worked here since five years"
@@ -3079,6 +3772,62 @@
       "review": {
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      },
+      "examplesBilingual": [
+        {
+          "en": "I have worked here for five years.",
+          "es": "He trabajado aquí durante cinco años."
+        },
+        {
+          "en": "I have lived here since 2021.",
+          "es": "Vivo aquí desde 2021."
+        }
+      ],
+      "exceptions": [
+        "Since introduces a starting point; for introduces a duration.",
+        "Past simple is often used with a finished period."
+      ],
+      "negativeCases": [
+        {
+          "text": "I have worked here for five years.",
+          "reason": "Correct duration phrase."
+        },
+        {
+          "text": "I have lived here since 2021.",
+          "reason": "Correct starting point."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I have studied English ___ 2024.",
+          "promptEs": "Estudio inglés ___ 2024.",
+          "answer": "since"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with for + duration.",
+          "promptEs": "Escribe una oración con for + duración."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-perfect",
+          "since-for",
+          "duration"
+        ]
       }
     },
     {
