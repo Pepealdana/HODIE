@@ -76,6 +76,47 @@ function buildLanguageNotes(experience, stage, text) {
     }
   ];
 
+  rules.push(
+    {
+      id: "compound-job-connector",
+      pattern: /\\b(a\\s+technology)\\s+an\\s+(robotics\\s+teacher)\\b/i,
+      replacement: (match, first, second) => `${first} and ${second}`,
+      message: 'Use "and" to join the two parts of this job title; do not repeat the article here.',
+      messageEs: 'Usa "and" para unir las dos partes de esta profesión; no repitas el artículo en esta estructura.',
+      examples: ["I am a technology and robotics teacher."]
+    },
+    {
+      id: "plural-subject-agreement",
+      pattern: /\\b(my students|the students|students)\\s+(is|has|does|works|teaches|builds|uses)\\b/i,
+      replacement: (match, subject, verb) => {
+        const pluralVerb = { is: "are", has: "have", does: "do", works: "work", teaches: "teach", builds: "build", uses: "use" };
+        return `${subject} ${pluralVerb[verb.toLowerCase()] || verb.toLowerCase()}`;
+      },
+      message: 'A plural subject such as "students" needs a plural verb form.',
+      messageEs: 'Un sujeto plural como "students" necesita la forma plural del verbo.',
+      examples: ["My students are creative.", "The students build a robot."]
+    },
+    {
+      id: "singular-subject-agreement",
+      pattern: /\\b(the robot|a robot|my school|the school)\\s+(build|use|have|are|do|work|teach)\\b/i,
+      replacement: (match, subject, verb) => {
+        const singularVerb = { build: "builds", use: "uses", have: "has", are: "is", do: "does", work: "works", teach: "teaches" };
+        return `${subject} ${singularVerb[verb.toLowerCase()] || verb.toLowerCase()}`;
+      },
+      message: 'A singular subject such as "the robot" usually needs the third-person present form.',
+      messageEs: 'Un sujeto singular como "the robot" normalmente necesita la forma de tercera persona en presente.',
+      examples: ["The robot uses a sensor.", "My school teaches robotics."]
+    },
+    {
+      id: "repeated-connector",
+      pattern: /\\b(and|but|because|so)\\s+\\1\\b/i,
+      replacement: (match, connector) => connector.toLowerCase(),
+      message: 'Avoid repeating the same connector twice in a row.',
+      messageEs: 'Evita repetir el mismo conector dos veces seguidas.',
+      examples: ["I teach robotics and I enjoy it.", "I like English because it helps me."]
+    }
+  );
+
   const notes = [];
   let corrected = text;
   for (const rule of rules) {
