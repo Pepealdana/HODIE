@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "1.0.0",
+  "framework": "CEFR Companion Volume aligned; HODIE internal learning taxonomy, not official certification",
+  "policy": {
+    "openVocabulary": true,
+    "unknownWordAction": "do-not-mark-as-error",
+    "spellingSuggestions": "only suggest when a close match to an approved vocabulary entry is unique and context-compatible",
+    "ambiguity": "return a low-confidence hint or no correction; never silently rewrite",
+    "feedback": "one primary correction per attempt, with optional concise explanation and example",
+    "coverage": "A1-B1 starter coverage; expand by reviewed rule packs"
+  },
+  "communicativeFunctions": [
+    {
+      "id": "INTRODUCE_SELF",
+      "level": "A1-A2",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "label": "Introduce yourself and give personal information",
+      "labelEs": "Presentarte y dar información personal",
+      "skills": [
+        "speaking",
+        "listening",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "be",
+        "have",
+        "present-simple",
+        "articles",
+        "capitalization"
+      ],
+      "vocabularyDomains": [
+        "identity",
+        "jobs",
+        "places",
+        "family"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_WORK",
+      "level": "A2",
+      "canDoIds": [
+        "SP-A2-03"
+      ],
+      "label": "Describe your work, routines and responsibilities",
+      "labelEs": "Describir tu trabajo, rutinas y responsabilidades",
+      "skills": [
+        "speaking",
+        "listening",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "present-simple",
+        "subject-verb-agreement",
+        "prepositions",
+        "collocations"
+      ],
+      "vocabularyDomains": [
+        "jobs",
+        "work",
+        "education",
+        "technology"
+      ],
+      "contexts": [
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "EXPRESS_PREFERENCES",
+      "level": "A2",
+      "canDoIds": [],
+      "label": "Express likes, dislikes and preferences",
+      "labelEs": "Expresar gustos, rechazos y preferencias",
+      "skills": [
+        "speaking",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "like-love-enjoy",
+        "verb-patterns",
+        "connectors"
+      ],
+      "vocabularyDomains": [
+        "hobbies",
+        "work",
+        "learning"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_PROBLEMS",
+      "level": "A2-B1",
+      "canDoIds": [],
+      "label": "Describe a problem and explain a reason",
+      "labelEs": "Describir un problema y explicar una razón",
+      "skills": [
+        "speaking",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "there-is-are",
+        "past-simple",
+        "because-so-but"
+      ],
+      "vocabularyDomains": [
+        "problems",
+        "work",
+        "projects"
+      ],
+      "contexts": [
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "NARRATE_PAST",
+      "level": "A2-B1",
+      "canDoIds": [],
+      "label": "Describe past events and experiences",
+      "labelEs": "Describir hechos y experiencias pasadas",
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "past-simple",
+        "time-markers",
+        "sequence-connectors"
+      ],
+      "vocabularyDomains": [
+        "time",
+        "experiences",
+        "work"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    }
+  ],
+  "grammarRules": [
+    {
+      "id": "CAP-I-001",
+      "implementation": "capital-i",
+      "level": "A1",
+      "category": "capitalization",
+      "title": "Capitalize the pronoun I",
+      "titleEs": "Escribe I con mayúscula",
+      "explanation": "The subject pronoun I is always capitalized.",
+      "explanationEs": "El pronombre I siempre se escribe con mayúscula.",
+      "examples": [
+        "I am a teacher.",
+        "I enjoy teaching."
+      ],
+      "incorrect": [
+        "i am a teacher."
+      ],
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "SPELL-TEACHER-001",
+      "implementation": "spelling-teacher",
+      "level": "A1",
+      "category": "spelling",
+      "title": "Spell teacher correctly",
+      "titleEs": "Escribe teacher correctamente",
+      "explanation": "The word is spelled teacher.",
+      "explanationEs": "La palabra se escribe teacher.",
+      "examples": [
+        "I am a teacher."
+      ],
+      "incorrect": [
+        "I am a techer."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "tested"
+    },
+    {
+      "id": "ART-JOB-001",
+      "implementation": "article-profession",
+      "level": "A1-A2",
+      "category": "articles",
+      "title": "Use an article before a singular job",
+      "titleEs": "Usa un artículo antes de una profesión singular",
+      "explanation": "Use a/an before a singular countable job noun.",
+      "explanationEs": "Usa a/an antes de un sustantivo contable singular que indique una profesión.",
+      "examples": [
+        "I am a teacher.",
+        "She is an engineer."
+      ],
+      "incorrect": [
+        "I am teacher."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "ART-A-AN-001",
+      "implementation": "article-a-an",
+      "level": "A1-A2",
+      "category": "articles",
+      "title": "Choose a or an by sound",
+      "titleEs": "Elige a o an según el sonido",
+      "explanation": "Use an before a vowel sound, and a before a consonant sound.",
+      "explanationEs": "Usa an antes de un sonido vocálico y a antes de un sonido consonántico.",
+      "examples": [
+        "an engineer",
+        "a university"
+      ],
+      "incorrect": [
+        "a engineer"
+      ],
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "BE-SUBJECT-001",
+      "implementation": "be-agreement",
+      "level": "A1",
+      "category": "verb-forms",
+      "title": "Match be to the subject",
+      "titleEs": "Conjuga be según el sujeto",
+      "explanation": "Use am with I, is with he/she/it, and are with you/we/they.",
+      "explanationEs": "Usa am con I, is con he/she/it y are con you/we/they.",
+      "examples": [
+        "I am ready.",
+        "They are students."
+      ],
+      "incorrect": [
+        "I are ready.",
+        "She are a teacher."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "SVA-PLURAL-001",
+      "implementation": "plural-agreement",
+      "level": "A2",
+      "category": "subject-verb-agreement",
+      "title": "Use the base verb with plural subjects",
+      "titleEs": "Usa el verbo base con sujetos plurales",
+      "explanation": "In the present simple, plural subjects use the base verb form.",
+      "explanationEs": "En presente simple, los sujetos plurales usan la forma base del verbo.",
+      "examples": [
+        "My students build robots.",
+        "The teachers work here."
+      ],
+      "incorrect": [
+        "The students builds robots."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "SVA-3SG-001",
+      "implementation": "third-person-singular",
+      "level": "A2",
+      "category": "subject-verb-agreement",
+      "title": "Add -s/-es with he, she or it",
+      "titleEs": "Añade -s/-es con he, she o it",
+      "explanation": "In affirmative present simple, he/she/it usually takes a verb ending in -s or -es.",
+      "explanationEs": "En presente simple afirmativo, he/she/it normalmente requiere un verbo terminado en -s o -es.",
+      "examples": [
+        "She teaches robotics.",
+        "The robot uses a sensor."
+      ],
+      "incorrect": [
+        "She teach robotics."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "VERB-ENJOY-001",
+      "implementation": "enjoy-gerund",
+      "level": "A2",
+      "category": "verb-patterns",
+      "title": "Use -ing after enjoy",
+      "titleEs": "Usa -ing después de enjoy",
+      "explanation": "Enjoy is followed by a noun or a verb ending in -ing.",
+      "explanationEs": "Después de enjoy se usa un sustantivo o un verbo terminado en -ing.",
+      "examples": [
+        "I enjoy teaching.",
+        "I enjoy building robots."
+      ],
+      "incorrect": [
+        "I enjoy to teach."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "VERB-LIKE-001",
+      "implementation": "like-gerund",
+      "level": "A2",
+      "category": "verb-patterns",
+      "title": "Use common patterns after like",
+      "titleEs": "Usa patrones frecuentes después de like",
+      "explanation": "Like can be followed by a noun, a verb ending in -ing, or to + base verb.",
+      "explanationEs": "Like puede ir seguido de un sustantivo, un verbo con -ing o to + verbo base.",
+      "examples": [
+        "I like teaching.",
+        "I like to teach."
+      ],
+      "incorrect": [],
+      "severity": "low",
+      "priority": "low",
+      "status": "tested"
+    },
+    {
+      "id": "WORD-ORDER-001",
+      "implementation": "adjective-noun-order",
+      "level": "A2",
+      "category": "syntax",
+      "title": "Put adjectives before nouns",
+      "titleEs": "Coloca los adjetivos antes del sustantivo",
+      "explanation": "In a typical English noun phrase, an adjective comes before the noun.",
+      "explanationEs": "En una frase nominal típica en inglés, el adjetivo va antes del sustantivo.",
+      "examples": [
+        "a difficult problem",
+        "a new robot"
+      ],
+      "incorrect": [
+        "a problem difficult"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "tested"
+    },
+    {
+      "id": "CONN-REPEAT-001",
+      "implementation": "repeated-connector",
+      "level": "A1-A2",
+      "category": "connectors",
+      "title": "Avoid accidental repeated connectors",
+      "titleEs": "Evita repetir conectores por accidente",
+      "explanation": "Do not repeat the same connector twice in a row unless quoting or deliberately repeating it.",
+      "explanationEs": "No repitas el mismo conector dos veces seguidas, salvo que estés citando o repitiendo deliberadamente.",
+      "examples": [
+        "I teach robotics and I enjoy it."
+      ],
+      "incorrect": [
+        "I teach and and enjoy it."
+      ],
+      "severity": "low",
+      "priority": "low",
+      "status": "tested"
+    },
+    {
+      "id": "COLL-ENJOY-001",
+      "implementation": "enjoy-to",
+      "level": "A2",
+      "category": "collocations",
+      "title": "Combine enjoy with -ing",
+      "titleEs": "Combina enjoy con -ing",
+      "explanation": "The natural pattern is enjoy + noun/-ing, not enjoy + to-infinitive.",
+      "explanationEs": "El patrón natural es enjoy + sustantivo/-ing, no enjoy + to + infinitivo.",
+      "examples": [
+        "I enjoy working with students."
+      ],
+      "incorrect": [
+        "I enjoy to work with students."
+      ],
+      "severity": "high",
+      "priority": "high",
+      "status": "tested"
+    },
+    {
+      "id": "SPELL-OPEN-001",
+      "implementation": "open-vocabulary-policy",
+      "level": "A1-B1",
+      "category": "open-vocabulary",
+      "title": "Handle words not in the vocabulary list",
+      "titleEs": "Gestiona palabras que no están en la lista",
+      "explanation": "An unknown word is not automatically an error. Use context and grammar; suggest spelling only when the match is strong and unambiguous.",
+      "explanationEs": "Una palabra desconocida no es automáticamente un error. Usa el contexto y la gramática; sugiere ortografía solo cuando la coincidencia sea clara y no ambigua.",
+      "examples": [
+        "I work with Arduino.",
+        "I teach robotics."
+      ],
+      "incorrect": [],
+      "severity": "low",
+      "priority": "low",
+      "status": "policy"
+    }
+  ],
+  "vocabularyEntries": [
+    {
+      "id": "VOC-JOB-TEACHER",
+      "lemma": "teacher",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "jobs",
+      "meaningEs": "profesor/a",
+      "forms": [
+        "teacher",
+        "teachers"
+      ],
+      "collocations": [
+        "a teacher",
+        "technology teacher",
+        "English teacher"
+      ],
+      "examples": [
+        "I am a teacher."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOB-ENGINEER",
+      "lemma": "engineer",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "ingeniero/a",
+      "forms": [
+        "engineer",
+        "engineers"
+      ],
+      "collocations": [
+        "an engineer"
+      ],
+      "examples": [
+        "She is an engineer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-WORK",
+      "lemma": "work",
+      "partOfSpeech": "verb/noun",
+      "level": "A1",
+      "domain": "work",
+      "meaningEs": "trabajar; trabajo",
+      "forms": [
+        "work",
+        "works",
+        "worked",
+        "working"
+      ],
+      "collocations": [
+        "work at a school",
+        "work on a project",
+        "work with students",
+        "work as a teacher"
+      ],
+      "examples": [
+        "I work at a school.",
+        "I work on a project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-ENJOY",
+      "lemma": "enjoy",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "preferences",
+      "meaningEs": "disfrutar",
+      "forms": [
+        "enjoy",
+        "enjoys",
+        "enjoyed",
+        "enjoying"
+      ],
+      "collocations": [
+        "enjoy teaching",
+        "enjoy working",
+        "enjoy building"
+      ],
+      "examples": [
+        "I enjoy building robots."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-BUILD",
+      "lemma": "build",
+      "partOfSpeech": "verb",
+      "level": "A1-A2",
+      "domain": "technology",
+      "meaningEs": "construir",
+      "forms": [
+        "build",
+        "builds",
+        "built",
+        "building"
+      ],
+      "collocations": [
+        "build a robot",
+        "build a project"
+      ],
+      "examples": [
+        "My students build robots."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-ROBOTICS",
+      "lemma": "robotics",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "robótica",
+      "forms": [
+        "robotics"
+      ],
+      "collocations": [
+        "teach robotics",
+        "robotics project"
+      ],
+      "examples": [
+        "I teach robotics."
+      ],
+      "openClass": true
+    }
+  ],
+  "testCases": [
+    {
+      "id": "TC-CAP-I-01",
+      "text": "i am a teacher.",
+      "expectRules": [
+        "CAP-I-001"
+      ],
+      "expectCorrection": "I am a teacher."
+    },
+    {
+      "id": "TC-ARTICLE-01",
+      "text": "I am teacher.",
+      "expectRules": [
+        "ART-JOB-001"
+      ],
+      "expectCorrection": "I am a teacher."
+    },
+    {
+      "id": "TC-SPELL-01",
+      "text": "I am a techer.",
+      "expectRules": [
+        "SPELL-TEACHER-001"
+      ],
+      "expectCorrection": "I am a teacher."
+    },
+    {
+      "id": "TC-ENJOY-01",
+      "text": "I enjoy to teach.",
+      "expectRules": [
+        "VERB-ENJOY-001"
+      ],
+      "expectCorrection": "I enjoy teaching."
+    },
+    {
+      "id": "TC-PLURAL-01",
+      "text": "The students builds robots.",
+      "expectRules": [
+        "SVA-PLURAL-001"
+      ],
+      "expectCorrection": "The students build robots."
+    },
+    {
+      "id": "TC-VALID-01",
+      "text": "I am a technology and robotics teacher.",
+      "expectRules": [],
+      "expectCorrection": "I am a technology and robotics teacher."
+    },
+    {
+      "id": "TC-OPEN-VOCAB-01",
+      "text": "I work with Arduino.",
+      "expectRules": [],
+      "expectCorrection": "I work with Arduino."
+    },
+    {
+      "id": "TC-VALID-LIKE-01",
+      "text": "I like to teach.",
+      "expectRules": [],
+      "expectCorrection": "I like to teach."
+    }
+  ]
+}
