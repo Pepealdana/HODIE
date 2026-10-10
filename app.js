@@ -9,6 +9,7 @@ import { buildKnowledgeGraph, getKnowledgeForCanDo } from "./src/knowledge-graph
 import { recordLearningEvent, recordKnowledgeOutcome, summarizeLearningProfile } from "./src/learning-profile.js";
 import { getIntegratedUnit, createIntegratedUnitState, submitIntegratedStep, advanceIntegratedStep, summarizeIntegratedUnit } from "./src/integrated-unit.js";
 import { createFeedbackContract } from "./src/feedback-contract.js";
+import { analyzeLanguage } from "./src/linguistic-engine.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -699,8 +700,39 @@ function renderExperience() {
   document.querySelector("#experienceStopButton")?.addEventListener("click", () => activeSpeechRecognition?.stop());
 }
 
+function applyLinguisticReview(response, result = {}, skill = "writing") {
+  const text = String(response ?? "").trim();
+  if (!text || !["writing", "speaking"].includes(skill)) return result;
+
+  // Keep the linguistic engine as a conservative, data-backed reviewer.
+  // Unknown vocabulary and ambiguous phrases are deliberately left unchanged.
+  const review = analyzeLanguage(text, {
+    vocabulary: linguisticLibrary?.vocabularyEntries || [],
+    maxCorrections: 1
+  });
+  if (!review.errors.length || review.correctedText === text) return result;
+
+  const corrections = review.errors.map((error) => ({
+    ...error,
+    id: `LING-${error.ruleId}`,
+    correctedText: review.correctedText,
+    source: "linguistic-catalog"
+  }));
+  return {
+    ...result,
+    errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections],
+    correctedText: review.correctedText,
+    linguisticReview: {
+      schemaVersion: review.schemaVersion,
+      ruleIds: review.errors.map((error) => error.ruleId),
+      note: "Rule-based review covers only implemented patterns; it is not a complete grammar check."
+    }
+  };
+}
+
 function handleExperienceResponse(experience, stage, response) {
-  const result = evaluateExperienceTurn(experience, stage, response);
+  const evaluated = evaluateExperienceTurn(experience, stage, response);
+  const result = applyLinguisticReview(response, evaluated, "speaking");
   const feedbackContract = createFeedbackContract({
     activity: { id: `${experience.id}-${stage.id}`, type: "conversation", skill: "speaking" },
     surface: "conversation",
@@ -1134,7 +1166,10 @@ function evaluateCurrent(response) {
   document.querySelectorAll("#microInteraction button, #microInteraction input, #microInteraction textarea")
     .forEach((control) => { control.disabled = true; });
   const activity = practice.activities[practice.index];
-  const result = evaluateMicroActivity(activity, response);
+  const evaluated = evaluateMicroActivity(activity, response);
+  const result = activity.type === "mini-production"
+    ? applyLinguisticReview(response, evaluated, activity.skill)
+    : evaluated;
   practice.currentResponse = response;
   showFeedback(activity, result, response);
 }
