@@ -1,13 +1,42 @@
 {
-  "schemaVersion": "1.0.0",
-  "framework": "CEFR Companion Volume aligned; HODIE internal learning taxonomy, not official certification",
+  "schemaVersion": "1.1.0",
+  "framework": "CEFR Companion Volume aligned; HODIE internal learning taxonomy, not official certification. Content is organized in versioned packs and activated only after review.",
   "policy": {
     "openVocabulary": true,
     "unknownWordAction": "do-not-mark-as-error",
     "spellingSuggestions": "only suggest when a close match to an approved vocabulary entry is unique and context-compatible",
     "ambiguity": "return a low-confidence hint or no correction; never silently rewrite",
     "feedback": "one primary correction per attempt, with optional concise explanation and example",
-    "coverage": "A1-B1 starter coverage; expand by reviewed rule packs"
+    "coverage": "A1-B1 starter coverage; expand by reviewed rule packs",
+    "packProcessing": {
+      "sourceOfTruth": "data/linguistic-packs/*.json",
+      "generatedCatalog": "data/linguistic-catalog.json",
+      "merge": "stable-ID upsert; duplicate IDs within a pack are rejected",
+      "activation": "draft rules are never run; only tested rules with implementations or reviewed matchers may run",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "skills": [
+        "listening",
+        "reading",
+        "spoken-production",
+        "spoken-interaction",
+        "writing",
+        "mediation"
+      ],
+      "reviewStages": [
+        "draft",
+        "reviewed",
+        "tested",
+        "active",
+        "deprecated"
+      ]
+    }
   },
   "communicativeFunctions": [
     {
@@ -401,6 +430,802 @@
         "experiences",
         "work",
         "projects"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "GIVE_DAILY_ROUTINE",
+      "level": "A1-A2",
+      "canDoIds": [
+        "LI-A2-03"
+      ],
+      "label": "Describe your daily routine",
+      "labelEs": "Describir tu rutina diaria",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "present-simple",
+        "frequency-adverbs",
+        "time-expressions"
+      ],
+      "vocabularyDomains": [
+        "daily-life",
+        "time",
+        "work"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "TALK_ABOUT_FAMILY",
+      "level": "A1",
+      "canDoIds": [
+        "LI-A2-04"
+      ],
+      "label": "Talk about family and relationships",
+      "labelEs": "Hablar de la familia y las relaciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "be",
+        "have",
+        "possessive-adjectives",
+        "family-nouns"
+      ],
+      "vocabularyDomains": [
+        "family",
+        "identity"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_PLACES",
+      "level": "A1-A2",
+      "canDoIds": [
+        "LI-A2-05"
+      ],
+      "label": "Describe familiar places",
+      "labelEs": "Describir lugares conocidos",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "there-is-are",
+        "prepositions-of-place",
+        "adjectives"
+      ],
+      "vocabularyDomains": [
+        "places",
+        "description"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "ASK_FOR_DIRECTIONS",
+      "level": "A2",
+      "canDoIds": [
+        "LI-A2-06"
+      ],
+      "label": "Ask for and give directions",
+      "labelEs": "Preguntar y dar indicaciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "imperatives",
+        "prepositions-of-place",
+        "polite-questions"
+      ],
+      "vocabularyDomains": [
+        "places",
+        "travel"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "MAKE_REQUESTS",
+      "level": "A2",
+      "canDoIds": [
+        "LI-A2-07"
+      ],
+      "label": "Make polite requests",
+      "labelEs": "Hacer solicitudes corteses",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "can-could",
+        "polite-questions",
+        "please-thank-you"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "daily-life"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "OFFER_HELP",
+      "level": "A2",
+      "canDoIds": [
+        "LI-A2-08"
+      ],
+      "label": "Offer and respond to help",
+      "labelEs": "Ofrecer ayuda y responder",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "can-could",
+        "would-like",
+        "interaction-strategies"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "work"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "TALK_ABOUT_PREFERENCES",
+      "level": "A2",
+      "canDoIds": [
+        "LI-A2-09"
+      ],
+      "label": "Express preferences and explain choices",
+      "labelEs": "Expresar preferencias y explicar elecciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "prefer",
+        "like-love-enjoy",
+        "because-so-but"
+      ],
+      "vocabularyDomains": [
+        "preferences",
+        "opinions",
+        "learning"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_APPEARANCE",
+      "level": "A1-A2",
+      "canDoIds": [
+        "LI-A2-10"
+      ],
+      "label": "Describe people and appearance",
+      "labelEs": "Describir personas y su apariencia",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "be",
+        "have",
+        "adjectives",
+        "adjective-noun-order"
+      ],
+      "vocabularyDomains": [
+        "identity",
+        "description"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "TALK_ABOUT_HEALTH",
+      "level": "A2",
+      "canDoIds": [
+        "LI-B1-01"
+      ],
+      "label": "Describe simple health problems",
+      "labelEs": "Describir problemas de salud sencillos",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "have-got",
+        "should",
+        "symptom-vocabulary"
+      ],
+      "vocabularyDomains": [
+        "health",
+        "daily-life"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "ORDER_FOOD",
+      "level": "A1-A2",
+      "canDoIds": [
+        "LI-B1-02"
+      ],
+      "label": "Order food and drinks politely",
+      "labelEs": "Pedir comida y bebidas con cortesía",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "would-like",
+        "countable-uncountable",
+        "polite-questions"
+      ],
+      "vocabularyDomains": [
+        "food",
+        "communication"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "SHOP_AND_COMPARE",
+      "level": "A2",
+      "canDoIds": [
+        "LI-B1-03"
+      ],
+      "label": "Ask about products, prices and options",
+      "labelEs": "Preguntar por productos, precios y opciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "comparatives",
+        "how-much-many",
+        "demonstratives"
+      ],
+      "vocabularyDomains": [
+        "shopping",
+        "numbers"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "MAKE_PLANS",
+      "level": "A2",
+      "canDoIds": [
+        "LI-B1-04"
+      ],
+      "label": "Make and respond to plans",
+      "labelEs": "Proponer planes y responder",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "going-to",
+        "present-continuous-future",
+        "time-expressions"
+      ],
+      "vocabularyDomains": [
+        "time",
+        "communication"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "TALK_ABOUT_WEATHER",
+      "level": "A1-A2",
+      "canDoIds": [
+        "LI-B1-05"
+      ],
+      "label": "Describe the weather and seasons",
+      "labelEs": "Describir el clima y las estaciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "it-is",
+        "weather-vocabulary",
+        "comparatives"
+      ],
+      "vocabularyDomains": [
+        "weather",
+        "nature"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "TELL_A_STORY",
+      "level": "A2-B1",
+      "canDoIds": [
+        "LI-B1-06"
+      ],
+      "label": "Tell a short story in sequence",
+      "labelEs": "Contar una historia breve en secuencia",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "past-simple",
+        "past-continuous",
+        "sequence-connectors"
+      ],
+      "vocabularyDomains": [
+        "experiences",
+        "time"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "REPORT_PROGRESS",
+      "level": "A2-B1",
+      "canDoIds": [
+        "LI-B1-07"
+      ],
+      "label": "Report progress on a task or project",
+      "labelEs": "Informar el progreso de una tarea o proyecto",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "present-perfect",
+        "past-simple",
+        "project-vocabulary"
+      ],
+      "vocabularyDomains": [
+        "work",
+        "projects"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "PROPOSE_SOLUTIONS",
+      "level": "B1",
+      "canDoIds": [
+        "RE-A2-01"
+      ],
+      "label": "Suggest and evaluate solutions",
+      "labelEs": "Proponer y evaluar soluciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "should-could",
+        "first-conditional",
+        "comparatives"
+      ],
+      "vocabularyDomains": [
+        "thinking",
+        "projects"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "GIVE_INSTRUCTIONS",
+      "level": "A2",
+      "canDoIds": [
+        "RE-A2-02"
+      ],
+      "label": "Give clear instructions",
+      "labelEs": "Dar instrucciones claras",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "imperatives",
+        "sequence-connectors",
+        "must-should"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "education"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "PRESENT_A_PROJECT",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-A2-03"
+      ],
+      "label": "Present a project and its purpose",
+      "labelEs": "Presentar un proyecto y su propósito",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "present-simple",
+        "purpose-infinitive",
+        "sequence-connectors"
+      ],
+      "vocabularyDomains": [
+        "projects",
+        "technology"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_EXPERIMENT",
+      "level": "B1",
+      "canDoIds": [
+        "RE-A2-04"
+      ],
+      "label": "Describe an experiment and results",
+      "labelEs": "Describir un experimento y sus resultados",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "past-simple",
+        "passive-forms",
+        "comparatives"
+      ],
+      "vocabularyDomains": [
+        "science",
+        "projects"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DISCUSS_RULES",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-A2-05"
+      ],
+      "label": "Explain rules, obligations and permission",
+      "labelEs": "Explicar reglas, obligaciones y permisos",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "must-have-to",
+        "must-not",
+        "can-may"
+      ],
+      "vocabularyDomains": [
+        "safety",
+        "work"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "MAKE_COMPARISONS",
+      "level": "A2",
+      "canDoIds": [
+        "RE-A2-06"
+      ],
+      "label": "Compare people, objects and options",
+      "labelEs": "Comparar personas, objetos y opciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "comparatives",
+        "superlatives",
+        "than-as-as"
+      ],
+      "vocabularyDomains": [
+        "description",
+        "technology"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "CLARIFY_MEANING",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-A2-07"
+      ],
+      "label": "Ask for clarification and check understanding",
+      "labelEs": "Pedir aclaraciones y comprobar la comprensión",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "clarification-questions",
+        "repair-strategies",
+        "polite-questions"
+      ],
+      "vocabularyDomains": [
+        "language",
+        "communication"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "HANDLE_MISUNDERSTANDING",
+      "level": "B1",
+      "canDoIds": [
+        "RE-A2-08"
+      ],
+      "label": "Repair a misunderstanding politely",
+      "labelEs": "Resolver un malentendido con cortesía",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "apologies",
+        "clarification-questions",
+        "interaction-strategies"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "feelings"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "SUMMARIZE_INFORMATION",
+      "level": "B1",
+      "canDoIds": [
+        "RE-B1-01"
+      ],
+      "label": "Summarize key information",
+      "labelEs": "Resumir información importante",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "summarizing-phrases",
+        "present-simple",
+        "connectors"
+      ],
+      "vocabularyDomains": [
+        "learning",
+        "communication"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "WRITE_A_SIMPLE_EMAIL",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-B1-02"
+      ],
+      "label": "Write a short practical email",
+      "labelEs": "Escribir un correo práctico breve",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "email-conventions",
+        "polite-requests",
+        "connectors"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "work"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "EXPRESS_CERTAINTY",
+      "level": "B1",
+      "canDoIds": [
+        "RE-B1-03"
+      ],
+      "label": "Express degrees of certainty",
+      "labelEs": "Expresar grados de certeza",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "may-might-must",
+        "adverbs-of-certainty",
+        "evidence-language"
+      ],
+      "vocabularyDomains": [
+        "opinions",
+        "thinking"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DISCUSS_LEARNING_STRATEGIES",
+      "level": "B1",
+      "canDoIds": [
+        "RE-B1-04"
+      ],
+      "label": "Discuss learning strategies and progress",
+      "labelEs": "Hablar de estrategias de aprendizaje y progreso",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction",
+        "writing"
+      ],
+      "structures": [
+        "present-perfect",
+        "frequency-adverbs",
+        "goal-language"
+      ],
+      "vocabularyDomains": [
+        "learning",
+        "language"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_TECHNICAL_PROCESS",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-B1-05"
+      ],
+      "label": "Describe a technical process step by step",
+      "labelEs": "Describir un proceso técnico paso a paso",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "imperatives",
+        "sequence-connectors",
+        "cause-effect"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "programming"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "GIVE_FEEDBACK",
+      "level": "B1",
+      "canDoIds": [
+        "RE-B1-06"
+      ],
+      "label": "Give constructive feedback",
+      "labelEs": "Dar retroalimentación constructiva",
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "modals",
+        "polite-language",
+        "suggestions"
+      ],
+      "vocabularyDomains": [
+        "learning",
+        "communication"
       ],
       "contexts": [
         "personal",
@@ -1047,6 +1872,1075 @@
         "replacement": "robotics",
         "confidence": "high"
       }
+    },
+    {
+      "id": "GRAM-COUNT-NOUNS-001",
+      "implementation": "planned:gram-count-nouns-001",
+      "level": "A1",
+      "category": "countable-nouns",
+      "title": "Use singular countable nouns with a determiner",
+      "titleEs": "Usa determinante con sustantivos contables singulares",
+      "explanation": "A singular countable noun normally needs a determiner in a noun phrase.",
+      "explanationEs": "Un sustantivo contable singular normalmente necesita un determinante.",
+      "examples": [
+        "a book",
+        "an idea"
+      ],
+      "incorrect": [
+        "book"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PLURAL-S-001",
+      "implementation": "planned:gram-plural-s-001",
+      "level": "A1",
+      "category": "plural-nouns",
+      "title": "Form regular plural nouns",
+      "titleEs": "Forma plurales regulares",
+      "explanation": "Most countable nouns form the plural with -s or -es.",
+      "explanationEs": "La mayoría de sustantivos contables forman el plural con -s o -es.",
+      "examples": [
+        "one robot",
+        "two robots"
+      ],
+      "incorrect": [
+        "two robot"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-THIS-THAT-001",
+      "implementation": "planned:gram-this-that-001",
+      "level": "A1",
+      "category": "demonstratives",
+      "title": "Choose this/that and these/those",
+      "titleEs": "Elige this/that y these/those",
+      "explanation": "Use this/that for singular nouns and these/those for plural nouns.",
+      "explanationEs": "Usa this/that con singular y these/those con plural.",
+      "examples": [
+        "This sensor is new",
+        "those sensors are old"
+      ],
+      "incorrect": [
+        "these sensor"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-POSSESSIVE-001",
+      "implementation": "planned:gram-possessive-001",
+      "level": "A1",
+      "category": "possessives",
+      "title": "Use possessive adjectives",
+      "titleEs": "Usa adjetivos posesivos",
+      "explanation": "Possessive adjectives agree with the possessor, not the thing possessed.",
+      "explanationEs": "Los posesivos concuerdan con quien posee, no con el objeto poseído.",
+      "examples": [
+        "My students are ready"
+      ],
+      "incorrect": [
+        "Me students are ready"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-DO-QUESTIONS-001",
+      "implementation": "planned:gram-do-questions-001",
+      "level": "A1-A2",
+      "category": "question-forms",
+      "title": "Form present simple questions with do/does",
+      "titleEs": "Forma preguntas en presente simple con do/does",
+      "explanation": "Use do/does before the subject; use the base verb after does.",
+      "explanationEs": "Usa do/does antes del sujeto y el verbo base después de does.",
+      "examples": [
+        "Does she teach robotics?"
+      ],
+      "incorrect": [
+        "Does she teaches robotics?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-NEGATIVE-DO-001",
+      "implementation": "planned:gram-negative-do-001",
+      "level": "A1-A2",
+      "category": "negation",
+      "title": "Use do not/does not + base verb",
+      "titleEs": "Usa do not/does not + verbo base",
+      "explanation": "Present simple negatives use do not/does not plus the base verb.",
+      "explanationEs": "La negación en presente simple usa do not/does not más verbo base.",
+      "examples": [
+        "He does not work here"
+      ],
+      "incorrect": [
+        "He does not works here"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-ADVERB-FREQ-001",
+      "implementation": "planned:gram-adverb-freq-001",
+      "level": "A2",
+      "category": "frequency-adverbs",
+      "title": "Place frequency adverbs in the usual position",
+      "titleEs": "Ubica adverbios de frecuencia",
+      "explanation": "Frequency adverbs usually precede a main verb but follow be.",
+      "explanationEs": "Los adverbios de frecuencia suelen preceder al verbo principal, pero siguen a be.",
+      "examples": [
+        "I usually teach",
+        "I am usually busy"
+      ],
+      "incorrect": [
+        "I teach usually every day"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PRES-CONT-002",
+      "implementation": "planned:gram-pres-cont-002",
+      "level": "A2",
+      "category": "present-continuous",
+      "title": "Build the present continuous",
+      "titleEs": "Forma el presente continuo",
+      "explanation": "Use be + verb-ing for actions in progress or temporary situations.",
+      "explanationEs": "Usa be + verbo-ing para acciones en curso o situaciones temporales.",
+      "examples": [
+        "They are building a robot"
+      ],
+      "incorrect": [
+        "They building a robot"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PAST-BE-001",
+      "implementation": "planned:gram-past-be-001",
+      "level": "A2",
+      "category": "past-be",
+      "title": "Use was/were in the past",
+      "titleEs": "Usa was/were en pasado",
+      "explanation": "Use was with I/he/she/it and were with you/we/they.",
+      "explanationEs": "Usa was con I/he/she/it y were con you/we/they.",
+      "examples": [
+        "We were at school"
+      ],
+      "incorrect": [
+        "We was at school"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PAST-REG-001",
+      "implementation": "planned:gram-past-reg-001",
+      "level": "A2",
+      "category": "past-simple",
+      "title": "Form regular past verbs",
+      "titleEs": "Forma el pasado de verbos regulares",
+      "explanation": "Regular verbs commonly take -ed in the past; spelling varies by verb.",
+      "explanationEs": "Los verbos regulares suelen tomar -ed en pasado; la ortografía depende del verbo.",
+      "examples": [
+        "We tested the robot"
+      ],
+      "incorrect": [
+        "We test the robot yesterday"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PAST-DID-001",
+      "implementation": "planned:gram-past-did-001",
+      "level": "A2",
+      "category": "past-questions",
+      "title": "Use did + base verb in past questions",
+      "titleEs": "Usa did + verbo base en preguntas pasadas",
+      "explanation": "After did, use the base form of the main verb.",
+      "explanationEs": "Después de did, usa la forma base del verbo principal.",
+      "examples": [
+        "Did you build it?"
+      ],
+      "incorrect": [
+        "Did you built it?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PAST-NEG-001",
+      "implementation": "planned:gram-past-neg-001",
+      "level": "A2",
+      "category": "past-negation",
+      "title": "Use did not + base verb",
+      "titleEs": "Usa did not + verbo base",
+      "explanation": "Past simple negatives use did not plus the base form.",
+      "explanationEs": "La negación en pasado simple usa did not más la forma base.",
+      "examples": [
+        "I did not see it"
+      ],
+      "incorrect": [
+        "I did not saw it"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-CAN-ABILITY-001",
+      "implementation": "planned:gram-can-ability-001",
+      "level": "A1-A2",
+      "category": "modal-ability",
+      "title": "Use can + base verb for ability",
+      "titleEs": "Usa can + verbo base",
+      "explanation": "A modal is followed by the base form of the verb.",
+      "explanationEs": "Un modal va seguido de la forma base del verbo.",
+      "examples": [
+        "I can program in Python"
+      ],
+      "incorrect": [
+        "I can to program"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-SHOULD-ADVICE-001",
+      "implementation": "planned:gram-should-advice-001",
+      "level": "A2",
+      "category": "modals-advice",
+      "title": "Use should + base verb for advice",
+      "titleEs": "Usa should + verbo base para aconsejar",
+      "explanation": "Should is followed by the base form, without to.",
+      "explanationEs": "Should va seguido del verbo base, sin to.",
+      "examples": [
+        "You should practice daily"
+      ],
+      "incorrect": [
+        "You should to practice daily"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-COMP-ADJ-001",
+      "implementation": "planned:gram-comp-adj-001",
+      "level": "A2",
+      "category": "comparatives",
+      "title": "Form common comparative adjectives",
+      "titleEs": "Forma comparativos frecuentes",
+      "explanation": "Short adjectives often take -er; longer adjectives commonly use more.",
+      "explanationEs": "Los adjetivos cortos suelen usar -er; los largos, more.",
+      "examples": [
+        "This option is cheaper"
+      ],
+      "incorrect": [
+        "This option is more cheap"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-SUPERLATIVE-001",
+      "implementation": "planned:gram-superlative-001",
+      "level": "A2",
+      "category": "superlatives",
+      "title": "Use superlatives to compare three or more",
+      "titleEs": "Usa superlativos para comparar tres o más",
+      "explanation": "Superlatives commonly use the + -est or the most.",
+      "explanationEs": "Los superlativos suelen usar the + -est o the most.",
+      "examples": [
+        "It is the easiest task"
+      ],
+      "incorrect": [
+        "It is the most easiest task"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-MUCH-MANY-001",
+      "implementation": "planned:gram-much-many-001",
+      "level": "A2",
+      "category": "quantifiers",
+      "title": "Choose much/many with nouns",
+      "titleEs": "Elige much/many según el sustantivo",
+      "explanation": "Use many with countable plurals and much with uncountable nouns.",
+      "explanationEs": "Usa many con plurales contables y much con incontables.",
+      "examples": [
+        "How many students?",
+        "How much time?"
+      ],
+      "incorrect": [
+        "How much students?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-SOME-ANY-001",
+      "implementation": "planned:gram-some-any-001",
+      "level": "A1-A2",
+      "category": "quantifiers",
+      "title": "Use some/any in common contexts",
+      "titleEs": "Usa some/any en contextos frecuentes",
+      "explanation": "Some is common in affirmative clauses; any is common in questions and negatives, with exceptions.",
+      "explanationEs": "Some es frecuente en afirmativas; any en preguntas y negativas, con excepciones.",
+      "examples": [
+        "We have some tools",
+        "Do you have any questions?"
+      ],
+      "incorrect": [
+        "We do not have some tools"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-THERE-IS-001",
+      "implementation": "planned:gram-there-is-001",
+      "level": "A1-A2",
+      "category": "there-is-are",
+      "title": "Match there is/there are to number",
+      "titleEs": "Concordancia de there is/there are",
+      "explanation": "Use there is with singular or uncountable nouns and there are with plural nouns.",
+      "explanationEs": "Usa there is con singular o incontables y there are con plurales.",
+      "examples": [
+        "There are three sensors"
+      ],
+      "incorrect": [
+        "There is three sensors"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PREP-TIME-001",
+      "implementation": "planned:gram-prep-time-001",
+      "level": "A1-A2",
+      "category": "prepositions-time",
+      "title": "Use in/on/at for common time expressions",
+      "titleEs": "Usa in/on/at en expresiones temporales",
+      "explanation": "Use at for clock times, on for days and dates, and in for months, years and parts of the day.",
+      "explanationEs": "Usa at para horas, on para días y fechas e in para meses, años y partes del día.",
+      "examples": [
+        "at seven",
+        "on Monday",
+        "in October"
+      ],
+      "incorrect": [
+        "in Monday"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PREP-PLACE-001",
+      "implementation": "planned:gram-prep-place-001",
+      "level": "A1-A2",
+      "category": "prepositions-place",
+      "title": "Use common prepositions of place",
+      "titleEs": "Usa preposiciones frecuentes de lugar",
+      "explanation": "In, on, under, next to and between describe different spatial relationships.",
+      "explanationEs": "In, on, under, next to y between describen relaciones espaciales diferentes.",
+      "examples": [
+        "The sensor is under the table"
+      ],
+      "incorrect": [
+        "The sensor is between the table"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-GOING-TO-001",
+      "implementation": "planned:gram-going-to-001",
+      "level": "A2",
+      "category": "future-going-to",
+      "title": "Use be going to for intentions",
+      "titleEs": "Usa be going to para intenciones",
+      "explanation": "Use be + going to + base verb for plans and intentions.",
+      "explanationEs": "Usa be + going to + verbo base para planes e intenciones.",
+      "examples": [
+        "We are going to test the robot"
+      ],
+      "incorrect": [
+        "We going to test the robot"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-WILL-001",
+      "implementation": "planned:gram-will-001",
+      "level": "A2-B1",
+      "category": "future-will",
+      "title": "Use will + base verb",
+      "titleEs": "Usa will + verbo base",
+      "explanation": "Will is followed by the base form of the verb.",
+      "explanationEs": "Will va seguido de la forma base del verbo.",
+      "examples": [
+        "I will explain the project"
+      ],
+      "incorrect": [
+        "I will to explain the project"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PRES-PERF-001",
+      "implementation": "planned:gram-pres-perf-001",
+      "level": "B1",
+      "category": "present-perfect",
+      "title": "Build the present perfect",
+      "titleEs": "Forma el presente perfecto",
+      "explanation": "Use have/has + past participle for experiences and past actions connected to now.",
+      "explanationEs": "Usa have/has + participio para experiencias y acciones pasadas relacionadas con el presente.",
+      "examples": [
+        "I have finished the project"
+      ],
+      "incorrect": [
+        "I have finish the project"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-PRES-PERF-PAST-001",
+      "implementation": "planned:gram-pres-perf-past-001",
+      "level": "B1",
+      "category": "present-perfect-vs-past",
+      "title": "Distinguish present perfect and finished past time",
+      "titleEs": "Distingue presente perfecto y pasado terminado",
+      "explanation": "Use past simple with a finished past time; present perfect generally avoids specific finished-time markers.",
+      "explanationEs": "Usa pasado simple con tiempo pasado terminado; el presente perfecto suele evitar esos marcadores.",
+      "examples": [
+        "I finished it yesterday"
+      ],
+      "incorrect": [
+        "I have finished it yesterday"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-FIRST-COND-001",
+      "implementation": "planned:gram-first-cond-001",
+      "level": "B1",
+      "category": "first-conditional",
+      "title": "Form the first conditional",
+      "titleEs": "Forma el primer condicional",
+      "explanation": "Use if + present simple and will + base verb for a likely future condition and result.",
+      "explanationEs": "Usa if + presente simple y will + verbo base para una condición futura probable.",
+      "examples": [
+        "If it rains, we will stay inside"
+      ],
+      "incorrect": [
+        "If it will rain, we will stay inside"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-REL-CLAUSE-001",
+      "implementation": "planned:gram-rel-clause-001",
+      "level": "B1",
+      "category": "relative-clauses",
+      "title": "Use who/which/that in defining clauses",
+      "titleEs": "Usa who/which/that en relativas especificativas",
+      "explanation": "Use who for people and which for things; that can often refer to either in defining clauses.",
+      "explanationEs": "Usa who para personas y which para cosas; that puede referirse a ambos.",
+      "examples": [
+        "The student who built the robot is here"
+      ],
+      "incorrect": [
+        "The student which built the robot is here"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-TO-INF-001",
+      "implementation": "planned:gram-to-inf-001",
+      "level": "A2-B1",
+      "category": "infinitive-purpose",
+      "title": "Use to + verb to express purpose",
+      "titleEs": "Usa to + verbo para expresar propósito",
+      "explanation": "The to-infinitive commonly explains why someone does something.",
+      "explanationEs": "El infinitivo con to suele explicar para qué se hace algo.",
+      "examples": [
+        "I use an app to practice English"
+      ],
+      "incorrect": [
+        "I use an app for practice English"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-TOO-ENOUGH-001",
+      "implementation": "planned:gram-too-enough-001",
+      "level": "B1",
+      "category": "too-enough",
+      "title": "Use too and enough with adjectives",
+      "titleEs": "Usa too y enough con adjetivos",
+      "explanation": "Too usually precedes an adjective; enough usually follows it.",
+      "explanationEs": "Too suele preceder al adjetivo; enough suele ir después.",
+      "examples": [
+        "The box is too small",
+        "the room is big enough"
+      ],
+      "incorrect": [
+        "The box is enough small"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-ALTHOUGH-001",
+      "implementation": "planned:gram-although-001",
+      "level": "B1",
+      "category": "contrast-connectors",
+      "title": "Use although and however appropriately",
+      "titleEs": "Usa although y however adecuadamente",
+      "explanation": "Although introduces a subordinate contrast clause; however often links clauses with punctuation.",
+      "explanationEs": "Although introduce una subordinada concesiva; however suele conectar oraciones con puntuación apropiada.",
+      "examples": [
+        "Although it was hard, we finished"
+      ],
+      "incorrect": [
+        "Although it was hard, but we finished"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-CAUSE-RESULT-001",
+      "implementation": "planned:gram-cause-result-001",
+      "level": "A2-B1",
+      "category": "cause-effect-connectors",
+      "title": "Express cause and result with because/so",
+      "titleEs": "Expresa causa y resultado con because/so",
+      "explanation": "Because introduces a reason; so introduces a result.",
+      "explanationEs": "Because introduce una razón; so introduce un resultado.",
+      "examples": [
+        "It was late, so we left"
+      ],
+      "incorrect": [
+        "Because it was late, so we left"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-INDIRECT-QUESTION-001",
+      "implementation": "planned:gram-indirect-question-001",
+      "level": "B1",
+      "category": "indirect-questions",
+      "title": "Use statement word order in indirect questions",
+      "titleEs": "Usa orden afirmativo en preguntas indirectas",
+      "explanation": "Indirect questions use subject + verb order after Could you tell me.",
+      "explanationEs": "Las preguntas indirectas usan sujeto + verbo después de Could you tell me.",
+      "examples": [
+        "Could you tell me where the lab is?"
+      ],
+      "incorrect": [
+        "Could you tell me where is the lab?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-ARTICLE-GENERAL-001",
+      "implementation": "planned:gram-article-general-001",
+      "level": "A2-B1",
+      "category": "articles-general",
+      "title": "Distinguish general plural nouns from specific nouns",
+      "titleEs": "Distingue plurales generales de nombres específicos",
+      "explanation": "Plural countable nouns can appear without the when speaking generally; the signals a specific group.",
+      "explanationEs": "Los plurales contables pueden ir sin the en sentido general; the identifica un grupo específico.",
+      "examples": [
+        "Robots can help people"
+      ],
+      "incorrect": [
+        "The robots can help people (general meaning)"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-VERB-STOP-001",
+      "implementation": "planned:gram-verb-stop-001",
+      "level": "B1",
+      "category": "verb-patterns",
+      "title": "Distinguish stop doing and stop to do",
+      "titleEs": "Distingue stop doing y stop to do",
+      "explanation": "Stop doing means end an activity; stop to do means pause another activity to do something.",
+      "explanationEs": "Stop doing significa terminar una actividad; stop to do significa detenerse para hacer otra cosa.",
+      "examples": [
+        "I stopped working"
+      ],
+      "incorrect": [
+        "I stopped to working"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-COLLOCATION-001",
+      "implementation": "planned:gram-collocation-001",
+      "level": "B1",
+      "category": "collocations",
+      "title": "Choose common make/do collocations",
+      "titleEs": "Elige colocaciones frecuentes con make/do",
+      "explanation": "English uses conventional collocations such as make a decision and do homework.",
+      "explanationEs": "El inglés usa colocaciones convencionales como make a decision y do homework.",
+      "examples": [
+        "make a decision",
+        "do homework"
+      ],
+      "incorrect": [
+        "do a decision"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-DEPEND-ON-001",
+      "implementation": "planned:gram-depend-on-001",
+      "level": "B1",
+      "category": "verb-prepositions",
+      "title": "Use depend on",
+      "titleEs": "Usa depend on",
+      "explanation": "The verb depend is commonly followed by on.",
+      "explanationEs": "El verbo depend suele ir seguido de on.",
+      "examples": [
+        "It depends on the context"
+      ],
+      "incorrect": [
+        "It depends of the context"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-LISTEN-TO-001",
+      "implementation": "planned:gram-listen-to-001",
+      "level": "A2",
+      "category": "verb-prepositions",
+      "title": "Use listen to",
+      "titleEs": "Usa listen to",
+      "explanation": "Listen normally takes to before the thing or person heard.",
+      "explanationEs": "Listen normalmente lleva to antes de aquello que se escucha.",
+      "examples": [
+        "I listen to podcasts"
+      ],
+      "incorrect": [
+        "I listen podcasts"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-EXPLAIN-TO-001",
+      "implementation": "planned:gram-explain-to-001",
+      "level": "A2-B1",
+      "category": "verb-patterns",
+      "title": "Use explain something to someone",
+      "titleEs": "Usa explain something to someone",
+      "explanation": "Explain is commonly followed by the thing explained and then to + person.",
+      "explanationEs": "Explain suele ir seguido de lo que se explica y luego to + persona.",
+      "examples": [
+        "I explained the rule to my students"
+      ],
+      "incorrect": [
+        "I explained my students the rule"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-OBJECT-PRONOUN-001",
+      "implementation": "planned:gram-object-pronoun-001",
+      "level": "A2",
+      "category": "pronouns",
+      "title": "Use object pronouns after verbs and prepositions",
+      "titleEs": "Usa pronombres de objeto después de verbos y preposiciones",
+      "explanation": "Use me, him, her, us and them as objects, not I/he/she/we/they.",
+      "explanationEs": "Usa me, him, her, us y them como objetos, no I/he/she/we/they.",
+      "examples": [
+        "She helped me"
+      ],
+      "incorrect": [
+        "She helped I"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-REFLEXIVE-001",
+      "implementation": "planned:gram-reflexive-001",
+      "level": "B1",
+      "category": "reflexive-pronouns",
+      "title": "Use reflexive pronouns when subject and object are the same",
+      "titleEs": "Usa reflexivos cuando sujeto y objeto son iguales",
+      "explanation": "Use myself, yourself and similar forms when the subject acts on itself.",
+      "explanationEs": "Usa myself, yourself y formas similares cuando el sujeto actúa sobre sí mismo.",
+      "examples": [
+        "I taught myself Python"
+      ],
+      "incorrect": [
+        "I taught me Python"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-ADJ-ED-ING-001",
+      "implementation": "planned:gram-adj-ed-ing-001",
+      "level": "B1",
+      "category": "adjectives",
+      "title": "Distinguish -ed and -ing adjectives",
+      "titleEs": "Distingue adjetivos terminados en -ed y -ing",
+      "explanation": "Many -ed adjectives describe feelings; -ing adjectives describe what causes them.",
+      "explanationEs": "Muchos adjetivos en -ed describen sentimientos; los de -ing describen lo que los provoca.",
+      "examples": [
+        "I am interested",
+        "the topic is interesting"
+      ],
+      "incorrect": [
+        "I am interesting in robotics"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-UNCOUNTABLE-001",
+      "implementation": "planned:gram-uncountable-001",
+      "level": "A2-B1",
+      "category": "articles",
+      "title": "Avoid a/an with uncountable nouns",
+      "titleEs": "Evita a/an con incontables",
+      "explanation": "Uncountable nouns such as information and equipment do not normally take a/an.",
+      "explanationEs": "Los incontables como information y equipment normalmente no llevan a/an.",
+      "examples": [
+        "We need more information"
+      ],
+      "incorrect": [
+        "We need an information"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-QUESTION-TAG-001",
+      "implementation": "planned:gram-question-tag-001",
+      "level": "B1",
+      "category": "question-forms",
+      "title": "Form basic question tags with matching auxiliaries",
+      "titleEs": "Forma coletillas interrogativas",
+      "explanation": "A positive statement usually takes a negative tag; auxiliary and pronoun must match.",
+      "explanationEs": "Una afirmación positiva suele llevar coletilla negativa; auxiliar y pronombre deben concordar.",
+      "examples": [
+        "You are a teacher, aren't you?"
+      ],
+      "incorrect": [
+        "You are a teacher, isn't it?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-LOOK-FOR-001",
+      "implementation": "planned:gram-look-for-001",
+      "level": "A2-B1",
+      "category": "phrasal-verbs",
+      "title": "Use look for to mean search",
+      "titleEs": "Usa look for con el sentido de buscar",
+      "explanation": "Look for means search for something.",
+      "explanationEs": "Look for significa buscar algo.",
+      "examples": [
+        "I am looking for my keys"
+      ],
+      "incorrect": [
+        "I am looking my keys"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-SINCE-FOR-001",
+      "implementation": "planned:gram-since-for-001",
+      "level": "B1",
+      "category": "present-perfect",
+      "title": "Use since for a starting point and for for a duration",
+      "titleEs": "Usa since para punto inicial y for para duración",
+      "explanation": "Use since + starting point and for + duration in common present-perfect contexts.",
+      "explanationEs": "Usa since + punto inicial y for + duración.",
+      "examples": [
+        "I have worked here for five years"
+      ],
+      "incorrect": [
+        "I have worked here since five years"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
+    },
+    {
+      "id": "GRAM-USED-TO-001",
+      "implementation": "planned:gram-used-to-001",
+      "level": "B1",
+      "category": "past-habits",
+      "title": "Use used to for past habits or states",
+      "titleEs": "Usa used to para hábitos o estados pasados",
+      "explanation": "Used to + base verb describes past habits or states that are no longer regular.",
+      "explanationEs": "Used to + verbo base describe hábitos o estados pasados que ya no son habituales.",
+      "examples": [
+        "I used to play football"
+      ],
+      "incorrect": [
+        "I use to play football"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "review": {
+        "stage": "planned",
+        "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
+      }
     }
   ],
   "vocabularyEntries": [
@@ -1680,6 +3574,2620 @@
         "I don't understand the question."
       ],
       "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-ENGINEER",
+      "lemma": "engineer",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "jobs",
+      "meaningEs": "ingeniero/a",
+      "forms": [
+        "engineer",
+        "engineers"
+      ],
+      "collocations": [
+        "an engineer",
+        "software engineer"
+      ],
+      "examples": [
+        "I am an engineer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-DEVELOPER",
+      "lemma": "developer",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "desarrollador/a",
+      "forms": [
+        "developer",
+        "developers"
+      ],
+      "collocations": [
+        "software developer",
+        "web developer"
+      ],
+      "examples": [
+        "She is a web developer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-PROGRAMMER",
+      "lemma": "programmer",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "programador/a",
+      "forms": [
+        "programmer",
+        "programmers"
+      ],
+      "collocations": [
+        "computer programmer",
+        "learn to program"
+      ],
+      "examples": [
+        "He is a programmer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-TECHNICIAN",
+      "lemma": "technician",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "técnico/a",
+      "forms": [
+        "technician",
+        "technicians"
+      ],
+      "collocations": [
+        "computer technician",
+        "technical support"
+      ],
+      "examples": [
+        "I work as a technician."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-DESIGNER",
+      "lemma": "designer",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "diseñador/a",
+      "forms": [
+        "designer",
+        "designers"
+      ],
+      "collocations": [
+        "web designer",
+        "graphic designer"
+      ],
+      "examples": [
+        "She is a designer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-JOBS-COORDINATOR",
+      "lemma": "coordinator",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "jobs",
+      "meaningEs": "coordinador/a",
+      "forms": [
+        "coordinator",
+        "coordinators"
+      ],
+      "collocations": [
+        "area coordinator",
+        "project coordinator"
+      ],
+      "examples": [
+        "I am the area coordinator."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-PRINCIPAL",
+      "lemma": "principal",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "director/a escolar",
+      "forms": [
+        "principal",
+        "principals"
+      ],
+      "collocations": [
+        "school principal",
+        "head teacher"
+      ],
+      "examples": [
+        "The principal works at a school."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-WORK-COLLEAGUE",
+      "lemma": "colleague",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "work",
+      "meaningEs": "compañero/a de trabajo",
+      "forms": [
+        "colleague",
+        "colleagues"
+      ],
+      "collocations": [
+        "work with colleagues",
+        "help a colleague"
+      ],
+      "examples": [
+        "I plan lessons with my colleagues."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-CLASSROOM",
+      "lemma": "classroom",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "salón de clase",
+      "forms": [
+        "classroom",
+        "classrooms"
+      ],
+      "collocations": [
+        "in the classroom",
+        "classroom activity"
+      ],
+      "examples": [
+        "The students are in the classroom."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-LESSON",
+      "lemma": "lesson",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "lección/clase",
+      "forms": [
+        "lesson",
+        "lessons"
+      ],
+      "collocations": [
+        "plan a lesson",
+        "give a lesson"
+      ],
+      "examples": [
+        "I prepare an English lesson."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-ASSIGNMENT",
+      "lemma": "assignment",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "education",
+      "meaningEs": "tarea/encargo",
+      "forms": [
+        "assignment",
+        "assignments"
+      ],
+      "collocations": [
+        "complete an assignment",
+        "submit an assignment"
+      ],
+      "examples": [
+        "I finished the assignment yesterday."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-GRADE",
+      "lemma": "grade",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "grado/calificación",
+      "forms": [
+        "grade",
+        "grades"
+      ],
+      "collocations": [
+        "sixth grade",
+        "get a good grade"
+      ],
+      "examples": [
+        "My students are in sixth grade."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-SUBJECT",
+      "lemma": "subject",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "asignatura/tema",
+      "forms": [
+        "subject",
+        "subjects"
+      ],
+      "collocations": [
+        "school subject",
+        "main subject"
+      ],
+      "examples": [
+        "Technology is my favorite subject."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-SKILL",
+      "lemma": "skill",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "habilidad",
+      "forms": [
+        "skill",
+        "skills"
+      ],
+      "collocations": [
+        "communication skills",
+        "develop a skill"
+      ],
+      "examples": [
+        "Speaking is an important skill."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-GOAL",
+      "lemma": "goal",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "meta",
+      "forms": [
+        "goal",
+        "goals"
+      ],
+      "collocations": [
+        "set a goal",
+        "reach a goal"
+      ],
+      "examples": [
+        "My goal is to speak English."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-PROGRESS",
+      "lemma": "progress",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "progreso",
+      "forms": [
+        "progress"
+      ],
+      "collocations": [
+        "make progress",
+        "track progress"
+      ],
+      "examples": [
+        "I can see my progress."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-MISTAKE",
+      "lemma": "mistake",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "error",
+      "forms": [
+        "mistake",
+        "mistakes"
+      ],
+      "collocations": [
+        "make a mistake",
+        "correct a mistake"
+      ],
+      "examples": [
+        "I learn from my mistakes."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-FEEDBACK",
+      "lemma": "feedback",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "learning",
+      "meaningEs": "retroalimentación",
+      "forms": [
+        "feedback"
+      ],
+      "collocations": [
+        "give feedback",
+        "receive feedback"
+      ],
+      "examples": [
+        "The teacher gives useful feedback."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-PRACTICE",
+      "lemma": "practice",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "práctica",
+      "forms": [
+        "practice",
+        "practices"
+      ],
+      "collocations": [
+        "speaking practice",
+        "daily practice"
+      ],
+      "examples": [
+        "I need more speaking practice."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-PRONUNCIATION",
+      "lemma": "pronunciation",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "language",
+      "meaningEs": "pronunciación",
+      "forms": [
+        "pronunciation",
+        "pronunciations"
+      ],
+      "collocations": [
+        "improve pronunciation",
+        "correct pronunciation"
+      ],
+      "examples": [
+        "I practice my pronunciation every day."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-SENTENCE",
+      "lemma": "sentence",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "oración/frase",
+      "forms": [
+        "sentence",
+        "sentences"
+      ],
+      "collocations": [
+        "write a sentence",
+        "complete a sentence"
+      ],
+      "examples": [
+        "Please write a complete sentence."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-MEANING",
+      "lemma": "meaning",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "significado",
+      "forms": [
+        "meaning",
+        "meanings"
+      ],
+      "collocations": [
+        "understand the meaning",
+        "word meaning"
+      ],
+      "examples": [
+        "I know the meaning of this word."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-PHRASE",
+      "lemma": "phrase",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "language",
+      "meaningEs": "frase/expresión",
+      "forms": [
+        "phrase",
+        "phrases"
+      ],
+      "collocations": [
+        "useful phrase",
+        "common phrase"
+      ],
+      "examples": [
+        "I learned a useful phrase."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-EXPRESSION",
+      "lemma": "expression",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "language",
+      "meaningEs": "expresión",
+      "forms": [
+        "expression",
+        "expressions"
+      ],
+      "collocations": [
+        "common expression",
+        "polite expression"
+      ],
+      "examples": [
+        "That is a common expression."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-CONVERSATION",
+      "lemma": "conversation",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "conversación",
+      "forms": [
+        "conversation",
+        "conversations"
+      ],
+      "collocations": [
+        "have a conversation",
+        "start a conversation"
+      ],
+      "examples": [
+        "We have a short conversation."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-QUESTION",
+      "lemma": "question",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "pregunta",
+      "forms": [
+        "question",
+        "questions"
+      ],
+      "collocations": [
+        "ask a question",
+        "answer a question"
+      ],
+      "examples": [
+        "Can I ask a question?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-ANSWER",
+      "lemma": "answer",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "respuesta",
+      "forms": [
+        "answer",
+        "answers"
+      ],
+      "collocations": [
+        "give an answer",
+        "correct answer"
+      ],
+      "examples": [
+        "I know the answer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-OPINION",
+      "lemma": "opinion",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "opinión",
+      "forms": [
+        "opinion",
+        "opinions"
+      ],
+      "collocations": [
+        "in my opinion",
+        "express an opinion"
+      ],
+      "examples": [
+        "In my opinion, practice is important."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-REASON",
+      "lemma": "reason",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "razón/motivo",
+      "forms": [
+        "reason",
+        "reasons"
+      ],
+      "collocations": [
+        "give a reason",
+        "main reason"
+      ],
+      "examples": [
+        "I agree for a different reason."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-EXAMPLE",
+      "lemma": "example",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "ejemplo",
+      "forms": [
+        "example",
+        "examples"
+      ],
+      "collocations": [
+        "for example",
+        "give an example"
+      ],
+      "examples": [
+        "Can you give me an example?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-SCHEDULE",
+      "lemma": "schedule",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "time",
+      "meaningEs": "horario",
+      "forms": [
+        "schedule",
+        "schedules"
+      ],
+      "collocations": [
+        "daily schedule",
+        "busy schedule"
+      ],
+      "examples": [
+        "My schedule is busy on Mondays."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DAILY-LIFE-APPOINTMENT",
+      "lemma": "appointment",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "cita",
+      "forms": [
+        "appointment",
+        "appointments"
+      ],
+      "collocations": [
+        "make an appointment",
+        "attend an appointment"
+      ],
+      "examples": [
+        "I have an appointment at ten."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TRAVEL-JOURNEY",
+      "lemma": "journey",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "travel",
+      "meaningEs": "viaje/recorrido",
+      "forms": [
+        "journey",
+        "journeys"
+      ],
+      "collocations": [
+        "long journey",
+        "journey to work"
+      ],
+      "examples": [
+        "The journey takes an hour."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PLACES-NEIGHBORHOOD",
+      "lemma": "neighborhood",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "places",
+      "meaningEs": "barrio",
+      "forms": [
+        "neighborhood",
+        "neighborhoods"
+      ],
+      "collocations": [
+        "quiet neighborhood",
+        "in my neighborhood"
+      ],
+      "examples": [
+        "I live in a quiet neighborhood."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PLACES-BUILDING",
+      "lemma": "building",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "places",
+      "meaningEs": "edificio",
+      "forms": [
+        "building",
+        "buildings"
+      ],
+      "collocations": [
+        "school building",
+        "modern building"
+      ],
+      "examples": [
+        "The school building is large."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-LIBRARY",
+      "lemma": "library",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "biblioteca",
+      "forms": [
+        "library",
+        "libraries"
+      ],
+      "collocations": [
+        "school library",
+        "borrow a book"
+      ],
+      "examples": [
+        "The library opens at eight."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-EQUIPMENT",
+      "lemma": "equipment",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "equipo",
+      "forms": [
+        "equipment"
+      ],
+      "collocations": [
+        "robotics equipment",
+        "computer equipment"
+      ],
+      "examples": [
+        "The lab has new equipment."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-DEVICE",
+      "lemma": "device",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "dispositivo",
+      "forms": [
+        "device",
+        "devices"
+      ],
+      "collocations": [
+        "mobile device",
+        "electronic device"
+      ],
+      "examples": [
+        "This device measures temperature."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-SENSOR",
+      "lemma": "sensor",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sensor",
+      "forms": [
+        "sensor",
+        "sensors"
+      ],
+      "collocations": [
+        "temperature sensor",
+        "ultrasonic sensor"
+      ],
+      "examples": [
+        "The sensor detects an obstacle."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-CIRCUIT",
+      "lemma": "circuit",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "circuito",
+      "forms": [
+        "circuit",
+        "circuits"
+      ],
+      "collocations": [
+        "electric circuit",
+        "build a circuit"
+      ],
+      "examples": [
+        "We built a simple circuit."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-COMPONENT",
+      "lemma": "component",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "componente",
+      "forms": [
+        "component",
+        "components"
+      ],
+      "collocations": [
+        "electronic component",
+        "main component"
+      ],
+      "examples": [
+        "Each component has a function."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-BATTERY",
+      "lemma": "battery",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "batería/pila",
+      "forms": [
+        "battery",
+        "batteries"
+      ],
+      "collocations": [
+        "charge a battery",
+        "low battery"
+      ],
+      "examples": [
+        "The robot needs a new battery."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-WIRE",
+      "lemma": "wire",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "cable/alambre",
+      "forms": [
+        "wire",
+        "wires"
+      ],
+      "collocations": [
+        "connect a wire",
+        "USB cable"
+      ],
+      "examples": [
+        "Connect the wire carefully."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROGRAMMING-CODE",
+      "lemma": "code",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "programming",
+      "meaningEs": "código",
+      "forms": [
+        "code",
+        "codes"
+      ],
+      "collocations": [
+        "write code",
+        "debug code"
+      ],
+      "examples": [
+        "Students write code in class."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROGRAMMING-PROGRAM",
+      "lemma": "program",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "programming",
+      "meaningEs": "programa",
+      "forms": [
+        "program",
+        "programs"
+      ],
+      "collocations": [
+        "computer program",
+        "write a program"
+      ],
+      "examples": [
+        "I am learning to write a program."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROGRAMMING-DEBUG",
+      "lemma": "debug",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "programming",
+      "meaningEs": "depurar",
+      "forms": [
+        "debug",
+        "debugs",
+        "debugged",
+        "debugging"
+      ],
+      "collocations": [
+        "debug code",
+        "debug a program"
+      ],
+      "examples": [
+        "We need to debug the program."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECTS-DESIGN",
+      "lemma": "design",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "projects",
+      "meaningEs": "diseñar",
+      "forms": [
+        "design",
+        "designs",
+        "designed",
+        "designing"
+      ],
+      "collocations": [
+        "design a project",
+        "design a robot"
+      ],
+      "examples": [
+        "Students design a small robot."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SCIENCE-MEASURE",
+      "lemma": "measure",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "science",
+      "meaningEs": "medir",
+      "forms": [
+        "measure",
+        "measures",
+        "measured",
+        "measuring"
+      ],
+      "collocations": [
+        "measure distance",
+        "measure temperature"
+      ],
+      "examples": [
+        "The sensor measures distance."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECTS-TEST",
+      "lemma": "test",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "projects",
+      "meaningEs": "probar",
+      "forms": [
+        "test",
+        "tests",
+        "tested",
+        "testing"
+      ],
+      "collocations": [
+        "test a prototype",
+        "test an idea"
+      ],
+      "examples": [
+        "We test the prototype."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-IMPROVE",
+      "lemma": "improve",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "mejorar",
+      "forms": [
+        "improve",
+        "improves",
+        "improved",
+        "improving"
+      ],
+      "collocations": [
+        "improve English",
+        "improve a skill"
+      ],
+      "examples": [
+        "I want to improve my English."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-EXPLAIN",
+      "lemma": "explain",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "explicar",
+      "forms": [
+        "explain",
+        "explains",
+        "explained",
+        "explaining"
+      ],
+      "collocations": [
+        "explain an idea",
+        "explain a process"
+      ],
+      "examples": [
+        "Can you explain the process?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-DESCRIBE",
+      "lemma": "describe",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "describir",
+      "forms": [
+        "describe",
+        "describes",
+        "described",
+        "describing"
+      ],
+      "collocations": [
+        "describe a person",
+        "describe a problem"
+      ],
+      "examples": [
+        "I can describe my work."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-THINKING-COMPARE",
+      "lemma": "compare",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "thinking",
+      "meaningEs": "comparar",
+      "forms": [
+        "compare",
+        "compares",
+        "compared",
+        "comparing"
+      ],
+      "collocations": [
+        "compare two options",
+        "compare results"
+      ],
+      "examples": [
+        "We compare the results."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-SUGGEST",
+      "lemma": "suggest",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "sugerir",
+      "forms": [
+        "suggest",
+        "suggests",
+        "suggested",
+        "suggesting"
+      ],
+      "collocations": [
+        "suggest an idea",
+        "suggest a solution"
+      ],
+      "examples": [
+        "I suggest a different solution."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-THINKING-DECIDE",
+      "lemma": "decide",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "thinking",
+      "meaningEs": "decidir",
+      "forms": [
+        "decide",
+        "decides",
+        "decided",
+        "deciding"
+      ],
+      "collocations": [
+        "make a decision",
+        "decide to learn"
+      ],
+      "examples": [
+        "We need to decide today."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-THINKING-CHOOSE",
+      "lemma": "choose",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "thinking",
+      "meaningEs": "elegir",
+      "forms": [
+        "choose",
+        "chooses",
+        "chose",
+        "chosen",
+        "choosing"
+      ],
+      "collocations": [
+        "choose an option",
+        "choose a topic"
+      ],
+      "examples": [
+        "Please choose one topic."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-REMEMBER",
+      "lemma": "remember",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "recordar",
+      "forms": [
+        "remember",
+        "remembers",
+        "remembered",
+        "remembering"
+      ],
+      "collocations": [
+        "remember a word",
+        "remember to practice"
+      ],
+      "examples": [
+        "I remember that expression."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-FORGET",
+      "lemma": "forget",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "olvidar",
+      "forms": [
+        "forget",
+        "forgets",
+        "forgot",
+        "forgotten",
+        "forgetting"
+      ],
+      "collocations": [
+        "forget a name",
+        "forget to bring"
+      ],
+      "examples": [
+        "I sometimes forget new words."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-UNDERSTAND",
+      "lemma": "understand",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "entender",
+      "forms": [
+        "understand",
+        "understands",
+        "understood",
+        "understanding"
+      ],
+      "collocations": [
+        "understand a question",
+        "understand instructions"
+      ],
+      "examples": [
+        "I understand the instructions."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-REPEAT",
+      "lemma": "repeat",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "repetir",
+      "forms": [
+        "repeat",
+        "repeats",
+        "repeated",
+        "repeating"
+      ],
+      "collocations": [
+        "repeat a sentence",
+        "repeat after me"
+      ],
+      "examples": [
+        "Please repeat the sentence."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-PRONOUNCE",
+      "lemma": "pronounce",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "language",
+      "meaningEs": "pronunciar",
+      "forms": [
+        "pronounce",
+        "pronounces",
+        "pronounced",
+        "pronouncing"
+      ],
+      "collocations": [
+        "pronounce a word",
+        "pronounce clearly"
+      ],
+      "examples": [
+        "How do you pronounce this word?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-SPELL",
+      "lemma": "spell",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "deletrear",
+      "forms": [
+        "spell",
+        "spells",
+        "spelled",
+        "spelling"
+      ],
+      "collocations": [
+        "spell a word",
+        "spell correctly"
+      ],
+      "examples": [
+        "Can you spell your surname?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-AGREE",
+      "lemma": "agree",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "estar de acuerdo",
+      "forms": [
+        "agree",
+        "agrees",
+        "agreed",
+        "agreeing"
+      ],
+      "collocations": [
+        "agree with someone",
+        "strongly agree"
+      ],
+      "examples": [
+        "I agree with your idea."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-DISAGREE",
+      "lemma": "disagree",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "estar en desacuerdo",
+      "forms": [
+        "disagree",
+        "disagrees",
+        "disagreed",
+        "disagreeing"
+      ],
+      "collocations": [
+        "politely disagree",
+        "disagree with an opinion"
+      ],
+      "examples": [
+        "I disagree, but I understand your point."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PREFERENCES-PREFER",
+      "lemma": "prefer",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "preferences",
+      "meaningEs": "preferir",
+      "forms": [
+        "prefer",
+        "prefers",
+        "preferred",
+        "preferring"
+      ],
+      "collocations": [
+        "prefer to work",
+        "prefer doing"
+      ],
+      "examples": [
+        "I prefer working in the morning."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-COMMUNICATION-RECOMMEND",
+      "lemma": "recommend",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "recomendar",
+      "forms": [
+        "recommend",
+        "recommends",
+        "recommended",
+        "recommending"
+      ],
+      "collocations": [
+        "recommend a book",
+        "recommend a method"
+      ],
+      "examples": [
+        "I recommend this method."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-THINKING-SOLVE",
+      "lemma": "solve",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "thinking",
+      "meaningEs": "resolver",
+      "forms": [
+        "solve",
+        "solves",
+        "solved",
+        "solving"
+      ],
+      "collocations": [
+        "solve a problem",
+        "solve a challenge"
+      ],
+      "examples": [
+        "Students solve problems together."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECTS-CREATE",
+      "lemma": "create",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "projects",
+      "meaningEs": "crear",
+      "forms": [
+        "create",
+        "creates",
+        "created",
+        "creating"
+      ],
+      "collocations": [
+        "create a project",
+        "create an activity"
+      ],
+      "examples": [
+        "We create a learning activity."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECTS-DEVELOP",
+      "lemma": "develop",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "projects",
+      "meaningEs": "desarrollar",
+      "forms": [
+        "develop",
+        "develops",
+        "developed",
+        "developing"
+      ],
+      "collocations": [
+        "develop a skill",
+        "develop an application"
+      ],
+      "examples": [
+        "I develop educational projects."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-WORK-ORGANIZE",
+      "lemma": "organize",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "work",
+      "meaningEs": "organizar",
+      "forms": [
+        "organize",
+        "organizes",
+        "organized",
+        "organizing"
+      ],
+      "collocations": [
+        "organize a meeting",
+        "organize information"
+      ],
+      "examples": [
+        "I organize my lessons every week."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-WORK-PREPARE",
+      "lemma": "prepare",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "work",
+      "meaningEs": "preparar",
+      "forms": [
+        "prepare",
+        "prepares",
+        "prepared",
+        "preparing"
+      ],
+      "collocations": [
+        "prepare a lesson",
+        "prepare a presentation"
+      ],
+      "examples": [
+        "I prepare my classes on Sunday."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EDUCATION-ATTEND",
+      "lemma": "attend",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "asistir",
+      "forms": [
+        "attend",
+        "attends",
+        "attended",
+        "attending"
+      ],
+      "collocations": [
+        "attend a meeting",
+        "attend class"
+      ],
+      "examples": [
+        "I attend a meeting every Friday."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DAILY-LIFE-BORROW",
+      "lemma": "borrow",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "pedir prestado",
+      "forms": [
+        "borrow",
+        "borrows",
+        "borrowed",
+        "borrowing"
+      ],
+      "collocations": [
+        "borrow a book",
+        "borrow a pencil"
+      ],
+      "examples": [
+        "Can I borrow your pencil?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DAILY-LIFE-LEND",
+      "lemma": "lend",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "prestar",
+      "forms": [
+        "lend",
+        "lends",
+        "lent",
+        "lending"
+      ],
+      "collocations": [
+        "lend a book",
+        "lend someone a pen"
+      ],
+      "examples": [
+        "Could you lend me a pen?"
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TRAVEL-ARRIVE",
+      "lemma": "arrive",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "travel",
+      "meaningEs": "llegar",
+      "forms": [
+        "arrive",
+        "arrives",
+        "arrived",
+        "arriving"
+      ],
+      "collocations": [
+        "arrive at school",
+        "arrive on time"
+      ],
+      "examples": [
+        "I arrive at school at seven."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TRAVEL-LEAVE",
+      "lemma": "leave",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "travel",
+      "meaningEs": "salir/dejar",
+      "forms": [
+        "leave",
+        "leaves",
+        "left",
+        "leaving"
+      ],
+      "collocations": [
+        "leave home",
+        "leave work"
+      ],
+      "examples": [
+        "I leave work at four."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-EARLY",
+      "lemma": "early",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "time",
+      "meaningEs": "temprano",
+      "forms": [
+        "early"
+      ],
+      "collocations": [
+        "early in the morning",
+        "arrive early"
+      ],
+      "examples": [
+        "I get up early."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-LATE",
+      "lemma": "late",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "time",
+      "meaningEs": "tarde",
+      "forms": [
+        "late"
+      ],
+      "collocations": [
+        "arrive late",
+        "stay up late"
+      ],
+      "examples": [
+        "The bus is late."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-WORK-AVAILABLE",
+      "lemma": "available",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "work",
+      "meaningEs": "disponible",
+      "forms": [
+        "available"
+      ],
+      "collocations": [
+        "available online",
+        "available today"
+      ],
+      "examples": [
+        "The resource is available online."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-USEFUL",
+      "lemma": "useful",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "útil",
+      "forms": [
+        "useful"
+      ],
+      "collocations": [
+        "useful information",
+        "useful example"
+      ],
+      "examples": [
+        "This is a useful example."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-BEHAVIOR-CAREFUL",
+      "lemma": "careful",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "behavior",
+      "meaningEs": "cuidadoso/a",
+      "forms": [
+        "careful"
+      ],
+      "collocations": [
+        "be careful",
+        "careful with equipment"
+      ],
+      "examples": [
+        "Be careful with the wires."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SAFETY-SAFE",
+      "lemma": "safe",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "safety",
+      "meaningEs": "seguro/a",
+      "forms": [
+        "safe"
+      ],
+      "collocations": [
+        "safe environment",
+        "keep something safe"
+      ],
+      "examples": [
+        "The classroom is a safe place."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DESCRIPTION-DIFFERENT",
+      "lemma": "different",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "description",
+      "meaningEs": "diferente",
+      "forms": [
+        "different"
+      ],
+      "collocations": [
+        "different options",
+        "different from"
+      ],
+      "examples": [
+        "We have different ideas."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-DESCRIPTION-SIMILAR",
+      "lemma": "similar",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "description",
+      "meaningEs": "similar",
+      "forms": [
+        "similar"
+      ],
+      "collocations": [
+        "similar to",
+        "similar results"
+      ],
+      "examples": [
+        "The two projects are similar."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-CONNECTORS-ALTHOUGH",
+      "lemma": "although",
+      "partOfSpeech": "connector",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "aunque",
+      "forms": [
+        "although"
+      ],
+      "collocations": [
+        "although it is difficult",
+        "although I agree"
+      ],
+      "examples": [
+        "Although it was difficult, we finished."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-CONNECTORS-HOWEVER",
+      "lemma": "however",
+      "partOfSpeech": "connector",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "sin embargo",
+      "forms": [
+        "however"
+      ],
+      "collocations": [
+        "however, I think",
+        "however, there is"
+      ],
+      "examples": [
+        "The task was hard. However, we finished."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-CONNECTORS-THEREFORE",
+      "lemma": "therefore",
+      "partOfSpeech": "connector",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "por lo tanto",
+      "forms": [
+        "therefore"
+      ],
+      "collocations": [
+        "therefore, we need",
+        "therefore, I decided"
+      ],
+      "examples": [
+        "The battery was low; therefore, we stopped."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SEQUENCE-FIRST",
+      "lemma": "first",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "sequence",
+      "meaningEs": "primero",
+      "forms": [
+        "first"
+      ],
+      "collocations": [
+        "first, next, finally",
+        "first step"
+      ],
+      "examples": [
+        "First, connect the sensor."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SEQUENCE-NEXT",
+      "lemma": "next",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "sequence",
+      "meaningEs": "después/luego",
+      "forms": [
+        "next"
+      ],
+      "collocations": [
+        "next step",
+        "what happens next"
+      ],
+      "examples": [
+        "Next, upload the code."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SEQUENCE-FINALLY",
+      "lemma": "finally",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "sequence",
+      "meaningEs": "finalmente",
+      "forms": [
+        "finally"
+      ],
+      "collocations": [
+        "finally, test",
+        "finally, we finished"
+      ],
+      "examples": [
+        "Finally, we test the robot."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-FREQUENCY-USUALLY",
+      "lemma": "usually",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "frequency",
+      "meaningEs": "usualmente",
+      "forms": [
+        "usually"
+      ],
+      "collocations": [
+        "usually work",
+        "usually go"
+      ],
+      "examples": [
+        "I usually teach in the morning."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-FREQUENCY-SOMETIMES",
+      "lemma": "sometimes",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "frequency",
+      "meaningEs": "a veces",
+      "forms": [
+        "sometimes"
+      ],
+      "collocations": [
+        "sometimes feel",
+        "sometimes use"
+      ],
+      "examples": [
+        "I sometimes practice at night."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-ALREADY",
+      "lemma": "already",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "time",
+      "meaningEs": "ya",
+      "forms": [
+        "already"
+      ],
+      "collocations": [
+        "already finished",
+        "already know"
+      ],
+      "examples": [
+        "I have already finished the task."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-YET",
+      "lemma": "yet",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "time",
+      "meaningEs": "todavía/aún",
+      "forms": [
+        "yet"
+      ],
+      "collocations": [
+        "not yet",
+        "have you finished yet"
+      ],
+      "examples": [
+        "I have not finished yet."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TIME-RECENTLY",
+      "lemma": "recently",
+      "partOfSpeech": "adverb",
+      "level": "B1",
+      "domain": "time",
+      "meaningEs": "recientemente",
+      "forms": [
+        "recently"
+      ],
+      "collocations": [
+        "recently started",
+        "recently learned"
+      ],
+      "examples": [
+        "I recently started a new project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EXPERIENCES-EXPERIENCE",
+      "lemma": "experience",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "experiences",
+      "meaningEs": "experiencia",
+      "forms": [
+        "experience",
+        "experiences"
+      ],
+      "collocations": [
+        "work experience",
+        "learning experience"
+      ],
+      "examples": [
+        "It was a useful learning experience."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-EXPERIENCES-ACHIEVEMENT",
+      "lemma": "achievement",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "experiences",
+      "meaningEs": "logro",
+      "forms": [
+        "achievement",
+        "achievements"
+      ],
+      "collocations": [
+        "personal achievement",
+        "major achievement"
+      ],
+      "examples": [
+        "Finishing the project was an achievement."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PROJECTS-CHALLENGE",
+      "lemma": "challenge",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "projects",
+      "meaningEs": "reto",
+      "forms": [
+        "challenge",
+        "challenges"
+      ],
+      "collocations": [
+        "face a challenge",
+        "solve a challenge"
+      ],
+      "examples": [
+        "Learning English is a challenge."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-THINKING-SOLUTION",
+      "lemma": "solution",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "thinking",
+      "meaningEs": "solución",
+      "forms": [
+        "solution",
+        "solutions"
+      ],
+      "collocations": [
+        "find a solution",
+        "possible solution"
+      ],
+      "examples": [
+        "We found a simple solution."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SCIENCE-RESULT",
+      "lemma": "result",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "science",
+      "meaningEs": "resultado",
+      "forms": [
+        "result",
+        "results"
+      ],
+      "collocations": [
+        "test result",
+        "as a result"
+      ],
+      "examples": [
+        "The results were very good."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-RESEARCH",
+      "lemma": "research",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "learning",
+      "meaningEs": "investigación",
+      "forms": [
+        "research"
+      ],
+      "collocations": [
+        "do research",
+        "research project"
+      ],
+      "examples": [
+        "We did research before the project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-NATURE-ENVIRONMENT",
+      "lemma": "environment",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "nature",
+      "meaningEs": "entorno/medioambiente",
+      "forms": [
+        "environment",
+        "environments"
+      ],
+      "collocations": [
+        "learning environment",
+        "protect the environment"
+      ],
+      "examples": [
+        "We need a safe learning environment."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-NATURE-RECYCLE",
+      "lemma": "recycle",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "nature",
+      "meaningEs": "reciclar",
+      "forms": [
+        "recycle",
+        "recycles",
+        "recycled",
+        "recycling"
+      ],
+      "collocations": [
+        "recycle materials",
+        "recycle plastic"
+      ],
+      "examples": [
+        "Students recycle materials for the project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-NATURE-WASTE",
+      "lemma": "waste",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "nature",
+      "meaningEs": "residuo/desperdicio",
+      "forms": [
+        "waste"
+      ],
+      "collocations": [
+        "reduce waste",
+        "food waste"
+      ],
+      "examples": [
+        "We reduce waste at school."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SOCIETY-COMMUNITY",
+      "lemma": "community",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "society",
+      "meaningEs": "comunidad",
+      "forms": [
+        "community",
+        "communities"
+      ],
+      "collocations": [
+        "local community",
+        "serve the community"
+      ],
+      "examples": [
+        "Our project helps the community."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-SOCIETY-VOLUNTEER",
+      "lemma": "volunteer",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "society",
+      "meaningEs": "voluntario/a",
+      "forms": [
+        "volunteer",
+        "volunteers"
+      ],
+      "collocations": [
+        "volunteer work",
+        "work as a volunteer"
+      ],
+      "examples": [
+        "She works as a volunteer."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PLANNING-BUDGET",
+      "lemma": "budget",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "planning",
+      "meaningEs": "presupuesto",
+      "forms": [
+        "budget",
+        "budgets"
+      ],
+      "collocations": [
+        "limited budget",
+        "plan a budget"
+      ],
+      "examples": [
+        "We have a limited budget."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-PLANNING-DEADLINE",
+      "lemma": "deadline",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "planning",
+      "meaningEs": "fecha límite",
+      "forms": [
+        "deadline",
+        "deadlines"
+      ],
+      "collocations": [
+        "meet a deadline",
+        "project deadline"
+      ],
+      "examples": [
+        "We need to meet the deadline."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LEARNING-RESOURCE",
+      "lemma": "resource",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "recurso",
+      "forms": [
+        "resource",
+        "resources"
+      ],
+      "collocations": [
+        "learning resource",
+        "online resource"
+      ],
+      "examples": [
+        "This is a free learning resource."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-PLATFORM",
+      "lemma": "platform",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "plataforma",
+      "forms": [
+        "platform",
+        "platforms"
+      ],
+      "collocations": [
+        "learning platform",
+        "online platform"
+      ],
+      "examples": [
+        "HODIE is a learning platform."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-APPLICATION",
+      "lemma": "application",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "aplicación",
+      "forms": [
+        "application",
+        "applications"
+      ],
+      "collocations": [
+        "mobile application",
+        "web application"
+      ],
+      "examples": [
+        "I am building a web application."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-WEBSITE",
+      "lemma": "website",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "sitio web",
+      "forms": [
+        "website",
+        "websites"
+      ],
+      "collocations": [
+        "school website",
+        "visit a website"
+      ],
+      "examples": [
+        "The website works on my phone."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-DATABASE",
+      "lemma": "database",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "base de datos",
+      "forms": [
+        "database",
+        "databases"
+      ],
+      "collocations": [
+        "database record",
+        "design a database"
+      ],
+      "examples": [
+        "The application stores data in a database."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-FILE",
+      "lemma": "file",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "archivo",
+      "forms": [
+        "file",
+        "files"
+      ],
+      "collocations": [
+        "save a file",
+        "open a file"
+      ],
+      "examples": [
+        "Please save the file."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-FOLDER",
+      "lemma": "folder",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "carpeta",
+      "forms": [
+        "folder",
+        "folders"
+      ],
+      "collocations": [
+        "create a folder",
+        "open a folder"
+      ],
+      "examples": [
+        "Create a folder for the project."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-UPDATE",
+      "lemma": "update",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "actualización",
+      "forms": [
+        "update",
+        "updates"
+      ],
+      "collocations": [
+        "software update",
+        "install an update"
+      ],
+      "examples": [
+        "The update fixes a problem."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-ERROR",
+      "lemma": "error",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "error",
+      "forms": [
+        "error",
+        "errors"
+      ],
+      "collocations": [
+        "error message",
+        "fix an error"
+      ],
+      "examples": [
+        "The console shows an error."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-NETWORK",
+      "lemma": "network",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "red",
+      "forms": [
+        "network",
+        "networks"
+      ],
+      "collocations": [
+        "computer network",
+        "network connection"
+      ],
+      "examples": [
+        "The computer is on the network."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-CONNECTION",
+      "lemma": "connection",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "conexión",
+      "forms": [
+        "connection",
+        "connections"
+      ],
+      "collocations": [
+        "internet connection",
+        "stable connection"
+      ],
+      "examples": [
+        "The internet connection is slow."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-OFFLINE",
+      "lemma": "offline",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sin conexión",
+      "forms": [
+        "offline"
+      ],
+      "collocations": [
+        "work offline",
+        "offline mode"
+      ],
+      "examples": [
+        "The app works offline."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-TECHNOLOGY-ONLINE",
+      "lemma": "online",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "en línea",
+      "forms": [
+        "online"
+      ],
+      "collocations": [
+        "online course",
+        "available online"
+      ],
+      "examples": [
+        "I take an online course."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-QUALITY-RELIABLE",
+      "lemma": "reliable",
+      "partOfSpeech": "adjective",
+      "level": "B1",
+      "domain": "quality",
+      "meaningEs": "fiable",
+      "forms": [
+        "reliable"
+      ],
+      "collocations": [
+        "reliable source",
+        "reliable system"
+      ],
+      "examples": [
+        "We need a reliable system."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-QUALITY-ACCURATE",
+      "lemma": "accurate",
+      "partOfSpeech": "adjective",
+      "level": "B1",
+      "domain": "quality",
+      "meaningEs": "preciso/a",
+      "forms": [
+        "accurate"
+      ],
+      "collocations": [
+        "accurate information",
+        "accurate result"
+      ],
+      "examples": [
+        "The information must be accurate."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-CONTEXT",
+      "lemma": "context",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "language",
+      "meaningEs": "contexto",
+      "forms": [
+        "context",
+        "contexts"
+      ],
+      "collocations": [
+        "in context",
+        "context clues"
+      ],
+      "examples": [
+        "The meaning depends on context."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-PATTERN",
+      "lemma": "pattern",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "language",
+      "meaningEs": "patrón",
+      "forms": [
+        "pattern",
+        "patterns"
+      ],
+      "collocations": [
+        "sentence pattern",
+        "language pattern"
+      ],
+      "examples": [
+        "This is a common sentence pattern."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-GRAMMAR",
+      "lemma": "grammar",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "gramática",
+      "forms": [
+        "grammar"
+      ],
+      "collocations": [
+        "grammar rule",
+        "learn grammar"
+      ],
+      "examples": [
+        "I study English grammar."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-VOCABULARY",
+      "lemma": "vocabulary",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "language",
+      "meaningEs": "vocabulario",
+      "forms": [
+        "vocabulary"
+      ],
+      "collocations": [
+        "learn vocabulary",
+        "vocabulary list"
+      ],
+      "examples": [
+        "I review vocabulary every day."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-LANGUAGE-FLUENCY",
+      "lemma": "fluency",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "language",
+      "meaningEs": "fluidez",
+      "forms": [
+        "fluency"
+      ],
+      "collocations": [
+        "speaking fluency",
+        "improve fluency"
+      ],
+      "examples": [
+        "I want to improve my speaking fluency."
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-FEELINGS-CONFIDENCE",
+      "lemma": "confidence",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "feelings",
+      "meaningEs": "confianza",
+      "forms": [
+        "confidence"
+      ],
+      "collocations": [
+        "build confidence",
+        "feel confidence"
+      ],
+      "examples": [
+        "Practice helps me build confidence."
+      ],
+      "openClass": true
     }
   ],
   "testCases": [
@@ -1816,103 +6324,355 @@
       "text": "I teach robotics.",
       "expectRules": [],
       "expectCorrection": "I teach robotics."
+    },
+    {
+      "id": "TC-VALID-EXP-001",
+      "text": "I am a teacher.",
+      "expectRules": [],
+      "expectCorrection": "I am a teacher."
+    },
+    {
+      "id": "TC-VALID-EXP-002",
+      "text": "She is an engineer.",
+      "expectRules": [],
+      "expectCorrection": "She is an engineer."
+    },
+    {
+      "id": "TC-VALID-EXP-003",
+      "text": "He is a programmer.",
+      "expectRules": [],
+      "expectCorrection": "He is a programmer."
+    },
+    {
+      "id": "TC-VALID-EXP-004",
+      "text": "I enjoy teaching.",
+      "expectRules": [],
+      "expectCorrection": "I enjoy teaching."
+    },
+    {
+      "id": "TC-VALID-EXP-005",
+      "text": "I like to teach.",
+      "expectRules": [],
+      "expectCorrection": "I like to teach."
+    },
+    {
+      "id": "TC-VALID-EXP-006",
+      "text": "I like teaching.",
+      "expectRules": [],
+      "expectCorrection": "I like teaching."
+    },
+    {
+      "id": "TC-VALID-EXP-007",
+      "text": "I work with Arduino.",
+      "expectRules": [],
+      "expectCorrection": "I work with Arduino."
+    },
+    {
+      "id": "TC-VALID-EXP-008",
+      "text": "I teach robotics.",
+      "expectRules": [],
+      "expectCorrection": "I teach robotics."
+    },
+    {
+      "id": "TC-VALID-EXP-009",
+      "text": "My students build robots.",
+      "expectRules": [],
+      "expectCorrection": "My students build robots."
+    },
+    {
+      "id": "TC-VALID-EXP-010",
+      "text": "The robot uses a sensor.",
+      "expectRules": [],
+      "expectCorrection": "The robot uses a sensor."
+    },
+    {
+      "id": "TC-VALID-EXP-011",
+      "text": "We are ready.",
+      "expectRules": [],
+      "expectCorrection": "We are ready."
+    },
+    {
+      "id": "TC-VALID-EXP-012",
+      "text": "They are students.",
+      "expectRules": [],
+      "expectCorrection": "They are students."
+    },
+    {
+      "id": "TC-VALID-EXP-013",
+      "text": "This sensor is new.",
+      "expectRules": [],
+      "expectCorrection": "This sensor is new."
+    },
+    {
+      "id": "TC-VALID-EXP-014",
+      "text": "Those sensors are old.",
+      "expectRules": [],
+      "expectCorrection": "Those sensors are old."
+    },
+    {
+      "id": "TC-VALID-EXP-015",
+      "text": "My colleagues help me.",
+      "expectRules": [],
+      "expectCorrection": "My colleagues help me."
+    },
+    {
+      "id": "TC-VALID-EXP-016",
+      "text": "I prepare my lessons.",
+      "expectRules": [],
+      "expectCorrection": "I prepare my lessons."
+    },
+    {
+      "id": "TC-VALID-EXP-017",
+      "text": "I practice English every day.",
+      "expectRules": [],
+      "expectCorrection": "I practice English every day."
+    },
+    {
+      "id": "TC-VALID-EXP-018",
+      "text": "I want to improve my English.",
+      "expectRules": [],
+      "expectCorrection": "I want to improve my English."
+    },
+    {
+      "id": "TC-VALID-EXP-019",
+      "text": "I can program in Python.",
+      "expectRules": [],
+      "expectCorrection": "I can program in Python."
+    },
+    {
+      "id": "TC-VALID-EXP-020",
+      "text": "Can you explain the process?",
+      "expectRules": [],
+      "expectCorrection": "Can you explain the process?"
+    },
+    {
+      "id": "TC-VALID-EXP-021",
+      "text": "Please choose one topic.",
+      "expectRules": [],
+      "expectCorrection": "Please choose one topic."
+    },
+    {
+      "id": "TC-VALID-EXP-022",
+      "text": "I agree with your idea.",
+      "expectRules": [],
+      "expectCorrection": "I agree with your idea."
+    },
+    {
+      "id": "TC-VALID-EXP-023",
+      "text": "I live in a quiet neighborhood.",
+      "expectRules": [],
+      "expectCorrection": "I live in a quiet neighborhood."
+    },
+    {
+      "id": "TC-VALID-EXP-024",
+      "text": "The library opens at eight.",
+      "expectRules": [],
+      "expectCorrection": "The library opens at eight."
+    },
+    {
+      "id": "TC-VALID-EXP-025",
+      "text": "The sensor detects an obstacle.",
+      "expectRules": [],
+      "expectCorrection": "The sensor detects an obstacle."
+    },
+    {
+      "id": "TC-VALID-EXP-026",
+      "text": "We built a simple circuit.",
+      "expectRules": [],
+      "expectCorrection": "We built a simple circuit."
+    },
+    {
+      "id": "TC-VALID-EXP-027",
+      "text": "Students write code in class.",
+      "expectRules": [],
+      "expectCorrection": "Students write code in class."
+    },
+    {
+      "id": "TC-VALID-EXP-028",
+      "text": "The app works offline.",
+      "expectRules": [],
+      "expectCorrection": "The app works offline."
+    },
+    {
+      "id": "TC-VALID-EXP-029",
+      "text": "I have a busy schedule.",
+      "expectRules": [],
+      "expectCorrection": "I have a busy schedule."
+    },
+    {
+      "id": "TC-VALID-EXP-030",
+      "text": "I usually teach in the morning.",
+      "expectRules": [],
+      "expectCorrection": "I usually teach in the morning."
+    },
+    {
+      "id": "TC-VALID-EXP-031",
+      "text": "I sometimes practice at night.",
+      "expectRules": [],
+      "expectCorrection": "I sometimes practice at night."
+    },
+    {
+      "id": "TC-VALID-EXP-032",
+      "text": "We found a simple solution.",
+      "expectRules": [],
+      "expectCorrection": "We found a simple solution."
+    },
+    {
+      "id": "TC-VALID-EXP-033",
+      "text": "Although it was difficult, we finished.",
+      "expectRules": [],
+      "expectCorrection": "Although it was difficult, we finished."
+    },
+    {
+      "id": "TC-VALID-EXP-034",
+      "text": "First, connect the sensor.",
+      "expectRules": [],
+      "expectCorrection": "First, connect the sensor."
+    },
+    {
+      "id": "TC-VALID-EXP-035",
+      "text": "Next, upload the code.",
+      "expectRules": [],
+      "expectCorrection": "Next, upload the code."
+    },
+    {
+      "id": "TC-VALID-EXP-036",
+      "text": "Finally, test the robot.",
+      "expectRules": [],
+      "expectCorrection": "Finally, test the robot."
+    },
+    {
+      "id": "TC-VALID-EXP-037",
+      "text": "The information must be accurate.",
+      "expectRules": [],
+      "expectCorrection": "The information must be accurate."
+    },
+    {
+      "id": "TC-VALID-EXP-038",
+      "text": "We need a reliable system.",
+      "expectRules": [],
+      "expectCorrection": "We need a reliable system."
+    },
+    {
+      "id": "TC-VALID-EXP-039",
+      "text": "I am learning English.",
+      "expectRules": [],
+      "expectCorrection": "I am learning English."
+    },
+    {
+      "id": "TC-VALID-EXP-040",
+      "text": "I recently started a new project.",
+      "expectRules": [],
+      "expectCorrection": "I recently started a new project."
+    },
+    {
+      "id": "TC-VALID-EXP-041",
+      "text": "Could you lend me a pen?",
+      "expectRules": [],
+      "expectCorrection": "Could you lend me a pen?"
+    },
+    {
+      "id": "TC-VALID-EXP-042",
+      "text": "I understand the instructions.",
+      "expectRules": [],
+      "expectCorrection": "I understand the instructions."
+    },
+    {
+      "id": "TC-VALID-EXP-043",
+      "text": "I learn from my mistakes.",
+      "expectRules": [],
+      "expectCorrection": "I learn from my mistakes."
+    },
+    {
+      "id": "TC-VALID-EXP-044",
+      "text": "Our project helps the community.",
+      "expectRules": [],
+      "expectCorrection": "Our project helps the community."
+    },
+    {
+      "id": "TC-VALID-EXP-045",
+      "text": "We reduce waste at school.",
+      "expectRules": [],
+      "expectCorrection": "We reduce waste at school."
+    },
+    {
+      "id": "TC-VALID-EXP-046",
+      "text": "The application stores data in a database.",
+      "expectRules": [],
+      "expectCorrection": "The application stores data in a database."
+    },
+    {
+      "id": "TC-VALID-EXP-047",
+      "text": "The computer is on the network.",
+      "expectRules": [],
+      "expectCorrection": "The computer is on the network."
+    },
+    {
+      "id": "TC-VALID-EXP-048",
+      "text": "The two projects are similar.",
+      "expectRules": [],
+      "expectCorrection": "The two projects are similar."
+    },
+    {
+      "id": "TC-VALID-EXP-049",
+      "text": "I recommend this method.",
+      "expectRules": [],
+      "expectCorrection": "I recommend this method."
+    },
+    {
+      "id": "TC-VALID-EXP-050",
+      "text": "We compare the results.",
+      "expectRules": [],
+      "expectCorrection": "We compare the results."
+    },
+    {
+      "id": "TC-VALID-EXP-051",
+      "text": "The students are in the classroom.",
+      "expectRules": [],
+      "expectCorrection": "The students are in the classroom."
     }
   ],
   "cefrDimensions": {
-    "framework": "Common European Framework of Reference for Languages: Companion Volume",
-    "scope": {
-      "from": "A1",
-      "to": "B1",
-      "internalBridge": "A2+",
-      "note": "HODIE uses CEFR descriptors as instructional references and does not certify official CEFR levels."
-    },
-    "modes": [
-      {
-        "id": "reception",
-        "skills": [
-          "listening",
-          "reading"
-        ],
-        "evidence": [
-          "gist",
-          "specific-information",
-          "detail",
-          "inference"
-        ]
-      },
-      {
-        "id": "production",
-        "skills": [
-          "speaking",
-          "writing"
-        ],
-        "evidence": [
-          "intelligibility",
-          "task-fulfilment",
-          "coherence",
-          "range",
-          "accuracy"
-        ]
-      },
-      {
-        "id": "interaction",
-        "skills": [
-          "spoken-interaction",
-          "written-interaction",
-          "online-interaction"
-        ],
-        "evidence": [
-          "turn-taking",
-          "asking-follow-up",
-          "clarification",
-          "repair",
-          "responding"
-        ]
-      },
-      {
-        "id": "mediation",
-        "skills": [
-          "relaying-information",
-          "explaining-text",
-          "summarizing",
-          "collaborative-construction"
-        ],
-        "evidence": [
-          "selecting-key-information",
-          "rephrasing",
-          "making-information-accessible"
-        ]
-      },
-      {
-        "id": "linguistic-competence",
-        "skills": [
-          "grammar",
-          "vocabulary",
-          "phonology",
-          "orthography"
-        ],
-        "evidence": [
-          "form",
-          "meaning",
-          "appropriacy",
-          "intelligibility"
-        ]
-      },
-      {
-        "id": "pragmatic-and-sociolinguistic",
-        "skills": [
-          "coherence",
-          "cohesion",
-          "register",
-          "politeness"
-        ],
-        "evidence": [
-          "organizing-ideas",
-          "connectors",
-          "context-appropriate-language"
-        ]
-      }
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
     ],
-    "designRule": "Every communicative function should declare a CEFR target, observable task, primary skills, supporting language resources, valid alternatives, evidence criteria and linked practice/retry actions."
+    "skills": [
+      "listening",
+      "reading",
+      "spoken-production",
+      "spoken-interaction",
+      "writing",
+      "mediation"
+    ],
+    "ruleLifecycle": [
+      "draft",
+      "reviewed",
+      "tested",
+      "active",
+      "deprecated"
+    ],
+    "recommendedMetadata": [
+      "id",
+      "level",
+      "category",
+      "title",
+      "titleEs",
+      "explanation",
+      "explanationEs",
+      "examples",
+      "incorrect",
+      "status",
+      "canDoIds",
+      "skills",
+      "structures",
+      "prerequisites",
+      "tags",
+      "review"
+    ]
   }
 }
