@@ -139,6 +139,14 @@ Grammar and vocabulary therefore support communication rather than replacing it 
 
 ---
 
+## Linguistic system (starter v1)
+
+The shared linguistic source is `data/linguistic-catalog.json`. It maps CEFR-informed communicative functions to grammar, vocabulary, syntax, collocations, examples and regression cases. `src/linguistic-engine.js` is the deterministic analysis engine shared by conversation and micro-practice.
+
+The catalog separates tested rules from draft rules. Only tested rules are eligible for automatic correction. Unknown vocabulary is not an error by itself; new vocabulary can extend data-driven patterns without requiring a new UI branch. Ambiguous cases must remain unchanged unless context supports a safe correction.
+
+Architecture and rule lifecycle: [docs/linguistic-system-v1.md](docs/linguistic-system-v1.md).
+
 ## 6. Target level
 
 HODIE starts from an A2 learner profile and aims first for functional B1-aligned communication.
