@@ -3286,6 +3286,334 @@
         "repetition",
         "writing-accuracy"
       ]
+    },
+    {
+      "id": "DO-NEG-BASE-001",
+      "implementation": "do-negative-base-verb",
+      "level": "A1-A2",
+      "category": "negation",
+      "title": "Use the base verb after do not and does not",
+      "titleEs": "Usa el verbo base después de do not y does not",
+      "explanation": "After do not, does not, don't or doesn't, use the base form of the main verb. Do not add -s after doesn't.",
+      "explanationEs": "Después de do not, does not, don't o doesn't, usa la forma base del verbo principal. No añadas -s después de doesn't.",
+      "examples": [
+        "She doesn't work on Sundays.",
+        "I don't build robots every day."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She doesn't work on Sundays.",
+          "es": "Ella no trabaja los domingos."
+        },
+        {
+          "en": "I don't build robots every day.",
+          "es": "No construyo robots todos los días."
+        }
+      ],
+      "incorrect": [
+        "She doesn't works on Sundays.",
+        "I don't builds robots."
+      ],
+      "exceptions": [
+        "This rule covers a reviewed list of common verbs; it is not a complete detector for every verb.",
+        "Do not change affirmative statements such as She works on Sundays."
+      ],
+      "negativeCases": [
+        {
+          "text": "She doesn't work on Sundays.",
+          "reason": "Doesn't is followed by the base verb."
+        },
+        {
+          "text": "She works on Sundays.",
+          "reason": "Affirmative third-person singular correctly uses -s."
+        },
+        {
+          "text": "I don't build robots.",
+          "reason": "Don't + base verb is correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "He doesn't ___ (teach) on Fridays.",
+          "promptEs": "Él no ___ los viernes.",
+          "answer": "teach"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a negative sentence with doesn't + a base verb.",
+          "promptEs": "Escribe una oración negativa con doesn't + verbo base."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "present-simple",
+          "negation",
+          "do-support"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(doesn't|does not|don't|do not)\\s+(works|teaches|builds|uses|likes|goes|studies|watches|makes|plays|reads|writes)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "thirdPersonToBase",
+          "capture": 2
+        }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "do not",
+        "does not",
+        "don't",
+        "doesn't",
+        "base verb",
+        "negative present simple",
+        "negación",
+        "presente simple"
+      ]
+    },
+    {
+      "id": "DID-NEG-BASE-001",
+      "implementation": "did-negative-base-verb",
+      "level": "A2",
+      "category": "past-negation",
+      "title": "Use the base verb after did not",
+      "titleEs": "Usa el verbo base después de did not",
+      "explanation": "After didn't or did not, use the base form of the main verb, not the past form.",
+      "explanationEs": "Después de didn't o did not, usa la forma base del verbo principal, no la forma de pasado.",
+      "examples": [
+        "I didn't go to school yesterday.",
+        "She did not build the robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I didn't go to school yesterday.",
+          "es": "No fui al colegio ayer."
+        },
+        {
+          "en": "She did not build the robot.",
+          "es": "Ella no construyó el robot."
+        }
+      ],
+      "incorrect": [
+        "I didn't went to school yesterday.",
+        "She did not built the robot."
+      ],
+      "exceptions": [
+        "The rule covers a reviewed set of common regular and irregular verbs.",
+        "Affirmative past statements correctly use the past form: She built the robot."
+      ],
+      "negativeCases": [
+        {
+          "text": "I didn't go to school yesterday.",
+          "reason": "Didn't + base verb is correct."
+        },
+        {
+          "text": "She went to school yesterday.",
+          "reason": "The affirmative past form is correct."
+        },
+        {
+          "text": "I did my homework.",
+          "reason": "Did is the main verb here, not an auxiliary followed by a past form."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "They didn't ___ (build) the robot.",
+          "promptEs": "Ellos no ___ el robot.",
+          "answer": "build"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence about yesterday with didn't + a base verb.",
+          "promptEs": "Escribe una oración sobre ayer con didn't + verbo base."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "past-simple",
+          "negation",
+          "did-support"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(didn't|did not)\\s+(went|saw|built|made|had|did|wrote|ate|took|chose|worked|studied|played|watched|used|learned)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "pastToBase",
+          "capture": 2
+        }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "didn't",
+        "did not",
+        "past negation",
+        "base verb",
+        "pasado simple",
+        "negación en pasado"
+      ]
+    },
+    {
+      "id": "MODAL-TO-BASE-001",
+      "implementation": "modal-to-base-verb",
+      "level": "A1-A2",
+      "category": "modals",
+      "title": "Do not use to after a modal verb",
+      "titleEs": "No uses to después de un verbo modal",
+      "explanation": "After can, could, should, must or will, use the base verb without to.",
+      "explanationEs": "Después de can, could, should, must o will, usa el verbo base sin to.",
+      "examples": [
+        "I can build a robot.",
+        "We should check the code."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I can build a robot.",
+          "es": "Puedo construir un robot."
+        },
+        {
+          "en": "We should check the code.",
+          "es": "Deberíamos revisar el código."
+        }
+      ],
+      "incorrect": [
+        "I can to build a robot.",
+        "We should to check the code."
+      ],
+      "exceptions": [
+        "Want to and have to are valid patterns; this rule does not apply to them.",
+        "This rule only covers the listed modals and a reviewed list of verbs."
+      ],
+      "negativeCases": [
+        {
+          "text": "I can build a robot.",
+          "reason": "Modal + base verb is correct."
+        },
+        {
+          "text": "I want to build a robot.",
+          "reason": "Want to + infinitive is correct."
+        },
+        {
+          "text": "I have to work today.",
+          "reason": "Have to is not covered by this modal rule."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "She can ___ (teach) English.",
+          "promptEs": "Ella puede ___ inglés.",
+          "answer": "teach"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with should + a base verb.",
+          "promptEs": "Escribe una oración con should + verbo base."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "modals",
+          "base-verb",
+          "infinitive"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(can|could|should|must|will)\\s+to\\s+(work|teach|build|study|learn|write|read|use|go|make|play)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "modal verbs",
+        "can",
+        "could",
+        "should",
+        "must",
+        "will",
+        "base verb",
+        "modal + infinitive",
+        "verbos modales"
+      ]
     }
   ],
   "vocabularyEntries": [
@@ -4924,6 +5252,72 @@
       "text": "I am ready.",
       "expectRules": [],
       "expectCorrection": "I am ready."
+    },
+    {
+      "id": "TC-DO-NEG-BASE-001",
+      "text": "She doesn't works on Sundays.",
+      "expectRules": [
+        "DO-NEG-BASE-001"
+      ],
+      "expectCorrection": "She doesn't work on Sundays."
+    },
+    {
+      "id": "TC-DO-NEG-BASE-NEG-001",
+      "text": "She doesn't work on Sundays.",
+      "expectRules": [],
+      "expectCorrection": "She doesn't work on Sundays."
+    },
+    {
+      "id": "TC-DO-NEG-BASE-NEG-002",
+      "text": "She works on Sundays.",
+      "expectRules": [],
+      "expectCorrection": "She works on Sundays."
+    },
+    {
+      "id": "TC-DID-NEG-BASE-001",
+      "text": "I didn't went to school yesterday.",
+      "expectRules": [
+        "DID-NEG-BASE-001"
+      ],
+      "expectCorrection": "I didn't go to school yesterday."
+    },
+    {
+      "id": "TC-DID-NEG-BASE-NEG-001",
+      "text": "I didn't go to school yesterday.",
+      "expectRules": [],
+      "expectCorrection": "I didn't go to school yesterday."
+    },
+    {
+      "id": "TC-DID-NEG-BASE-NEG-002",
+      "text": "She went to school yesterday.",
+      "expectRules": [],
+      "expectCorrection": "She went to school yesterday."
+    },
+    {
+      "id": "TC-MODAL-TO-BASE-001",
+      "text": "I can to build a robot.",
+      "expectRules": [
+        "MODAL-TO-BASE-001"
+      ],
+      "expectCorrection": "I can build a robot."
+    },
+    {
+      "id": "TC-MODAL-TO-BASE-NEG-001",
+      "text": "I can build a robot.",
+      "expectRules": [],
+      "expectCorrection": "I can build a robot."
+    },
+    {
+      "id": "TC-MODAL-TO-BASE-NEG-002",
+      "text": "I want to build a robot.",
+      "expectRules": [],
+      "expectCorrection": "I want to build a robot."
+    },
+    {
+      "id": "TC-MODAL-TO-BASE-NEG-003",
+      "text": "I have to work today.",
+      "expectRules": [],
+      "expectCorrection": "I have to work today."
     }
   ]
 }
