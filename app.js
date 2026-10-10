@@ -1093,6 +1093,12 @@ function renderInteraction(activity) {
       </p>
     `;
 
+    if (isWriting) {
+      const feedbackNode = document.querySelector("#microFeedback");
+      const answerInput = document.querySelector("#productionAnswer");
+      if (feedbackNode && answerInput) answerInput.insertAdjacentElement("afterend", feedbackNode);
+    }
+
     const evaluateProduction = (response) => {
       const result = evaluateMicroActivity(activity, response);
       showFeedback(activity, result, response, { final: true });
@@ -1165,8 +1171,7 @@ function showFeedback(activity, result, response, options = {}) {
         <div class="feedback-corrections">
           ${feedbackContract.corrections.map((error) => `
             <div class="correction-item">
-              ${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}
-              <strong>Suggested form · Forma sugerida: ${escapeHtml(error.correction || error.expected || "")}</strong>
+              ${error.target === "required-information" ? `<p class="missing-focus"><strong>Missing keyword · Palabra clave faltante:</strong> ${escapeHtml(error.correction || error.expected || "")}</p>` : `${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}<strong>Suggested form · Forma sugerida: ${escapeHtml(error.correction || error.expected || "")}</strong>`}
               <p>${escapeHtml(error.message || "")}</p>
               ${error.messageEs ? `<p class="spanish">${escapeHtml(error.messageEs)}</p>` : ""}
               ${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}
