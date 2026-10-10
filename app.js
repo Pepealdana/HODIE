@@ -385,7 +385,7 @@ function renderPracticeHome() {
         </div>
       </details>
 
-      <details class="choice-disclosure advanced-choices">
+      <details class="choice-disclosure advanced-choices" id="experienceChoices">
         <summary>Explore conversations and simulations</summary>
         <div class="experience-sections">
           <section class="experience-section">
@@ -454,12 +454,22 @@ function renderPracticeHome() {
       const value = button.dataset.primaryMode;
       if (value === "conversation") {
         const item = conversations[0];
-        if (item) startExperience(item.id);
+        if (item) { startExperience(item.id); }
+        else {
+          const panel = document.querySelector("#experienceChoices");
+          if (panel) panel.open = true;
+          document.querySelector("#conversationChoices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         return;
       }
       if (value === "simulation") {
         const item = simulations[0];
-        if (item) startExperience(item.id);
+        if (item) { startExperience(item.id); }
+        else {
+          const panel = document.querySelector("#experienceChoices");
+          if (panel) panel.open = true;
+          document.querySelector("#simulationChoices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         return;
       }
       startPractice(value);
