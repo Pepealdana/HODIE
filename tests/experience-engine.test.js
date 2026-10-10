@@ -122,14 +122,14 @@ const pluralAgreement = evaluateExperienceTurn(
   conversation.stages[0],
   "My students is very creative."
 );
-assert.ok(pluralAgreement.corrections.some((error) => error.target === "plural-subject-agreement"));
+assert.ok(pluralAgreement.corrections.some((error) => error.target === "plural-agreement"));
 
 const singularAgreement = evaluateExperienceTurn(
   conversation,
   conversation.stages[0],
   "The robot use a sensor."
 );
-assert.ok(singularAgreement.corrections.some((error) => error.target === "singular-subject-agreement"));
+assert.ok(singularAgreement.corrections.some((error) => error.target === "third-person-singular"));
 
 const connectorFalsePositive = evaluateExperienceTurn(
   conversation,
