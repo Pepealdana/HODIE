@@ -27,7 +27,7 @@ assert.ok(manifest.icons.every((icon) => icon.type === "image/png"));
 
 assert.match(worker, /skipWaiting/);
 assert.match(worker, /clients\.claim/);
-assert.match(worker, /hodie-shell-v19/);
+assert.match(worker, /hodie-shell-v20/);
 assert.match(worker, /assets\/brand\/hodie-logo\.png/);
 assert.match(worker, /assets\/brand\/hodie-logo-dark\.png/);
 assert.match(worker, /assets\/icons\/icon-light-512\.png/);
@@ -50,6 +50,8 @@ const shellMatch = worker.match(/const APP_SHELL = \[([\s\S]*?)\];/);
 assert.ok(shellMatch, "APP_SHELL list must be declared");
 const shellResources = [...shellMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
 assert.ok(shellResources.includes("./data/knowledge-library.json"));
+assert.ok(shellResources.includes("./data/linguistic-catalog.json"));
+assert.ok(shellResources.includes("./src/linguistic-engine.js"));
 assert.ok(shellResources.includes("./data/integrated-units.json"));
 assert.equal(new Set(shellResources).size, shellResources.length, "APP_SHELL must not contain duplicate paths");
 
