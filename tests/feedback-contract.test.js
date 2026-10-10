@@ -1,0 +1,85 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { createFeedbackContract } from "../src/feedback-contract.js";
+import { evaluateExperienceTurn } from "../src/experience-engine.js";
+import { getIntegratedUnit, evaluateIntegratedStep } from "../src/integrated-unit.js";
+import { evaluateMicroActivity } from "../src/micro-practice.js";
+
+const read = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), "utf8"));
+const experiences = read("../data/experience-library.json");
+const microLibrary = read("../data/micro-practice-library.json");
+const units = read("../data/integrated-units.json");
+
+// Real case 1: the user's conversation answer from the browser screenshot.
+// This confirms the shared contract preserves the answer and does not invent a correction
+// that the current deterministic grammar rules have not detected.
+const conversation = experiences.experiences.find((item) => item.id === "EXP-CONV-FREE-A2-01");
+const conversationResult = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "I am a technology an robotics teacher. I work at a school."
+);
+const conversationFeedback = createFeedbackContract({
+  activity: { id: conversation.id, skill: "speaking" },
+  surface: "conversation",
+  response: "I am a technology an robotics teacher. I work at a school.",
+  result: conversationResult
+});
+assert.equal(conversationFeedback.contractVersion, "1.0.0");
+assert.equal(conversationFeedback.surface, "conversation");
+assert.equal(conversationFeedback.status, "partial");
+assert.equal(conversationFeedback.metrics.wordCount, 12);
+assert.equal(conversationFeedback.metrics.sentenceCount, 2);
+assert.equal(conversationFeedback.corrections.length, 0);
+assert.ok(conversationFeedback.nextAction.instruction);
+
+// Real case 2: known rule-based grammar error in conversation.
+const grammarResult = evaluateExperienceTurn(conversation, conversation.stages[1], "I enjoy to work with students.");
+const grammarFeedback = createFeedbackContract({
+  activity: { id: conversation.id, skill: "speaking" },
+  surface: "conversation",
+  response: "I enjoy to work with students.",
+  result: grammarResult
+});
+assert.ok(grammarFeedback.corrections.some((item) => item.target === "enjoy-ing"));
+assert.equal(grammarFeedback.nextAction.kind, "retry-correction");
+
+// Real case 3: integrated-unit open production is a guided checklist, not an objective grade.
+const unit = getIntegratedUnit(units, "UNIT-A2-ROBOTICS-01");
+const writingStep = unit.steps.find((step) => step.kind === "write");
+const writingResponse = "the students builds a robot";
+const writingResult = evaluateIntegratedStep(writingStep, writingResponse);
+const writingFeedback = createFeedbackContract({
+  activity: { id: writingStep.id, skill: "writing" },
+  surface: "writing",
+  response: writingResponse,
+  result: writingResult,
+  source: "checklist"
+});
+assert.equal(writingFeedback.status, "self-review");
+assert.ok(writingFeedback.missing.some((item) => item.id === "plural-subject" || item.id === "subject-verb-agreement"));
+assert.ok(writingFeedback.limits.length > 0);
+
+// Real case 4: a deterministic listening multiple-choice activity uses answer-key feedback.
+const listeningActivity = microLibrary.activities.find((item) => item.type === "listening");
+assert.ok(listeningActivity, "A listening activity must exist in the library.");
+const listeningResult = evaluateMicroActivity(listeningActivity, "__deliberately_wrong_answer__");
+const listeningFeedback = createFeedbackContract({
+  activity: listeningActivity,
+  surface: "listening",
+  skill: "listening",
+  response: "__deliberately_wrong_answer__",
+  result: listeningResult,
+  source: "answer-key"
+});
+assert.equal(listeningFeedback.status, "needs-work");
+assert.ok(listeningFeedback.corrections.length > 0);
+assert.equal(listeningFeedback.nextAction.kind, "retry-correction");
+
+// Empty response must never be interpreted as a successful attempt.
+const empty = createFeedbackContract({ activity: { id: "empty-case" }, response: "  ", result: { correct: true } });
+assert.equal(empty.status, "empty");
+assert.equal(empty.responseProvided, false);
+assert.equal(empty.nextAction.kind, "respond");
+
+console.log("HODIE shared feedback contract: PASS");
