@@ -119,6 +119,7 @@ function analyzeLanguage(input, options = {}) {
   ];
 
   for (const [implementation, pattern, replacement] of rules) {
+    if (implementation === "work-place" && !/\b(teacher|student|employee|workplace|office staff)\b/i.test(text)) continue;
     const result = runReplacementRule(text, implementation, pattern, replacement);
     if (result.errors.length) {
       errors.push(...result.errors);
