@@ -17,6 +17,7 @@ const DATA = {
   experiences: "./data/experience-library.json",
   contexts: "./data/learning-contexts.json",
   knowledge: "./data/knowledge-library.json",
+  linguistic: "./data/linguistic-catalog.json",
   units: "./data/integrated-units.json"
 };
 
@@ -40,6 +41,7 @@ let practice = null;
 let experienceLibrary;
 let contextLibrary;
 let knowledgeLibrary;
+let linguisticLibrary;
 let knowledgeGraph;
 let integratedUnitLibrary;
 let integratedUnitState = null;
@@ -116,16 +118,17 @@ async function registerServiceWorker() {
 }
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse, unitsResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse, linguisticResponse, unitsResponse] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
     fetch(DATA.micro),
     fetch(DATA.experiences),
     fetch(DATA.contexts),
     fetch(DATA.knowledge),
+    fetch(DATA.linguistic),
     fetch(DATA.units)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok || !unitsResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok || !linguisticResponse.ok || !unitsResponse.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
@@ -134,8 +137,9 @@ async function loadData() {
   experienceLibrary = await experienceResponse.json();
   contextLibrary = await contextResponse.json();
   knowledgeLibrary = await knowledgeResponse.json();
+  linguisticLibrary = await linguisticResponse.json();
   integratedUnitLibrary = await unitsResponse.json();
-  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary);
+  knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary, linguisticLibrary);
   if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
 }
 
