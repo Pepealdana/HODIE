@@ -458,7 +458,7 @@ function renderPracticeHome() {
         else {
           const panel = document.querySelector("#experienceChoices");
           if (panel) panel.open = true;
-          document.querySelector("#conversationChoices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          document.querySelectorAll(".experience-section")[0]?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
         return;
       }
@@ -468,7 +468,7 @@ function renderPracticeHome() {
         else {
           const panel = document.querySelector("#experienceChoices");
           if (panel) panel.open = true;
-          document.querySelector("#simulationChoices")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          document.querySelectorAll(".experience-section")[1]?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
         return;
       }
