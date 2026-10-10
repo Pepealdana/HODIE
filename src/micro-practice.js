@@ -128,7 +128,7 @@ function detectLanguageCorrections(activity, response) {
       retry: false
     }));
     corrected = next;
-    if (errors.length >= 2) break;
+    if (errors.length >= 3) break;
   }
 
   if (!errors.length) return [];
