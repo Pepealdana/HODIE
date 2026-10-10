@@ -1158,8 +1158,10 @@ function showFeedback(activity, result, response, options = {}) {
   const success = result.correct || result.score >= 1;
   const inlineCorrectedText = result.errors?.find((error) => error.correctedText)?.correctedText;
   const inlineWritingReview = activity.skill === "writing" && response && inlineCorrectedText ? renderInlineComparison(response, inlineCorrectedText) : "";
+  const speechComparison = activity.type === "speak" && response ? renderSpeechComparison(activity.targetPhrase, response) : "";
   feedback.innerHTML = `
     ${inlineWritingReview}
+    ${speechComparison}
     <div class="instant-feedback ${success ? "feedback-success" : "feedback-retry"}">
       <strong>${success ? "✓ Good" : "Try again"}</strong>
       <p class="feedback-status-label">${isOpenProduction ? "Guided self-review · Autoevaluación guiada" : feedbackContract.status === "correct" ? "Correct · Correcto" : feedbackContract.status === "needs-work" ? "Needs another attempt · Necesita otro intento" : "Practice feedback · Retroalimentación de práctica"}</p>
@@ -1505,6 +1507,16 @@ function renderInlineComparison(original, corrected) {
     return escapeHtml(token);
   }).join("");
   return `<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">${marked}</p><p class="inline-writing-corrected"><strong>Suggested version · Versión sugerida:</strong> ${escapeHtml(correctedText)}</p></div>`;
+}
+function renderSpeechComparison(targetPhrase, transcript) {
+  const target = String(targetPhrase ?? "").match(/[\\p{L}\\p{N}’'-]+/gu) || [];
+  const heard = String(transcript ?? "").toLocaleLowerCase().match(/[\\p{L}\\p{N}’'-]+/gu) || [];
+  if (!target.length || !heard.length) return "";
+  const heardSet = new Set(heard);
+  const missing = target.filter((word) => !heardSet.has(word.toLocaleLowerCase()));
+  const marked = target.map((word) => heardSet.has(word.toLocaleLowerCase()) ? escapeHtml(word) : '<mark class="speech-word-review">' + escapeHtml(word) + '</mark>').join(" ");
+  const note = missing.length ? 'The transcript did not clearly recognize: ' + escapeHtml(missing.join(", ")) + '. This is a transcription clue, not a precise pronunciation score.' : 'The key words appeared in the transcript. This does not measure pronunciation precisely.';
+  return '<div class="speech-comparison"><strong>Words to review · Palabras para revisar</strong><p class="speech-target">' + marked + '</p><p class="spanish">' + note + '</p><p><strong>Recognized transcript · Transcripción reconocida:</strong> ' + escapeHtml(transcript) + '</p></div>';
 }
 function escapeHtml(value) {
   return String(value ?? "")
