@@ -319,6 +319,7 @@ p { margin: 0; }
 .correction-item p { margin-top: 2px; }
 .feedback-success { border-left: 4px solid var(--success); background: var(--success-bg); }
 .feedback-retry { border-left: 4px solid var(--warning); background: var(--warning-bg); }
+.feedback-neutral { border-left: 4px solid var(--border); background: var(--surface); }
 .auto-next { color: var(--muted); font-size: .84rem; }
 .notice { padding: 12px 14px; border-radius: 10px; background: var(--surface-alt); color: #465166; }
 .success { border-left: 4px solid var(--success); }
