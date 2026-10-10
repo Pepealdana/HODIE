@@ -578,6 +578,60 @@
       "text": "I like to teach.",
       "expectRules": [],
       "expectCorrection": "I like to teach."
+    },
+    {
+      "id": "TC-BE-AGREEMENT-01",
+      "text": "I is ready.",
+      "expectRules": [
+        "BE-SUBJECT-001"
+      ],
+      "expectCorrection": "I am ready."
+    },
+    {
+      "id": "TC-ARTICLE-A-AN-01",
+      "text": "I am a engineer.",
+      "expectRules": [
+        "ART-A-AN-001"
+      ],
+      "expectCorrection": "I am an engineer."
+    },
+    {
+      "id": "TC-3SG-01",
+      "text": "She teach robotics.",
+      "expectRules": [
+        "SVA-3SG-001"
+      ],
+      "expectCorrection": "She teaches robotics."
+    },
+    {
+      "id": "TC-WORK-PREPOSITION-01",
+      "text": "I work on a school.",
+      "expectRules": [
+        "WORK-PLACE-001"
+      ],
+      "expectCorrection": "I work at a school."
+    },
+    {
+      "id": "TC-REPEATED-CONNECTOR-01",
+      "text": "I teach and and enjoy it.",
+      "expectRules": [
+        "CONN-REPEAT-001"
+      ],
+      "expectCorrection": "I teach and enjoy it."
+    },
+    {
+      "id": "TC-ADJECTIVE-ORDER-01",
+      "text": "It is a problem difficult.",
+      "expectRules": [
+        "WORD-ORDER-001"
+      ],
+      "expectCorrection": "It is a difficult problem."
+    },
+    {
+      "id": "TC-VALID-CONTRACTION-01",
+      "text": "I'm a teacher and I like to teach.",
+      "expectRules": [],
+      "expectCorrection": "I'm a teacher and I like to teach."
     }
   ]
 }
