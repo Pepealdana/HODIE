@@ -52,7 +52,7 @@ function buildLanguageNotes(experience, stage, text) {
     },
     {
       id: "capital-i",
-      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/gi,
+      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/i,
       replacement: (_match, prefix) => prefix + "I",
       message: 'The pronoun "I" is always capitalized in English.',
       messageEs: 'El pronombre "I" siempre se escribe con mayúscula en inglés.',
