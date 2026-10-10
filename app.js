@@ -726,56 +726,38 @@ function handleExperienceResponse(experience, stage, response) {
     return;
   }
 
-  const strengths = feedbackContract.strengths;
   const languageNotes = feedbackContract.corrections;
   const missingLabels = feedbackContract.missing.map((item) => item.label || item.id);
-  feedback.innerHTML = `
-    <section class="instant-feedback feedback-success experience-turn-feedback" aria-labelledby="turnFeedbackTitle">
-      <div class="feedback-heading">
-        <span class="feedback-status-mark" aria-hidden="true">✓</span>
-        <div>
-          <h3 id="turnFeedbackTitle">Your feedback · Tu retroalimentación</h3>
-          <p>Your answer is saved for this conversation. Review one useful point before continuing.</p>
-          <p class="spanish">Tu respuesta quedó registrada. Revisa un punto útil antes de continuar.</p>
-        </div>
-      </div>
-      <div class="feedback-metrics" aria-label="Response signals">
-        <div><strong>${feedbackContract.metrics.wordCount}</strong><span>words · palabras</span></div>
-        <div><strong>${feedbackContract.metrics.sentenceCount}</strong><span>sentences · oraciones</span></div>
-      </div>
-      <div class="feedback-section">
-        <h4>What went well · Lo que hiciste bien</h4>
-        ${strengths.length ? `<ul class="feedback-list">${strengths.map((item) => `<li><strong>${escapeHtml(item.label)}</strong><p>${escapeHtml(item.message)}</p><p class="spanish">${escapeHtml(item.messageEs)}</p></li>`).join("")}</ul>` : `<p>You responded to the prompt. Try adding one detail to make the idea clearer.</p><p class="spanish">Respondiste a la consigna. Intenta añadir un detalle para expresar la idea con más claridad.</p>`}
-      </div>
-      <div class="feedback-section">
-        <h4>One thing to improve · Un aspecto para mejorar</h4>
-        ${languageNotes.length ? `
-          ${languageNotes.map((error) => `<article class="correction-item"><strong>Suggested form · Forma sugerida</strong>${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}<p class="feedback-example">${escapeHtml(error.expected || error.correction || "")}</p><p>${escapeHtml(error.message || "")}</p><p class="spanish">${escapeHtml(error.messageEs || "")}</p>${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}</article>`).join("")}
-        ` : missingLabels.length ? `
-          <p>Try to include this idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
-          <p class="spanish">Intenta incluir esta idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
-        ` : `
-          <p>No issue matched HODIE's current grammar rules. This is not a full grammar check; you can still improve your answer with a detail or example.</p>
-          <p class="spanish">Ningún problema coincidió con las reglas gramaticales actuales de HODIE. Esto no es una revisión gramatical completa; todavía puedes mejorar tu respuesta con un detalle o ejemplo.</p>
-        `}
-      </div>
-      <div class="feedback-next-step">
-        <h4>Try this next · Prueba esto</h4>
-        <strong>${escapeHtml(result.nextStep?.title || "Keep practising")}</strong>
-        <p>${escapeHtml(result.nextStep?.instruction || "Add one more detail to your answer.")}</p>
-        <p class="spanish">${escapeHtml(result.nextStep?.titleEs || "Sigue practicando")}: ${escapeHtml(result.nextStep?.instructionEs || "Añade un detalle más a tu respuesta.")}</p>
-      </div>
-      <p class="feedback-limit">Feedback source: rule-based. Practice guidance only; it does not assign an official CEFR level.</p>
-      <div class="actions">
-        <button class="primary compact" id="nextExperienceButton" type="button">${experienceSession.index + 1 >= experience.stages.length ? "View conversation review" : "Next question"}</button>
-      </div>
-    </section>
-  `;
-
+  const firstCorrection = languageNotes[0];
+  const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
+  const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Good response · Buena respuesta";
+  const feedbackBody = firstCorrection
+    ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>"
+    : missingLabels.length
+      ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
+      : "<p>No issue matched HODIE's current rules. This is not a complete grammar check.</p><p class=\"spanish\">Ninguna regla actual de HODIE detectó un error. Esto no es una revisión gramatical completa.</p>";
+  const nextTip = result.nextStep?.instruction ? "<p class=\"next-tip\"><strong>Next tip · Siguiente consejo:</strong> " + escapeHtml(result.nextStep.instruction) + " <span class=\"spanish\">" + escapeHtml(result.nextStep.instructionEs || "") + "</span></p>" : "";
+  feedback.innerHTML =
+    '<section class="instant-feedback ' + (languageNotes.length || missingLabels.length ? "feedback-retry" : "feedback-success") + ' experience-turn-feedback">' +
+      '<strong>' + feedbackTitle + '</strong>' +
+      inlineCorrection +
+      feedbackBody +
+      nextTip +
+      '<div class="actions">' +
+        (languageNotes.length || missingLabels.length ? '<button class="secondary compact" id="retryExperienceButton" type="button">Revise answer · Revisar respuesta</button>' : '') +
+        '<button class="primary compact" id="nextExperienceButton" type="button">' + (experienceSession.index + 1 >= experience.stages.length ? "View review · Ver resumen" : "Next question →") + '</button>' +
+      '</div>' +
+    '</section>';
   document.querySelector("#nextExperienceButton").addEventListener("click", () => {
     experienceSession = advanceExperienceSession(experienceSession, result);
     saveExperienceState();
     renderExperience();
+  });
+  document.querySelector("#retryExperienceButton")?.addEventListener("click", () => {
+    document.querySelector("#experienceFeedback").innerHTML = "";
+    const input = document.querySelector("#experienceResponse");
+    input?.focus();
+    input?.select();
   });
 }
 
