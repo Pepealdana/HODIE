@@ -11,8 +11,8 @@ const microLibrary = read("../data/micro-practice-library.json");
 const units = read("../data/integrated-units.json");
 
 // Real case 1: the user's conversation answer from the browser screenshot.
-// This confirms the shared contract preserves the answer and does not invent a correction
-// that the current deterministic grammar rules have not detected.
+// This confirms the shared contract carries a detected compound-job connector correction
+// from the deterministic conversation evaluator into the normalized feedback shape.
 const conversation = experiences.experiences.find((item) => item.id === "EXP-CONV-FREE-A2-01");
 const conversationResult = evaluateExperienceTurn(
   conversation,
@@ -30,7 +30,7 @@ assert.equal(conversationFeedback.surface, "conversation");
 assert.equal(conversationFeedback.status, "partial");
 assert.equal(conversationFeedback.metrics.wordCount, 12);
 assert.equal(conversationFeedback.metrics.sentenceCount, 2);
-assert.equal(conversationFeedback.corrections.length, 0);
+assert.ok(conversationFeedback.corrections.some((item) => item.target === "compound-job-connector"));
 assert.ok(conversationFeedback.nextAction.instruction);
 
 // Real case 2: known rule-based grammar error in conversation.
