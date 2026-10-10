@@ -56,7 +56,7 @@ const grammarFeedback = createFeedbackContract({
   response: "I enjoy to work with students.",
   result: grammarResult
 });
-assert.ok(grammarFeedback.corrections.some((item) => item.target === "enjoy-ing"));
+assert.ok(grammarFeedback.corrections.some((item) => item.target === "enjoy-gerund"));
 assert.equal(grammarFeedback.nextAction.kind, "retry-correction");
 
 // Real case 3: integrated-unit open production is a guided checklist, not an objective grade.
