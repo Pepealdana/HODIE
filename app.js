@@ -1169,16 +1169,18 @@ function showFeedback(activity, result, response, options = {}) {
   const inlineCorrectedText = result.errors?.find((error) => error.correctedText)?.correctedText;
   const inlineWritingReview = activity.skill === "writing" && response && inlineCorrectedText ? renderInlineComparison(response, inlineCorrectedText) : "";
   const speechComparison = activity.type === "speak" && response ? renderSpeechComparison(activity.targetPhrase, response) : "";
+  const missingError = result.errors?.find((error) => error.target === "required-information");
+  const missingWords = (missingError?.correction || result.missing || "").toString();
+  const feedbackText = missingError ? `Add the missing key word: ${missingWords}.` : (result.feedback || "");
+  const feedbackTextEs = missingError ? `Añade la palabra clave que falta: ${missingWords}.` : (result.feedbackEs || "");
   feedback.innerHTML = `
     ${inlineWritingReview}
     ${speechComparison}
     <div class="instant-feedback ${success ? "feedback-success" : "feedback-retry"}">
-      <strong>${success ? "✓ Good" : "Try again"}</strong>
-      <p class="feedback-status-label">${isOpenProduction ? "Guided self-review · Autoevaluación guiada" : feedbackContract.status === "correct" ? "Correct · Correcto" : feedbackContract.status === "needs-work" ? "Needs another attempt · Necesita otro intento" : "Practice feedback · Retroalimentación de práctica"}</p>
-      <p>${escapeHtml(result.feedback || "")}</p>
-      <p class="spanish">${escapeHtml(result.feedbackEs || "")}</p>
-      ${result.missing?.length ? `<p class="spanish">Missing: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
-      ${!success ? `<details class="feedback-next-step"><summary>What can I improve? · ¿Cómo puedo mejorar?</summary><p>${escapeHtml(result.feedback || "Check the structure and try one more time.")}</p><p class="spanish">${escapeHtml(result.feedbackEs || "Revisa la estructura e inténtalo una vez más.")}</p>${activity.answer !== undefined ? `<p><strong>Example answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model sentence:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
+      <strong>${success ? "✓ Correct · Correcto" : isOpenProduction ? "Review your answer · Revisa tu respuesta" : "Try again · Inténtalo de nuevo"}</strong>
+      <p>${escapeHtml(feedbackText)}</p>
+      <p class="spanish">${escapeHtml(feedbackTextEs)}</p>
+      ${!success && !missingError && (activity.answer !== undefined || activity.targetPhrase) ? `<details class="feedback-next-step"><summary>See an example · Ver ejemplo</summary>${activity.answer !== undefined ? `<p><strong>Answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
       ${feedbackContract.corrections.length ? `
         <div class="feedback-corrections">
           ${feedbackContract.corrections.map((error) => `
