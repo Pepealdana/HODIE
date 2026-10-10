@@ -29,6 +29,6 @@ assert.match(html, /name="google" content="notranslate"/);
 assert.match(html, /translate="no"/);
 assert.match(app, /learning-hints/);
 assert.match(app, /experienceStopButton/);
-assert.match(app, /What can I improve\?/);
+assert.doesNotMatch(app, /What can I improve\?/);\nassert.match(app, /Add the missing key word/);\nassert.match(app, /Revise answer/);
 assert.match(app, /activity\.pronunciationHint/);
 console.log("HODIE learning-support and translation opt-out contract: PASS");
