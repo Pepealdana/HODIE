@@ -19,7 +19,7 @@ const THIRD_PERSON_FORMS = {
 const PLURAL_FORMS = Object.fromEntries(
   Object.entries(THIRD_PERSON_FORMS).map(([base, third]) => [third, base])
 );
-const COMMON_WORDS = new Set("i am a an the is are was were be been being you he she it we they my your his her our their and or but because so with at on in to of for from work teach teacher student students robotics technology enjoy like love want would can do have has had build builds use uses this that these those here there what where when who why how about one thing difficult problem challenge english".split(/\\s+/));
+const COMMON_WORDS = new Set("i am a an the is are was were be been being you he she it we they my your his her our their and or but because so with at on in to of for from work teach teacher student students robotics technology enjoy like love want would can do have has had build builds use uses this that these those here there what where when who why how about one thing difficult problem challenge english".split(/\s+/));
 
 function preserveCase(source, replacement) {
   if (source && source === source.toUpperCase()) return replacement.toUpperCase();
