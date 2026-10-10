@@ -1561,11 +1561,28 @@ function renderSpeechComparison(targetPhrase, transcript) {
   const heard = String(transcript ?? "").toLocaleLowerCase().match(/[\p{L}\p{N}’'-]+/gu) || [];
   if (!target.length || !heard.length) return "";
   const heardSet = new Set(heard);
-  const missing = target.filter((word) => !heardSet.has(word.toLocaleLowerCase()));
-  const marked = target.map((word) => heardSet.has(word.toLocaleLowerCase()) ? escapeHtml(word) : '<mark class="speech-word-review">' + escapeHtml(word) + '</mark>').join(" ");
-  const note = missing.length ? 'The transcript did not clearly recognize: ' + escapeHtml(missing.join(", ")) + '. This is a transcription clue, not a precise pronunciation score.' : 'The key words appeared in the transcript. This does not measure pronunciation precisely.';
-  return '<div class="speech-comparison"><strong>Words to review · Palabras para revisar</strong><p class="speech-target">' + marked + '</p><p class="spanish">' + note + '</p><p><strong>Recognized transcript · Transcripción reconocida:</strong> ' + escapeHtml(transcript) + '</p></div>';
+  const nearWord = (word) => {
+    const normalized = word.toLocaleLowerCase();
+    return normalized.length > 4 && normalized.endsWith("s")
+      ? heard.find((heardWord) => heardWord === normalized.slice(0, -1)) || null
+      : null;
+  };
+  const missing = target.filter((word) => !heardSet.has(word.toLocaleLowerCase()) && !nearWord(word));
+  const near = target.map((word) => ({ target: word, heard: nearWord(word) })).filter((item) => item.heard);
+  const marked = target.map((word) => {
+    const normalized = word.toLocaleLowerCase();
+    if (heardSet.has(normalized)) return escapeHtml(word);
+    const similar = nearWord(word);
+    if (similar) return '<mark class="speech-word-near" title="Recognized as ' + escapeHtml(similar) + '">' + escapeHtml(word) + '</mark>';
+    return '<mark class="speech-word-review">' + escapeHtml(word) + '</mark>';
+  }).join(" ");
+  let note = "";
+  if (near.length) note += "Almost recognized: " + near.map((item) => item.target + " (heard as " + item.heard + ")").join(", ") + ". ";
+  if (missing.length) note += "Not recognized: " + missing.join(", ") + ".";
+  if (!note) note = "All key words appeared in the transcript. This is not a precise pronunciation score.";
+  return '<div class="speech-comparison"><strong>Words to review · Palabras para revisar</strong><p class="speech-target">' + marked + '</p><p class="spanish">' + escapeHtml(note) + '</p><p><strong>Recognized transcript · Transcripción:</strong> ' + escapeHtml(transcript) + '</p></div>';
 }
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
