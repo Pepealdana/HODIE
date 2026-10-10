@@ -1001,6 +1001,27 @@
       "severity": "medium",
       "priority": "medium",
       "status": "draft"
+    },
+    {
+      "id": "WORK-PLACE-001",
+      "implementation": "work-place",
+      "level": "A2",
+      "category": "prepositions",
+      "title": "Use work at for a workplace",
+      "titleEs": "Usa work at para el lugar de trabajo",
+      "explanation": "Use work at for a workplace such as a school or office. Other prepositions may be correct with different meanings.",
+      "explanationEs": "Usa work at para un lugar de trabajo como una escuela o una oficina. Otras preposiciones pueden ser correctas con significados diferentes.",
+      "examples": [
+        "I work at a school.",
+        "I work on a project.",
+        "I work with students."
+      ],
+      "incorrect": [
+        "I work on a school."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "tested"
     }
   ],
   "vocabularyEntries": [
