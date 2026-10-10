@@ -634,6 +634,7 @@ function renderExperience() {
         <div class="hint-content">
           <p><strong>Sentence starters · Puedes comenzar así</strong></p>
           <div class="hint-chips"><span>I am...</span><span>I work...</span><span>I teach...</span><span>I have...</span><span>I like...</span><span>I would like to...</span></div>
+          ${isWriting ? `<p><strong>Natural contractions · Contracciones naturales</strong></p><div class="hint-chips"><span>I am → I'm</span><span>I do not → I don't</span><span>cannot → can't</span></div><p class="spanish">Las contracciones son comunes al hablar y en la escritura informal.</p>` : ""}
           <p><strong>Connect your ideas · Une las ideas</strong></p>
           <div class="hint-chips"><span>and = y</span><span>but = pero</span><span>because = porque</span><span>then = luego</span></div>
           <details class="model-answer"><summary>Show an example · Ver ejemplo</summary><p>I am a technology teacher. I work at a school. I enjoy building robotics projects with students.</p><p class="spanish">Soy profesor de tecnología. Trabajo en un colegio. Disfruto construir proyectos de robótica con estudiantes.</p></details>
