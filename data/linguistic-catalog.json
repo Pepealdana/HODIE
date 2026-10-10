@@ -46,7 +46,8 @@
       "id": "DESCRIBE_WORK",
       "level": "A2",
       "canDoIds": [
-        "SP-A2-03"
+        "SP-A2-03",
+        "SP-B1-01"
       ],
       "label": "Describe your work, routines and responsibilities",
       "labelEs": "Describir tu trabajo, rutinas y responsabilidades",
@@ -76,7 +77,9 @@
     {
       "id": "EXPRESS_PREFERENCES",
       "level": "A2",
-      "canDoIds": [],
+      "canDoIds": [
+        "SP-A2-04"
+      ],
       "label": "Express likes, dislikes and preferences",
       "labelEs": "Expresar gustos, rechazos y preferencias",
       "skills": [
@@ -102,7 +105,9 @@
     {
       "id": "DESCRIBE_PROBLEMS",
       "level": "A2-B1",
-      "canDoIds": [],
+      "canDoIds": [
+        "SP-B1-05"
+      ],
       "label": "Describe a problem and explain a reason",
       "labelEs": "Describir un problema y explicar una razón",
       "skills": [
@@ -128,7 +133,10 @@
     {
       "id": "NARRATE_PAST",
       "level": "A2-B1",
-      "canDoIds": [],
+      "canDoIds": [
+        "SP-A2-09",
+        "SP-B1-11"
+      ],
       "label": "Describe past events and experiences",
       "labelEs": "Describir hechos y experiencias pasadas",
       "skills": [
