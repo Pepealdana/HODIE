@@ -66,7 +66,13 @@ assert.equal(enough.errors.length, 0);
 
 const nonsense = evaluateMicroActivity(production, "this is my app english");
 assert.equal(nonsense.correct, false);
+
 assert.ok(nonsense.errors.some((error) => error.target === "profession"));
+
+const writingTypo = evaluateMicroActivity(production, "i am techer");
+assert.ok(writingTypo.errors.some((error) => error.target === "capital-i"));
+assert.ok(writingTypo.errors.some((error) => error.target === "spelling-teacher"));
+assert.ok(writingTypo.errors.some((error) => error.target === "article"));
 
 // Every target exposed by the current A2 speaking vertical slice must have executable practice.
 for (const [canDoId, productionResponse] of [
