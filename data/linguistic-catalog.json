@@ -150,6 +150,254 @@
         "personal",
         "professional"
       ]
+    },
+    {
+      "id": "ASK_FOR_CLARIFICATION",
+      "level": "A2-B1",
+      "canDoIds": [
+        "CO-A2-03",
+        "CO-A2-04",
+        "CO-B1-06"
+      ],
+      "label": "Ask for clarification and repair communication",
+      "labelEs": "Pedir aclaración y reparar la comunicación",
+      "skills": [
+        "spoken-interaction",
+        "listening",
+        "communication"
+      ],
+      "structures": [
+        "question-forms",
+        "polite-requests",
+        "clarification-expressions"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "questions"
+      ],
+      "contexts": [
+        "personal",
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "ASK_FOLLOW_UP",
+      "level": "B1",
+      "canDoIds": [
+        "CO-B1-01",
+        "CO-B1-02"
+      ],
+      "label": "Ask follow-up questions and respond to another speaker",
+      "labelEs": "Hacer preguntas de seguimiento y reaccionar a otra persona",
+      "skills": [
+        "spoken-interaction",
+        "listening"
+      ],
+      "structures": [
+        "question-forms",
+        "present-simple",
+        "past-simple",
+        "connectors"
+      ],
+      "vocabularyDomains": [
+        "questions",
+        "opinions",
+        "conversation"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "WRITE_SHORT_MESSAGE",
+      "level": "A2-B1",
+      "canDoIds": [
+        "WR-A2-03",
+        "WR-B1-02",
+        "WR-B1-08"
+      ],
+      "label": "Write a clear short message or reply",
+      "labelEs": "Escribir un mensaje breve y responder con claridad",
+      "skills": [
+        "writing",
+        "written-interaction",
+        "reading"
+      ],
+      "structures": [
+        "sentence-structure",
+        "capitalization",
+        "punctuation",
+        "connectors",
+        "register"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "work",
+        "education"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "UNDERSTAND_SHORT_SPEECH",
+      "level": "A2-B1",
+      "canDoIds": [
+        "LI-A2-03",
+        "LI-B1-01",
+        "LI-B1-02",
+        "LI-B1-08"
+      ],
+      "label": "Understand the main idea and key details in clear speech",
+      "labelEs": "Comprender la idea principal y detalles en un discurso claro",
+      "skills": [
+        "listening",
+        "spoken-interaction"
+      ],
+      "structures": [
+        "question-forms",
+        "time-markers",
+        "connectors"
+      ],
+      "vocabularyDomains": [
+        "daily-life",
+        "work",
+        "education"
+      ],
+      "contexts": [
+        "personal",
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "READ_FOR_INFORMATION",
+      "level": "A2-B1",
+      "canDoIds": [
+        "RE-A2-01",
+        "RE-B1-02",
+        "RE-B1-06"
+      ],
+      "label": "Find information and infer unfamiliar vocabulary from context",
+      "labelEs": "Encontrar información e inferir vocabulario desconocido por contexto",
+      "skills": [
+        "reading",
+        "vocabulary"
+      ],
+      "structures": [
+        "word-formation",
+        "context-clues",
+        "sentence-structure"
+      ],
+      "vocabularyDomains": [
+        "work",
+        "education",
+        "daily-life"
+      ],
+      "contexts": [
+        "personal",
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "EXPLAIN_A_PROCESS",
+      "level": "B1",
+      "canDoIds": [
+        "SP-B1-03",
+        "WR-B1-04",
+        "VO-B1-02"
+      ],
+      "label": "Explain a familiar process or project",
+      "labelEs": "Explicar un proceso o proyecto conocido",
+      "skills": [
+        "speaking",
+        "writing",
+        "mediation",
+        "vocabulary"
+      ],
+      "structures": [
+        "sequence-connectors",
+        "imperatives",
+        "present-simple",
+        "passive-forms"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "projects",
+        "education"
+      ],
+      "contexts": [
+        "professional",
+        "education"
+      ]
+    },
+    {
+      "id": "EXPRESS_AND_JUSTIFY_OPINION",
+      "level": "B1",
+      "canDoIds": [
+        "SP-B1-04",
+        "WR-B1-06",
+        "VO-B1-04",
+        "GR-B1-07"
+      ],
+      "label": "Express an opinion and give reasons",
+      "labelEs": "Expresar una opinión y dar razones",
+      "skills": [
+        "speaking",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "opinion-phrases",
+        "because-so-but",
+        "although-however",
+        "modals"
+      ],
+      "vocabularyDomains": [
+        "opinions",
+        "work",
+        "learning"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "DESCRIBE_PAST_EXPERIENCE",
+      "level": "A2-B1",
+      "canDoIds": [
+        "SP-A2-09",
+        "SP-B1-02",
+        "WR-B1-05",
+        "GR-A2-07"
+      ],
+      "label": "Describe a past event or experience in sequence",
+      "labelEs": "Describir un hecho o experiencia pasada en secuencia",
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "past-simple",
+        "time-markers",
+        "sequence-connectors"
+      ],
+      "vocabularyDomains": [
+        "time",
+        "experiences",
+        "work",
+        "projects"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
     }
   ],
   "grammarRules": [
@@ -633,5 +881,102 @@
       "expectRules": [],
       "expectCorrection": "I'm a teacher and I like to teach."
     }
-  ]
+  ],
+  "cefrDimensions": {
+    "framework": "Common European Framework of Reference for Languages: Companion Volume",
+    "scope": {
+      "from": "A1",
+      "to": "B1",
+      "internalBridge": "A2+",
+      "note": "HODIE uses CEFR descriptors as instructional references and does not certify official CEFR levels."
+    },
+    "modes": [
+      {
+        "id": "reception",
+        "skills": [
+          "listening",
+          "reading"
+        ],
+        "evidence": [
+          "gist",
+          "specific-information",
+          "detail",
+          "inference"
+        ]
+      },
+      {
+        "id": "production",
+        "skills": [
+          "speaking",
+          "writing"
+        ],
+        "evidence": [
+          "intelligibility",
+          "task-fulfilment",
+          "coherence",
+          "range",
+          "accuracy"
+        ]
+      },
+      {
+        "id": "interaction",
+        "skills": [
+          "spoken-interaction",
+          "written-interaction",
+          "online-interaction"
+        ],
+        "evidence": [
+          "turn-taking",
+          "asking-follow-up",
+          "clarification",
+          "repair",
+          "responding"
+        ]
+      },
+      {
+        "id": "mediation",
+        "skills": [
+          "relaying-information",
+          "explaining-text",
+          "summarizing",
+          "collaborative-construction"
+        ],
+        "evidence": [
+          "selecting-key-information",
+          "rephrasing",
+          "making-information-accessible"
+        ]
+      },
+      {
+        "id": "linguistic-competence",
+        "skills": [
+          "grammar",
+          "vocabulary",
+          "phonology",
+          "orthography"
+        ],
+        "evidence": [
+          "form",
+          "meaning",
+          "appropriacy",
+          "intelligibility"
+        ]
+      },
+      {
+        "id": "pragmatic-and-sociolinguistic",
+        "skills": [
+          "coherence",
+          "cohesion",
+          "register",
+          "politeness"
+        ],
+        "evidence": [
+          "organizing-ideas",
+          "connectors",
+          "context-appropriate-language"
+        ]
+      }
+    ],
+    "designRule": "Every communicative function should declare a CEFR target, observable task, primary skills, supporting language resources, valid alternatives, evidence criteria and linked practice/retry actions."
+  }
 }
