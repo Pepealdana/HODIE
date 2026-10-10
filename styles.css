@@ -778,3 +778,6 @@ html[data-theme="dark"] body { background: #101827; }
 #microFeedback {
   scroll-margin-top: 18px;
 }
+
+.inline-corrected-word { padding: 1px 3px; border-radius: 4px; background: #e5b347; color: #172033; }
+.speech-word-near { padding: 1px 3px; border-radius: 4px; background: #6b4d1d; color: #fff2cf; text-decoration: underline dotted; text-underline-offset: 3px; }
