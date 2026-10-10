@@ -1146,15 +1146,16 @@ function showFeedback(activity, result, response, options = {}) {
     result,
     source: isOpenProduction ? "checklist" : activity.type === "listening" || ["choose", "complete", "order", "match"].includes(activity.type) ? "answer-key" : "rule-based"
   });
-  const success = result.correct || result.score >= 1;
+  const hasLanguageErrors = (result.errors || []).some((error) => ["grammar", "spelling", "pronunciation"].includes(error.type));
+  const success = (result.correct || result.score >= 1) && !hasLanguageErrors;
   const inlineCorrectedText = result.errors?.find((error) => error.correctedText)?.correctedText;
   const inlineWritingReview = activity.skill === "writing" && response && inlineCorrectedText ? renderInlineComparison(response, inlineCorrectedText) : "";
   const speechComparison = activity.type === "speak" && response ? renderSpeechComparison(activity.targetPhrase, response) : "";
   const missingError = result.errors?.find((error) => error.target === "required-information");
   const missingWords = (missingError?.correction || result.missing || "").toString();
   const nearSpeechError = result.errors?.find((error) => error.target === "speech-near-match");
-  const feedbackText = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Add the missing key word: ${missingWords}.` : (result.feedback || "");
-  const feedbackTextEs = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Añade la palabra clave que falta: ${missingWords}.` : (result.feedbackEs || "");
+  const feedbackText = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Add the missing key word: ${missingWords}.` : isOpenProduction && hasLanguageErrors ? "Fix the highlighted word(s), then check again." : (result.feedback || "");
+  const feedbackTextEs = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Añade la palabra clave que falta: ${missingWords}.` : isOpenProduction && hasLanguageErrors ? "Corrige las palabras resaltadas y vuelve a revisar." : (result.feedbackEs || "");
   const visibleCorrections = feedbackContract.corrections.filter((error) => error.target !== "required-information");
   feedback.innerHTML = `
     ${inlineWritingReview}
