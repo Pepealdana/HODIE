@@ -86,6 +86,54 @@ function escapeRegex(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function applyCatalogMatcher(text, rule) {
+  const matcher = rule?.matcher;
+  if (!matcher?.pattern || typeof matcher.replacement !== "string") return { text, errors: [] };
+
+  let regex;
+  try {
+    const flags = String(matcher.flags || "gi");
+    if (/[^dgimsuvy]/.test(flags) || new Set(flags).size !== flags.length) return { text, errors: [] };
+    regex = new RegExp(matcher.pattern, flags.includes("g") ? flags : flags + "g");
+  } catch {
+    return { text, errors: [] };
+  }
+
+  let changed = false;
+  let cursor = 0;
+  let nextText = "";
+  const errors = [];
+  for (const match of text.matchAll(regex)) {
+    if (match.index < cursor) continue;
+    let replacement = match[0].replace(regex, matcher.replacement);
+    replacement = preserveCase(match[0], replacement);
+    if (replacement === match[0]) continue;
+    nextText += text.slice(cursor, match.index) + replacement;
+    errors.push({
+      ruleId: rule.id,
+      target: rule.implementation,
+      type: rule.category === "spelling" ? "spelling" : rule.category === "syntax" ? "word-order" : "grammar",
+      actual: match[0],
+      expected: replacement,
+      correction: replacement,
+      start: match.index,
+      end: match.index + match[0].length,
+      severity: rule.severity || "medium",
+      priority: rule.priority || rule.severity || "medium",
+      message: rule.explanation || "",
+      messageEs: rule.explanationEs || "",
+      examples: rule.examples || [],
+      retry: ["high", "critical"].includes(rule.priority || rule.severity || "medium"),
+      confidence: matcher.confidence || "high"
+    });
+    cursor = match.index + match[0].length;
+    changed = true;
+  }
+  if (!changed) return { text, errors: [] };
+  nextText += text.slice(cursor);
+  return { text: nextText, errors };
+}
+
 function analyzeLanguage(input, options = {}) {
   const originalText = String(input ?? "");
   let text = originalText;
@@ -121,6 +169,17 @@ function analyzeLanguage(input, options = {}) {
   for (const [implementation, pattern, replacement] of rules) {
     if (implementation === "work-place" && !/\b(teacher|student|employee|workplace|office staff)\b/i.test(text)) continue;
     const result = runReplacementRule(text, implementation, pattern, replacement);
+    if (result.errors.length) {
+      errors.push(...result.errors);
+      text = result.text;
+    }
+  }
+
+  // Data-driven rules let reviewed catalog entries add narrow, deterministic
+  // corrections without adding a new branch to this engine.
+  for (const rule of catalog.grammarRules || []) {
+    if (rule.status !== "tested" || !rule.matcher) continue;
+    const result = applyCatalogMatcher(text, rule);
     if (result.errors.length) {
       errors.push(...result.errors);
       text = result.text;
@@ -186,8 +245,19 @@ function validateLinguisticCatalog(value = catalog) {
   }
   const implemented = new Set(["capital-i","spelling-teacher","article-profession","article-a-an","be-agreement","plural-agreement","third-person-singular","enjoy-gerund","work-place","repeated-connector","adjective-noun-order","open-vocabulary-policy","like-gerund","compound-job-connector"]);
   for (const rule of value.grammarRules) {
-    if (rule.status === "tested" && !implemented.has(rule.implementation)) {
+    const hasDataMatcher = Boolean(rule.matcher?.pattern && typeof rule.matcher.replacement === "string");
+    if (rule.status === "tested" && !implemented.has(rule.implementation) && !hasDataMatcher) {
       errors.push("Missing rule implementation for tested rule: " + rule.id + " (" + rule.implementation + ")");
+    }
+    if (rule.matcher) {
+      if (!rule.matcher.pattern || typeof rule.matcher.replacement !== "string") errors.push(rule.id + ": matcher requires pattern and replacement");
+      try {
+        const flags = String(rule.matcher.flags || "gi");
+        if (/[^dgimsuvy]/.test(flags) || new Set(flags).size !== flags.length) throw new Error("invalid flags");
+        new RegExp(rule.matcher.pattern, flags);
+      } catch {
+        errors.push(rule.id + ": invalid matcher regular expression or flags");
+      }
     }
   }
   return { valid: errors.length === 0, errors, ruleCount: value.grammarRules.length, testedRuleCount: value.grammarRules.filter((rule) => rule.status === "tested").length, draftRuleCount: value.grammarRules.filter((rule) => rule.status === "draft").length, vocabularyCount: value.vocabularyEntries.length, communicativeFunctionCount: functionIds.size };
