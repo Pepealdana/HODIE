@@ -118,7 +118,20 @@ const clean = createFeedbackContract({
   source: "rule-based"
 });
 assert.equal(clean.status, "partial");
+assert.equal(clean.evaluationStatus, "not-fully-evaluated");
 assert.equal(clean.corrections.length, 0);
 assert.equal(clean.strengths.length, 1);
+assert.equal(clean.nextAction.kind, "self-review", "rule-based no-match must invite review rather than imply verified correctness");
+assert.ok(clean.limits.some((item) => /not a full grammar check/i.test(item)));
+
+const detectedIssue = createFeedbackContract({
+  activity: { id: "known-error", skill: "speaking" },
+  surface: "conversation",
+  response: "She doesn't works.",
+  result: { errors: [{ ruleId: "DO-NEG-BASE-001", actual: "doesn't works", expected: "doesn't work" }], evaluationStatus: "issues-detected" },
+  source: "rule-based"
+});
+assert.equal(detectedIssue.evaluationStatus, "issues-detected");
+assert.equal(detectedIssue.nextAction.kind, "retry-correction");
 
 console.log("HODIE shared feedback contract: PASS");
