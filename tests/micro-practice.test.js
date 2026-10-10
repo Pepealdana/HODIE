@@ -114,6 +114,11 @@ const workPlaceErrors = evaluateMicroActivity(
 assert.ok(workPlaceErrors.errors.some((error) => error.target === "work-place"));
 assert.ok(writingErrors.errors.some((error) => error.target === "enjoy-ing"));
 assert.ok(writingErrors.corrections.length >= 1);
+const typoWriting = evaluateMicroActivity(writingActivity, "i am tecaher");
+assert.ok(typoWriting.errors.some((error) => error.target === "capital-i"));
+assert.ok(typoWriting.errors.some((error) => error.target === "spelling-teacher"));
+assert.ok(typoWriting.errors.some((error) => error.target === "article"));
+assert.match(typoWriting.errors.find((error) => error.correctedText)?.correctedText || "", /I am a teacher/i);
 assert.equal(writingErrors.retryRecommended, false);
 
 const speakingActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 6 });
