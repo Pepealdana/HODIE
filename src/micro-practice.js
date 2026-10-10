@@ -55,6 +55,14 @@ function detectLanguageCorrections(activity, response) {
 
   const rules = [
     {
+      pattern: /\btecher\b/i,
+      replacement: "teacher",
+      target: "spelling-teacher",
+      message: "The correct spelling is \"teacher\".",
+      messageEs: "La escritura correcta es \"teacher\" (profesor/a).",
+      examples: ["I am a teacher."]
+    },
+    {
       pattern: /\bI\s+am\s+(teacher|student|programmer|developer|engineer|professor)\b/i,
       replacement: "I am a $1",
       target: "article",
@@ -77,6 +85,14 @@ function detectLanguageCorrections(activity, response) {
       message: 'After "enjoy", use a verb with -ing.',
       messageEs: 'Después de "enjoy", usamos el verbo con -ing.',
       examples: ["I enjoy reading.", "I enjoy building robots."]
+    },
+    {
+      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/g,
+      replacement: "$1I",
+      target: "capital-i",
+      message: "The pronoun \"I\" is always capitalized in English.",
+      messageEs: "El pronombre \"I\" siempre se escribe con mayúscula en inglés.",
+      examples: ["I am a teacher.", "I enjoy teaching."]
     },
     {
       pattern: /\b(my\s+students?)\s+is\b/i,
@@ -102,7 +118,7 @@ function detectLanguageCorrections(activity, response) {
       type: "grammar",
       target: rule.target,
       actual: match[0],
-      expected: rule.replacement,
+      expected: next,
       severity: "low",
       priority: "low",
       message: rule.message,
@@ -377,7 +393,7 @@ function evaluateMicroActivity(activity, response) {
     throw new Error(`Unsupported micro-activity type: ${activity.type}`);
   }
 
-  const feedback = buildFeedback(activity, result, result.errors || [], { maxPriorityCorrections: 2 });
+  const feedback = buildFeedback(activity, result, result.errors || [], { maxPriorityCorrections: 3 });
   return {
     ...result,
     ...feedback,
