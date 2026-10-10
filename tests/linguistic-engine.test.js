@@ -43,6 +43,10 @@ const extensibleVocabulary = analyzeLanguage("I am geologist.", {
 });
 assert.equal(extensibleVocabulary.correctedText, "I am a geologist.", "new job vocabulary should reuse grammar rules without editing the engine");
 
+const ambiguousWorkPhrase = analyzeLanguage("I work on a school.");
+assert.equal(ambiguousWorkPhrase.correctedText, "I work on a school.", "context-dependent prepositions must not be rewritten without enough context");
+assert.equal(ambiguousWorkPhrase.errors.length, 0);
+
 const validAlternatives = analyzeLanguage("I like to teach, and I like teaching.");
 assert.equal(validAlternatives.errors.length, 0, "valid grammar alternatives must not be flagged");
 
