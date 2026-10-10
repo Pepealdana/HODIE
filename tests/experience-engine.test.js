@@ -84,6 +84,37 @@ assert.ok(noGrammarIssue.strengths.length > 0);
 assert.ok(noGrammarIssue.nextStep.instruction);
 assert.equal(noGrammarIssue.feedbackStatus, "practice-guidance");
 
+// Regression cases: targeted A2 grammar patterns should be detected without flagging valid examples.
+const articleConnector = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "I am a technology an robotics teacher."
+);
+assert.ok(articleConnector.corrections.some((error) => error.target === "compound-job-connector"));
+
+const pluralAgreement = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "My students is very creative."
+);
+assert.ok(pluralAgreement.corrections.some((error) => error.target === "plural-subject-agreement"));
+
+const singularAgreement = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "The robot use a sensor."
+);
+assert.ok(singularAgreement.corrections.some((error) => error.target === "singular-subject-agreement"));
+
+const connectorFalsePositive = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "I teach robotics and I enjoy building robots because my students like technology."
+);
+assert.equal(connectorFalsePositive.corrections.some((error) => error.target === "repeated-connector"), false);
+assert.equal(connectorFalsePositive.corrections.some((error) => error.target === "plural-subject-agreement"), false);
+assert.equal(connectorFalsePositive.corrections.some((error) => error.target === "singular-subject-agreement"), false);
+
 const missingGoal = evaluateExperienceTurn(
   conversation,
   conversation.stages[0],
