@@ -740,7 +740,7 @@ function handleExperienceResponse(experience, stage, response) {
       <div class="feedback-section">
         <h4>One thing to improve · Un aspecto para mejorar</h4>
         ${languageNotes.length ? `
-          ${languageNotes.map((error) => `<article class="correction-item"><strong>Suggested form · Forma sugerida</strong><p class="feedback-example">${escapeHtml(error.expected || error.correction || "")}</p><p>${escapeHtml(error.message || "")}</p><p class="spanish">${escapeHtml(error.messageEs || "")}</p>${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}</article>`).join("")}
+          ${languageNotes.map((error) => `<article class="correction-item"><strong>Suggested form · Forma sugerida</strong>${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}<p class="feedback-example">${escapeHtml(error.expected || error.correction || "")}</p><p>${escapeHtml(error.message || "")}</p><p class="spanish">${escapeHtml(error.messageEs || "")}</p>${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}</article>`).join("")}
         ` : missingLabels.length ? `
           <p>Try to include this idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
           <p class="spanish">Intenta incluir esta idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
@@ -1162,7 +1162,8 @@ function showFeedback(activity, result, response, options = {}) {
         <div class="feedback-corrections">
           ${feedbackContract.corrections.map((error) => `
             <div class="correction-item">
-              <strong>Suggested: ${escapeHtml(error.correction || error.expected || "")}</strong>
+              ${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}
+              <strong>Suggested form · Forma sugerida: ${escapeHtml(error.correction || error.expected || "")}</strong>
               <p>${escapeHtml(error.message || "")}</p>
               ${error.messageEs ? `<p class="spanish">${escapeHtml(error.messageEs)}</p>` : ""}
               ${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}
