@@ -76,7 +76,7 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
 
   const nextAction = !responseProvided
     ? { kind: "respond", title: "Try an answer", titleEs: "Intenta responder", instruction: "Write or say a short answer.", instructionEs: "Escribe o di una respuesta breve." }
-    : corrections.some((item) => item.retry)
+    : corrections.length > 0
       ? { kind: "retry-correction", title: "Try the correction", titleEs: "Practica la corrección", instruction: "Use the corrected form in a new sentence.", instructionEs: "Usa la forma corregida en una nueva oración." }
       : missing.length
         ? { kind: "complete-missing", title: "Add the missing idea", titleEs: "Añade la idea que falta", instruction: missing[0].message || "Add one detail that addresses the missing requirement.", instructionEs: missing[0].messageEs || "Añade un detalle que responda al criterio que falta." }
