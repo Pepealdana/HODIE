@@ -9,7 +9,7 @@ assert.equal(stats.globalAvailability,true);
 assert.equal(stats.activityIndependentCorrection,true);
 assert.ok(stats.indexedTokens>1000);
 assert.ok(searchLinguisticKnowledge("present perfect",{types:["grammar"],includeDrafts:true,limit:100}).some(x=>x.status==="draft"),"draft rules must be searchable");
-assert.ok(searchLinguisticKnowledge("repositori",{types:["vocabulary"]}).some(x=>x.lemma==="repository"),"prefix search should find vocabulary");
+assert.ok(searchLinguisticKnowledge("repositor",{types:["vocabulary"]}).some(x=>x.lemma==="repository"),"prefix search should find vocabulary");
 assert.ok(searchLinguisticKnowledge("contraargumento",{types:["vocabulary"]}).some(x=>x.lemma==="counterargument"),"Spanish meaning should be searchable");
 const corrections=getCorrectionRuleSet();assert.ok(corrections.length>=20);assert.ok(corrections.every(x=>x.status==="tested"));
 const result=analyzeLanguage("She work at a school.");assert.ok(result.errors.length>0,"correction must work without an activity id");assert.notEqual(result.correctedText,"She work at a school.");
