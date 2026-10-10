@@ -13,7 +13,7 @@ function collectErrorMemory(profile = {}) {
   for (const evidence of sources) {
     const seenInRecord = new Set();
     for (const rawError of evidence.errors || []) {
-      const target = rawError.target || rawError.id || "unknown";
+      const target = rawError.ruleId || rawError.target || rawError.id || "unknown";
       const type = rawError.type || "unknown";
       const key = [type, target].join(":");
       // One occurrence of the same rule within a single evidence record counts once.
