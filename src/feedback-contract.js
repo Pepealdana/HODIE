@@ -78,6 +78,18 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
 
   const correct = result.correct === true || result.success === true;
   const explicitlyIncorrect = result.correct === false || result.success === false;
+  const inferredSource = source || (Array.isArray(result.checks) ? "checklist" : (result.correct === true || result.correct === false ? "answer-key" : "rule-based"));
+  const evaluationStatus = !responseProvided
+    ? "not-evaluated"
+    : corrections.length
+      ? "issues-detected"
+      : correct
+        ? "objective-correct"
+        : explicitlyIncorrect
+          ? "objective-incorrect"
+          : result.available === false
+            ? "unavailable"
+            : "not-fully-evaluated";
   let status = "partial";
   if (!responseProvided) status = "empty";
   else if (result.correct === null || (activity.type === "mini-production" && source === "checklist")) status = "self-review";
@@ -92,15 +104,23 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
       ? { kind: "retry-correction", title: "Try the correction", titleEs: "Practica la corrección", instruction: "Use the corrected form in a new sentence.", instructionEs: "Usa la forma corregida en una nueva oración." }
       : missing.length
         ? { kind: "complete-missing", title: "Add the missing idea", titleEs: "Añade la idea que falta", instruction: missing[0].message || "Add one detail that addresses the missing requirement.", instructionEs: missing[0].messageEs || "Añade un detalle que responda al criterio que falta." }
-        : status === "self-review"
-          ? { kind: "self-review", title: "Compare your answer", titleEs: "Compara tu respuesta", instruction: "Compare your response with the example and check that it expresses your meaning.", instructionEs: "Compara tu respuesta con el ejemplo y comprueba que expresa lo que quieres decir." }
+        : status === "self-review" || (status === "partial" && inferredSource === "rule-based")
+          ? { kind: "self-review", title: "Review your answer", titleEs: "Revisa tu respuesta", instruction: "No known rule matched this response. Review the transcript and compare it with a reliable example; this is not a full grammar check.", instructionEs: "Ninguna regla conocida coincidió con esta respuesta. Revisa la transcripción y compárala con un ejemplo fiable; esto no es una revisión gramatical completa." }
           : status === "needs-work"
             ? { kind: "retry", title: "Try again", titleEs: "Inténtalo de nuevo", instruction: result.feedback || "Review the hint and try again.", instructionEs: result.feedbackEs || "Revisa la ayuda e inténtalo de nuevo." }
             : { kind: "continue", title: "Continue", titleEs: "Continúa", instruction: "Continue to the next activity.", instructionEs: "Continúa con la siguiente actividad." };
 
   const words = text.match(/[\\p{L}\\p{N}’'-]+/gu) || [];
   const sentences = text.split(/[.!?]+/).map((part) => part.trim()).filter(Boolean);
-  const inferredSource = source || (Array.isArray(result.checks) ? "checklist" : (result.correct === true || result.correct === false ? "answer-key" : "rule-based"));
+  const limits = [
+    result.feedbackLimit,
+    result.evaluationNote,
+    result.evaluationNoteEs
+  ].filter((item, index, list) => typeof item === "string" && item.trim() && list.indexOf(item) === index);
+  if (responseProvided && inferredSource === "rule-based" && corrections.length === 0 && !limits.some((item) => /not a full grammar check|not complete|no known rule matched/i.test(item))) {
+    limits.push("No known rule matched this response. This is not a full grammar check.");
+    limits.push("Ninguna regla conocida coincidió con esta respuesta. Esto no es una revisión gramatical completa.");
+  }
 
   return {
     contractVersion: CONTRACT_VERSION,
@@ -109,6 +129,7 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
     skill: skill || activity.skill || result.skill || "integrated",
     responseProvided,
     status,
+    evaluationStatus,
     source: SOURCES.has(inferredSource) ? inferredSource : "unknown",
     strengths: Array.isArray(result.strengths) ? result.strengths.map((item) => ({
       id: item.id || null,
@@ -124,11 +145,7 @@ function createFeedbackContract({ activity = {}, surface = "practice", skill = n
       sentenceCount: Number.isFinite(result.sentenceCount) ? result.sentenceCount : sentences.length,
       score: Number.isFinite(result.score) ? Math.max(0, Math.min(1, result.score)) : null
     },
-    limits: [
-      result.feedbackLimit,
-      result.evaluationNote,
-      result.evaluationNoteEs
-    ].filter((item, index, list) => typeof item === "string" && item.trim() && list.indexOf(item) === index)
+    limits
   };
 }
 
