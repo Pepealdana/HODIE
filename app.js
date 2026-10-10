@@ -1170,7 +1170,7 @@ function showFeedback(activity, result, response, options = {}) {
         </div>
       ` : ""}
     </div>
-    ${success && !options.final ? `<p class="auto-next">Next...</p>` : ""}
+    ${success && !options.final ? `<button class="primary compact" id="nextMicroButton" type="button">Next activity →</button>` : ""}
     ${!success && !options.final ? `<button class="secondary compact" id="retryMicroButton" type="button">Try again</button>` : ""}
   `;
 
