@@ -82,4 +82,28 @@ assert.equal(empty.status, "empty");
 assert.equal(empty.responseProvided, false);
 assert.equal(empty.nextAction.kind, "respond");
 
+// Ambiguous/open answer without objective correctness stays partial and receives no invented correction.
+const ambiguous = createFeedbackContract({
+  activity: { id: "ambiguous-writing", type: "mini-production", skill: "writing" },
+  surface: "writing",
+  response: "Robots are useful in school.",
+  result: { correct: null, score: 0.8, checks: [{ id: "example", passed: true }] },
+  source: "checklist"
+});
+assert.equal(ambiguous.status, "self-review");
+assert.equal(ambiguous.corrections.length, 0);
+assert.equal(ambiguous.nextAction.kind, "self-review");
+
+// A clean sentence should not be assigned a grammar correction by the shared layer.
+const clean = createFeedbackContract({
+  activity: { id: "clean-speaking", skill: "speaking" },
+  surface: "speaking",
+  response: "I am a teacher and I enjoy building robots.",
+  result: { strengths: [{ id: "connector", label: "Connected ideas" }] },
+  source: "rule-based"
+});
+assert.equal(clean.status, "partial");
+assert.equal(clean.corrections.length, 0);
+assert.equal(clean.strengths.length, 1);
+
 console.log("HODIE shared feedback contract: PASS");
