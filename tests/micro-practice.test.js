@@ -73,6 +73,13 @@ const writingTypo = evaluateMicroActivity(production, "i am techer");
 assert.ok(writingTypo.errors.some((error) => error.target === "capital-i"));
 assert.ok(writingTypo.errors.some((error) => error.target === "spelling-teacher"));
 assert.ok(writingTypo.errors.some((error) => error.target === "article"));
+assert.match(writingTypo.errors.find((error) => error.correctedText)?.correctedText || "", /I am a teacher/i);
+const nearSpeech = evaluateMicroActivity(speakActivity, "I am a technology and robotic teacher");
+assert.equal(nearSpeech.correct, false);
+assert.ok(nearSpeech.errors.some((error) => error.target === "speech-near-match"));
+assert.ok(!nearSpeech.errors.some((error) => error.target === "required-information"));
+const pluralError = evaluateMicroActivity(production, "I am a technology teacher. The students builds a robot and I enjoy programming.");
+assert.ok(pluralError.errors.some((error) => error.target === "plural-agreement"));
 
 // Every target exposed by the current A2 speaking vertical slice must have executable practice.
 for (const [canDoId, productionResponse] of [
