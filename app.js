@@ -1509,18 +1509,16 @@ function renderInlineComparison(original, corrected) {
   const originalText = String(original ?? "");
   const correctedText = String(corrected ?? "");
   if (!originalText || !correctedText || originalText === correctedText) return "";
-  const originalTokens = originalText.match(/[\\p{L}\\p{N}’'-]+|[^\\p{L}\\p{N}’'-]+/gu) || [];
-  const correctedTokens = correctedText.match(/[\\p{L}\\p{N}’'-]+|[^\\p{L}\\p{N}’'-]+/gu) || [];
-  const marked = originalTokens.map((token, index) => {
-    const expected = correctedTokens[index] ?? "";
-    if (token !== expected && /[\\p{L}\\p{N}]/u.test(token)) return `<mark class="inline-error-word" title="Suggested: ${escapeHtml(expected)}">${escapeHtml(token)}</mark>`;
-    return escapeHtml(token);
-  }).join("");
-  return `<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">${marked}</p><p class="inline-writing-corrected"><strong>Suggested version · Versión sugerida:</strong> ${escapeHtml(correctedText)}</p></div>`;
+  const correctedWords = correctedText.match(/[\p{L}\p{N}’'-]+/gu) || [];
+  const marked = originalText.replace(/[\p{L}\p{N}’'-]+/gu, (word) => {
+    if (correctedWords.includes(word)) return escapeHtml(word);
+    return '<mark class="inline-error-word" title="Review this word">' + escapeHtml(word) + '</mark>';
+  });
+  return '<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">' + marked + '</p><p class="inline-writing-corrected"><strong>Suggested version · Versión sugerida:</strong> ' + escapeHtml(correctedText) + '</p></div>';
 }
 function renderSpeechComparison(targetPhrase, transcript) {
-  const target = String(targetPhrase ?? "").match(/[\\p{L}\\p{N}’'-]+/gu) || [];
-  const heard = String(transcript ?? "").toLocaleLowerCase().match(/[\\p{L}\\p{N}’'-]+/gu) || [];
+  const target = String(targetPhrase ?? "").match(/[\p{L}\p{N}’'-]+/gu) || [];
+  const heard = String(transcript ?? "").toLocaleLowerCase().match(/[\p{L}\p{N}’'-]+/gu) || [];
   if (!target.length || !heard.length) return "";
   const heardSet = new Set(heard);
   const missing = target.filter((word) => !heardSet.has(word.toLocaleLowerCase()));
