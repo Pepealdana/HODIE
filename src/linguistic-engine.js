@@ -100,6 +100,7 @@ function analyzeLanguage(input, options = {}) {
       const expected = s === "i" ? "am" : ["he", "she", "it"].includes(s) ? "is" : "are";
       return subject + " " + preserveCase(verb, expected);
     }],
+    ["compound-job-connector", /\b(a\s+technology)\s+an\s+(robotics\s+teacher)\b/gi, (m, first, second) => first + " and " + second],
     ["article-profession", new RegExp("\\b(I am|I'm|he is|she is|he's|she's|they are|we are)\\s+(?!a\\b|an\\b|the\\b)(" + jobPattern + ")\\b", "gi"),
       (m, subject, job) => subject + " " + (/^[aeiou]/i.test(job) ? "an" : "a") + " " + job],
     ["article-a-an", /\b(a)\s+(engineer|architect|accountant|artist|administrator)\b/gi, (m, article, noun) => preserveCase(article, "an") + " " + noun],
@@ -166,7 +167,7 @@ function validateLinguisticCatalog(value = catalog) {
       if (!ids.has(ruleId)) errors.push(testCase.id + ": unknown expected rule " + ruleId);
     }
   }
-  const implemented = new Set(["capital-i","spelling-teacher","article-profession","article-a-an","be-agreement","plural-agreement","third-person-singular","enjoy-gerund","work-place","repeated-connector","adjective-noun-order","open-vocabulary-policy","like-gerund"]);
+  const implemented = new Set(["capital-i","spelling-teacher","article-profession","article-a-an","be-agreement","plural-agreement","third-person-singular","enjoy-gerund","work-place","repeated-connector","adjective-noun-order","open-vocabulary-policy","like-gerund","compound-job-connector"]);
   for (const implementation of implementations) {
     if (!implemented.has(implementation)) errors.push("Missing rule implementation: " + implementation);
   }
