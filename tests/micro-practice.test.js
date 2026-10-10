@@ -72,7 +72,7 @@ assert.ok(nonsense.errors.some((error) => error.target === "profession"));
 const writingTypo = evaluateMicroActivity(production, "i am techer");
 assert.ok(writingTypo.errors.some((error) => error.target === "capital-i"));
 assert.ok(writingTypo.errors.some((error) => error.target === "spelling-teacher"));
-assert.ok(writingTypo.errors.some((error) => error.target === "article"));
+assert.ok(writingTypo.errors.some((error) => error.target === "article-profession"));
 assert.match(writingTypo.errors.find((error) => error.correctedText)?.correctedText || "", /I am a teacher/i);
 const nearSpeech = evaluateMicroActivity(speakActivity, "I am a technology and robotic teacher");
 assert.equal(nearSpeech.correct, false);
