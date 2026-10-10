@@ -728,15 +728,15 @@ function applyLinguisticReview(response, result = {}, skill = "writing") {
       score: item.score
     }));
   if (!review.errors.length || review.correctedText === text) {
-    return { ...result, linguisticLinks, linguisticReview: {
+    return { ...result, linguisticLinks, evaluationStatus: review.evaluationStatus, evaluationScope: review.evaluationScope, evaluationNote: review.evaluationNote, evaluationNoteEs: review.evaluationNoteEs, linguisticReview: {
       schemaVersion: review.schemaVersion,
       status: "not-fully-evaluated",
-      note: "No known rule matched. This is not a complete grammar check.",
-      noteEs: "Ninguna regla conocida coincidió. Esto no es una revisión gramatical completa."
+      note: review.evaluationNote,
+      noteEs: review.evaluationNoteEs
     }, contextualSuggestions };
   }
   const corrections = review.errors.map(error => ({ ...error, id: `LING-${error.ruleId}`, correctedText: review.correctedText, source: "linguistic-catalog" }));
-  return { ...result, linguisticLinks, contextualSuggestions, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, status: "issues-detected", ruleIds: review.errors.map(error => error.ruleId), note: "Rule-based review covers only implemented patterns; it is not a complete grammar check." } };
+  return { ...result, linguisticLinks, contextualSuggestions, evaluationStatus: review.evaluationStatus, evaluationScope: review.evaluationScope, evaluationNote: review.evaluationNote, evaluationNoteEs: review.evaluationNoteEs, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, status: "issues-detected", ruleIds: review.errors.map(error => error.ruleId), note: review.evaluationNote, noteEs: review.evaluationNoteEs } };
 }
 
 function handleExperienceResponse(experience, stage, response) {
