@@ -44,7 +44,7 @@ function buildLanguageNotes(experience, stage, text) {
   const rules = [
     {
       id: "spelling-teacher",
-      pattern: /\btecher\b/i,
+      pattern: /\bte(?:cher|caher)\b/i,
       replacement: () => "teacher",
       message: "The correct spelling is \"teacher\".",
       messageEs: "La escritura correcta es \"teacher\" (profesor/a).",
