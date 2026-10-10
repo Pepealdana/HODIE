@@ -168,8 +168,10 @@ function validateLinguisticCatalog(value = catalog) {
     }
   }
   const implemented = new Set(["capital-i","spelling-teacher","article-profession","article-a-an","be-agreement","plural-agreement","third-person-singular","enjoy-gerund","work-place","repeated-connector","adjective-noun-order","open-vocabulary-policy","like-gerund","compound-job-connector"]);
-  for (const implementation of implementations) {
-    if (!implemented.has(implementation)) errors.push("Missing rule implementation: " + implementation);
+  for (const rule of value.grammarRules) {
+    if (rule.status === "tested" && !implemented.has(rule.implementation)) {
+      errors.push("Missing rule implementation for tested rule: " + rule.id + " (" + rule.implementation + ")");
+    }
   }
   return { valid: errors.length === 0, errors, ruleCount: value.grammarRules.length, vocabularyCount: value.vocabularyEntries.length };
 }
