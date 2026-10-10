@@ -149,7 +149,7 @@ function loadProfile() {
 }
 
 function saveProfile() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(profile)); } catch (error) { console.warn("HODIE could not save the learning profile; continuing this session.", error); }
 }
 
 function saveSession() {
@@ -162,15 +162,19 @@ function clearSavedSession() {
 
 function savePracticeState() {
   if (!practice || !session?.id) return;
-  localStorage.setItem(PRACTICE_STATE_KEY, JSON.stringify({
-    sessionId: session.id,
-    mode: practice.mode,
-    activityIds: practice.activities.map((activity) => activity.id),
-    index: practice.index,
-    results: practice.results,
-    finalAttempts: practice.finalAttempts,
-    currentResponse: practice.currentResponse
-  }));
+  try {
+    localStorage.setItem(PRACTICE_STATE_KEY, JSON.stringify({
+      sessionId: session.id,
+      mode: practice.mode,
+      activityIds: practice.activities.map((activity) => activity.id),
+      index: practice.index,
+      results: practice.results,
+      finalAttempts: practice.finalAttempts,
+      currentResponse: practice.currentResponse
+    }));
+  } catch (error) {
+    console.warn("HODIE could not save practice state; continuing this session.", error);
+  }
 }
 
 function loadSavedPracticeState() {
@@ -1088,7 +1092,7 @@ function renderInteraction(activity) {
     if (isWriting) {
       const feedbackNode = document.querySelector("#microFeedback");
       const answerInput = document.querySelector("#productionAnswer");
-      if (feedbackNode && answerInput) answerInput.insertAdjacentElement("afterend", feedbackNode);
+      if (feedbackNode && answerInput) checkButton.insertAdjacentElement("afterend", feedbackNode);
     }
 
     const evaluateProduction = (response) => {
