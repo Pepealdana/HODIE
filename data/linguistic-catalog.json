@@ -1231,6 +1231,168 @@
         "personal",
         "professional"
       ]
+    },
+    {
+      "id": "ASK_BASIC_QUESTIONS_A1",
+      "level": "A1",
+      "canDoIds": [
+        "SP-A2-01",
+        "SP-A2-02"
+      ],
+      "label": "Ask and answer basic personal questions",
+      "labelEs": "Hacer y responder preguntas personales básicas",
+      "skills": [
+        "speaking",
+        "listening",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "be",
+        "question-forms",
+        "pronouns",
+        "present-simple",
+        "modals"
+      ],
+      "vocabularyDomains": [
+        "identity",
+        "family",
+        "communication",
+        "people"
+      ],
+      "contexts": [
+        "personal",
+        "classroom"
+      ]
+    },
+    {
+      "id": "DESCRIBE_OBJECTS_A1",
+      "level": "A1",
+      "canDoIds": [
+        "LI-A2-05",
+        "SP-A2-01"
+      ],
+      "label": "Name and describe familiar objects",
+      "labelEs": "Nombrar y describir objetos conocidos",
+      "skills": [
+        "speaking",
+        "listening",
+        "reading",
+        "writing"
+      ],
+      "structures": [
+        "articles",
+        "plurals",
+        "there-is-are",
+        "adjectives"
+      ],
+      "vocabularyDomains": [
+        "classroom",
+        "technology",
+        "places"
+      ],
+      "contexts": [
+        "classroom",
+        "home"
+      ]
+    },
+    {
+      "id": "DESCRIBE_CURRENT_ACTIONS_A2",
+      "level": "A2",
+      "canDoIds": [
+        "LI-A2-03",
+        "SP-A2-03"
+      ],
+      "label": "Describe current actions and routines",
+      "labelEs": "Describir acciones actuales y rutinas",
+      "skills": [
+        "speaking",
+        "listening",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "present-continuous",
+        "present-simple",
+        "past-simple",
+        "modals"
+      ],
+      "vocabularyDomains": [
+        "daily-life",
+        "work",
+        "learning",
+        "technology"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ]
+    },
+    {
+      "id": "REPORT_EXPERIENCE_B1",
+      "level": "B1",
+      "canDoIds": [
+        "SP-B1-01",
+        "SP-A2-03"
+      ],
+      "label": "Report experiences and project results",
+      "labelEs": "Contar experiencias y resultados de proyectos",
+      "skills": [
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "present-perfect",
+        "past-simple",
+        "passive-voice",
+        "connectors",
+        "indirect-questions"
+      ],
+      "vocabularyDomains": [
+        "projects",
+        "science",
+        "technology",
+        "work"
+      ],
+      "contexts": [
+        "education",
+        "professional"
+      ]
+    },
+    {
+      "id": "BUILD_ARGUMENT_B2",
+      "level": "B2",
+      "canDoIds": [
+        "SP-B1-01",
+        "LI-A2-03"
+      ],
+      "label": "Develop a qualified argument and coherent explanation",
+      "labelEs": "Desarrollar un argumento matizado y una explicación coherente",
+      "skills": [
+        "speaking",
+        "reading",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "argumentation",
+        "textual-cohesion",
+        "complex-structures",
+        "discourse-pragmatics"
+      ],
+      "vocabularyDomains": [
+        "argumentation",
+        "science",
+        "communication",
+        "projects"
+      ],
+      "contexts": [
+        "academic",
+        "professional"
+      ]
     }
   ],
   "grammarRules": [
@@ -2941,6 +3103,772 @@
         "stage": "planned",
         "reason": "Needs dedicated implementation and positive/negative regression tests before activation."
       }
+    },
+    {
+      "id": "PLURAL-COUNT-001",
+      "implementation": "plural-after-number",
+      "level": "A1",
+      "category": "plurals",
+      "title": "Use plural nouns after numbers greater than one",
+      "titleEs": "Usa sustantivos en plural después de números mayores que uno",
+      "explanation": "Use a plural count noun after two, three, four, five, many or several. This matcher covers a reviewed set of regular nouns.",
+      "explanationEs": "Usa un sustantivo contable en plural después de two, three, four, five, many o several. Este patrón cubre un conjunto revisado de sustantivos regulares.",
+      "examples": [
+        "I have two robots.",
+        "We use several sensors."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have two robots.",
+          "es": "Tengo dos robots."
+        },
+        {
+          "en": "We use several sensors.",
+          "es": "Usamos varios sensores."
+        }
+      ],
+      "incorrect": [
+        "I have two robot."
+      ],
+      "exceptions": [
+        "Irregular plurals such as children and people are not handled.",
+        "Uncountable nouns such as equipment and information do not take this pattern."
+      ],
+      "negativeCases": [
+        {
+          "text": "I have one robot.",
+          "reason": "Singular after one is correct."
+        },
+        {
+          "text": "We need some equipment.",
+          "reason": "Equipment is uncountable in this meaning."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "I have three ___ (robot).",
+          "promptEs": "Tengo tres ___ (robot).",
+          "answer": "robots"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with two sensors.",
+          "promptEs": "Escribe una oración con two sensors."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "plurals",
+          "count-nouns",
+          "numbers"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(two|three|four|five|many|several)\\s+(student|teacher|robot|project|sensor)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2s"
+      }
+    },
+    {
+      "id": "THERE-BE-COUNT-001",
+      "implementation": "there-be-singular-count",
+      "level": "A1",
+      "category": "there-is-are",
+      "title": "Use there is with one singular count noun",
+      "titleEs": "Usa there is con un sustantivo contable singular",
+      "explanation": "Use there is before a/an + singular count noun. Use there are with plural nouns.",
+      "explanationEs": "Usa there is antes de a/an + un sustantivo contable singular. Usa there are con sustantivos plurales.",
+      "examples": [
+        "There is a robot in the lab.",
+        "There are two robots in the lab."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "There is a robot in the lab.",
+          "es": "Hay un robot en el laboratorio."
+        },
+        {
+          "en": "There are two robots in the lab.",
+          "es": "Hay dos robots en el laboratorio."
+        }
+      ],
+      "incorrect": [
+        "There are a robot in the lab."
+      ],
+      "exceptions": [
+        "There are is correct with plural noun phrases.",
+        "There is also introduces uncountable nouns: There is some equipment."
+      ],
+      "negativeCases": [
+        {
+          "text": "There are two robots.",
+          "reason": "Plural agreement is correct."
+        },
+        {
+          "text": "There is some equipment.",
+          "reason": "Equipment is uncountable."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "___ a sensor on the table.",
+          "promptEs": "___ un sensor sobre la mesa.",
+          "answer": "There is"
+        },
+        {
+          "type": "write",
+          "prompt": "Describe one object using There is.",
+          "promptEs": "Describe un objeto usando There is."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "there-is-are",
+          "singular",
+          "places"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\bthere\\s+are\\s+(a|an)\\s+(robot|sensor|student|teacher|project)\\b",
+        "flags": "gi",
+        "replacement": "there is $1 $2"
+      }
+    },
+    {
+      "id": "DOES-BASE-001",
+      "implementation": "does-question-base-verb",
+      "level": "A2",
+      "category": "question-forms",
+      "title": "Use the base verb after does in questions",
+      "titleEs": "Usa el verbo base después de does en preguntas",
+      "explanation": "In a present-simple question with does, the main verb stays in its base form.",
+      "explanationEs": "En una pregunta en presente simple con does, el verbo principal queda en forma base.",
+      "examples": [
+        "Does she teach robotics?",
+        "Does the robot use a sensor?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Does she teach robotics?",
+          "es": "¿Ella enseña robótica?"
+        },
+        {
+          "en": "Does the robot use a sensor?",
+          "es": "¿El robot usa un sensor?"
+        }
+      ],
+      "incorrect": [
+        "Does she teaches robotics?"
+      ],
+      "exceptions": [
+        "Statements correctly use third-person -s: She works here.",
+        "Questions with be do not use does: Is she ready."
+      ],
+      "negativeCases": [
+        {
+          "text": "She works at a school.",
+          "reason": "A statement correctly uses works."
+        },
+        {
+          "text": "Does she work here?",
+          "reason": "The question is already correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "Does he ___ (work) here?",
+          "promptEs": "¿Él ___ aquí?",
+          "answer": "work"
+        },
+        {
+          "type": "write",
+          "prompt": "Ask a present-simple question with does.",
+          "promptEs": "Haz una pregunta en presente simple con does."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-simple",
+          "does",
+          "questions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\bdoes\\s+(he|she|it|the robot|the student)\\s+(works|teaches|builds|uses|likes|goes|studies|watches|makes|plays|reads|writes)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "thirdPersonToBase",
+          "capture": 2
+        }
+      }
+    },
+    {
+      "id": "MODAL-BASE-001",
+      "implementation": "modal-base-verb",
+      "level": "A2",
+      "category": "modals",
+      "title": "Use the base verb after a modal",
+      "titleEs": "Usa el verbo base después de un modal",
+      "explanation": "After can, could, should, must and will, use the base form of the main verb.",
+      "explanationEs": "Después de can, could, should, must y will, usa la forma base del verbo principal.",
+      "examples": [
+        "She can build a robot.",
+        "We should check the code."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She can build a robot.",
+          "es": "Ella puede construir un robot."
+        },
+        {
+          "en": "We should check the code.",
+          "es": "Deberíamos revisar el código."
+        }
+      ],
+      "incorrect": [
+        "She can builds a robot."
+      ],
+      "exceptions": [
+        "The modal itself does not take -s: He can, not He cans.",
+        "Have to and ought to use different patterns."
+      ],
+      "negativeCases": [
+        {
+          "text": "She can build a robot.",
+          "reason": "Modal + base verb is correct."
+        },
+        {
+          "text": "He works every day.",
+          "reason": "This is not a modal construction."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "He can ___ (teach) English.",
+          "promptEs": "Él puede ___ inglés.",
+          "answer": "teach"
+        },
+        {
+          "type": "write",
+          "prompt": "Write a sentence with should + a base verb.",
+          "promptEs": "Escribe una oración con should + verbo base."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "modals",
+          "ability",
+          "advice"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(can|could|should|must|will)\\s+(works|teaches|builds|uses|likes|goes|studies|watches|makes|plays|reads|writes)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "thirdPersonToBase",
+          "capture": 2
+        }
+      }
+    },
+    {
+      "id": "PAST-DID-BASE-001",
+      "implementation": "did-base-verb",
+      "level": "A2",
+      "category": "past-simple",
+      "title": "Use the base verb after did",
+      "titleEs": "Usa el verbo base después de did",
+      "explanation": "In past-simple questions with did, use the base form of the main verb.",
+      "explanationEs": "En preguntas en pasado simple con did, usa la forma base del verbo principal.",
+      "examples": [
+        "Did you go to the lab?",
+        "Did she build the robot?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Did you go to the lab?",
+          "es": "¿Fuiste al laboratorio?"
+        },
+        {
+          "en": "Did she build the robot?",
+          "es": "¿Ella construyó el robot?"
+        }
+      ],
+      "incorrect": [
+        "Did you went to the lab?"
+      ],
+      "exceptions": [
+        "Affirmative past statements use past forms: She built the robot.",
+        "Current matching focuses on questions, not every negative construction."
+      ],
+      "negativeCases": [
+        {
+          "text": "Did you go to the lab?",
+          "reason": "Did + base verb is correct."
+        },
+        {
+          "text": "She went to the lab yesterday.",
+          "reason": "Affirmative past simple is correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "Did you ___ (go) to class?",
+          "promptEs": "¿Fuiste a clase?",
+          "answer": "go"
+        },
+        {
+          "type": "write",
+          "prompt": "Ask a question about yesterday with Did you...",
+          "promptEs": "Haz una pregunta sobre ayer con Did you..."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "past-simple",
+          "did",
+          "questions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\bdid\\s+(you|he|she|they|we)\\s+(went|saw|built|made|had|worked|studied|played)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "pastToBase",
+          "capture": 2
+        }
+      }
+    },
+    {
+      "id": "PRES-CONT-BASE-001",
+      "implementation": "present-continuous-ing",
+      "level": "A2",
+      "category": "present-continuous",
+      "title": "Use an -ing form after be in the present continuous",
+      "titleEs": "Usa la forma -ing después de be en presente continuo",
+      "explanation": "For an action happening now, use am/is/are + the -ing form of the main verb.",
+      "explanationEs": "Para una acción que ocurre ahora, usa am/is/are + la forma -ing del verbo principal.",
+      "examples": [
+        "I am teaching now.",
+        "They are building a robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am teaching now.",
+          "es": "Estoy enseñando ahora."
+        },
+        {
+          "en": "They are building a robot.",
+          "es": "Están construyendo un robot."
+        }
+      ],
+      "incorrect": [
+        "I am teach now."
+      ],
+      "exceptions": [
+        "Be + adjective/noun is valid: I am ready; They are students.",
+        "Stative verbs are not normally continuous in common meanings: I know the answer."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am ready.",
+          "reason": "Be + adjective is correct."
+        },
+        {
+          "text": "I know the answer.",
+          "reason": "Know is stative in this meaning."
+        }
+      ],
+      "practice": [
+        {
+          "type": "complete",
+          "prompt": "She is ___ (teach) now.",
+          "promptEs": "Ella está ___ ahora.",
+          "answer": "teaching"
+        },
+        {
+          "type": "write",
+          "prompt": "Describe what someone is doing now.",
+          "promptEs": "Describe qué está haciendo alguien ahora."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-continuous",
+          "actions",
+          "now"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(I am|he is|she is|it is|we are|they are|you are)\\s+(work|teach|build|study|learn|write|read|use)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2",
+        "transform": {
+          "type": "toGerund",
+          "capture": 2
+        }
+      }
+    },
+    {
+      "id": "GRAM-B1-FIRST-CONDITIONAL-002",
+      "implementation": "first-conditional",
+      "level": "B1",
+      "category": "conditionals",
+      "title": "Use the first conditional for realistic future possibilities",
+      "titleEs": "Usa el primer condicional para posibilidades futuras reales",
+      "explanation": "Use if + present simple followed by will/can/may + base verb for a realistic future condition and result.",
+      "explanationEs": "Usa if + presente simple seguido de will/can/may + verbo base para expresar una condición futura realista y su resultado.",
+      "examples": [
+        "If the sensor fails, we will replace it.",
+        "If we finish early, we can test the robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "If the sensor fails, we will replace it.",
+          "es": "Si falla el sensor, lo reemplazaremos."
+        },
+        {
+          "en": "If we finish early, we can test the robot.",
+          "es": "Si terminamos temprano, podemos probar el robot."
+        }
+      ],
+      "incorrect": [
+        "If the sensor will fail, we will replace it."
+      ],
+      "exceptions": [
+        "Will is normally not used in the if-clause of this pattern.",
+        "Other conditional meanings use different structures."
+      ],
+      "negativeCases": [
+        {
+          "text": "If it rains, we will stay inside.",
+          "reason": "Correct first conditional."
+        }
+      ],
+      "practice": [
+        {
+          "type": "guided-production",
+          "prompt": "Complete: If the sensor ___ (fail), we will stop.",
+          "promptEs": "Completa: If the sensor ___, nos detendremos."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "conditionals",
+          "future",
+          "cause-effect"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-B1-CONNECTORS-002",
+      "implementation": "contrast-connectors",
+      "level": "B1",
+      "category": "connectors",
+      "title": "Choose connectors by meaning and clause structure",
+      "titleEs": "Elige conectores según el significado y la estructura",
+      "explanation": "Although introduces a contrast clause; however links ideas across sentence boundaries; because introduces a reason.",
+      "explanationEs": "Although introduce una oración de contraste; however enlaza ideas entre oraciones; because introduce una razón.",
+      "examples": [
+        "Although the task was difficult, we finished it.",
+        "The task was difficult. However, we finished it."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Although the task was difficult, we finished it.",
+          "es": "Aunque la tarea fue difícil, la terminamos."
+        },
+        {
+          "en": "The task was difficult. However, we finished it.",
+          "es": "La tarea fue difícil. Sin embargo, la terminamos."
+        }
+      ],
+      "incorrect": [
+        "Although the task was difficult, but we finished it."
+      ],
+      "exceptions": [
+        "Punctuation depends on clause structure.",
+        "But is not universally wrong; it is redundant in this although...but construction."
+      ],
+      "negativeCases": [
+        {
+          "text": "Although it was late, we continued.",
+          "reason": "Correct contrast clause."
+        }
+      ],
+      "practice": [
+        {
+          "type": "guided-production",
+          "prompt": "Join two ideas using although.",
+          "promptEs": "Une dos ideas usando although."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "connectors",
+          "cohesion",
+          "contrast"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-B2-ARGUMENT-CLAIMS-001",
+      "implementation": "argument-claims",
+      "level": "B2",
+      "category": "argumentation",
+      "title": "Support a claim with reasons and qualified evidence",
+      "titleEs": "Sustenta una afirmación con razones y evidencia matizada",
+      "explanation": "A clear argument distinguishes a claim, supporting reason, evidence and limitation; avoid presenting correlation as proof of causation.",
+      "explanationEs": "Un argumento claro distingue afirmación, razón, evidencia y limitación; evita presentar correlación como prueba de causalidad.",
+      "examples": [
+        "The results suggest that the method may improve retention, although the sample was small.",
+        "One limitation is that the study included only one class."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The results suggest that the method may improve retention, although the sample was small.",
+          "es": "Los resultados sugieren que el método podría mejorar la retención, aunque la muestra era pequeña."
+        },
+        {
+          "en": "One limitation is that the study included only one class.",
+          "es": "Una limitación es que el estudio incluyó una sola clase."
+        }
+      ],
+      "incorrect": [
+        "The results prove the method always works, based only on one small class."
+      ],
+      "exceptions": [
+        "The strength of wording must match the evidence.",
+        "May, might, suggest and indicate express different degrees of certainty."
+      ],
+      "negativeCases": [
+        {
+          "text": "The results may suggest an improvement.",
+          "reason": "Qualified wording is appropriate when evidence is limited."
+        }
+      ],
+      "practice": [
+        {
+          "type": "guided-production",
+          "prompt": "Write a claim with a qualification and a supporting reason.",
+          "promptEs": "Escribe una afirmación con matización y una razón de apoyo."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "argumentation",
+          "evidence",
+          "qualification"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-B2-COHESION-001",
+      "implementation": "textual-cohesion",
+      "level": "B2",
+      "category": "textual-cohesion",
+      "title": "Maintain cohesion with reference and lexical links",
+      "titleEs": "Mantén la cohesión mediante referencias y enlaces léxicos",
+      "explanation": "Use pronouns, repeated key terms, synonyms and transition signals so readers can identify what each expression refers to.",
+      "explanationEs": "Usa pronombres, términos clave, sinónimos y conectores para que el lector identifique los referentes.",
+      "examples": [
+        "The prototype failed the first test. This result led us to redesign the sensor.",
+        "The team revised the plan; consequently, the launch date changed."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The prototype failed the first test. This result led us to redesign the sensor.",
+          "es": "El prototipo falló la primera prueba. Este resultado nos llevó a rediseñar el sensor."
+        },
+        {
+          "en": "The team revised the plan; consequently, the launch date changed.",
+          "es": "El equipo revisó el plan; en consecuencia, cambió la fecha de lanzamiento."
+        }
+      ],
+      "incorrect": [
+        "The prototype failed. It was changed. This did that."
+      ],
+      "exceptions": [
+        "Repetition can be useful for clarity; avoid ambiguous synonyms.",
+        "Transition signals express different logical relationships and are not interchangeable."
+      ],
+      "negativeCases": [
+        {
+          "text": "The team revised the plan; consequently, the launch date changed.",
+          "reason": "The transition clearly expresses a result."
+        }
+      ],
+      "practice": [
+        {
+          "type": "guided-production",
+          "prompt": "Revise a paragraph to clarify references and logical links.",
+          "promptEs": "Revisa un párrafo para aclarar referencias y relaciones lógicas."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "cohesion",
+          "reference",
+          "transitions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft"
     }
   ],
   "vocabularyEntries": [
@@ -6188,6 +7116,611 @@
         "Practice helps me build confidence."
       ],
       "openClass": true
+    },
+    {
+      "id": "VOC-A1-FAMILY-FATHER",
+      "lemma": "father",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "family",
+      "meaningEs": "padre",
+      "forms": [
+        "father",
+        "fathers"
+      ],
+      "collocations": [
+        "father"
+      ],
+      "examples": [
+        "My father is kind."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My father is kind.",
+          "es": "Mi padre es amable."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-FAMILY-MOTHER",
+      "lemma": "mother",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "family",
+      "meaningEs": "madre",
+      "forms": [
+        "mother",
+        "mothers"
+      ],
+      "collocations": [
+        "mother"
+      ],
+      "examples": [
+        "My mother works at a school."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My mother works at a school.",
+          "es": "Mi madre trabaja en un colegio."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-FAMILY-CHILD",
+      "lemma": "child",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "family",
+      "meaningEs": "niño/a; hijo/a",
+      "forms": [
+        "child",
+        "children"
+      ],
+      "collocations": [
+        "child"
+      ],
+      "examples": [
+        "My child likes robots."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My child likes robots.",
+          "es": "A mi hijo le gustan los robots."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PEOPLE-FRIEND",
+      "lemma": "friend",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "people",
+      "meaningEs": "amigo/a",
+      "forms": [
+        "friend",
+        "friends"
+      ],
+      "collocations": [
+        "friend"
+      ],
+      "examples": [
+        "My friend studies English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My friend studies English.",
+          "es": "Mi amigo estudia inglés."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-CLASSROOM-BOOK",
+      "lemma": "book",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "classroom",
+      "meaningEs": "libro",
+      "forms": [
+        "book",
+        "books"
+      ],
+      "collocations": [
+        "book"
+      ],
+      "examples": [
+        "This book is useful."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This book is useful.",
+          "es": "Este libro es útil."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-CLASSROOM-PEN",
+      "lemma": "pen",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "classroom",
+      "meaningEs": "bolígrafo",
+      "forms": [
+        "pen",
+        "pens"
+      ],
+      "collocations": [
+        "pen"
+      ],
+      "examples": [
+        "I have a pen."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have a pen.",
+          "es": "Tengo un bolígrafo."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-CLASSROOM-CHAIR",
+      "lemma": "chair",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "classroom",
+      "meaningEs": "silla",
+      "forms": [
+        "chair",
+        "chairs"
+      ],
+      "collocations": [
+        "chair"
+      ],
+      "examples": [
+        "The chair is near the table."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The chair is near the table.",
+          "es": "La silla está cerca de la mesa."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-CLASSROOM-TABLE",
+      "lemma": "table",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "classroom",
+      "meaningEs": "mesa",
+      "forms": [
+        "table",
+        "tables"
+      ],
+      "collocations": [
+        "table"
+      ],
+      "examples": [
+        "The sensor is on the table."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The sensor is on the table.",
+          "es": "El sensor está sobre la mesa."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PLACES-HOME",
+      "lemma": "home",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "places",
+      "meaningEs": "casa; hogar",
+      "forms": [
+        "home",
+        "homes"
+      ],
+      "collocations": [
+        "home"
+      ],
+      "examples": [
+        "I study English at home."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I study English at home.",
+          "es": "Estudio inglés en casa."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PLACES-SCHOOL",
+      "lemma": "school",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "places",
+      "meaningEs": "colegio; escuela",
+      "forms": [
+        "school",
+        "schools"
+      ],
+      "collocations": [
+        "school"
+      ],
+      "examples": [
+        "I work at a school."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I work at a school.",
+          "es": "Trabajo en un colegio."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-TIME-TODAY",
+      "lemma": "today",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "time",
+      "meaningEs": "hoy",
+      "forms": [
+        "today"
+      ],
+      "collocations": [
+        "today"
+      ],
+      "examples": [
+        "I am studying today."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am studying today.",
+          "es": "Estoy estudiando hoy."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-TIME-TOMORROW",
+      "lemma": "tomorrow",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "time",
+      "meaningEs": "mañana",
+      "forms": [
+        "tomorrow"
+      ],
+      "collocations": [
+        "tomorrow"
+      ],
+      "examples": [
+        "We have class tomorrow."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We have class tomorrow.",
+          "es": "Tenemos clase mañana."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-VERB-NEED",
+      "lemma": "need",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "daily-life",
+      "meaningEs": "necesitar",
+      "forms": [
+        "need",
+        "needs",
+        "needed",
+        "needing"
+      ],
+      "collocations": [
+        "need"
+      ],
+      "examples": [
+        "I need help with this exercise."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I need help with this exercise.",
+          "es": "Necesito ayuda con este ejercicio."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-VERB-WANT",
+      "lemma": "want",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "daily-life",
+      "meaningEs": "querer",
+      "forms": [
+        "want",
+        "wants",
+        "wanted",
+        "wanting"
+      ],
+      "collocations": [
+        "want"
+      ],
+      "examples": [
+        "I want to learn English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I want to learn English.",
+          "es": "Quiero aprender inglés."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-VERB-LIVE",
+      "lemma": "live",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "identity",
+      "meaningEs": "vivir",
+      "forms": [
+        "live",
+        "lives",
+        "liveed",
+        "liveing"
+      ],
+      "collocations": [
+        "live"
+      ],
+      "examples": [
+        "I live in Colombia."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I live in Colombia.",
+          "es": "Vivo en Colombia."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-VERB-LEARN",
+      "lemma": "learn",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "aprender",
+      "forms": [
+        "learn",
+        "learns",
+        "learned",
+        "learning"
+      ],
+      "collocations": [
+        "learn"
+      ],
+      "examples": [
+        "I learn English every day."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I learn English every day.",
+          "es": "Aprendo inglés todos los días."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-QUESTION-WHERE",
+      "lemma": "where",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "dónde",
+      "forms": [
+        "where"
+      ],
+      "collocations": [
+        "where"
+      ],
+      "examples": [
+        "Where do you live?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Where do you live?",
+          "es": "¿Dónde vives?"
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-QUESTION-WHAT",
+      "lemma": "what",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "qué; cuál",
+      "forms": [
+        "what"
+      ],
+      "collocations": [
+        "what"
+      ],
+      "examples": [
+        "What is your name?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "What is your name?",
+          "es": "¿Cómo te llamas?"
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A2-TECH-SENSOR",
+      "lemma": "sensor",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sensor",
+      "forms": [
+        "sensor",
+        "sensors"
+      ],
+      "collocations": [
+        "sensor"
+      ],
+      "examples": [
+        "The sensor measures temperature."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The sensor measures temperature.",
+          "es": "El sensor mide la temperatura."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A2-TECH-CIRCUIT",
+      "lemma": "circuit",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "circuito",
+      "forms": [
+        "circuit",
+        "circuits"
+      ],
+      "collocations": [
+        "circuit"
+      ],
+      "examples": [
+        "We tested the circuit."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We tested the circuit.",
+          "es": "Probamos el circuito."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A2-LEARNING-IMPROVE",
+      "lemma": "improve",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "mejorar",
+      "forms": [
+        "improve",
+        "improves",
+        "improveed",
+        "improveing"
+      ],
+      "collocations": [
+        "improve"
+      ],
+      "examples": [
+        "Practice helps me improve my English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Practice helps me improve my English.",
+          "es": "La práctica me ayuda a mejorar mi inglés."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-B1-ACADEMIC-EVIDENCE",
+      "lemma": "evidence",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "science",
+      "meaningEs": "evidencia",
+      "forms": [
+        "evidence",
+        "evidences"
+      ],
+      "collocations": [
+        "evidence"
+      ],
+      "examples": [
+        "We need more evidence."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We need more evidence.",
+          "es": "Necesitamos más evidencia."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-B2-ARGUMENT-CLAIM",
+      "lemma": "claim",
+      "partOfSpeech": "noun",
+      "level": "B2",
+      "domain": "argumentation",
+      "meaningEs": "afirmación; tesis",
+      "forms": [
+        "claim",
+        "claims"
+      ],
+      "collocations": [
+        "claim"
+      ],
+      "examples": [
+        "The claim needs stronger evidence."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The claim needs stronger evidence.",
+          "es": "La afirmación necesita evidencia más sólida."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-B2-COHESION-NEVERTHELESS",
+      "lemma": "nevertheless",
+      "partOfSpeech": "adverb",
+      "level": "B2",
+      "domain": "communication",
+      "meaningEs": "sin embargo; aun así",
+      "forms": [
+        "nevertheless"
+      ],
+      "collocations": [
+        "nevertheless"
+      ],
+      "examples": [
+        "The sample was small; nevertheless, the result is useful."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The sample was small; nevertheless, the result is useful.",
+          "es": "La muestra era pequeña; aun así, el resultado es útil."
+        }
+      ],
+      "openClass": true
     }
   ],
   "testCases": [
@@ -6630,6 +8163,112 @@
       "text": "The students are in the classroom.",
       "expectRules": [],
       "expectCorrection": "The students are in the classroom."
+    },
+    {
+      "id": "TC-PLURAL-COUNT-001",
+      "text": "I have two robot.",
+      "expectRules": [
+        "PLURAL-COUNT-001"
+      ],
+      "expectCorrection": "I have two robots."
+    },
+    {
+      "id": "TC-PLURAL-COUNT-002",
+      "text": "We use several sensor.",
+      "expectRules": [
+        "PLURAL-COUNT-001"
+      ],
+      "expectCorrection": "We use several sensors."
+    },
+    {
+      "id": "TC-PLURAL-COUNT-NEG-001",
+      "text": "I have one robot.",
+      "expectRules": [],
+      "expectCorrection": "I have one robot."
+    },
+    {
+      "id": "TC-PLURAL-COUNT-NEG-002",
+      "text": "We need some equipment.",
+      "expectRules": [],
+      "expectCorrection": "We need some equipment."
+    },
+    {
+      "id": "TC-THERE-BE-001",
+      "text": "There are a robot in the lab.",
+      "expectRules": [
+        "THERE-BE-COUNT-001"
+      ],
+      "expectCorrection": "There is a robot in the lab."
+    },
+    {
+      "id": "TC-THERE-BE-NEG-001",
+      "text": "There are two robots.",
+      "expectRules": [],
+      "expectCorrection": "There are two robots."
+    },
+    {
+      "id": "TC-DOES-BASE-001",
+      "text": "Does she teaches robotics?",
+      "expectRules": [
+        "DOES-BASE-001"
+      ],
+      "expectCorrection": "Does she teach robotics?"
+    },
+    {
+      "id": "TC-DOES-BASE-NEG-001",
+      "text": "She teaches robotics.",
+      "expectRules": [],
+      "expectCorrection": "She teaches robotics."
+    },
+    {
+      "id": "TC-MODAL-BASE-001",
+      "text": "She can builds a robot.",
+      "expectRules": [
+        "MODAL-BASE-001"
+      ],
+      "expectCorrection": "She can build a robot."
+    },
+    {
+      "id": "TC-MODAL-BASE-NEG-001",
+      "text": "She can build a robot.",
+      "expectRules": [],
+      "expectCorrection": "She can build a robot."
+    },
+    {
+      "id": "TC-PAST-DID-001",
+      "text": "Did you went to the lab?",
+      "expectRules": [
+        "PAST-DID-BASE-001"
+      ],
+      "expectCorrection": "Did you go to the lab?"
+    },
+    {
+      "id": "TC-PAST-DID-NEG-001",
+      "text": "She went to the lab yesterday.",
+      "expectRules": [],
+      "expectCorrection": "She went to the lab yesterday."
+    },
+    {
+      "id": "TC-PRES-CONT-001",
+      "text": "I am teach now.",
+      "expectRules": [
+        "PRES-CONT-BASE-001"
+      ],
+      "expectCorrection": "I am teaching now."
+    },
+    {
+      "id": "TC-PRES-CONT-002",
+      "text": "They are build a robot.",
+      "expectRules": [
+        "PRES-CONT-BASE-001"
+      ],
+      "expectCorrection": "They are building a robot."
+    },
+    {
+      "id": "TC-PRES-CONT-NEG-001",
+      "text": "I am ready.",
+      "expectRules": [],
+      "expectCorrection": "I am ready."
     }
   ],
   "cefrDimensions": {
@@ -6674,5 +8313,18 @@
       "tags",
       "review"
     ]
+  },
+  "build": {
+    "generatorVersion": "1.1.0",
+    "packs": [
+      "coverage-2026-02.json",
+      "expansion-2026-01.json"
+    ],
+    "counts": {
+      "communicativeFunctions": 47,
+      "grammarRules": 88,
+      "vocabularyEntries": 183,
+      "testCases": 84
+    }
   }
 }
