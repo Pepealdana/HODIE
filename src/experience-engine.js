@@ -52,7 +52,7 @@ function buildLanguageNotes(experience, stage, text) {
     },
     {
       id: "capital-i",
-      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/i,
+      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/,
       replacement: (_match, prefix) => prefix + "I",
       message: 'The pronoun "I" is always capitalized in English.',
       messageEs: 'El pronombre "I" siempre se escribe con mayúscula en inglés.',
@@ -131,6 +131,7 @@ function buildLanguageNotes(experience, stage, text) {
     if (!match) continue;
     const replacement = rule.replacement(...match);
     const next = corrected.replace(rule.pattern, replacement);
+    if (next === corrected) continue;
     notes.push(createError({
       activity: { id: `${experience.id}-${stage.id}`, context: experience.contexts?.[0] || "general" },
       type: "grammar",
