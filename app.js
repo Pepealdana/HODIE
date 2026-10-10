@@ -11,6 +11,7 @@ import { getIntegratedUnit, createIntegratedUnitState, submitIntegratedStep, adv
 import { createFeedbackContract } from "./src/feedback-contract.js";
 import { analyzeLanguage } from "./src/linguistic-engine.js";
 import { getLinguisticResourcesForActivity } from "./src/linguistic-activity-links.js";
+import { searchLinguisticKnowledge } from "./src/linguistic-knowledge-index.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -707,9 +708,35 @@ function applyLinguisticReview(response, result = {}, skill = "writing") {
   const linguisticLinks = getLinguisticResourcesForActivity(activity);
   if (!text || !["writing", "speaking"].includes(skill)) return { ...result, linguisticLinks };
   const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 1 });
-  if (!review.errors.length || review.correctedText === text) return { ...result, linguisticLinks };
+  const contextualSuggestions = searchLinguisticKnowledge(text, {
+    types: ["grammar", "vocabulary"],
+    learnerLevel: profile?.level || "A2",
+    includeDrafts: true,
+    limit: 5
+  }).filter(item => item.score >= 12 && (item.recordType === "grammar" ? Boolean(item.explanation && item.explanationEs) : Boolean(item.meaningEs)))
+    .slice(0, 2)
+    .map(item => ({
+      id: item.id,
+      recordType: item.recordType,
+      title: item.title || item.lemma || item.id,
+      titleEs: item.titleEs || item.meaningEs || "",
+      explanation: item.explanation || "",
+      explanationEs: item.explanationEs || item.meaningEs || "",
+      example: item.examples?.[0] || item.examplesBilingual?.[0]?.en || "",
+      exampleEs: item.examplesBilingual?.[0]?.es || "",
+      status: item.status || "knowledge-only",
+      score: item.score
+    }));
+  if (!review.errors.length || review.correctedText === text) {
+    return { ...result, linguisticLinks, linguisticReview: {
+      schemaVersion: review.schemaVersion,
+      status: "not-fully-evaluated",
+      note: "No known rule matched. This is not a complete grammar check.",
+      noteEs: "Ninguna regla conocida coincidió. Esto no es una revisión gramatical completa."
+    }, contextualSuggestions };
+  }
   const corrections = review.errors.map(error => ({ ...error, id: `LING-${error.ruleId}`, correctedText: review.correctedText, source: "linguistic-catalog" }));
-  return { ...result, linguisticLinks, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, ruleIds: review.errors.map(error => error.ruleId), note: "Rule-based review covers only implemented patterns; it is not a complete grammar check." } };
+  return { ...result, linguisticLinks, contextualSuggestions, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, status: "issues-detected", ruleIds: review.errors.map(error => error.ruleId), note: "Rule-based review covers only implemented patterns; it is not a complete grammar check." } };
 }
 
 function handleExperienceResponse(experience, stage, response) {
@@ -752,22 +779,31 @@ function handleExperienceResponse(experience, stage, response) {
   const missingLabels = feedbackContract.missing.map((item) => item.label || item.id);
   const firstCorrection = languageNotes[0];
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
-  const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Practice feedback · Comentario de práctica";
+  const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Not fully checked · Revisión parcial";
   const feedbackBody = firstCorrection
     ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>"
     : missingLabels.length
       ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
-      : "<p>No issue matched HODIE's current rules. This does not mean every sentence is correct. Review the transcript and edit any word that does not express what you meant.</p><p class=\"spanish\">Ninguna regla actual de HODIE detectó un error. Eso no significa que todas las frases sean correctas. Revisa la transcripción y edita las palabras que no expresen lo que querías decir.</p>";
+      : "<p>No known rule matched this response. HODIE has not verified that every sentence is correct. Review the transcript and edit any word that does not express what you meant.</p><p class=\"spanish\">Ninguna regla conocida coincidió con esta respuesta. HODIE no ha verificado que todas las frases sean correctas. Revisa la transcripción y edita las palabras que no expresen lo que querías decir.</p>";
   const nextTip = !languageNotes.length && !missingLabels.length && result.nextStep?.instruction ? "<p class=\"next-tip\"><strong>Next tip · Siguiente consejo:</strong> " + escapeHtml(result.nextStep.instruction) + " <span class=\"spanish\">" + escapeHtml(result.nextStep.instructionEs || "") + "</span></p>" : "";
+  const relatedTips = !languageNotes.length && !missingLabels.length ? (result.contextualSuggestions || []).slice(0, 2).map(item =>
+    '<div class="related-language-tip"><strong>Related learning tip · Recurso relacionado</strong><p>' + escapeHtml(item.title) + (item.titleEs ? ' · <span class="spanish">' + escapeHtml(item.titleEs) + '</span>' : '') + '</p>' +
+    (item.explanation ? '<p>' + escapeHtml(item.explanation) + '</p>' : '') +
+    (item.explanationEs ? '<p class="spanish">' + escapeHtml(item.explanationEs) + '</p>' : '') +
+    (item.example ? '<p><strong>Example:</strong> ' + escapeHtml(item.example) + '</p>' : '') +
+    (item.exampleEs ? '<p class="spanish">' + escapeHtml(item.exampleEs) + '</p>' : '') +
+    '<p class="spanish">Este recurso está relacionado con algunas palabras de tu respuesta; no significa que HODIE haya detectado un error en esa regla.</p></div>'
+  ).join("") : "";
   feedback.innerHTML =
     '<section class="instant-feedback ' + (languageNotes.length || missingLabels.length ? "feedback-retry" : "feedback-neutral") + ' experience-turn-feedback">' +
       '<strong>' + feedbackTitle + '</strong>' +
       inlineCorrection +
       feedbackBody +
+      relatedTips +
       nextTip +
       '<div class="actions">' +
-        (languageNotes.length || missingLabels.length ? '<button class="secondary compact" id="retryExperienceButton" type="button">Revise answer · Revisar respuesta</button>' : '') +
-        '<button class="primary compact" id="nextExperienceButton" type="button">' + (experienceSession.index + 1 >= experience.stages.length ? "View review · Ver resumen" : "Next question →") + '</button>' +
+        '<button class="secondary compact" id="retryExperienceButton" type="button">' + (languageNotes.length || missingLabels.length ? "Revise answer · Revisar respuesta" : "Review transcript · Revisar transcripción") + '</button>' +
+        '<button class="primary compact" id="nextExperienceButton" type="button">' + (languageNotes.length || missingLabels.length ? (experienceSession.index + 1 >= experience.stages.length ? "Continue anyway · Continuar" : "Continue anyway →") : (experienceSession.index + 1 >= experience.stages.length ? "View review · Ver resumen" : "Continue anyway →")) + '</button>' +
       '</div>' +
     '</section>';
   document.querySelector("#nextExperienceButton").addEventListener("click", () => {
