@@ -1009,15 +1009,15 @@
       "category": "prepositions",
       "title": "Use work at for a workplace",
       "titleEs": "Usa work at para el lugar de trabajo",
-      "explanation": "Use work at for a workplace such as a school or office. Other prepositions may be correct with different meanings.",
-      "explanationEs": "Usa work at para un lugar de trabajo como una escuela o una oficina. Otras preposiciones pueden ser correctas con significados diferentes.",
+      "explanation": "When describing your workplace, use work at a school. Work on a school can be correct if you mean working on its construction or improvement.",
+      "explanationEs": "Para describir tu lugar de trabajo, usa work at a school. Work on a school puede ser correcto si te refieres a trabajar en su construcción o mejora.",
       "examples": [
         "I work at a school.",
         "I work on a project.",
         "I work with students."
       ],
       "incorrect": [
-        "I work on a school."
+        "I am a teacher. I work on a school."
       ],
       "severity": "medium",
       "priority": "medium",
@@ -1240,11 +1240,11 @@
     },
     {
       "id": "TC-WORK-PREPOSITION-01",
-      "text": "I work on a school.",
+      "text": "I am a teacher. I work on a school.",
       "expectRules": [
         "WORK-PLACE-001"
       ],
-      "expectCorrection": "I work at a school."
+      "expectCorrection": "I am a teacher. I work at a school."
     },
     {
       "id": "TC-REPEATED-CONNECTOR-01",
