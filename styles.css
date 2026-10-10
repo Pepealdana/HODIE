@@ -724,3 +724,57 @@ html[data-theme="dark"] body { background: #101827; }
   color: #fff4dd;
   background: #3a2d18;
 }
+
+/* Inline learner feedback: mark the exact word before showing a model version. */
+.inline-writing-review,
+.speech-comparison {
+  margin: 10px 0 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-alt);
+  color: var(--ink);
+}
+.inline-writing-text {
+  margin: 6px 0 10px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.inline-error-word,
+.speech-word-review {
+  padding: 1px 3px;
+  border-radius: 4px;
+  color: var(--ink);
+  background: var(--warning-bg);
+  text-decoration: underline wavy var(--danger);
+  text-underline-offset: 3px;
+}
+.inline-writing-corrected {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+.speech-target {
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+.speech-comparison .spanish {
+  color: var(--muted);
+}
+[data-theme="dark"] .inline-writing-review,
+[data-theme="dark"] .speech-comparison {
+  background: #202b3d;
+  color: #f4f6f8;
+  border-color: #465267;
+}
+[data-theme="dark"] .inline-error-word,
+[data-theme="dark"] .speech-word-review {
+  background: #49361a;
+  color: #fff1d0;
+}
+[data-theme="dark"] .speech-comparison .spanish {
+  color: #c6d0de;
+}
+#microFeedback {
+  scroll-margin-top: 18px;
+}
