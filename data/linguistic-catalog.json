@@ -371,25 +371,6 @@
       "status": "tested"
     },
     {
-      "id": "COLL-ENJOY-001",
-      "implementation": "enjoy-to",
-      "level": "A2",
-      "category": "collocations",
-      "title": "Combine enjoy with -ing",
-      "titleEs": "Combina enjoy con -ing",
-      "explanation": "The natural pattern is enjoy + noun/-ing, not enjoy + to-infinitive.",
-      "explanationEs": "El patrón natural es enjoy + sustantivo/-ing, no enjoy + to + infinitivo.",
-      "examples": [
-        "I enjoy working with students."
-      ],
-      "incorrect": [
-        "I enjoy to work with students."
-      ],
-      "severity": "high",
-      "priority": "high",
-      "status": "tested"
-    },
-    {
       "id": "SPELL-OPEN-001",
       "implementation": "open-vocabulary-policy",
       "level": "A1-B1",
