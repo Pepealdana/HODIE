@@ -40,6 +40,11 @@ const first = evaluateExperienceTurn(
 assert.equal(first.responseProvided, true);
 assert.equal(first.canContinue, true);
 assert.equal(first.matched.length, 1);
+assert.ok(first.strengths.some((item) => item.id === "work"));
+assert.ok(first.nextStep?.instruction);
+assert.ok(first.wordCount > 0);
+assert.ok(first.sentenceCount >= 1);
+assert.ok(["language-note", "task-focus", "practice-guidance"].includes(first.feedbackStatus));
 
 session = advanceExperienceSession(session, first);
 assert.equal(session.index, 1);
@@ -68,7 +73,37 @@ assert.equal(summary.completed, true);
 assert.equal(summary.turns, 5);
 assert.ok(summary.corrections.length >= 1);
 
+const noGrammarIssue = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "I am a technology teacher. I work at a school and I enjoy robotics."
+);
+assert.equal(noGrammarIssue.canContinue, true);
+assert.equal(noGrammarIssue.corrections.length, 0);
+assert.ok(noGrammarIssue.strengths.length > 0);
+assert.ok(noGrammarIssue.nextStep.instruction);
+assert.equal(noGrammarIssue.feedbackStatus, "practice-guidance");
+
+const missingGoal = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[0],
+  "I like technology because it is interesting."
+);
+assert.equal(missingGoal.missing.length, 1);
+assert.match(missingGoal.nextStep.instruction, /Mention your job|job|what you do/i);
+
+const summaryWithNoCorrections = summarizeExperience(conversation, {
+  ...session,
+  corrections: [],
+  responses: [noGrammarIssue]
+});
+assert.ok(summaryWithNoCorrections.strengths.length > 0);
+assert.equal(summaryWithNoCorrections.practiceSteps.length, 1);
+assert.ok(summaryWithNoCorrections.practiceSteps[0].instruction);
+
 const empty = evaluateExperienceTurn(conversation, conversation.stages[0], " ");
 assert.equal(empty.canContinue, false);
+assert.equal(empty.feedbackStatus, "empty");
+assert.equal(empty.nextStep, null);
 
 console.log("HODIE Learning Experiences v1: PASS");
