@@ -50,38 +50,7 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ]
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "ASK_BASIC_QUESTIONS_A1",
@@ -150,38 +119,7 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ]
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "DESCRIBE_OBJECTS_A1",
@@ -243,38 +181,7 @@
       },
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ]
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "DESCRIBE_CURRENT_ACTIONS_A2",
@@ -336,38 +243,7 @@
       },
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ]
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "REPORT_EXPERIENCE_B1",
@@ -429,38 +305,7 @@
       },
       "depthProfile": {
         "targetLevel": "B2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ]
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "BUILD_ARGUMENT_B2",
@@ -571,39 +416,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "PLURAL-COUNT-001",
@@ -704,39 +518,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "THERE-BE-COUNT-001",
@@ -841,39 +624,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "DOES-BASE-001",
@@ -979,39 +731,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "MODAL-BASE-001",
@@ -1116,39 +837,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "PAST-DID-BASE-001",
@@ -1253,39 +943,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "PRES-CONT-BASE-001",
@@ -1371,39 +1030,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-B1-FIRST-CONDITIONAL-002",
@@ -1489,39 +1117,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-B1-CONNECTORS-002",
@@ -1607,39 +1204,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-B2-ARGUMENT-CLAIMS-001",
@@ -1725,39 +1291,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-B2-COHESION-001",
@@ -1852,39 +1387,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-QUESTION-001",
@@ -1984,39 +1488,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-PREP-TIME-001",
@@ -2116,39 +1589,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-PREP-PLACE-001",
@@ -2248,39 +1690,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-PRES-PERF-001",
@@ -2376,39 +1787,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-PASSIVE-001",
@@ -2507,39 +1887,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-INDIRECT-QUESTION-001",
@@ -2639,39 +1988,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-DO-QUESTIONS-001",
@@ -2772,39 +2090,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-PLURAL-S-001",
@@ -2904,39 +2191,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A2-B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-ARTICLE-GENERAL-001",
@@ -3036,39 +2292,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-OBJECT-PRONOUN-001",
@@ -3168,39 +2393,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-SINCE-FOR-001",
@@ -3300,39 +2494,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-ALTHOUGH-001",
@@ -3428,39 +2591,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-COND-001",
@@ -3563,39 +2695,8 @@
       "correctionPolicy": "feedback-only",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "GRAM-SUBJECT-PRONOUNS-001",
@@ -3689,39 +2790,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "CAP-I-001",
@@ -3815,39 +2885,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "SPELL-TEACHER-001",
@@ -3942,39 +2981,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "ART-JOB-001",
@@ -4070,39 +3078,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "ART-A-AN-001",
@@ -4202,39 +3179,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "BE-SUBJECT-001",
@@ -4328,39 +3274,8 @@
       "correctionPolicy": "automatic-tested",
       "depthProfile": {
         "targetLevel": "A1-A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "CONN-REPEAT-001",
@@ -4411,39 +3326,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "father",
@@ -4490,39 +3374,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "mother",
@@ -4569,39 +3422,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "child",
@@ -4648,39 +3470,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "friend",
@@ -4727,39 +3518,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "book",
@@ -4806,39 +3566,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "pen",
@@ -4885,39 +3614,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "chair",
@@ -4964,39 +3662,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "table",
@@ -5043,39 +3710,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "home",
@@ -5122,39 +3758,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "school",
@@ -5200,39 +3805,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "today",
@@ -5277,39 +3851,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "tomorrow",
@@ -5357,39 +3900,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "need",
@@ -5440,39 +3952,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "want",
@@ -5523,39 +4004,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "live",
@@ -5606,39 +4056,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "learn",
@@ -5685,39 +4104,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "where",
@@ -5762,39 +4150,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "what",
@@ -5840,39 +4197,8 @@
       },
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "sensor",
@@ -5918,39 +4244,8 @@
       },
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "circuit",
@@ -5999,39 +4294,8 @@
       },
       "depthProfile": {
         "targetLevel": "A2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "improve",
@@ -6080,39 +4344,8 @@
       },
       "depthProfile": {
         "targetLevel": "B1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "evidence",
@@ -6159,39 +4392,8 @@
       },
       "depthProfile": {
         "targetLevel": "B2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "claim",
@@ -6237,39 +4439,8 @@
       },
       "depthProfile": {
         "targetLevel": "B2",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "nevertheless",
@@ -6314,39 +4485,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "I",
@@ -6391,39 +4531,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "you",
@@ -6468,39 +4577,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "he",
@@ -6545,39 +4623,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "she",
@@ -6622,39 +4669,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "it",
@@ -6699,39 +4715,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "we",
@@ -6776,39 +4761,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "they",
@@ -6853,39 +4807,8 @@
       },
       "depthProfile": {
         "targetLevel": "A1",
-        "stages": [
-          {
-            "id": "recognition",
-            "label": "Recognition",
-            "labelEs": "Reconocer",
-            "minimumEvidence": 0
-          },
-          {
-            "id": "guided",
-            "label": "Guided",
-            "labelEs": "Uso guiado",
-            "minimumEvidence": 1
-          },
-          {
-            "id": "independent",
-            "label": "Independent",
-            "labelEs": "Uso independiente",
-            "minimumEvidence": 2
-          },
-          {
-            "id": "nuance",
-            "label": "Nuance",
-            "labelEs": "Matices y precisión",
-            "minimumEvidence": 4
-          },
-          {
-            "id": "transfer",
-            "label": "Transfer",
-            "labelEs": "Transferencia",
-            "minimumEvidence": 6
-          }
-        ],
-        "correctionIgnoresProgression": true
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
       },
       "searchTerms": [
         "me",
