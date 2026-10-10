@@ -17,7 +17,7 @@ assert.match(app, /searchLinguisticKnowledge\(text/);
 assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
-assert.match(app, /No known rule matched\. This is not a complete grammar check\./);
+assert.match(app, /No known rule matched this response/);
 assert.match(worker, /hodie-shell-v27/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
