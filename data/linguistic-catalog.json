@@ -654,6 +654,345 @@
       "severity": "medium",
       "priority": "high",
       "status": "tested"
+    },
+    {
+      "id": "GRAM-PRES-CONT-001",
+      "implementation": "present-continuous",
+      "level": "A2",
+      "category": "verb-forms",
+      "title": "Present Continuous",
+      "titleEs": "Presente continuo",
+      "explanation": "Use be + verb-ing for actions happening now.",
+      "explanationEs": "Usa be + verbo terminado en -ing para acciones que ocurren ahora.",
+      "examples": [
+        "I am teaching now.",
+        "The students are building a robot."
+      ],
+      "incorrect": [
+        "I teaching now."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-PAST-001",
+      "implementation": "past-simple",
+      "level": "A2",
+      "category": "verb-forms",
+      "title": "Past Simple for finished events",
+      "titleEs": "Pasado simple para hechos terminados",
+      "explanation": "Use the past form for completed past events, often with a finished time expression.",
+      "explanationEs": "Usa la forma pasada para hechos terminados, a menudo con una expresión de tiempo pasado.",
+      "examples": [
+        "I taught a class yesterday.",
+        "We built a robot last week."
+      ],
+      "incorrect": [
+        "Yesterday I teach a class."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-FUTURE-001",
+      "implementation": "future-plans",
+      "level": "A2",
+      "category": "verb-forms",
+      "title": "Going to for plans",
+      "titleEs": "Going to para planes",
+      "explanation": "Use be going to + base verb for intentions and plans.",
+      "explanationEs": "Usa be going to + verbo base para intenciones y planes.",
+      "examples": [
+        "I am going to build a robot.",
+        "We are going to study English."
+      ],
+      "incorrect": [
+        "I going to build a robot."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-THERE-001",
+      "implementation": "there-is-are",
+      "level": "A2",
+      "category": "sentence-structure",
+      "title": "There is / There are",
+      "titleEs": "There is / There are",
+      "explanation": "Use there is with a singular noun and there are with a plural noun.",
+      "explanationEs": "Usa there is con un sustantivo singular y there are con uno plural.",
+      "examples": [
+        "There is a robot in the lab.",
+        "There are ten students."
+      ],
+      "incorrect": [
+        "There are a robot in the lab."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-QUESTION-001",
+      "implementation": "question-order",
+      "level": "A2",
+      "category": "syntax",
+      "title": "Basic question word order",
+      "titleEs": "Orden básico de preguntas",
+      "explanation": "In many present-simple questions, use do/does + subject + base verb.",
+      "explanationEs": "En muchas preguntas en presente simple, usa do/does + sujeto + verbo base.",
+      "examples": [
+        "Where do you work?",
+        "Does she teach English?"
+      ],
+      "incorrect": [
+        "Where you work?"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-CAN-001",
+      "implementation": "modal-ability",
+      "level": "A2",
+      "category": "modal-verbs",
+      "title": "Can and can't for ability",
+      "titleEs": "Can y can't para expresar capacidad",
+      "explanation": "Use can/can't + base verb to express ability or inability.",
+      "explanationEs": "Usa can/can't + verbo base para expresar capacidad o incapacidad.",
+      "examples": [
+        "I can explain the project.",
+        "She can't come today."
+      ],
+      "incorrect": [
+        "I can to explain the project."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-COMP-001",
+      "implementation": "comparatives",
+      "level": "A2",
+      "category": "comparison",
+      "title": "Comparatives",
+      "titleEs": "Comparativos",
+      "explanation": "Use comparative forms to compare two people or things.",
+      "explanationEs": "Usa formas comparativas para comparar dos personas o cosas.",
+      "examples": [
+        "This robot is faster than that one.",
+        "English is more useful for this project."
+      ],
+      "incorrect": [
+        "This robot is more fast."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-QUANT-001",
+      "implementation": "much-many",
+      "level": "A2",
+      "category": "quantifiers",
+      "title": "Much and many",
+      "titleEs": "Much y many",
+      "explanation": "Use many with countable plural nouns and much with uncountable nouns.",
+      "explanationEs": "Usa many con sustantivos contables en plural y much con incontables.",
+      "examples": [
+        "many students",
+        "much time"
+      ],
+      "incorrect": [
+        "much students"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-TIME-PREP-001",
+      "implementation": "time-prepositions",
+      "level": "A2",
+      "category": "prepositions",
+      "title": "Prepositions of time",
+      "titleEs": "Preposiciones de tiempo",
+      "explanation": "Use at for clock times, on for days and dates, and in for months, years and longer periods.",
+      "explanationEs": "Usa at para horas, on para días y fechas, e in para meses, años y periodos largos.",
+      "examples": [
+        "at 8 o'clock",
+        "on Monday",
+        "in October"
+      ],
+      "incorrect": [
+        "in Monday"
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-PERFECT-001",
+      "implementation": "present-perfect-experience",
+      "level": "B1",
+      "category": "verb-forms",
+      "title": "Present Perfect for experiences",
+      "titleEs": "Presente perfecto para experiencias",
+      "explanation": "Use have/has + past participle to talk about experiences without specifying a finished past time.",
+      "explanationEs": "Usa have/has + participio para hablar de experiencias sin indicar un momento pasado terminado.",
+      "examples": [
+        "I have built several robots.",
+        "She has taught English."
+      ],
+      "incorrect": [
+        "I have build several robots."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-PAST-PERFECT-CONTRAST-001",
+      "implementation": "present-perfect-past-simple",
+      "level": "B1",
+      "category": "verb-forms",
+      "title": "Present Perfect vs Past Simple",
+      "titleEs": "Presente perfecto frente a pasado simple",
+      "explanation": "Use Past Simple with a finished past time; use Present Perfect for experience or a period connected to now.",
+      "explanationEs": "Usa pasado simple con un tiempo pasado terminado y presente perfecto para experiencias o periodos conectados con el presente.",
+      "examples": [
+        "I visited Bogotá yesterday.",
+        "I have visited Bogotá several times."
+      ],
+      "incorrect": [
+        "I have visited Bogotá yesterday."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-MODAL-ADVICE-001",
+      "implementation": "advice-modals",
+      "level": "B1",
+      "category": "modal-verbs",
+      "title": "Modals for advice",
+      "titleEs": "Modales para dar consejos",
+      "explanation": "Use should + base verb to give advice.",
+      "explanationEs": "Usa should + verbo base para dar consejos.",
+      "examples": [
+        "You should practise every day.",
+        "We should test the robot."
+      ],
+      "incorrect": [
+        "You should to practise."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-CONNECT-001",
+      "implementation": "contrast-connectors",
+      "level": "B1",
+      "category": "connectors",
+      "title": "Connectors for contrast and concession",
+      "titleEs": "Conectores de contraste y concesión",
+      "explanation": "Use although to introduce a contrasting clause; use however to connect contrasting statements.",
+      "explanationEs": "Usa although para introducir una oración de contraste y however para conectar afirmaciones contrastantes.",
+      "examples": [
+        "Although it was difficult, we finished.",
+        "It was difficult. However, we finished."
+      ],
+      "incorrect": [
+        "Although it was difficult, but we finished."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-COND-001",
+      "implementation": "first-conditional",
+      "level": "B1",
+      "category": "sentence-structure",
+      "title": "First Conditional",
+      "titleEs": "Primer condicional",
+      "explanation": "Use if + present simple, will + base verb for a real future possibility.",
+      "explanationEs": "Usa if + presente simple, will + verbo base para una posibilidad futura real.",
+      "examples": [
+        "If we practise, we will improve."
+      ],
+      "incorrect": [
+        "If we will practise, we will improve."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-RELATIVE-001",
+      "implementation": "relative-clauses",
+      "level": "B1",
+      "category": "syntax",
+      "title": "Defining relative clauses",
+      "titleEs": "Oraciones relativas especificativas",
+      "explanation": "Use who for people and which/that for things in common defining relative clauses.",
+      "explanationEs": "Usa who para personas y which/that para cosas en oraciones relativas especificativas comunes.",
+      "examples": [
+        "The teacher who helped me was patient.",
+        "The robot that we built works."
+      ],
+      "incorrect": [
+        "The teacher which helped me was patient."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-PASSIVE-001",
+      "implementation": "passive-voice",
+      "level": "B1",
+      "category": "verb-forms",
+      "title": "Basic passive voice",
+      "titleEs": "Voz pasiva básica",
+      "explanation": "Use be + past participle when the action or result is more important than the agent.",
+      "explanationEs": "Usa be + participio cuando la acción o el resultado importa más que quién la realiza.",
+      "examples": [
+        "The robot was designed by students.",
+        "The project is tested every week."
+      ],
+      "incorrect": [
+        "The robot was design by students."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
+    },
+    {
+      "id": "GRAM-COHESION-001",
+      "implementation": "sequence-connectors",
+      "level": "A2-B1",
+      "category": "connectors",
+      "title": "Sequence connectors",
+      "titleEs": "Conectores de secuencia",
+      "explanation": "Use first, then, after that and finally to make a process or story easier to follow.",
+      "explanationEs": "Usa first, then, after that y finally para organizar un proceso o relato.",
+      "examples": [
+        "First, connect the sensor. Then, upload the code."
+      ],
+      "incorrect": [
+        "First connect the sensor finally upload the code."
+      ],
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft"
     }
   ],
   "vocabularyEntries": [
