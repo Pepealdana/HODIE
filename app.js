@@ -643,7 +643,7 @@ function renderExperience() {
         <p class="spanish">${escapeHtml(stage.promptEs)}</p>
       </div>
 
-      <details class="learning-hints" open>
+      <details class="learning-hints">
         <summary>Need help answering? <span class="spanish">¿Necesitas ayuda?</span></summary>
         <div class="hint-content">
           <p><strong>Sentence starters · Puedes comenzar así</strong></p>
@@ -1055,12 +1055,7 @@ function renderInteraction(activity) {
     const criteria = activity.evaluation?.criteria || [];
 
     container.innerHTML = `
-      <div class="production-guidance">
-        <strong>${isWriting ? "Your writing should include:" : "Your response should include:"}</strong>
-        <ul>
-          ${criteria.map((criterion) => `<li>${escapeHtml(criterion.label)}</li>`).join("")}
-        </ul>
-      </div>
+      <p class="production-guidance"><strong>Include · Incluye:</strong> ${criteria.map((criterion) => escapeHtml(criterion.label)).join(" · ")}</p>
 
       ${isWriting ? `
         <textarea id="productionAnswer" class="production-input" placeholder="Write your answer in English..."></textarea>
