@@ -5,7 +5,7 @@
   "scripts": {
     "test:engine": "node tests/learning-engine.test.js",
     "test:content": "node tests/content-model.test.js",
-    "test": "npm run test:app && npm run test:runtime && npm run test:pwa && npm run test:ux && npm run test:experiences && npm run test:orchestrator && npm run test:integrated-learning && npm run test:integrated-unit && npm run test:architecture && npm run test:composer && npm run test:ai-contract && npm run test:micro && npm run test:feedback && npm run test:feedback-contract && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical",
+    "test": "npm run test:app && npm run test:runtime && npm run test:pwa && npm run test:ux && npm run test:experiences && npm run test:orchestrator && npm run test:integrated-learning && npm run test:integrated-unit && npm run test:architecture && npm run test:composer && npm run test:ai-contract && npm run test:micro && npm run test:feedback && npm run test:error-memory && npm run test:feedback-contract && npm run test:taxonomy && npm run test:engine && npm run test:content && npm run test:generator && npm run test:integration && npm run test:planner && npm run test:progression && npm run test:session && npm run test:state && npm run test:boundary && npm run test:e2e && npm run test:vertical",
     "test:generator": "node tests/activity-generator.test.js",
     "test:integration": "node tests/engine-activity-integration.test.js",
     "test:planner": "node tests/adaptive-planner.test.js",
@@ -17,6 +17,7 @@
     "test:vertical": "node tests/vertical-slice.test.js",
     "test:micro": "node tests/micro-practice.test.js",
     "test:feedback": "node tests/error-engine.test.js",
+    "test:error-memory": "node tests/error-memory.test.js",
     "test:feedback-contract": "node tests/feedback-contract.test.js",
     "test:taxonomy": "node tests/practice-taxonomy.test.js",
     "test:app": "node --check app.js",
