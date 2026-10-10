@@ -146,7 +146,7 @@ function analyzeLanguage(input, options = {}) {
     errors: prioritized,
     unknownWords,
     hasHighConfidenceCorrection: prioritized.some((error) => error.confidence === "high"),
-    catalogCoverage: { grammarRules: catalog.grammarRules.length, vocabularyEntries: vocabulary.length },
+    catalogCoverage: { grammarRules: catalog.grammarRules.length, testedRules: catalog.grammarRules.filter((rule) => rule.status === "tested").length, plannedRules: catalog.grammarRules.filter((rule) => rule.status === "draft").length, vocabularyEntries: vocabulary.length },
     policy: "Unknown words are not errors by themselves; uncertain cases are left unchanged."
   };
 }
@@ -155,6 +155,22 @@ function validateLinguisticCatalog(value = catalog) {
   const errors = [];
   const ids = new Set();
   const implementations = new Set(value.grammarRules.map((rule) => rule.implementation));
+  const functionIds = new Set();
+  const vocabularyIds = new Set();
+  for (const item of value.communicativeFunctions || []) {
+    if (!item.id || functionIds.has(item.id)) errors.push("Missing or duplicate communicative function id: " + (item.id || "(empty)"));
+    functionIds.add(item.id);
+    if (!item.level || !item.label || !item.labelEs || !item.skills?.length || !item.structures?.length || !item.contexts?.length) {
+      errors.push((item.id || "Communicative function") + ": incomplete CEFR function metadata");
+    }
+  }
+  for (const item of value.vocabularyEntries || []) {
+    if (!item.id || vocabularyIds.has(item.id)) errors.push("Missing or duplicate vocabulary id: " + (item.id || "(empty)"));
+    vocabularyIds.add(item.id);
+    if (!item.lemma || !item.partOfSpeech || !item.level || !item.domain || !item.meaningEs || !Array.isArray(item.forms) || !Array.isArray(item.collocations) || !Array.isArray(item.examples)) {
+      errors.push((item.id || "Vocabulary entry") + ": incomplete vocabulary metadata");
+    }
+  }
   for (const rule of value.grammarRules) {
     if (!rule.id || ids.has(rule.id)) errors.push("Missing or duplicate grammar rule id: " + (rule.id || "(empty)"));
     ids.add(rule.id);
@@ -173,7 +189,7 @@ function validateLinguisticCatalog(value = catalog) {
       errors.push("Missing rule implementation for tested rule: " + rule.id + " (" + rule.implementation + ")");
     }
   }
-  return { valid: errors.length === 0, errors, ruleCount: value.grammarRules.length, vocabularyCount: value.vocabularyEntries.length };
+  return { valid: errors.length === 0, errors, ruleCount: value.grammarRules.length, testedRuleCount: value.grammarRules.filter((rule) => rule.status === "tested").length, draftRuleCount: value.grammarRules.filter((rule) => rule.status === "draft").length, vocabularyCount: value.vocabularyEntries.length, communicativeFunctionCount: functionIds.size };
 }
 
 export { analyzeLanguage, validateLinguisticCatalog, catalog as linguisticCatalog };
