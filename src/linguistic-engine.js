@@ -95,7 +95,7 @@ function analyzeLanguage(input, options = {}) {
   const rules = [
     ["capital-i", /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do|live|study|build|make|use|need|go)\b)/g, (m, prefix) => prefix + "I"],
     ["spelling-teacher", /\bte(?:cher|caher)\b/gi, (m) => preserveCase(m, "teacher")],
-    ["be-agreement", /\b(I|he|she|it|you|we|they|my students|the students)\s+(am|is|are)\b/gi, (m, subject, verb) => {
+    ["be-agreement", /\b(I|he|she|it|you|we|they)\s+(am|is|are)\b/gi, (m, subject, verb) => {
       const s = subject.toLowerCase();
       const expected = s === "i" ? "am" : ["he", "she", "it"].includes(s) ? "is" : "are";
       return subject + " " + preserveCase(verb, expected);
