@@ -736,7 +736,7 @@ function handleExperienceResponse(experience, stage, response) {
     : missingLabels.length
       ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
       : "<p>No issue matched HODIE's current rules. This is not a complete grammar check.</p><p class=\"spanish\">Ninguna regla actual de HODIE detectó un error. Esto no es una revisión gramatical completa.</p>";
-  const nextTip = result.nextStep?.instruction ? "<p class=\"next-tip\"><strong>Next tip · Siguiente consejo:</strong> " + escapeHtml(result.nextStep.instruction) + " <span class=\"spanish\">" + escapeHtml(result.nextStep.instructionEs || "") + "</span></p>" : "";
+  const nextTip = !languageNotes.length && !missingLabels.length && result.nextStep?.instruction ? "<p class=\"next-tip\"><strong>Next tip · Siguiente consejo:</strong> " + escapeHtml(result.nextStep.instruction) + " <span class=\"spanish\">" + escapeHtml(result.nextStep.instructionEs || "") + "</span></p>" : "";
   feedback.innerHTML =
     '<section class="instant-feedback ' + (languageNotes.length || missingLabels.length ? "feedback-retry" : "feedback-success") + ' experience-turn-feedback">' +
       '<strong>' + feedbackTitle + '</strong>' +
@@ -1153,19 +1153,20 @@ function showFeedback(activity, result, response, options = {}) {
   const speechComparison = activity.type === "speak" && response ? renderSpeechComparison(activity.targetPhrase, response) : "";
   const missingError = result.errors?.find((error) => error.target === "required-information");
   const missingWords = (missingError?.correction || result.missing || "").toString();
-  const feedbackText = missingError ? `Add the missing key word: ${missingWords}.` : (result.feedback || "");
-  const feedbackTextEs = missingError ? `Añade la palabra clave que falta: ${missingWords}.` : (result.feedbackEs || "");
+  const nearSpeechError = result.errors?.find((error) => error.target === "speech-near-match");
+  const feedbackText = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Add the missing key word: ${missingWords}.` : (result.feedback || "");
+  const feedbackTextEs = activity.type === "speak" && nearSpeechError ? "" : missingError ? `Añade la palabra clave que falta: ${missingWords}.` : (result.feedbackEs || "");
+  const visibleCorrections = feedbackContract.corrections.filter((error) => error.target !== "required-information");
   feedback.innerHTML = `
     ${inlineWritingReview}
     ${speechComparison}
     <div class="instant-feedback ${success ? "feedback-success" : "feedback-retry"}">
       <strong>${success ? "✓ Correct · Correcto" : isOpenProduction ? "Review your answer · Revisa tu respuesta" : "Try again · Inténtalo de nuevo"}</strong>
-      <p>${escapeHtml(feedbackText)}</p>
-      <p class="spanish">${escapeHtml(feedbackTextEs)}</p>
+      ${feedbackText ? `<p>${escapeHtml(feedbackText)}</p><p class="spanish">${escapeHtml(feedbackTextEs)}</p>` : ""}
       ${!success && !missingError && (activity.answer !== undefined || activity.targetPhrase) ? `<details class="feedback-next-step"><summary>See an example · Ver ejemplo</summary>${activity.answer !== undefined ? `<p><strong>Answer:</strong> ${escapeHtml(Array.isArray(activity.answer) ? activity.answer.join(" ") : String(activity.answer))}</p>` : ""}${activity.targetPhrase ? `<p><strong>Model:</strong> ${escapeHtml(activity.targetPhrase)}</p>` : ""}</details>` : ""}
-      ${feedbackContract.corrections.length ? `
+      ${visibleCorrections.length ? `
         <div class="feedback-corrections">
-          ${feedbackContract.corrections.map((error) => `
+          ${visibleCorrections.map((error) => `
             <div class="correction-item">
               ${error.target === "required-information" ? `<p class="missing-focus"><strong>Missing keyword · Palabra clave faltante:</strong> ${escapeHtml(error.correction || error.expected || "")}</p>` : `${error.actual ? `<p class="feedback-original">You wrote · Escribiste: <span>${escapeHtml(error.actual)}</span></p>` : ""}<strong>Suggested form · Forma sugerida: ${escapeHtml(error.correction || error.expected || "")}</strong>`}
               <p>${escapeHtml(error.message || "")}</p>
