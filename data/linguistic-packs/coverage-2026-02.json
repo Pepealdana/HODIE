@@ -406,12 +406,12 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\bdoes\\s+(he|she|it|the robot|the student)\\s+(works|teaches|builds|uses|likes|goes|studies|watches|makes|plays|reads|writes)\\b",
+        "pattern": "\\b(does)\\s+(he|she|it|the robot|the student)\\s+(works|teaches|builds|uses|likes|goes|studies|watches|makes|plays|reads|writes)\\b",
         "flags": "gi",
-        "replacement": "$1 $2",
+        "replacement": "$1 $2 $3",
         "transform": {
           "type": "thirdPersonToBase",
-          "capture": 2
+          "capture": 3
         }
       }
     },
@@ -576,12 +576,12 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\bdid\\s+(you|he|she|they|we)\\s+(went|saw|built|made|had|worked|studied|played)\\b",
+        "pattern": "\\b(did)\\s+(you|he|she|they|we)\\s+(went|saw|built|made|had|worked|studied|played)\\b",
         "flags": "gi",
-        "replacement": "$1 $2",
+        "replacement": "$1 $2 $3",
         "transform": {
           "type": "pastToBase",
-          "capture": 2
+          "capture": 3
         }
       }
     },
