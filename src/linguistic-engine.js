@@ -193,6 +193,7 @@ function analyzeLanguage(input, options = {}) {
       (m, subject, verb) => subject + " " + (PLURAL_FORMS[verb.toLowerCase()] || ({ is: "are", has: "have", does: "do" })[verb.toLowerCase()] || verb)],
     ["third-person-singular", /\b(he|she|it|the robot|a robot|my school|the school|my student|the student)\s+(work|teach|build|use|like|enjoy|have|do|go|study|watch|fix|make|play|read|write|speak|live|need|want|help|explain|create)\b/gi,
       (m, subject, verb) => subject + " " + (THIRD_PERSON_FORMS[verb.toLowerCase()] || verb + "s")],
+    ["work-place", /\b(work|works|worked)\s+as\s+at\s+(?:a\s+)?(school)\b/gi, (m, verb, place) => verb + " at a " + place],
     ["work-place", /\b(work|works|worked)\s+on\s+(a|the)\s+(school|company|office)\b/gi, (m, verb, article, place) => verb + " at " + article + " " + place],
     ["repeated-connector", /\b(and|but|because|so)\s+\1\b/gi, (m, connector) => connector],
     ["adjective-noun-order", /\b(a|an|the)\s+(problem|robot|project|class|lesson)\s+(difficult|interesting|new|important|easy)\b/gi, (m, article, noun, adjective) => article + " " + adjective + " " + noun]
