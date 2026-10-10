@@ -33,6 +33,20 @@ assert.equal(conversationFeedback.metrics.sentenceCount, 2);
 assert.ok(conversationFeedback.corrections.some((item) => item.target === "compound-job-connector"));
 assert.ok(conversationFeedback.nextAction.instruction);
 
+// Missing criteria should not be duplicated by their generated error records.
+const missingContract = createFeedbackContract({
+  activity: { id: "conversation-turn-2", skill: "speaking" },
+  surface: "conversation",
+  response: "I am a technology teacher. I work at a school.",
+  result: {
+    missing: [{ id: "preference", label: "Express a preference or opinion", missingMessage: "Say what you enjoy." }],
+    errors: [{ id: "ERR-conversation-turn-2-task-completion-preference", type: "task-completion", target: "preference", message: "Say what you enjoy." }]
+  }
+});
+assert.equal(missingContract.missing.length, 1);
+assert.equal(missingContract.missing[0].label, "Express a preference or opinion");
+assert.doesNotMatch(missingContract.missing[0].label, /^ERR-/);
+
 // Real case 2: known rule-based grammar error in conversation.
 const grammarResult = evaluateExperienceTurn(conversation, conversation.stages[1], "I enjoy to work with students.");
 const grammarFeedback = createFeedbackContract({
