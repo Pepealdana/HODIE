@@ -43,6 +43,22 @@ function createExperienceSession(library, id, options = {}) {
 function buildLanguageNotes(experience, stage, text) {
   const rules = [
     {
+      id: "spelling-teacher",
+      pattern: /\btecher\b/i,
+      replacement: () => "teacher",
+      message: "The correct spelling is \"teacher\".",
+      messageEs: "La escritura correcta es \"teacher\" (profesor/a).",
+      examples: ["I am a teacher."]
+    },
+    {
+      id: "capital-i",
+      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/g,
+      replacement: (match, prefix) => prefix + "I",
+      message: "The pronoun \"I\" is always capitalized in English.",
+      messageEs: "El pronombre \"I\" siempre se escribe con mayúscula en inglés.",
+      examples: ["I am a teacher.", "I enjoy teaching."]
+    },
+    {
       id: "job-article",
       pattern: /\bI\s+am\s+(technology teacher|English teacher|teacher|student|programmer|developer|engineer|professor)\b/i,
       replacement: (match, job) => `I am a ${job.toLowerCase()}`,
@@ -139,9 +155,9 @@ function buildLanguageNotes(experience, stage, text) {
       retry: false
     }));
     corrected = next;
-    if (notes.length >= 2) break;
+    if (notes.length >= 3) break;
   }
-  return { notes: prioritizeErrors(notes, 2), correctedText: corrected };
+  return { notes: prioritizeErrors(notes, 3), correctedText: corrected };
 }
 
 function buildNextStep({ text, matched, missing, languageNotes, wordCount, sentenceCount }) {
