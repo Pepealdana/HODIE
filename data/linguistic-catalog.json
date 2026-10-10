@@ -1256,7 +1256,8 @@
         "question-order",
         "articles-general",
         "plural-nouns",
-        "object-pronouns"
+        "object-pronouns",
+        "subject-pronouns"
       ],
       "vocabularyDomains": [
         "identity",
@@ -4618,6 +4619,89 @@
       "severity": "medium",
       "priority": "high",
       "status": "draft"
+    },
+    {
+      "id": "GRAM-SUBJECT-PRONOUNS-001",
+      "implementation": "subject-pronouns",
+      "level": "A1",
+      "category": "subject-pronouns",
+      "title": "Use subject pronouns before verbs",
+      "titleEs": "Usa pronombres sujeto antes de los verbos",
+      "explanation": "Use I, you, he, she, it, we and they as the subject of a clause. Subject pronouns normally appear before the verb.",
+      "explanationEs": "Usa I, you, he, she, it, we y they como sujeto de una oración. Los pronombres sujeto normalmente aparecen antes del verbo.",
+      "examples": [
+        "I am ready.",
+        "They study English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am ready.",
+          "es": "Estoy listo."
+        },
+        {
+          "en": "They study English.",
+          "es": "Ellos estudian inglés."
+        }
+      ],
+      "incorrect": [
+        "Me am ready.",
+        "Them study English."
+      ],
+      "exceptions": [
+        "You has the same form for singular and plural subjects.",
+        "It is used for things, animals when appropriate, weather and time.",
+        "Object pronouns follow verbs or prepositions: She helped me."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am ready.",
+          "reason": "I is the correct subject pronoun."
+        },
+        {
+          "text": "She helped me.",
+          "reason": "Me is correctly used as the object."
+        },
+        {
+          "text": "They study English.",
+          "reason": "They is the correct plural subject."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "___ are students. (They/Them)",
+          "promptEs": "___ son estudiantes. (They/Them)",
+          "answer": "They"
+        },
+        {
+          "type": "write",
+          "prompt": "Write one sentence with he and one with they.",
+          "promptEs": "Escribe una oración con he y otra con they."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading",
+          "listening"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "conversation",
+          "mini-production"
+        ],
+        "tags": [
+          "subject-pronouns",
+          "pronouns",
+          "sentence-subject"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft",
+      "implementationReadiness": "content complete; implementation and contrastive tests pending"
     }
   ],
   "vocabularyEntries": [
@@ -8470,6 +8554,198 @@
         }
       ],
       "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-I",
+      "lemma": "I",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "yo",
+      "forms": [
+        "I"
+      ],
+      "collocations": [
+        "I"
+      ],
+      "examples": [
+        "I am ready."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am ready.",
+          "es": "Estoy listo."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-YOU",
+      "lemma": "you",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "tú; usted; ustedes",
+      "forms": [
+        "you"
+      ],
+      "collocations": [
+        "you"
+      ],
+      "examples": [
+        "You are my friend."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "You are my friend.",
+          "es": "Tú eres mi amigo."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-HE",
+      "lemma": "he",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "él",
+      "forms": [
+        "he"
+      ],
+      "collocations": [
+        "he"
+      ],
+      "examples": [
+        "He works at a school."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He works at a school.",
+          "es": "Él trabaja en un colegio."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-SHE",
+      "lemma": "she",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "ella",
+      "forms": [
+        "she"
+      ],
+      "collocations": [
+        "she"
+      ],
+      "examples": [
+        "She teaches robotics."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She teaches robotics.",
+          "es": "Ella enseña robótica."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-IT",
+      "lemma": "it",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "ello; pronombre para cosas y sujetos impersonales",
+      "forms": [
+        "it"
+      ],
+      "collocations": [
+        "it"
+      ],
+      "examples": [
+        "It is a small robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "It is a small robot.",
+          "es": "Es un robot pequeño."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-WE",
+      "lemma": "we",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "nosotros/as",
+      "forms": [
+        "we"
+      ],
+      "collocations": [
+        "we"
+      ],
+      "examples": [
+        "We study English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We study English.",
+          "es": "Estudiamos inglés."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-THEY",
+      "lemma": "they",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "ellos/as",
+      "forms": [
+        "they"
+      ],
+      "collocations": [
+        "they"
+      ],
+      "examples": [
+        "They are students."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "They are students.",
+          "es": "Ellos son estudiantes."
+        }
+      ],
+      "openClass": true
+    },
+    {
+      "id": "VOC-A1-PRONOUN-ME",
+      "lemma": "me",
+      "partOfSpeech": "pronoun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "me; mí",
+      "forms": [
+        "me"
+      ],
+      "collocations": [
+        "me"
+      ],
+      "examples": [
+        "She helped me."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She helped me.",
+          "es": "Ella me ayudó."
+        }
+      ],
+      "openClass": true
     }
   ],
   "testCases": [
@@ -9071,8 +9347,8 @@
     ],
     "counts": {
       "communicativeFunctions": 47,
-      "grammarRules": 88,
-      "vocabularyEntries": 183,
+      "grammarRules": 89,
+      "vocabularyEntries": 191,
       "testCases": 84
     }
   }
