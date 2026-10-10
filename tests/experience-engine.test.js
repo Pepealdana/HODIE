@@ -90,7 +90,23 @@ const articleConnector = evaluateExperienceTurn(
   conversation.stages[0],
   "I am a technology an robotics teacher."
 );
+
 assert.ok(articleConnector.corrections.some((error) => error.target === "compound-job-connector"));
+
+const copiedAnswer = evaluateExperienceTurn(
+  conversation,
+  conversation.stages[1],
+  "I am a technology and robotics teacher. I work at a school."
+);
+assert.equal(copiedAnswer.missing.some((item) => item.id === "preference"), true);
+assert.equal(copiedAnswer.strengths.some((item) => item.id === "preference"), false);
+
+const incompleteEnjoy = evaluateExperienceTurn(conversation, conversation.stages[2], "I enjoy");
+assert.equal(incompleteEnjoy.missing.some((item) => item.id === "challenge"), true);
+
+const writingErrors = evaluateExperienceTurn(conversation, conversation.stages[0], "i am techer");
+assert.ok(writingErrors.corrections.some((error) => error.target === "capital-i"));
+assert.ok(writingErrors.corrections.some((error) => error.target === "spelling-teacher"));
 
 const pluralAgreement = evaluateExperienceTurn(
   conversation,
