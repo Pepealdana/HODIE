@@ -693,28 +693,50 @@ function handleExperienceResponse(experience, stage, response) {
     return;
   }
 
+  const strengths = result.strengths || [];
+  const languageNotes = result.languageNotes || [];
+  const missingLabels = (result.missing || []).map((item) => item.label || item.id);
   feedback.innerHTML = `
-    <div class="instant-feedback feedback-success">
-      <strong>Keep going</strong>
-      <p>Your idea is recorded. Now notice the feedback below.</p>
-      <p class="spanish">Tu idea está registrada. Ahora revisa la retroalimentación.</p>
-      ${result.missing.length ? `<p>Useful idea to add: ${escapeHtml(result.missing.join(", "))}</p>` : ""}
-      ${result.corrections.length ? `
-        <div class="feedback-corrections">
-          ${result.corrections.map((error) => `
-            <div class="correction-item">
-              <strong>Suggested: ${escapeHtml(error.correction || error.expected || "")}</strong>
-              <p>${escapeHtml(error.message || "")}</p>
-              <p class="spanish">${escapeHtml(error.messageEs || "")}</p>
-              ${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}
-            </div>
-          `).join("")}
+    <section class="instant-feedback feedback-success experience-turn-feedback" aria-labelledby="turnFeedbackTitle">
+      <div class="feedback-heading">
+        <span class="feedback-status-mark" aria-hidden="true">✓</span>
+        <div>
+          <h3 id="turnFeedbackTitle">Your feedback · Tu retroalimentación</h3>
+          <p>Your answer is saved for this conversation. Review one useful point before continuing.</p>
+          <p class="spanish">Tu respuesta quedó registrada. Revisa un punto útil antes de continuar.</p>
         </div>
-      ` : ""}
-      <div class="actions">
-        <button class="primary compact" id="nextExperienceButton" type="button">${experienceSession.index + 1 >= experience.stages.length ? "Finish" : "Next"}</button>
       </div>
-    </div>
+      <div class="feedback-metrics" aria-label="Response signals">
+        <div><strong>${result.wordCount}</strong><span>words · palabras</span></div>
+        <div><strong>${result.sentenceCount}</strong><span>sentences · oraciones</span></div>
+      </div>
+      <div class="feedback-section">
+        <h4>What went well · Lo que hiciste bien</h4>
+        ${strengths.length ? `<ul class="feedback-list">${strengths.map((item) => `<li><strong>${escapeHtml(item.label)}</strong><p>${escapeHtml(item.message)}</p><p class="spanish">${escapeHtml(item.messageEs)}</p></li>`).join("")}</ul>` : `<p>You responded to the prompt. Try adding one detail to make the idea clearer.</p><p class="spanish">Respondiste a la consigna. Intenta añadir un detalle para expresar la idea con más claridad.</p>`}
+      </div>
+      <div class="feedback-section">
+        <h4>One thing to improve · Un aspecto para mejorar</h4>
+        ${languageNotes.length ? `
+          ${languageNotes.map((error) => `<article class="correction-item"><strong>Suggested form · Forma sugerida</strong><p class="feedback-example">${escapeHtml(error.expected || error.correction || "")}</p><p>${escapeHtml(error.message || "")}</p><p class="spanish">${escapeHtml(error.messageEs || "")}</p>${error.examples?.length ? `<p class="example-label">Examples: ${escapeHtml(error.examples.join(" · "))}</p>` : ""}</article>`).join("")}
+        ` : missingLabels.length ? `
+          <p>Try to include this idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
+          <p class="spanish">Intenta incluir esta idea: <strong>${escapeHtml(missingLabels.join(", "))}</strong>.</p>
+        ` : `
+          <p>No issue matched HODIE's current grammar rules. This is not a full grammar check; you can still improve your answer with a detail or example.</p>
+          <p class="spanish">Ningún problema coincidió con las reglas gramaticales actuales de HODIE. Esto no es una revisión gramatical completa; todavía puedes mejorar tu respuesta con un detalle o ejemplo.</p>
+        `}
+      </div>
+      <div class="feedback-next-step">
+        <h4>Try this next · Prueba esto</h4>
+        <strong>${escapeHtml(result.nextStep?.title || "Keep practising")}</strong>
+        <p>${escapeHtml(result.nextStep?.instruction || "Add one more detail to your answer.")}</p>
+        <p class="spanish">${escapeHtml(result.nextStep?.titleEs || "Sigue practicando")}: ${escapeHtml(result.nextStep?.instructionEs || "Añade un detalle más a tu respuesta.")}</p>
+      </div>
+      <p class="feedback-limit">Practice guidance only. It does not assign an official CEFR level.</p>
+      <div class="actions">
+        <button class="primary compact" id="nextExperienceButton" type="button">${experienceSession.index + 1 >= experience.stages.length ? "View conversation review" : "Next question"}</button>
+      </div>
+    </section>
   `;
 
   document.querySelector("#nextExperienceButton").addEventListener("click", () => {
@@ -738,20 +760,48 @@ function renderExperienceComplete(experience) {
         <p class="spanish">Completaste ${summary.turns} de ${summary.totalTurns} intervenciones.</p>
       </div>
 
-      ${summary.corrections.length ? `
-        <div class="experience-summary">
-          <h3>Useful corrections</h3>
-          ${summary.corrections.slice(0, 6).map((error) => `
-            <div class="correction-item">
-              <strong>${escapeHtml(error.correction || error.expected || "")}</strong>
-              <p>${escapeHtml(error.message || "")}</p>
-              <p class="spanish">${escapeHtml(error.messageEs || "")}</p>
-            </div>
+      <section class="experience-summary" aria-labelledby="conversationReviewTitle">
+        <h3 id="conversationReviewTitle">Conversation review · Resumen de la conversación</h3>
+        <p>Use this review to choose what to practise next. These are rule-based signals, not a complete grammar assessment.</p>
+        <p class="spanish">Usa este resumen para elegir qué practicar. Son señales basadas en reglas, no una evaluación gramatical completa.</p>
+        ${summary.strengths.length ? `
+          <div class="feedback-section">
+            <h4>Strengths · Fortalezas observadas</h4>
+            <ul class="feedback-list">${summary.strengths.slice(0, 8).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+        ` : ""}
+        ${summary.focusAreas.length ? `
+          <div class="feedback-section">
+            <h4>Ideas to develop · Ideas por desarrollar</h4>
+            <ul class="feedback-list">${summary.focusAreas.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+        ` : ""}
+        <div class="feedback-section">
+          <h4>Suggested practice · Práctica sugerida</h4>
+          ${summary.practiceSteps.map((step) => `
+            <article class="correction-item">
+              <strong>${step.turn}. ${escapeHtml(step.title)}</strong>
+              <p>${escapeHtml(step.instruction)}</p>
+              <p class="spanish">${escapeHtml(step.titleEs)}: ${escapeHtml(step.instructionEs)}</p>
+            </article>
           `).join("")}
         </div>
-      ` : `
-        <p>No priority corrections were detected in this experience.</p>
-      `}
+        ${summary.corrections.length ? `
+          <div class="feedback-section">
+            <h4>Language patterns to review · Patrones de inglés para revisar</h4>
+            ${summary.corrections.slice(0, 6).map((error) => `
+              <article class="correction-item">
+                <strong>${escapeHtml(error.expected || error.correction || "")}</strong>
+                <p>${escapeHtml(error.message || "")}</p>
+                <p class="spanish">${escapeHtml(error.messageEs || "")}</p>
+              </article>
+            `).join("")}
+          </div>
+        ` : `
+          <p>No rule-based grammar issue was detected in these answers. That does not mean every sentence is error-free; the current offline checker only recognizes selected patterns.</p>
+          <p class="spanish">No se detectaron problemas con las reglas gramaticales disponibles. Eso no significa que todas las frases estén libres de errores; el corrector local solo reconoce algunos patrones.</p>
+        `}
+      </section>
 
       <p class="spanish">Esta experiencia es práctica comunicativa. Todavía no cambia por sí sola tu nivel: el progreso oficial requiere evidencia dentro del motor de aprendizaje.</p>
 
