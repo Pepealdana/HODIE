@@ -51,7 +51,7 @@ function buildLanguageNotes(experience, stage, text) {
       examples: ["I am a teacher.", "I am an engineer."]
     },
     {
-      id: "enjoy-gerund",
+      id: "enjoy-ing",
       pattern: /\bI\s+enjoy\s+to\s+([a-z]+)\b/i,
       replacement: (match, verb) => `I enjoy ${verb.toLowerCase()}ing`,
       message: 'After "enjoy", use a verb ending in -ing.',
