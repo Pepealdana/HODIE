@@ -63,6 +63,14 @@ function detectLanguageCorrections(activity, response) {
       examples: ["I am a teacher."]
     },
     {
+      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/g,
+      replacement: "$1I",
+      target: "capital-i",
+      message: "The pronoun \"I\" is always capitalized in English.",
+      messageEs: "El pronombre \"I\" siempre se escribe con mayúscula en inglés.",
+      examples: ["I am a teacher.", "I enjoy teaching."]
+    },
+    {
       pattern: /\bI\s+am\s+(teacher|student|programmer|developer|engineer|professor)\b/i,
       replacement: "I am a $1",
       target: "article",
@@ -85,14 +93,6 @@ function detectLanguageCorrections(activity, response) {
       message: 'After "enjoy", use a verb with -ing.',
       messageEs: 'Después de "enjoy", usamos el verbo con -ing.',
       examples: ["I enjoy reading.", "I enjoy building robots."]
-    },
-    {
-      pattern: /(^|[.!?]\s*)i(?=\s+(?:am|work|teach|have|like|enjoy|want|would|can|do)\b)/g,
-      replacement: "$1I",
-      target: "capital-i",
-      message: "The pronoun \"I\" is always capitalized in English.",
-      messageEs: "El pronombre \"I\" siempre se escribe con mayúscula en inglés.",
-      examples: ["I am a teacher.", "I enjoy teaching."]
     },
     {
       pattern: /\b(my\s+students?)\s+is\b/i,
