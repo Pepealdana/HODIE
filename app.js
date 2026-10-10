@@ -1512,12 +1512,49 @@ function renderInlineComparison(original, corrected) {
   const originalText = String(original ?? "");
   const correctedText = String(corrected ?? "");
   if (!originalText || !correctedText || originalText === correctedText) return "";
+  const originalWords = originalText.match(/[\p{L}\p{N}’'-]+/gu) || [];
   const correctedWords = correctedText.match(/[\p{L}\p{N}’'-]+/gu) || [];
-  const marked = originalText.replace(/[\p{L}\p{N}’'-]+/gu, (word) => {
-    if (correctedWords.includes(word)) return escapeHtml(word);
-    return '<mark class="inline-error-word" title="Review this word">' + escapeHtml(word) + '</mark>';
+  const rows = originalWords.length + 1;
+  const cols = correctedWords.length + 1;
+  const dp = Array.from({ length: rows }, () => Array(cols).fill(0));
+  for (let i = originalWords.length - 1; i >= 0; i -= 1) {
+    for (let j = correctedWords.length - 1; j >= 0; j -= 1) {
+      dp[i][j] = originalWords[i] === correctedWords[j]
+        ? dp[i + 1][j + 1] + 1
+        : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+  const matchedOriginal = new Set();
+  const matchedCorrected = new Set();
+  let i = 0;
+  let j = 0;
+  while (i < originalWords.length && j < correctedWords.length) {
+    if (originalWords[i] === correctedWords[j]) {
+      matchedOriginal.add(i);
+      matchedCorrected.add(j);
+      i += 1;
+      j += 1;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      i += 1;
+    } else {
+      j += 1;
+    }
+  }
+  let originalIndex = 0;
+  const markedOriginal = originalText.replace(/[\p{L}\p{N}’'-]+/gu, (word) => {
+    const index = originalIndex++;
+    return matchedOriginal.has(index)
+      ? escapeHtml(word)
+      : '<mark class="inline-error-word" title="Review this word">' + escapeHtml(word) + '</mark>';
   });
-  return '<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">' + marked + '</p><p class="inline-writing-corrected"><strong>Suggested version · Versión sugerida:</strong> ' + escapeHtml(correctedText) + '</p></div>';
+  let correctedIndex = 0;
+  const markedCorrected = correctedText.replace(/[\p{L}\p{N}’'-]+/gu, (word) => {
+    const index = correctedIndex++;
+    return matchedCorrected.has(index)
+      ? escapeHtml(word)
+      : '<mark class="inline-corrected-word">' + escapeHtml(word) + '</mark>';
+  });
+  return '<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">' + markedOriginal + '</p><p class="inline-writing-corrected"><strong>Correction · Corrección:</strong> ' + markedCorrected + '</p></div>';
 }
 function renderSpeechComparison(targetPhrase, transcript) {
   const target = String(targetPhrase ?? "").match(/[\p{L}\p{N}’'-]+/gu) || [];
