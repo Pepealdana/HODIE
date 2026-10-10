@@ -1150,7 +1150,10 @@ function showFeedback(activity, result, response, options = {}) {
     source: isOpenProduction ? "checklist" : activity.type === "listening" || ["choose", "complete", "order", "match"].includes(activity.type) ? "answer-key" : "rule-based"
   });
   const success = result.correct || result.score >= 1;
+  const inlineCorrectedText = result.errors?.find((error) => error.correctedText)?.correctedText;
+  const inlineWritingReview = activity.skill === "writing" && response && inlineCorrectedText ? renderInlineComparison(response, inlineCorrectedText) : "";
   feedback.innerHTML = `
+    ${inlineWritingReview}
     <div class="instant-feedback ${success ? "feedback-success" : "feedback-retry"}">
       <strong>${success ? "✓ Good" : "Try again"}</strong>
       <p class="feedback-status-label">${isOpenProduction ? "Guided self-review · Autoevaluación guiada" : feedbackContract.status === "correct" ? "Correct · Correcto" : feedbackContract.status === "needs-work" ? "Needs another attempt · Necesita otro intento" : "Practice feedback · Retroalimentación de práctica"}</p>
@@ -1212,14 +1215,16 @@ function showFeedback(activity, result, response, options = {}) {
   });
 
   if (success) {
-    window.setTimeout(() => {
+    document.querySelector("#nextMicroButton")?.addEventListener("click", () => {
       practice.index += 1;
       savePracticeState();
       renderMicroActivity();
-    }, 850);
+      app.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   } else {
-    document.querySelector("#retryMicroButton").addEventListener("click", () => {
+    document.querySelector("#retryMicroButton")?.addEventListener("click", () => {
       renderMicroActivity();
+      app.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 }
@@ -1483,6 +1488,19 @@ function renderError(error) {
   `;
 }
 
+function renderInlineComparison(original, corrected) {
+  const originalText = String(original ?? "");
+  const correctedText = String(corrected ?? "");
+  if (!originalText || !correctedText || originalText === correctedText) return "";
+  const originalTokens = originalText.match(/[\\p{L}\\p{N}’'-]+|[^\\p{L}\\p{N}’'-]+/gu) || [];
+  const correctedTokens = correctedText.match(/[\\p{L}\\p{N}’'-]+|[^\\p{L}\\p{N}’'-]+/gu) || [];
+  const marked = originalTokens.map((token, index) => {
+    const expected = correctedTokens[index] ?? "";
+    if (token !== expected && /[\\p{L}\\p{N}]/u.test(token)) return `<mark class="inline-error-word" title="Suggested: ${escapeHtml(expected)}">${escapeHtml(token)}</mark>`;
+    return escapeHtml(token);
+  }).join("");
+  return `<div class="inline-writing-review"><p class="kicker">Your text · Tu texto</p><p class="inline-writing-text">${marked}</p><p class="inline-writing-corrected"><strong>Suggested version · Versión sugerida:</strong> ${escapeHtml(correctedText)}</p></div>`;
+}
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
