@@ -855,3 +855,38 @@ html[data-theme="dark"] body { background: #101827; }
   .learning-evidence-summary { grid-template-columns: 34px minmax(0,1fr); gap: 9px; padding: 12px; }
   .learning-evidence-icon { width: 32px; height: 32px; border-radius: 9px; }
 }
+
+
+/* Desktop conversation workspace inspired by the split learning layout.
+   Mobile keeps the single-column reading order for comfortable thumb use. */
+@media (min-width: 900px) {
+  .experience-session:has(.experience-turn-feedback) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 18px;
+    row-gap: 16px;
+  }
+  .experience-session:has(.experience-turn-feedback) > .practice-nav,
+  .experience-session:has(.experience-turn-feedback) > .experience-topline,
+  .experience-session:has(.experience-turn-feedback) > .micro-progress {
+    grid-column: 1 / -1;
+  }
+  .experience-session:has(.experience-turn-feedback) > .experience-context,
+  .experience-session:has(.experience-turn-feedback) > .micro-prompt,
+  .experience-session:has(.experience-turn-feedback) > .learning-hints,
+  .experience-session:has(.experience-turn-feedback) > .conversation-response {
+    grid-column: 1;
+  }
+  .experience-session:has(.experience-turn-feedback) > #experienceFeedback {
+    grid-column: 2;
+    grid-row: 3 / span 4;
+    min-width: 0;
+  }
+  .experience-session:has(.experience-turn-feedback) .experience-turn-feedback {
+    position: sticky;
+    top: 14px;
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+  }
+}
