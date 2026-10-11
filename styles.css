@@ -831,3 +831,27 @@ html[data-theme="dark"] body { background: #101827; }
   .learning-opportunity-heading { grid-template-columns: 32px minmax(0,1fr); gap: 8px; }
   .learning-opportunity-icon { width: 32px; height: 32px; }
 }
+
+
+/* Learning evidence summary: visible progress without claiming mastery */
+.learning-evidence-summary {
+  display: grid;
+  grid-template-columns: 42px minmax(0,1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface-alt);
+  color: var(--ink);
+}
+.learning-evidence-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: #e4efff; color: #245e9e; font-size: 1.35rem; font-weight: 900; }
+.learning-evidence-copy { display: grid; gap: 4px; min-width: 0; }
+.learning-evidence-copy strong { font-size: 1.02rem; }
+.learning-evidence-copy small { color: var(--muted); overflow-wrap: anywhere; }
+[data-theme="dark"] .learning-evidence-summary { background: #172033; border-color: #465267; color: #f4f6f8; }
+[data-theme="dark"] .learning-evidence-icon { background: #1d314d; color: #9bc6ff; }
+@media (max-width: 520px) {
+  .learning-evidence-summary { grid-template-columns: 34px minmax(0,1fr); gap: 9px; padding: 12px; }
+  .learning-evidence-icon { width: 32px; height: 32px; border-radius: 9px; }
+}
