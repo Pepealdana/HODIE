@@ -12,7 +12,7 @@ import { createFeedbackContract } from "./src/feedback-contract.js";
 import { analyzeLanguage } from "./src/linguistic-engine.js";
 import { getLinguisticResourcesForActivity } from "./src/linguistic-activity-links.js";
 import { searchLinguisticKnowledge } from "./src/linguistic-knowledge-index.js";
-import { createLearningOpportunity, evaluateLearningOpportunity, recordLearningOpportunity } from "./src/learning-opportunity.js";
+import { createLearningOpportunity, evaluateLearningOpportunity, recordLearningOpportunity, summarizeLearningOpportunities } from "./src/learning-opportunity.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -263,6 +263,7 @@ function renderPracticeHome() {
   const savedExperience = getSavedExperienceLabel();
   const level = session.target.level;
   const hasEvidence = Array.isArray(profile?.evidence) && profile.evidence.length > 0;
+  const learningOpportunitySummary = summarizeLearningOpportunities(profile);
 
   const adaptiveRecommendation = chooseLearningSurface(matrix, experienceLibrary, profile, {
     level,
@@ -450,6 +451,16 @@ function renderPracticeHome() {
         <strong>${knowledgeGraph?.nodes.length || 0} knowledge links</strong>
         <p class="spanish">Vocabulary, grammar, communication functions and pronunciation connect to Can-Do goals and practice activities.</p>
         <small>${summarizeLearningProfile(profile).totalActivities} practice starts tracked · ${knowledgeGraph?.valid ? "knowledge links validated" : "knowledge links need review"}</small>
+      </section>
+
+      <section class="learning-evidence-summary" aria-label="Learning from corrections">
+        <div class="learning-evidence-icon" aria-hidden="true">↗</div>
+        <div class="learning-evidence-copy">
+          <p class="kicker">Learning from corrections · Aprender de los errores</p>
+          <strong>${learningOpportunitySummary.attempts ? `${learningOpportunitySummary.correct}/${learningOpportunitySummary.attempts} practice checks correct` : "Your practice evidence starts here"}</strong>
+          <p class="spanish">${learningOpportunitySummary.attempts ? `Respuestas correctas: ${learningOpportunitySummary.correct} de ${learningOpportunitySummary.attempts} intentos.` : "Cuando HODIE detecte un error con un ejercicio disponible, podrás practicar la regla y registrar el resultado."}</p>
+          <small>${learningOpportunitySummary.attempts ? `Accuracy in these mini-checks: ${Math.round(learningOpportunitySummary.accuracy * 100)}% · Exactitud en estas micropruebas` : "Saved on this device · Guardado en este dispositivo"}</small>
+        </div>
       </section>
 
       <div class="home-progress">
