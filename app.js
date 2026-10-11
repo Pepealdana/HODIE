@@ -12,6 +12,7 @@ import { createFeedbackContract } from "./src/feedback-contract.js";
 import { analyzeLanguage } from "./src/linguistic-engine.js";
 import { getLinguisticResourcesForActivity } from "./src/linguistic-activity-links.js";
 import { searchLinguisticKnowledge } from "./src/linguistic-knowledge-index.js";
+import { createLearningOpportunity, evaluateLearningOpportunity, recordLearningOpportunity, summarizeLearningOpportunities } from "./src/learning-opportunity.js";
 
 const DATA = {
   matrix: "./data/can-do-matrix.json",
@@ -67,7 +68,7 @@ function applyTheme(theme) {
   }
 
   const themeColor = document.querySelector('meta[name="theme-color"]');
-  if (themeColor) themeColor.setAttribute("content", "#172033");
+  if (themeColor) themeColor.setAttribute("content", nextTheme === "dark" ? "#101827" : "#F4F6F8");
 }
 
 function setupTheme() {
@@ -262,6 +263,7 @@ function renderPracticeHome() {
   const savedExperience = getSavedExperienceLabel();
   const level = session.target.level;
   const hasEvidence = Array.isArray(profile?.evidence) && profile.evidence.length > 0;
+  const learningOpportunitySummary = summarizeLearningOpportunities(profile);
 
   const adaptiveRecommendation = chooseLearningSurface(matrix, experienceLibrary, profile, {
     level,
@@ -449,6 +451,16 @@ function renderPracticeHome() {
         <strong>${knowledgeGraph?.nodes.length || 0} knowledge links</strong>
         <p class="spanish">Vocabulary, grammar, communication functions and pronunciation connect to Can-Do goals and practice activities.</p>
         <small>${summarizeLearningProfile(profile).totalActivities} practice starts tracked · ${knowledgeGraph?.valid ? "knowledge links validated" : "knowledge links need review"}</small>
+      </section>
+
+      <section class="learning-evidence-summary" aria-label="Learning from corrections">
+        <div class="learning-evidence-icon" aria-hidden="true">↗</div>
+        <div class="learning-evidence-copy">
+          <p class="kicker">Learning from corrections · Aprender de los errores</p>
+          <strong>${learningOpportunitySummary.attempts ? `${learningOpportunitySummary.correct}/${learningOpportunitySummary.attempts} practice checks correct` : "Your practice evidence starts here"}</strong>
+          <p class="spanish">${learningOpportunitySummary.attempts ? `Respuestas correctas: ${learningOpportunitySummary.correct} de ${learningOpportunitySummary.attempts} intentos.` : "Cuando HODIE detecte un error con un ejercicio disponible, podrás practicar la regla y registrar el resultado."}</p>
+          <small>${learningOpportunitySummary.attempts ? `Accuracy in these mini-checks: ${Math.round(learningOpportunitySummary.accuracy * 100)}% · Exactitud en estas micropruebas` : "Saved on this device · Guardado en este dispositivo"}</small>
+        </div>
       </section>
 
       <div class="home-progress">
@@ -778,6 +790,34 @@ function handleExperienceResponse(experience, stage, response) {
   const languageNotes = feedbackContract.corrections;
   const missingLabels = feedbackContract.missing.map((item) => item.label || item.id);
   const firstCorrection = languageNotes[0];
+  const learningOpportunity = firstCorrection ? createLearningOpportunity(firstCorrection.id || firstCorrection.target) : null;
+  const learningActivityId = `${experience.id}-${stage.id}`;
+  const priorLearningAttempts = learningOpportunity
+    ? (profile.learningOpportunities || []).filter((item) => item.ruleId === learningOpportunity.ruleId && item.activityId === learningActivityId).length
+    : 0;
+  const learningOpportunityMarkup = learningOpportunity ? `
+    <section class="learning-opportunity-card" aria-labelledby="learningOpportunityTitle">
+      <div class="learning-opportunity-heading">
+        <span class="learning-opportunity-icon" aria-hidden="true">↗</span>
+        <div>
+          <h3 id="learningOpportunityTitle">Learning opportunity · Oportunidad de aprendizaje</h3>
+          <p>Try a similar question to practise this rule.</p>
+          <p class="spanish">Resuelve una pregunta similar para practicar esta regla.</p>
+        </div>
+      </div>
+      <div class="learning-opportunity-question">
+        <p class="learning-opportunity-prompt">${escapeHtml(learningOpportunity.prompt)}</p>
+        <p class="spanish">${escapeHtml(learningOpportunity.promptEs)}</p>
+        <fieldset class="learning-opportunity-options">
+          <legend>Choose one · Elige una respuesta</legend>
+          ${learningOpportunity.options.map((option, index) => `<label class="learning-option"><input type="radio" name="learningOpportunityAnswer" value="${escapeHtml(option)}"><span>${escapeHtml(option)}</span></label>`).join("")}
+        </fieldset>
+        <button class="secondary compact" id="checkLearningOpportunityButton" type="button">Check answer · Comprobar</button>
+        <div id="learningOpportunityFeedback" class="learning-opportunity-result" aria-live="polite"></div>
+      </div>
+      <p class="learning-opportunity-footnote">Your result is saved on this device to track practice, not to label your overall English level.</p>
+      <p class="spanish learning-opportunity-footnote">Tu resultado se guarda en este dispositivo para seguir tu práctica, no para etiquetar tu nivel general de inglés.</p>
+    </section>` : "";
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
   const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Not fully checked · Revisión parcial";
   const feedbackBody = firstCorrection
@@ -799,6 +839,7 @@ function handleExperienceResponse(experience, stage, response) {
       '<strong>' + feedbackTitle + '</strong>' +
       inlineCorrection +
       feedbackBody +
+      learningOpportunityMarkup +
       relatedTips +
       nextTip +
       '<div class="actions">' +
@@ -806,6 +847,35 @@ function handleExperienceResponse(experience, stage, response) {
         '<button class="primary compact" id="nextExperienceButton" type="button">' + (languageNotes.length || missingLabels.length ? (experienceSession.index + 1 >= experience.stages.length ? "Continue anyway · Continuar" : "Continue anyway →") : (experienceSession.index + 1 >= experience.stages.length ? "View review · Ver resumen" : "Continue anyway →")) + '</button>' +
       '</div>' +
     '</section>';
+  if (learningOpportunity) {
+    document.querySelector("#checkLearningOpportunityButton")?.addEventListener("click", () => {
+      const selected = document.querySelector('input[name="learningOpportunityAnswer"]:checked');
+      const check = evaluateLearningOpportunity(learningOpportunity, selected?.value || "");
+      const output = document.querySelector("#learningOpportunityFeedback");
+      if (!check.available || check.correct === null) {
+        output.innerHTML = `<p class="learning-result-neutral">${escapeHtml(check.feedback || "Choose an answer first.")}</p><p class="spanish">${escapeHtml(check.feedbackEs || "Primero selecciona una respuesta.")}</p>`;
+        return;
+      }
+      const attempt = (profile.learningOpportunities || []).filter((item) => item.ruleId === learningOpportunity.ruleId && item.activityId === learningActivityId).length + 1;
+      profile = recordLearningOpportunity(profile, {
+        ruleId: learningOpportunity.ruleId,
+        activityId: learningActivityId,
+        answer: check.answer,
+        expected: check.expected,
+        correct: check.correct,
+        attempt,
+        afterCorrection: true
+      });
+      saveProfile();
+      output.innerHTML = `<div class="learning-result ${check.correct ? "learning-result-correct" : "learning-result-retry"}"><strong>${check.correct ? "Correct · ¡Correcto!" : "Not yet · Todavía no"}</strong><p>${escapeHtml(check.feedback)}</p><p class="spanish">${escapeHtml(check.feedbackEs)}</p>${check.correct ? `<p>${escapeHtml(learningOpportunity.explanation)}</p><p class="spanish">${escapeHtml(learningOpportunity.explanationEs)}</p><small>Attempt ${attempt} · Intento ${attempt}</small>` : '<p>Try again. You can change your answer.</p><p class="spanish">Inténtalo otra vez. Puedes cambiar tu respuesta.</p>'}</div>`;
+      if (check.correct) {
+        document.querySelectorAll('input[name="learningOpportunityAnswer"]').forEach((input) => { input.disabled = true; });
+        const checkButton = document.querySelector("#checkLearningOpportunityButton");
+        if (checkButton) checkButton.disabled = true;
+      }
+    });
+  }
+
   document.querySelector("#nextExperienceButton").addEventListener("click", () => {
     experienceSession = advanceExperienceSession(experienceSession, result);
     saveExperienceState();

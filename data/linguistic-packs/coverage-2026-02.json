@@ -3614,6 +3614,115 @@
         "modal + infinitive",
         "verbos modales"
       ]
+    },
+    {
+      "id": "LEX-BE-VERB-001",
+      "implementation": "be-before-lexical-verb",
+      "level": "A1-A2",
+      "category": "grammar",
+      "title": "Use the main verb without be for agree, understand and know",
+      "titleEs": "Usa el verbo principal sin be con agree, understand y know",
+      "explanation": "In simple present statements, use I agree, I understand and I know. Do not put am before these main verbs.",
+      "explanationEs": "En presente simple, usa I agree, I understand e I know. No pongas am antes de estos verbos principales.",
+      "examples": [
+        "I agree with you.",
+        "I understand the question.",
+        "I know the answer."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I agree with you.",
+          "es": "Estoy de acuerdo contigo."
+        },
+        {
+          "en": "I understand the question.",
+          "es": "Entiendo la pregunta."
+        },
+        {
+          "en": "I know the answer.",
+          "es": "Sé la respuesta."
+        }
+      ],
+      "incorrect": [
+        "I am agree with you.",
+        "I am understand the question.",
+        "I am know the answer."
+      ],
+      "exceptions": [
+        "This narrow rule covers only I am + agree/understand/know; it does not claim to cover every use of be.",
+        "I am a teacher is correct because teacher is a noun."
+      ],
+      "negativeCases": [
+        {
+          "text": "I agree with you.",
+          "reason": "The main verb agree is used directly."
+        },
+        {
+          "text": "I am a teacher.",
+          "reason": "Be + noun is correct."
+        },
+        {
+          "text": "I am working now.",
+          "reason": "Be + -ing forms the present continuous."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I ___ with you.",
+          "promptEs": "Estoy de acuerdo contigo.",
+          "options": [
+            "am agree",
+            "agree"
+          ],
+          "answer": "agree"
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "choose",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "present-simple",
+          "lexical-verbs",
+          "be"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\b(I)\\s+am\\s+(agree|understand|know)\\b",
+        "flags": "gi",
+        "replacement": "$1 $2"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "I am agree",
+        "I am understand",
+        "I am know",
+        "be before main verb",
+        "present simple",
+        "verbos léxicos"
+      ]
     }
   ],
   "vocabularyEntries": [
@@ -5326,6 +5435,40 @@
         "DID-NEG-BASE-001"
       ],
       "expectCorrection": "I didn't use the computer."
+    },
+    {
+      "id": "TC-LEX-BE-VERB-001",
+      "text": "I am agree with you.",
+      "expectRules": [
+        "LEX-BE-VERB-001"
+      ],
+      "expectCorrection": "I agree with you."
+    },
+    {
+      "id": "TC-LEX-BE-VERB-NEG-001",
+      "text": "I agree with you.",
+      "expectRules": [],
+      "expectCorrection": "I agree with you."
+    },
+    {
+      "id": "TC-LEX-BE-VERB-NEG-002",
+      "text": "I am a teacher.",
+      "expectRules": [],
+      "expectCorrection": "I am a teacher."
+    },
+    {
+      "id": "TC-LEX-BE-VERB-NEG-003",
+      "text": "I am working now.",
+      "expectRules": [],
+      "expectCorrection": "I am working now."
+    },
+    {
+      "id": "TC-PEOPLE-AGREE-001",
+      "text": "People is ready.",
+      "expectRules": [
+        "SVA-PLURAL-001"
+      ],
+      "expectCorrection": "People are ready."
     }
   ]
 }
