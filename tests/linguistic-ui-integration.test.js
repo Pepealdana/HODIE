@@ -14,11 +14,16 @@ assert.match(app, /applyLinguisticReview\(response, evaluated, "speaking"\)/);
 assert.match(app, /applyLinguisticReview\(response, linkedEvaluation, activity\.skill\)/);
 assert.match(app, /maxCorrections: 1/);
 assert.match(app, /searchLinguisticKnowledge\(text/);
+assert.match(app, /createLearningOpportunity/);
+assert.match(app, /recordLearningOpportunity/);
+assert.match(app, /Learning opportunity · Oportunidad de aprendizaje/);
+assert.match(app, /learningOpportunitySummary/);
+assert.match(app, /nextTheme === "dark" \? "#101827" : "#F4F6F8"/);
 assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v27/);
+assert.match(worker, /hodie-shell-v28/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 console.log("HODIE linguistic UI integration contract: PASS");
