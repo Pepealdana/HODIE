@@ -7,14 +7,6 @@ const EXERCISES = {
     explanation: "Use agree as a main verb: I agree.",
     explanationEs: "Usa agree como verbo principal: I agree."
   },
-  "AGREE-PEOPLE-001": {
-    prompt: "People ___ ready.",
-    promptEs: "Las personas están listas.",
-    options: ["is", "are", "am"],
-    answer: "are",
-    explanation: "People is plural in ordinary English, so use are.",
-    explanationEs: "People es plural en el inglés habitual, por eso usamos are."
-  },
   "DO-NEG-BASE-001": {
     prompt: "He doesn't ___ on Fridays.",
     promptEs: "Él no ___ los viernes.",
