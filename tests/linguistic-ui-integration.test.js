@@ -23,7 +23,7 @@ assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v28/);
+assert.match(worker, /hodie-shell-v29/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 console.log("HODIE linguistic UI integration contract: PASS");
