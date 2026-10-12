@@ -26,9 +26,9 @@ for (const id of ["WORD-ORDER-ADVERBS-001","PRON-OBJECT-001","SOME-ANY-001","PRE
   assert.equal(correctionRules.has(id),false,id+" must not auto-correct before validation");
 }
 const questionSearch = searchLinguisticKnowledge("indirect questions", {limit:20});
-assert.ok(questionSearch.some(x=>x.id==="INDIRECT-QUESTIONS-001"),"search should find draft syntax reference");
+assert.ok(questionSearch.some(x=>x.item?.id==="INDIRECT-QUESTIONS-001"),"search should find draft syntax reference");
 const sensorSearch = searchLinguisticKnowledge("sensor", {limit:30});
-assert.ok(sensorSearch.some(x=>x.id==="VOC-NOUN-SENSOR"),"search should find vocabulary");
+assert.ok(sensorSearch.some(x=>x.item?.id==="VOC-NOUN-SENSOR"),"search should find vocabulary");
 const graph = buildKnowledgeGraph(matrix,micro,content,knowledge,catalog);
 assert.equal(graph.valid,true,graph.errors.join("\n"));
 const linked = getLinguisticResourcesForCanDo(graph,"SP-A2-01");
