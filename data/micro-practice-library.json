@@ -2238,6 +2238,1064 @@
         "writing"
       ],
       "reviewPriority": "high"
+    },
+    {
+      "id": "MIC-GR-A2-01-01",
+      "canDoId": "GR-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Frequency adverbs",
+      "titleEs": "Adverbios de frecuencia",
+      "prompt": "I ___ check my answers before sending them.",
+      "promptEs": "Yo ___ reviso mis respuestas antes de enviarlas.",
+      "options": [
+        "usually",
+        "am usually",
+        "usually am"
+      ],
+      "answer": "usually",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "frequency-adverbs",
+        "present-simple",
+        "word-order"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "frequency-adverbs",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "be",
+        "profession"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "frequency-adverbs"
+    },
+    {
+      "id": "MIC-GR-A2-02-01",
+      "canDoId": "GR-A2-02",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Some or any?",
+      "titleEs": "¿Some o any?",
+      "prompt": "Do you have ___ questions?",
+      "promptEs": "¿Tienes ___ preguntas?",
+      "options": [
+        "some",
+        "any",
+        "much"
+      ],
+      "answer": "any",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "some",
+        "any",
+        "questions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "some-any",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "be",
+        "profession"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "some-any"
+    },
+    {
+      "id": "MIC-GR-A2-03-01",
+      "canDoId": "GR-A2-03",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Countable or uncountable",
+      "titleEs": "Contable o incontable",
+      "prompt": "How ___ students are in the room?",
+      "promptEs": "¿___ estudiantes hay en el salón?",
+      "options": [
+        "much",
+        "many",
+        "any"
+      ],
+      "answer": "many",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "countable",
+        "quantifiers"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "much-many",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "be",
+        "profession"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "much-many"
+    },
+    {
+      "id": "MIC-GR-B1-01-01",
+      "canDoId": "GR-B1-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "B1",
+      "title": "Indirect questions",
+      "titleEs": "Preguntas indirectas",
+      "prompt": "Could you tell me where the library ___?",
+      "promptEs": "¿Podrías decirme dónde ___ la biblioteca?",
+      "options": [
+        "is",
+        "is it",
+        "does it"
+      ],
+      "answer": "is",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "indirect-questions",
+        "syntax"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "indirect-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "be",
+        "profession"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ],
+      "target": "indirect-questions"
+    },
+    {
+      "id": "MIC-GR-A2-04-01",
+      "canDoId": "GR-A2-04",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Infinitive of purpose",
+      "titleEs": "Infinitivo de finalidad",
+      "prompt": "I use this app ___ practise English.",
+      "promptEs": "Uso esta aplicación ___ practicar inglés.",
+      "answer": "to",
+      "acceptableAnswers": [
+        "to"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Work at a school\" is the natural expression here.",
+        "correctEs": "Correcto. \"Work at a school\" es la expresión natural aquí.",
+        "incorrect": "Try again. We normally say \"work at a school\".",
+        "incorrectEs": "Inténtalo de nuevo. Normalmente decimos \"work at a school\"."
+      },
+      "tags": [
+        "infinitive",
+        "purpose"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "infinitive-purpose",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-at",
+        "prepositions"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "infinitive-purpose"
+    },
+    {
+      "id": "MIC-GR-A2-05-01",
+      "canDoId": "GR-A2-05",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Past simple",
+      "titleEs": "Pasado simple",
+      "prompt": "Yesterday, we ___ a robot.",
+      "promptEs": "Ayer, nosotros ___ un robot.",
+      "answer": "built",
+      "acceptableAnswers": [
+        "built"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Work at a school\" is the natural expression here.",
+        "correctEs": "Correcto. \"Work at a school\" es la expresión natural aquí.",
+        "incorrect": "Try again. We normally say \"work at a school\".",
+        "incorrectEs": "Inténtalo de nuevo. Normalmente decimos \"work at a school\"."
+      },
+      "tags": [
+        "past-simple",
+        "irregular-verbs"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "past-simple",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-at",
+        "prepositions"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "past-simple"
+    },
+    {
+      "id": "MIC-GR-B1-02-01",
+      "canDoId": "GR-B1-02",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "B1",
+      "title": "Present perfect",
+      "titleEs": "Presente perfecto",
+      "prompt": "I have ___ several robots.",
+      "promptEs": "He ___ varios robots.",
+      "answer": "built",
+      "acceptableAnswers": [
+        "built"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Work at a school\" is the natural expression here.",
+        "correctEs": "Correcto. \"Work at a school\" es la expresión natural aquí.",
+        "incorrect": "Try again. We normally say \"work at a school\".",
+        "incorrectEs": "Inténtalo de nuevo. Normalmente decimos \"work at a school\"."
+      },
+      "tags": [
+        "present-perfect",
+        "past-participle"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "present-perfect",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-at",
+        "prepositions"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ],
+      "target": "present-perfect"
+    },
+    {
+      "id": "MIC-VO-A2-01-01",
+      "canDoId": "VO-A2-01",
+      "type": "complete",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Useful collocations",
+      "titleEs": "Combinaciones frecuentes",
+      "prompt": "Please ___ the instructions before starting.",
+      "promptEs": "Por favor, ___ las instrucciones antes de empezar.",
+      "answer": "read",
+      "acceptableAnswers": [
+        "read"
+      ],
+      "feedback": {
+        "correct": "Correct. \"Work at a school\" is the natural expression here.",
+        "correctEs": "Correcto. \"Work at a school\" es la expresión natural aquí.",
+        "incorrect": "Try again. We normally say \"work at a school\".",
+        "incorrectEs": "Inténtalo de nuevo. Normalmente decimos \"work at a school\"."
+      },
+      "tags": [
+        "instructions",
+        "classroom"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "instructions",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-at",
+        "prepositions"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ],
+      "target": "instructions"
+    },
+    {
+      "id": "MIC-GR-A2-06-01",
+      "canDoId": "GR-A2-06",
+      "type": "order",
+      "skill": "grammar",
+      "context": "personal",
+      "level": "A2",
+      "title": "Build the question",
+      "titleEs": "Construye la pregunta",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "you",
+        "How",
+        "often",
+        "do",
+        "practise",
+        "English",
+        "?"
+      ],
+      "answer": "How often do you practise English?",
+      "feedback": {
+        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
+        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
+        "incorrect": "Start with the subject: \"I...\"",
+        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+      },
+      "tags": [
+        "question-forms",
+        "syntax"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "question-order",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "sentence-order",
+        "word-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar"
+      ],
+      "target": "question-order",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-GR-A2-07-01",
+      "canDoId": "GR-A2-07",
+      "type": "order",
+      "skill": "grammar",
+      "context": "personal",
+      "level": "A2",
+      "title": "Connect the reason",
+      "titleEs": "Conecta la razón",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "I",
+        "practise",
+        "because",
+        "I",
+        "want",
+        "to",
+        "improve",
+        "."
+      ],
+      "answer": "I practise because I want to improve.",
+      "feedback": {
+        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
+        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
+        "incorrect": "Start with the subject: \"I...\"",
+        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+      },
+      "tags": [
+        "because",
+        "connectors",
+        "syntax"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "connectors",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "sentence-order",
+        "word-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "target": "connectors",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-WR-A2-01-01",
+      "canDoId": "WR-A2-01",
+      "type": "order",
+      "skill": "writing",
+      "context": "personal",
+      "level": "A2",
+      "title": "Make a clear sentence",
+      "titleEs": "Forma una oración clara",
+      "prompt": "Put the words in order.",
+      "promptEs": "Ordena las palabras.",
+      "tokens": [
+        "My",
+        "students",
+        "are",
+        "building",
+        "a",
+        "robot",
+        "."
+      ],
+      "answer": "My students are building a robot.",
+      "feedback": {
+        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
+        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
+        "incorrect": "Start with the subject: \"I...\"",
+        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+      },
+      "tags": [
+        "word-order",
+        "present-continuous"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "present-continuous",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "sentence-order",
+        "word-order"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "grammar",
+        "writing"
+      ],
+      "target": "present-continuous",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-VO-A2-02-01",
+      "canDoId": "VO-A2-02",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Match the word and meaning",
+      "titleEs": "Relaciona palabra y significado",
+      "prompt": "What does “feedback” mean?",
+      "promptEs": "¿Qué significa “feedback”?",
+      "options": [
+        "retroalimentación",
+        "horario",
+        "sensor"
+      ],
+      "answer": "retroalimentación",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "learning",
+        "feedback"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "feedback",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-with",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ],
+      "target": "feedback",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-VO-A2-03-01",
+      "canDoId": "VO-A2-03",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "A2",
+      "title": "Match the collocation",
+      "titleEs": "Relaciona la combinación",
+      "prompt": "Choose the natural phrase.",
+      "promptEs": "Elige la expresión natural.",
+      "options": [
+        "make progress",
+        "do progress",
+        "take progress"
+      ],
+      "answer": "make progress",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "collocations",
+        "progress"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "collocations",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-with",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary"
+      ],
+      "target": "collocations",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-VO-B1-01-01",
+      "canDoId": "VO-B1-01",
+      "type": "match",
+      "skill": "vocabulary",
+      "context": "professional",
+      "level": "B1",
+      "title": "Connectors of contrast",
+      "titleEs": "Conectores de contraste",
+      "prompt": "Which expression means “sin embargo”?",
+      "promptEs": "¿Qué expresión significa “sin embargo”?",
+      "options": [
+        "however",
+        "therefore",
+        "because"
+      ],
+      "answer": "however",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "connectors",
+        "however"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "connectors",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "work-with",
+        "vocabulary"
+      ],
+      "primarySkill": "speaking",
+      "resources": [
+        "vocabulary",
+        "grammar"
+      ],
+      "target": "connectors",
+      "reviewPriority": "medium"
+    },
+    {
+      "id": "MIC-LI-A2-01-01",
+      "canDoId": "LI-A2-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "title": "Listen for a routine",
+      "titleEs": "Escucha una rutina",
+      "audioText": "I usually check the robot batteries before class. Today, one battery is empty, so I will charge it.",
+      "prompt": "What does the speaker usually do before class?",
+      "promptEs": "¿Qué suele hacer la persona antes de clase?",
+      "options": [
+        "Check the robot batteries",
+        "Charge every battery every day",
+        "Build a new robot"
+      ],
+      "answer": "Check the robot batteries",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "routine",
+        "technology"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-detail"
+    },
+    {
+      "id": "MIC-LI-A2-02-01",
+      "canDoId": "LI-A2-02",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "title": "Listen for a problem",
+      "titleEs": "Escucha un problema",
+      "audioText": "The sensor did not work yesterday. We checked the cables and found a loose connection.",
+      "prompt": "What was the problem?",
+      "promptEs": "¿Cuál era el problema?",
+      "options": [
+        "A loose connection",
+        "A broken screen",
+        "A missing program"
+      ],
+      "answer": "A loose connection",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "past-simple",
+        "problem-solving"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-detail"
+    },
+    {
+      "id": "MIC-LI-A2-03-01",
+      "canDoId": "LI-A2-03",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "title": "Listen for purpose",
+      "titleEs": "Escucha la finalidad",
+      "audioText": "I use HODIE for ten minutes every evening to practise vocabulary and review mistakes.",
+      "prompt": "Why does the speaker use HODIE?",
+      "promptEs": "¿Por qué usa HODIE la persona?",
+      "options": [
+        "To practise vocabulary and review mistakes",
+        "To watch films",
+        "To write code at work"
+      ],
+      "answer": "To practise vocabulary and review mistakes",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "purpose",
+        "learning"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-gist"
+    },
+    {
+      "id": "MIC-LI-B1-01-01",
+      "canDoId": "LI-B1-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "B1",
+      "title": "Listen for cause and result",
+      "titleEs": "Escucha causa y resultado",
+      "audioText": "The first test failed because the instructions were unclear. Therefore, the team rewrote them and tested the activity again.",
+      "prompt": "What did the team do after the first test failed?",
+      "promptEs": "¿Qué hizo el equipo después de que fallara la primera prueba?",
+      "options": [
+        "Rewrote the instructions and tested again",
+        "Cancelled the project",
+        "Changed the school"
+      ],
+      "answer": "Rewrote the instructions and tested again",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "connectors",
+        "cause-result"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-inference"
+    },
+    {
+      "id": "MIC-LI-A2-04-01",
+      "canDoId": "LI-A2-04",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "A2",
+      "title": "Listen for time",
+      "titleEs": "Escucha información temporal",
+      "audioText": "We finished the first model last Friday. This week, we are testing a new sensor.",
+      "prompt": "When did they finish the first model?",
+      "promptEs": "¿Cuándo terminaron el primer modelo?",
+      "options": [
+        "Last Friday",
+        "This week",
+        "Tomorrow"
+      ],
+      "answer": "Last Friday",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "past-simple",
+        "time"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-detail"
+    },
+    {
+      "id": "MIC-LI-B1-02-01",
+      "canDoId": "LI-B1-02",
+      "type": "listening",
+      "skill": "listening",
+      "context": "professional",
+      "level": "B1",
+      "title": "Listen for opinion",
+      "titleEs": "Escucha una opinión",
+      "audioText": "In my opinion, the new app is more useful because it gives examples after each correction. However, it needs more listening activities.",
+      "prompt": "What is the speaker's main opinion?",
+      "promptEs": "¿Cuál es la opinión principal?",
+      "options": [
+        "The app is useful but needs more listening activities",
+        "The app is not useful",
+        "The app should remove examples"
+      ],
+      "answer": "The app is useful but needs more listening activities",
+      "feedback": {
+        "correct": "Correct. Check the meaning and context.",
+        "correctEs": "Correcto. Comprueba el significado y el contexto.",
+        "incorrect": "Not quite. Review the options and try again.",
+        "incorrectEs": "No exactamente. Revisa las opciones e inténtalo de nuevo."
+      },
+      "tags": [
+        "listening",
+        "opinion",
+        "contrast"
+      ],
+      "errorType": "comprehension",
+      "errorTarget": "key-information",
+      "errorSeverity": "high",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "key-information",
+        "listening"
+      ],
+      "primarySkill": "listening",
+      "target": "listening-gist"
+    },
+    {
+      "id": "MIC-SP-B1-01-01",
+      "canDoId": "SP-B1-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "professional",
+      "level": "B1",
+      "title": "Give a reasoned opinion",
+      "titleEs": "Da una opinión razonada",
+      "prompt": "Give your opinion about learning apps and support it with one reason.",
+      "promptEs": "Da tu opinión sobre las aplicaciones de aprendizaje y apóyala con una razón.",
+      "targetPhrase": "In my opinion, short practice is useful because it helps me remember.",
+      "requiredTokens": [
+        "opinion",
+        "because"
+      ],
+      "feedback": {
+        "correct": "Good. Your speech included the key information.",
+        "correctEs": "Bien. Tu respuesta incluyó la información clave.",
+        "partial": "Good start. Try again and include the missing key words.",
+        "partialEs": "Buen comienzo. Inténtalo otra vez e incluye las palabras clave que faltan.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "speaking",
+        "opinion",
+        "because"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "required-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "required-information",
+        "speaking"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "In my opinion, short practice is useful because it helps me remember.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 1,
+        "slowRate": 0.78
+      },
+      "pronunciationHint": "Pause briefly before because.",
+      "target": "opinion-connectors"
+    },
+    {
+      "id": "MIC-PR-A2-01-01",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "professional",
+      "level": "A2",
+      "title": "Practise clear sentence stress",
+      "titleEs": "Practica el acento de frase",
+      "prompt": "Read the sentence aloud and stress the key words.",
+      "promptEs": "Lee la oración en voz alta y enfatiza las palabras clave.",
+      "targetPhrase": "I BUILT a ROBOT yesterday.",
+      "requiredTokens": [
+        "built",
+        "robot"
+      ],
+      "feedback": {
+        "correct": "Good. Your speech included the key information.",
+        "correctEs": "Bien. Tu respuesta incluyó la información clave.",
+        "partial": "Good start. Try again and include the missing key words.",
+        "partialEs": "Buen comienzo. Inténtalo otra vez e incluye las palabras clave que faltan.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "pronunciation",
+        "sentence-stress"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "required-information",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "required-information",
+        "speaking"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "I built a robot yesterday.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 1,
+        "slowRate": 0.75
+      },
+      "pronunciationHint": "Stress BUILT and ROBOT; keep yesterday in three syllables.",
+      "target": "sentence-stress"
+    },
+    {
+      "id": "MIC-WR-A2-02-01",
+      "canDoId": "WR-A2-02",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "professional",
+      "level": "A2",
+      "title": "Write about a learning habit",
+      "titleEs": "Escribe sobre un hábito de aprendizaje",
+      "prompt": "Write 3–4 sentences about when and how you practise English.",
+      "promptEs": "Escribe 3–4 oraciones sobre cuándo y cómo practicas inglés.",
+      "requirements": [
+        "Write at least three sentences",
+        "Include one frequency adverb",
+        "Give one reason using because"
+      ],
+      "feedback": {
+        "correct": "Good. You described a habit and gave a reason.",
+        "correctEs": "Bien. Describiste un hábito y diste una razón.",
+        "incorrect": "Check sentence order and make sure the reason is complete.",
+        "incorrectEs": "Revisa el orden de la oración y asegúrate de que la razón esté completa."
+      },
+      "tags": [
+        "writing",
+        "frequency-adverbs",
+        "because"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "writing",
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "criteria": [
+          {
+            "id": "habit",
+            "label": "describes a learning habit",
+            "type": "content-point"
+          },
+          {
+            "id": "frequency",
+            "label": "uses a frequency adverb",
+            "type": "language-feature"
+          },
+          {
+            "id": "reason",
+            "label": "gives a reason with because",
+            "type": "language-feature"
+          }
+        ]
+      },
+      "reviewTargets": [
+        "frequency-adverbs",
+        "because"
+      ],
+      "reviewPriority": "medium",
+      "errorType": "production",
+      "errorPriority": "medium"
+    },
+    {
+      "id": "MIC-WR-B1-01-01",
+      "canDoId": "WR-B1-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "professional",
+      "level": "B1",
+      "title": "Compare two learning methods",
+      "titleEs": "Compara dos métodos de aprendizaje",
+      "prompt": "Write 4–5 sentences comparing two ways to learn English. Include an advantage and a disadvantage.",
+      "promptEs": "Escribe 4–5 oraciones comparando dos formas de aprender inglés. Incluye una ventaja y una desventaja.",
+      "requirements": [
+        "Compare two methods",
+        "Use a comparative adjective",
+        "Include an advantage and a disadvantage"
+      ],
+      "feedback": {
+        "correct": "Your comparison includes the requested points.",
+        "correctEs": "Tu comparación incluye los puntos solicitados.",
+        "incorrect": "Check the comparison structure and make both sides clear.",
+        "incorrectEs": "Revisa la estructura comparativa y deja claros ambos métodos."
+      },
+      "tags": [
+        "writing",
+        "comparatives",
+        "argumentation"
+      ],
+      "primarySkill": "writing",
+      "resources": [
+        "writing",
+        "grammar",
+        "vocabulary"
+      ],
+      "evaluation": {
+        "criteria": [
+          {
+            "id": "comparison",
+            "label": "compares two methods",
+            "type": "content-point"
+          },
+          {
+            "id": "comparative",
+            "label": "uses a comparative form",
+            "type": "language-feature"
+          },
+          {
+            "id": "balance",
+            "label": "states an advantage and disadvantage",
+            "type": "content-point"
+          }
+        ]
+      },
+      "reviewTargets": [
+        "comparatives",
+        "advantages",
+        "disadvantages"
+      ],
+      "reviewPriority": "medium",
+      "errorType": "production",
+      "errorPriority": "medium"
     }
   ]
 }

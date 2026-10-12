@@ -12,6 +12,10 @@ Everything in the architecture, pedagogy, content, interface and future AI layer
 
 ---
 
+## Linguistic coverage and activity suite
+
+The current catalog and activity inventory, rule-activation criteria, cross-skill links and validation boundaries are documented in [Linguistic coverage and activity suite](docs/linguistic-coverage-and-activity-suite.md). Draft grammar references remain searchable but are not automatically corrected until validated by positive and negative regression tests.
+
 ## 1. The North Star
 
 HODIE exists because knowing English and being able to use English are not the same thing.

@@ -156,8 +156,14 @@ function calculateTargetScore(matrix, profile, canDo, options = {}) {
   const now = options.now ? new Date(options.now) : new Date();
   const status = getStatus(canDo, profile);
   const recentEvidence = getRecentEvidence(profile, options.recentEvidenceLimit || 8);
+  const latestCanDoId = recentEvidence.at(-1)?.canDoId;
+  const latestCanDo = latestCanDoId ? (matrix.canDos || []).find((item) => item.id === latestCanDoId) : null;
 
   let score = PRIORITY_WEIGHTS[canDo.priority] || 1;
+  // Prefer continuity within a just-practised skill when its next target is available.
+  // This prevents newly added activities in another skill from interrupting a sequence unexpectedly.
+  if (latestCanDo && latestCanDo.skill === canDo.skill) score += 4;
+  if (latestCanDoId && (canDo.prerequisites || []).includes(latestCanDoId)) score += 2;
   score += STATUS_NEED[status] || 0;
   score *= SKILL_WEIGHTS[canDo.skill] || 1;
 

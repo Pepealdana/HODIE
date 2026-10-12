@@ -349,6 +349,620 @@
         "preferences",
         "speaking"
       ]
+    },
+    {
+      "id": "ACT-LI-A2-01-01",
+      "canDoId": "LI-A2-01",
+      "activityType": "listening-comprehension",
+      "level": "A2",
+      "skill": "listening",
+      "context": "educational",
+      "title": "Understand classroom instructions",
+      "titleEs": "Comprende instrucciones de clase",
+      "objective": "Identify the key steps in a short spoken classroom instruction.",
+      "objectiveEs": "Identificar los pasos principales de una instrucción oral breve.",
+      "instructions": "Read the short transcript aloud or use device text-to-speech, then answer the question.",
+      "instructionsEs": "Lee el texto en voz alta o usa la lectura en voz alta del dispositivo y responde la pregunta.",
+      "task": "Transcript: First, connect the sensor. Then open the program. Finally, test the robot. What should you do first?",
+      "taskEs": "Transcripción: Primero, conecta el sensor. Luego abre el programa. Finalmente, prueba el robot. ¿Qué debes hacer primero?",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "gist": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "listening",
+          "instructions",
+          "sequence-connectors"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "first-step",
+            "label": "identifies the first step",
+            "type": "content-point"
+          },
+          {
+            "id": "sequence",
+            "label": "recognizes sequence markers",
+            "type": "language-resource"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "imperatives",
+        "sequence-connectors"
+      ]
+    },
+    {
+      "id": "ACT-RE-A2-01-01",
+      "canDoId": "RE-A2-01",
+      "activityType": "reading-comprehension",
+      "level": "A2",
+      "skill": "reading",
+      "context": "educational",
+      "title": "Read a project update",
+      "titleEs": "Lee una actualización de proyecto",
+      "objective": "Find the main idea and a detail in a short project update.",
+      "objectiveEs": "Encontrar la idea principal y un detalle en una actualización breve.",
+      "instructions": "Read the message and answer the question.",
+      "instructionsEs": "Lee el mensaje y responde la pregunta.",
+      "task": "The robotics team tested a sensor on Tuesday. It worked indoors, but sunlight affected readings outside. The team will test a cover next week. What problem did the team find?",
+      "taskEs": "El equipo de robótica probó un sensor el martes. Funcionó en interiores, pero la luz solar afectó las lecturas en exteriores. El equipo probará una cubierta la próxima semana. ¿Qué problema encontró?",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "gist": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "reading",
+          "technology",
+          "past-simple"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "problem",
+            "label": "identifies the effect of sunlight",
+            "type": "content-point"
+          },
+          {
+            "id": "next-step",
+            "label": "recognizes the next step",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "past-simple",
+        "problem-solution"
+      ]
+    },
+    {
+      "id": "ACT-WR-A2-01-01",
+      "canDoId": "WR-A2-01",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "writing",
+      "context": "educational",
+      "title": "Write a learning update",
+      "titleEs": "Escribe una actualización de aprendizaje",
+      "objective": "Write a short connected update using a past event and a next step.",
+      "objectiveEs": "Escribir una actualización breve usando un hecho pasado y un siguiente paso.",
+      "instructions": "Write 3–4 sentences about what you practised, one difficulty and what you will do next.",
+      "instructionsEs": "Escribe 3–4 oraciones sobre lo que practicaste, una dificultad y lo que harás después.",
+      "task": "Describe what you practised, what was difficult, what helped, and your next step.",
+      "taskEs": "Describe qué practicaste, qué fue difícil, qué te ayudó y tu siguiente paso.",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.8,
+          "accuracy": 0.7,
+          "coherence": 0.8,
+          "clarity": 0.8,
+          "vocabulary": 0.7,
+          "grammar": 0.7,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "writing",
+          "past-simple",
+          "connectors"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "practice",
+            "label": "states what was practised",
+            "type": "content-point"
+          },
+          {
+            "id": "difficulty",
+            "label": "describes a difficulty",
+            "type": "content-point"
+          },
+          {
+            "id": "next-step",
+            "label": "states a next step",
+            "type": "content-point"
+          },
+          {
+            "id": "connectors",
+            "label": "uses one connector",
+            "type": "language-resource"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "past-simple",
+        "because-so-therefore"
+      ]
+    },
+    {
+      "id": "ACT-GR-A2-01-01",
+      "canDoId": "GR-A2-01",
+      "activityType": "controlled-practice",
+      "level": "A2",
+      "skill": "grammar",
+      "context": "educational",
+      "title": "Choose a verb pattern",
+      "titleEs": "Elige un patrón verbal",
+      "objective": "Choose a reviewed verb pattern in a controlled sentence.",
+      "objectiveEs": "Elegir un patrón verbal revisado en una oración controlada.",
+      "instructions": "Choose the correct option and explain why.",
+      "instructionsEs": "Elige la opción correcta y explica por qué.",
+      "task": "I use this app ___ practise English. (to / for / at)",
+      "taskEs": "Uso esta aplicación ___ practicar inglés. (to / for / at)",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.9,
+          "communicativeUse": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "grammar",
+          "infinitive-purpose"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "purpose",
+            "label": "uses to + base verb for purpose",
+            "type": "language-resource"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "infinitive-of-purpose"
+      ]
+    },
+    {
+      "id": "ACT-VO-A2-01-01",
+      "canDoId": "VO-A2-01",
+      "activityType": "recognition",
+      "level": "A2",
+      "skill": "vocabulary",
+      "context": "educational",
+      "title": "Build useful collocations",
+      "titleEs": "Construye combinaciones útiles",
+      "objective": "Recognize natural collocations for learning and technology.",
+      "objectiveEs": "Reconocer combinaciones naturales sobre aprendizaje y tecnología.",
+      "instructions": "Choose the natural phrase and use it in a sentence.",
+      "instructionsEs": "Elige la expresión natural y úsala en una oración.",
+      "task": "Choose: make progress / do progress / take progress.",
+      "taskEs": "Elige: make progress / do progress / take progress.",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "recall": 0.8,
+          "use": 0.7,
+          "spontaneousUse": 0.5
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "vocabulary",
+          "collocations",
+          "progress"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "collocation",
+            "label": "selects make progress",
+            "type": "language-resource"
+          },
+          {
+            "id": "sentence",
+            "label": "uses the phrase in context",
+            "type": "production"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "collocations",
+        "progress"
+      ]
+    },
+    {
+      "id": "ACT-PR-A2-01-01",
+      "canDoId": "PR-A2-01",
+      "activityType": "pronunciation",
+      "level": "A2",
+      "skill": "pronunciation",
+      "context": "educational",
+      "title": "Make key words clear",
+      "titleEs": "Pronuncia con claridad las palabras clave",
+      "objective": "Practise sentence stress in a short statement.",
+      "objectiveEs": "Practicar el acento de frase en una afirmación breve.",
+      "instructions": "Record yourself saying the sentence twice, focusing on the key words.",
+      "instructionsEs": "Grábate diciendo la oración dos veces, enfocándote en las palabras clave.",
+      "task": "I BUILT a ROBOT yesterday. Focus on BUILT and ROBOT.",
+      "taskEs": "I BUILT a ROBOT yesterday. Enfatiza BUILT y ROBOT.",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "intelligibility": 0.8,
+          "prosody": 0.7,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "pronunciation",
+          "sentence-stress"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "stress",
+            "label": "makes key words prominent",
+            "type": "pronunciation-feature"
+          },
+          {
+            "id": "intelligibility",
+            "label": "sentence remains understandable",
+            "type": "communicative-outcome"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "sentence-stress",
+        "past-simple"
+      ]
+    },
+    {
+      "id": "ACT-CO-A2-01-01",
+      "canDoId": "CO-A2-01",
+      "activityType": "interaction",
+      "level": "A2",
+      "skill": "communication",
+      "context": "educational",
+      "title": "Ask for clarification",
+      "titleEs": "Pide una aclaración",
+      "objective": "Repair a communication breakdown with a polite clarification request.",
+      "objectiveEs": "Resolver una dificultad comunicativa mediante una petición cortés.",
+      "instructions": "Imagine a colleague gives an instruction you do not understand. Respond politely.",
+      "instructionsEs": "Imagina que un compañero da una instrucción que no entiendes. Responde con cortesía.",
+      "task": "Use “Could you repeat that, please?” or “What do you mean by…?”",
+      "taskEs": "Usa “Could you repeat that, please?” o “What do you mean by…?”.",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.8,
+          "interaction": 0.8,
+          "repair": 0.9,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "communication",
+          "clarification"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "polite",
+            "label": "uses a polite request",
+            "type": "language-resource"
+          },
+          {
+            "id": "repair",
+            "label": "signals what needs clarification",
+            "type": "interaction-strategy"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "question-forms",
+        "interaction-repair"
+      ]
+    },
+    {
+      "id": "ACT-WR-B1-01-01",
+      "canDoId": "WR-B1-01",
+      "activityType": "integrated-task",
+      "level": "B1",
+      "skill": "writing",
+      "context": "educational",
+      "title": "Explain a problem and solution",
+      "titleEs": "Explica un problema y una solución",
+      "objective": "Explain a problem, its cause and a proposed solution in a connected paragraph.",
+      "objectiveEs": "Explicar un problema, su causa y una solución propuesta en un párrafo conectado.",
+      "instructions": "Write 5–6 sentences. Use because and however or therefore.",
+      "instructionsEs": "Escribe 5–6 oraciones. Usa because y however o therefore.",
+      "task": "A learning activity gives unclear feedback. Explain the problem, its effect and one practical solution.",
+      "taskEs": "Una actividad de aprendizaje da retroalimentación poco clara. Explica el problema, su efecto y una solución práctica.",
+      "support": {
+        "optionalSentenceStarters": []
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.8,
+          "accuracy": 0.7,
+          "coherence": 0.8,
+          "clarity": 0.8,
+          "vocabulary": 0.7,
+          "grammar": 0.7,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "writing",
+          "B1",
+          "connectors"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "problem",
+            "label": "explains the problem",
+            "type": "content-point"
+          },
+          {
+            "id": "cause",
+            "label": "explains a cause",
+            "type": "content-point"
+          },
+          {
+            "id": "solution",
+            "label": "proposes a solution",
+            "type": "content-point"
+          },
+          {
+            "id": "cohesion",
+            "label": "uses connectors accurately",
+            "type": "language-resource"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 12,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "because-so-therefore",
+        "however",
+        "argumentation"
+      ]
     }
   ]
 }
