@@ -3051,6 +3051,9 @@
         "opinion",
         "communication",
         "learning"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01"
       ]
     },
     {
@@ -3095,6 +3098,9 @@
         "polite-requests",
         "communication",
         "classroom"
+      ],
+      "relatedCanDoIds": [
+        "LI-A2-01"
       ]
     },
     {
@@ -3141,6 +3147,10 @@
         "present-simple",
         "technology",
         "education"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "RE-A2-01"
       ]
     },
     {
@@ -3187,6 +3197,10 @@
         "technology",
         "education",
         "problem-solving"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "LI-A2-01"
       ]
     },
     {
@@ -3231,6 +3245,10 @@
         "adjectives",
         "technology",
         "learning"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "RE-A2-01"
       ]
     },
     {
@@ -3276,6 +3294,10 @@
         "frequency-adverbs",
         "daily-life",
         "education"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "LI-A2-01"
       ]
     },
     {
@@ -3320,6 +3342,10 @@
         "be",
         "technology",
         "education"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "LI-A2-01"
       ]
     },
     {
@@ -3365,6 +3391,9 @@
         "conditionals",
         "technology",
         "problem-solving"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01"
       ]
     },
     {
@@ -3410,6 +3439,10 @@
         "argumentation",
         "technology",
         "communication"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "RE-A2-01"
       ]
     },
     {
@@ -3454,6 +3487,10 @@
         "past-simple",
         "learning",
         "technology"
+      ],
+      "relatedCanDoIds": [
+        "WR-A2-01",
+        "LI-A2-01"
       ]
     }
   ],
