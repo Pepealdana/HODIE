@@ -26106,6 +26106,4420 @@
         "communication",
         "ambiguous meaning"
       ]
+    },
+    {
+      "id": "VOC-VERB-EXPLAIN",
+      "lemma": "explain",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "explicar",
+      "forms": [
+        "explain"
+      ],
+      "collocations": [
+        "explain a rule",
+        "explain an idea"
+      ],
+      "examples": [
+        "Can you explain this rule?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Can you explain this rule?",
+          "es": "¿Puedes explicar esta regla?"
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "explain",
+        "explicar",
+        "education",
+        "explain a rule",
+        "explain an idea"
+      ]
+    },
+    {
+      "id": "VOC-VERB-IMPROVE",
+      "lemma": "improve",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "mejorar",
+      "forms": [
+        "improve"
+      ],
+      "collocations": [
+        "improve my English",
+        "improve a skill"
+      ],
+      "examples": [
+        "I want to improve my English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I want to improve my English.",
+          "es": "Quiero mejorar mi inglés."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "improve",
+        "mejorar",
+        "learning",
+        "improve my English",
+        "improve a skill"
+      ]
+    },
+    {
+      "id": "VOC-VERB-PRACTISE",
+      "lemma": "practise",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "practicar",
+      "forms": [
+        "practise"
+      ],
+      "collocations": [
+        "practise speaking",
+        "practise every day"
+      ],
+      "examples": [
+        "I practise speaking every day."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I practise speaking every day.",
+          "es": "Practico hablar todos los días."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "practise",
+        "practicar",
+        "learning",
+        "practise speaking",
+        "practise every day"
+      ]
+    },
+    {
+      "id": "VOC-VERB-REMEMBER",
+      "lemma": "remember",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "recordar",
+      "forms": [
+        "remember"
+      ],
+      "collocations": [
+        "remember a word",
+        "remember to do something"
+      ],
+      "examples": [
+        "I remember this word."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I remember this word.",
+          "es": "Recuerdo esta palabra."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "remember",
+        "recordar",
+        "learning",
+        "remember a word",
+        "remember to do something"
+      ]
+    },
+    {
+      "id": "VOC-VERB-FORGET",
+      "lemma": "forget",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "olvidar",
+      "forms": [
+        "forget"
+      ],
+      "collocations": [
+        "forget a name",
+        "forget to do something"
+      ],
+      "examples": [
+        "I sometimes forget new words."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I sometimes forget new words.",
+          "es": "A veces olvido palabras nuevas."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "forget",
+        "olvidar",
+        "learning",
+        "forget a name",
+        "forget to do something"
+      ]
+    },
+    {
+      "id": "VOC-VERB-CHOOSE",
+      "lemma": "choose",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "daily-life",
+      "meaningEs": "elegir",
+      "forms": [
+        "choose"
+      ],
+      "collocations": [
+        "choose an answer",
+        "choose a topic"
+      ],
+      "examples": [
+        "Choose the correct answer."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Choose the correct answer.",
+          "es": "Elige la respuesta correcta."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "choose",
+        "elegir",
+        "daily-life",
+        "choose an answer",
+        "choose a topic"
+      ]
+    },
+    {
+      "id": "VOC-VERB-CHECK",
+      "lemma": "check",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "comprobar; revisar",
+      "forms": [
+        "check"
+      ],
+      "collocations": [
+        "check an answer",
+        "check the spelling"
+      ],
+      "examples": [
+        "Please check my answer."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Please check my answer.",
+          "es": "Por favor, revisa mi respuesta."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "check",
+        "comprobar; revisar",
+        "learning",
+        "check an answer",
+        "check the spelling"
+      ]
+    },
+    {
+      "id": "VOC-VERB-REPEAT",
+      "lemma": "repeat",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "repetir",
+      "forms": [
+        "repeat"
+      ],
+      "collocations": [
+        "repeat a sentence",
+        "repeat slowly"
+      ],
+      "examples": [
+        "Could you repeat that, please?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Could you repeat that, please?",
+          "es": "¿Podrías repetir eso, por favor?"
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "repeat",
+        "repetir",
+        "communication",
+        "repeat a sentence",
+        "repeat slowly"
+      ]
+    },
+    {
+      "id": "VOC-VERB-EXPLAIN-TO",
+      "lemma": "explain",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "explicar a",
+      "forms": [
+        "explain"
+      ],
+      "collocations": [
+        "explain something to someone"
+      ],
+      "examples": [
+        "Please explain the problem to me."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Please explain the problem to me.",
+          "es": "Por favor, explícame el problema."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "explain",
+        "explicar a",
+        "communication",
+        "explain something to someone"
+      ]
+    },
+    {
+      "id": "VOC-VERB-ASK",
+      "lemma": "ask",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "preguntar; pedir",
+      "forms": [
+        "ask"
+      ],
+      "collocations": [
+        "ask a question",
+        "ask for help"
+      ],
+      "examples": [
+        "Can I ask a question?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Can I ask a question?",
+          "es": "¿Puedo hacer una pregunta?"
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "ask",
+        "preguntar; pedir",
+        "communication",
+        "ask a question",
+        "ask for help"
+      ]
+    },
+    {
+      "id": "VOC-VERB-ANSWER",
+      "lemma": "answer",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "responder",
+      "forms": [
+        "answer"
+      ],
+      "collocations": [
+        "answer a question",
+        "answer clearly"
+      ],
+      "examples": [
+        "Please answer in English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Please answer in English.",
+          "es": "Por favor, responde en inglés."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "answer",
+        "responder",
+        "communication",
+        "answer a question",
+        "answer clearly"
+      ]
+    },
+    {
+      "id": "VOC-VERB-UNDERSTAND",
+      "lemma": "understand",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "entender",
+      "forms": [
+        "understand"
+      ],
+      "collocations": [
+        "understand a question",
+        "understand clearly"
+      ],
+      "examples": [
+        "I understand the instructions."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I understand the instructions.",
+          "es": "Entiendo las instrucciones."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "understand",
+        "entender",
+        "communication",
+        "understand a question",
+        "understand clearly"
+      ]
+    },
+    {
+      "id": "VOC-VERB-AGREE",
+      "lemma": "agree",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "estar de acuerdo",
+      "forms": [
+        "agree"
+      ],
+      "collocations": [
+        "agree with someone",
+        "agree on a plan"
+      ],
+      "examples": [
+        "I agree with your idea."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I agree with your idea.",
+          "es": "Estoy de acuerdo con tu idea."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "agree",
+        "estar de acuerdo",
+        "communication",
+        "agree with someone",
+        "agree on a plan"
+      ]
+    },
+    {
+      "id": "VOC-VERB-DISAGREE",
+      "lemma": "disagree",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "no estar de acuerdo",
+      "forms": [
+        "disagree"
+      ],
+      "collocations": [
+        "disagree politely",
+        "disagree with someone"
+      ],
+      "examples": [
+        "I disagree because the data is different."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I disagree because the data is different.",
+          "es": "No estoy de acuerdo porque los datos son diferentes."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "disagree",
+        "no estar de acuerdo",
+        "communication",
+        "disagree politely",
+        "disagree with someone"
+      ]
+    },
+    {
+      "id": "VOC-VERB-SUGGEST",
+      "lemma": "suggest",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "sugerir",
+      "forms": [
+        "suggest"
+      ],
+      "collocations": [
+        "suggest an idea",
+        "suggest doing something"
+      ],
+      "examples": [
+        "I suggest starting with a simple task."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I suggest starting with a simple task.",
+          "es": "Sugiero empezar con una tarea sencilla."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "suggest",
+        "sugerir",
+        "communication",
+        "suggest an idea",
+        "suggest doing something"
+      ]
+    },
+    {
+      "id": "VOC-VERB-DECIDE",
+      "lemma": "decide",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "decidir",
+      "forms": [
+        "decide"
+      ],
+      "collocations": [
+        "decide to do something",
+        "make a decision"
+      ],
+      "examples": [
+        "We decided to build a robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We decided to build a robot.",
+          "es": "Decidimos construir un robot."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "decide",
+        "decidir",
+        "daily-life",
+        "decide to do something",
+        "make a decision"
+      ]
+    },
+    {
+      "id": "VOC-VERB-PLAN",
+      "lemma": "plan",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "planear; planificar",
+      "forms": [
+        "plan"
+      ],
+      "collocations": [
+        "plan a project",
+        "make a plan"
+      ],
+      "examples": [
+        "We plan our project together."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We plan our project together.",
+          "es": "Planificamos nuestro proyecto juntos."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "plan",
+        "planear; planificar",
+        "education",
+        "plan a project",
+        "make a plan"
+      ]
+    },
+    {
+      "id": "VOC-VERB-DESIGN",
+      "lemma": "design",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "diseñar",
+      "forms": [
+        "design"
+      ],
+      "collocations": [
+        "design a website",
+        "design a solution"
+      ],
+      "examples": [
+        "Students design a simple app."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Students design a simple app.",
+          "es": "Los estudiantes diseñan una aplicación sencilla."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "design",
+        "diseñar",
+        "technology",
+        "design a website",
+        "design a solution"
+      ]
+    },
+    {
+      "id": "VOC-VERB-BUILD",
+      "lemma": "build",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "construir",
+      "forms": [
+        "build"
+      ],
+      "collocations": [
+        "build a robot",
+        "build a model"
+      ],
+      "examples": [
+        "We build robots at school."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We build robots at school.",
+          "es": "Construimos robots en el colegio."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "build",
+        "construir",
+        "technology",
+        "build a robot",
+        "build a model"
+      ]
+    },
+    {
+      "id": "VOC-VERB-FIX",
+      "lemma": "fix",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "arreglar; reparar",
+      "forms": [
+        "fix"
+      ],
+      "collocations": [
+        "fix a problem",
+        "fix a robot"
+      ],
+      "examples": [
+        "I can fix this problem."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I can fix this problem.",
+          "es": "Puedo arreglar este problema."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "fix",
+        "arreglar; reparar",
+        "technology",
+        "fix a problem",
+        "fix a robot"
+      ]
+    },
+    {
+      "id": "VOC-VERB-TEST",
+      "lemma": "test",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "probar; evaluar",
+      "forms": [
+        "test"
+      ],
+      "collocations": [
+        "test an idea",
+        "test a program"
+      ],
+      "examples": [
+        "We test the program before class."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We test the program before class.",
+          "es": "Probamos el programa antes de la clase."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "test",
+        "probar; evaluar",
+        "technology",
+        "test an idea",
+        "test a program"
+      ]
+    },
+    {
+      "id": "VOC-VERB-USE",
+      "lemma": "use",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "usar",
+      "forms": [
+        "use"
+      ],
+      "collocations": [
+        "use a computer",
+        "use a tool"
+      ],
+      "examples": [
+        "I use a computer for my lessons."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I use a computer for my lessons.",
+          "es": "Uso un computador para mis clases."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "use",
+        "usar",
+        "technology",
+        "use a computer",
+        "use a tool"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-TOOL",
+      "lemma": "tool",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "herramienta",
+      "forms": [
+        "tool"
+      ],
+      "collocations": [
+        "digital tool",
+        "useful tool"
+      ],
+      "examples": [
+        "This tool helps me learn."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This tool helps me learn.",
+          "es": "Esta herramienta me ayuda a aprender."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "tool",
+        "herramienta",
+        "technology",
+        "digital tool",
+        "useful tool"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-SENSOR",
+      "lemma": "sensor",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sensor",
+      "forms": [
+        "sensor"
+      ],
+      "collocations": [
+        "temperature sensor",
+        "distance sensor"
+      ],
+      "examples": [
+        "The sensor detects movement."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The sensor detects movement.",
+          "es": "El sensor detecta movimiento."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "sensor",
+        "sensor",
+        "technology",
+        "temperature sensor",
+        "distance sensor"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-DEVICE",
+      "lemma": "device",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "dispositivo",
+      "forms": [
+        "device"
+      ],
+      "collocations": [
+        "mobile device",
+        "digital device"
+      ],
+      "examples": [
+        "Open the activity on your device."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Open the activity on your device.",
+          "es": "Abre la actividad en tu dispositivo."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "device",
+        "dispositivo",
+        "technology",
+        "mobile device",
+        "digital device"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-APP",
+      "lemma": "app",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "technology",
+      "meaningEs": "aplicación",
+      "forms": [
+        "app"
+      ],
+      "collocations": [
+        "mobile app",
+        "learning app"
+      ],
+      "examples": [
+        "I use an app to practise English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I use an app to practise English.",
+          "es": "Uso una aplicación para practicar inglés."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "app",
+        "aplicación",
+        "technology",
+        "mobile app",
+        "learning app"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-CHALLENGE",
+      "lemma": "challenge",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "reto; desafío",
+      "forms": [
+        "challenge"
+      ],
+      "collocations": [
+        "face a challenge",
+        "a difficult challenge"
+      ],
+      "examples": [
+        "Speaking is a challenge for me."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Speaking is a challenge for me.",
+          "es": "Hablar es un reto para mí."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "challenge",
+        "reto; desafío",
+        "learning",
+        "face a challenge",
+        "a difficult challenge"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-MISTAKE",
+      "lemma": "mistake",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "error; equivocación",
+      "forms": [
+        "mistake"
+      ],
+      "collocations": [
+        "make a mistake",
+        "learn from a mistake"
+      ],
+      "examples": [
+        "I learn from my mistakes."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I learn from my mistakes.",
+          "es": "Aprendo de mis errores."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "mistake",
+        "error; equivocación",
+        "learning",
+        "make a mistake",
+        "learn from a mistake"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-FEEDBACK",
+      "lemma": "feedback",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "learning",
+      "meaningEs": "retroalimentación",
+      "forms": [
+        "feedback"
+      ],
+      "collocations": [
+        "give feedback",
+        "useful feedback"
+      ],
+      "examples": [
+        "Useful feedback helps me improve."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Useful feedback helps me improve.",
+          "es": "La retroalimentación útil me ayuda a mejorar."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "feedback",
+        "retroalimentación",
+        "learning",
+        "give feedback",
+        "useful feedback"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-GOAL",
+      "lemma": "goal",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "meta; objetivo",
+      "forms": [
+        "goal"
+      ],
+      "collocations": [
+        "set a goal",
+        "reach a goal"
+      ],
+      "examples": [
+        "My goal is to speak more confidently."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My goal is to speak more confidently.",
+          "es": "Mi meta es hablar con más confianza."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "goal",
+        "meta; objetivo",
+        "learning",
+        "set a goal",
+        "reach a goal"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-REASON",
+      "lemma": "reason",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "razón; motivo",
+      "forms": [
+        "reason"
+      ],
+      "collocations": [
+        "for this reason",
+        "give a reason"
+      ],
+      "examples": [
+        "I study English for work."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I study English for work.",
+          "es": "Estudio inglés por trabajo."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "reason",
+        "razón; motivo",
+        "communication",
+        "for this reason",
+        "give a reason"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-EXAMPLE",
+      "lemma": "example",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "learning",
+      "meaningEs": "ejemplo",
+      "forms": [
+        "example"
+      ],
+      "collocations": [
+        "for example",
+        "give an example"
+      ],
+      "examples": [
+        "Can you give me an example?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Can you give me an example?",
+          "es": "¿Puedes darme un ejemplo?"
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "example",
+        "ejemplo",
+        "learning",
+        "for example",
+        "give an example"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-RESULT",
+      "lemma": "result",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "resultado",
+      "forms": [
+        "result"
+      ],
+      "collocations": [
+        "test result",
+        "as a result"
+      ],
+      "examples": [
+        "The result is better this time."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The result is better this time.",
+          "es": "El resultado es mejor esta vez."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "result",
+        "resultado",
+        "learning",
+        "test result",
+        "as a result"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-QUESTION",
+      "lemma": "question",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "pregunta",
+      "forms": [
+        "question"
+      ],
+      "collocations": [
+        "ask a question",
+        "answer a question"
+      ],
+      "examples": [
+        "I have a question about this rule."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have a question about this rule.",
+          "es": "Tengo una pregunta sobre esta regla."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "question",
+        "pregunta",
+        "communication",
+        "ask a question",
+        "answer a question"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-ANSWER",
+      "lemma": "answer",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "respuesta",
+      "forms": [
+        "answer"
+      ],
+      "collocations": [
+        "correct answer",
+        "short answer"
+      ],
+      "examples": [
+        "Your answer is clear."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Your answer is clear.",
+          "es": "Tu respuesta es clara."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "answer",
+        "respuesta",
+        "communication",
+        "correct answer",
+        "short answer"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-INSTRUCTION",
+      "lemma": "instruction",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "instrucción",
+      "forms": [
+        "instruction"
+      ],
+      "collocations": [
+        "follow instructions",
+        "clear instructions"
+      ],
+      "examples": [
+        "Read the instructions first."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Read the instructions first.",
+          "es": "Lee las instrucciones primero."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "instruction",
+        "instrucción",
+        "education",
+        "follow instructions",
+        "clear instructions"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-CLASSROOM",
+      "lemma": "classroom",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "salón de clase",
+      "forms": [
+        "classroom"
+      ],
+      "collocations": [
+        "in the classroom",
+        "classroom activity"
+      ],
+      "examples": [
+        "The students are in the classroom."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The students are in the classroom.",
+          "es": "Los estudiantes están en el salón de clase."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "classroom",
+        "salón de clase",
+        "education",
+        "in the classroom",
+        "classroom activity"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-ASSIGNMENT",
+      "lemma": "assignment",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "education",
+      "meaningEs": "tarea; trabajo asignado",
+      "forms": [
+        "assignment"
+      ],
+      "collocations": [
+        "complete an assignment",
+        "school assignment"
+      ],
+      "examples": [
+        "I need to finish my assignment."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I need to finish my assignment.",
+          "es": "Necesito terminar mi tarea."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "assignment",
+        "tarea; trabajo asignado",
+        "education",
+        "complete an assignment",
+        "school assignment"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-SCHEDULE",
+      "lemma": "schedule",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "horario; cronograma",
+      "forms": [
+        "schedule"
+      ],
+      "collocations": [
+        "class schedule",
+        "busy schedule"
+      ],
+      "examples": [
+        "My schedule is busy today."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My schedule is busy today.",
+          "es": "Mi horario está ocupado hoy."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "schedule",
+        "horario; cronograma",
+        "daily-life",
+        "class schedule",
+        "busy schedule"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-TEAM",
+      "lemma": "team",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "education",
+      "meaningEs": "equipo",
+      "forms": [
+        "team"
+      ],
+      "collocations": [
+        "work in a team",
+        "team member"
+      ],
+      "examples": [
+        "Our team is building a robot."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Our team is building a robot.",
+          "es": "Nuestro equipo está construyendo un robot."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "education",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "team",
+        "equipo",
+        "education",
+        "work in a team",
+        "team member"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-IDEA",
+      "lemma": "idea",
+      "partOfSpeech": "noun",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "idea",
+      "forms": [
+        "idea"
+      ],
+      "collocations": [
+        "have an idea",
+        "share an idea"
+      ],
+      "examples": [
+        "I have an idea for the project."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have an idea for the project.",
+          "es": "Tengo una idea para el proyecto."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "idea",
+        "idea",
+        "communication",
+        "have an idea",
+        "share an idea"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-SOLUTION",
+      "lemma": "solution",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "problem-solving",
+      "meaningEs": "solución",
+      "forms": [
+        "solution"
+      ],
+      "collocations": [
+        "find a solution",
+        "simple solution"
+      ],
+      "examples": [
+        "We need a practical solution."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We need a practical solution.",
+          "es": "Necesitamos una solución práctica."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "problem-solving",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "solution",
+        "solución",
+        "problem-solving",
+        "find a solution",
+        "simple solution"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-IMPORTANT",
+      "lemma": "important",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "general",
+      "meaningEs": "importante",
+      "forms": [
+        "important"
+      ],
+      "collocations": [
+        "important information",
+        "very important"
+      ],
+      "examples": [
+        "Practice is important."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Practice is important.",
+          "es": "La práctica es importante."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "adjective",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "important",
+        "importante",
+        "general",
+        "important information",
+        "very important"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-USEFUL",
+      "lemma": "useful",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "útil",
+      "forms": [
+        "useful"
+      ],
+      "collocations": [
+        "useful expression",
+        "useful tool"
+      ],
+      "examples": [
+        "This expression is useful."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This expression is useful.",
+          "es": "Esta expresión es útil."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "adjective",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "useful",
+        "útil",
+        "learning",
+        "useful expression",
+        "useful tool"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-AVAILABLE",
+      "lemma": "available",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "disponible",
+      "forms": [
+        "available"
+      ],
+      "collocations": [
+        "available online",
+        "available today"
+      ],
+      "examples": [
+        "The activity is available offline."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The activity is available offline.",
+          "es": "La actividad está disponible sin conexión."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "adjective",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "available",
+        "disponible",
+        "daily-life",
+        "available online",
+        "available today"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-CONFIDENT",
+      "lemma": "confident",
+      "partOfSpeech": "adjective",
+      "level": "A2",
+      "domain": "feelings",
+      "meaningEs": "seguro/a; con confianza",
+      "forms": [
+        "confident"
+      ],
+      "collocations": [
+        "feel confident",
+        "more confident"
+      ],
+      "examples": [
+        "I feel more confident when I practise."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I feel more confident when I practise.",
+          "es": "Me siento con más confianza cuando practico."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "feelings",
+        "adjective",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "confident",
+        "seguro/a; con confianza",
+        "feelings",
+        "feel confident",
+        "more confident"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-CAREFUL",
+      "lemma": "careful",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "general",
+      "meaningEs": "cuidadoso/a",
+      "forms": [
+        "careful"
+      ],
+      "collocations": [
+        "be careful",
+        "careful review"
+      ],
+      "examples": [
+        "Be careful with verb endings."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Be careful with verb endings.",
+          "es": "Ten cuidado con las terminaciones verbales."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "adjective",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "careful",
+        "cuidadoso/a",
+        "general",
+        "be careful",
+        "careful review"
+      ]
+    },
+    {
+      "id": "VOC-ADV-USUALLY",
+      "lemma": "usually",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "time-frequency",
+      "meaningEs": "normalmente",
+      "forms": [
+        "usually"
+      ],
+      "collocations": [
+        "usually study",
+        "usually work"
+      ],
+      "examples": [
+        "I usually study in the evening."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I usually study in the evening.",
+          "es": "Normalmente estudio por la noche."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "time-frequency",
+        "adverb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "usually",
+        "normalmente",
+        "time-frequency",
+        "usually study",
+        "usually work"
+      ]
+    },
+    {
+      "id": "VOC-ADV-SOMETIMES",
+      "lemma": "sometimes",
+      "partOfSpeech": "adverb",
+      "level": "A1",
+      "domain": "time-frequency",
+      "meaningEs": "a veces",
+      "forms": [
+        "sometimes"
+      ],
+      "collocations": [
+        "sometimes forget",
+        "sometimes practise"
+      ],
+      "examples": [
+        "I sometimes make mistakes."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I sometimes make mistakes.",
+          "es": "A veces cometo errores."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "time-frequency",
+        "adverb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "sometimes",
+        "a veces",
+        "time-frequency",
+        "sometimes forget",
+        "sometimes practise"
+      ]
+    },
+    {
+      "id": "VOC-ADV-ALREADY",
+      "lemma": "already",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "time",
+      "meaningEs": "ya",
+      "forms": [
+        "already"
+      ],
+      "collocations": [
+        "already finished",
+        "already know"
+      ],
+      "examples": [
+        "I have already finished the task."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have already finished the task.",
+          "es": "Ya terminé la tarea."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "time",
+        "adverb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "already",
+        "ya",
+        "time",
+        "already finished",
+        "already know"
+      ]
+    },
+    {
+      "id": "VOC-ADV-YET",
+      "lemma": "yet",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "time",
+      "meaningEs": "todavía; ya (en preguntas/negativas)",
+      "forms": [
+        "yet"
+      ],
+      "collocations": [
+        "not yet",
+        "Have you finished yet?"
+      ],
+      "examples": [
+        "I haven't finished yet."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I haven't finished yet.",
+          "es": "Todavía no he terminado."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "time",
+        "adverb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "yet",
+        "todavía; ya (en preguntas/negativas)",
+        "time",
+        "not yet",
+        "Have you finished yet?"
+      ]
+    },
+    {
+      "id": "VOC-CONJ-ALTHOUGH",
+      "lemma": "although",
+      "partOfSpeech": "conjunction",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "aunque",
+      "forms": [
+        "although"
+      ],
+      "collocations": [
+        "although it is difficult",
+        "although I agree"
+      ],
+      "examples": [
+        "Although it was difficult, we finished."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Although it was difficult, we finished.",
+          "es": "Aunque fue difícil, terminamos."
+        }
+      ],
+      "openClass": false,
+      "tags": [
+        "connectors",
+        "conjunction",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "although",
+        "aunque",
+        "connectors",
+        "although it is difficult",
+        "although I agree"
+      ]
+    },
+    {
+      "id": "VOC-CONJ-HOWEVER",
+      "lemma": "however",
+      "partOfSpeech": "adverb",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "sin embargo",
+      "forms": [
+        "however"
+      ],
+      "collocations": [
+        "however, ...",
+        "however difficult"
+      ],
+      "examples": [
+        "The task was difficult. However, we finished."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The task was difficult. However, we finished.",
+          "es": "La tarea fue difícil. Sin embargo, terminamos."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "connectors",
+        "adverb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "however",
+        "sin embargo",
+        "connectors",
+        "however, ...",
+        "however difficult"
+      ]
+    },
+    {
+      "id": "VOC-CONJ-THEREFORE",
+      "lemma": "therefore",
+      "partOfSpeech": "adverb",
+      "level": "B1",
+      "domain": "connectors",
+      "meaningEs": "por lo tanto",
+      "forms": [
+        "therefore"
+      ],
+      "collocations": [
+        "therefore, ...",
+        "and therefore"
+      ],
+      "examples": [
+        "The sensor failed; therefore, we checked the circuit."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The sensor failed; therefore, we checked the circuit.",
+          "es": "El sensor falló; por lo tanto, revisamos el circuito."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "connectors",
+        "adverb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "therefore",
+        "por lo tanto",
+        "connectors",
+        "therefore, ...",
+        "and therefore"
+      ]
+    },
+    {
+      "id": "VOC-PREP-BETWEEN",
+      "lemma": "between",
+      "partOfSpeech": "preposition",
+      "level": "A1",
+      "domain": "prepositions",
+      "meaningEs": "entre (dos o más elementos definidos)",
+      "forms": [
+        "between"
+      ],
+      "collocations": [
+        "between two objects",
+        "between Monday and Friday"
+      ],
+      "examples": [
+        "The robot is between the boxes."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The robot is between the boxes.",
+          "es": "El robot está entre las cajas."
+        }
+      ],
+      "openClass": false,
+      "tags": [
+        "prepositions",
+        "preposition",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "between",
+        "entre (dos o más elementos definidos)",
+        "prepositions",
+        "between two objects",
+        "between Monday and Friday"
+      ]
+    },
+    {
+      "id": "VOC-PREP-AMONG",
+      "lemma": "among",
+      "partOfSpeech": "preposition",
+      "level": "B1",
+      "domain": "prepositions",
+      "meaningEs": "entre (un grupo)",
+      "forms": [
+        "among"
+      ],
+      "collocations": [
+        "among the students",
+        "among several options"
+      ],
+      "examples": [
+        "She is popular among her students."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She is popular among her students.",
+          "es": "Ella es popular entre sus estudiantes."
+        }
+      ],
+      "openClass": false,
+      "tags": [
+        "prepositions",
+        "preposition",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "among",
+        "entre (un grupo)",
+        "prepositions",
+        "among the students",
+        "among several options"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-FIND-OUT",
+      "lemma": "find out",
+      "partOfSpeech": "phrasal-verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "averiguar; descubrir",
+      "forms": [
+        "find out"
+      ],
+      "collocations": [
+        "find out the answer",
+        "find out more"
+      ],
+      "examples": [
+        "I want to find out why it failed."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I want to find out why it failed.",
+          "es": "Quiero averiguar por qué falló."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "phrasal-verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "find out",
+        "averiguar; descubrir",
+        "communication",
+        "find out the answer",
+        "find out more"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-FILL-OUT",
+      "lemma": "fill out",
+      "partOfSpeech": "phrasal-verb",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "diligenciar; completar un formulario",
+      "forms": [
+        "fill out"
+      ],
+      "collocations": [
+        "fill out a form",
+        "fill out the details"
+      ],
+      "examples": [
+        "Please fill out this form."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Please fill out this form.",
+          "es": "Por favor, diligencia este formulario."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "phrasal-verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "fill out",
+        "diligenciar; completar un formulario",
+        "daily-life",
+        "fill out a form",
+        "fill out the details"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-LOOK-FOR",
+      "lemma": "look for",
+      "partOfSpeech": "phrasal-verb",
+      "level": "A1",
+      "domain": "daily-life",
+      "meaningEs": "buscar",
+      "forms": [
+        "look for"
+      ],
+      "collocations": [
+        "look for information",
+        "look for a file"
+      ],
+      "examples": [
+        "I am looking for my notebook."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am looking for my notebook.",
+          "es": "Estoy buscando mi cuaderno."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "phrasal-verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "look for",
+        "buscar",
+        "daily-life",
+        "look for information",
+        "look for a file"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-LOOK-AFTER",
+      "lemma": "look after",
+      "partOfSpeech": "phrasal-verb",
+      "level": "A2",
+      "domain": "daily-life",
+      "meaningEs": "cuidar",
+      "forms": [
+        "look after"
+      ],
+      "collocations": [
+        "look after a child",
+        "look after equipment"
+      ],
+      "examples": [
+        "I look after the robotics equipment."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I look after the robotics equipment.",
+          "es": "Cuido los equipos de robótica."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "daily-life",
+        "phrasal-verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "look after",
+        "cuidar",
+        "daily-life",
+        "look after a child",
+        "look after equipment"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-CARRY-ON",
+      "lemma": "carry on",
+      "partOfSpeech": "phrasal-verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "continuar",
+      "forms": [
+        "carry on"
+      ],
+      "collocations": [
+        "carry on working",
+        "carry on with a task"
+      ],
+      "examples": [
+        "Let's carry on with the activity."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Let's carry on with the activity.",
+          "es": "Continuemos con la actividad."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "phrasal-verb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "carry on",
+        "continuar",
+        "communication",
+        "carry on working",
+        "carry on with a task"
+      ]
+    },
+    {
+      "id": "VOC-PHRASAL-FIND-OUT-2",
+      "lemma": "find out",
+      "partOfSpeech": "phrasal-verb",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "averiguar",
+      "forms": [
+        "find out"
+      ],
+      "collocations": [
+        "find out what happened",
+        "find out how"
+      ],
+      "examples": [
+        "We need to find out what happened."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We need to find out what happened.",
+          "es": "Necesitamos averiguar qué pasó."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "phrasal-verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "find out",
+        "averiguar",
+        "communication",
+        "find out what happened",
+        "find out how"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-PRONUNCIATION",
+      "lemma": "pronunciation",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "language-learning",
+      "meaningEs": "pronunciación",
+      "forms": [
+        "pronunciation"
+      ],
+      "collocations": [
+        "practise pronunciation",
+        "clear pronunciation"
+      ],
+      "examples": [
+        "Clear pronunciation helps people understand you."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Clear pronunciation helps people understand you.",
+          "es": "Una pronunciación clara ayuda a que te entiendan."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "language-learning",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "pronunciation",
+        "pronunciación",
+        "language-learning",
+        "practise pronunciation",
+        "clear pronunciation"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-FLUENCY",
+      "lemma": "fluency",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "language-learning",
+      "meaningEs": "fluidez",
+      "forms": [
+        "fluency"
+      ],
+      "collocations": [
+        "improve fluency",
+        "speak with more fluency"
+      ],
+      "examples": [
+        "Short daily talks can improve fluency."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Short daily talks can improve fluency.",
+          "es": "Conversaciones breves diarias pueden mejorar la fluidez."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "language-learning",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "fluency",
+        "fluidez",
+        "language-learning",
+        "improve fluency",
+        "speak with more fluency"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-PROGRESS",
+      "lemma": "progress",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "progreso",
+      "forms": [
+        "progress"
+      ],
+      "collocations": [
+        "make progress",
+        "track progress"
+      ],
+      "examples": [
+        "I can see my progress."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I can see my progress.",
+          "es": "Puedo ver mi progreso."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "progress",
+        "progreso",
+        "learning",
+        "make progress",
+        "track progress"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-CLEAR",
+      "lemma": "clear",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "claro/a",
+      "forms": [
+        "clear"
+      ],
+      "collocations": [
+        "clear explanation",
+        "speak clearly"
+      ],
+      "examples": [
+        "The explanation is clear."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The explanation is clear.",
+          "es": "La explicación es clara."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "adjective",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "clear",
+        "claro/a",
+        "communication",
+        "clear explanation",
+        "speak clearly"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-DIFFICULT",
+      "lemma": "difficult",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "general",
+      "meaningEs": "difícil",
+      "forms": [
+        "difficult"
+      ],
+      "collocations": [
+        "difficult question",
+        "find something difficult"
+      ],
+      "examples": [
+        "This question is difficult."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This question is difficult.",
+          "es": "Esta pregunta es difícil."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "adjective",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "difficult",
+        "difícil",
+        "general",
+        "difficult question",
+        "find something difficult"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-EASY",
+      "lemma": "easy",
+      "partOfSpeech": "adjective",
+      "level": "A1",
+      "domain": "general",
+      "meaningEs": "fácil",
+      "forms": [
+        "easy"
+      ],
+      "collocations": [
+        "easy task",
+        "easy to understand"
+      ],
+      "examples": [
+        "The first activity is easy."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The first activity is easy.",
+          "es": "La primera actividad es fácil."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "adjective",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "easy",
+        "fácil",
+        "general",
+        "easy task",
+        "easy to understand"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-FEELING",
+      "lemma": "feeling",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "feelings",
+      "meaningEs": "sentimiento; sensación",
+      "forms": [
+        "feeling"
+      ],
+      "collocations": [
+        "talk about feelings",
+        "a strong feeling"
+      ],
+      "examples": [
+        "I can describe my feelings in English."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I can describe my feelings in English.",
+          "es": "Puedo describir mis sentimientos en inglés."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "feelings",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "feeling",
+        "sentimiento; sensación",
+        "feelings",
+        "talk about feelings",
+        "a strong feeling"
+      ]
+    },
+    {
+      "id": "VOC-VERB-FEEL",
+      "lemma": "feel",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "feelings",
+      "meaningEs": "sentir(se)",
+      "forms": [
+        "feel"
+      ],
+      "collocations": [
+        "feel tired",
+        "feel confident"
+      ],
+      "examples": [
+        "I feel tired after work."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I feel tired after work.",
+          "es": "Me siento cansado después del trabajo."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "feelings",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "feel",
+        "sentir(se)",
+        "feelings",
+        "feel tired",
+        "feel confident"
+      ]
+    },
+    {
+      "id": "VOC-VERB-WORRY",
+      "lemma": "worry",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "feelings",
+      "meaningEs": "preocuparse",
+      "forms": [
+        "worry"
+      ],
+      "collocations": [
+        "worry about a test",
+        "don't worry"
+      ],
+      "examples": [
+        "I worry about making mistakes."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I worry about making mistakes.",
+          "es": "Me preocupa cometer errores."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "feelings",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "worry",
+        "preocuparse",
+        "feelings",
+        "worry about a test",
+        "don't worry"
+      ]
+    },
+    {
+      "id": "VOC-VERB-EXPERIENCE",
+      "lemma": "experience",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "experimentar; vivir",
+      "forms": [
+        "experience"
+      ],
+      "collocations": [
+        "experience a problem",
+        "experience change"
+      ],
+      "examples": [
+        "We experienced a problem with the device."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We experienced a problem with the device.",
+          "es": "Experimentamos un problema con el dispositivo."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "experience",
+        "experimentar; vivir",
+        "communication",
+        "experience a problem",
+        "experience change"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-OPINION",
+      "lemma": "opinion",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "communication",
+      "meaningEs": "opinión",
+      "forms": [
+        "opinion"
+      ],
+      "collocations": [
+        "in my opinion",
+        "share an opinion"
+      ],
+      "examples": [
+        "In my opinion, this is a good idea."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "In my opinion, this is a good idea.",
+          "es": "En mi opinión, esta es una buena idea."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "opinion",
+        "opinión",
+        "communication",
+        "in my opinion",
+        "share an opinion"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-ADVANTAGE",
+      "lemma": "advantage",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "ventaja",
+      "forms": [
+        "advantage"
+      ],
+      "collocations": [
+        "main advantage",
+        "have an advantage"
+      ],
+      "examples": [
+        "One advantage is that it works offline."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "One advantage is that it works offline.",
+          "es": "Una ventaja es que funciona sin conexión."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "advantage",
+        "ventaja",
+        "communication",
+        "main advantage",
+        "have an advantage"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-DISADVANTAGE",
+      "lemma": "disadvantage",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "communication",
+      "meaningEs": "desventaja",
+      "forms": [
+        "disadvantage"
+      ],
+      "collocations": [
+        "main disadvantage",
+        "a disadvantage of"
+      ],
+      "examples": [
+        "One disadvantage is the small screen."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "One disadvantage is the small screen.",
+          "es": "Una desventaja es la pantalla pequeña."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "disadvantage",
+        "desventaja",
+        "communication",
+        "main disadvantage",
+        "a disadvantage of"
+      ]
+    },
+    {
+      "id": "VOC-VERB-COMPARE",
+      "lemma": "compare",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "learning",
+      "meaningEs": "comparar",
+      "forms": [
+        "compare"
+      ],
+      "collocations": [
+        "compare two answers",
+        "compare results"
+      ],
+      "examples": [
+        "Compare the two sentences."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Compare the two sentences.",
+          "es": "Compara las dos oraciones."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "learning",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "compare",
+        "comparar",
+        "learning",
+        "compare two answers",
+        "compare results"
+      ]
+    },
+    {
+      "id": "VOC-VERB-DESCRIBE",
+      "lemma": "describe",
+      "partOfSpeech": "verb",
+      "level": "A1",
+      "domain": "communication",
+      "meaningEs": "describir",
+      "forms": [
+        "describe"
+      ],
+      "collocations": [
+        "describe a person",
+        "describe a process"
+      ],
+      "examples": [
+        "Describe your classroom."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Describe your classroom.",
+          "es": "Describe tu salón de clase."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "communication",
+        "verb",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "describe",
+        "describir",
+        "communication",
+        "describe a person",
+        "describe a process"
+      ]
+    },
+    {
+      "id": "VOC-VERB-EXPERIMENT",
+      "lemma": "experiment",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "science",
+      "meaningEs": "experimentar",
+      "forms": [
+        "experiment"
+      ],
+      "collocations": [
+        "experiment with a design",
+        "run an experiment"
+      ],
+      "examples": [
+        "We experiment with different designs."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We experiment with different designs.",
+          "es": "Experimentamos con diferentes diseños."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "science",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "experiment",
+        "experimentar",
+        "science",
+        "experiment with a design",
+        "run an experiment"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-ENVIRONMENT",
+      "lemma": "environment",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "science",
+      "meaningEs": "entorno; medioambiente",
+      "forms": [
+        "environment"
+      ],
+      "collocations": [
+        "learning environment",
+        "natural environment"
+      ],
+      "examples": [
+        "We protect the natural environment."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We protect the natural environment.",
+          "es": "Protegemos el medioambiente."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "science",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "environment",
+        "entorno; medioambiente",
+        "science",
+        "learning environment",
+        "natural environment"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-ENERGY",
+      "lemma": "energy",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "science",
+      "meaningEs": "energía",
+      "forms": [
+        "energy"
+      ],
+      "collocations": [
+        "save energy",
+        "solar energy"
+      ],
+      "examples": [
+        "The project uses solar energy."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The project uses solar energy.",
+          "es": "El proyecto usa energía solar."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "science",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "energy",
+        "energía",
+        "science",
+        "save energy",
+        "solar energy"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-DATA",
+      "lemma": "data",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "technology",
+      "meaningEs": "datos",
+      "forms": [
+        "data"
+      ],
+      "collocations": [
+        "collect data",
+        "analyse data"
+      ],
+      "examples": [
+        "The program collects data."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The program collects data.",
+          "es": "El programa recopila datos."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "data",
+        "datos",
+        "technology",
+        "collect data",
+        "analyse data"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-PRIVACY",
+      "lemma": "privacy",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "technology",
+      "meaningEs": "privacidad",
+      "forms": [
+        "privacy"
+      ],
+      "collocations": [
+        "protect privacy",
+        "privacy settings"
+      ],
+      "examples": [
+        "Privacy is important online."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Privacy is important online.",
+          "es": "La privacidad es importante en línea."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "privacy",
+        "privacidad",
+        "technology",
+        "protect privacy",
+        "privacy settings"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-SETTING",
+      "lemma": "setting",
+      "partOfSpeech": "noun",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "configuración; ajuste",
+      "forms": [
+        "setting"
+      ],
+      "collocations": [
+        "change a setting",
+        "privacy settings"
+      ],
+      "examples": [
+        "Change the language setting."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Change the language setting.",
+          "es": "Cambia la configuración del idioma."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "setting",
+        "configuración; ajuste",
+        "technology",
+        "change a setting",
+        "privacy settings"
+      ]
+    },
+    {
+      "id": "VOC-VERB-ENABLE",
+      "lemma": "enable",
+      "partOfSpeech": "verb",
+      "level": "B1",
+      "domain": "technology",
+      "meaningEs": "permitir; habilitar",
+      "forms": [
+        "enable"
+      ],
+      "collocations": [
+        "enable a feature",
+        "enable offline access"
+      ],
+      "examples": [
+        "This setting enables offline access."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This setting enables offline access.",
+          "es": "Esta configuración permite el acceso sin conexión."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "verb",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "enable",
+        "permitir; habilitar",
+        "technology",
+        "enable a feature",
+        "enable offline access"
+      ]
+    },
+    {
+      "id": "VOC-VERB-REQUIRE",
+      "lemma": "require",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "general",
+      "meaningEs": "requerir; necesitar",
+      "forms": [
+        "require"
+      ],
+      "collocations": [
+        "require practice",
+        "require a password"
+      ],
+      "examples": [
+        "Learning a language requires practice."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Learning a language requires practice.",
+          "es": "Aprender un idioma requiere práctica."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "require",
+        "requerir; necesitar",
+        "general",
+        "require practice",
+        "require a password"
+      ]
+    },
+    {
+      "id": "VOC-VERB-ALLOW",
+      "lemma": "allow",
+      "partOfSpeech": "verb",
+      "level": "A2",
+      "domain": "general",
+      "meaningEs": "permitir",
+      "forms": [
+        "allow"
+      ],
+      "collocations": [
+        "allow someone to do something",
+        "allow access"
+      ],
+      "examples": [
+        "The app allows me to practise offline."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The app allows me to practise offline.",
+          "es": "La aplicación me permite practicar sin conexión."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "general",
+        "verb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "allow",
+        "permitir",
+        "general",
+        "allow someone to do something",
+        "allow access"
+      ]
+    },
+    {
+      "id": "VOC-CONNECTOR-INSTEAD",
+      "lemma": "instead",
+      "partOfSpeech": "adverb",
+      "level": "A2",
+      "domain": "connectors",
+      "meaningEs": "en cambio; en lugar de eso",
+      "forms": [
+        "instead"
+      ],
+      "collocations": [
+        "instead of doing",
+        "try this instead"
+      ],
+      "examples": [
+        "I didn't watch a video; I practised instead."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I didn't watch a video; I practised instead.",
+          "es": "No vi un video; practiqué en cambio."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "connectors",
+        "adverb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "instead",
+        "en cambio; en lugar de eso",
+        "connectors",
+        "instead of doing",
+        "try this instead"
+      ]
+    },
+    {
+      "id": "VOC-CONNECTOR-BECAUSE",
+      "lemma": "because",
+      "partOfSpeech": "conjunction",
+      "level": "A1",
+      "domain": "connectors",
+      "meaningEs": "porque",
+      "forms": [
+        "because"
+      ],
+      "collocations": [
+        "because I was tired",
+        "because it helps"
+      ],
+      "examples": [
+        "I practise because I want to improve."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I practise because I want to improve.",
+          "es": "Practico porque quiero mejorar."
+        }
+      ],
+      "openClass": false,
+      "tags": [
+        "connectors",
+        "conjunction",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "because",
+        "porque",
+        "connectors",
+        "because I was tired",
+        "because it helps"
+      ]
+    },
+    {
+      "id": "VOC-CONNECTOR-SO",
+      "lemma": "so",
+      "partOfSpeech": "conjunction",
+      "level": "A1",
+      "domain": "connectors",
+      "meaningEs": "así que; por eso",
+      "forms": [
+        "so"
+      ],
+      "collocations": [
+        "so I decided",
+        "so that"
+      ],
+      "examples": [
+        "I was tired, so I went to bed."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I was tired, so I went to bed.",
+          "es": "Estaba cansado, así que me fui a dormir."
+        }
+      ],
+      "openClass": false,
+      "tags": [
+        "connectors",
+        "conjunction",
+        "a1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "so",
+        "así que; por eso",
+        "connectors",
+        "so I decided",
+        "so that"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-AVAILABLE-2",
+      "lemma": "offline",
+      "partOfSpeech": "adjective/adverb",
+      "level": "A2",
+      "domain": "technology",
+      "meaningEs": "sin conexión",
+      "forms": [
+        "offline"
+      ],
+      "collocations": [
+        "work offline",
+        "available offline"
+      ],
+      "examples": [
+        "HODIE works offline."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "HODIE works offline.",
+          "es": "HODIE funciona sin conexión."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "adjective/adverb",
+        "a2"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "offline",
+        "sin conexión",
+        "technology",
+        "work offline",
+        "available offline"
+      ]
+    },
+    {
+      "id": "VOC-NOUN-RELIABILITY",
+      "lemma": "reliability",
+      "partOfSpeech": "noun",
+      "level": "B1",
+      "domain": "technology",
+      "meaningEs": "confiabilidad; fiabilidad",
+      "forms": [
+        "reliability"
+      ],
+      "collocations": [
+        "improve reliability",
+        "reliable system"
+      ],
+      "examples": [
+        "Reliability matters in a learning app."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Reliability matters in a learning app.",
+          "es": "La confiabilidad importa en una aplicación de aprendizaje."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "noun",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "reliability",
+        "confiabilidad; fiabilidad",
+        "technology",
+        "improve reliability",
+        "reliable system"
+      ]
+    },
+    {
+      "id": "VOC-ADJ-RELIABLE",
+      "lemma": "reliable",
+      "partOfSpeech": "adjective",
+      "level": "B1",
+      "domain": "technology",
+      "meaningEs": "confiable; fiable",
+      "forms": [
+        "reliable"
+      ],
+      "collocations": [
+        "reliable information",
+        "reliable tool"
+      ],
+      "examples": [
+        "A reliable tool explains its limits."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "A reliable tool explains its limits.",
+          "es": "Una herramienta confiable explica sus límites."
+        }
+      ],
+      "openClass": true,
+      "tags": [
+        "technology",
+        "adjective",
+        "b1"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "reliable",
+        "confiable; fiable",
+        "technology",
+        "reliable information",
+        "reliable tool"
+      ]
     }
   ],
   "testCases": [
