@@ -35,7 +35,7 @@ const linked = getLinguisticResourcesForCanDo(graph,"SP-A2-01");
 assert.ok(linked.functions.length >= 1);
 assert.ok(linked.vocabulary.some(x=>x.id==="VOC-NOUN-SENSOR" || x.id==="VOC-NOUN-TOOL"),"Can-Do should retrieve vocabulary by domain");
 assert.ok(linked.rules.some(x=>x.id==="WORD-ORDER-ADVERBS-001" || x.category==="word-order"),"Can-Do should retrieve related grammar structures");
-const listeningLinks = getLinguisticResourcesForCanDo(graph,"LI-A2-01");
+const listeningLinks = getLinguisticResourcesForCanDo(graph,"RE-A2-01");
 assert.ok(listeningLinks.functions.some(x=>x.id==="DESCRIBE-PROCESS-A2"),"cross-skill Can-Do links should expose shared functions");
 for (const activity of content.activities) {
   assert.ok(matrix.canDos.some(x=>x.id===activity.canDoId),activity.id+" must link to a real Can-Do");
