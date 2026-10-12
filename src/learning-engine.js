@@ -191,12 +191,6 @@ function selectNextCanDo(matrix, profile, options = {}) {
   const now = options.now ? new Date(options.now) : new Date();
   const allowedLevels = options.levels || ["A2", "A2+", "B1"];
 
-  // Keep a successful learning sequence coherent across adjacent targets.
-  // Newly available activities in another skill should not unexpectedly interrupt
-  // a prerequisite-backed sequence; cross-skill transfer remains available when
-  // there is no same-skill candidate or when reviews/gaps raise its priority.
-  const latestEvidence = (profile.evidence || []).slice().reverse().find((item) => item?.canDoId);
-  const latestCanDo = latestEvidence ? getCanDo(matrix, latestEvidence.canDoId) : null;
   const candidates = (matrix.canDos || [])
     .filter((canDo) => allowedLevels.includes(canDo.level))
     .filter((canDo) => {
@@ -208,7 +202,7 @@ function selectNextCanDo(matrix, profile, options = {}) {
         return ["functional", "consolidated", "transferred"].includes(status);
       }) || prerequisites.length === 0;
     })
-    .map((canDo) => ({ canDo, score: priorityScore(canDo, profile, now) + (latestCanDo && canDo.skill === latestCanDo.skill ? 2.5 : 0) }))
+    .map((canDo) => ({ canDo, score: priorityScore(canDo, profile, now) }))
     .sort((a, b) => b.score - a.score);
 
   return candidates[0]?.canDo || null;
