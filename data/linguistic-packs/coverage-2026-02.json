@@ -324,6 +324,454 @@
         "academic",
         "professional"
       ]
+    },
+    {
+      "id": "EXPLAIN-OPINION-A2",
+      "level": "A2",
+      "label": "Give a simple opinion and a reason",
+      "labelEs": "Dar una opinión sencilla y una razón",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "connectors",
+        "present-simple",
+        "opinion"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "learning"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "EXPLAIN-OPINION-A2",
+        "Give a simple opinion and a reason",
+        "Dar una opinión sencilla y una razón",
+        "connectors",
+        "present-simple",
+        "opinion",
+        "communication",
+        "learning"
+      ]
+    },
+    {
+      "id": "ASK-CLARIFY-A2",
+      "level": "A2",
+      "label": "Ask for repetition or clarification",
+      "labelEs": "Pedir que repitan o aclaren",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "listening",
+        "interaction"
+      ],
+      "structures": [
+        "question-forms",
+        "polite-requests"
+      ],
+      "vocabularyDomains": [
+        "communication",
+        "classroom"
+      ],
+      "contexts": [
+        "educational",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "ASK-CLARIFY-A2",
+        "Ask for repetition or clarification",
+        "Pedir que repitan o aclaren",
+        "question-forms",
+        "polite-requests",
+        "communication",
+        "classroom"
+      ]
+    },
+    {
+      "id": "DESCRIBE-PROCESS-A2",
+      "level": "A2",
+      "label": "Describe a simple process in sequence",
+      "labelEs": "Describir un proceso sencillo en secuencia",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "reading"
+      ],
+      "structures": [
+        "imperatives",
+        "sequence-connectors",
+        "present-simple"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "education"
+      ],
+      "contexts": [
+        "professional",
+        "educational"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "DESCRIBE-PROCESS-A2",
+        "Describe a simple process in sequence",
+        "Describir un proceso sencillo en secuencia",
+        "imperatives",
+        "sequence-connectors",
+        "present-simple",
+        "technology",
+        "education"
+      ]
+    },
+    {
+      "id": "REPORT-PAST-A2",
+      "level": "A2",
+      "label": "Describe what happened in a completed task",
+      "labelEs": "Describir lo ocurrido en una tarea terminada",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "past-simple",
+        "past-time-markers"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "education",
+        "problem-solving"
+      ],
+      "contexts": [
+        "professional",
+        "educational"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "REPORT-PAST-A2",
+        "Describe what happened in a completed task",
+        "Describir lo ocurrido en una tarea terminada",
+        "past-simple",
+        "past-time-markers",
+        "technology",
+        "education",
+        "problem-solving"
+      ]
+    },
+    {
+      "id": "COMPARE-OPTIONS-A2",
+      "level": "A2",
+      "label": "Compare two tools or options",
+      "labelEs": "Comparar dos herramientas u opciones",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "reading"
+      ],
+      "structures": [
+        "comparatives",
+        "adjectives"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "learning"
+      ],
+      "contexts": [
+        "professional",
+        "personal"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A2",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "COMPARE-OPTIONS-A2",
+        "Compare two tools or options",
+        "Comparar dos herramientas u opciones",
+        "comparatives",
+        "adjectives",
+        "technology",
+        "learning"
+      ]
+    },
+    {
+      "id": "DESCRIBE-FREQUENCY-A1",
+      "level": "A1",
+      "label": "Describe routines and frequency",
+      "labelEs": "Describir rutinas y frecuencia",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "present-simple",
+        "frequency-adverbs"
+      ],
+      "vocabularyDomains": [
+        "daily-life",
+        "education"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "DESCRIBE-FREQUENCY-A1",
+        "Describe routines and frequency",
+        "Describir rutinas y frecuencia",
+        "present-simple",
+        "frequency-adverbs",
+        "daily-life",
+        "education"
+      ]
+    },
+    {
+      "id": "DESCRIBE-CURRENT-A1",
+      "level": "A1",
+      "label": "Describe what is happening now",
+      "labelEs": "Describir lo que ocurre ahora",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "present-continuous",
+        "be"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "education"
+      ],
+      "contexts": [
+        "professional",
+        "educational"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "A1",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "DESCRIBE-CURRENT-A1",
+        "Describe what is happening now",
+        "Describir lo que ocurre ahora",
+        "present-continuous",
+        "be",
+        "technology",
+        "education"
+      ]
+    },
+    {
+      "id": "EXPLAIN-PROBLEM-SOLUTION-B1",
+      "level": "B1",
+      "label": "Explain a problem, cause and solution",
+      "labelEs": "Explicar un problema, su causa y solución",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "interaction"
+      ],
+      "structures": [
+        "connectors",
+        "because-so-therefore",
+        "conditionals"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "problem-solving"
+      ],
+      "contexts": [
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "EXPLAIN-PROBLEM-SOLUTION-B1",
+        "Explain a problem, cause and solution",
+        "Explicar un problema, su causa y solución",
+        "connectors",
+        "because-so-therefore",
+        "conditionals",
+        "technology",
+        "problem-solving"
+      ]
+    },
+    {
+      "id": "DISCUSS-ADVANTAGES-B1",
+      "level": "B1",
+      "label": "Present advantages and disadvantages",
+      "labelEs": "Presentar ventajas y desventajas",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "reading"
+      ],
+      "structures": [
+        "connectors",
+        "comparatives",
+        "argumentation"
+      ],
+      "vocabularyDomains": [
+        "technology",
+        "communication"
+      ],
+      "contexts": [
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "DISCUSS-ADVANTAGES-B1",
+        "Present advantages and disadvantages",
+        "Presentar ventajas y desventajas",
+        "connectors",
+        "comparatives",
+        "argumentation",
+        "technology",
+        "communication"
+      ]
+    },
+    {
+      "id": "TALK-EXPERIENCE-B1",
+      "level": "B1",
+      "label": "Talk about experiences and changes over time",
+      "labelEs": "Hablar de experiencias y cambios con el tiempo",
+      "canDoIds": [
+        "SP-A2-01"
+      ],
+      "skills": [
+        "speaking",
+        "writing",
+        "listening"
+      ],
+      "structures": [
+        "present-perfect",
+        "past-simple"
+      ],
+      "vocabularyDomains": [
+        "learning",
+        "technology"
+      ],
+      "contexts": [
+        "personal",
+        "professional"
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true
+      },
+      "depthProfile": {
+        "targetLevel": "B1",
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "TALK-EXPERIENCE-B1",
+        "Talk about experiences and changes over time",
+        "Hablar de experiencias y cambios con el tiempo",
+        "present-perfect",
+        "past-simple",
+        "learning",
+        "technology"
+      ]
     }
   ],
   "grammarRules": [
@@ -3722,6 +4170,1909 @@
         "be before main verb",
         "present simple",
         "verbos léxicos"
+      ]
+    },
+    {
+      "id": "WORD-ORDER-ADVERBS-001",
+      "implementation": "adverb-frequency-position",
+      "level": "A1-A2",
+      "category": "word-order",
+      "title": "Position of frequency adverbs",
+      "titleEs": "Posición de los adverbios de frecuencia",
+      "explanation": "Frequency adverbs usually go before the main verb, but after be.",
+      "explanationEs": "Los adverbios de frecuencia suelen ir antes del verbo principal, pero después de be.",
+      "examples": [
+        "I usually work at school.",
+        "She is always ready."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I usually work at school.",
+          "es": "Los adverbios de frecuencia suelen ir antes del verbo principal, pero después de be."
+        },
+        {
+          "en": "She is always ready.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I work usually at school.",
+        "She always is ready."
+      ],
+      "exceptions": [
+        "With be, the adverb normally follows be: She is often busy.",
+        "Adverbs can appear at the beginning for emphasis in some contexts."
+      ],
+      "negativeCases": [
+        {
+          "text": "I usually work at school.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "She is always ready.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I usually work at school.",
+          "promptEs": "Los adverbios de frecuencia suelen ir antes del verbo principal, pero después de be.",
+          "options": [
+            "I usually work at school.",
+            "I work usually at school."
+          ],
+          "answer": "I usually work at school."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "frequency-adverbs",
+          "word-order",
+          "present-simple"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "WORD-ORDER-ADVERBS-001",
+        "Position of frequency adverbs",
+        "Posición de los adverbios de frecuencia",
+        "frequency-adverbs",
+        "word-order",
+        "present-simple",
+        "VOC-ADV-USUALLY"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-ADV-USUALLY"
+      ]
+    },
+    {
+      "id": "PRON-OBJECT-001",
+      "implementation": "object-pronouns",
+      "level": "A1",
+      "category": "pronouns",
+      "title": "Subject and object pronouns",
+      "titleEs": "Pronombres de sujeto y objeto",
+      "explanation": "Use subject pronouns before a verb and object pronouns after a verb or preposition.",
+      "explanationEs": "Usa pronombres de sujeto antes del verbo y pronombres de objeto después de un verbo o preposición.",
+      "examples": [
+        "She helps me.",
+        "I work with them."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She helps me.",
+          "es": "Usa pronombres de sujeto antes del verbo y pronombres de objeto después de un verbo o preposición."
+        },
+        {
+          "en": "I work with them.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "Her helps I.",
+        "I work with they."
+      ],
+      "exceptions": [
+        "Pronouns can appear in different positions in questions and coordinated phrases; evaluate the full sentence."
+      ],
+      "negativeCases": [
+        {
+          "text": "She helps me.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "I work with them.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "She helps me.",
+          "promptEs": "Usa pronombres de sujeto antes del verbo y pronombres de objeto después de un verbo o preposición.",
+          "options": [
+            "She helps me.",
+            "Her helps I."
+          ],
+          "answer": "She helps me."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "pronouns",
+          "subject-pronouns",
+          "object-pronouns"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PRON-OBJECT-001",
+        "Subject and object pronouns",
+        "Pronombres de sujeto y objeto",
+        "pronouns",
+        "subject-pronouns",
+        "object-pronouns",
+        "VOC-NOUN-TEAM"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-TEAM"
+      ]
+    },
+    {
+      "id": "POSS-ADJ-001",
+      "implementation": "possessive-adjectives",
+      "level": "A1",
+      "category": "determiners",
+      "title": "Possessive adjectives",
+      "titleEs": "Adjetivos posesivos",
+      "explanation": "Use my, your, his, her, its, our and their before a noun to show possession.",
+      "explanationEs": "Usa my, your, his, her, its, our y their antes de un sustantivo para expresar posesión.",
+      "examples": [
+        "My students are ready.",
+        "Their project is complete."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "My students are ready.",
+          "es": "Usa my, your, his, her, its, our y their antes de un sustantivo para expresar posesión."
+        },
+        {
+          "en": "Their project is complete.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "Me students are ready.",
+        "Theirs project is complete."
+      ],
+      "exceptions": [
+        "Its shows possession; it's means it is or it has."
+      ],
+      "negativeCases": [
+        {
+          "text": "My students are ready.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "Their project is complete.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "My students are ready.",
+          "promptEs": "Usa my, your, his, her, its, our y their antes de un sustantivo para expresar posesión.",
+          "options": [
+            "My students are ready.",
+            "Me students are ready."
+          ],
+          "answer": "My students are ready."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "possessives",
+          "determiners",
+          "pronouns"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "POSS-ADJ-001",
+        "Possessive adjectives",
+        "Adjetivos posesivos",
+        "possessives",
+        "determiners",
+        "pronouns",
+        "VOC-NOUN-TEAM"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-TEAM"
+      ]
+    },
+    {
+      "id": "SOME-ANY-001",
+      "implementation": "some-any-count-uncount",
+      "level": "A1-A2",
+      "category": "determiners",
+      "title": "Some and any",
+      "titleEs": "Some y any",
+      "explanation": "Some is common in affirmative statements; any is common in negatives and questions. Usage depends on meaning and context.",
+      "explanationEs": "Some es común en afirmaciones; any, en negaciones y preguntas. El uso depende del significado y del contexto.",
+      "examples": [
+        "We have some sensors.",
+        "Do you have any questions?",
+        "We don't have any batteries."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We have some sensors.",
+          "es": "Some es común en afirmaciones; any, en negaciones y preguntas. El uso depende del significado y del contexto."
+        },
+        {
+          "en": "Do you have any questions?",
+          "es": "Ejemplo del patrón descrito."
+        },
+        {
+          "en": "We don't have any batteries.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "We have any sensors.",
+        "Do you have some questions?"
+      ],
+      "exceptions": [
+        "Some is also natural in offers and requests: Would you like some water?",
+        "Any can mean cualquiera in affirmative sentences."
+      ],
+      "negativeCases": [
+        {
+          "text": "We have some sensors.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "Do you have any questions?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "We don't have any batteries.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "We have some sensors.",
+          "promptEs": "Some es común en afirmaciones; any, en negaciones y preguntas. El uso depende del significado y del contexto.",
+          "options": [
+            "We have some sensors.",
+            "We have any sensors."
+          ],
+          "answer": "We have some sensors."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "some",
+          "any",
+          "determiners",
+          "countable",
+          "uncountable"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "SOME-ANY-001",
+        "Some and any",
+        "Some y any",
+        "some",
+        "any",
+        "determiners",
+        "countable",
+        "uncountable",
+        "VOC-NOUN-SENSOR"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-SENSOR"
+      ]
+    },
+    {
+      "id": "MUCH-MANY-001",
+      "implementation": "much-many-count-uncount",
+      "level": "A2",
+      "category": "determiners",
+      "title": "Much and many",
+      "titleEs": "Much y many",
+      "explanation": "Use many with plural countable nouns and much with uncountable nouns, especially in questions and negatives.",
+      "explanationEs": "Usa many con sustantivos contables plurales y much con incontables, especialmente en preguntas y negaciones.",
+      "examples": [
+        "How many students are there?",
+        "How much time do we have?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "How many students are there?",
+          "es": "Usa many con sustantivos contables plurales y much con incontables, especialmente en preguntas y negaciones."
+        },
+        {
+          "en": "How much time do we have?",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "How much students are there?",
+        "How many time do we have?"
+      ],
+      "exceptions": [
+        "A lot of is common with both countable and uncountable nouns in affirmative sentences."
+      ],
+      "negativeCases": [
+        {
+          "text": "How many students are there?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "How much time do we have?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "How many students are there?",
+          "promptEs": "Usa many con sustantivos contables plurales y much con incontables, especialmente en preguntas y negaciones.",
+          "options": [
+            "How many students are there?",
+            "How much students are there?"
+          ],
+          "answer": "How many students are there?"
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "much",
+          "many",
+          "countable",
+          "uncountable"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "MUCH-MANY-001",
+        "Much and many",
+        "Much y many",
+        "much",
+        "many",
+        "countable",
+        "uncountable",
+        "VOC-NOUN-CLASSROOM"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-CLASSROOM"
+      ]
+    },
+    {
+      "id": "PRESENT-SIMPLE-CONTINUOUS-001",
+      "implementation": "present-simple-vs-continuous",
+      "level": "A1-A2",
+      "category": "tense-contrast",
+      "title": "Present simple and present continuous",
+      "titleEs": "Presente simple y continuo",
+      "explanation": "Use present simple for routines and facts; present continuous for actions happening now or temporary situations.",
+      "explanationEs": "Usa presente simple para rutinas y hechos; presente continuo para acciones que ocurren ahora o situaciones temporales.",
+      "examples": [
+        "I teach robotics every week.",
+        "I am teaching now."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I teach robotics every week.",
+          "es": "Usa presente simple para rutinas y hechos; presente continuo para acciones que ocurren ahora o situaciones temporales."
+        },
+        {
+          "en": "I am teaching now.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I am teaching robotics every week (for a permanent routine).",
+        "I teach now (for an action happening at this moment)."
+      ],
+      "exceptions": [
+        "Some verbs of state are not normally used in continuous forms; temporary repeated actions can use continuous."
+      ],
+      "negativeCases": [
+        {
+          "text": "I teach robotics every week.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "I am teaching now.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I teach robotics every week.",
+          "promptEs": "Usa presente simple para rutinas y hechos; presente continuo para acciones que ocurren ahora o situaciones temporales.",
+          "options": [
+            "I teach robotics every week.",
+            "I am teaching robotics every week (for a permanent routine)."
+          ],
+          "answer": "I teach robotics every week."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "present-simple",
+          "present-continuous",
+          "tense-contrast"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A1-A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PRESENT-SIMPLE-CONTINUOUS-001",
+        "Present simple and present continuous",
+        "Presente simple y continuo",
+        "present-simple",
+        "present-continuous",
+        "tense-contrast",
+        "VOC-VERB-PRACTISE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-VERB-PRACTISE"
+      ]
+    },
+    {
+      "id": "PAST-IRREGULAR-001",
+      "implementation": "past-simple-irregular-verbs",
+      "level": "A2",
+      "category": "past-simple",
+      "title": "Common irregular past forms",
+      "titleEs": "Pasados irregulares frecuentes",
+      "explanation": "Many common verbs have irregular past forms, such as go/went, build/built and teach/taught.",
+      "explanationEs": "Muchos verbos frecuentes tienen pasado irregular, como go/went, build/built y teach/taught.",
+      "examples": [
+        "We built a robot yesterday.",
+        "I taught a class last Monday."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "We built a robot yesterday.",
+          "es": "Muchos verbos frecuentes tienen pasado irregular, como go/went, build/built y teach/taught."
+        },
+        {
+          "en": "I taught a class last Monday.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "We builded a robot yesterday.",
+        "I teached a class last Monday."
+      ],
+      "exceptions": [
+        "After did/didn't, use the base form: Did you build it? I didn't build it."
+      ],
+      "negativeCases": [
+        {
+          "text": "We built a robot yesterday.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "I taught a class last Monday.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "We built a robot yesterday.",
+          "promptEs": "Muchos verbos frecuentes tienen pasado irregular, como go/went, build/built y teach/taught.",
+          "options": [
+            "We built a robot yesterday.",
+            "We builded a robot yesterday."
+          ],
+          "answer": "We built a robot yesterday."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "past-simple",
+          "irregular-verbs",
+          "past"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PAST-IRREGULAR-001",
+        "Common irregular past forms",
+        "Pasados irregulares frecuentes",
+        "past-simple",
+        "irregular-verbs",
+        "past",
+        "VOC-VERB-BUILD"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-VERB-BUILD"
+      ]
+    },
+    {
+      "id": "PAST-TIME-MARKERS-001",
+      "implementation": "past-simple-time-markers",
+      "level": "A2",
+      "category": "past-simple",
+      "title": "Past simple with finished time expressions",
+      "titleEs": "Pasado simple con expresiones de tiempo terminado",
+      "explanation": "Use past simple with finished times such as yesterday, last week and in 2024.",
+      "explanationEs": "Usa pasado simple con tiempos terminados como yesterday, last week e in 2024.",
+      "examples": [
+        "I tested the program yesterday.",
+        "We finished the project last week."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I tested the program yesterday.",
+          "es": "Usa pasado simple con tiempos terminados como yesterday, last week e in 2024."
+        },
+        {
+          "en": "We finished the project last week.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I have tested the program yesterday.",
+        "We finish the project last week."
+      ],
+      "exceptions": [
+        "Present perfect and past simple contrast needs context; do not diagnose from a time word alone when the sentence is ambiguous."
+      ],
+      "negativeCases": [
+        {
+          "text": "I tested the program yesterday.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "We finished the project last week.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I tested the program yesterday.",
+          "promptEs": "Usa pasado simple con tiempos terminados como yesterday, last week e in 2024.",
+          "options": [
+            "I tested the program yesterday.",
+            "I have tested the program yesterday."
+          ],
+          "answer": "I tested the program yesterday."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "past-simple",
+          "time-expressions",
+          "present-perfect"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PAST-TIME-MARKERS-001",
+        "Past simple with finished time expressions",
+        "Pasado simple con expresiones de tiempo terminado",
+        "past-simple",
+        "time-expressions",
+        "present-perfect",
+        "VOC-NOUN-RESULT"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-RESULT"
+      ]
+    },
+    {
+      "id": "COMPARATIVES-001",
+      "implementation": "comparative-adjectives",
+      "level": "A2",
+      "category": "adjectives",
+      "title": "Comparatives",
+      "titleEs": "Comparativos",
+      "explanation": "Use -er or more + adjective to compare two things, with irregular forms such as better.",
+      "explanationEs": "Usa -er o more + adjetivo para comparar dos elementos, con formas irregulares como better.",
+      "examples": [
+        "This activity is easier than the last one.",
+        "The new app is more useful."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This activity is easier than the last one.",
+          "es": "Usa -er o more + adjetivo para comparar dos elementos, con formas irregulares como better."
+        },
+        {
+          "en": "The new app is more useful.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "This activity is more easier.",
+        "The new app is usefuller."
+      ],
+      "exceptions": [
+        "Adjective length and spelling rules vary; some forms allow alternatives. Avoid automatic correction outside a reviewed list."
+      ],
+      "negativeCases": [
+        {
+          "text": "This activity is easier than the last one.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "The new app is more useful.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "This activity is easier than the last one.",
+          "promptEs": "Usa -er o more + adjetivo para comparar dos elementos, con formas irregulares como better.",
+          "options": [
+            "This activity is easier than the last one.",
+            "This activity is more easier."
+          ],
+          "answer": "This activity is easier than the last one."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "comparatives",
+          "adjectives",
+          "comparison"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "COMPARATIVES-001",
+        "Comparatives",
+        "Comparativos",
+        "comparatives",
+        "adjectives",
+        "comparison",
+        "VOC-ADJ-USEFUL"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-ADJ-USEFUL"
+      ]
+    },
+    {
+      "id": "SUPERLATIVES-001",
+      "implementation": "superlative-adjectives",
+      "level": "A2",
+      "category": "adjectives",
+      "title": "Superlatives",
+      "titleEs": "Superlativos",
+      "explanation": "Use the + -est or the most + adjective to identify the top degree in a group.",
+      "explanationEs": "Usa the + -est o the most + adjetivo para indicar el grado máximo de un grupo.",
+      "examples": [
+        "This is the easiest question.",
+        "It is the most useful tool."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "This is the easiest question.",
+          "es": "Usa the + -est o the most + adjetivo para indicar el grado máximo de un grupo."
+        },
+        {
+          "en": "It is the most useful tool.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "This is easiest question.",
+        "It is the most easiest tool."
+      ],
+      "exceptions": [
+        "Some adjectives have irregular forms: good/better/best and bad/worse/worst."
+      ],
+      "negativeCases": [
+        {
+          "text": "This is the easiest question.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "It is the most useful tool.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "This is the easiest question.",
+          "promptEs": "Usa the + -est o the most + adjetivo para indicar el grado máximo de un grupo.",
+          "options": [
+            "This is the easiest question.",
+            "This is easiest question."
+          ],
+          "answer": "This is the easiest question."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "superlatives",
+          "adjectives",
+          "comparison"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "SUPERLATIVES-001",
+        "Superlatives",
+        "Superlativos",
+        "superlatives",
+        "adjectives",
+        "comparison",
+        "VOC-ADJ-EASY"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-ADJ-EASY"
+      ]
+    },
+    {
+      "id": "INFINITIVE-PURPOSE-001",
+      "implementation": "infinitive-of-purpose",
+      "level": "A2",
+      "category": "verb-patterns",
+      "title": "Infinitive of purpose",
+      "titleEs": "Infinitivo de finalidad",
+      "explanation": "Use to + base verb to explain the purpose of an action.",
+      "explanationEs": "Usa to + verbo base para explicar la finalidad de una acción.",
+      "examples": [
+        "I use HODIE to practise English.",
+        "We opened the app to review vocabulary."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I use HODIE to practise English.",
+          "es": "Usa to + verbo base para explicar la finalidad de una acción."
+        },
+        {
+          "en": "We opened the app to review vocabulary.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I use HODIE for practise English.",
+        "We opened the app for review vocabulary."
+      ],
+      "exceptions": [
+        "For + noun or gerund can also express purpose: for practice; for practising."
+      ],
+      "negativeCases": [
+        {
+          "text": "I use HODIE to practise English.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "We opened the app to review vocabulary.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I use HODIE to practise English.",
+          "promptEs": "Usa to + verbo base para explicar la finalidad de una acción.",
+          "options": [
+            "I use HODIE to practise English.",
+            "I use HODIE for practise English."
+          ],
+          "answer": "I use HODIE to practise English."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "infinitive",
+          "purpose",
+          "verb-patterns"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "INFINITIVE-PURPOSE-001",
+        "Infinitive of purpose",
+        "Infinitivo de finalidad",
+        "infinitive",
+        "purpose",
+        "verb-patterns",
+        "VOC-VERB-PRACTISE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-VERB-PRACTISE"
+      ]
+    },
+    {
+      "id": "GERUND-AFTER-PREPOSITION-001",
+      "implementation": "gerund-after-preposition",
+      "level": "A2-B1",
+      "category": "verb-patterns",
+      "title": "Gerund after prepositions",
+      "titleEs": "Gerundio después de preposiciones",
+      "explanation": "When a verb follows a preposition, use the -ing form in common patterns.",
+      "explanationEs": "Cuando un verbo sigue a una preposición, usa la forma -ing en patrones frecuentes.",
+      "examples": [
+        "I am interested in learning English.",
+        "Thank you for helping me."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am interested in learning English.",
+          "es": "Cuando un verbo sigue a una preposición, usa la forma -ing en patrones frecuentes."
+        },
+        {
+          "en": "Thank you for helping me.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I am interested in learn English.",
+        "Thank you for help me."
+      ],
+      "exceptions": [
+        "This rule concerns verbs after prepositions; other verb patterns require separate analysis."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am interested in learning English.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "Thank you for helping me.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I am interested in learning English.",
+          "promptEs": "Cuando un verbo sigue a una preposición, usa la forma -ing en patrones frecuentes.",
+          "options": [
+            "I am interested in learning English.",
+            "I am interested in learn English."
+          ],
+          "answer": "I am interested in learning English."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "gerund",
+          "prepositions",
+          "verb-patterns"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2-B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "GERUND-AFTER-PREPOSITION-001",
+        "Gerund after prepositions",
+        "Gerundio después de preposiciones",
+        "gerund",
+        "prepositions",
+        "verb-patterns",
+        "VOC-VERB-PRACTISE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-VERB-PRACTISE"
+      ]
+    },
+    {
+      "id": "PRESENT-PERFECT-EXPERIENCE-001",
+      "implementation": "present-perfect-experience",
+      "level": "B1",
+      "category": "present-perfect",
+      "title": "Present perfect for life experience",
+      "titleEs": "Presente perfecto para experiencias",
+      "explanation": "Use have/has + past participle to talk about life experiences without specifying a finished time.",
+      "explanationEs": "Usa have/has + participio para hablar de experiencias sin especificar un tiempo terminado.",
+      "examples": [
+        "I have built several robots.",
+        "Have you ever used this app?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have built several robots.",
+          "es": "Usa have/has + participio para hablar de experiencias sin especificar un tiempo terminado."
+        },
+        {
+          "en": "Have you ever used this app?",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I have build several robots.",
+        "Did you ever used this app?"
+      ],
+      "exceptions": [
+        "When a finished time is specified, past simple is normally used: I built it yesterday."
+      ],
+      "negativeCases": [
+        {
+          "text": "I have built several robots.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "Have you ever used this app?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I have built several robots.",
+          "promptEs": "Usa have/has + participio para hablar de experiencias sin especificar un tiempo terminado.",
+          "options": [
+            "I have built several robots.",
+            "I have build several robots."
+          ],
+          "answer": "I have built several robots."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "present-perfect",
+          "past-participle",
+          "experience"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PRESENT-PERFECT-EXPERIENCE-001",
+        "Present perfect for life experience",
+        "Presente perfecto para experiencias",
+        "present-perfect",
+        "past-participle",
+        "experience",
+        "VOC-NOUN-EXPERIENCE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-EXPERIENCE"
+      ]
+    },
+    {
+      "id": "FOR-SINCE-001",
+      "implementation": "for-since-duration",
+      "level": "A2-B1",
+      "category": "time-expressions",
+      "title": "For and since",
+      "titleEs": "For y since",
+      "explanation": "Use for with a duration and since with a starting point.",
+      "explanationEs": "Usa for con una duración y since con un punto de inicio.",
+      "examples": [
+        "I have taught for twenty years.",
+        "I have worked here since 2013."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I have taught for twenty years.",
+          "es": "Usa for con una duración y since con un punto de inicio."
+        },
+        {
+          "en": "I have worked here since 2013.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "I have taught since twenty years.",
+        "I have worked here for 2013."
+      ],
+      "exceptions": [
+        "Both can appear in several tenses; these examples describe situations continuing to the present."
+      ],
+      "negativeCases": [
+        {
+          "text": "I have taught for twenty years.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "I have worked here since 2013.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I have taught for twenty years.",
+          "promptEs": "Usa for con una duración y since con un punto de inicio.",
+          "options": [
+            "I have taught for twenty years.",
+            "I have taught since twenty years."
+          ],
+          "answer": "I have taught for twenty years."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "for",
+          "since",
+          "present-perfect",
+          "time-expressions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2-B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "FOR-SINCE-001",
+        "For and since",
+        "For y since",
+        "for",
+        "since",
+        "present-perfect",
+        "time-expressions",
+        "VOC-ADV-ALREADY"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-ADV-ALREADY"
+      ]
+    },
+    {
+      "id": "FIRST-CONDITIONAL-001",
+      "implementation": "first-conditional",
+      "level": "B1",
+      "category": "conditionals",
+      "title": "First conditional",
+      "titleEs": "Primer condicional",
+      "explanation": "Use if + present simple and will + base verb for a realistic future possibility.",
+      "explanationEs": "Usa if + presente simple y will + verbo base para una posibilidad futura realista.",
+      "examples": [
+        "If we practise, we will improve.",
+        "If the sensor fails, we will check the circuit."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "If we practise, we will improve.",
+          "es": "Usa if + presente simple y will + verbo base para una posibilidad futura realista."
+        },
+        {
+          "en": "If the sensor fails, we will check the circuit.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "If we will practise, we will improve.",
+        "If the sensor fail, we check the circuit."
+      ],
+      "exceptions": [
+        "Will can appear in an if-clause in special meanings such as willingness; the basic rule is not universal."
+      ],
+      "negativeCases": [
+        {
+          "text": "If we practise, we will improve.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "If the sensor fails, we will check the circuit.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "If we practise, we will improve.",
+          "promptEs": "Usa if + presente simple y will + verbo base para una posibilidad futura realista.",
+          "options": [
+            "If we practise, we will improve.",
+            "If we will practise, we will improve."
+          ],
+          "answer": "If we practise, we will improve."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "conditionals",
+          "future",
+          "if-clause"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "FIRST-CONDITIONAL-001",
+        "First conditional",
+        "Primer condicional",
+        "conditionals",
+        "future",
+        "if-clause",
+        "VOC-NOUN-GOAL"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-GOAL"
+      ]
+    },
+    {
+      "id": "PASSIVE-PRESENT-001",
+      "implementation": "present-passive-basic",
+      "level": "B1",
+      "category": "passive-voice",
+      "title": "Present simple passive",
+      "titleEs": "Pasiva en presente simple",
+      "explanation": "Use am/is/are + past participle when the action or result matters more than the agent.",
+      "explanationEs": "Usa am/is/are + participio cuando importa más la acción o el resultado que quien la realiza.",
+      "examples": [
+        "The data is stored locally.",
+        "The robots are tested before class."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "The data is stored locally.",
+          "es": "Usa am/is/are + participio cuando importa más la acción o el resultado que quien la realiza."
+        },
+        {
+          "en": "The robots are tested before class.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "The data stored locally.",
+        "The robots are test before class."
+      ],
+      "exceptions": [
+        "Use active voice when the agent is important or the active sentence is clearer."
+      ],
+      "negativeCases": [
+        {
+          "text": "The data is stored locally.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "The robots are tested before class.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "The data is stored locally.",
+          "promptEs": "Usa am/is/are + participio cuando importa más la acción o el resultado que quien la realiza.",
+          "options": [
+            "The data is stored locally.",
+            "The data stored locally."
+          ],
+          "answer": "The data is stored locally."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "passive-voice",
+          "present-simple",
+          "past-participle"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PASSIVE-PRESENT-001",
+        "Present simple passive",
+        "Pasiva en presente simple",
+        "passive-voice",
+        "present-simple",
+        "past-participle",
+        "VOC-NOUN-DATA"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-DATA"
+      ]
+    },
+    {
+      "id": "INDIRECT-QUESTIONS-001",
+      "implementation": "indirect-question-order",
+      "level": "B1",
+      "category": "question-forms",
+      "title": "Word order in indirect questions",
+      "titleEs": "Orden en preguntas indirectas",
+      "explanation": "In embedded questions, use statement word order after phrases such as Could you tell me...",
+      "explanationEs": "En preguntas indirectas, usa el orden de una afirmación después de expresiones como Could you tell me...",
+      "examples": [
+        "Could you tell me where the library is?",
+        "Do you know what time it starts?"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Could you tell me where the library is?",
+          "es": "En preguntas indirectas, usa el orden de una afirmación después de expresiones como Could you tell me..."
+        },
+        {
+          "en": "Do you know what time it starts?",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "Could you tell me where is the library?",
+        "Do you know what time does it start?"
+      ],
+      "exceptions": [
+        "Direct questions keep question order: Where is the library? Context distinguishes the structures."
+      ],
+      "negativeCases": [
+        {
+          "text": "Could you tell me where the library is?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "Do you know what time it starts?",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "Could you tell me where the library is?",
+          "promptEs": "En preguntas indirectas, usa el orden de una afirmación después de expresiones como Could you tell me...",
+          "options": [
+            "Could you tell me where the library is?",
+            "Could you tell me where is the library?"
+          ],
+          "answer": "Could you tell me where the library is?"
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "indirect-questions",
+          "question-order",
+          "syntax"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "INDIRECT-QUESTIONS-001",
+        "Word order in indirect questions",
+        "Orden en preguntas indirectas",
+        "indirect-questions",
+        "question-order",
+        "syntax",
+        "VOC-NOUN-QUESTION"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-QUESTION"
+      ]
+    },
+    {
+      "id": "CONNECTORS-REASON-RESULT-001",
+      "implementation": "because-so-therefore",
+      "level": "A2-B1",
+      "category": "connectors",
+      "title": "Connectors for reason and result",
+      "titleEs": "Conectores de causa y resultado",
+      "explanation": "Because introduces a reason; so and therefore introduce a result, with different sentence structures and punctuation.",
+      "explanationEs": "Because introduce una razón; so y therefore introducen un resultado, con estructuras y puntuación diferentes.",
+      "examples": [
+        "I practise because I want to improve.",
+        "I was tired, so I rested.",
+        "The test failed; therefore, we checked the code."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I practise because I want to improve.",
+          "es": "Because introduce una razón; so y therefore introducen un resultado, con estructuras y puntuación diferentes."
+        },
+        {
+          "en": "I was tired, so I rested.",
+          "es": "Ejemplo del patrón descrito."
+        },
+        {
+          "en": "The test failed; therefore, we checked the code.",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "Because I want improve, I practise.",
+        "I was tired, therefore I rested."
+      ],
+      "exceptions": [
+        "Punctuation and clause structure matter; therefore is not interchangeable with so in every position."
+      ],
+      "negativeCases": [
+        {
+          "text": "I practise because I want to improve.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "I was tired, so I rested.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "The test failed; therefore, we checked the code.",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "I practise because I want to improve.",
+          "promptEs": "Because introduce una razón; so y therefore introducen un resultado, con estructuras y puntuación diferentes.",
+          "options": [
+            "I practise because I want to improve.",
+            "Because I want improve, I practise."
+          ],
+          "answer": "I practise because I want to improve."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "connectors",
+          "because",
+          "so",
+          "therefore"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2-B1",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "CONNECTORS-REASON-RESULT-001",
+        "Connectors for reason and result",
+        "Conectores de causa y resultado",
+        "connectors",
+        "because",
+        "so",
+        "therefore",
+        "VOC-CONNECTOR-BECAUSE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-CONNECTOR-BECAUSE"
+      ]
+    },
+    {
+      "id": "COUNT-UNCOUNT-001",
+      "implementation": "countable-uncountable-nouns",
+      "level": "A2",
+      "category": "nouns",
+      "title": "Countable and uncountable nouns",
+      "titleEs": "Sustantivos contables e incontables",
+      "explanation": "Use a/an and plural forms with countable nouns; uncountable nouns usually do not take a/an or a plural in their general sense.",
+      "explanationEs": "Usa a/an y plural con contables; los incontables normalmente no llevan a/an ni plural en sentido general.",
+      "examples": [
+        "a device / two devices",
+        "some information",
+        "much equipment"
+      ],
+      "examplesBilingual": [
+        {
+          "en": "a device / two devices",
+          "es": "Usa a/an y plural con contables; los incontables normalmente no llevan a/an ni plural en sentido general."
+        },
+        {
+          "en": "some information",
+          "es": "Ejemplo del patrón descrito."
+        },
+        {
+          "en": "much equipment",
+          "es": "Ejemplo del patrón descrito."
+        }
+      ],
+      "incorrect": [
+        "an information",
+        "many equipment"
+      ],
+      "exceptions": [
+        "Some nouns vary by meaning or dialect; equipment and information are normally uncountable in standard English."
+      ],
+      "negativeCases": [
+        {
+          "text": "a device / two devices",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "some information",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        },
+        {
+          "text": "much equipment",
+          "reason": "This is an example of the intended pattern and must not be flagged as an error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "a device / two devices",
+          "promptEs": "Usa a/an y plural con contables; los incontables normalmente no llevan a/an ni plural en sentido general.",
+          "options": [
+            "a device / two devices",
+            "an information"
+          ],
+          "answer": "a device / two devices"
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "reading",
+          "writing",
+          "speaking"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "mini-production",
+          "conversation"
+        ],
+        "tags": [
+          "countable",
+          "uncountable",
+          "articles",
+          "quantifiers"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "COUNT-UNCOUNT-001",
+        "Countable and uncountable nouns",
+        "Sustantivos contables e incontables",
+        "countable",
+        "uncountable",
+        "articles",
+        "quantifiers",
+        "VOC-NOUN-DEVICE"
+      ],
+      "relatedVocabularyIds": [
+        "VOC-NOUN-DEVICE"
       ]
     }
   ],
@@ -9883,6 +12234,150 @@
         "SVA-PLURAL-001"
       ],
       "expectCorrection": "People are ready."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-001",
+      "text": "I usually work at school.",
+      "expectRules": [],
+      "expectCorrection": "I usually work at school."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-002",
+      "text": "She is always ready.",
+      "expectRules": [],
+      "expectCorrection": "She is always ready."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-003",
+      "text": "She helps me.",
+      "expectRules": [],
+      "expectCorrection": "She helps me."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-004",
+      "text": "I work with them.",
+      "expectRules": [],
+      "expectCorrection": "I work with them."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-005",
+      "text": "My students are ready.",
+      "expectRules": [],
+      "expectCorrection": "My students are ready."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-006",
+      "text": "Their project is complete.",
+      "expectRules": [],
+      "expectCorrection": "Their project is complete."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-007",
+      "text": "We have some sensors.",
+      "expectRules": [],
+      "expectCorrection": "We have some sensors."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-008",
+      "text": "Do you have any questions?",
+      "expectRules": [],
+      "expectCorrection": "Do you have any questions?"
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-009",
+      "text": "How many students are there?",
+      "expectRules": [],
+      "expectCorrection": "How many students are there?"
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-010",
+      "text": "How much time do we have?",
+      "expectRules": [],
+      "expectCorrection": "How much time do we have?"
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-011",
+      "text": "I teach robotics every week.",
+      "expectRules": [],
+      "expectCorrection": "I teach robotics every week."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-012",
+      "text": "I am teaching now.",
+      "expectRules": [],
+      "expectCorrection": "I am teaching now."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-013",
+      "text": "We built a robot yesterday.",
+      "expectRules": [],
+      "expectCorrection": "We built a robot yesterday."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-014",
+      "text": "I tested the program yesterday.",
+      "expectRules": [],
+      "expectCorrection": "I tested the program yesterday."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-015",
+      "text": "This activity is easier than the last one.",
+      "expectRules": [],
+      "expectCorrection": "This activity is easier than the last one."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-016",
+      "text": "I use HODIE to practise English.",
+      "expectRules": [],
+      "expectCorrection": "I use HODIE to practise English."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-017",
+      "text": "I am interested in learning English.",
+      "expectRules": [],
+      "expectCorrection": "I am interested in learning English."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-018",
+      "text": "I have built several robots.",
+      "expectRules": [],
+      "expectCorrection": "I have built several robots."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-019",
+      "text": "I have taught for twenty years.",
+      "expectRules": [],
+      "expectCorrection": "I have taught for twenty years."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-020",
+      "text": "If we practise, we will improve.",
+      "expectRules": [],
+      "expectCorrection": "If we practise, we will improve."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-021",
+      "text": "The robots are tested before class.",
+      "expectRules": [],
+      "expectCorrection": "The robots are tested before class."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-022",
+      "text": "Could you tell me where the library is?",
+      "expectRules": [],
+      "expectCorrection": "Could you tell me where the library is?"
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-023",
+      "text": "I practise because I want to improve.",
+      "expectRules": [],
+      "expectCorrection": "I practise because I want to improve."
+    },
+    {
+      "id": "TC-VALID-EXP-NEW-024",
+      "text": "Some information is available online.",
+      "expectRules": [],
+      "expectCorrection": "Some information is available online."
     }
   ]
 }
