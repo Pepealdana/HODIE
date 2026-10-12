@@ -156,8 +156,12 @@ function calculateTargetScore(matrix, profile, canDo, options = {}) {
   const now = options.now ? new Date(options.now) : new Date();
   const status = getStatus(canDo, profile);
   const recentEvidence = getRecentEvidence(profile, options.recentEvidenceLimit || 8);
+  const latestCanDoId = recentEvidence.at(-1)?.canDoId;
 
   let score = PRIORITY_WEIGHTS[canDo.priority] || 1;
+  // Preserve an explicit prerequisite sequence when a learner has just completed its previous step.
+  // New activity availability in another skill must not break a designed sequence unexpectedly.
+  if (latestCanDoId && (canDo.prerequisites || []).includes(latestCanDoId)) score += 4;
   score += STATUS_NEED[status] || 0;
   score *= SKILL_WEIGHTS[canDo.skill] || 1;
 
