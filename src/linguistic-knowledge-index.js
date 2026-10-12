@@ -8,7 +8,7 @@ const stages=["recognition","guided","independent","nuance","transfer"];
 const records=[
  ...(catalog.grammarRules||[]).map(x=>({...x,recordType:"grammar",searchText:[x.id,x.implementation,x.category,x.level,x.title,x.titleEs,x.explanation,x.explanationEs,...(x.searchTerms||[]),...(x.examples||[]),...(x.examplesBilingual||[]).flatMap(y=>[y.en,y.es]),...(x.exceptions||[]),...(x.activityLinks?.tags||[])].join(" ")})),
  ...(catalog.vocabularyEntries||[]).map(x=>({...x,recordType:"vocabulary",searchText:[x.id,x.lemma,x.meaningEs,x.partOfSpeech,x.domain,x.level,...(x.searchTerms||[]),...(x.forms||[]),...(x.collocations||[]),...(x.examples||[]),...(x.examplesBilingual||[]).flatMap(y=>[y.en,y.es])].join(" ")})),
- ...(catalog.communicativeFunctions||[]).map(x=>({...x,recordType:"function",searchText:[x.id,x.label,x.labelEs,x.level,...(x.searchTerms||[]),...(x.structures||[]),...(x.vocabularyDomains||[]),...(x.contexts||[])].join(" ")})),
+ ...(catalog.communicativeFunctions||[]).map(x=>({...x,recordType:"function",searchText:[x.id,x.label,x.labelEs,x.level,...(x.searchTerms||[]),...(x.structures||[]),...(x.vocabularyDomains||[]),...(x.contexts||[]),...(x.canDoIds||[]),...(x.relatedCanDoIds||[])].join(" ")})),
  ...(blueprints.categories||[]).map(x=>({...x,recordType:"activity-category",level:"A1",searchText:[x.id,x.label,x.labelEs,...(x.primaryModes||[]),...(x.skills||[]),...(x.progression||[]).flatMap(y=>[y.level,y.focus])].join(" ")}))
 ];
 const inverted=new Map(),byKey=new Map();
