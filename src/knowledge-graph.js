@@ -70,7 +70,7 @@ function getKnowledgeForCanDo(graph, canDoId) {
 }
 
 function getLinguisticResourcesForCanDo(graph, canDoId) {
-  const functions = (graph?.communicativeFunctions || []).filter((item) => (item.canDoIds || []).includes(canDoId));
+  const functions = (graph?.communicativeFunctions || []).filter((item) => (item.canDoIds || []).includes(canDoId) || (item.relatedCanDoIds || []).includes(canDoId));
   const structures = new Set(functions.flatMap((item) => item.structures || []));
   const implementationsForStructure = {
     be: ["be-agreement"], articles: ["article-profession", "article-a-an"],
