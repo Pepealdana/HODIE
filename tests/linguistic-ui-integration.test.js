@@ -29,11 +29,11 @@ assert.match(worker, /hodie-shell-v31/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 
-assert.match(app, /["]reading["], ["]Reading["], ["]Leer["]/);
-assert.match(app, /["]pronunciation["], ["]Pronunciation["], ["]Pronunciación["]/);
-assert.match(app, /["]communication["], ["]Communication["], ["]Comunicación["]/);
-assert.match(app, /selectedActivities = selectMicroActivities\(microLibrary, options\)/);
-assert.match(microEngine, /communication: \{ label: "Communication", kind: "skill", skill: "communication" \}/);
+assert.ok(app.includes('["reading", "Reading", "Leer", "▤"]'));
+assert.ok(app.includes('["pronunciation", "Pronunciation", "Pronunciación", "◖"]'));
+assert.ok(app.includes('["communication", "Communication", "Comunicación", "↔"]'));
+assert.ok(app.includes("selectedActivities = selectMicroActivities(microLibrary, options)"));
+assert.ok(microEngine.includes('communication: { label: "Communication", kind: "skill", skill: "communication" }'));
 for (const id of ["MIC-RE-A2-90-01", "MIC-RE-A2-90-02", "MIC-PR-A2-90-01", "MIC-PR-A2-90-02", "MIC-CO-A2-90-01", "MIC-CO-A2-90-02"]) {
   assert.ok(microLibrary.activities.some((activity) => activity.id === id), `Missing focused practice activity: ${id}`);
 }
