@@ -4,6 +4,8 @@ import fs from "node:fs";
 const app = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
 const worker = fs.readFileSync(new URL("../service-worker.js", import.meta.url), "utf8");
 const index = fs.readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const microEngine = fs.readFileSync(new URL("../src/micro-practice.js", import.meta.url), "utf8");
+const microLibrary = JSON.parse(fs.readFileSync(new URL("../data/micro-practice-library.json", import.meta.url), "utf8"));
 
 assert.match(app, /import \{ analyzeLanguage \} from "\.\/src\/linguistic-engine\.js"/);
 assert.match(app, /linguisticLinks: getLinguisticResourcesForActivity\(activity\)/);
@@ -23,7 +25,17 @@ assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v30/);
+assert.match(worker, /hodie-shell-v31/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
+
+
+assert.match(app, /["]reading["], ["]Reading["], ["]Leer["]/);
+assert.match(app, /["]pronunciation["], ["]Pronunciation["], ["]Pronunciación["]/);
+assert.match(app, /["]communication["], ["]Communication["], ["]Comunicación["]/);
+assert.match(app, /selectedActivities = selectMicroActivities\\(microLibrary, options\\)/);
+assert.match(microEngine, /communication: \\{ label: "Communication", kind: "skill", skill: "communication" \\}/);
+for (const id of ["MIC-RE-A2-90-01", "MIC-RE-A2-90-02", "MIC-PR-A2-90-01", "MIC-PR-A2-90-02", "MIC-CO-A2-90-01", "MIC-CO-A2-90-02"]) {
+  assert.ok(microLibrary.activities.some((activity) => activity.id === id), `Missing focused practice activity: ${id}`);
+}
 
 console.log("HODIE linguistic UI integration contract: PASS");
