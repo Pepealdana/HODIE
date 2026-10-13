@@ -18,7 +18,8 @@ const MODE_CONFIG = {
   writing: { label: "Writing", kind: "skill", skill: "writing" },
   grammar: { label: "Grammar", kind: "resource", resource: "grammar" },
   vocabulary: { label: "Vocabulary", kind: "resource", resource: "vocabulary" },
-  pronunciation: { label: "Pronunciation", kind: "resource", resource: "pronunciation" }
+  pronunciation: { label: "Pronunciation", kind: "resource", resource: "pronunciation" },
+  communication: { label: "Communication", kind: "skill", skill: "communication" }
 };
 
 const MIXED_SKILL_ORDER = ["speaking", "listening", "vocabulary", "grammar", "reading", "writing"];
