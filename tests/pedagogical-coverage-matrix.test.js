@@ -38,7 +38,7 @@ const allSkillsHaveModeDiversity = skills.every((skill) => (skillModes[skill] ||
 const b1Complete = skills.every((skill) => (skillLevelCounts[`${skill}|B1`] || 0) >= 1);
 const balancedEnoughForB2 = imbalanceRatio <= 8 && allSkillsHaveModeDiversity && b1Complete;
 const b2Activities = activities.filter((x) => x.level === "B2");
-const b2Validated = b2Activities.every((x) => x.validation?.status === "validated" && x.validation?.reviewedBy && x.evaluation?.observable === true);
+const b2Validated = b2Activities.length > 0 && b2Activities.every((x) => x.validation?.status === "validated" && x.validation?.reviewedBy && x.evaluation?.observable === true);
 const b2Eligible = balancedEnoughForB2 && b2Validated && b2Activities.length > 0;
 
 // Core guardrails: content volume must represent all eight skills, not just the easiest-to-generate ones.
