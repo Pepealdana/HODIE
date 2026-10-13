@@ -3550,6 +3550,1457 @@
       ],
       "reviewPriority": "high",
       "primarySkill": "communication"
+    },
+    {
+      "id": "MIC-RE-A1-SPIRAL-01",
+      "canDoId": "RE-A1-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Read a short note",
+      "titleEs": "Lee una nota breve",
+      "prompt": "Read: “Hi Ana. The meeting is at ten. See you in Room 2.” Where is the meeting?",
+      "promptEs": "Lee: “Hola, Ana. La reunión es a las diez. Nos vemos en el salón 2”. ¿Dónde es la reunión?",
+      "options": [
+        "Room 2",
+        "Room 10",
+        "At home"
+      ],
+      "answer": "Room 2",
+      "feedback": {
+        "correct": "Correct. The room is stated directly in the note.",
+        "correctEs": "Correcto. El salón aparece explícitamente en la nota.",
+        "incorrect": "Look for the place mentioned after “See you in”.",
+        "incorrectEs": "Busca el lugar mencionado después de “See you in”."
+      },
+      "tags": [
+        "reading",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "explicit-detail",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "reading-detail",
+        "places"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Return to short messages and locate one explicit detail.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-A1-SPIRAL-02",
+      "canDoId": "RE-A1-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Find a familiar word",
+      "titleEs": "Encuentra una palabra conocida",
+      "prompt": "Read: “I live in Madrid. I work at a school.” The person lives in ___.",
+      "promptEs": "Lee: “Vivo en Madrid. Trabajo en una escuela”. La persona vive en ___.",
+      "answer": "Madrid",
+      "acceptableAnswers": [
+        "Madrid"
+      ],
+      "feedback": {
+        "correct": "Correct. You found the place in the text.",
+        "correctEs": "Correcto. Encontraste el lugar en el texto.",
+        "incorrect": "Find the city after “I live in”.",
+        "incorrectEs": "Busca la ciudad después de “I live in”."
+      },
+      "tags": [
+        "reading",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "explicit-detail",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "reading-detail",
+        "familiar-words"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Recognise familiar words in very short texts.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-A1-SPIRAL-03",
+      "canDoId": "RE-A1-01",
+      "type": "order",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Order a simple message",
+      "titleEs": "Ordena un mensaje sencillo",
+      "prompt": "Put the message in a logical order.",
+      "promptEs": "Pon el mensaje en un orden lógico.",
+      "tokens": [
+        "See you tomorrow.",
+        "Hi, Sam.",
+        "The class is at nine."
+      ],
+      "answer": [
+        "Hi, Sam.",
+        "The class is at nine.",
+        "See you tomorrow."
+      ],
+      "feedback": {
+        "correct": "Correct. A greeting comes before the information and closing.",
+        "correctEs": "Correcto. El saludo va antes de la información y la despedida.",
+        "incorrect": "Start with the greeting, then the information, and finish with the closing.",
+        "incorrectEs": "Empieza con el saludo, sigue con la información y termina con la despedida."
+      },
+      "tags": [
+        "reading",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "text-sequence",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "sequence",
+        "message-structure"
+      ],
+      "primarySkill": "reading",
+      "reviewPriority": "high",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Rebuild the structure of a short message.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-PR-A1-SPIRAL-01",
+      "canDoId": "PR-A1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Practise a greeting",
+      "titleEs": "Practica un saludo",
+      "prompt": "Listen to the model and repeat: “Good morning.”",
+      "promptEs": "Escucha el modelo y repite: “Good morning”.",
+      "targetPhrase": "Good morning.",
+      "requiredTokens": [
+        "good",
+        "morning"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "key-words",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "greetings",
+        "intelligibility"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "Good morning.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "high",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Recall and repeat a familiar greeting.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-A1-SPIRAL-02",
+      "canDoId": "PR-A1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Say your name clearly",
+      "titleEs": "Di tu nombre con claridad",
+      "prompt": "Repeat the model: “My name is Peter.” Replace Peter with your name if you prefer.",
+      "promptEs": "Repite el modelo: “My name is Peter”. Puedes reemplazar Peter por tu nombre.",
+      "targetPhrase": "My name is Peter.",
+      "requiredTokens": [
+        "my",
+        "name",
+        "is"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "key-words",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "personal-information",
+        "word-stress"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "My name is Peter.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "high",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Revisit a basic personal introduction.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-A1-SPIRAL-03",
+      "canDoId": "PR-A1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Practise numbers",
+      "titleEs": "Practica los números",
+      "prompt": "Repeat clearly: “I have two books.”",
+      "promptEs": "Repite con claridad: “I have two books”.",
+      "targetPhrase": "I have two books.",
+      "requiredTokens": [
+        "i",
+        "have",
+        "two",
+        "books"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "key-words",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "numbers",
+        "final-sounds"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "I have two books.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "high",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Practise short phrases with familiar words.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-CO-A1-SPIRAL-01",
+      "canDoId": "CO-A1-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose a greeting",
+      "titleEs": "Elige un saludo",
+      "prompt": "You meet a teacher at 8 a.m. What can you say?",
+      "promptEs": "Te encuentras con un profesor a las 8 a. m. ¿Qué puedes decir?",
+      "options": [
+        "Good morning.",
+        "Good night.",
+        "Goodbye yesterday."
+      ],
+      "answer": "Good morning.",
+      "feedback": {
+        "correct": "Correct. “Good morning” is a suitable greeting in the morning.",
+        "correctEs": "Correcto. “Good morning” es un saludo adecuado por la mañana.",
+        "incorrect": "Choose the greeting used in the morning.",
+        "incorrectEs": "Elige el saludo que se usa por la mañana."
+      },
+      "tags": [
+        "communication",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "greetings",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "greetings",
+        "social-language"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Recall basic greetings before longer conversations.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-A1-SPIRAL-02",
+      "canDoId": "CO-A1-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete an introduction",
+      "titleEs": "Completa una presentación",
+      "prompt": "A: What is your name? B: My name ___ Peters.",
+      "promptEs": "A: ¿Cómo te llamas? B: My name ___ Peters.",
+      "answer": "is",
+      "acceptableAnswers": [
+        "is"
+      ],
+      "feedback": {
+        "correct": "Correct. The phrase is “My name is…”.",
+        "correctEs": "Correcto. La expresión es “My name is…”.",
+        "incorrect": "Use the verb in the fixed expression “My name is…”.",
+        "incorrectEs": "Usa el verbo de la expresión “My name is…”."
+      },
+      "tags": [
+        "communication",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "basic-introduction",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "basic-questions",
+        "be"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Retrieve a basic introduction phrase.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-A1-SPIRAL-03",
+      "canDoId": "CO-A1-01",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Build a short exchange",
+      "titleEs": "Construye un intercambio breve",
+      "prompt": "Put the exchange in order.",
+      "promptEs": "Pon el intercambio en orden.",
+      "tokens": [
+        "I'm fine, thank you.",
+        "Hi! How are you?",
+        "I'm glad to hear that."
+      ],
+      "answer": [
+        "Hi! How are you?",
+        "I'm fine, thank you.",
+        "I'm glad to hear that."
+      ],
+      "feedback": {
+        "correct": "Correct. The greeting/question comes first, followed by the answer and reaction.",
+        "correctEs": "Correcto. Primero va el saludo/pregunta, luego la respuesta y la reacción.",
+        "incorrect": "Start with the greeting and question, then answer, then react.",
+        "incorrectEs": "Empieza con el saludo y la pregunta, luego responde y finalmente reacciona."
+      },
+      "tags": [
+        "communication",
+        "a1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "turn-taking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "greetings",
+        "basic-turn-taking"
+      ],
+      "primarySkill": "communication",
+      "reviewPriority": "high",
+      "spiralReview": {
+        "tier": "foundation",
+        "retrievalCue": "Practise the basic pattern of a conversation.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-RE-A2-SPIRAL-01",
+      "canDoId": "RE-A2-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Find the main idea",
+      "titleEs": "Encuentra la idea principal",
+      "prompt": "Read: “The school library will close early on Friday because staff are preparing an exhibition.” Why will it close early?",
+      "promptEs": "Lee: “La biblioteca escolar cerrará temprano el viernes porque el personal está preparando una exposición”. ¿Por qué cerrará temprano?",
+      "options": [
+        "Staff are preparing an exhibition",
+        "There are no books",
+        "The school is closed all week"
+      ],
+      "answer": "Staff are preparing an exhibition",
+      "feedback": {
+        "correct": "Correct. The reason is stated in the sentence.",
+        "correctEs": "Correcto. La razón aparece en la oración.",
+        "incorrect": "Look for the reason after “because”.",
+        "incorrectEs": "Busca la razón después de “because”."
+      },
+      "tags": [
+        "reading",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "main-idea",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "gist",
+        "cause-and-effect"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Revisit the difference between topic and main idea.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-A2-SPIRAL-02",
+      "canDoId": "RE-A2-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Find a detail in a message",
+      "titleEs": "Encuentra un detalle en un mensaje",
+      "prompt": "Read: “Please send the report before Thursday afternoon.” The report is due before ___.",
+      "promptEs": "Lee: “Por favor, envía el informe antes del jueves por la tarde”. El informe debe enviarse antes de ___.",
+      "answer": "Thursday afternoon",
+      "acceptableAnswers": [
+        "Thursday afternoon"
+      ],
+      "feedback": {
+        "correct": "Correct. You identified the deadline.",
+        "correctEs": "Correcto. Identificaste la fecha límite.",
+        "incorrect": "Find the time expression in the message.",
+        "incorrectEs": "Busca la expresión de tiempo en el mensaje."
+      },
+      "tags": [
+        "reading",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "reading-detail",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "deadlines",
+        "time-expressions"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Retrieve the skill of scanning for specific details.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-A2-SPIRAL-03",
+      "canDoId": "RE-A2-01",
+      "type": "order",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Sequence instructions",
+      "titleEs": "Ordena instrucciones",
+      "prompt": "Put these instructions in the order they should happen.",
+      "promptEs": "Pon estas instrucciones en el orden en que deben realizarse.",
+      "tokens": [
+        "Finally, save the file.",
+        "First, open the document.",
+        "Then, check the information."
+      ],
+      "answer": [
+        "First, open the document.",
+        "Then, check the information.",
+        "Finally, save the file."
+      ],
+      "feedback": {
+        "correct": "Correct. The sequence markers show the order.",
+        "correctEs": "Correcto. Los marcadores de secuencia indican el orden.",
+        "incorrect": "Use “First”, “Then” and “Finally” to establish the sequence.",
+        "incorrectEs": "Usa “First”, “Then” y “Finally” para establecer la secuencia."
+      },
+      "tags": [
+        "reading",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "sequence-markers",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "sequence",
+        "instructions"
+      ],
+      "primarySkill": "reading",
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Reinforce basic reading strategies before inference.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-PR-A2-SPIRAL-01",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Stress the key word",
+      "titleEs": "Enfatiza la palabra clave",
+      "prompt": "Repeat: “I need the BLUE folder.” Make the key word clear.",
+      "promptEs": "Repite: “I need the BLUE folder”. Pronuncia con claridad la palabra clave.",
+      "targetPhrase": "I need the blue folder.",
+      "requiredTokens": [
+        "i",
+        "need",
+        "blue",
+        "folder"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "sentence-stress",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "word-stress",
+        "sentence-stress"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "I need the blue folder.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Revisit word stress in a short familiar sentence.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-A2-SPIRAL-02",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Practise final sounds",
+      "titleEs": "Practica los sonidos finales",
+      "prompt": "Repeat: “She works with three students.” Pay attention to word endings.",
+      "promptEs": "Repite: “She works with three students”. Presta atención a las terminaciones.",
+      "targetPhrase": "She works with three students.",
+      "requiredTokens": [
+        "she",
+        "works",
+        "three",
+        "students"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "final-sounds",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "final-sounds",
+        "plural-endings"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "She works with three students.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Review final sounds in familiar words.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-A2-SPIRAL-03",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Keep a clear rhythm",
+      "titleEs": "Mantén un ritmo claro",
+      "prompt": "Repeat: “We TEST the robot on MONDAY.”",
+      "promptEs": "Repite: “We TEST the robot on MONDAY”.",
+      "targetPhrase": "We test the robot on Monday.",
+      "requiredTokens": [
+        "we",
+        "test",
+        "robot",
+        "monday"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "sentence-rhythm",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "sentence-stress",
+        "rhythm"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "We test the robot on Monday.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Use stress to make important information easier to understand.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-CO-A2-SPIRAL-01",
+      "canDoId": "CO-A2-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Ask for repetition politely",
+      "titleEs": "Pide que repitan con cortesía",
+      "prompt": "You did not understand an instruction. What should you say?",
+      "promptEs": "No entendiste una instrucción. ¿Qué deberías decir?",
+      "options": [
+        "Could you repeat that, please?",
+        "Repeat it now.",
+        "You speak bad."
+      ],
+      "answer": "Could you repeat that, please?",
+      "feedback": {
+        "correct": "Correct. This is a polite request for repetition.",
+        "correctEs": "Correcto. Es una petición cortés para que repitan.",
+        "incorrect": "Choose a polite request that repairs a misunderstanding.",
+        "incorrectEs": "Elige una petición cortés para resolver el malentendido."
+      },
+      "tags": [
+        "communication",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "clarification",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "polite-requests",
+        "interaction-repair"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Retrieve clarification strategies from A1 and extend them politely.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-A2-SPIRAL-02",
+      "canDoId": "CO-A2-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Check understanding",
+      "titleEs": "Comprueba si entendiste",
+      "prompt": "“So, I connect the sensor first, ___?”",
+      "promptEs": "“Entonces, conecto primero el sensor, ¿___?”",
+      "answer": "right",
+      "acceptableAnswers": [
+        "right",
+        "correct"
+      ],
+      "feedback": {
+        "correct": "Correct. A tag question checks that your understanding is right.",
+        "correctEs": "Correcto. Esta pregunta breve comprueba si entendiste bien.",
+        "incorrect": "Use “right?” to check that your understanding is correct.",
+        "incorrectEs": "Usa “right?” para comprobar si entendiste correctamente."
+      },
+      "tags": [
+        "communication",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "checking-understanding",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "confirmation-requests",
+        "interaction-repair"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Build on basic questions by confirming shared understanding.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-A2-SPIRAL-03",
+      "canDoId": "CO-A2-01",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Repair a misunderstanding",
+      "titleEs": "Resuelve un malentendido",
+      "prompt": "Put the exchange in order.",
+      "promptEs": "Pon el intercambio en orden.",
+      "tokens": [
+        "Thanks, that makes sense now.",
+        "Could you explain the last step again?",
+        "Of course. First, save the file."
+      ],
+      "answer": [
+        "Could you explain the last step again?",
+        "Of course. First, save the file.",
+        "Thanks, that makes sense now."
+      ],
+      "feedback": {
+        "correct": "Correct. Ask for clarification, receive it, then confirm understanding.",
+        "correctEs": "Correcto. Pide aclaración, recibe la explicación y confirma que entendiste.",
+        "incorrect": "Start with the clarification request, then the explanation, then the response.",
+        "incorrectEs": "Empieza con la petición de aclaración, luego la explicación y finalmente la respuesta."
+      },
+      "tags": [
+        "communication",
+        "a2",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "interaction-repair",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "clarification",
+        "turn-taking"
+      ],
+      "primarySkill": "communication",
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "consolidation",
+        "retrievalCue": "Practise a longer version of a basic help-seeking exchange.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-RE-B1-SPIRAL-01",
+      "canDoId": "RE-B1-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Infer the main point",
+      "titleEs": "Infiere la idea principal",
+      "prompt": "Read: “The new timetable reduced waiting time, although some families found the earlier start difficult.” What is the writer's overall point?",
+      "promptEs": "Lee: “El nuevo horario redujo la espera, aunque algunas familias encontraron difícil empezar más temprano”. ¿Cuál es la idea general del autor?",
+      "options": [
+        "The change had benefits and a drawback",
+        "Everyone rejected the timetable",
+        "The timetable had no effect"
+      ],
+      "answer": "The change had benefits and a drawback",
+      "feedback": {
+        "correct": "Correct. The sentence presents a benefit and a contrasting concern.",
+        "correctEs": "Correcto. La oración presenta un beneficio y una preocupación contrastante.",
+        "incorrect": "Notice both the positive result and the contrast introduced by “although”.",
+        "incorrectEs": "Observa el resultado positivo y el contraste introducido por “although”."
+      },
+      "tags": [
+        "reading",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "inference",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "gist",
+        "contrast",
+        "viewpoint"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Extend main-idea reading by weighing contrasting information.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-B1-SPIRAL-02",
+      "canDoId": "RE-B1-02",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Resolve a reference",
+      "titleEs": "Identifica a qué se refiere una palabra",
+      "prompt": "Read: “The team tested a lighter frame. It made the robot easier to carry.” “It” refers to ___.",
+      "promptEs": "Lee: “El equipo probó una estructura más ligera. Eso hizo que el robot fuera más fácil de transportar”. “It” se refiere a ___.",
+      "answer": "the lighter frame",
+      "acceptableAnswers": [
+        "the lighter frame",
+        "a lighter frame",
+        "the frame"
+      ],
+      "feedback": {
+        "correct": "Correct. “It” refers to the frame mentioned in the previous sentence.",
+        "correctEs": "Correcto. “It” se refiere a la estructura mencionada en la oración anterior.",
+        "incorrect": "Look at the noun in the previous sentence that caused the change.",
+        "incorrectEs": "Busca el sustantivo de la oración anterior que produjo el cambio."
+      },
+      "tags": [
+        "reading",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "reference-resolution",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "pronoun-reference",
+        "cohesion"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "reading",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Move from explicit details to links between sentences.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-RE-B1-SPIRAL-03",
+      "canDoId": "RE-B1-07",
+      "type": "order",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Follow an explanation",
+      "titleEs": "Sigue una explicación",
+      "prompt": "Put the sentences in a logical order.",
+      "promptEs": "Pon las oraciones en un orden lógico.",
+      "tokens": [
+        "As a result, the readings became more stable.",
+        "The team moved the sensor away from direct sunlight.",
+        "At first, the outdoor readings changed frequently."
+      ],
+      "answer": [
+        "At first, the outdoor readings changed frequently.",
+        "The team moved the sensor away from direct sunlight.",
+        "As a result, the readings became more stable."
+      ],
+      "feedback": {
+        "correct": "Correct. The sequence moves from problem to action to result.",
+        "correctEs": "Correcto. La secuencia pasa del problema a la acción y luego al resultado.",
+        "incorrect": "Look for the problem first, the action second, and the result last.",
+        "incorrectEs": "Busca primero el problema, después la acción y al final el resultado."
+      },
+      "tags": [
+        "reading",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "reading",
+      "errorTarget": "cohesion-sequence",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "cause-and-effect",
+        "cohesion",
+        "sequence"
+      ],
+      "primarySkill": "reading",
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Use links across sentences to follow an explanation.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "reading"
+      }
+    },
+    {
+      "id": "MIC-PR-B1-SPIRAL-01",
+      "canDoId": "PR-B1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Make contrast clear",
+      "titleEs": "Haz claro el contraste",
+      "prompt": "Repeat: “We tested it indoors, NOT outdoors.” Make the contrast clear.",
+      "promptEs": "Repite: “We tested it indoors, NOT outdoors”. Haz claro el contraste.",
+      "targetPhrase": "We tested it indoors, not outdoors.",
+      "requiredTokens": [
+        "we",
+        "tested",
+        "indoors",
+        "not",
+        "outdoors"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "contrastive-stress",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "sentence-stress",
+        "contrast"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "We tested it indoors, not outdoors.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Reuse A2 stress skills to express a contrast.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-B1-SPIRAL-02",
+      "canDoId": "PR-B1-02",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Group words into chunks",
+      "titleEs": "Agrupa palabras en bloques",
+      "prompt": "Repeat with short pauses: “When the test finished / we checked the results / and wrote a report.”",
+      "promptEs": "Repite con pausas breves: “When the test finished / we checked the results / and wrote a report”.",
+      "targetPhrase": "When the test finished, we checked the results and wrote a report.",
+      "requiredTokens": [
+        "when",
+        "test",
+        "finished",
+        "checked",
+        "results",
+        "report"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "thought-groups",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "thought-groups",
+        "connected-speech"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "When the test finished, we checked the results and wrote a report.",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Extend familiar sentence rhythm into longer speech.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-PR-B1-SPIRAL-03",
+      "canDoId": "PR-B1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Practise connected speech",
+      "titleEs": "Practica el habla conectada",
+      "prompt": "Repeat naturally: “Could you check it again?”",
+      "promptEs": "Repite de forma natural: “Could you check it again?”.",
+      "targetPhrase": "Could you check it again?",
+      "requiredTokens": [
+        "could",
+        "you",
+        "check",
+        "again"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognised. This checks word presence, not detailed pronunciation quality.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esto comprueba la presencia de palabras, no la calidad detallada de la pronunciación.",
+        "partial": "Repeat the phrase and include all the key words. Speech recognition may mishear some sounds.",
+        "partialEs": "Repite la frase e incluye todas las palabras clave. El reconocimiento de voz puede confundir algunos sonidos.",
+        "unavailable": "Speech recognition is unavailable here. You can still listen to the model and repeat it, but pronunciation cannot be automatically scored.",
+        "unavailableEs": "El reconocimiento de voz no está disponible aquí. Puedes escuchar el modelo y repetirlo, pero la pronunciación no se puede calificar automáticamente."
+      },
+      "tags": [
+        "pronunciation",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "connected-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "connected-speech",
+        "intelligibility"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "Could you check it again?",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.88,
+        "slowRate": 0.62
+      },
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Reuse familiar question forms with smoother rhythm.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "key-word recognition"
+      }
+    },
+    {
+      "id": "MIC-CO-B1-SPIRAL-01",
+      "canDoId": "CO-B1-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Ask a follow-up question",
+      "titleEs": "Haz una pregunta de seguimiento",
+      "prompt": "A colleague says, “The first test failed.” Which response keeps the conversation going?",
+      "promptEs": "Un compañero dice: “La primera prueba falló”. ¿Qué respuesta mantiene la conversación?",
+      "options": [
+        "What do you think caused it?",
+        "That is a chair.",
+        "I go yesterday."
+      ],
+      "answer": "What do you think caused it?",
+      "feedback": {
+        "correct": "Correct. A follow-up question invites more information.",
+        "correctEs": "Correcto. Una pregunta de seguimiento invita a ampliar la información.",
+        "incorrect": "Choose a question connected to what your colleague said.",
+        "incorrectEs": "Elige una pregunta relacionada con lo que dijo tu compañero."
+      },
+      "tags": [
+        "communication",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "follow-up-question",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "follow-up-questions",
+        "conversation-maintenance"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Extend basic questions into meaningful follow-up questions.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-B1-SPIRAL-02",
+      "canDoId": "CO-B1-05",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Disagree politely",
+      "titleEs": "Expresa desacuerdo con cortesía",
+      "prompt": "“I see your point, ___ I think we should test it again.”",
+      "promptEs": "“Entiendo tu punto, ___ creo que deberíamos probarlo otra vez”.",
+      "answer": "but",
+      "acceptableAnswers": [
+        "but",
+        "however"
+      ],
+      "feedback": {
+        "correct": "Correct. Acknowledging the other view before disagreeing keeps the tone respectful.",
+        "correctEs": "Correcto. Reconocer la otra opinión antes de discrepar mantiene un tono respetuoso.",
+        "incorrect": "Use a contrast connector after acknowledging the other person's view.",
+        "incorrectEs": "Usa un conector de contraste después de reconocer la opinión de la otra persona."
+      },
+      "tags": [
+        "communication",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "polite-disagreement",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "contrast-connectors",
+        "stance",
+        "politeness"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "communication",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Build on A2 clarification with a respectful difference of opinion.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
+    },
+    {
+      "id": "MIC-CO-B1-SPIRAL-03",
+      "canDoId": "CO-B1-02",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Respond to an idea",
+      "titleEs": "Responde a una idea",
+      "prompt": "Put the conversation in a natural order.",
+      "promptEs": "Pon la conversación en un orden natural.",
+      "tokens": [
+        "That makes sense. What if we test it outdoors too?",
+        "I think the sensor needs more light.",
+        "Good point. We should compare both conditions."
+      ],
+      "answer": [
+        "I think the sensor needs more light.",
+        "That makes sense. What if we test it outdoors too?",
+        "Good point. We should compare both conditions."
+      ],
+      "feedback": {
+        "correct": "Correct. The exchange presents an idea, reacts to it, and adds a next step.",
+        "correctEs": "Correcto. El intercambio presenta una idea, reacciona y añade un siguiente paso.",
+        "incorrect": "Start with the idea, respond to it, and then suggest the next step.",
+        "incorrectEs": "Empieza con la idea, responde a ella y luego propone el siguiente paso."
+      },
+      "tags": [
+        "communication",
+        "b1",
+        "spiral-review"
+      ],
+      "errorType": "communication",
+      "errorTarget": "turn-taking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "reacting-to-ideas",
+        "suggestions",
+        "turn-taking"
+      ],
+      "primarySkill": "communication",
+      "reviewPriority": "medium",
+      "spiralReview": {
+        "tier": "transfer",
+        "retrievalCue": "Extend simple exchanges into collaborative conversation.",
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ],
+        "feedbackFocus": "communication"
+      }
     }
   ]
 }
