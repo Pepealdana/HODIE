@@ -9,7 +9,7 @@ const blueprints = read("../data/linguistic-activity-blueprints.json");
 
 const skills = canDo.skills;
 const activities = [...micro, ...full];
-const supportedLevels = ["A2", "B1", "B2"];
+const supportedLevels = ["A1", "A2", "B1", "B2"];
 const stageFor = (activity) => {
   const type = activity.type || activity.activityType;
   if (["choose", "complete", "match", "order", "recognition", "controlled-practice"].includes(type)) return "recognition";
@@ -51,6 +51,21 @@ assert.ok(imbalanceRatio <= 10,
   `Skill coverage is too imbalanced (largest/smallest = ${imbalanceRatio.toFixed(1)}x). Strengthen underrepresented skills before expanding dominant ones.`);
 assert.ok(blueprints.categories.some((x) => x.id === "reading"), "Reading progression blueprint must remain available");
 assert.ok(blueprints.categories.some((x) => x.id === "pronunciation"), "Pronunciation progression blueprint must remain available");
+
+// Spiral coverage is intentionally explicit for skills that learners must revisit at
+// foundation, consolidation, and transfer stages rather than treating A1 as mastered.
+for (const skill of ["reading", "pronunciation", "communication"]) {
+  for (const level of ["A1", "A2", "B1"]) {
+    const matching = activities.filter((x) => x.skill === skill && x.level === level);
+    assert.ok(matching.length >= 3,
+      `${skill} needs at least 3 ${level} activities for spiral practice; found ${matching.length}`);
+    assert.ok(matching.every((x) => x.spiralReview?.reviewableFrom?.includes(level)),
+      `${skill} ${level} activities must declare their spiral-review levels`);
+  }
+}
+for (const id of ["RE-A1-01", "PR-A1-01", "CO-A1-01"]) {
+  assert.ok(canDo.canDos.some((x) => x.id === id), `Missing foundational A1 Can-Do: ${id}`);
+}
 
 // B2 must not be enabled merely because blueprints mention it. Require validated B2 tasks,
 // full B1 skill coverage, multiple modes per skill, and a tighter balance threshold.
