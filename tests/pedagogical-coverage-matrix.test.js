@@ -64,6 +64,18 @@ for (const skill of ["reading", "pronunciation", "communication"]) {
       `${skill} ${level} needs at least 3 explicitly tagged spiral-review activities; found ${spiral.length}`);
   }
 }
+for (const [advancedId, foundationId] of [
+  ["RE-A2-01", "RE-A1-01"],
+  ["RE-B1-01", "RE-A1-01"],
+  ["PR-A2-01", "PR-A1-01"],
+  ["PR-B1-01", "PR-A1-01"],
+  ["CO-A2-01", "CO-A1-01"],
+  ["CO-B1-01", "CO-A1-01"]
+]) {
+  const advanced = canDo.canDos.find((x) => x.id === advancedId);
+  assert.ok(advanced?.recovery?.includes(foundationId),
+    `${advancedId} must offer recovery through ${foundationId} instead of assuming foundation mastery`);
+}
 for (const id of ["RE-A1-01", "PR-A1-01", "CO-A1-01"]) {
   assert.ok(canDo.canDos.some((x) => x.id === id), `Missing foundational A1 Can-Do: ${id}`);
 }
