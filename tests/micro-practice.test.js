@@ -131,3 +131,13 @@ assert.equal(writingErrors.retryRecommended, false);
 const speakingActivities = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "speaking", limit: 6 });
 assert.ok(speakingActivities.length >= 2);
 assert.ok(speakingActivities.every((item) => ["speak", "mini-production"].includes(item.type)));
+
+for (const [mode, expectedSkill] of [
+  ["reading", "reading"],
+  ["pronunciation", "pronunciation"],
+  ["communication", "communication"]
+]) {
+  const focused = selectMicroActivities(library, { mode, limit: 6 });
+  assert.ok(focused.length >= 2, `Expected focused ${mode} activities to be available`);
+  assert.ok(focused.every((item) => item.skill === expectedSkill), `${mode} mode must not substitute another skill`);
+}
