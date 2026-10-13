@@ -12,8 +12,9 @@ The expanded runtime catalog contains:
 - **449 vocabulary entries** with lemma, part of speech, CEFR level, Spanish meaning, domain, forms, collocations, examples and search terms.
 - **69 communicative functions** connected to Can-Do goals, structures, vocabulary domains and cross-skill transfer links.
 - **119 linguistic regression cases**, including valid-sentence checks intended to detect false positives.
-- **71 micro-practice activities** spanning choose, complete, order, match, listening, speaking and mini-production.
+- **104 micro-practice activities** spanning choose, complete, order, match, listening, speaking and mini-production.
 - **12 full content activities** spanning speaking, listening comprehension, reading comprehension, controlled practice, vocabulary recognition, guided writing, pronunciation, interaction and an integrated B1 writing task.
+- **136 Can-Do goals**, including new A1 foundation goals for Reading, pronunciation and Communication.
 
 These are inventory counts, not a claim that every item has been externally reviewed or that every grammar point is automatically detected.
 
@@ -37,6 +38,9 @@ Draft records must remain available for explanation/search only. Vocabulary simi
 - The micro-practice bank provides short controlled and receptive activities.
 - The full content library provides communicative tasks with observable criteria and retry contracts.
 - The adaptive planner considers prior evidence, gaps, retention and activity availability. It should preserve a clear same-skill sequence when a prerequisite-backed path is available, while still allowing cross-skill practice.
+- **Spiral learning is explicit:** A1 is not assumed to be mastered when a learner reaches A2 or B1. Review sessions can draw from the whole micro-practice bank and, when a session contains at least three activities, include at least one A1 retrieval task alongside later-level practice.
+- Reading, pronunciation and Communication each have at least three microactivities at A1, A2 and B1. A2 includes extra practice to support consolidation and return visits.
+- Pronunciation feedback is evidence-limited: the current speech path checks recognised key words, not detailed phonetic quality. It must not claim to score accent, individual sounds or prosody without appropriate evidence.
 - A single correct answer is evidence of one successful attempt, not proof of long-term mastery. Consolidation requires repeated evidence and later review.
 
 ## Cross-resource relationships
@@ -45,4 +49,4 @@ Communicative functions connect grammar structures, vocabulary domains, Can-Do g
 
 ## Validation
 
-Run `npm test`. The suite builds the linguistic catalog, tests the deterministic correction engine, validates the content model and activity types, checks knowledge links, and verifies that the new draft rules remain inactive for automatic correction.
+Run `npm test`. The suite builds the linguistic catalog, tests the deterministic correction engine, validates the content model and activity types, checks knowledge links, enforces A1/A2/B1 spiral coverage for Reading, pronunciation and Communication, verifies that review can retrieve A1 tasks at later stages, and keeps draft rules inactive for automatic correction.
