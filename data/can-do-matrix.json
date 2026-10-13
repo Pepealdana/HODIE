@@ -2174,7 +2174,10 @@
         "showCorrectedExample": true,
         "requireRetryForPriorityErrors": true
       },
-      "canDoType": "communicative"
+      "canDoType": "communicative",
+      "recovery": [
+        "RE-A1-01"
+      ]
     },
     {
       "id": "RE-A2-02",
@@ -2475,7 +2478,9 @@
       },
       "canDoType": "communicative",
       "recovery": [
-        "RE-A2-06"
+        "RE-A2-06",
+        "RE-A2-01",
+        "RE-A1-01"
       ]
     },
     {
@@ -2513,7 +2518,9 @@
       },
       "canDoType": "communicative",
       "recovery": [
-        "RE-B1-01"
+        "RE-B1-01",
+        "RE-A2-01",
+        "RE-A1-01"
       ]
     },
     {
@@ -3941,7 +3948,9 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "interaction",
-      "recovery": []
+      "recovery": [
+        "CO-A1-01"
+      ]
     },
     {
       "id": "CO-A2-02",
@@ -4168,7 +4177,8 @@
       "canDoType": "interaction",
       "recovery": [
         "CO-A2-01",
-        "CO-A2-06"
+        "CO-A2-06",
+        "CO-A1-01"
       ]
     },
     {
@@ -4323,7 +4333,10 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "interaction",
-      "recovery": []
+      "recovery": [
+        "CO-A2-01",
+        "CO-A1-01"
+      ]
     },
     {
       "id": "CO-B1-06",
@@ -5119,7 +5132,9 @@
       "mastery": {
         "intelligibility": 0.8
       },
-      "recovery": [],
+      "recovery": [
+        "PR-A1-01"
+      ],
       "feedback": {
         "languages": [
           "en",
@@ -5283,7 +5298,9 @@
         "confidence": 4
       },
       "recovery": [
-        "PR-A2-04"
+        "PR-A2-04",
+        "PR-A2-01",
+        "PR-A1-01"
       ],
       "feedback": {
         "languages": [
@@ -5325,7 +5342,9 @@
       },
       "recovery": [
         "PR-A2-03",
-        "PR-B1-01"
+        "PR-B1-01",
+        "PR-A2-01",
+        "PR-A1-01"
       ],
       "feedback": {
         "languages": [
