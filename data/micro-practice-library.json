@@ -3296,6 +3296,274 @@
       "reviewPriority": "medium",
       "errorType": "production",
       "errorPriority": "medium"
+    },
+    {
+      "id": "MIC-RE-A2-90-01",
+      "canDoId": "RE-A2-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "educational",
+      "level": "A2",
+      "title": "Read for the main idea",
+      "titleEs": "Lee para encontrar la idea principal",
+      "prompt": "Read: The robotics club tested a new sensor. The readings were stable indoors, but sunlight affected them outside. What is the main problem?",
+      "promptEs": "Lee: El club de robótica probó un sensor nuevo. Las lecturas fueron estables en interiores, pero la luz solar las afectó en exteriores. ¿Cuál es el problema principal?",
+      "options": [
+        "Sunlight affects the readings",
+        "The sensor is missing",
+        "The club has no robot"
+      ],
+      "answer": "Sunlight affects the readings",
+      "feedback": {
+        "correct": "Correct. The text says sunlight affected the sensor readings.",
+        "correctEs": "Correcto. El texto dice que la luz solar afectó las lecturas del sensor.",
+        "incorrect": "Look for the sentence that describes the problem.",
+        "incorrectEs": "Busca la oración que describe el problema."
+      },
+      "tags": [
+        "reading",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "reading-comprehension",
+      "errorTarget": "main-idea",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reading",
+        "main-idea",
+        "problem-solution"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-RE-A2-90-02",
+      "canDoId": "RE-A2-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "educational",
+      "level": "A2",
+      "title": "Read for a detail",
+      "titleEs": "Lee para encontrar un detalle",
+      "prompt": "Read: The team will test a cover next week. The next test is planned for ___.",
+      "promptEs": "Lee: El equipo probará una cubierta la próxima semana. La siguiente prueba está prevista para ___.",
+      "answer": "next week",
+      "acceptableAnswers": [
+        "next week"
+      ],
+      "feedback": {
+        "correct": "Correct. You found the time expression.",
+        "correctEs": "Correcto. Encontraste la expresión de tiempo.",
+        "incorrect": "Find when the team will test the cover.",
+        "incorrectEs": "Busca cuándo probará el equipo la cubierta."
+      },
+      "tags": [
+        "reading",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "reading-comprehension",
+      "errorTarget": "detail",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reading",
+        "reading-detail",
+        "time-expressions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-PR-A2-90-01",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "educational",
+      "level": "A2",
+      "title": "Stress the key words",
+      "titleEs": "Enfatiza las palabras clave",
+      "prompt": "Say the sentence and make the important words clear: “We tested the ROBOT yesterday.”",
+      "promptEs": "Di la oración y pronuncia con claridad las palabras importantes: “We tested the ROBOT yesterday.”",
+      "targetPhrase": "We tested the robot yesterday.",
+      "requiredTokens": [
+        "we",
+        "tested",
+        "robot",
+        "yesterday"
+      ],
+      "feedback": {
+        "correct": "Good. The key words are clear.",
+        "correctEs": "Bien. Las palabras clave se entienden.",
+        "partial": "Try again and make the key words clearer.",
+        "partialEs": "Inténtalo otra vez y pronuncia con más claridad las palabras clave.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "pronunciation",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "sentence-stress",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "sentence-stress",
+        "intelligibility"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "We tested the robot yesterday.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      },
+      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
+    },
+    {
+      "id": "MIC-PR-A2-90-02",
+      "canDoId": "PR-A2-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "educational",
+      "level": "A2",
+      "title": "Practise final sounds",
+      "titleEs": "Practica los sonidos finales",
+      "prompt": "Say clearly: “The students tested three robots.” Pay attention to the final sounds.",
+      "promptEs": "Di con claridad: “The students tested three robots.” Presta atención a los sonidos finales.",
+      "targetPhrase": "The students tested three robots.",
+      "requiredTokens": [
+        "students",
+        "tested",
+        "three",
+        "robots"
+      ],
+      "feedback": {
+        "correct": "Good. The key words are clear.",
+        "correctEs": "Bien. Las palabras clave se entienden.",
+        "partial": "Try again and make the key words clearer.",
+        "partialEs": "Inténtalo otra vez y pronuncia con más claridad las palabras clave.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+      },
+      "tags": [
+        "pronunciation",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "final-sounds",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "final-sounds",
+        "intelligibility"
+      ],
+      "primarySkill": "pronunciation",
+      "audioText": "The students tested three robots.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.62,
+        "language": "en-US"
+      },
+      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
+    },
+    {
+      "id": "MIC-CO-A2-90-01",
+      "canDoId": "CO-A2-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "educational",
+      "level": "A2",
+      "title": "Choose a clarification phrase",
+      "titleEs": "Elige una frase para pedir aclaración",
+      "prompt": "A colleague gives an instruction you do not understand. What is the most polite response?",
+      "promptEs": "Un compañero da una instrucción que no entiendes. ¿Cuál es la respuesta más cortés?",
+      "options": [
+        "Could you repeat that, please?",
+        "Say it again now.",
+        "I don't care."
+      ],
+      "answer": "Could you repeat that, please?",
+      "feedback": {
+        "correct": "Correct. This is a polite clarification request.",
+        "correctEs": "Correcto. Es una petición cortés de aclaración.",
+        "incorrect": "Choose a polite phrase that asks for repetition.",
+        "incorrectEs": "Elige una frase cortés para pedir que repitan la información."
+      },
+      "tags": [
+        "communication",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "communication",
+      "errorTarget": "clarification",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "communication",
+        "polite-requests",
+        "interaction-repair"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar"
+      ]
+    },
+    {
+      "id": "MIC-CO-A2-90-02",
+      "canDoId": "CO-A2-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "educational",
+      "level": "A2",
+      "title": "Check your understanding",
+      "titleEs": "Comprueba si entendiste",
+      "prompt": "You want to confirm a colleague's instruction. Which phrase checks understanding?",
+      "promptEs": "Quieres confirmar una instrucción de un compañero. ¿Qué frase comprueba si entendiste?",
+      "options": [
+        "So, I need to connect the sensor first, right?",
+        "Whatever you say.",
+        "I was there yesterday."
+      ],
+      "answer": "So, I need to connect the sensor first, right?",
+      "feedback": {
+        "correct": "Correct. You paraphrase the instruction and ask for confirmation.",
+        "correctEs": "Correcto. Reformulas la instrucción y pides confirmación.",
+        "incorrect": "Choose the phrase that paraphrases the instruction and checks it.",
+        "incorrectEs": "Elige la frase que reformula la instrucción y pide confirmación."
+      },
+      "tags": [
+        "communication",
+        "coverage-matrix",
+        "A2"
+      ],
+      "errorType": "communication",
+      "errorTarget": "checking-understanding",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "communication",
+        "confirmation-requests",
+        "interaction-repair"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar"
+      ]
     }
   ]
 }
