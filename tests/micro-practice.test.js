@@ -101,6 +101,18 @@ for (const [canDoId, productionResponse] of [
   assert.equal(evaluateMicroActivity(productionActivity, productionResponse).correct, true, `Expected sample response to satisfy ${canDoId}`);
 }
 
+
+const spiralReview = selectMicroActivities(library, {
+  canDoId: "RE-B1-01",
+  mode: "review",
+  limit: 6
+});
+assert.ok(spiralReview.length >= 3, "Review mode should build a useful cross-level retrieval set");
+assert.ok(spiralReview.some((item) => item.level === "A1"),
+  "Review mode must revisit foundational A1 activities even when the current target is B1");
+assert.ok(spiralReview.some((item) => item.level === "A2" || item.level === "B1"),
+  "Spiral review should mix foundational retrieval with current-level practice");
+
 console.log("HODIE Micro Practice Engine: PASS");
 
 
