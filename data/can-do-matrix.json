@@ -5473,6 +5473,138 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "interaction"
+    },
+    {
+      "id": "RE-A1-01",
+      "skill": "reading",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can understand very short messages and identify familiar words and details.",
+      "spanish": "Puedo comprender mensajes muy cortos e identificar palabras y detalles conocidos.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "articles",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "names",
+          "places",
+          "everyday-objects"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 30,
+          "max": 60
+        },
+        "task": "Read a short note or message and identify its purpose or one explicit detail."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "receptive"
+    },
+    {
+      "id": "PR-A1-01",
+      "skill": "pronunciation",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can repeat familiar words and short phrases clearly enough to be understood with a model.",
+      "spanish": "Puedo repetir palabras conocidas y frases cortas con suficiente claridad, siguiendo un modelo.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": [
+          "greetings",
+          "numbers",
+          "personal-information"
+        ]
+      },
+      "evidence": {
+        "type": "pronunciation",
+        "durationSeconds": {
+          "min": 15,
+          "max": 45
+        },
+        "task": "Listen to or read a familiar model, repeat it, and check whether key words are recognised."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 1,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "productive"
+    },
+    {
+      "id": "CO-A1-01",
+      "skill": "communication",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can greet someone, introduce myself, and ask or answer very simple personal questions.",
+      "spanish": "Puedo saludar, presentarme y hacer o responder preguntas personales muy sencillas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-questions",
+          "subject-pronouns"
+        ],
+        "vocabulary": [
+          "greetings",
+          "name",
+          "city",
+          "job"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 30,
+          "max": 60
+        },
+        "task": "Complete a short exchange with a greeting, a simple question, and a response."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
     }
   ],
   "metaCanDos": [
