@@ -152,6 +152,16 @@ function selectReviewActivities(activities, limit, profile = {}, mini = null) {
   const targetCount = Math.max(1, limit - (mini ? 1 : 0));
   const selected = scored.slice(0, targetCount).map((entry) => entry.item);
 
+  // Spiral retrieval: once a review has room for several tasks, include one
+  // foundational activity so earlier learning is revisited instead of assumed mastered.
+  if (limit >= 3 && !selected.some((item) => item.level === "A1")) {
+    const foundational = scored.find((entry) =>
+      entry.item.level === "A1" && !selected.some((item) => item.id === entry.item.id)
+    )?.item;
+    if (foundational && selected.length) selected[selected.length - 1] = foundational;
+    else if (foundational) selected.push(foundational);
+  }
+
   if (mini && selected.length < limit) selected.push(mini);
   return selected.slice(0, limit);
 }
@@ -160,13 +170,16 @@ function selectMicroActivities(
   library,
   { canDoId, mode = "mixed", limit = 6, profile = {} } = {}
 ) {
-  const activities = (library.activities || []).filter(
+  const scopedActivities = (library.activities || []).filter(
     (item) => !canDoId || item.canDoId === canDoId
   );
+  // Review is deliberately cross-level: retrieval practice must be able to revisit
+  // foundational A1 material even when the current learning target is A2 or B1.
+  const activities = mode === "review" ? (library.activities || []) : scopedActivities;
   if (!activities.length) return [];
 
   const config = MODE_CONFIG[mode] || MODE_CONFIG.mixed;
-  const mini = activities.find((item) => item.type === "mini-production");
+  const mini = mode === "review" ? null : activities.find((item) => item.type === "mini-production");
 
   if (mode === "mixed") return selectMixed(activities, limit, mini);
   if (mode === "review") return selectReviewActivities(activities, limit, profile, mini);
