@@ -5,7 +5,8 @@ import { getStatus, registerEvidence, selectNextCanDo } from "../src/learning-en
 const matrix = JSON.parse(fs.readFileSync(new URL("../data/can-do-matrix.json", import.meta.url), "utf8"));
 const progressModel = JSON.parse(fs.readFileSync(new URL("../data/progress-model.json", import.meta.url), "utf8"));
 
-assert.equal(matrix.canDos.length, 133);
+assert.ok(matrix.canDos.length >= 136, "Foundational A1 Can-Dos must be included in the learning matrix");
+for (const id of ["RE-A1-01", "PR-A1-01", "CO-A1-01"]) assert.ok(matrix.canDos.some((item) => item.id === id), "Missing foundational goal: " + id);
 assert.equal(Object.values(progressModel.scoring.communicativeWeights).reduce((sum, value) => sum + value, 0), 1);
 
 const ids = new Set(matrix.canDos.map((item) => item.id));
