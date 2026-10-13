@@ -430,6 +430,51 @@
         "evidence-based-unlock",
         "revisit-weakness"
       ]
+    },
+    {
+      "id": "pronunciation",
+      "label": "Pronunciation",
+      "labelEs": "Pronunciación",
+      "primaryModes": [
+        "listen-repeat",
+        "minimal-pair",
+        "stress-marking",
+        "syllable-awareness",
+        "word-final-sounds",
+        "connected-speech",
+        "record-and-compare",
+        "slow-fast-repeat"
+      ],
+      "skills": [
+        "pronunciation",
+        "listening",
+        "speaking"
+      ],
+      "progression": [
+        {
+          "level": "A1",
+          "focus": "recognize and repeat familiar sounds and short words with clear models"
+        },
+        {
+          "level": "A2",
+          "focus": "practise intelligibility, word stress, final sounds and short sentence rhythm"
+        },
+        {
+          "level": "B1",
+          "focus": "use stress, rhythm and connected speech in longer turns and familiar conversations"
+        },
+        {
+          "level": "B2",
+          "focus": "control prominence, reductions and rhythm to express contrast, nuance and stance"
+        }
+      ],
+      "feedback": [
+        "intelligibility-first",
+        "specific-sound-cue",
+        "stress-and-rhythm",
+        "evidence-limited-feedback",
+        "retry-with-shorter-chunk"
+      ]
     }
   ],
   "integrationContract": {
