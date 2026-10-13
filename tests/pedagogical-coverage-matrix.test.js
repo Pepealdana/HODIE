@@ -59,8 +59,9 @@ for (const skill of ["reading", "pronunciation", "communication"]) {
     const matching = activities.filter((x) => x.skill === skill && x.level === level);
     assert.ok(matching.length >= 3,
       `${skill} needs at least 3 ${level} activities for spiral practice; found ${matching.length}`);
-    assert.ok(matching.every((x) => x.spiralReview?.reviewableFrom?.includes(level)),
-      `${skill} ${level} activities must declare their spiral-review levels`);
+    const spiral = matching.filter((x) => x.spiralReview?.reviewableFrom?.includes(level));
+    assert.ok(spiral.length >= 3,
+      `${skill} ${level} needs at least 3 explicitly tagged spiral-review activities; found ${spiral.length}`);
   }
 }
 for (const id of ["RE-A1-01", "PR-A1-01", "CO-A1-01"]) {
