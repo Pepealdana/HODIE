@@ -3335,10 +3335,7 @@
         "problem-solution"
       ],
       "reviewPriority": "high",
-      "primarySkill": "reading",
-      "resources": [
-        "grammar"
-      ]
+      "primarySkill": "reading"
     },
     {
       "id": "MIC-RE-A2-90-02",
@@ -3376,10 +3373,7 @@
         "time-expressions"
       ],
       "reviewPriority": "high",
-      "primarySkill": "reading",
-      "resources": [
-        "grammar"
-      ]
+      "primarySkill": "reading"
     },
     {
       "id": "MIC-PR-A2-90-01",
@@ -3400,12 +3394,12 @@
         "yesterday"
       ],
       "feedback": {
-        "correct": "Good. The key words are clear.",
-        "correctEs": "Bien. Las palabras clave se entienden.",
-        "partial": "Try again and make the key words clearer.",
-        "partialEs": "Inténtalo otra vez y pronuncia con más claridad las palabras clave.",
-        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
-        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+        "correct": "Good. The key words were recognised. This checks word presence, not the quality of your pronunciation.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esta comprobación detecta las palabras, no la calidad de la pronunciación.",
+        "partial": "Try again and include all the key words. This activity does not score individual sounds.",
+        "partialEs": "Inténtalo otra vez e incluye todas las palabras clave. Esta actividad no califica sonidos individuales.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence, but pronunciation itself cannot be assessed here.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración, pero aquí no se puede evaluar la pronunciación en sí."
       },
       "tags": [
         "pronunciation",
@@ -3427,8 +3421,7 @@
         "normalRate": 0.88,
         "slowRate": 0.62,
         "language": "en-US"
-      },
-      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
+      }
     },
     {
       "id": "MIC-PR-A2-90-02",
@@ -3449,12 +3442,12 @@
         "robots"
       ],
       "feedback": {
-        "correct": "Good. The key words are clear.",
-        "correctEs": "Bien. Las palabras clave se entienden.",
-        "partial": "Try again and make the key words clearer.",
-        "partialEs": "Inténtalo otra vez y pronuncia con más claridad las palabras clave.",
-        "unavailable": "Speech recognition is not available in this browser. You can type the sentence for this validation.",
-        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración para esta validación."
+        "correct": "Good. The key words were recognised. This checks word presence, not the quality of your pronunciation.",
+        "correctEs": "Bien. Se reconocieron las palabras clave. Esta comprobación detecta las palabras, no la calidad de la pronunciación.",
+        "partial": "Try again and include all the key words. This activity does not score individual sounds.",
+        "partialEs": "Inténtalo otra vez e incluye todas las palabras clave. Esta actividad no califica sonidos individuales.",
+        "unavailable": "Speech recognition is not available in this browser. You can type the sentence, but pronunciation itself cannot be assessed here.",
+        "unavailableEs": "El reconocimiento de voz no está disponible en este navegador. Puedes escribir la oración, pero aquí no se puede evaluar la pronunciación en sí."
       },
       "tags": [
         "pronunciation",
@@ -3476,8 +3469,7 @@
         "normalRate": 0.88,
         "slowRate": 0.62,
         "language": "en-US"
-      },
-      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
+      }
     },
     {
       "id": "MIC-CO-A2-90-01",
@@ -3517,10 +3509,7 @@
         "interaction-repair"
       ],
       "reviewPriority": "high",
-      "primarySkill": "communication",
-      "resources": [
-        "grammar"
-      ]
+      "primarySkill": "communication"
     },
     {
       "id": "MIC-CO-A2-90-02",
@@ -3560,10 +3549,7 @@
         "interaction-repair"
       ],
       "reviewPriority": "high",
-      "primarySkill": "communication",
-      "resources": [
-        "grammar"
-      ]
+      "primarySkill": "communication"
     }
   ]
 }
