@@ -271,7 +271,7 @@ function renderPracticeHome() {
     contextLibrary,
     contextTerms: ["technology", "teaching", "professional"],
     knowledgeGraph,
-    availableModes: ["mixed", "speaking", "listening", "writing", "grammar", "vocabulary"]
+    availableModes: ["mixed", "speaking", "listening", "reading", "writing", "pronunciation", "communication", "grammar", "vocabulary"]
   });
 
   // First-time users should enter through the core practice loop.
@@ -297,7 +297,10 @@ function renderPracticeHome() {
   const focusModes = [
     ["speaking", "Speaking", "Hablar", "◉"],
     ["listening", "Listening", "Escuchar", "◖"],
+    ["reading", "Reading", "Leer", "▤"],
     ["writing", "Writing", "Escribir", "✎"],
+    ["pronunciation", "Pronunciation", "Pronunciación", "◖"],
+    ["communication", "Communication", "Comunicación", "↔"],
     ["grammar", "Grammar", "Gramática", "A"],
     ["vocabulary", "Vocabulary", "Vocabulario", "Aa"]
   ];
@@ -988,12 +991,19 @@ function prepareSessionForPractice() {
 }
 
 function startPractice(mode) {
-  const activities = selectMicroActivities(microLibrary, {
-    canDoId: session.target.canDoId,
-    mode,
-    limit: 6,
-    profile
-  }).map((activity) => ({
+  const options = { mode, limit: 6, profile };
+  let selectedActivities = selectMicroActivities(microLibrary, {
+    ...options,
+    canDoId: session.target.canDoId
+  });
+
+  // A focused skill may use a related Can-Do rather than the current session target.
+  // Do not show an empty-mode error when the library has valid practice for that skill.
+  if (!selectedActivities.length && ["reading", "pronunciation", "communication"].includes(mode)) {
+    selectedActivities = selectMicroActivities(microLibrary, options);
+  }
+
+  const activities = selectedActivities.map((activity) => ({
     ...activity,
     // Learning links tailor the activity; they never limit the correction engine.
     linguisticLinks: getLinguisticResourcesForActivity(activity),
