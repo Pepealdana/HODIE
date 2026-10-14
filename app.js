@@ -401,6 +401,19 @@ function renderPracticeHome() {
         </div>
       </details>
 
+      <section class="activity-catalog card" id="activityCatalog" aria-label="Activity catalogue">
+        <p class="kicker">ACTIVITY LIBRARY · A1–B1</p>
+        <h3>Explore activities</h3>
+        <p class="spanish">Explora las actividades disponibles y abre una directamente.</p>
+        <div class="catalog-filters">
+          <label for="catalogLevel">Level / Nivel</label>
+          <select id="catalogLevel"><option value="A1">A1 · Foundation</option><option value="A2" selected>A2 · Elementary</option><option value="B1">B1 · Intermediate</option></select>
+          <label for="catalogSkill">Skill / Habilidad</label>
+          <select id="catalogSkill"><option value="all">All skills · Todas</option><option value="reading">Reading · Leer</option><option value="pronunciation">Pronunciation · Pronunciación</option><option value="communication">Communication · Comunicación</option><option value="speaking">Speaking · Hablar</option><option value="listening">Listening · Escuchar</option><option value="writing">Writing · Escribir</option><option value="grammar">Grammar · Gramática</option><option value="vocabulary">Vocabulary · Vocabulario</option></select>
+        </div>
+        <p id="catalogSummary" class="catalog-summary" aria-live="polite"></p>
+        <div id="catalogResults" class="catalog-results"></div>
+      </section>
       <details class="choice-disclosure advanced-choices" id="experienceChoices">
         <summary>Explore conversations and simulations</summary>
         <div class="experience-sections">
@@ -505,6 +518,9 @@ function renderPracticeHome() {
   document.querySelectorAll("[data-mode]").forEach((button) => {
     button.addEventListener("click", () => startPractice(button.dataset.mode));
   });
+  document.querySelector("#catalogLevel")?.addEventListener("change", renderActivityCatalog);
+  document.querySelector("#catalogSkill")?.addEventListener("change", renderActivityCatalog);
+  renderActivityCatalog();
   document.querySelectorAll("[data-experience]").forEach((button) => {
     button.addEventListener("click", () => startExperience(button.dataset.experience));
   });
@@ -990,12 +1006,38 @@ function prepareSessionForPractice() {
   throw new Error(`This session cannot start from state: ${session.state}`);
 }
 
-function startPractice(mode) {
+function renderActivityCatalog() {
+  const results = document.querySelector("#catalogResults");
+  const summary = document.querySelector("#catalogSummary");
+  const level = document.querySelector("#catalogLevel")?.value || "A2";
+  const skill = document.querySelector("#catalogSkill")?.value || "all";
+  if (!results || !microLibrary?.activities) return;
+  const names = { reading:"Reading", pronunciation:"Pronunciation", communication:"Communication", speaking:"Speaking", listening:"Listening", writing:"Writing", grammar:"Grammar", vocabulary:"Vocabulary" };
+  const classify = (a) => {
+    if (a.skill === "pronunciation" || a.resources?.includes("pronunciation") || a.languageResource === "pronunciation") return "pronunciation";
+    if (a.skill === "communication") return "communication";
+    if (a.skill === "reading") return "reading";
+    if (a.skill === "listening" || a.type === "listening") return "listening";
+    if (a.skill === "writing" || String(a.canDoId || "").startsWith("WR-")) return "writing";
+    if (a.skill === "speaking" || a.type === "speak" || String(a.canDoId || "").startsWith("SP-")) return "speaking";
+    if (a.resources?.includes("vocabulary") || a.languageResource === "vocabulary" || String(a.canDoId || "").startsWith("VO-")) return "vocabulary";
+    return "grammar";
+  };
+  const matching = microLibrary.activities.filter((a) => a.level === level && (skill === "all" || classify(a) === skill));
+  summary.textContent = matching.length + " activities available · " + level + " · " + (skill === "all" ? "all skills" : names[skill]);
+  results.innerHTML = matching.map((a) => {
+    const category = classify(a);
+    const title = a.title || a.titleEn || a.prompt || a.id;
+    const spanish = a.titleEs || a.promptEs || "";
+    return '<article class="catalog-item"><div class="catalog-item-copy"><span class="catalog-meta">' + escapeHtml(level + " · " + names[category] + " · " + String(a.type || "practice").replaceAll("-", " ")) + '</span><strong>' + escapeHtml(title) + '</strong>' + (spanish ? '<span class="spanish">' + escapeHtml(spanish) + '</span>' : "") + '</div><button class="secondary compact" type="button" data-catalog-activity="' + escapeHtml(a.id) + '" data-catalog-mode="' + escapeHtml(category) + '">Practicar →</button></article>';
+  }).join("");
+  results.querySelectorAll("[data-catalog-activity]").forEach((button) => button.addEventListener("click", () => startPractice(button.dataset.catalogMode, button.dataset.catalogActivity)));
+}
+function startPractice(mode, activityId = null) {
   const options = { mode, limit: 6, profile };
-  let selectedActivities = selectMicroActivities(microLibrary, {
-    ...options,
-    canDoId: session.target.canDoId
-  });
+  let selectedActivities = activityId
+    ? microLibrary.activities.filter((activity) => activity.id === activityId)
+    : selectMicroActivities(microLibrary, { ...options, canDoId: session.target.canDoId });
 
   // A focused skill may use a related Can-Do rather than the current session target.
   // Do not show an empty-mode error when the library has valid practice for that skill.
