@@ -38,3 +38,12 @@ assert.match(app, /Add the missing key word/);
 assert.match(app, /Revise answer/);
 assert.match(app, /activity\.pronunciationHint/);
 console.log("HODIE learning-support and translation opt-out contract: PASS");
+
+assert.match(app, /id="activityCatalog"/);
+assert.match(app, /id="catalogLevel"/);
+assert.match(app, /id="catalogSkill"/);
+assert.match(app, /function renderActivityCatalog\(\)/);
+assert.match(app, /data-catalog-activity/);
+assert.match(app, /function startPractice\(mode, activityId = null\)/);
+assert.match(css, /\.catalog-results/);
+console.log("HODIE visible activity catalogue contract: PASS");
