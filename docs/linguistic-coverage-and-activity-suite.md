@@ -50,3 +50,8 @@ Communicative functions connect grammar structures, vocabulary domains, Can-Do g
 ## Validation
 
 Run `npm test`. The suite builds the linguistic catalog, tests the deterministic correction engine, validates the content model and activity types, checks knowledge links, enforces A1/A2/B1 spiral coverage for Reading, pronunciation and Communication, verifies that review can retrieve A1 tasks at later stages, and keeps draft rules inactive for automatic correction.
+
+
+## Visible activity catalogue integration
+
+The practice home exposes a filterable catalogue for A1, A2 and B1 micro-practice with skill filters. Each result launches its selected activity by ID through the existing practice/evaluation/feedback/retry flow. Counts represent runnable micro-activities, not all full-content experiences or complete coverage of every Can-Do. Manual desktop and mobile verification is still required after deployment.
