@@ -890,3 +890,17 @@ html[data-theme="dark"] body { background: #101827; }
     overflow-y: auto;
   }
 }
+
+
+/* Responsive visible activity catalogue */
+.activity-catalog { margin-top: 1.25rem; }
+.catalog-filters { display: grid; grid-template-columns: 1fr; gap: .4rem; margin: 1rem 0; }
+.catalog-filters label { font-size: .86rem; font-weight: 700; }
+.catalog-filters select { width: 100%; min-height: 44px; border: 1px solid var(--border, #465064); border-radius: 12px; padding: .65rem .75rem; background: var(--surface, #172033); color: inherit; font: inherit; }
+.catalog-summary { font-size: .9rem; font-weight: 700; margin: .8rem 0; }
+.catalog-results { display: grid; gap: .7rem; }
+.catalog-item { display: flex; align-items: center; justify-content: space-between; gap: .8rem; padding: .85rem; border: 1px solid var(--border, #465064); border-radius: 14px; }
+.catalog-item-copy { display: grid; gap: .28rem; min-width: 0; }
+.catalog-item-copy strong { overflow-wrap: anywhere; }
+.catalog-meta { font-size: .76rem; text-transform: uppercase; letter-spacing: .04em; opacity: .78; }
+@media (max-width: 520px) { .catalog-item { align-items: flex-start; flex-direction: column; } .catalog-item .secondary { width: 100%; min-height: 44px; } }
