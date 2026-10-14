@@ -1041,7 +1041,7 @@ function startPractice(mode, activityId = null) {
 
   // A focused skill may use a related Can-Do rather than the current session target.
   // Do not show an empty-mode error when the library has valid practice for that skill.
-  if (selectedActivities.length < 2 && ["reading", "pronunciation", "communication"].includes(mode)) {
+  if (!activityId && selectedActivities.length < 2 && ["reading", "pronunciation", "communication"].includes(mode)) {
     selectedActivities = selectMicroActivities(microLibrary, options);
   }
 
