@@ -526,6 +526,208 @@ function renderPracticeHome() {
   });
   document.querySelector("#resumePracticeButton")?.addEventListener("click", resumeSavedPractice);
   document.querySelector("#resumeExperienceButton")?.addEventListener("click", renderExperience);
+  applyConversationFirstHome(level, targetActivity, statement);
+}
+
+let selectedHomeSkill = "speaking";
+let selectedConversationMode = "conversation";
+
+function getActivitySkill(activity) {
+  if (activity.skill === "pronunciation" || activity.resources?.includes("pronunciation") || activity.languageResource === "pronunciation") return "pronunciation";
+  if (activity.skill === "communication") return "communication";
+  if (activity.skill === "reading") return "reading";
+  if (activity.skill === "listening" || activity.type === "listening") return "listening";
+  if (activity.skill === "writing" || String(activity.canDoId || "").startsWith("WR-")) return "writing";
+  if (activity.skill === "speaking" || activity.type === "speak" || String(activity.canDoId || "").startsWith("SP-")) return "speaking";
+  if (activity.resources?.includes("vocabulary") || activity.languageResource === "vocabulary" || String(activity.canDoId || "").startsWith("VO-")) return "vocabulary";
+  return "grammar";
+}
+
+function changeHomeLevel(level) {
+  if (!["A1", "A2", "B1"].includes(level) || level === session?.target?.level) return;
+  try {
+    session = createSession(matrix, library, profile, {
+      levels: [level],
+      contextTerms: ["technology", "work", "teacher", "programming"],
+      sessionId: "session-" + Date.now()
+    });
+    saveSession();
+    clearSavedPracticeState();
+    practice = null;
+    levelBadge.textContent = session.target.level;
+    renderPracticeHome();
+  } catch (error) {
+    console.error("HODIE could not change the learning level.", error);
+    renderError(new Error("No learning target is available for " + level + " yet. Your current level has not changed."));
+  }
+}
+
+function startComposerExperience(prompt) {
+  const query = String(prompt || "").trim();
+  const level = session?.target?.level || "A2";
+  const conversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
+  const simulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
+  let candidates = selectedConversationMode === "interview" || selectedConversationMode === "roleplay" ? simulations : conversations;
+  if (selectedConversationMode === "interview") {
+    candidates = simulations.slice().sort((a, b) => Number(/interview/i.test(b.title + " " + (b.role || ""))) - Number(/interview/i.test(a.title + " " + (a.role || ""))));
+  } else if (selectedConversationMode === "discussion") {
+    candidates = conversations.slice().sort((a, b) => Number(/discussion|opinion|debate/i.test(b.title + " " + b.description)) - Number(/discussion|opinion|debate/i.test(a.title + " " + a.description)));
+  }
+  if (!candidates.length) {
+    renderError(new Error("No experience is available for this level and conversation type yet."));
+    return;
+  }
+  const terms = query.toLowerCase().split(/\W+/).filter((term) => term.length > 3);
+  const scored = candidates.map((item) => {
+    const searchable = (item.title + " " + item.description + " " + (item.role || "") + " " + (item.contexts || []).join(" ")).toLowerCase();
+    return { item, score: terms.reduce((score, term) => score + (searchable.includes(term) ? 1 : 0), 0) };
+  }).sort((a, b) => b.score - a.score);
+  startExperience(scored[0].item.id, query);
+}
+
+function applyConversationFirstHome(level, targetActivity, statement) {
+  const home = document.querySelector(".learning-home");
+  if (!home || document.querySelector("#conversationFirstHome")) return;
+  const isBeginner = level === "A1" || level === "A2";
+  const skills = [
+    ["speaking", "Speaking", "Hablar", "◉"],
+    ["listening", "Listening", "Escuchar", "◖"],
+    ["reading", "Reading", "Leer", "▤"],
+    ["writing", "Writing", "Escribir", "✎"],
+    ["pronunciation", "Pronunciation", "Pronunciación", "◖"],
+    ["communication", "Communication", "Comunicación", "↔"],
+    ["grammar", "Grammar", "Gramática", "A"],
+    ["vocabulary", "Vocabulary", "Vocabulario", "Aa"]
+  ];
+  const modeLabels = { conversation: "Conversation", interview: "Interview", roleplay: "Role-play", discussion: "Discussion" };
+  if (!skills.some((item) => item[0] === selectedHomeSkill)) selectedHomeSkill = "speaking";
+
+  home.insertAdjacentHTML("afterbegin", '<section id="conversationFirstHome" class="conversation-first-home" aria-label="Learning home">' +
+    '<section class="level-picker" aria-label="Choose your English level">' +
+      '<div class="level-picker-heading"><span class="kicker">' + (isBeginner ? "Tu nivel de inglés" : "Your English level") + '</span><span class="level-picker-note">' + (isBeginner ? "Puedes cambiarlo cuando quieras." : "Change it whenever you need.") + '</span></div>' +
+      '<div class="level-options" role="group" aria-label="English level">' +
+        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" ? 'disabled aria-disabled="true" title="B2 will unlock after its learning content is validated."' : 'aria-pressed="' + String(item === level) + '"') + '>' + item + (item === "B2" ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") +
+      '</div>' +
+    '</section>' +
+    '<section class="conversation-start" aria-labelledby="conversationStartTitle">' +
+      '<div class="conversation-heading"><p class="kicker">HODIE · ' + escapeHtml(level) + '</p><h2 id="conversationStartTitle">' + (isBeginner ? "¿Qué quieres practicar hoy?" : "What would you like to practise today?") + '</h2>' +
+      (isBeginner ? '<p class="spanish">Inicia una conversación o practica una situación en inglés.</p>' : '<p>Start a conversation or practise a real-life situation.</p>') + '</div>' +
+      '<form id="conversationComposer" class="conversation-composer">' +
+        '<label class="visually-hidden" for="conversationPrompt">Conversation topic or goal</label>' +
+        '<textarea id="conversationPrompt" rows="2" maxlength="500" placeholder="' + (isBeginner ? "Quiero practicar cómo hablar de mi trabajo..." : "I want to practise talking about my work...") + '"></textarea>' +
+        '<div class="composer-toolbar"><div class="composer-mode-wrap">' +
+          '<button class="composer-plus" id="composerModeToggle" type="button" aria-expanded="false" aria-controls="composerModeMenu" aria-label="Choose conversation type">+</button>' +
+          '<span class="composer-mode-label" id="composerModeLabel">' + modeLabels[selectedConversationMode] + '</span>' +
+          '<div class="composer-mode-menu" id="composerModeMenu" hidden>' +
+            Object.entries(modeLabels).map(([value, label]) => '<button type="button" data-conversation-mode="' + value + '" class="' + (value === selectedConversationMode ? "is-selected" : "") + '">' + label + '<span>' + (value === "conversation" ? "Guided conversation" : value === "interview" ? "Interview practice" : value === "roleplay" ? "Practise a real situation" : "Share and defend an opinion") + '</span></button>').join("") +
+          '</div></div><button class="composer-send" type="submit" aria-label="Start conversation">↑</button></div>' +
+      '</form><p class="composer-hint">' + (isBeginner ? "También puedes elegir una habilidad y practicar con actividades guiadas." : "Choose a skill below for focused practice.") + '</p>' +
+    '</section>' +
+    '<section class="skill-picker" aria-labelledby="skillPickerTitle"><div class="section-heading skill-picker-heading"><div><h3 id="skillPickerTitle">' + (isBeginner ? "Elige una habilidad" : "Choose a skill") + '</h3>' +
+      (isBeginner ? '<p class="spanish">Toca una opción para ver una actividad recomendada.</p>' : '<p>Select a skill to see a recommended activity.</p>') + '</div>' +
+      '<button class="text-link" id="openCatalogButton" type="button">' + (isBeginner ? "Todas las actividades" : "All activities") + ' ↗</button></div>' +
+      '<div class="skill-grid">' + skills.map(([value, en, es, icon]) => '<button class="skill-tile ' + (value === selectedHomeSkill ? "is-selected" : "") + '" data-home-skill="' + value + '" type="button" aria-pressed="' + String(value === selectedHomeSkill) + '"><span class="skill-icon" aria-hidden="true">' + icon + '</span><span class="skill-label">' + en + '</span>' + (isBeginner ? '<span class="skill-label-es">' + es + '</span>' : "") + '</button>').join("") + '</div>' +
+    '</section><section class="selected-skill-card" id="selectedSkillCard" aria-live="polite"></section>' +
+    '<div class="redesign-resume-slot"></div>' +
+  '</section>');
+
+  home.querySelectorAll(".home-intro, .recommended-primary, .quick-choices, .quick-principle").forEach((node) => node.hidden = true);
+
+  const resumeSlot = home.querySelector(".redesign-resume-slot");
+  const savedPractice = home.querySelector(".resume-practice");
+  const savedExperience = home.querySelector(".resume-experience");
+  if (savedPractice) resumeSlot.append(savedPractice);
+  if (savedExperience) resumeSlot.append(savedExperience);
+
+  const focusDisclosure = home.querySelector(".choice-disclosure:not(.advanced-choices)");
+  if (focusDisclosure) {
+    focusDisclosure.classList.add("focus-disclosure");
+    const summary = focusDisclosure.querySelector("summary");
+    if (summary) summary.textContent = isBeginner ? "Focus en una habilidad o recurso" : "Focus on a skill or resource";
+  }
+
+  const catalog = home.querySelector("#activityCatalog");
+  if (catalog) {
+    const details = document.createElement("details");
+    details.className = "choice-disclosure catalog-disclosure";
+    details.id = "activityCatalogDisclosure";
+    const summary = document.createElement("summary");
+    summary.textContent = isBeginner ? "Explorar todas las actividades" : "Explore all activities";
+    catalog.parentNode.insertBefore(details, catalog);
+    details.append(summary, catalog);
+    catalog.classList.remove("card");
+    catalog.hidden = false;
+  }
+  const advanced = home.querySelector("#experienceChoices");
+  if (advanced) {
+    const summary = advanced.querySelector("summary");
+    if (summary) summary.textContent = isBeginner ? "Conversaciones y simulaciones" : "Conversations and simulations";
+  }
+
+  const more = document.createElement("details");
+  more.className = "choice-disclosure extra-learning-disclosure";
+  more.innerHTML = '<summary>' + (isBeginner ? "Mi progreso y otros recursos" : "My progress and more resources") + '</summary>';
+  [home.querySelector(".integrated-unit-card"), home.querySelector(".shared-knowledge-summary"), home.querySelector(".learning-evidence-summary"), home.querySelector(".home-progress")].forEach((node) => { if (node) more.append(node); });
+  home.append(more);
+
+  function updateSelectedSkill() {
+    const selected = skills.find((item) => item[0] === selectedHomeSkill) || skills[0];
+    const activity = microLibrary.activities.find((item) => item.level === level && getActivitySkill(item) === selectedHomeSkill);
+    const title = activity?.title || activity?.titleEn || activity?.prompt || (isBeginner ? "Explora esta habilidad" : "Explore this skill");
+    const translated = activity?.titleEs || activity?.promptEs || (isBeginner ? "Practica " + selected[2].toLowerCase() + " con una actividad guiada." : "");
+    const count = microLibrary.activities.filter((item) => item.level === level && getActivitySkill(item) === selectedHomeSkill).length;
+    const card = document.querySelector("#selectedSkillCard");
+    card.innerHTML = '<div class="selected-skill-copy"><span class="kicker">' + escapeHtml(level + " · " + selected[1]) + '</span><h3>' + escapeHtml(title) + '</h3>' +
+      (isBeginner && translated ? '<p class="spanish">' + escapeHtml(translated) + '</p>' : '') +
+      '<p class="selected-skill-goal">' + escapeHtml(statement) + '</p><div class="selected-skill-links"><span>Can-Do · ' + escapeHtml(session.target.canDoId) + '</span><span>' + count + ' activities</span></div></div>' +
+      '<div class="selected-skill-actions"><button class="primary" id="startSelectedSkillButton" type="button">' + (isBeginner ? "Practicar" : "Practise") + ' →</button><button class="secondary compact" id="browseSelectedSkillButton" type="button">' + (isBeginner ? "Ver actividades" : "Browse activities") + '</button></div>';
+    document.querySelectorAll("[data-home-skill]").forEach((button) => {
+      button.classList.toggle("is-selected", button.dataset.homeSkill === selectedHomeSkill);
+      button.setAttribute("aria-pressed", String(button.dataset.homeSkill === selectedHomeSkill));
+    });
+    document.querySelector("#startSelectedSkillButton")?.addEventListener("click", () => activity ? startPractice(selectedHomeSkill, activity.id) : startPractice(selectedHomeSkill));
+    document.querySelector("#browseSelectedSkillButton")?.addEventListener("click", () => {
+      const disclosure = document.querySelector("#activityCatalogDisclosure");
+      const filter = document.querySelector("#catalogSkill");
+      if (filter) filter.value = selectedHomeSkill;
+      renderActivityCatalog();
+      if (disclosure) disclosure.open = true;
+      disclosure?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+  updateSelectedSkill();
+
+  document.querySelectorAll("[data-home-level]").forEach((button) => button.addEventListener("click", () => changeHomeLevel(button.dataset.homeLevel)));
+  document.querySelectorAll("[data-home-skill]").forEach((button) => button.addEventListener("click", () => {
+    selectedHomeSkill = button.dataset.homeSkill;
+    updateSelectedSkill();
+  }));
+  document.querySelector("#composerModeToggle")?.addEventListener("click", () => {
+    const menu = document.querySelector("#composerModeMenu");
+    const toggle = document.querySelector("#composerModeToggle");
+    if (!menu || !toggle) return;
+    menu.hidden = !menu.hidden;
+    toggle.setAttribute("aria-expanded", String(!menu.hidden));
+  });
+  document.querySelectorAll("[data-conversation-mode]").forEach((button) => button.addEventListener("click", () => {
+    selectedConversationMode = button.dataset.conversationMode;
+    document.querySelector("#composerModeLabel").textContent = modeLabels[selectedConversationMode];
+    document.querySelectorAll("[data-conversation-mode]").forEach((item) => item.classList.toggle("is-selected", item.dataset.conversationMode === selectedConversationMode));
+    document.querySelector("#composerModeMenu").hidden = true;
+    document.querySelector("#composerModeToggle").setAttribute("aria-expanded", "false");
+  }));
+  document.querySelector("#conversationComposer")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    startComposerExperience(document.querySelector("#conversationPrompt")?.value || "");
+  });
+  document.querySelector("#openCatalogButton")?.addEventListener("click", () => {
+    const disclosure = document.querySelector("#activityCatalogDisclosure");
+    if (disclosure) disclosure.open = true;
+    disclosure?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  home.querySelector("#catalogLevel")?.addEventListener("change", renderActivityCatalog);
+  home.querySelector("#catalogSkill")?.addEventListener("change", renderActivityCatalog);
+  home.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => startPractice(button.dataset.mode)));
 }
 
 function startIntegratedUnit() {
@@ -625,7 +827,7 @@ function getSavedExperienceLabel() {
   };
 }
 
-function startExperience(experienceId) {
+function startExperience(experienceId, starterPrompt = "") {
   const experience = getExperience(experienceLibrary, experienceId);
   if (!experience) {
     renderError(new Error("Learning experience not found."));
@@ -641,6 +843,7 @@ function startExperience(experienceId) {
   });
   saveProfile();
   experienceSession = createExperienceSession(experienceLibrary, experienceId);
+  if (starterPrompt) experienceSession.starterPrompt = starterPrompt;
   saveExperienceState();
   renderExperience();
 }
@@ -672,6 +875,7 @@ function renderExperience() {
 
       <div class="experience-context">
         <p class="experience-kind">${escapeHtml(experience.title)}</p>
+        ${experienceSession.starterPrompt ? `<p class="conversation-topic"><strong>Your topic</strong><span>${escapeHtml(experienceSession.starterPrompt)}</span></p>` : ""}
         <h2>${escapeHtml(stage.title)}</h2>
         <p class="spanish">${escapeHtml(stage.titleEs)}</p>
       </div>
