@@ -12,8 +12,10 @@
       "description": "An open-response conversation with a light structure. HODIE does not force a model answer.",
       "descriptionEs": "Una conversación con respuestas abiertas y una estructura ligera. HODIE no obliga a usar una respuesta modelo.",
       "levels": [
+        "A1",
         "A2",
-        "A2+"
+        "A2+",
+        "B1"
       ],
       "contexts": [
         "work",
