@@ -549,6 +549,7 @@ function changeHomeLevel(level) {
     session = createSession(matrix, library, profile, {
       levels: [level],
       contextTerms: ["technology", "work", "teacher", "programming"],
+      allowUnmetPrerequisites: true,
       sessionId: "session-" + Date.now()
     });
     saveSession();
@@ -872,6 +873,12 @@ function renderExperience() {
   }
 
   const stage = experience.stages[experienceSession.index];
+  const learnerLevel = session?.target?.level || "A2";
+  const writingGuide = learnerLevel === "A1"
+    ? { structure: "Greeting + I am... + one simple question.", structureEs: "Saludo + I am... (soy/me llamo...) + una pregunta sencilla. Usa frases cortas.", example: "Hello! My name is Peters. How are you?", exampleEs: "¡Hola! Me llamo Peters. ¿Cómo estás?" }
+    : learnerLevel === "B1"
+      ? { structure: "Main idea + reason (because/although) + a specific example.", structureEs: "Idea principal + razón (because = porque / although = aunque) + un ejemplo concreto. Conecta las ideas y explica por qué.", example: "I enjoy teaching technology because students learn by creating projects. For example, we build simple robots.", exampleEs: "Disfruto enseñar tecnología porque los estudiantes aprenden creando proyectos. Por ejemplo, construimos robots sencillos." }
+      : { structure: "I... + detail + because... / For example,...", structureEs: "Sujeto + verbo + detalle + because (porque) o for example (por ejemplo). Escribe una idea y amplíala.", example: "I teach technology. I enjoy robotics because I can create projects with my students.", exampleEs: "Enseño tecnología. Disfruto la robótica porque puedo crear proyectos con mis estudiantes." };
   app.innerHTML = `
     <section class="card experience-session">
       <div class="practice-nav">
@@ -896,8 +903,14 @@ function renderExperience() {
         <p class="spanish">${escapeHtml(stage.promptEs)}</p>
       </div>
 
+      <section class="conversation-writing-guide" aria-labelledby="writingGuideTitle">
+        <h3 id="writingGuideTitle">Build your answer · Construye tu respuesta</h3>
+        <p class="guide-structure"><strong>English structure:</strong> ${escapeHtml(writingGuide.structure)}</p>
+        <p class="spanish"><strong>Estructura en español:</strong> ${escapeHtml(writingGuide.structureEs)}</p>
+        <div class="guide-example"><p><strong>Example · Ejemplo:</strong> ${escapeHtml(writingGuide.example)}</p><p class="spanish">${escapeHtml(writingGuide.exampleEs)}</p></div>
+      </section>
       <details class="learning-hints">
-        <summary>Need help answering? <span class="spanish">¿Necesitas ayuda?</span></summary>
+        <summary>Need more help? <span class="spanish">¿Necesitas más ayuda?</span></summary>
         <div class="hint-content">
           <p><strong>Sentence starters · Puedes comenzar así</strong></p>
           <div class="hint-chips"><span>I am...</span><span>I work...</span><span>I teach...</span><span>I have...</span><span>I like...</span><span>I would like to...</span></div>
@@ -912,9 +925,14 @@ function renderExperience() {
           <button class="primary" id="experienceSpeakButton" type="button">🎙 Start speaking</button>
           <button class="secondary compact" id="experienceStopButton" type="button" disabled>Stop recording</button>
         </div>
-        <textarea id="experienceResponse" class="production-input" placeholder="You can type or edit your answer here..."></textarea>
-        <button class="secondary compact" id="experienceCheckButton" type="button">Send answer</button>
-        <p class="spanish experience-note">This is open practice. HODIE checks useful signals and gives feedback; it does not require one exact answer.</p>
+        <label class="response-label" for="experienceResponse">Your answer in English · Tu respuesta en inglés</label>
+        <textarea id="experienceResponse" class="production-input" placeholder="Write a short answer in English... / Escribe una respuesta corta en inglés..."></textarea>
+        <div id="liveWritingCoach" class="live-writing-coach" aria-live="polite">
+          <p>As you write, HODIE will show possible corrections and what your answer may still need.</p>
+          <p class="spanish">Mientras escribes, HODIE mostrará posibles correcciones y lo que podría faltar en tu respuesta.</p>
+        </div>
+        <button class="secondary compact" id="experienceCheckButton" type="button">Check answer · Revisar respuesta</button>
+        <p class="spanish experience-note">Feedback is rule-based and partial. Review the suggestion before accepting it.</p>
       </div>
 
       <div id="experienceFeedback" aria-live="polite"></div>
@@ -931,6 +949,8 @@ function renderExperience() {
   });
 
   const submit = (response) => handleExperienceResponse(experience, stage, response);
+  const responseInput = document.querySelector("#experienceResponse");
+  responseInput?.addEventListener("input", () => renderLiveWritingCoach(experience, stage, responseInput.value));
   document.querySelector("#experienceCheckButton").addEventListener("click", () => {
     submit(document.querySelector("#experienceResponse").value.trim());
   });
@@ -983,6 +1003,20 @@ function applyLinguisticReview(response, result = {}, skill = "writing") {
   }
   const corrections = review.errors.map(error => ({ ...error, id: `LING-${error.ruleId}`, correctedText: review.correctedText, source: "linguistic-catalog" }));
   return { ...result, linguisticLinks, contextualSuggestions, evaluationStatus: review.evaluationStatus, evaluationScope: review.evaluationScope, evaluationNote: review.evaluationNote, evaluationNoteEs: review.evaluationNoteEs, errors: [...(Array.isArray(result.errors) ? result.errors : []), ...corrections], correctedText: review.correctedText, linguisticReview: { schemaVersion: review.schemaVersion, status: "issues-detected", ruleIds: review.errors.map(error => error.ruleId), note: review.evaluationNote, noteEs: review.evaluationNoteEs } };
+}
+
+function renderLiveWritingCoach(experience, stage, response) {
+  const output = document.querySelector("#liveWritingCoach");
+  if (!output) return;
+  const text = String(response || "").trim();
+  if (text.length < 3) { output.innerHTML = '<p>Write a little more to see guidance.</p><p class="spanish">Escribe un poco más para ver sugerencias.</p>'; return; }
+  const languageReview = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 2 });
+  const turnReview = evaluateExperienceTurn(experience, stage, text);
+  const corrections = languageReview.errors.slice(0, 2), missing = (turnReview.missing || []).slice(0, 2), sections = [];
+  if (corrections.length) sections.push('<div class="live-coach-section"><strong>Possible correction · Posible corrección</strong><p class="live-coach-comparison"><span>' + escapeHtml(text) + '</span><span aria-hidden="true"> → </span><strong>' + escapeHtml(languageReview.correctedText) + '</strong></p>' + corrections.map(item => '<p>' + escapeHtml(item.message || 'Review this language pattern.') + '</p><p class="spanish">' + escapeHtml(item.messageEs || 'Revisa este patrón de inglés.') + '</p>').join('') + '</div>');
+  if (missing.length) sections.push('<div class="live-coach-section"><strong>What to add · Qué hace falta</strong>' + missing.map(item => '<p>' + escapeHtml(item.label || item.id) + '</p><p class="spanish">' + escapeHtml(item.missingMessageEs || 'Incluye esta información para responder mejor a la pregunta.') + '</p>').join('') + '</div>');
+  if (!sections.length) sections.push('<div class="live-coach-section"><strong>No known issue detected yet · No se detecta un problema conocido por ahora</strong><p>Your sentence may still contain errors that HODIE does not recognize.</p><p class="spanish">Tu oración aún podría tener errores que HODIE no reconoce. Esta revisión no garantiza que todo esté correcto.</p></div>');
+  output.innerHTML = sections.join('');
 }
 
 function handleExperienceResponse(experience, stage, response) {
