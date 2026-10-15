@@ -83,4 +83,7 @@ console.log("HODIE PWA contract: PASS");
 // Cache version assertions must track service-worker invalidations.
 
 assert.match(worker, /hodie-shell-v32/);
+assert.doesNotMatch(worker, /hodie-shell-v32/);
+
+assert.match(worker, /hodie-shell-v32/);
 assert.doesNotMatch(worker, /hodie-shell-v31/);
