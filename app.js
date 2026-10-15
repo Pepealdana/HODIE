@@ -589,6 +589,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
   const home = document.querySelector(".learning-home");
   if (!home || document.querySelector("#conversationFirstHome")) return;
   const isBeginner = level === "A1" || level === "A2";
+  home.classList.toggle("english-only-level", !isBeginner);
   const skills = [
     ["speaking", "Speaking", "Hablar", "◉"],
     ["listening", "Listening", "Escuchar", "◖"],
@@ -1236,8 +1237,9 @@ function renderActivityCatalog() {
     const goal = goals.get(a.canDoId);
     const relatedGoals = (goal?.recovery || []).map((id) => goals.get(id)).filter(Boolean);
     const relatedActivities = relatedGoals.flatMap((item) => byGoal.get(item.id) || []);
-    const relations = relatedGoals.length ? '<div class="catalog-relations"><strong>Builds on / Recupera:</strong>' + relatedGoals.map((item) => '<span class="catalog-relation">' + escapeHtml(item.level + " · " + (item.spanish || item.canDo || item.id)) + '</span>').join("") + '</div>' : '<div class="catalog-relations"><strong>Learning goal / Objetivo:</strong> ' + escapeHtml(goal?.canDo || a.canDoId || "Practice") + '</div>';
-    const links = relatedActivities.length ? '<div class="catalog-linked-activities"><strong>Related activities / Actividades relacionadas:</strong>' + relatedActivities.slice(0, 3).map((item) => '<button class="catalog-related-link" type="button" data-catalog-activity="' + escapeHtml(item.id) + '" data-catalog-mode="' + escapeHtml(classify(item)) + '">' + escapeHtml(item.level + " · " + (item.title || item.titleEs || item.id)) + '</button>').join("") + '</div>' : "";
+    const bilingual = level === "A1" || level === "A2";
+    const relations = relatedGoals.length ? '<div class="catalog-relations"><strong>' + (bilingual ? "Builds on / Recupera:" : "Builds on:") + '</strong>' + relatedGoals.map((item) => '<span class="catalog-relation">' + escapeHtml(item.level + " · " + (bilingual ? (item.spanish || item.canDo || item.id) : (item.canDo || item.id))) + '</span>').join("") + '</div>' : '<div class="catalog-relations"><strong>' + (bilingual ? "Learning goal / Objetivo:" : "Learning goal:") + '</strong> ' + escapeHtml(goal?.canDo || a.canDoId || "Practice") + '</div>';
+    const links = relatedActivities.length ? '<div class="catalog-linked-activities"><strong>' + (bilingual ? "Related activities / Actividades relacionadas:" : "Related activities:") + '</strong>' + relatedActivities.slice(0, 3).map((item) => '<button class="catalog-related-link" type="button" data-catalog-activity="' + escapeHtml(item.id) + '" data-catalog-mode="' + escapeHtml(classify(item)) + '">' + escapeHtml(item.level + " · " + (bilingual ? (item.title || item.titleEs || item.id) : (item.title || item.id))) + '</button>').join("") + '</div>' : "";
     return '<article class="catalog-item"><div class="catalog-item-copy"><span class="catalog-meta">' + escapeHtml(level + " · " + names[category] + " · " + String(a.type || "practice").replaceAll("-", " ")) + '</span><strong>' + escapeHtml(title) + '</strong>' + (spanish ? '<span class="spanish">' + escapeHtml(spanish) + '</span>' : "") + relations + links + '</div><button class="secondary compact" type="button" data-catalog-activity="' + escapeHtml(a.id) + '" data-catalog-mode="' + escapeHtml(category) + '">Practicar →</button></article>';
   }).join("");
   results.querySelectorAll("[data-catalog-activity]").forEach((button) => button.addEventListener("click", () => startPractice(button.dataset.catalogMode, button.dataset.catalogActivity)));
