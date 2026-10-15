@@ -588,6 +588,7 @@ function startComposerExperience(prompt) {
 function applyConversationFirstHome(level, targetActivity, statement) {
   const home = document.querySelector(".learning-home");
   if (!home || document.querySelector("#conversationFirstHome")) return;
+  home.classList.add("redesigned-home");
   const isBeginner = level === "A1" || level === "A2";
   home.classList.toggle("english-only-level", !isBeginner);
   const skills = [
