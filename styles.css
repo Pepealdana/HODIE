@@ -1072,3 +1072,5 @@ html[data-theme="dark"] body { background: #101827; }
   .skill-tile .skill-label { text-align: left; }
   .skill-label-es { display: none; }
 }
+
+[data-theme] .learning-home.english-only-level .spanish { display: none !important; }
