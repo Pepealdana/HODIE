@@ -725,9 +725,6 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     if (disclosure) disclosure.open = true;
     disclosure?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
-  home.querySelector("#catalogLevel")?.addEventListener("change", renderActivityCatalog);
-  home.querySelector("#catalogSkill")?.addEventListener("change", renderActivityCatalog);
-  home.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => startPractice(button.dataset.mode)));
 }
 
 function startIntegratedUnit() {
