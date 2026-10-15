@@ -602,6 +602,15 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     ["vocabulary", "Vocabulary", "Vocabulario", "Aa"]
   ];
   const modeLabels = { conversation: "Conversation", interview: "Interview", roleplay: "Role-play", discussion: "Discussion" };
+  const availableConversations = selectExperiences(experienceLibrary, { kind: "conversation", level });
+  const availableSimulations = selectExperiences(experienceLibrary, { kind: "simulation", level });
+  const modeAvailable = {
+    conversation: availableConversations.length > 0,
+    interview: availableSimulations.some((item) => /interview/i.test(item.title + " " + (item.role || ""))),
+    roleplay: availableSimulations.length > 0,
+    discussion: availableConversations.length > 0
+  };
+  if (!modeAvailable[selectedConversationMode]) selectedConversationMode = "conversation";
   if (!skills.some((item) => item[0] === selectedHomeSkill)) selectedHomeSkill = "speaking";
 
   home.insertAdjacentHTML("afterbegin", '<section id="conversationFirstHome" class="conversation-first-home" aria-label="Learning home">' +
@@ -621,7 +630,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
           '<button class="composer-plus" id="composerModeToggle" type="button" aria-expanded="false" aria-controls="composerModeMenu" aria-label="Choose conversation type">+</button>' +
           '<span class="composer-mode-label" id="composerModeLabel">' + modeLabels[selectedConversationMode] + '</span>' +
           '<div class="composer-mode-menu" id="composerModeMenu" hidden>' +
-            Object.entries(modeLabels).map(([value, label]) => '<button type="button" data-conversation-mode="' + value + '" class="' + (value === selectedConversationMode ? "is-selected" : "") + '">' + label + '<span>' + (value === "conversation" ? "Guided conversation" : value === "interview" ? "Interview practice" : value === "roleplay" ? "Practise a real situation" : "Share and defend an opinion") + '</span></button>').join("") +
+            Object.entries(modeLabels).map(([value, label]) => '<button type="button" data-conversation-mode="' + value + '" ' + (modeAvailable[value] ? "" : "disabled") + ' class="' + (value === selectedConversationMode ? "is-selected" : "") + '">' + label + '<span>' + (value === "conversation" ? "Guided conversation" : value === "interview" ? "Interview practice" : value === "roleplay" ? "Practise a real situation" : "Guided topic discussion") + '</span></button>').join("") +
           '</div></div><button class="composer-send" type="submit" aria-label="Start conversation">↑</button></div>' +
       '</form><p class="composer-hint">' + (isBeginner ? "También puedes elegir una habilidad y practicar con actividades guiadas." : "Choose a skill below for focused practice.") + '</p>' +
     '</section>' +

@@ -27,6 +27,9 @@ assert.equal(conversation.mode, "guided-open");
 const simulations = selectExperiences(library, { kind: "simulation" });
 assert.equal(simulations.length, 3);
 assert.ok(selectExperiences(library, { kind: "conversation" }).length >= 1);
+assert.equal(selectExperiences(library, { kind: "conversation", level: "A1" }).some((item) => item.id === "EXP-CONV-FREE-A2-01"), true);
+assert.equal(selectExperiences(library, { kind: "conversation", level: "B1" }).some((item) => item.id === "EXP-CONV-FREE-A2-01"), true);
+assert.equal(selectExperiences(library, { kind: "simulation", level: "A1" }).length, 0);
 
 let session = createExperienceSession(library, conversation.id, { now: "2026-10-08T00:00:00.000Z" });
 assert.equal(session.index, 0);
