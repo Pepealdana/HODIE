@@ -30,7 +30,7 @@ assert.match(app, /function applyConversationFirstHome\(level, targetActivity, s
 assert.match(app, /id="conversationComposer"/);
 assert.match(app, /data-home-level/);
 assert.match(app, /data-home-skill/);
-assert.match(app, /id="activityCatalogDisclosure"/);
+assert.match(app, /details\.id = "activityCatalogDisclosure"/);
 assert.match(app, /experienceSession\.starterPrompt/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
