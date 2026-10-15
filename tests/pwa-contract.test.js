@@ -27,7 +27,7 @@ assert.ok(manifest.icons.every((icon) => icon.type === "image/png"));
 
 assert.match(worker, /skipWaiting/);
 assert.match(worker, /clients\.claim/);
-assert.match(worker, /hodie-shell-v34/);
+assert.match(worker, /hodie-shell-v35/);
 assert.match(worker, /assets\/brand\/hodie-logo\.png/);
 assert.match(worker, /assets\/brand\/hodie-logo-dark\.png/);
 assert.match(worker, /assets\/icons\/icon-light-512\.png/);
@@ -82,8 +82,8 @@ assert.equal(fs.existsSync(path.join(root, "assets/icons/icon-light-512.png")), 
 console.log("HODIE PWA contract: PASS");
 // Cache version assertions must track service-worker invalidations.
 
-assert.match(worker, /hodie-shell-v34/);
-assert.doesNotMatch(worker, /hodie-shell-v33/);
+assert.match(worker, /hodie-shell-v35/);
+assert.doesNotMatch(worker, /hodie-shell-v34/);
 
-assert.match(worker, /hodie-shell-v34/);
-assert.doesNotMatch(worker, /hodie-shell-v33/);
+assert.match(worker, /hodie-shell-v35/);
+assert.doesNotMatch(worker, /hodie-shell-v34/);

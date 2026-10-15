@@ -25,13 +25,18 @@ assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v34/);
+assert.match(worker, /hodie-shell-v35/);
 assert.match(app, /function applyConversationFirstHome\(level, targetActivity, statement\)/);
 assert.match(app, /id="conversationComposer"/);
 assert.match(app, /data-home-level/);
 assert.match(app, /data-home-skill/);
 assert.match(app, /details\.id = "activityCatalogDisclosure"/);
 assert.match(app, /experienceSession\.starterPrompt/);
+assert.match(app, /function renderLiveWritingCoach\(experience, stage, response\)/);
+assert.match(app, /liveWritingCoach/);
+assert.match(app, /conversation-writing-guide/);
+assert.match(app, /Estructura en español/);
+assert.match(app, /What to add · Qué hace falta/);
 assert.match(index, /type="module" src="\.\/app\.js"/);
 
 

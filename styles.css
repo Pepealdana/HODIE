@@ -1074,3 +1074,19 @@ html[data-theme="dark"] body { background: #101827; }
 }
 
 [data-theme] .learning-home.english-only-level .spanish { display: none !important; }
+
+
+/* Guided conversation: bilingual structure and immediate, cautious writing feedback. */
+.conversation-writing-guide { display:grid; gap:8px; margin:14px 0; padding:14px; border:1px solid var(--line); border-radius:14px; background:var(--surface-alt); }
+.conversation-writing-guide h3 { margin:0; font-size:1rem; }
+.conversation-writing-guide p { margin:0; line-height:1.5; }
+.conversation-writing-guide .guide-example { display:grid; gap:5px; padding-top:9px; border-top:1px solid var(--line); }
+.conversation-writing-guide .guide-example p:first-child { font-weight:650; }
+.response-label { display:block; margin:10px 0 6px; font-weight:750; font-size:.9rem; }
+.live-writing-coach { display:grid; gap:8px; margin:10px 0 12px; padding:12px; border-radius:12px; background:var(--surface-alt); border:1px solid var(--line); }
+.live-writing-coach p { margin:4px 0 0; line-height:1.45; overflow-wrap:anywhere; }
+.live-writing-coach > p:first-child { margin-top:0; }
+.live-coach-section + .live-coach-section { padding-top:9px; border-top:1px solid var(--line); }
+.live-coach-comparison { display:grid; gap:4px; }
+.live-coach-comparison strong { color:var(--success, #23734d); overflow-wrap:anywhere; }
+[data-theme="dark"] .conversation-writing-guide, [data-theme="dark"] .live-writing-coach { background:#172033; }

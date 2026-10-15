@@ -21,7 +21,8 @@ function buildSession(matrix, library, profile, target, options = {}) {
     contextTerms: options.contextTerms || [],
     recentEvidenceLimit: options.recentEvidenceLimit || 8,
     recentGapLimit: options.recentGapLimit || 5,
-    now: options.now
+    now: options.now,
+    allowUnmetPrerequisites: options.allowUnmetPrerequisites === true
   };
 
   const rationale = explainSelection(matrix, profile, target, planningOptions);
@@ -78,7 +79,8 @@ function createSession(matrix, library, profile, options = {}) {
     contextTerms: options.contextTerms || [],
     recentEvidenceLimit: options.recentEvidenceLimit || 8,
     recentGapLimit: options.recentGapLimit || 5,
-    now: options.now
+    now: options.now,
+    allowUnmetPrerequisites: options.allowUnmetPrerequisites === true
   };
 
   const target = selectNextActivityTarget(matrix, library, profile, planningOptions);

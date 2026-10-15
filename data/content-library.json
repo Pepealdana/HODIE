@@ -963,6 +963,99 @@
         "however",
         "argumentation"
       ]
+    },
+    {
+      "id": "ACT-CO-A1-01-01",
+      "canDoId": "CO-A1-01",
+      "activityType": "interaction",
+      "level": "A1",
+      "skill": "communication",
+      "context": "educational",
+      "title": "Greet and introduce yourself",
+      "titleEs": "Saluda y preséntate",
+      "objective": "Greet someone, introduce yourself, and ask or answer one simple personal question.",
+      "objectiveEs": "Saluda a alguien, preséntate y formula o responde una pregunta personal sencilla.",
+      "instructions": "Use short phrases. You may use the sentence starters.",
+      "instructionsEs": "Usa frases cortas. Puedes apoyarte en los comienzos de oración.",
+      "task": "Write or say a greeting, your name, and one simple question.",
+      "taskEs": "Escribe o di un saludo, tu nombre y una pregunta sencilla.",
+      "support": {
+        "optionalSentenceStarters": [
+          "Hello, my name is...",
+          "I am...",
+          "How are you?",
+          "I am fine, thank you."
+        ],
+        "optionalSentenceStartersEs": [
+          "Hola, me llamo...",
+          "Soy...",
+          "¿Cómo estás?",
+          "Estoy bien, gracias."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.8,
+          "interaction": 0.8,
+          "repair": 0.9,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2,
+        "mode": "evidence-based",
+        "noFalsePositiveClaim": true
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true,
+        "afterCorrection": "short-targeted-practice-then-retry"
+      },
+      "metadata": {
+        "durationMinutes": 3,
+        "tags": [
+          "greetings",
+          "introductions",
+          "personal-information",
+          "A1"
+        ],
+        "contentVersion": "1.1.0",
+        "source": "HODIE-curated"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "greeting",
+            "label": "uses a greeting",
+            "type": "content-point"
+          },
+          {
+            "id": "name",
+            "label": "states their name",
+            "type": "content-point"
+          },
+          {
+            "id": "question",
+            "label": "asks or answers a simple personal question",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 8,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "greetings",
+        "introductions",
+        "personal-information"
+      ]
     }
   ]
 }

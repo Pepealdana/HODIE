@@ -189,7 +189,7 @@ function rankLearningTargets(matrix, profile, options = {}) {
   const allowedLevels = options.levels || ["A2", "A2+", "B1"];
   const candidates = (matrix.canDos || [])
     .filter((canDo) => allowedLevels.includes(canDo.level))
-    .filter((canDo) => prerequisiteReady(matrix, profile, canDo))
+    .filter((canDo) => options.allowUnmetPrerequisites === true || prerequisiteReady(matrix, profile, canDo))
     .map((canDo) => ({
       canDo,
       status: getStatus(canDo, profile),
