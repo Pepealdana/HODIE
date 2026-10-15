@@ -209,3 +209,11 @@ console.log("HODIE Adaptive Planner v1: PASS");
 }
 
 console.log("HODIE Adaptive Planner v2 progression/retention: PASS");
+
+{
+ const lockedB1=rankLearningTargets(matrix,profile,{levels:["B1"],now});
+ const selectableB1=rankLearningTargets(matrix,profile,{levels:["B1"],now,allowUnmetPrerequisites:true});
+ assert.equal(lockedB1.length,0,"Normal progression must continue respecting prerequisites");
+ assert.ok(selectableB1.length>0,"Manual level choice must permit a diagnostic target without claiming mastery");
+ assert.ok(selectableB1.every(item=>item.canDo.level==="B1"));
+}
