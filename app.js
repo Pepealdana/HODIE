@@ -1024,12 +1024,20 @@ function renderActivityCatalog() {
     return "grammar";
   };
   const matching = microLibrary.activities.filter((a) => a.level === level && (skill === "all" || classify(a) === skill));
-  summary.textContent = matching.length + " activities available · " + level + " · " + (skill === "all" ? "all skills" : names[skill]);
+  const goals = new Map((matrix.canDos || []).map((item) => [item.id, item]));
+  const byGoal = new Map();
+  for (const item of microLibrary.activities) { if (!byGoal.has(item.canDoId)) byGoal.set(item.canDoId, []); byGoal.get(item.canDoId).push(item); }
+  summary.textContent = matching.length + " activities available · " + level + " · " + (skill === "all" ? "all skills" : names[skill]) + ". Each opens individually."; 
   results.innerHTML = matching.map((a) => {
     const category = classify(a);
     const title = a.title || a.titleEn || a.prompt || a.id;
     const spanish = a.titleEs || a.promptEs || "";
-    return '<article class="catalog-item"><div class="catalog-item-copy"><span class="catalog-meta">' + escapeHtml(level + " · " + names[category] + " · " + String(a.type || "practice").replaceAll("-", " ")) + '</span><strong>' + escapeHtml(title) + '</strong>' + (spanish ? '<span class="spanish">' + escapeHtml(spanish) + '</span>' : "") + '</div><button class="secondary compact" type="button" data-catalog-activity="' + escapeHtml(a.id) + '" data-catalog-mode="' + escapeHtml(category) + '">Practicar →</button></article>';
+    const goal = goals.get(a.canDoId);
+    const relatedGoals = (goal?.recovery || []).map((id) => goals.get(id)).filter(Boolean);
+    const relatedActivities = relatedGoals.flatMap((item) => byGoal.get(item.id) || []);
+    const relations = relatedGoals.length ? '<div class="catalog-relations"><strong>Builds on / Recupera:</strong>' + relatedGoals.map((item) => '<span class="catalog-relation">' + escapeHtml(item.level + " · " + (item.spanish || item.canDo || item.id)) + '</span>').join("") + '</div>' : '<div class="catalog-relations"><strong>Learning goal / Objetivo:</strong> ' + escapeHtml(goal?.canDo || a.canDoId || "Practice") + '</div>';
+    const links = relatedActivities.length ? '<div class="catalog-linked-activities"><strong>Related activities / Actividades relacionadas:</strong>' + relatedActivities.slice(0, 3).map((item) => '<button class="catalog-related-link" type="button" data-catalog-activity="' + escapeHtml(item.id) + '" data-catalog-mode="' + escapeHtml(classify(item)) + '">' + escapeHtml(item.level + " · " + (item.title || item.titleEs || item.id)) + '</button>').join("") + '</div>' : "";
+    return '<article class="catalog-item"><div class="catalog-item-copy"><span class="catalog-meta">' + escapeHtml(level + " · " + names[category] + " · " + String(a.type || "practice").replaceAll("-", " ")) + '</span><strong>' + escapeHtml(title) + '</strong>' + (spanish ? '<span class="spanish">' + escapeHtml(spanish) + '</span>' : "") + relations + links + '</div><button class="secondary compact" type="button" data-catalog-activity="' + escapeHtml(a.id) + '" data-catalog-mode="' + escapeHtml(category) + '">Practicar →</button></article>';
   }).join("");
   results.querySelectorAll("[data-catalog-activity]").forEach((button) => button.addEventListener("click", () => startPractice(button.dataset.catalogMode, button.dataset.catalogActivity)));
 }
