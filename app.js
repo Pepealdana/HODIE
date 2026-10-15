@@ -656,6 +656,9 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     summary.textContent = isBeginner ? "Explorar todas las actividades" : "Explore all activities";
     catalog.parentNode.insertBefore(details, catalog);
     details.append(summary, catalog);
+    const catalogLabels = catalog.querySelectorAll(".catalog-filters label");
+    if (catalogLabels[0]) catalogLabels[0].textContent = isBeginner ? "Level / Nivel" : "Level";
+    if (catalogLabels[1]) catalogLabels[1].textContent = isBeginner ? "Skill / Habilidad" : "Skill";
     catalog.classList.remove("card");
     catalog.hidden = false;
   }
