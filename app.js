@@ -631,7 +631,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     '<div class="redesign-resume-slot"></div>' +
   '</section>');
 
-  home.querySelectorAll(".home-intro, .recommended-primary, .quick-choices, .quick-principle").forEach((node) => node.hidden = true);
+  home.querySelectorAll(".home-intro, .quick-choices, .quick-principle").forEach((node) => node.hidden = true);
 
   const resumeSlot = home.querySelector(".redesign-resume-slot");
   const savedPractice = home.querySelector(".resume-practice");
@@ -667,7 +667,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
   const more = document.createElement("details");
   more.className = "choice-disclosure extra-learning-disclosure";
   more.innerHTML = '<summary>' + (isBeginner ? "Mi progreso y otros recursos" : "My progress and more resources") + '</summary>';
-  [home.querySelector(".integrated-unit-card"), home.querySelector(".shared-knowledge-summary"), home.querySelector(".learning-evidence-summary"), home.querySelector(".home-progress")].forEach((node) => { if (node) more.append(node); });
+  [home.querySelector(".recommended-primary"), home.querySelector(".integrated-unit-card"), home.querySelector(".shared-knowledge-summary"), home.querySelector(".learning-evidence-summary"), home.querySelector(".home-progress")].forEach((node) => { if (node) more.append(node); });
   home.append(more);
 
   function updateSelectedSkill() {
