@@ -29,3 +29,9 @@ assert.ok(session.evidenceContract.sessionId === session.id);
 assert.ok(session.evidenceContract.activityIds.length >= 1);
 
 console.log("HODIE Learning Session v1: PASS");
+
+for(const level of ["A1","B1"]){
+ const selected=createSession(matrix,library,profile,{levels:[level],allowUnmetPrerequisites:true,now:"2026-10-07T12:00:00.000Z",contextTerms:["technology","teacher","work"]});
+ assert.equal(selected.target.level,level,`Manual level selection should create a ${level} diagnostic session`);
+ assert.ok(selected.stages.some(stage=>stage.kind==="target"));
+}
