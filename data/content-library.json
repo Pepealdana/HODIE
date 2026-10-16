@@ -1056,6 +1056,143 @@
         "introductions",
         "personal-information"
       ]
+    },
+    {
+      "id": "ACT-RE-A1-01-01",
+      "canDoId": "RE-A1-01",
+      "activityType": "reading-comprehension",
+      "level": "A1",
+      "skill": "reading",
+      "context": "daily-life",
+      "title": "Read a short message",
+      "titleEs": "Lee un mensaje corto",
+      "objective": "Identify familiar words and one key detail in a short message.",
+      "objectiveEs": "Identifica palabras conocidas y un detalle clave en un mensaje corto.",
+      "instructions": "Read the message twice. Then identify the time and place.",
+      "instructionsEs": "Lee el mensaje dos veces. Después identifica la hora y el lugar.",
+      "task": "Read: \"Hi Sam. Meet me at the library at three. Bring your book.\" Where will they meet?",
+      "taskEs": "Lee: «Hola, Sam. Nos vemos en la biblioteca a las tres. Trae tu libro». ¿Dónde se encontrarán?",
+      "support": {
+        "optionalSentenceStarters": [
+          "They will meet at...",
+          "Se encontrarán en..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "comprehension": 0.8,
+          "accuracy": 0.8
+        },
+        "independent": false
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 3,
+        "tags": [
+          "A1",
+          "reading",
+          "messages",
+          "everyday-life"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "place",
+            "label": "Identifies the place",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reading",
+        "messages",
+        "places"
+      ]
+    },
+    {
+      "id": "ACT-PR-A1-01-01",
+      "canDoId": "PR-A1-01",
+      "activityType": "pronunciation",
+      "level": "A1",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "title": "Repeat useful phrases",
+      "titleEs": "Repite frases útiles",
+      "objective": "Repeat short familiar phrases clearly using a spoken model.",
+      "objectiveEs": "Repite frases cortas y conocidas con claridad usando un modelo oral.",
+      "instructions": "Listen to the phrase and repeat it slowly, then at a natural speed.",
+      "instructionsEs": "Escucha la frase y repítela despacio y después a una velocidad natural.",
+      "task": "Practise: \"Good morning. How are you? I am fine, thank you.\"",
+      "taskEs": "Practica: «Buenos días. ¿Cómo estás? Estoy bien, gracias».",
+      "support": {
+        "optionalSentenceStarters": [
+          "Good morning.",
+          "How are you?",
+          "I am fine, thank you."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.9,
+          "intelligibility": 0.8,
+          "wordClarity": 0.8
+        },
+        "independent": false
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 3,
+        "tags": [
+          "A1",
+          "pronunciation",
+          "greetings",
+          "short-phrases"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "greeting",
+            "label": "Repeats the greeting",
+            "type": "content-point"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "pronunciation",
+        "greetings",
+        "word-clarity"
+      ]
     }
   ]
-}
+}\n
