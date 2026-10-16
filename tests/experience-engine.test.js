@@ -16,7 +16,7 @@ const library = JSON.parse(
 );
 
 assert.equal(library.schemaVersion, "1.0.0");
-assert.equal(library.experiences.length, 4);
+assert.equal(library.experiences.length, 6);
 
 const conversation = getExperience(library, "EXP-CONV-FREE-A2-01");
 assert.ok(conversation);
@@ -28,7 +28,7 @@ const simulations = selectExperiences(library, { kind: "simulation" });
 assert.equal(simulations.length, 3);
 assert.ok(selectExperiences(library, { kind: "conversation" }).length >= 1);
 assert.equal(selectExperiences(library, { kind: "conversation", level: "A1" }).some((item) => item.id === "EXP-CONV-FREE-A2-01"), true);
-assert.equal(selectExperiences(library, { kind: "conversation", level: "B1" }).some((item) => item.id === "EXP-CONV-FREE-A2-01"), true);
+assert.equal(selectExperiences(library, { kind: "conversation", level: "B1" }).some((item) => item.id === "EXP-CONV-FREE-A2-01"), true);\nassert.ok(selectExperiences(library, { kind: "conversation", level: "A1" }).some((item) => item.id === "EXP-CONV-DAILY-A1-01"));\nassert.ok(selectExperiences(library, { kind: "conversation", level: "B1" }).some((item) => item.id === "EXP-CONV-IDEAS-B1-01"));
 assert.equal(selectExperiences(library, { kind: "simulation", level: "A1" }).length, 0);
 
 let session = createExperienceSession(library, conversation.id, { now: "2026-10-08T00:00:00.000Z" });
