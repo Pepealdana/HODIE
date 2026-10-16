@@ -153,3 +153,8 @@ for (const [mode, expectedSkill] of [
   assert.ok(focused.length >= 2, `Expected focused ${mode} activities to be available`);
   assert.ok(focused.every((item) => item.skill === expectedSkill), `${mode} mode must not substitute another skill`);
 }
+
+const reportedSpeech = library.activities.filter((item) => item.tags?.includes("reported-speech"));
+assert.equal(reportedSpeech.length, 16);
+for (const level of ["A1", "A2", "B1", "B2"]) assert.equal(reportedSpeech.filter((item) => item.level === level).length, 4, level + " Reported Speech coverage");
+assert.ok(reportedSpeech.every((item) => item.prompt && item.promptEs && item.feedback.correct && item.feedback.correctEs));
