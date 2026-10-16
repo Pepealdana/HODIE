@@ -29,3 +29,8 @@ Comprehension activities evaluate selected meaning against authored answer keys.
 - Every activity is linked to one Can-Do, one level, one primary skill and a stable reported-speech tag.
 - B2 activities have internal content QA metadata; this is not a claim of official CEFR review.
 - Positive/negative linguistic tests, activity coverage tests, B2-gate tests, PWA cache checks and the full CI suite must pass before merge.
+
+
+## Confidence and evidence
+
+The final response includes a 1–5 learner confidence self-report. HODIE stores it separately from language accuracy and task completion. The existing progress model requires confidence of at least 4, two independent successful attempts, and distinct contexts before a Can-Do can become consolidated. Reported-speech evidence uses dimensions appropriate to the selected skill rather than writing generic grammar/fluency dimensions into listening or reading evidence.
