@@ -54,3 +54,6 @@ console.log("HODIE linguistic UI integration contract: PASS");
 assert.match(app, /Reported speech/);
 assert.match(app, /startReportedSpeech/);
 assert.match(app, /getB2UnlockStatus/);
+
+assert.match(app, /practiceConfidence/);
+assert.match(app, /dimensionsBySkill/);
