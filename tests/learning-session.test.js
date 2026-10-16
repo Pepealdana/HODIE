@@ -35,3 +35,17 @@ for(const level of ["A1","B1"]){
  assert.equal(selected.target.level,level,`Manual level selection should create a ${level} diagnostic session`);
  assert.ok(selected.stages.some(stage=>stage.kind==="target"));
 }
+
+
+for (const level of ["A1", "B1"]) {
+  const explicitLevelSession = createSession(matrix, library, profile, {
+    levels: [level],
+    allowUnmetPrerequisites: true,
+    now: "2026-10-07T12:00:00.000Z",
+    sessionId: "explicit-level-" + level
+  });
+  assert.equal(explicitLevelSession.target.level, level);
+  assert.ok(library.activities.some((activity) => activity.canDoId === explicitLevelSession.target.canDoId));
+}
+
+console.log("HODIE explicit level selection: PASS");
