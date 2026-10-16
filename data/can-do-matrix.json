@@ -5624,6 +5624,201 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "communicative"
+    },
+    {
+      "id": "GR-A1-01",
+      "skill": "grammar",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can build simple affirmative sentences and basic questions with familiar patterns.",
+      "spanish": "Puedo construir oraciones afirmativas sencillas y preguntas básicas con estructuras conocidas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "personal-information",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "task": "I can build simple affirmative sentences and basic questions with familiar patterns."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "VO-A1-01",
+      "skill": "vocabulary",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can use familiar words for people, food, places and everyday routines.",
+      "spanish": "Puedo usar palabras conocidas sobre personas, comida, lugares y rutinas cotidianas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "personal-information",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "vocabulary",
+        "task": "I can use familiar words for people, food, places and everyday routines."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "LI-A1-01",
+      "skill": "listening",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can understand familiar names, times and simple needs when speech is slow and clear.",
+      "spanish": "Puedo comprender nombres, horas y necesidades sencillas cuando se habla despacio y con claridad.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "personal-information",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "task": "I can understand familiar names, times and simple needs when speech is slow and clear."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "SP-A1-01",
+      "skill": "speaking",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can give basic personal information and describe familiar people or routines in short phrases.",
+      "spanish": "Puedo dar información personal básica y describir personas o rutinas conocidas con frases cortas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "personal-information",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "I can give basic personal information and describe familiar people or routines in short phrases."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "WR-A1-01",
+      "skill": "writing",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can write short, simple sentences about myself and familiar people.",
+      "spanish": "Puedo escribir oraciones cortas y sencillas sobre mí y personas conocidas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "personal-information",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "task": "I can write short, simple sentences about myself and familiar people."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
     }
   ],
   "metaCanDos": [

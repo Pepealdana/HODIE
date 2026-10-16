@@ -2,6 +2,7 @@ import { createSession } from "./src/learning-session.js";
 import { startSession, requestEvidence } from "./src/session-state.js";
 import { runSessionEvidenceCycle } from "./src/session-runner.js";
 import { getStatus } from "./src/learning-engine.js";
+import { evaluateB2Unlock } from "./src/b2-unlock.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 import { chooseLearningSurface } from "./src/learning-orchestrator.js";
@@ -22,7 +23,8 @@ const DATA = {
   contexts: "./data/learning-contexts.json",
   knowledge: "./data/knowledge-library.json",
   linguistic: "./data/linguistic-catalog.json",
-  units: "./data/integrated-units.json"
+  units: "./data/integrated-units.json",
+  b2Pack: "./data/b2-learning-pack.json"
 };
 
 const STORAGE_KEY = "hodie-progress-v1";
@@ -48,6 +50,8 @@ let knowledgeLibrary;
 let linguisticLibrary;
 let knowledgeGraph;
 let integratedUnitLibrary;
+let b2LearningPack;
+let b2PackActive = false;
 let integratedUnitState = null;
 let experienceSession = null;
 let deferredInstallPrompt = null;
@@ -122,7 +126,7 @@ async function registerServiceWorker() {
 }
 
 async function loadData() {
-  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse, linguisticResponse, unitsResponse] = await Promise.all([
+  const [matrixResponse, libraryResponse, microResponse, experienceResponse, contextResponse, knowledgeResponse, linguisticResponse, unitsResponse, b2Response] = await Promise.all([
     fetch(DATA.matrix),
     fetch(DATA.library),
     fetch(DATA.micro),
@@ -130,9 +134,10 @@ async function loadData() {
     fetch(DATA.contexts),
     fetch(DATA.knowledge),
     fetch(DATA.linguistic),
-    fetch(DATA.units)
+    fetch(DATA.units),
+    fetch(DATA.b2Pack)
   ]);
-  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok || !linguisticResponse.ok || !unitsResponse.ok) {
+  if (!matrixResponse.ok || !libraryResponse.ok || !microResponse.ok || !experienceResponse.ok || !contextResponse.ok || !knowledgeResponse.ok || !linguisticResponse.ok || !unitsResponse.ok || !b2Response.ok) {
     throw new Error("Could not load HODIE learning data.");
   }
   matrix = await matrixResponse.json();
@@ -143,8 +148,27 @@ async function loadData() {
   knowledgeLibrary = await knowledgeResponse.json();
   linguisticLibrary = await linguisticResponse.json();
   integratedUnitLibrary = await unitsResponse.json();
+  b2LearningPack = await b2Response.json();
   knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary, linguisticLibrary);
   if (!knowledgeGraph.valid) console.error("HODIE knowledge graph validation failed.", knowledgeGraph.errors);
+}
+
+function refreshB2Pack() {
+  const readiness = evaluateB2Unlock(matrix, profile || { evidence: [], reviews: [] });
+  if (readiness.unlocked && !b2PackActive) {
+    const appendUnique = (target, source) => {
+      const ids = new Set(target.map((item) => item.id));
+      target.push(...source.filter((item) => !ids.has(item.id)));
+    };
+    appendUnique(matrix.canDos, b2LearningPack.canDos);
+    appendUnique(microLibrary.activities, b2LearningPack.activities);
+    appendUnique(library.activities, b2LearningPack.fullActivities);
+    appendUnique(experienceLibrary.experiences, b2LearningPack.experiences);
+    b2PackActive = true;
+    knowledgeGraph = buildKnowledgeGraph(matrix, microLibrary, library, knowledgeLibrary, linguisticLibrary);
+    if (!knowledgeGraph.valid) console.error("HODIE B2 knowledge graph validation failed.", knowledgeGraph.errors);
+  }
+  return readiness;
 }
 
 function loadProfile() {
@@ -256,6 +280,21 @@ function renderProgress() {
 }
 
 function renderPracticeHome() {
+  const b2Unlock = refreshB2Pack();
+  const progressionLabel = (level) => {
+    const item = b2Unlock.progression.levels.find((entry) => entry.level === level);
+    return item?.ready ? "Ready · Listo" : "In progress · En progreso";
+  };
+  const b2ReadinessItems = [
+    ["A1 foundations", Math.round(b2Unlock.a1.coverage * 100) + "% / " + Math.round(b2Unlock.a1.threshold * 100) + "%", b2Unlock.a1.ready],
+    ["A2 readiness", progressionLabel("A2"), b2Unlock.progression.levels.find((entry) => entry.level === "A2")?.ready],
+    ["A2+ readiness", progressionLabel("A2+"), b2Unlock.progression.levels.find((entry) => entry.level === "A2+")?.ready],
+    ["B1 readiness", progressionLabel("B1"), b2Unlock.progression.levels.find((entry) => entry.level === "B1")?.ready],
+    ["B1 Can-Do mastery", Math.round(b2Unlock.b1.coverage * 100) + "% / " + Math.round(b2Unlock.b1.threshold * 100) + "%", b2Unlock.b1.ready],
+    ...Object.entries(b2Unlock.b1.skillCoverage).map(([skill, value]) => [skill, (value === null ? "n/a" : Math.round(value * 100) + "%") + " / " + Math.round(b2Unlock.b1.skillThreshold * 100) + "%", value === null || value >= b2Unlock.b1.skillThreshold]),
+    ["Independent transfer", b2Unlock.transfer.canDoCount + "/" + b2Unlock.transfer.requiredCanDos + " Can-Dos · " + b2Unlock.transfer.contextCount + "/" + b2Unlock.transfer.requiredContexts + " contexts", b2Unlock.transfer.ready]
+  ];
+  const b2ReadinessMarkup = '<details class="b2-readiness-details"><summary>View unlock requirements · Ver requisitos</summary><ul>' + b2ReadinessItems.map(([label, value, ready]) => '<li><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value) + '</strong><small>' + (ready ? 'Met · Cumplido' : 'Not met yet · Pendiente') + '</small></li>').join('') + '</ul></details>';
   const targetActivity = session.stages.find((stage) => stage.kind === "target")?.activity;
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
@@ -544,7 +583,9 @@ function getActivitySkill(activity) {
 }
 
 function changeHomeLevel(level) {
-  if (!["A1", "A2", "B1"].includes(level) || level === session?.target?.level) return;
+  const b2Unlock = refreshB2Pack();
+  if (!["A1", "A2", "B1", "B2"].includes(level) || level === session?.target?.level) return;
+  if (level === "B2" && !b2Unlock.unlocked) return;
   try {
     session = createSession(matrix, library, profile, {
       levels: [level],
@@ -618,8 +659,12 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     '<section class="level-picker" aria-label="Choose your English level">' +
       '<div class="level-picker-heading"><span class="kicker">' + (isBeginner ? "Tu nivel de inglés" : "Your English level") + '</span><span class="level-picker-note">' + (isBeginner ? "Puedes cambiarlo cuando quieras." : "Change it whenever you need.") + '</span></div>' +
       '<div class="level-options" role="group" aria-label="English level">' +
-        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" ? 'disabled aria-disabled="true" title="B2 will unlock after its learning content is validated."' : 'aria-pressed="' + String(item === level) + '"') + '>' + item + (item === "B2" ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") +
+        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" && !b2Unlock.unlocked ? 'disabled aria-disabled="true" title="B2 remains locked until you demonstrate independent B1 mastery and transfer."' : 'aria-pressed="' + String(item === level) + '"') + '>' + item + (item === "B2" && !b2Unlock.unlocked ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") +
       '</div>' +
+      (b2Unlock.unlocked
+        ? '<p class="b2-unlock-note">B2 unlocked · Unidad B2 desbloqueada. Your B2 activities are now available. · Ya puedes acceder al paquete B2.</p>'
+        : '<p class="b2-unlock-note">B2 unlocks through demonstrated mastery, not lesson count: A1 foundations, A2/A2+/B1 readiness, at least 75% mastered B1 Can-Dos with core-skill balance, and independent transfer across two B1 tasks and two contexts. · B2 se desbloquea por dominio demostrado, no por cantidad de lecciones: fundamentos A1, preparación A2/A2+/B1, al menos 75% de Can-Dos B1 dominados, equilibrio entre habilidades y transferencia independiente en dos tareas y dos contextos.</p>') +
+      b2ReadinessMarkup +
     '</section>' +
     '<section class="conversation-start" aria-labelledby="conversationStartTitle">' +
       '<div class="conversation-heading"><p class="kicker">HODIE · ' + escapeHtml(level) + '</p><h2 id="conversationStartTitle">' + (isBeginner ? "¿Qué quieres practicar hoy?" : "What would you like to practise today?") + '</h2>' +
