@@ -1056,6 +1056,328 @@
         "introductions",
         "personal-information"
       ]
+    },
+    {
+      "id": "ACT-GR-RS-A1-01",
+      "canDoId": "GR-RS-A1-01",
+      "activityType": "recognition",
+      "level": "A1",
+      "skill": "reading",
+      "context": "everyday-life",
+      "title": "Pass on a short message",
+      "objective": "Read a short greeting or message and tell another person its basic meaning.",
+      "instructions": "Read the message and explain its meaning in your own words.",
+      "task": "Read a short greeting or message and tell another person its basic meaning.",
+      "support": {
+        "optionalSentenceStarters": [
+          "He says...",
+          "She says..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "accuracy": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 3,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "cefr-informed"
+        ]
+      },
+      "titleEs": "Transmite un mensaje breve",
+      "objectiveEs": "Transmite un mensaje breve",
+      "instructionsEs": "Lee o escucha el mensaje y transmite la información en inglés.",
+      "taskEs": "Lee un saludo o mensaje breve y comunica su significado básico a otra persona.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "Preserves the speaker's meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "structure",
+            "label": "Uses an appropriate reporting structure",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 10,
+        "errorMapping": "reported-speech-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say",
+        "tell",
+        "reported-questions",
+        "reporting-verbs"
+      ],
+      "visibility": {
+        "requiresLevelUnlock": null,
+        "hideUntilUnlocked": false
+      }
+    },
+    {
+      "id": "ACT-GR-RS-A2-01",
+      "canDoId": "GR-RS-A2-01",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "writing",
+      "context": "everyday-life",
+      "title": "Report a familiar message",
+      "objective": "Report a familiar person's message in one or two sentences.",
+      "instructions": "Read or listen to the conversation, then report the information in English.",
+      "task": "Report a familiar person's message in one or two sentences.",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said that...",
+          "She told me that..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "accuracy": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 5,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "cefr-informed"
+        ]
+      },
+      "titleEs": "Transmite un mensaje conocido",
+      "objectiveEs": "Transmite un mensaje conocido",
+      "instructionsEs": "Lee o escucha el mensaje y transmite la información en inglés.",
+      "taskEs": "Transmite en una o dos oraciones el mensaje de una persona conocida.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "Preserves the speaker's meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "structure",
+            "label": "Uses an appropriate reporting structure",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 25,
+        "errorMapping": "reported-speech-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say",
+        "tell",
+        "reported-questions",
+        "reporting-verbs"
+      ],
+      "visibility": {
+        "requiresLevelUnlock": null,
+        "hideUntilUnlocked": false
+      }
+    },
+    {
+      "id": "ACT-GR-RS-B1-01",
+      "canDoId": "GR-RS-B1-01",
+      "activityType": "guided-production",
+      "level": "B1",
+      "skill": "communication",
+      "context": "everyday-life",
+      "title": "Retell a conversation",
+      "objective": "Report one statement, one question and one request from a short conversation.",
+      "instructions": "Read or listen to the conversation, then report the information in English.",
+      "task": "Report one statement, one question and one request from a short conversation.",
+      "support": {
+        "optionalSentenceStarters": [
+          "He asked me where...",
+          "She asked him to...",
+          "They said that..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "accuracy": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": false,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 7,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "cefr-informed"
+        ]
+      },
+      "titleEs": "Cuenta una conversación",
+      "objectiveEs": "Cuenta una conversación",
+      "instructionsEs": "Lee o escucha el mensaje y transmite la información en inglés.",
+      "taskEs": "Transmite una afirmación, una pregunta y una petición de una conversación breve.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "Preserves the speaker's meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "structure",
+            "label": "Uses an appropriate reporting structure",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 25,
+        "errorMapping": "reported-speech-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say",
+        "tell",
+        "reported-questions",
+        "reporting-verbs"
+      ],
+      "visibility": {
+        "requiresLevelUnlock": null,
+        "hideUntilUnlocked": false
+      }
+    },
+    {
+      "id": "ACT-GR-RS-B2-01",
+      "canDoId": "GR-RS-B2-01",
+      "activityType": "integrated-task",
+      "level": "B2",
+      "skill": "writing",
+      "context": "everyday-life",
+      "title": "Summarise a nuanced discussion",
+      "objective": "Summarise two viewpoints and preserve the original speakers' stance and uncertainty.",
+      "instructions": "Read or listen to the conversation, then report the information in English.",
+      "task": "Summarise two viewpoints and preserve the original speakers' stance and uncertainty.",
+      "support": {
+        "optionalSentenceStarters": [
+          "The speaker argued that...",
+          "She denied that...",
+          "They were uncertain whether..."
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "accuracy": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 10,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "cefr-informed"
+        ]
+      },
+      "titleEs": "Resume una discusión con matices",
+      "objectiveEs": "Resume una discusión con matices",
+      "instructionsEs": "Lee o escucha el mensaje y transmite la información en inglés.",
+      "taskEs": "Resume dos puntos de vista y conserva la postura y la incertidumbre de los interlocutores.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "Preserves the speaker's meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "structure",
+            "label": "Uses an appropriate reporting structure",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 2,
+        "minimumResponseCharacters": 25,
+        "errorMapping": "reported-speech-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say",
+        "tell",
+        "reported-questions",
+        "reporting-verbs"
+      ],
+      "visibility": {
+        "requiresLevelUnlock": "B2",
+        "hideUntilUnlocked": true
+      }
     }
   ]
 }
