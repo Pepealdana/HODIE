@@ -1,4 +1,4 @@
-const CONTRACT_VERSION = "1.0.0";
+const CONTRACT_VERSION = "1.1.0";
 
 const STATUS = new Set(["empty", "correct", "needs-work", "partial", "self-review", "unavailable"]);
 const SOURCES = new Set(["rule-based", "answer-key", "checklist", "speech-recognition", "ai", "unknown"]);
