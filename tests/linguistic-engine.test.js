@@ -61,6 +61,25 @@ assert.equal(validAlternatives.errors.length, 0, "valid grammar alternatives mus
 const punctuation = analyzeLanguage("I am teacher. I enjoy to teach.");
 assert.equal(punctuation.correctedText, "I am a teacher. I enjoy teaching.");
 
+const presentContinuousFeel = analyzeLanguage("Good, I am feel good.");
+assert.equal(presentContinuousFeel.correctedText, "Good, I am feeling good.");
+assert.ok(presentContinuousFeel.errors.some((error) => error.ruleId === "PRES-CONT-FEEL-001"));
+assert.equal(presentContinuousFeel.errors.find((error) => error.ruleId === "PRES-CONT-FEEL-001").naturalAlternatives[0].en, "Good, I'm doing well.");
+
+for (const [input, expected] of [
+  ["I am play football now.", "I am playing football now."],
+  ["They are sleep now.", "They are sleeping now."],
+  ["She is open the window.", "She is opening the window."],
+  ["I am feel good.", "I am feeling good."],
+  ["He is run now.", "He is running now."],
+  ["They are sit here.", "They are sitting here."]
+]) {
+  assert.equal(analyzeLanguage(input).correctedText, expected, input);
+}
+for (const valid of ["I feel good.", "I am feeling good.", "I am ready.", "I know the answer.", "I like this song.", "I am happy."]) {
+  assert.equal(analyzeLanguage(valid).errors.length, 0, valid + " must remain valid");
+}
+
 const knownA2Negation = analyzeLanguage("She doesn't works on Sundays.");
 assert.equal(knownA2Negation.correctedText, "She doesn't work on Sundays.");
 assert.ok(knownA2Negation.errors.some((error) => error.ruleId === "DO-NEG-BASE-001"));
