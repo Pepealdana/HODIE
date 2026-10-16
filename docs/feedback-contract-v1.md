@@ -35,4 +35,4 @@ Normalize evaluation output from conversation, deterministic micro-practice, int
 - Listening: currently uses a deterministic answer key after browser speech synthesis reads `audioText`; it checks selected answers, not the learner's ability to recognize speech independently of the displayed options.
 - Profile: `src/learning-profile.js` stores bounded learning history and knowledge outcomes in the local profile; `src/error-memory.js` aggregates errors from `profile.evidence`. These use different evidence collections, so repeated-error memory is not yet guaranteed to include every error recorded in `knowledgeEvidence`.
 
-This is a first interoperability contract. It does not yet wire every rendering path to the contract; that integration must be staged and tested separately.
+Contract version 1.1.0 also preserves optional natural-language alternatives as a separate feedback field. The conversation feedback path consumes this contract; remaining rendering paths should continue to be migrated only with dedicated regression coverage.
