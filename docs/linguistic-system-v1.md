@@ -46,3 +46,8 @@ English is productive and cannot be represented by a finite list. Unknown words 
 ## Current limitations
 
 This starter engine is not a full parser, spellchecker, dictionary, speech recognizer or CEFR assessor. Its rule coverage is finite. It should not claim complete grammar detection or precise pronunciation scoring. The catalog and regression tests are designed to grow in small validated packages rather than by unreviewed bulk additions.
+
+
+## Rule-driven correction and natural alternatives
+
+The shared deterministic analyzer runs reviewed patterns and returns explicit correction records. The shared feedback contract is version 1.1.0 and preserves optional natural-language alternatives. Morphological transforms such as present-continuous -ing formation are centralized so separate rules do not implement conflicting spelling logic. A natural alternative is displayed as an optional phrasing suggestion, separate from the grammatical correction; it must never silently replace the learner's intended meaning. Every new tested matcher needs positive examples, valid negative examples, regression cases and a passing full test suite.
