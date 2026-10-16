@@ -12,7 +12,7 @@
 | Reading | 3 | 7 | 6 | 4 |
 | Pronunciation | 3 | 8 | 6 | 4 |
 | Communication | 4 | 7 | 6 | 4 |
-| **Micro-activities total** | **24** | **98** | **41** | **32** |
+| **Active activities total** | **25** | **98** | **41** | **32** |
 
 The A1/A2/B1 totals in this table include the current full-activity bank as well as micro-practice. B2 remains in a separate package and is not counted as active practice.
 
