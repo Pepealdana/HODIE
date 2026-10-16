@@ -16,8 +16,8 @@ const statusEvidence = (canDoId, contextId, level="consistent", confidence=4) =>
 });
 const allEvidence = [];
 for (const canDo of matrix.canDos) {
-  allEvidence.push(statusEvidence(canDo.id,"context-one"));
-  allEvidence.push(statusEvidence(canDo.id,"context-two",canDo.level==="B1"&&["B1-0","B1-transfer-2"].includes(canDo.id)?"transfer":"consistent"));
+  allEvidence.push(statusEvidence(canDo.id,"context-one",canDo.level==="B1"&&canDo.id==="B1-0"?"transfer":"consistent"));
+  allEvidence.push(statusEvidence(canDo.id,"context-two",canDo.level==="B1"&&canDo.id==="B1-transfer-2"?"transfer":"consistent"));
 }
 const ready = evaluateB2Unlock(matrix,{evidence:allEvidence,reviews:[]});
 assert.equal(ready.unlocked,true,JSON.stringify(ready.reasons));
