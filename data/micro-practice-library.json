@@ -5001,6 +5001,837 @@
         ],
         "feedbackFocus": "communication"
       }
+    },
+    {
+      "id": "MIC-RS-A1-01",
+      "canDoId": "RS-A1-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: recognise the speaker",
+      "titleEs": "Estilo indirecto: reconoce al hablante",
+      "prompt": "Mia says, “Hello!” What does Mia do?",
+      "promptEs": "Mia dice: «¡Hola!». ¿Qué hace Mia?",
+      "options": [
+        "She greets someone.",
+        "She asks a question.",
+        "She gives an instruction."
+      ],
+      "answer": "She greets someone.",
+      "feedback": {
+        "correct": "Correct. You are identifying the message, not changing its grammar yet.",
+        "correctEs": "Correcto. Identificas el mensaje; todavía no cambias la gramática.",
+        "incorrect": "Choose the option that describes Mia's message.",
+        "incorrectEs": "Elige la opción que describe el mensaje de Mia."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "recognition"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-recognition",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "recognition"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A1-02",
+      "canDoId": "RS-A1-READ",
+      "type": "match",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: match a message",
+      "titleEs": "Estilo indirecto: relaciona un mensaje",
+      "prompt": "Match the direct message with its report.",
+      "promptEs": "Relaciona el mensaje directo con lo que se cuenta.",
+      "options": [
+        "Tom says, “Thanks!” → Tom says thank you.",
+        "Tom says, “Thanks!” → Tom asks for help."
+      ],
+      "answer": "Tom says, “Thanks!” → Tom says thank you.",
+      "feedback": {
+        "correct": "Correct. The reported message keeps the original meaning.",
+        "correctEs": "Correcto. El mensaje transmitido conserva el sentido original.",
+        "incorrect": "Look for the option that keeps the meaning of “Thanks!”.",
+        "incorrectEs": "Busca la opción que conserva el significado de «Thanks!»."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "recognition"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-recognition",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "recognition"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A1-03",
+      "canDoId": "RS-A1-LISTEN",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: understand a short message",
+      "titleEs": "Estilo indirecto: comprende un mensaje breve",
+      "prompt": "Imagine you hear: “Ben says he is at home.” What do you know?",
+      "promptEs": "Imagina que escuchas: «Ben dice que está en casa». ¿Qué sabes?",
+      "options": [
+        "Ben says he is at home.",
+        "Ben asks where home is.",
+        "Ben says he was at school."
+      ],
+      "answer": "Ben says he is at home.",
+      "feedback": {
+        "correct": "Correct. Identify who the message is about and what it says.",
+        "correctEs": "Correcto. Identifica de quién trata el mensaje y qué dice.",
+        "incorrect": "Choose the option with the same information.",
+        "incorrectEs": "Elige la opción que contiene la misma información."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "recognition"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-recognition",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "recognition"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A1-04",
+      "canDoId": "RS-A1-COMM",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: pass on a greeting",
+      "titleEs": "Estilo indirecto: transmite un saludo",
+      "prompt": "Put the short exchange in a natural order.",
+      "promptEs": "Ordena el intercambio breve de forma natural.",
+      "options": [
+        "Anna says hello.",
+        "What did Anna say?",
+        "She says hello."
+      ],
+      "tokens": [
+        "Anna says hello.",
+        "What did Anna say?",
+        "She says hello."
+      ],
+      "answer": [
+        "What did Anna say?",
+        "Anna says hello.",
+        "She says hello."
+      ],
+      "feedback": {
+        "correct": "Correct. A simple report tells another person the message.",
+        "correctEs": "Correcto. Un reporte sencillo transmite el mensaje a otra persona.",
+        "incorrect": "Start with the question, then give Anna's message and report it.",
+        "incorrectEs": "Empieza con la pregunta, después presenta el mensaje de Anna y transmítelo."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "recognition"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-recognition",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "recognition"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A2-01",
+      "canDoId": "RS-A2-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: statements with said",
+      "titleEs": "Estilo indirecto: afirmaciones con said",
+      "prompt": "Direct: “I am tired,” Mia said. Choose the usual past-time report.",
+      "promptEs": "Directo: «Estoy cansada», dijo Mia. Elige la forma indirecta habitual en pasado.",
+      "options": [
+        "Mia said that she was tired.",
+        "Mia said that I am tired.",
+        "Mia told that she was tired."
+      ],
+      "answer": "Mia said that she was tired.",
+      "feedback": {
+        "correct": "After said in the past, am often shifts to was; I changes to she because Mia is reporting about herself.",
+        "correctEs": "Después de said en pasado, am suele cambiar a was; I cambia a she porque Mia habla de sí misma.",
+        "incorrect": "Check the reporting verb, pronoun and tense.",
+        "incorrectEs": "Revisa el verbo introductorio, el pronombre y el tiempo verbal."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "statements"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-statements",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "statements"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A2-02",
+      "canDoId": "RS-A2-READ",
+      "type": "match",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: preserve meaning",
+      "titleEs": "Estilo indirecto: conserva el significado",
+      "prompt": "Choose the report that keeps the original meaning: “We live here,” they said.",
+      "promptEs": "Elige la versión que conserva el significado: «Vivimos aquí», dijeron.",
+      "options": [
+        "They said that they lived there.",
+        "They said that we live here.",
+        "They asked where they lived."
+      ],
+      "answer": "They said that they lived there.",
+      "feedback": {
+        "correct": "Pronouns and place words may change when the speaker and location change.",
+        "correctEs": "Los pronombres y las expresiones de lugar pueden cambiar si cambia el hablante o la ubicación.",
+        "incorrect": "Keep the original meaning and consider who is speaking.",
+        "incorrectEs": "Conserva el sentido original y considera quién habla."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "statements"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-statements",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "statements"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A2-03",
+      "canDoId": "RS-A2-LISTEN",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: report a plan",
+      "titleEs": "Estilo indirecto: transmite un plan",
+      "prompt": "You hear: “I will call you,” Alex said. What is the usual report?",
+      "promptEs": "Escuchas: «Te llamaré», dijo Alex. ¿Cuál es la forma indirecta habitual?",
+      "options": [
+        "Alex said that he would call me.",
+        "Alex said that he will called me.",
+        "Alex told that he would call me."
+      ],
+      "answer": "Alex said that he would call me.",
+      "feedback": {
+        "correct": "Will commonly changes to would in reported speech; pronouns depend on who reports the message.",
+        "correctEs": "Will suele cambiar a would en estilo indirecto; los pronombres dependen de quién transmite el mensaje.",
+        "incorrect": "Check will → would and use said without an object, or told with one.",
+        "incorrectEs": "Revisa will → would y usa said sin objeto o told con objeto."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "statements"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-statements",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "statements"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A2-04",
+      "canDoId": "RS-A2-COMM",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: complete a statement",
+      "titleEs": "Estilo indirecto: completa una afirmación",
+      "prompt": "“I work at a hospital,” he said. → He said that he ___ at a hospital.",
+      "promptEs": "«Trabajo en un hospital», dijo él. → He said that he ___ at a hospital.",
+      "answer": "worked",
+      "feedback": {
+        "correct": "Work commonly shifts to worked after a past reporting verb.",
+        "correctEs": "Work suele cambiar a worked después de un verbo introductorio en pasado.",
+        "incorrect": "Use the past form in this typical backshift pattern.",
+        "incorrectEs": "Usa la forma de pasado en este patrón habitual de cambio temporal."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "statements"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-statements",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "statements"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-B1-01",
+      "canDoId": "RS-B1-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: indirect questions",
+      "titleEs": "Estilo indirecto: preguntas indirectas",
+      "prompt": "Direct: “Where do you live?” he asked me. Choose the report.",
+      "promptEs": "Directo: «¿Dónde vives?», me preguntó. Elige la versión indirecta.",
+      "options": [
+        "He asked me where I lived.",
+        "He asked me where did I live.",
+        "He said me where I lived."
+      ],
+      "answer": "He asked me where I lived.",
+      "feedback": {
+        "correct": "Indirect questions use statement word order; do not keep do-support inversion.",
+        "correctEs": "Las preguntas indirectas usan el orden de una afirmación; no conservan la inversión con do.",
+        "incorrect": "Use question word + subject + verb, and asked for a question.",
+        "incorrectEs": "Usa palabra interrogativa + sujeto + verbo, y asked para introducir una pregunta."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "questions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "questions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-B1-02",
+      "canDoId": "RS-B1-READ",
+      "type": "match",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: report a request",
+      "titleEs": "Estilo indirecto: transmite una petición",
+      "prompt": "Match: “Please open the window,” Ana said to me.",
+      "promptEs": "Relaciona: «Por favor, abre la ventana», me dijo Ana.",
+      "options": [
+        "Ana asked me to open the window.",
+        "Ana said me open the window.",
+        "Ana asked that I opened the window."
+      ],
+      "answer": "Ana asked me to open the window.",
+      "feedback": {
+        "correct": "A common pattern for requests is ask + person + to + base verb.",
+        "correctEs": "Un patrón frecuente para peticiones es ask + persona + to + verbo base.",
+        "incorrect": "Use asked + object + to + infinitive.",
+        "incorrectEs": "Usa asked + objeto + to + infinitivo."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "questions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "questions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-B1-03",
+      "canDoId": "RS-B1-LISTEN",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: recount an interview",
+      "titleEs": "Estilo indirecto: cuenta una entrevista",
+      "prompt": "Put the interview report in a logical order.",
+      "promptEs": "Ordena el reporte de la entrevista de forma lógica.",
+      "options": [
+        "I reported that she wanted to study law.",
+        "She said, “I want to study law.”",
+        "The interviewer asked what she wanted to study."
+      ],
+      "tokens": [
+        "I reported that she wanted to study law.",
+        "She said, “I want to study law.”",
+        "The interviewer asked what she wanted to study."
+      ],
+      "answer": [
+        "The interviewer asked what she wanted to study.",
+        "She said, “I want to study law.”",
+        "I reported that she wanted to study law."
+      ],
+      "feedback": {
+        "correct": "A report introduces the question, records the answer and then summarises it.",
+        "correctEs": "Un reporte introduce la pregunta, registra la respuesta y después la resume.",
+        "incorrect": "Begin with the interviewer's question, then the answer, then your report.",
+        "incorrectEs": "Empieza con la pregunta, sigue con la respuesta y termina con tu reporte."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "questions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "questions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-B1-04",
+      "canDoId": "RS-B1-COMM",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: report advice",
+      "titleEs": "Estilo indirecto: transmite un consejo",
+      "prompt": "“You should rest,” the doctor said to Leo. → The doctor advised Leo ___ rest.",
+      "promptEs": "«Deberías descansar», le dijo el médico a Leo. → The doctor advised Leo ___ rest.",
+      "answer": "to",
+      "feedback": {
+        "correct": "Advise + object + to-infinitive is a common way to report advice.",
+        "correctEs": "Advise + objeto + infinitivo con to es una forma frecuente de transmitir consejos.",
+        "incorrect": "Use the infinitive marker to after advised + object.",
+        "incorrectEs": "Usa to antes del infinitivo después de advised + objeto."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "questions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "questions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-B2-01",
+      "canDoId": "RS-B2-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: reporting nuance",
+      "titleEs": "Estilo indirecto: matiza lo que se comunica",
+      "prompt": "Which report presents the claim as the speaker's, not a confirmed fact?",
+      "promptEs": "¿Qué versión presenta la afirmación como algo dicho por la persona, no como un hecho confirmado?",
+      "options": [
+        "She claimed that the figures were inaccurate.",
+        "The figures were inaccurate.",
+        "She said the figures were inaccurate, so it is certainly true."
+      ],
+      "answer": "She claimed that the figures were inaccurate.",
+      "feedback": {
+        "correct": "Claimed attributes the statement to the speaker without treating it as independently verified.",
+        "correctEs": "Claimed atribuye la afirmación a quien habla sin presentarla como verificada de forma independiente.",
+        "incorrect": "Choose the option that attributes the claim rather than endorsing it.",
+        "incorrectEs": "Elige la opción que atribuye la afirmación sin respaldarla como hecho."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-02",
+      "canDoId": "RS-B2-READ",
+      "type": "match",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: distinguish stance",
+      "titleEs": "Estilo indirecto: distingue la postura",
+      "prompt": "Match the reporting verb to its communicative function.",
+      "promptEs": "Relaciona el verbo de reporte con su función comunicativa.",
+      "options": [
+        "admitted → accepted something difficult or potentially negative",
+        "denied → said something was true",
+        "suggested → issued a direct order"
+      ],
+      "answer": "admitted → accepted something difficult or potentially negative",
+      "feedback": {
+        "correct": "Reporting verbs convey stance; choose them according to the source and context.",
+        "correctEs": "Los verbos de reporte transmiten postura; elígelos según la fuente y el contexto.",
+        "incorrect": "Check the meaning and pragmatic force of each reporting verb.",
+        "incorrectEs": "Revisa el significado y la fuerza pragmática de cada verbo de reporte."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-03",
+      "canDoId": "RS-B2-LISTEN",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: summarise a discussion",
+      "titleEs": "Estilo indirecto: resume una discusión",
+      "prompt": "Arrange a balanced summary of a discussion.",
+      "promptEs": "Organiza un resumen equilibrado de una discusión.",
+      "options": [
+        "The team concluded that more evidence was needed.",
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first."
+      ],
+      "tokens": [
+        "The team concluded that more evidence was needed.",
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first."
+      ],
+      "answer": [
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first.",
+        "The team concluded that more evidence was needed."
+      ],
+      "feedback": {
+        "correct": "A balanced report distinguishes a concern, a proposal and the group's conclusion.",
+        "correctEs": "Un reporte equilibrado distingue una preocupación, una propuesta y la conclusión del grupo.",
+        "incorrect": "Present the concern, then the proposal, and finally the conclusion.",
+        "incorrectEs": "Presenta la preocupación, luego la propuesta y finalmente la conclusión."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-04",
+      "canDoId": "RS-B2-COMM",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: attribute a viewpoint",
+      "titleEs": "Estilo indirecto: atribuye un punto de vista",
+      "prompt": "“This policy may fail,” the analyst said. → The analyst warned that the policy ___ fail.",
+      "promptEs": "«Esta política puede fracasar», dijo el analista. → The analyst warned that the policy ___ fail.",
+      "answer": "might",
+      "feedback": {
+        "correct": "Might can report a possibility with appropriate distance or tentativeness.",
+        "correctEs": "Might puede transmitir una posibilidad con cierto distanciamiento o cautela.",
+        "incorrect": "Use might to report the original possibility in this pattern.",
+        "incorrectEs": "Usa might para transmitir la posibilidad original en este patrón."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
     }
   ]
 }
