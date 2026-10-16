@@ -5001,6 +5001,251 @@
         ],
         "feedbackFocus": "communication"
       }
+    },
+    {
+      "id": "MIC-RE-A1-01-01",
+      "canDoId": "RE-A1-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Find the place",
+      "titleEs": "Encuentra el lugar",
+      "prompt": "Read: \"Meet me at the park at four.\" Where will they meet?",
+      "promptEs": "Lee: «Nos vemos en el parque a las cuatro». ¿Dónde se encontrarán?",
+      "options": [
+        "At the park",
+        "At school",
+        "At home"
+      ],
+      "answer": "At the park",
+      "feedback": {
+        "correct": "Correct. The message says \"at the park\".",
+        "correctEs": "Correcto. El mensaje dice «en el parque».",
+        "incorrect": "Look for the place after \"at the\".",
+        "incorrectEs": "Busca el lugar después de «at the»."
+      },
+      "tags": [
+        "A1",
+        "reading",
+        "messages"
+      ],
+      "errorType": "reading-comprehension",
+      "errorTarget": "key-detail",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "places"
+      ],
+      "primarySkill": "reading"
+    },
+    {
+      "id": "MIC-RE-A1-01-02",
+      "canDoId": "RE-A1-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Identify a time",
+      "titleEs": "Identifica una hora",
+      "prompt": "Read: \"The class starts at nine.\" When does the class start?",
+      "promptEs": "Lee: «La clase comienza a las nueve». ¿A qué hora comienza la clase?",
+      "options": [
+        "At nine",
+        "At seven",
+        "At eleven"
+      ],
+      "answer": "At nine",
+      "feedback": {
+        "correct": "Correct. \"At nine\" gives the time.",
+        "correctEs": "Correcto. «At nine» indica la hora.",
+        "incorrect": "Find the time expression in the message.",
+        "incorrectEs": "Busca la expresión de hora en el mensaje."
+      },
+      "tags": [
+        "A1",
+        "reading",
+        "time"
+      ],
+      "errorType": "reading-comprehension",
+      "errorTarget": "time-detail",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading",
+        "time"
+      ],
+      "primarySkill": "reading"
+    },
+    {
+      "id": "MIC-PR-A1-01-01",
+      "canDoId": "PR-A1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Practise a greeting",
+      "titleEs": "Practica un saludo",
+      "prompt": "Say the phrase clearly: \"Good morning!\"",
+      "promptEs": "Di la frase con claridad: «¡Buenos días!»",
+      "targetPhrase": "Good morning!",
+      "requiredTokens": [
+        "good",
+        "morning"
+      ],
+      "feedback": {
+        "correct": "Good. Both key words were recognized.",
+        "correctEs": "Bien. Se reconocieron las dos palabras clave.",
+        "partial": "Try again slowly and pronounce both words.",
+        "partialEs": "Inténtalo otra vez despacio y pronuncia ambas palabras.",
+        "unavailable": "Speech recognition is unavailable. You can still read and repeat the phrase aloud.",
+        "unavailableEs": "El reconocimiento de voz no está disponible. Aun así, puedes leer y repetir la frase en voz alta."
+      },
+      "tags": [
+        "A1",
+        "pronunciation",
+        "greetings"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "key-words",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "greetings"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "Good morning!",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.85,
+        "slowRate": 0.6
+      },
+      "pronunciationHint": "Say GOOD clearly, then MOR-ning. Keep the two words separate."
+    },
+    {
+      "id": "MIC-PR-A1-01-02",
+      "canDoId": "PR-A1-01",
+      "type": "speak",
+      "skill": "pronunciation",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Repeat a short question",
+      "titleEs": "Repite una pregunta corta",
+      "prompt": "Say: \"How are you?\"",
+      "promptEs": "Di: «¿Cómo estás?»",
+      "targetPhrase": "How are you?",
+      "requiredTokens": [
+        "how",
+        "are",
+        "you"
+      ],
+      "feedback": {
+        "correct": "Good. The key words were recognized.",
+        "correctEs": "Bien. Se reconocieron las palabras clave.",
+        "partial": "Try again. Say all three words clearly.",
+        "partialEs": "Inténtalo otra vez. Di las tres palabras con claridad.",
+        "unavailable": "Speech recognition is unavailable. You can still practise aloud.",
+        "unavailableEs": "El reconocimiento de voz no está disponible. Puedes practicar en voz alta."
+      },
+      "tags": [
+        "A1",
+        "pronunciation",
+        "questions"
+      ],
+      "errorType": "pronunciation",
+      "errorTarget": "key-words",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "pronunciation",
+        "questions"
+      ],
+      "primarySkill": "speaking",
+      "audioText": "How are you?",
+      "audio": {
+        "language": "en-US",
+        "normalRate": 0.85,
+        "slowRate": 0.6
+      },
+      "pronunciationHint": "Use a natural rising intonation for the question."
+    },
+    {
+      "id": "MIC-CO-A1-01-01",
+      "canDoId": "CO-A1-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose a greeting",
+      "titleEs": "Elige un saludo",
+      "prompt": "You meet a person for the first time. What can you say?",
+      "promptEs": "Conoces a una persona por primera vez. ¿Qué puedes decir?",
+      "options": [
+        "Hello, my name is Ana.",
+        "I am yesterday.",
+        "Where yesterday?"
+      ],
+      "answer": "Hello, my name is Ana.",
+      "feedback": {
+        "correct": "Correct. You greet the person and introduce yourself.",
+        "correctEs": "Correcto. Saludas a la persona y te presentas.",
+        "incorrect": "Choose a greeting with a name.",
+        "incorrectEs": "Elige un saludo que incluya un nombre."
+      },
+      "tags": [
+        "A1",
+        "communication",
+        "greetings"
+      ],
+      "errorType": "communication",
+      "errorTarget": "introductions",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "introductions"
+      ],
+      "primarySkill": "communication"
+    },
+    {
+      "id": "MIC-CO-A1-01-02",
+      "canDoId": "CO-A1-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Ask a simple question",
+      "titleEs": "Haz una pregunta sencilla",
+      "prompt": "Which question can you ask when you meet someone?",
+      "promptEs": "¿Qué pregunta puedes hacer cuando conoces a alguien?",
+      "options": [
+        "What's your name?",
+        "You name is yesterday.",
+        "Name you are?"
+      ],
+      "answer": "What's your name?",
+      "feedback": {
+        "correct": "Correct. This is a common question to ask someone's name.",
+        "correctEs": "Correcto. Es una pregunta habitual para conocer el nombre de alguien.",
+        "incorrect": "Choose the question with the correct word order.",
+        "incorrectEs": "Elige la pregunta con el orden correcto de las palabras."
+      },
+      "tags": [
+        "A1",
+        "communication",
+        "questions"
+      ],
+      "errorType": "communication",
+      "errorTarget": "question-formation",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "questions"
+      ],
+      "primarySkill": "communication"
     }
   ]
-}
+}\n
