@@ -860,7 +860,64 @@ function startExperience(experienceId, starterPrompt = "") {
   renderExperience();
 }
 
-function renderExperience() {
+
+function getConversationScaffold(experience, stage, level) {
+  const prompt = String(stage?.prompt || "").toLowerCase();
+  const topic = String(experienceSession?.starterPrompt || "").trim();
+  let frameEn = "I think [main idea] because [reason]. For example, [specific detail].";
+  let frameEs = "Creo que [idea principal] porque [razón]. Por ejemplo, [detalle concreto].";
+  let modelEn = "I think learning English is useful because it helps me communicate with more people.";
+  let modelEs = "Creo que aprender inglés es útil porque me ayuda a comunicarme con más personas.";
+  if (/work|job|profession|responsibilit/.test(prompt)) {
+    frameEn = "I work as a [job]. I usually [task]. I enjoy it because [reason].";
+    frameEs = "Trabajo como [profesión]. Normalmente [tarea]. Me gusta porque [razón].";
+    modelEn = "I work as a teacher. I plan lessons and help students learn. I enjoy it because every day is different.";
+    modelEs = "Trabajo como profesor. Planeo clases y ayudo a los estudiantes a aprender. Me gusta porque cada día es diferente.";
+  } else if (/enjoy|like|prefer|favourite|favorite/.test(prompt)) {
+    frameEn = "I enjoy [activity] because [reason]. I also like [related activity].";
+    frameEs = "Disfruto [actividad] porque [razón]. También me gusta [actividad relacionada].";
+    modelEn = "I enjoy reading because I learn new things. I also like listening to music.";
+    modelEs = "Disfruto leer porque aprendo cosas nuevas. También me gusta escuchar música.";
+  } else if (/difficult|challenge|problem/.test(prompt)) {
+    frameEn = "One challenge is [problem]. I try to [action] because [reason].";
+    frameEs = "Un reto es [problema]. Intento [acción] porque [razón].";
+    modelEn = "One challenge is finding enough time. I make a plan because it helps me stay organized.";
+    modelEs = "Un reto es encontrar suficiente tiempo. Hago un plan porque me ayuda a organizarme.";
+  } else if (/future|improve|goal|plan|would you like/.test(prompt)) {
+    frameEn = "I would like to [goal]. I am going to [next step] because [reason].";
+    frameEs = "Me gustaría [objetivo]. Voy a [siguiente paso] porque [razón].";
+    modelEn = "I would like to speak English more confidently. I am going to practise a little every day.";
+    modelEs = "Me gustaría hablar inglés con más confianza. Voy a practicar un poco cada día.";
+  } else if (/question|ask me|interviewer/.test(prompt)) {
+    frameEn = "What do you think about [topic]? / Could you tell me more about [topic]?";
+    frameEs = "¿Qué piensas sobre [tema]? / ¿Podrías contarme más sobre [tema]?";
+    modelEn = "What do you think about learning languages online?";
+    modelEs = "¿Qué piensas sobre aprender idiomas en línea?";
+  } else if (/experience|project|achievement|happened/.test(prompt)) {
+    frameEn = "I [did/completed] [experience]. I learned [lesson] because [reason].";
+    frameEs = "Yo [hice/completé] [experiencia]. Aprendí [lección] porque [razón].";
+    modelEn = "I completed a group project. I learned to share ideas and solve problems together.";
+    modelEs = "Completé un proyecto en grupo. Aprendí a compartir ideas y resolver problemas en equipo.";
+  }
+  if (level === "A1") {
+    frameEn = "I am [person/thing]. I like [thing]. It is [adjective].";
+    frameEs = "Soy/Estoy [persona/cosa]. Me gusta [algo]. Es [adjetivo].";
+    modelEn = "I like music. It is relaxing. I listen to it at home.";
+    modelEs = "Me gusta la música. Es relajante. La escucho en casa.";
+    if (/work|job|profession/.test(prompt)) {
+      frameEn = "I am a [job]. I work at [place]. I like [activity].";
+      frameEs = "Soy [profesión]. Trabajo en [lugar]. Me gusta [actividad].";
+      modelEn = "I am a teacher. I work at a school. I like helping students.";
+      modelEs = "Soy profesor. Trabajo en un colegio. Me gusta ayudar a los estudiantes.";
+    }
+  }
+  const topicNote = topic ? '<p class="scaffold-topic"><strong>Your topic · Tu tema:</strong> ' + escapeHtml(topic) + '</p>' : "";
+  return '<details class="conversation-scaffold"><summary>How can I answer? · ¿Cómo puedo responder?</summary>' + topicNote +
+    '<p><strong>Sentence structure · Estructura:</strong></p><p>' + escapeHtml(frameEn) + '</p><p class="spanish">' + escapeHtml(frameEs) + '</p>' +
+    '<details class="model-answer"><summary>Example answer · Respuesta de ejemplo</summary><p>' + escapeHtml(modelEn) + '</p><p class="spanish">' + escapeHtml(modelEs) + '</p></details>' +
+    '<p class="spanish scaffold-note">Cambia las palabras entre corchetes por tus propias ideas. El ejemplo es una guía, no una respuesta que debas copiar.</p></details>';
+}
+\nfunction renderExperience() {
   const experience = getExperience(experienceLibrary, experienceSession?.experienceId);
   if (!experience || !experienceSession) {
     renderPracticeHome();
@@ -948,7 +1005,7 @@ function renderExperience() {
     renderPracticeHome();
   });
 
-  const submit = (response) => handleExperienceResponse(experience, stage, response);
+  const responseInput = document.querySelector("#experienceResponse");\n  responseInput?.addEventListener("input", () => renderLiveWritingCoach(experience, stage, responseInput.value));\n  const submit = (response) => handleExperienceResponse(experience, stage, response);
   const responseInput = document.querySelector("#experienceResponse");
   responseInput?.addEventListener("input", () => renderLiveWritingCoach(experience, stage, responseInput.value));
   document.querySelector("#experienceCheckButton").addEventListener("click", () => {
@@ -959,7 +1016,7 @@ function renderExperience() {
       { id: `${experience.id}-${stage.id}`, targetPhrase: stage.prompt, context: experience.contexts?.[0] || "general" },
       (transcript) => {
         const input = document.querySelector("#experienceResponse");
-        if (input) input.value = transcript;
+        if (input) { input.value = transcript; renderLiveWritingCoach(experience, stage, transcript); }
       }
     );
     const stopButton = document.querySelector("#experienceStopButton");
@@ -973,7 +1030,7 @@ function applyLinguisticReview(response, result = {}, skill = "writing") {
   const activity = { id: `HODIE-${skill}-response`, canDoId: session?.canDoId || practice?.canDoId || "SP-A2-01", level: profile?.level || "A2", skill, type: skill === "writing" ? "mini-production" : "conversation" };
   const linguisticLinks = getLinguisticResourcesForActivity(activity);
   if (!text || !["writing", "speaking"].includes(skill)) return { ...result, linguisticLinks };
-  const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 1 });
+  const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 4 });
   const contextualSuggestions = searchLinguisticKnowledge(text, {
     types: ["grammar", "vocabulary"],
     learnerLevel: profile?.level || "A2",
@@ -1010,10 +1067,10 @@ function renderLiveWritingCoach(experience, stage, response) {
   if (!output) return;
   const text = String(response || "").trim();
   if (text.length < 3) { output.innerHTML = '<p>Write a little more to see guidance.</p><p class="spanish">Escribe un poco más para ver sugerencias.</p>'; return; }
-  const languageReview = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 2 });
+  const languageReview = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 4 });
   const turnReview = evaluateExperienceTurn(experience, stage, text);
-  const corrections = languageReview.errors.slice(0, 2), missing = (turnReview.missing || []).slice(0, 2), sections = [];
-  if (corrections.length) sections.push('<div class="live-coach-section"><strong>Possible correction · Posible corrección</strong><p class="live-coach-comparison"><span>' + escapeHtml(text) + '</span><span aria-hidden="true"> → </span><strong>' + escapeHtml(languageReview.correctedText) + '</strong></p>' + corrections.map(item => '<p>' + escapeHtml(item.message || 'Review this language pattern.') + '</p><p class="spanish">' + escapeHtml(item.messageEs || 'Revisa este patrón de inglés.') + '</p>').join('') + '</div>');
+  const corrections = languageReview.errors.slice(0, 4), missing = (turnReview.missing || []).slice(0, 2), sections = [];
+  if (corrections.length) sections.push('<div class="live-coach-section"><strong>Possible correction · Posible corrección</strong><p class="live-coach-comparison"><span>' + escapeHtml(text) + '</span><span aria-hidden="true"> → </span><strong>' + escapeHtml(languageReview.correctedText) + '</strong></p>' + corrections.map(item => '<p><strong>' + escapeHtml(item.actual || '') + ' → ' + escapeHtml(item.expected || item.correction || '') + '</strong></p><p>' + escapeHtml(item.message || 'Review this language pattern.') + '</p><p class="spanish">' + escapeHtml(item.messageEs || 'Revisa este patrón de inglés.') + '</p>' + (item.examples?.length ? '<p><strong>Example · Ejemplo:</strong> ' + escapeHtml(item.examples[0]) + '</p>' : '')).join('') + '</div>');
   if (missing.length) sections.push('<div class="live-coach-section"><strong>What to add · Qué hace falta</strong>' + missing.map(item => '<p>' + escapeHtml(item.label || item.id) + '</p><p class="spanish">' + escapeHtml(item.missingMessageEs || 'Incluye esta información para responder mejor a la pregunta.') + '</p>').join('') + '</div>');
   if (!sections.length) sections.push('<div class="live-coach-section"><strong>No known issue detected yet · No se detecta un problema conocido por ahora</strong><p>Your sentence may still contain errors that HODIE does not recognize.</p><p class="spanish">Tu oración aún podría tener errores que HODIE no reconoce. Esta revisión no garantiza que todo esté correcto.</p></div>');
   output.innerHTML = sections.join('');
