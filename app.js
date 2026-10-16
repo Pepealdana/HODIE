@@ -1,4 +1,4 @@
-import { createSession } from "./src/learning-session.js";
+import { createSession, createSessionForCanDo } from "./src/learning-session.js";
 import { startSession, requestEvidence } from "./src/session-state.js";
 import { runSessionEvidenceCycle } from "./src/session-runner.js";
 import { getStatus } from "./src/learning-engine.js";
@@ -547,23 +547,23 @@ function getActivitySkill(activity) {
 
 function startReportedSpeech() {
   const level = document.querySelector("#reportedSpeechLevel")?.value || (session?.target?.level === "A2+" ? "A2" : session?.target?.level || "A2");
+  const skill = document.querySelector("#reportedSpeechSkill")?.value || "grammar";
   if (level === "B2" && !getB2UnlockStatus(matrix, profile).unlocked) {
     renderError(new Error("B2 remains locked until the B1 readiness requirements are met."));
     return;
   }
-  if (level !== session?.target?.level) {
-    try {
-      session = createSession(matrix, library, profile, {
-        levels: [level], allowUnmetPrerequisites: true,
-        contextTerms: ["daily-life", "messages", "conversation", "reported-speech"],
-        sessionId: "reported-speech-" + Date.now()
-      });
-      saveSession();
-      levelBadge.textContent = session.target.level;
-    } catch {
-      renderError(new Error("No learning target is available for " + level + " yet."));
-      return;
-    }
+  const skillPrefix = { grammar: "GR", listening: "LI", reading: "RE", writing: "WR", speaking: "SP", communication: "CO" }[skill];
+  const canDoId = "RS-" + level + "-" + skillPrefix + "-01";
+  try {
+    session = createSessionForCanDo(matrix, library, profile, canDoId, {
+      mode: "reported-speech", durationMinutes: 6,
+      sessionId: "reported-speech-" + level + "-" + skill + "-" + Date.now()
+    });
+    saveSession();
+    levelBadge.textContent = session.target.level;
+  } catch {
+    renderError(new Error("No reported-speech target is available for " + level + " and " + skill + " yet."));
+    return;
   }
   startPractice("mixed", "REPORTED-SPEECH");
 }
@@ -665,7 +665,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
       '<div class="reported-speech-heading"><p class="kicker">LANGUAGE IN CONTEXT · GRAMMAR + COMMUNICATION</p><h3 id="reportedSpeechTitle">Reported speech</h3><p class="spanish">Estilo indirecto: cuenta lo que otra persona dijo sin cambiar su sentido.</p><p>Learn to pass on messages, report questions and summarize what people said.</p></div>' +
       '<div class="reported-speech-controls"><label for="reportedSpeechLevel">Practice level · Nivel</label><select id="reportedSpeechLevel">' +
         ["A1","A2","B1","B2"].map((item) => '<option value="' + item + '" ' + (item === (level === "A2+" ? "A2" : level) ? "selected" : "") + ' ' + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? "disabled" : "") + '>' + item + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? " · Locked" : "") + '</option>').join("") +
-      '</select><button class="primary" id="startReportedSpeechButton" type="button">Start pathway →</button></div>' +
+      '</select><label for="reportedSpeechSkill">Skill · Habilidad</label><select id="reportedSpeechSkill"><option value="grammar">Grammar · Gramática</option><option value="listening">Listening · Escucha</option><option value="reading">Reading · Lectura</option><option value="writing">Writing · Escritura</option><option value="speaking">Speaking · Hablar</option><option value="communication">Communication · Interacción</option></select><button class="primary" id="startReportedSpeechButton" type="button">Start pathway →</button></div>' +
       '<p class="reported-speech-note">Short practice in grammar, reading, listening, writing, speaking and interaction. B2 activities are prepared but remain hidden until the readiness gate is met.</p>' +
     '</section>' +
     '<section class="skill-picker" aria-labelledby="skillPickerTitle"><div class="section-heading skill-picker-heading"><div><h3 id="skillPickerTitle">' + (isBeginner ? "Elige una habilidad" : "Choose a skill") + '</h3>' +
@@ -1342,9 +1342,8 @@ function startPractice(mode, activityId = null) {
       renderError(new Error("B2 is locked until your B1 evidence meets the readiness criteria."));
       return;
     }
-    const priority = ["grammar", "reading", "listening", "writing", "speaking", "communication"];
-    const pool = microLibrary.activities.filter((activity) => activity.level === level && activity.tags?.includes("reported-speech"));
-    selectedActivities = priority.map((skill) => pool.find((activity) => activity.skill === skill)).filter(Boolean);
+    const pool = microLibrary.activities.filter((activity) => activity.level === level && activity.canDoId === session.target.canDoId && activity.tags?.includes("reported-speech"));
+    selectedActivities = pool.slice().sort((a, b) => Number(a.type === "mini-production") - Number(b.type === "mini-production"));
     if (selectedActivities.length < 4) selectedActivities = pool.slice(0, 6);
   } else {
     selectedActivities = activityId
