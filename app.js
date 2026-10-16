@@ -1702,6 +1702,16 @@ function showFeedback(activity, result, response, options = {}) {
     const buttonLabel = success ? "Continue to progress" : "Continue with this attempt";
     const feedbackArea = document.querySelector("#microFeedback");
     feedbackArea.insertAdjacentHTML("beforeend", `
+      <div class="practice-confidence">
+        <label for="practiceConfidence">How confident were you? · ¿Qué tanta confianza tuviste?</label>
+        <select id="practiceConfidence">
+          <option value="1">1 · I needed a lot of help / Necesité mucha ayuda</option>
+          <option value="2">2 · I needed help / Necesité ayuda</option>
+          <option value="3" selected>3 · Somewhat confident / Algo de confianza</option>
+          <option value="4">4 · I did it independently / Lo hice de forma independiente</option>
+          <option value="5">5 · Very confident / Mucha confianza</option>
+        </select>
+      </div>
       <div class="actions final-feedback-actions">
         <button class="primary compact" id="submitEvidenceButton" type="button">${buttonLabel}</button>
         ${!success ? '<button class="secondary compact" id="retryFinalButton" type="button">Try again</button>' : ""}
@@ -1904,6 +1914,16 @@ function submitFinalEvidence(response) {
   const base = Math.min(0.95, Math.max(0.55, microAverage || finalResult.score || 0));
   const independent = finalResult.taskComplete === true && practice.finalAttempts === 1;
 
+  const confidence = Number(document.querySelector("#practiceConfidence")?.value) || 3;
+  const isReportedSpeech = practice.activities.some((item) => item.tags?.includes("reported-speech"));
+  const dimensionsBySkill = {
+    grammar: { accuracy: base, communicativeUse: finalResult.taskComplete ? 0.9 : base },
+    listening: { accuracy: base, gist: base, details: base },
+    reading: { accuracy: base, details: base, gist: base },
+    writing: { taskCompletion: finalResult.taskComplete ? 0.9 : base, accuracy: base, coherence: base },
+    speaking: { taskCompletion: finalResult.taskComplete ? 0.9 : base, fluency: base, pronunciation: base },
+    communication: { taskCompletion: finalResult.taskComplete ? 0.9 : base, interaction: base, confidence: confidence / 5 }
+  };
   const evidence = {
     canDoId: session.target.canDoId,
     sessionId: session.id,
@@ -1911,8 +1931,8 @@ function submitFinalEvidence(response) {
     contextId: activity.context || "personal",
     timestamp: new Date().toISOString(),
     independent,
-    confidence: 3,
-    dimensions: {
+    confidence,
+    dimensions: isReportedSpeech ? (dimensionsBySkill[session.target.skill] || dimensionsBySkill.communication) : {
       taskCompletion: finalResult.taskComplete ? 0.9 : Math.min(0.65, finalResult.score || 0),
       grammar: finalResult.languageErrors?.length ? Math.min(0.7, base) : Math.max(0.8, base),
       fluency: finalResult.correct ? Math.max(0.8, base) : base,
