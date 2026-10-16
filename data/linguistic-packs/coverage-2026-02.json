@@ -1347,7 +1347,10 @@
       "explanationEs": "Para una acción que ocurre ahora, usa am/is/are + la forma -ing del verbo principal.",
       "examples": [
         "I am teaching now.",
-        "They are building a robot."
+        "They are building a robot.",
+        "I am playing football now.",
+        "She is opening the window.",
+        "He is feeling better."
       ],
       "examplesBilingual": [
         {
@@ -1357,10 +1360,24 @@
         {
           "en": "They are building a robot.",
           "es": "Están construyendo un robot."
+        },
+        {
+          "en": "I am playing football now.",
+          "es": "Estoy jugando al fútbol ahora."
+        },
+        {
+          "en": "She is opening the window.",
+          "es": "Ella está abriendo la ventana."
+        },
+        {
+          "en": "He is feeling better.",
+          "es": "Él se está sintiendo mejor."
         }
       ],
       "incorrect": [
-        "I am teach now."
+        "I am teach now.",
+        "They are build a robot.",
+        "I am play football now."
       ],
       "exceptions": [
         "Be + adjective/noun is valid: I am ready; They are students.",
@@ -1387,6 +1404,12 @@
           "type": "write",
           "prompt": "Describe what someone is doing now.",
           "promptEs": "Describe qué está haciendo alguien ahora."
+        },
+        {
+          "type": "correct",
+          "prompt": "Correct: I am play football.",
+          "promptEs": "Corrige: I am play football.",
+          "answer": "I am playing football."
         }
       ],
       "activityLinks": {
@@ -1412,7 +1435,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\b(I am|he is|she is|it is|we are|they are|you are)\\s+(work|teach|build|study|learn|write|read|use)\\b",
+        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(work|teach|build|study|learn|write|read|use|play|eat|drink|talk|walk|run|swim|cook|sleep|drive|watch|listen|open|clean|help|look|wait|sit|stand|get|put|take|come|go|dance|sing|buy|call|meet|keep|feel|make|try|carry|wash|rain|shop|stop|plan|cut|win|dig|hit|let|set|hug|rub|nod|tap|chat)\\\\b",
         "flags": "gi",
         "replacement": "$1 $2",
         "transform": {
@@ -6111,6 +6134,136 @@
       ],
       "relatedVocabularyIds": [
         "VOC-NOUN-DEVICE"
+      ]
+    },
+    {
+      "id": "PRES-CONT-FEEL-001",
+      "implementation": "present-continuous-feel-adjective",
+      "level": "A2",
+      "category": "present-continuous",
+      "title": "Use feeling before an adjective after am/is/are",
+      "titleEs": "Usa feeling antes de un adjetivo después de am/is/are",
+      "explanation": "When you use am/is/are before the verb feel and then an adjective, use feeling: “I am feeling good.” A natural alternative to “I am feeling good” is “I'm doing well.”",
+      "explanationEs": "Cuando usas am/is/are antes del verbo feel y después un adjetivo, usa feeling: «I am feeling good». Una alternativa natural a «I am feeling good» es «I'm doing well».",
+      "examples": [
+        "I am feeling good.",
+        "She is feeling tired.",
+        "They are feeling better."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "I am feeling good.",
+          "es": "Me estoy sintiendo bien."
+        },
+        {
+          "en": "She is feeling tired.",
+          "es": "Ella se siente cansada."
+        },
+        {
+          "en": "They are feeling better.",
+          "es": "Se están sintiendo mejor."
+        }
+      ],
+      "incorrect": [
+        "I am feel good.",
+        "She is feel tired.",
+        "They are feel better."
+      ],
+      "exceptions": [
+        "“I feel good” is also correct.",
+        "“I am good” can be correct when describing ability, status or a general condition; do not add “feeling” automatically."
+      ],
+      "negativeCases": [
+        {
+          "text": "I feel good.",
+          "reason": "The present simple is correct."
+        },
+        {
+          "text": "I am feeling good.",
+          "reason": "The present continuous is already correct."
+        },
+        {
+          "text": "I am ready.",
+          "reason": "Be + adjective is correct; there is no verb-form error."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct: I am feel good.",
+          "promptEs": "Corrige: I am feel good.",
+          "answer": "I am feeling good."
+        },
+        {
+          "type": "choose",
+          "prompt": "Which sentence is correct?",
+          "promptEs": "¿Cuál oración es correcta?",
+          "options": [
+            "I am feeling good.",
+            "I am feel good."
+          ],
+          "answer": "I am feeling good."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading",
+          "interaction"
+        ],
+        "activityTypes": [
+          "mini-production",
+          "conversation",
+          "choose",
+          "correct"
+        ],
+        "tags": [
+          "present-continuous",
+          "feel",
+          "feelings",
+          "wellbeing"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(feel)\\\\s+(good|well|bad|better|worse|fine|great|okay|ok|happy|sad|tired|sick|nervous|relaxed|excited|cold|hot|hungry|thirsty)\\\\b",
+        "flags": "gi",
+        "replacement": "$1 $2 $3",
+        "transform": {
+          "type": "toGerund",
+          "capture": 2
+        }
+      },
+      "naturalAlternatives": [
+        {
+          "en": "Good, I'm doing well.",
+          "es": "Bien, me encuentro bien.",
+          "note": "A natural reply to “How are you doing?”",
+          "noteEs": "Una respuesta natural a «¿Cómo estás?»."
+        }
+      ],
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PRES-CONT-FEEL-001",
+        "present-continuous-feel-adjective",
+        "feel good",
+        "feel tired",
+        "feeling",
+        "I'm doing well."
       ]
     }
   ],
@@ -12416,6 +12569,38 @@
       "text": "Some information is available online.",
       "expectRules": [],
       "expectCorrection": "Some information is available online."
+    },
+    {
+      "id": "TC-PRES-CONT-FEEL-001",
+      "text": "Good, I am feel good.",
+      "expectRules": [
+        "PRES-CONT-FEEL-001"
+      ],
+      "expectCorrection": "Good, I am feeling good."
+    },
+    {
+      "id": "TC-PRES-CONT-PLAY-001",
+      "text": "I am play football now.",
+      "expectRules": [
+        "PRES-CONT-BASE-001"
+      ],
+      "expectCorrection": "I am playing football now."
+    },
+    {
+      "id": "TC-PRES-CONT-SLEEP-001",
+      "text": "They are sleep now.",
+      "expectRules": [
+        "PRES-CONT-BASE-001"
+      ],
+      "expectCorrection": "They are sleeping now."
+    },
+    {
+      "id": "TC-PRES-CONT-OPEN-001",
+      "text": "She is open the window.",
+      "expectRules": [
+        "PRES-CONT-BASE-001"
+      ],
+      "expectCorrection": "She is opening the window."
     }
   ]
 }
