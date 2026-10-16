@@ -5001,6 +5001,821 @@
         ],
         "feedbackFocus": "communication"
       }
+    },
+    {
+      "id": "MIC-GR-RS-A1-01",
+      "canDoId": "GR-RS-A1-01",
+      "type": "match",
+      "skill": "reading",
+      "context": "everyday-life",
+      "level": "A1",
+      "title": "Match the message",
+      "titleEs": "Relaciona el mensaje",
+      "prompt": "Match the short message with its meaning.",
+      "promptEs": "Relaciona el mensaje breve con su significado.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "messages",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "Hello!",
+        "Goodbye!",
+        "Thank you!"
+      ],
+      "tokens": [
+        "A greeting",
+        "A farewell",
+        "Gratitude"
+      ],
+      "acceptableAnswers": [
+        "A greeting",
+        "A farewell",
+        "Gratitude"
+      ],
+      "answer": [
+        "A greeting",
+        "A farewell",
+        "Gratitude"
+      ]
+    },
+    {
+      "id": "MIC-GR-RS-A1-02",
+      "canDoId": "GR-RS-A1-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "everyday-life",
+      "level": "A1",
+      "title": "Understand a short message",
+      "titleEs": "Comprende un mensaje breve",
+      "prompt": "Choose what the speaker says in a short familiar message.",
+      "promptEs": "Elige lo que dice la persona en un mensaje breve y conocido.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "greetings",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "Hello!",
+        "Good night!",
+        "Thank you!"
+      ],
+      "acceptableAnswers": [
+        "Hello!",
+        "Good night!",
+        "Thank you!"
+      ],
+      "answer": "Hello!"
+    },
+    {
+      "id": "MIC-GR-RS-A1-03",
+      "canDoId": "GR-RS-A1-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "everyday-life",
+      "level": "A1",
+      "title": "Report a greeting",
+      "titleEs": "Transmite un saludo",
+      "prompt": "Tom says, “Hello!” Tom ___ hello.",
+      "promptEs": "Tom dice: «¡Hola!». Tom ___ hola.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "say",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "says",
+        "said",
+        "asks"
+      ],
+      "acceptableAnswers": [
+        "says",
+        "said",
+        "asks"
+      ],
+      "answer": "says"
+    },
+    {
+      "id": "MIC-GR-RS-A1-04",
+      "canDoId": "GR-RS-A1-01",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "everyday-life",
+      "level": "A1",
+      "title": "Pass on a message",
+      "titleEs": "Transmite un mensaje",
+      "prompt": "Tell a partner what your friend says: “Welcome!”",
+      "promptEs": "Dile a un compañero lo que dice tu amigo: «¡Bienvenido!».",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "communication",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Good. Keep the original meaning and report the message clearly.",
+        "correctEs": "Bien. Conserva el sentido original y transmite el mensaje con claridad.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo.",
+        "partial": "Try reporting the message in one complete sentence.",
+        "partialEs": "Intenta transmitir el mensaje en una oración completa."
+      },
+      "support": {
+        "optionalSentenceStarters": [
+          "Tom says...",
+          "My friend says..."
+        ]
+      }
+    },
+    {
+      "id": "MIC-GR-RS-A2-01",
+      "canDoId": "GR-RS-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "everyday-life",
+      "level": "A2",
+      "title": "Report a simple statement",
+      "titleEs": "Transmite una afirmación sencilla",
+      "prompt": "Anna said, “I am tired.” Anna said that she ___ tired.",
+      "promptEs": "Anna dijo: «Estoy cansada». Anna dijo que ___ cansada.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "backshift",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "is",
+        "was",
+        "be"
+      ],
+      "acceptableAnswers": [
+        "is",
+        "was",
+        "be"
+      ],
+      "answer": "was"
+    },
+    {
+      "id": "MIC-GR-RS-A2-02",
+      "canDoId": "GR-RS-A2-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "everyday-life",
+      "level": "A2",
+      "title": "Write a reported message",
+      "titleEs": "Escribe un mensaje indirecto",
+      "prompt": "Rewrite: “I live near the station,” Mark said.",
+      "promptEs": "Reescribe: «Vivo cerca de la estación», dijo Mark.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "writing",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Compare your version with the model. Other versions may also be correct.",
+        "correctEs": "Compara tu versión con el modelo. Otras versiones también pueden ser correctas.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "expectedResponse": "Mark said that he lived near the station."
+    },
+    {
+      "id": "MIC-GR-RS-A2-03",
+      "canDoId": "GR-RS-A2-01",
+      "type": "match",
+      "skill": "reading",
+      "context": "everyday-life",
+      "level": "A2",
+      "title": "Read a reported message",
+      "titleEs": "Lee un mensaje indirecto",
+      "prompt": "Match each direct message to its reported version.",
+      "promptEs": "Relaciona cada mensaje directo con su versión indirecta.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "reading",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "“I am busy.”",
+        "“I like music.”",
+        "“I work here.”"
+      ],
+      "tokens": [
+        "She said she was busy.",
+        "He said he liked music.",
+        "They said they worked there."
+      ],
+      "acceptableAnswers": [
+        "She said she was busy.",
+        "He said he liked music.",
+        "They said they worked there."
+      ],
+      "answer": [
+        "She said she was busy.",
+        "He said he liked music.",
+        "They said they worked there."
+      ]
+    },
+    {
+      "id": "MIC-GR-RS-A2-04",
+      "canDoId": "GR-RS-A2-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "everyday-life",
+      "level": "A2",
+      "title": "Catch the key information",
+      "titleEs": "Identifica la información clave",
+      "prompt": "Choose the reported message that preserves the original meaning.",
+      "promptEs": "Elige el mensaje indirecto que conserva el sentido original.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "a2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "listening",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "“I need help.”",
+        "She said she needed help.",
+        "She said she needs helped."
+      ],
+      "acceptableAnswers": [
+        "She said she needed help.",
+        "She said she need help.",
+        "She said she needed helped."
+      ],
+      "answer": "She said she needed help."
+    },
+    {
+      "id": "MIC-GR-RS-B1-01",
+      "canDoId": "GR-RS-B1-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "everyday-life",
+      "level": "B1",
+      "title": "Report a question",
+      "titleEs": "Transmite una pregunta",
+      "prompt": "“Where do you live?” he asked me. He asked me where I ___.",
+      "promptEs": "«¿Dónde vives?», me preguntó. Me preguntó dónde ___.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "reported-questions",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "live",
+        "lived",
+        "did live"
+      ],
+      "acceptableAnswers": [
+        "live",
+        "lived",
+        "did live"
+      ],
+      "answer": "lived"
+    },
+    {
+      "id": "MIC-GR-RS-B1-02",
+      "canDoId": "GR-RS-B1-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "everyday-life",
+      "level": "B1",
+      "title": "Report a request",
+      "titleEs": "Transmite una petición",
+      "prompt": "Rewrite: “Please send me the file,” Maria said to Ben.",
+      "promptEs": "Reescribe: «Por favor, envíame el archivo», le dijo María a Ben.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "reported-requests",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Compare your version with the model. Other versions may also be correct.",
+        "correctEs": "Compara tu versión con el modelo. Otras versiones también pueden ser correctas.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "expectedResponse": "Maria asked Ben to send her the file."
+    },
+    {
+      "id": "MIC-GR-RS-B1-03",
+      "canDoId": "GR-RS-B1-01",
+      "type": "match",
+      "skill": "reading",
+      "context": "everyday-life",
+      "level": "B1",
+      "title": "Identify the reported meaning",
+      "titleEs": "Identifica el significado indirecto",
+      "prompt": "Match the question or request to its reported version.",
+      "promptEs": "Relaciona la pregunta o petición con su versión indirecta.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "reading",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "“Can you help me?”",
+        "“Where is the station?”",
+        "“Please wait.”"
+      ],
+      "tokens": [
+        "She asked if I could help her.",
+        "He asked where the station was.",
+        "She asked me to wait."
+      ],
+      "acceptableAnswers": [
+        "She asked if I could help her.",
+        "He asked where the station was.",
+        "She asked me to wait."
+      ],
+      "answer": [
+        "She asked if I could help her.",
+        "He asked where the station was.",
+        "She asked me to wait."
+      ]
+    },
+    {
+      "id": "MIC-GR-RS-B1-04",
+      "canDoId": "GR-RS-B1-01",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "everyday-life",
+      "level": "B1",
+      "title": "Retell a conversation",
+      "titleEs": "Cuenta una conversación",
+      "prompt": "Tell a partner what two people said and what one person asked.",
+      "promptEs": "Cuéntale a un compañero qué dijeron dos personas y qué preguntó una de ellas.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b1"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "speaking",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Good. Keep the original meaning and report the message clearly.",
+        "correctEs": "Bien. Conserva el sentido original y transmite el mensaje con claridad.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo.",
+        "partial": "Try reporting the message in one complete sentence.",
+        "partialEs": "Intenta transmitir el mensaje en una oración completa."
+      },
+      "support": {
+        "optionalSentenceStarters": [
+          "He said that...",
+          "She asked me to...",
+          "They told us that..."
+        ]
+      }
+    },
+    {
+      "id": "MIC-GR-RS-B2-01",
+      "canDoId": "GR-RS-B2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "everyday-life",
+      "level": "B2",
+      "title": "Choose a precise reporting verb",
+      "titleEs": "Elige un verbo de transmisión preciso",
+      "prompt": "The witness did not accept responsibility. She ___ having caused the damage.",
+      "promptEs": "La testigo no aceptó la responsabilidad. Ella ___ haber causado el daño.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "reporting-verbs",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "admitted",
+        "denied",
+        "suggested"
+      ],
+      "acceptableAnswers": [
+        "admitted",
+        "denied",
+        "suggested"
+      ],
+      "answer": "denied"
+    },
+    {
+      "id": "MIC-GR-RS-B2-02",
+      "canDoId": "GR-RS-B2-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "everyday-life",
+      "level": "B2",
+      "title": "Summarise a discussion",
+      "titleEs": "Resume una discusión",
+      "prompt": "Summarise a discussion, distinguishing a claim, a suggestion and an uncertainty.",
+      "promptEs": "Resume una discusión distinguiendo una afirmación, una sugerencia y una incertidumbre.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "writing",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Compare your version with the model. Other versions may also be correct.",
+        "correctEs": "Compara tu versión con el modelo. Otras versiones también pueden ser correctas.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "expectedResponse": "A short summary preserving claims, stance and uncertainty."
+    },
+    {
+      "id": "MIC-GR-RS-B2-03",
+      "canDoId": "GR-RS-B2-01",
+      "type": "match",
+      "skill": "reading",
+      "context": "everyday-life",
+      "level": "B2",
+      "title": "Preserve stance and nuance",
+      "titleEs": "Conserva la postura y los matices",
+      "prompt": "Match each statement with the report that preserves its degree of certainty.",
+      "promptEs": "Relaciona cada afirmación con la versión indirecta que conserva su grado de certeza.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "stance",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Correct. You preserved the message and used the target structure.",
+        "correctEs": "Correcto. Conservaste el mensaje y usaste la estructura objetivo.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
+      },
+      "options": [
+        "“It may be a problem.”",
+        "“I strongly disagree.”",
+        "“Perhaps we should wait.”"
+      ],
+      "tokens": [
+        "She said it might be a problem.",
+        "He strongly disagreed.",
+        "She suggested that they wait."
+      ],
+      "acceptableAnswers": [
+        "She said it might be a problem.",
+        "He strongly disagreed.",
+        "She suggested that they wait."
+      ],
+      "answer": [
+        "She said it might be a problem.",
+        "He strongly disagreed.",
+        "She suggested that they wait."
+      ]
+    },
+    {
+      "id": "MIC-GR-RS-B2-04",
+      "canDoId": "GR-RS-B2-01",
+      "type": "mini-production",
+      "skill": "speaking",
+      "context": "everyday-life",
+      "level": "B2",
+      "title": "Report a discussion accurately",
+      "titleEs": "Transmite una discusión con precisión",
+      "prompt": "Give a short oral summary of a discussion, including disagreement and uncertainty.",
+      "promptEs": "Haz un resumen oral breve de una discusión, incluyendo desacuerdo e incertidumbre.",
+      "tags": [
+        "reported-speech",
+        "reported-speech",
+        "b2"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-speech",
+        "say",
+        "tell",
+        "ask"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "speaking",
+      "resources": [
+        "speaking",
+        "grammar"
+      ],
+      "feedback": {
+        "correct": "Good. Keep the original meaning and report the message clearly.",
+        "correctEs": "Bien. Conserva el sentido original y transmite el mensaje con claridad.",
+        "incorrect": "Check the speaker, pronouns and reporting structure. Compare the model and try again.",
+        "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo.",
+        "partial": "Try reporting the message in one complete sentence.",
+        "partialEs": "Intenta transmitir el mensaje en una oración completa."
+      },
+      "support": {
+        "optionalSentenceStarters": [
+          "She denied...",
+          "He argued that...",
+          "They were uncertain whether..."
+        ]
+      }
     }
   ]
 }
