@@ -2,7 +2,7 @@
 
 ## Activity inventory
 
-| Skill | A1 | A2 | B1 | B2 (locked pack) |
+| Skill | A1 active | A2 active | B1 active | B2 micro (locked) |
 |---|---:|---:|---:|---:|
 | Grammar | 3 | 27 | 11 | 4 |
 | Vocabulary | 3 | 15 | 6 | 4 |
@@ -12,9 +12,9 @@
 | Reading | 3 | 7 | 8 | 4 |
 | Pronunciation | 3 | 8 | 6 | 4 |
 | Communication | 4 | 7 | 9 | 4 |
-| **Active activities total** | **25** | **98** | **71** | **32** |
+| **Active totals / B2 micro only** | **25** | **98** | **71** | **32** |
 
-The A1/A2/B1 totals in this table include the current full-activity bank as well as micro-practice. B2 remains in a separate package and is not counted as active practice.
+The A1/A2/B1 totals in this table include the current full-activity bank as well as micro-practice. The B2 column counts only its 32 micro-activities; its eight full tasks and three guided simulations are additional and remain locked outside the active banks.
 
 Additional content in the separate B2 package: **8 full tasks, 3 guided simulations and 8 B2 Can-Do targets**, in addition to its 32 micro-activities. The B2 package is built now but stays outside the active banks until the learner gate passes.
 
