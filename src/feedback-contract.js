@@ -1,4 +1,4 @@
-const CONTRACT_VERSION = "1.0.0";
+const CONTRACT_VERSION = "1.1.0";
 
 const STATUS = new Set(["empty", "correct", "needs-work", "partial", "self-review", "unavailable"]);
 const SOURCES = new Set(["rule-based", "answer-key", "checklist", "speech-recognition", "ai", "unknown"]);
@@ -14,6 +14,7 @@ function normalizeCorrection(item = {}) {
     message: item.message || item.feedback || "",
     messageEs: item.messageEs || item.feedbackEs || "",
     examples: Array.isArray(item.examples) ? item.examples : [],
+    naturalAlternatives: Array.isArray(item.naturalAlternatives) ? item.naturalAlternatives : [],
     priority: item.priority || item.severity || "medium",
     retry: item.retry !== false
   };
