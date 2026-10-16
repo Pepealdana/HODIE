@@ -1090,3 +1090,6 @@ html[data-theme="dark"] body { background: #101827; }
 .live-coach-comparison { display:grid; gap:4px; }
 .live-coach-comparison strong { color:var(--success, #23734d); overflow-wrap:anywhere; }
 [data-theme="dark"] .conversation-writing-guide, [data-theme="dark"] .live-writing-coach { background:#172033; }
+
+.b2-unlock-note { margin:10px 0 0; color:var(--muted); font-size:.86rem; line-height:1.5; }
+[data-theme="dark"] .b2-unlock-note { color:#b8c2d5; }
