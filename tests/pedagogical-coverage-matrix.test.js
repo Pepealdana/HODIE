@@ -49,6 +49,13 @@ for (const skill of skills) {
 }
 assert.ok(imbalanceRatio <= 10,
   `Skill coverage is too imbalanced (largest/smallest = ${imbalanceRatio.toFixed(1)}x). Strengthen underrepresented skills before expanding dominant ones.`);
+for (const level of ["A1", "A2", "B1"]) {
+  for (const skill of skills) {
+    assert.ok((skillLevelCounts[`${skill}|${level}`] || 0) >= 3,
+      `${level} ${skill} needs at least three activities before B2 is considered`);
+  }
+}
+assert.equal(b2Activities.length, 0, "B2 must remain outside the active banks until the learner passes the readiness gate");
 assert.ok(blueprints.categories.some((x) => x.id === "reading"), "Reading progression blueprint must remain available");
 assert.ok(blueprints.categories.some((x) => x.id === "pronunciation"), "Pronunciation progression blueprint must remain available");
 
