@@ -5624,6 +5624,213 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "communicative"
+    },
+    {
+      "id": "GR-RS-A1-01",
+      "skill": "communication",
+      "level": "A1",
+      "priority": "medium",
+      "canDo": "I can identify and pass on very short messages and greetings.",
+      "spanish": "Puedo identificar y transmitir mensajes y saludos muy breves.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say",
+          "tell"
+        ],
+        "vocabulary": [
+          "greetings",
+          "basic-messages"
+        ]
+      },
+      "evidence": {
+        "type": "interaction",
+        "durationSeconds": {
+          "min": 20,
+          "max": 45
+        },
+        "task": "Identify a greeting or short message and report its basic meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "sourceAlignment": "HODIE CEFR-informed progression; recognition and transmission of very short familiar messages, not a claim that reported-speech grammar is an official A1 descriptor."
+    },
+    {
+      "id": "GR-RS-A2-01",
+      "skill": "communication",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report simple statements and messages about familiar situations.",
+      "spanish": "Puedo transmitir afirmaciones y mensajes sencillos sobre situaciones conocidas.",
+      "prerequisites": [
+        "GR-RS-A1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say",
+          "tell",
+          "pronouns",
+          "past-simple"
+        ],
+        "vocabulary": [
+          "messages",
+          "daily-life"
+        ]
+      },
+      "evidence": {
+        "type": "interaction",
+        "durationSeconds": {
+          "min": 45,
+          "max": 90
+        },
+        "task": "Listen to or read a short message and report its main information."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "GR-RS-A1-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "GR-RS-B1-01",
+      "skill": "communication",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what people said, asked or requested in familiar conversations.",
+      "spanish": "Puedo contar lo que otras personas dijeron, preguntaron o solicitaron en conversaciones conocidas.",
+      "prerequisites": [
+        "GR-RS-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reported-questions",
+          "reported-requests",
+          "backshift",
+          "time-reference"
+        ],
+        "vocabulary": [
+          "say",
+          "tell",
+          "ask",
+          "request"
+        ]
+      },
+      "evidence": {
+        "type": "integrated-task",
+        "durationSeconds": {
+          "min": 90,
+          "max": 150
+        },
+        "task": "Summarise a short conversation, including a statement and a question or request."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "GR-RS-A2-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "GR-RS-B2-01",
+      "skill": "communication",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can accurately summarise and report a discussion, preserving viewpoints, uncertainty and relevant nuance.",
+      "spanish": "Puedo resumir y transmitir una discusión con precisión, conservando puntos de vista, incertidumbre y matices relevantes.",
+      "prerequisites": [
+        "GR-RS-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "stance",
+          "hedging",
+          "tense-reference",
+          "reported-questions"
+        ],
+        "vocabulary": [
+          "argue",
+          "claim",
+          "admit",
+          "suggest",
+          "deny",
+          "allege",
+          "according-to"
+        ]
+      },
+      "evidence": {
+        "type": "integrated-task",
+        "durationSeconds": {
+          "min": 150,
+          "max": 240
+        },
+        "task": "Summarise a discussion and distinguish claims, suggestions, uncertainty and disagreement."
+      },
+      "mastery": {
+        "taskCompletion": 0.9,
+        "confidence": 4
+      },
+      "recovery": [
+        "GR-RS-B1-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "visibility": {
+        "requiresLevelUnlock": "B2",
+        "hideUntilUnlocked": true
+      }
     }
   ],
   "metaCanDos": [
