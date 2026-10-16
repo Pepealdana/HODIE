@@ -5146,7 +5146,17 @@
         "reviewableFrom": [
           "A1"
         ]
-      }
+      },
+      "tokens": [
+        "Tom",
+        "said",
+        "hello"
+      ],
+      "options": [
+        "hello",
+        "said",
+        "Tom"
+      ]
     },
     {
       "id": "MIC-RS-A1-GR-01-04",
@@ -6533,7 +6543,21 @@
           "A1",
           "A2"
         ]
-      }
+      },
+      "tokens": [
+        "Ana",
+        "said",
+        "she",
+        "was",
+        "tired"
+      ],
+      "options": [
+        "tired",
+        "was",
+        "she",
+        "said",
+        "Ana"
+      ]
     },
     {
       "id": "MIC-RS-A2-GR-01-04",
@@ -7959,7 +7983,23 @@
           "A2",
           "B1"
         ]
-      }
+      },
+      "tokens": [
+        "He",
+        "asked",
+        "me",
+        "where",
+        "I",
+        "lived"
+      ],
+      "options": [
+        "lived",
+        "I",
+        "where",
+        "me",
+        "asked",
+        "He"
+      ]
     },
     {
       "id": "MIC-RS-B1-GR-01-04",
@@ -9468,7 +9508,19 @@
         ],
         "minimumCriteria": 1,
         "errorMapping": "structured-error-model-v1"
-      }
+      },
+      "tokens": [
+        "He",
+        "suggested",
+        "meeting",
+        "earlier"
+      ],
+      "options": [
+        "earlier",
+        "meeting",
+        "suggested",
+        "He"
+      ]
     },
     {
       "id": "MIC-RS-B2-GR-01-04",
