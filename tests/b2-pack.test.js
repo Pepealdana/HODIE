@@ -6,10 +6,14 @@ const matrix = read("../data/can-do-matrix.json");
 const micro = read("../data/micro-practice-library.json").activities;
 const full = read("../data/content-library.json").activities;
 const experiences = read("../data/experience-library.json").experiences;
+const progressModel = read("../data/progress-model.json");
 const app = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
 
 assert.equal(pack.visibility, "locked-until-b2-readiness");
 assert.equal(pack.gateId, "B2-READINESS-V1");
+assert.equal(progressModel.b2Unlock.gateId, pack.gateId);
+assert.equal(progressModel.b2Unlock.b1CoverageThreshold, 0.75);
+assert.equal(progressModel.b2Unlock.coreSkillCoverageThreshold, 0.60);
 assert.equal(pack.canDos.length, 8);
 assert.equal(pack.activities.length, 32);
 assert.equal(pack.fullActivities.length, 8);
