@@ -1444,7 +1444,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(work|teach|build|study|learn|write|read|use|play|eat|drink|talk|walk|run|swim|cook|sleep|drive|watch|listen|help|look|wait|sit|stand|get|put|take|come|go|dance|sing|buy|call|meet|keep|make|try|carry|wash|rain|shop|stop|plan|win|dig|hit|let|set|hug|rub|nod|tap|chat)\\\\b",
+        "pattern": "\\b(I am|he is|she is|it is|we are|they are|you are)\\s+(work|teach|build|study|learn|write|read|use|play|eat|drink|talk|walk|run|swim|cook|sleep|drive|watch|listen|help|look|wait|sit|stand|get|put|take|come|go|dance|sing|buy|call|meet|keep|make|try|carry|wash|rain|shop|stop|plan|win|dig|hit|let|set|hug|rub|nod|tap|chat)\\b",
         "flags": "gi",
         "replacement": "$1 $2",
         "transform": {
@@ -6238,7 +6238,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(feel)\\\\s+(good|well|bad|better|worse|fine|great|okay|ok|happy|sad|tired|sick|nervous|relaxed|excited|cold|hot|hungry|thirsty)\\\\b",
+        "pattern": "\\b(I am|he is|she is|it is|we are|they are|you are)\\s+(feel)\\s+(good|well|bad|better|worse|fine|great|okay|ok|happy|sad|tired|sick|nervous|relaxed|excited|cold|hot|hungry|thirsty)\\b",
         "flags": "gi",
         "replacement": "$1 $2 $3",
         "transform": {
@@ -6347,7 +6347,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(open)\\\\s+(the|a|an|my|your|his|her|our|their)\\\\s+(window|door|book|box|file|app|website|gate|bottle|bag|drawer)\\\\b",
+        "pattern": "\\b(I am|he is|she is|it is|we are|they are|you are)\\s+(open)\\s+(the|a|an|my|your|his|her|our|their)\\s+(window|door|book|box|file|app|website|gate|bottle|bag|drawer)\\b",
         "flags": "gi",
         "replacement": "$1 $2 $3 $4",
         "transform": {
