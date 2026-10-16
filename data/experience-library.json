@@ -425,6 +425,314 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EXP-REPORTED-SPEECH-A1-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Pass on a short message",
+      "titleEs": "Transmite un mensaje breve",
+      "description": "Recognise a short greeting or message and tell someone what was said.",
+      "descriptionEs": "Reconoce un saludo o mensaje breve y dile a alguien qué se dijo.",
+      "levels": [
+        "A1"
+      ],
+      "contexts": [
+        "daily-life",
+        "social",
+        "travel"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "tags": [
+        "reported-speech"
+      ],
+      "stages": [
+        {
+          "id": "turn-1",
+          "title": "Hear the message",
+          "titleEs": "Escucha el mensaje",
+          "prompt": "Your friend says, “Hello!” What does your friend say?",
+          "promptEs": "Tu amigo dice: «¡Hola!». ¿Qué dice tu amigo?",
+          "criteria": [
+            {
+              "id": "message",
+              "label": "Identify the greeting",
+              "patterns": [
+                "hello",
+                "hi"
+              ],
+              "missingMessage": "Identify the greeting.",
+              "missingMessageEs": "Identifica el saludo."
+            }
+          ]
+        },
+        {
+          "id": "turn-2",
+          "title": "Pass it on",
+          "titleEs": "Transmite el mensaje",
+          "prompt": "Tell another person what your friend says.",
+          "promptEs": "Dile a otra persona lo que dice tu amigo.",
+          "criteria": [
+            {
+              "id": "report",
+              "label": "Use says or said to report the message",
+              "patterns": [
+                "says",
+                "said"
+              ],
+              "missingMessage": "Use a reporting verb such as says or said.",
+              "missingMessageEs": "Usa un verbo para transmitir lo dicho, como says o said."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-REPORTED-SPEECH-A2-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Report a simple conversation",
+      "titleEs": "Transmite una conversación sencilla",
+      "description": "Report simple statements about everyday life and keep the original meaning.",
+      "descriptionEs": "Transmite afirmaciones sencillas de la vida cotidiana y conserva el sentido original.",
+      "levels": [
+        "A2"
+      ],
+      "contexts": [
+        "daily-life",
+        "social",
+        "study"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "tags": [
+        "reported-speech"
+      ],
+      "stages": [
+        {
+          "id": "turn-1",
+          "title": "Report a statement",
+          "titleEs": "Transmite una afirmación",
+          "prompt": "Alex says, “I am busy today.” Report Alex’s message.",
+          "promptEs": "Alex dice: «Estoy ocupado hoy». Transmite su mensaje.",
+          "criteria": [
+            {
+              "id": "statement",
+              "label": "Report the statement with a suitable reporting verb",
+              "patterns": [
+                "said that",
+                "said he",
+                "said she",
+                "told me"
+              ],
+              "missingMessage": "Report Alex’s message in one complete sentence.",
+              "missingMessageEs": "Transmite el mensaje de Alex en una oración completa."
+            }
+          ]
+        },
+        {
+          "id": "turn-2",
+          "title": "Add a detail",
+          "titleEs": "Añade un detalle",
+          "prompt": "Your friend says, “I work near the station.” Tell me what your friend said.",
+          "promptEs": "Tu amigo dice: «Trabajo cerca de la estación». Dime qué dijo.",
+          "criteria": [
+            {
+              "id": "detail",
+              "label": "Report the main information",
+              "patterns": [
+                "said that",
+                "said he",
+                "said she",
+                "told me"
+              ],
+              "missingMessage": "Use a reporting verb and report the main information.",
+              "missingMessageEs": "Usa un verbo para transmitir lo dicho y comunica la información principal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-REPORTED-SPEECH-B1-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Report questions and requests",
+      "titleEs": "Transmite preguntas y peticiones",
+      "description": "Retell a short conversation using reported statements, questions and requests.",
+      "descriptionEs": "Cuenta una conversación breve usando afirmaciones, preguntas y peticiones indirectas.",
+      "levels": [
+        "B1"
+      ],
+      "contexts": [
+        "work",
+        "study",
+        "daily-life",
+        "travel"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "tags": [
+        "reported-speech",
+        "reported-questions",
+        "reported-requests"
+      ],
+      "stages": [
+        {
+          "id": "turn-1",
+          "title": "Report a question",
+          "titleEs": "Transmite una pregunta",
+          "prompt": "Sam asked, “Where do you live?” Report Sam’s question.",
+          "promptEs": "Sam preguntó: «¿Dónde vives?». Transmite la pregunta de Sam.",
+          "criteria": [
+            {
+              "id": "question",
+              "label": "Use statement word order in the reported question",
+              "patterns": [
+                "asked where",
+                "asked me where"
+              ],
+              "missingMessage": "Report the question without direct-question word order.",
+              "missingMessageEs": "Transmite la pregunta sin usar el orden de una pregunta directa."
+            }
+          ]
+        },
+        {
+          "id": "turn-2",
+          "title": "Report a request",
+          "titleEs": "Transmite una petición",
+          "prompt": "Maria said to Ben, “Please send me the file.” Report her request.",
+          "promptEs": "María le dijo a Ben: «Por favor, envíame el archivo». Transmite su petición.",
+          "criteria": [
+            {
+              "id": "request",
+              "label": "Report the request with ask or tell + object + to-infinitive",
+              "patterns": [
+                "asked ben to",
+                "told ben to"
+              ],
+              "missingMessage": "Use asked/told + person + to + verb.",
+              "missingMessageEs": "Usa asked/told + persona + to + verbo."
+            }
+          ]
+        },
+        {
+          "id": "turn-3",
+          "title": "Retell the exchange",
+          "titleEs": "Cuenta el intercambio",
+          "prompt": "Tell me what Sam asked and what Maria requested.",
+          "promptEs": "Dime qué preguntó Sam y qué pidió María.",
+          "criteria": [
+            {
+              "id": "both",
+              "label": "Include both the question and the request",
+              "patterns": [
+                "asked",
+                "requested",
+                "told"
+              ],
+              "missingMessage": "Include both parts of the exchange.",
+              "missingMessageEs": "Incluye las dos partes del intercambio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-REPORTED-SPEECH-B2-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Summarise a discussion with nuance",
+      "titleEs": "Resume una discusión con matices",
+      "description": "Report claims, suggestions and uncertainty without changing the speakers’ positions.",
+      "descriptionEs": "Transmite afirmaciones, sugerencias e incertidumbre sin cambiar la postura de los interlocutores.",
+      "levels": [
+        "B2"
+      ],
+      "contexts": [
+        "work",
+        "study",
+        "social",
+        "professional"
+      ],
+      "correctionPolicy": "after-turn",
+      "evidencePolicy": "practice-only",
+      "tags": [
+        "reported-speech",
+        "reporting-verbs",
+        "stance"
+      ],
+      "visibility": {
+        "requiresLevelUnlock": "B2",
+        "hideUntilUnlocked": true
+      },
+      "stages": [
+        {
+          "id": "turn-1",
+          "title": "Report a claim",
+          "titleEs": "Transmite una afirmación",
+          "prompt": "One speaker says, “The results may be unreliable.” Report the claim without making it sound certain.",
+          "promptEs": "Un interlocutor dice: «Puede que los resultados no sean fiables». Transmite la afirmación sin presentarla como segura.",
+          "criteria": [
+            {
+              "id": "uncertainty",
+              "label": "Preserve uncertainty",
+              "patterns": [
+                "may",
+                "might",
+                "could",
+                "uncertain",
+                "possibly"
+              ],
+              "missingMessage": "Keep the uncertainty in the report.",
+              "missingMessageEs": "Conserva la incertidumbre en el mensaje."
+            }
+          ]
+        },
+        {
+          "id": "turn-2",
+          "title": "Report disagreement",
+          "titleEs": "Transmite un desacuerdo",
+          "prompt": "Another speaker says, “I strongly disagree with that conclusion.” Report the disagreement.",
+          "promptEs": "Otro interlocutor dice: «Estoy totalmente en desacuerdo con esa conclusión». Transmite el desacuerdo.",
+          "criteria": [
+            {
+              "id": "stance",
+              "label": "Preserve the speaker’s stance",
+              "patterns": [
+                "disagreed",
+                "disagreed with",
+                "did not agree"
+              ],
+              "missingMessage": "Make the disagreement clear without exaggerating it.",
+              "missingMessageEs": "Expresa el desacuerdo sin exagerarlo."
+            }
+          ]
+        },
+        {
+          "id": "turn-3",
+          "title": "Summarise the discussion",
+          "titleEs": "Resume la discusión",
+          "prompt": "Summarise both viewpoints in two or three sentences, distinguishing the claim from the disagreement.",
+          "promptEs": "Resume ambos puntos de vista en dos o tres oraciones, distinguiendo la afirmación del desacuerdo.",
+          "criteria": [
+            {
+              "id": "summary",
+              "label": "Represent both viewpoints accurately",
+              "patterns": [
+                "said",
+                "argued",
+                "claimed",
+                "suggested",
+                "disagreed"
+              ],
+              "missingMessage": "Include both viewpoints and attribute them to the correct speakers.",
+              "missingMessageEs": "Incluye ambos puntos de vista y atribúyelos a los interlocutores correctos."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
