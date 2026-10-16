@@ -1090,3 +1090,36 @@ html[data-theme="dark"] body { background: #101827; }
 .live-coach-comparison { display:grid; gap:4px; }
 .live-coach-comparison strong { color:var(--success, #23734d); overflow-wrap:anywhere; }
 [data-theme="dark"] .conversation-writing-guide, [data-theme="dark"] .live-writing-coach { background:#172033; }
+
+
+/* Bilingual conversation scaffolds and live language feedback */
+.conversation-scaffold {
+  margin: 14px 0;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.conversation-scaffold > summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 800;
+}
+.conversation-scaffold p { margin: 10px 0 0; line-height: 1.55; overflow-wrap: anywhere; }
+.conversation-scaffold .scaffold-note { color: var(--muted); font-size: .88rem; }
+.conversation-scaffold .model-answer { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--surface-alt); }
+.conversation-scaffold .model-answer > summary { cursor: pointer; font-weight: 700; }
+.live-writing-coach {
+  display: grid;
+  gap: 4px;
+  margin: 10px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-alt);
+  font-size: .92rem;
+}
+.live-writing-coach p { margin: 0; line-height: 1.5; overflow-wrap: anywhere; }
+.live-coach-section + .live-coach-section { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.live-coach-comparison { overflow-wrap: anywhere; }
+.live-coach-comparison strong { color: var(--success, #26764b); }
