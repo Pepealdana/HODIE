@@ -5001,6 +5001,6075 @@
         ],
         "feedbackFocus": "communication"
       }
+    },
+    {
+      "id": "MIC-RS-A1-GR-01-01",
+      "canDoId": "RS-A1-GR-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Tom: “Hello!” Which version preserves the meaning?",
+      "promptEs": "Tom: “Hello!” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Tom said hello.",
+        "Tom: “Hello!” (direct quotation)"
+      ],
+      "answer": "Tom said hello.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "grammar",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-GR-01-02",
+      "canDoId": "RS-A1-GR-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Tom: “Hello!” → Tom ___",
+      "promptEs": "Completa la versión indirecta de: Tom: “Hello!”",
+      "answer": "said hello.",
+      "acceptableAnswers": [
+        "hello."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "grammar",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-GR-01-03",
+      "canDoId": "RS-A1-GR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Tom said hello.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Tom said hello.",
+      "audioText": "Tom: “Hello!”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "grammar",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-GR-01-04",
+      "canDoId": "RS-A1-GR-01",
+      "type": "mini-production",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Tom: “Hello!”",
+      "promptEs": "Transmite este mensaje: Tom: “Hello!”",
+      "audioText": "Tom said hello.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "grammar",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-LI-01-01",
+      "canDoId": "RS-A1-LI-01",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Mia: “Thank you.” Which version preserves the meaning?",
+      "promptEs": "Mia: “Thank you.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Mia said thank you.",
+        "Mia: “Thank you.” (direct quotation)"
+      ],
+      "answer": "Mia said thank you.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "listening",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-LI-01-02",
+      "canDoId": "RS-A1-LI-01",
+      "type": "complete",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Mia: “Thank you.” → Mia said ___",
+      "promptEs": "Completa la versión indirecta de: Mia: “Thank you.”",
+      "answer": "thank you.",
+      "acceptableAnswers": [
+        "you."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "listening",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-LI-01-03",
+      "canDoId": "RS-A1-LI-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Mia said thank you.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Mia said thank you.",
+      "audioText": "Mia: “Thank you.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "listening",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-LI-01-04",
+      "canDoId": "RS-A1-LI-01",
+      "type": "mini-production",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Mia: “Thank you.”",
+      "promptEs": "Transmite este mensaje: Mia: “Thank you.”",
+      "audioText": "Mia said thank you.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "listening",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-RE-01-01",
+      "canDoId": "RS-A1-RE-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Leo: “Goodbye!” Which version preserves the meaning?",
+      "promptEs": "Leo: “Goodbye!” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Leo said goodbye.",
+        "Leo: “Goodbye!” (direct quotation)"
+      ],
+      "answer": "Leo said goodbye.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "reading",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-RE-01-02",
+      "canDoId": "RS-A1-RE-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Leo: “Goodbye!” → Leo ___",
+      "promptEs": "Completa la versión indirecta de: Leo: “Goodbye!”",
+      "answer": "said goodbye.",
+      "acceptableAnswers": [
+        "goodbye."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "reading",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-RE-01-03",
+      "canDoId": "RS-A1-RE-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Leo said goodbye.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Leo said goodbye.",
+      "audioText": "Leo: “Goodbye!”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "reading",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-RE-01-04",
+      "canDoId": "RS-A1-RE-01",
+      "type": "mini-production",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Leo: “Goodbye!”",
+      "promptEs": "Transmite este mensaje: Leo: “Goodbye!”",
+      "audioText": "Leo said goodbye.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "reading",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-WR-01-01",
+      "canDoId": "RS-A1-WR-01",
+      "type": "choose",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Tom: “Hello!” Which version preserves the meaning?",
+      "promptEs": "Tom: “Hello!” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Tom said hello.",
+        "Tom: “Hello!” (direct quotation)"
+      ],
+      "answer": "Tom said hello.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "writing",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-WR-01-02",
+      "canDoId": "RS-A1-WR-01",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Tom: “Hello!” → Tom ___",
+      "promptEs": "Completa la versión indirecta de: Tom: “Hello!”",
+      "answer": "said hello.",
+      "acceptableAnswers": [
+        "hello."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "writing",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-WR-01-03",
+      "canDoId": "RS-A1-WR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Tom said hello.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Tom said hello.",
+      "audioText": "Tom: “Hello!”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "writing",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-WR-01-04",
+      "canDoId": "RS-A1-WR-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Tom: “Hello!”",
+      "promptEs": "Transmite este mensaje: Tom: “Hello!”",
+      "audioText": "Tom said hello.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Tom said hello.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Tom said hello."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "writing",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-SP-01-01",
+      "canDoId": "RS-A1-SP-01",
+      "type": "choose",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Mia: “Thank you.” Which version preserves the meaning?",
+      "promptEs": "Mia: “Thank you.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Mia said thank you.",
+        "Mia: “Thank you.” (direct quotation)"
+      ],
+      "answer": "Mia said thank you.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "speaking",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-SP-01-02",
+      "canDoId": "RS-A1-SP-01",
+      "type": "complete",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Mia: “Thank you.” → Mia said ___",
+      "promptEs": "Completa la versión indirecta de: Mia: “Thank you.”",
+      "answer": "thank you.",
+      "acceptableAnswers": [
+        "you."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "speaking",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-SP-01-03",
+      "canDoId": "RS-A1-SP-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Mia said thank you.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Mia said thank you.",
+      "audioText": "Mia: “Thank you.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "speaking",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-SP-01-04",
+      "canDoId": "RS-A1-SP-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Say it indirectly",
+      "titleEs": "Dilo en estilo indirecto",
+      "prompt": "Report this message: Mia: “Thank you.”",
+      "promptEs": "Transmite este mensaje: Mia: “Thank you.”",
+      "audioText": "Mia said thank you.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "targetPhrase": "Mia said thank you.",
+      "requiredTokens": [
+        "Mia",
+        "said",
+        "thank",
+        "you"
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said thank you.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said thank you."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "speaking",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-CO-01-01",
+      "canDoId": "RS-A1-CO-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Leo: “Goodbye!” Which version preserves the meaning?",
+      "promptEs": "Leo: “Goodbye!” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Leo said goodbye.",
+        "Leo: “Goodbye!” (direct quotation)"
+      ],
+      "answer": "Leo said goodbye.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "communication",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-CO-01-02",
+      "canDoId": "RS-A1-CO-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Leo: “Goodbye!” → Leo ___",
+      "promptEs": "Completa la versión indirecta de: Leo: “Goodbye!”",
+      "answer": "said goodbye.",
+      "acceptableAnswers": [
+        "goodbye."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "communication",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-CO-01-03",
+      "canDoId": "RS-A1-CO-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Leo said goodbye.",
+        "They asked a question about report a simple message."
+      ],
+      "answer": "Leo said goodbye.",
+      "audioText": "Leo: “Goodbye!”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "communication",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A1-CO-01-04",
+      "canDoId": "RS-A1-CO-01",
+      "type": "mini-production",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Leo: “Goodbye!”",
+      "promptEs": "Transmite este mensaje: Leo: “Goodbye!”",
+      "audioText": "Leo said goodbye.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Leo said goodbye.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Leo said goodbye."
+      },
+      "tags": [
+        "reported-speech",
+        "a1",
+        "communication",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-GR-01-01",
+      "canDoId": "RS-A2-GR-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Ana: “I am tired.” Which version preserves the meaning?",
+      "promptEs": "Ana: “I am tired.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Ana said she was tired.",
+        "Ana: “I am tired.” (direct quotation)"
+      ],
+      "answer": "Ana said she was tired.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "grammar",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-GR-01-02",
+      "canDoId": "RS-A2-GR-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Ana: “I am tired.” → Ana said she ___",
+      "promptEs": "Completa la versión indirecta de: Ana: “I am tired.”",
+      "answer": "was tired.",
+      "acceptableAnswers": [
+        "tired."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "grammar",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-GR-01-03",
+      "canDoId": "RS-A2-GR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Ana said she was tired.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Ana said she was tired.",
+      "audioText": "Ana: “I am tired.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "grammar",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-GR-01-04",
+      "canDoId": "RS-A2-GR-01",
+      "type": "mini-production",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Ana: “I am tired.”",
+      "promptEs": "Transmite este mensaje: Ana: “I am tired.”",
+      "audioText": "Ana said she was tired.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "grammar",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-LI-01-01",
+      "canDoId": "RS-A2-LI-01",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Ben: “I live here.” Which version preserves the meaning?",
+      "promptEs": "Ben: “I live here.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Ben said he lived there.",
+        "Ben: “I live here.” (direct quotation)"
+      ],
+      "answer": "Ben said he lived there.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "listening",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-LI-01-02",
+      "canDoId": "RS-A2-LI-01",
+      "type": "complete",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Ben: “I live here.” → Ben said he ___",
+      "promptEs": "Completa la versión indirecta de: Ben: “I live here.”",
+      "answer": "lived there.",
+      "acceptableAnswers": [
+        "there."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "listening",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-LI-01-03",
+      "canDoId": "RS-A2-LI-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Ben said he lived there.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Ben said he lived there.",
+      "audioText": "Ben: “I live here.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "listening",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-LI-01-04",
+      "canDoId": "RS-A2-LI-01",
+      "type": "mini-production",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Ben: “I live here.”",
+      "promptEs": "Transmite este mensaje: Ben: “I live here.”",
+      "audioText": "Ben said he lived there.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "listening",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-RE-01-01",
+      "canDoId": "RS-A2-RE-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Mia: “I can help.” Which version preserves the meaning?",
+      "promptEs": "Mia: “I can help.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Mia said she could help.",
+        "Mia: “I can help.” (direct quotation)"
+      ],
+      "answer": "Mia said she could help.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "reading",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-RE-01-02",
+      "canDoId": "RS-A2-RE-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Mia: “I can help.” → Mia said she ___",
+      "promptEs": "Completa la versión indirecta de: Mia: “I can help.”",
+      "answer": "could help.",
+      "acceptableAnswers": [
+        "help."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "reading",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-RE-01-03",
+      "canDoId": "RS-A2-RE-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Mia said she could help.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Mia said she could help.",
+      "audioText": "Mia: “I can help.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "reading",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-RE-01-04",
+      "canDoId": "RS-A2-RE-01",
+      "type": "mini-production",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Mia: “I can help.”",
+      "promptEs": "Transmite este mensaje: Mia: “I can help.”",
+      "audioText": "Mia said she could help.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "reading",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-WR-01-01",
+      "canDoId": "RS-A2-WR-01",
+      "type": "choose",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Ana: “I am tired.” Which version preserves the meaning?",
+      "promptEs": "Ana: “I am tired.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Ana said she was tired.",
+        "Ana: “I am tired.” (direct quotation)"
+      ],
+      "answer": "Ana said she was tired.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "writing",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-WR-01-02",
+      "canDoId": "RS-A2-WR-01",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Ana: “I am tired.” → Ana said she ___",
+      "promptEs": "Completa la versión indirecta de: Ana: “I am tired.”",
+      "answer": "was tired.",
+      "acceptableAnswers": [
+        "tired."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "writing",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-WR-01-03",
+      "canDoId": "RS-A2-WR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Ana said she was tired.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Ana said she was tired.",
+      "audioText": "Ana: “I am tired.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "writing",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-WR-01-04",
+      "canDoId": "RS-A2-WR-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Ana: “I am tired.”",
+      "promptEs": "Transmite este mensaje: Ana: “I am tired.”",
+      "audioText": "Ana said she was tired.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ana said she was tired.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ana said she was tired."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "writing",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-SP-01-01",
+      "canDoId": "RS-A2-SP-01",
+      "type": "choose",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Ben: “I live here.” Which version preserves the meaning?",
+      "promptEs": "Ben: “I live here.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Ben said he lived there.",
+        "Ben: “I live here.” (direct quotation)"
+      ],
+      "answer": "Ben said he lived there.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "speaking",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-SP-01-02",
+      "canDoId": "RS-A2-SP-01",
+      "type": "complete",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Ben: “I live here.” → Ben said he ___",
+      "promptEs": "Completa la versión indirecta de: Ben: “I live here.”",
+      "answer": "lived there.",
+      "acceptableAnswers": [
+        "there."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "speaking",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-SP-01-03",
+      "canDoId": "RS-A2-SP-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Ben said he lived there.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Ben said he lived there.",
+      "audioText": "Ben: “I live here.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "speaking",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-SP-01-04",
+      "canDoId": "RS-A2-SP-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Say it indirectly",
+      "titleEs": "Dilo en estilo indirecto",
+      "prompt": "Report this message: Ben: “I live here.”",
+      "promptEs": "Transmite este mensaje: Ben: “I live here.”",
+      "audioText": "Ben said he lived there.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "targetPhrase": "Ben said he lived there.",
+      "requiredTokens": [
+        "Ben",
+        "said",
+        "lived",
+        "there"
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Ben said he lived there.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Ben said he lived there."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "speaking",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-CO-01-01",
+      "canDoId": "RS-A2-CO-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "Mia: “I can help.” Which version preserves the meaning?",
+      "promptEs": "Mia: “I can help.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "Mia said she could help.",
+        "Mia: “I can help.” (direct quotation)"
+      ],
+      "answer": "Mia said she could help.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "communication",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-CO-01-02",
+      "canDoId": "RS-A2-CO-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "Mia: “I can help.” → Mia said she ___",
+      "promptEs": "Completa la versión indirecta de: Mia: “I can help.”",
+      "answer": "could help.",
+      "acceptableAnswers": [
+        "help."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "communication",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-CO-01-03",
+      "canDoId": "RS-A2-CO-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "Mia said she could help.",
+        "They asked a question about report short statements."
+      ],
+      "answer": "Mia said she could help.",
+      "audioText": "Mia: “I can help.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "communication",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-A2-CO-01-04",
+      "canDoId": "RS-A2-CO-01",
+      "type": "mini-production",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: Mia: “I can help.”",
+      "promptEs": "Transmite este mensaje: Mia: “I can help.”",
+      "audioText": "Mia said she could help.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: Mia said she could help.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: Mia said she could help."
+      },
+      "tags": [
+        "reported-speech",
+        "a2",
+        "communication",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-GR-01-01",
+      "canDoId": "RS-B1-GR-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Where do you live?” Which version preserves the meaning?",
+      "promptEs": "“Where do you live?” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He asked me where I lived.",
+        "“Where do you live?” (direct quotation)"
+      ],
+      "answer": "He asked me where I lived.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "grammar",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-GR-01-02",
+      "canDoId": "RS-B1-GR-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Where do you live?” → He asked me where ___",
+      "promptEs": "Completa la versión indirecta de: “Where do you live?”",
+      "answer": "I lived.",
+      "acceptableAnswers": [
+        "lived."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "grammar",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-GR-01-03",
+      "canDoId": "RS-B1-GR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He asked me where I lived.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "He asked me where I lived.",
+      "audioText": "“Where do you live?”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "grammar",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-GR-01-04",
+      "canDoId": "RS-B1-GR-01",
+      "type": "mini-production",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Where do you live?”",
+      "promptEs": "Transmite este mensaje: “Where do you live?”",
+      "audioText": "He asked me where I lived.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told",
+              "asked"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "grammar",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-LI-01-01",
+      "canDoId": "RS-B1-LI-01",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Do you like tea?” Which version preserves the meaning?",
+      "promptEs": "“Do you like tea?” ¿Qué versión conserva el sentido?",
+      "options": [
+        "She asked if I liked tea.",
+        "“Do you like tea?” (direct quotation)"
+      ],
+      "answer": "She asked if I liked tea.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "listening",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-LI-01-02",
+      "canDoId": "RS-B1-LI-01",
+      "type": "complete",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Do you like tea?” → She asked if I ___",
+      "promptEs": "Completa la versión indirecta de: “Do you like tea?”",
+      "answer": "liked tea.",
+      "acceptableAnswers": [
+        "tea."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "listening",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-LI-01-03",
+      "canDoId": "RS-B1-LI-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "She asked if I liked tea.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "She asked if I liked tea.",
+      "audioText": "“Do you like tea?”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "listening",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-LI-01-04",
+      "canDoId": "RS-B1-LI-01",
+      "type": "mini-production",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Do you like tea?”",
+      "promptEs": "Transmite este mensaje: “Do you like tea?”",
+      "audioText": "She asked if I liked tea.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told",
+              "asked"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "listening",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-RE-01-01",
+      "canDoId": "RS-B1-RE-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Please wait.” Which version preserves the meaning?",
+      "promptEs": "“Please wait.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He asked me to wait.",
+        "“Please wait.” (direct quotation)"
+      ],
+      "answer": "He asked me to wait.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "reading",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-RE-01-02",
+      "canDoId": "RS-B1-RE-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Please wait.” → He asked me ___",
+      "promptEs": "Completa la versión indirecta de: “Please wait.”",
+      "answer": "to wait.",
+      "acceptableAnswers": [
+        "wait."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "reading",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-RE-01-03",
+      "canDoId": "RS-B1-RE-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He asked me to wait.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "He asked me to wait.",
+      "audioText": "“Please wait.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "reading",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-RE-01-04",
+      "canDoId": "RS-B1-RE-01",
+      "type": "mini-production",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Please wait.”",
+      "promptEs": "Transmite este mensaje: “Please wait.”",
+      "audioText": "He asked me to wait.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told",
+              "asked"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "reading",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-WR-01-01",
+      "canDoId": "RS-B1-WR-01",
+      "type": "choose",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Where do you live?” Which version preserves the meaning?",
+      "promptEs": "“Where do you live?” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He asked me where I lived.",
+        "“Where do you live?” (direct quotation)"
+      ],
+      "answer": "He asked me where I lived.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "writing",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-WR-01-02",
+      "canDoId": "RS-B1-WR-01",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Where do you live?” → He asked me where ___",
+      "promptEs": "Completa la versión indirecta de: “Where do you live?”",
+      "answer": "I lived.",
+      "acceptableAnswers": [
+        "lived."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "writing",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-WR-01-03",
+      "canDoId": "RS-B1-WR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He asked me where I lived.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "He asked me where I lived.",
+      "audioText": "“Where do you live?”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "writing",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-WR-01-04",
+      "canDoId": "RS-B1-WR-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Where do you live?”",
+      "promptEs": "Transmite este mensaje: “Where do you live?”",
+      "audioText": "He asked me where I lived.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told",
+              "asked"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me where I lived.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me where I lived."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "writing",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-SP-01-01",
+      "canDoId": "RS-B1-SP-01",
+      "type": "choose",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Do you like tea?” Which version preserves the meaning?",
+      "promptEs": "“Do you like tea?” ¿Qué versión conserva el sentido?",
+      "options": [
+        "She asked if I liked tea.",
+        "“Do you like tea?” (direct quotation)"
+      ],
+      "answer": "She asked if I liked tea.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "speaking",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-SP-01-02",
+      "canDoId": "RS-B1-SP-01",
+      "type": "complete",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Do you like tea?” → She asked if I ___",
+      "promptEs": "Completa la versión indirecta de: “Do you like tea?”",
+      "answer": "liked tea.",
+      "acceptableAnswers": [
+        "tea."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "speaking",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-SP-01-03",
+      "canDoId": "RS-B1-SP-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "She asked if I liked tea.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "She asked if I liked tea.",
+      "audioText": "“Do you like tea?”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "speaking",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-SP-01-04",
+      "canDoId": "RS-B1-SP-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Say it indirectly",
+      "titleEs": "Dilo en estilo indirecto",
+      "prompt": "Report this message: “Do you like tea?”",
+      "promptEs": "Transmite este mensaje: “Do you like tea?”",
+      "audioText": "She asked if I liked tea.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "targetPhrase": "She asked if I liked tea.",
+      "requiredTokens": [
+        "She",
+        "asked",
+        "liked",
+        "tea"
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She asked if I liked tea.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She asked if I liked tea."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "speaking",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-CO-01-01",
+      "canDoId": "RS-B1-CO-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Please wait.” Which version preserves the meaning?",
+      "promptEs": "“Please wait.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He asked me to wait.",
+        "“Please wait.” (direct quotation)"
+      ],
+      "answer": "He asked me to wait.",
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "communication",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-CO-01-02",
+      "canDoId": "RS-B1-CO-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Please wait.” → He asked me ___",
+      "promptEs": "Completa la versión indirecta de: “Please wait.”",
+      "answer": "to wait.",
+      "acceptableAnswers": [
+        "wait."
+      ],
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "communication",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-CO-01-03",
+      "canDoId": "RS-B1-CO-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He asked me to wait.",
+        "They asked a question about report statements, questions and requests."
+      ],
+      "answer": "He asked me to wait.",
+      "audioText": "“Please wait.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "communication",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B1-CO-01-04",
+      "canDoId": "RS-B1-CO-01",
+      "type": "mini-production",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Please wait.”",
+      "promptEs": "Transmite este mensaje: “Please wait.”",
+      "audioText": "He asked me to wait.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "reported-meaning",
+            "label": "reports the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "explained",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "target-structure",
+            "label": "uses an appropriate structure for the selected level",
+            "patterns": [
+              "said",
+              "told",
+              "asked"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He asked me to wait.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He asked me to wait."
+      },
+      "tags": [
+        "reported-speech",
+        "b1",
+        "communication",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-GR-01-01",
+      "canDoId": "RS-B2-GR-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“I may have made a mistake.” Which version preserves the meaning?",
+      "promptEs": "“I may have made a mistake.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "She admitted that she might have made a mistake.",
+        "“I may have made a mistake.” (direct quotation)"
+      ],
+      "answer": "She admitted that she might have made a mistake.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "grammar",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-GR-01-02",
+      "canDoId": "RS-B2-GR-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“I may have made a mistake.” → She admitted that she might have made ___",
+      "promptEs": "Completa la versión indirecta de: “I may have made a mistake.”",
+      "answer": "a mistake.",
+      "acceptableAnswers": [
+        "mistake."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "grammar",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-GR-01-03",
+      "canDoId": "RS-B2-GR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "She admitted that she might have made a mistake.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "She admitted that she might have made a mistake.",
+      "audioText": "“I may have made a mistake.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "grammar",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-GR-01-04",
+      "canDoId": "RS-B2-GR-01",
+      "type": "mini-production",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “I may have made a mistake.”",
+      "promptEs": "Transmite este mensaje: “I may have made a mistake.”",
+      "audioText": "She admitted that she might have made a mistake.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "grammar",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-LI-01-01",
+      "canDoId": "RS-B2-LI-01",
+      "type": "choose",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Let's meet earlier.” Which version preserves the meaning?",
+      "promptEs": "“Let's meet earlier.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He suggested meeting earlier.",
+        "“Let's meet earlier.” (direct quotation)"
+      ],
+      "answer": "He suggested meeting earlier.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "listening",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-LI-01-02",
+      "canDoId": "RS-B2-LI-01",
+      "type": "complete",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Let's meet earlier.” → He suggested ___",
+      "promptEs": "Completa la versión indirecta de: “Let's meet earlier.”",
+      "answer": "meeting earlier.",
+      "acceptableAnswers": [
+        "earlier."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "listening",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-LI-01-03",
+      "canDoId": "RS-B2-LI-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He suggested meeting earlier.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "He suggested meeting earlier.",
+      "audioText": "“Let's meet earlier.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "listening",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-LI-01-04",
+      "canDoId": "RS-B2-LI-01",
+      "type": "mini-production",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “Let's meet earlier.”",
+      "promptEs": "Transmite este mensaje: “Let's meet earlier.”",
+      "audioText": "He suggested meeting earlier.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "listening",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-RE-01-01",
+      "canDoId": "RS-B2-RE-01",
+      "type": "choose",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“The figures prove it.” Which version preserves the meaning?",
+      "promptEs": "“The figures prove it.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "They claimed that the figures proved it.",
+        "“The figures prove it.” (direct quotation)"
+      ],
+      "answer": "They claimed that the figures proved it.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "reading",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-RE-01-02",
+      "canDoId": "RS-B2-RE-01",
+      "type": "complete",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“The figures prove it.” → They claimed that the figures ___",
+      "promptEs": "Completa la versión indirecta de: “The figures prove it.”",
+      "answer": "proved it.",
+      "acceptableAnswers": [
+        "it."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "reading",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-RE-01-03",
+      "canDoId": "RS-B2-RE-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "They claimed that the figures proved it.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "They claimed that the figures proved it.",
+      "audioText": "“The figures prove it.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "reading",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-RE-01-04",
+      "canDoId": "RS-B2-RE-01",
+      "type": "mini-production",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “The figures prove it.”",
+      "promptEs": "Transmite este mensaje: “The figures prove it.”",
+      "audioText": "They claimed that the figures proved it.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "reading",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-WR-01-01",
+      "canDoId": "RS-B2-WR-01",
+      "type": "choose",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“I may have made a mistake.” Which version preserves the meaning?",
+      "promptEs": "“I may have made a mistake.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "She admitted that she might have made a mistake.",
+        "“I may have made a mistake.” (direct quotation)"
+      ],
+      "answer": "She admitted that she might have made a mistake.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "writing",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-WR-01-02",
+      "canDoId": "RS-B2-WR-01",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“I may have made a mistake.” → She admitted that she might have made ___",
+      "promptEs": "Completa la versión indirecta de: “I may have made a mistake.”",
+      "answer": "a mistake.",
+      "acceptableAnswers": [
+        "mistake."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "writing",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-WR-01-03",
+      "canDoId": "RS-B2-WR-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "She admitted that she might have made a mistake.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "She admitted that she might have made a mistake.",
+      "audioText": "“I may have made a mistake.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "writing",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-WR-01-04",
+      "canDoId": "RS-B2-WR-01",
+      "type": "mini-production",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “I may have made a mistake.”",
+      "promptEs": "Transmite este mensaje: “I may have made a mistake.”",
+      "audioText": "She admitted that she might have made a mistake.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: She admitted that she might have made a mistake.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: She admitted that she might have made a mistake."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "writing",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-SP-01-01",
+      "canDoId": "RS-B2-SP-01",
+      "type": "choose",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“Let's meet earlier.” Which version preserves the meaning?",
+      "promptEs": "“Let's meet earlier.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "He suggested meeting earlier.",
+        "“Let's meet earlier.” (direct quotation)"
+      ],
+      "answer": "He suggested meeting earlier.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "speaking",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-SP-01-02",
+      "canDoId": "RS-B2-SP-01",
+      "type": "complete",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“Let's meet earlier.” → He suggested ___",
+      "promptEs": "Completa la versión indirecta de: “Let's meet earlier.”",
+      "answer": "meeting earlier.",
+      "acceptableAnswers": [
+        "earlier."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "speaking",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-SP-01-03",
+      "canDoId": "RS-B2-SP-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "He suggested meeting earlier.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "He suggested meeting earlier.",
+      "audioText": "“Let's meet earlier.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "speaking",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-SP-01-04",
+      "canDoId": "RS-B2-SP-01",
+      "type": "speak",
+      "skill": "speaking",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Say it indirectly",
+      "titleEs": "Dilo en estilo indirecto",
+      "prompt": "Report this message: “Let's meet earlier.”",
+      "promptEs": "Transmite este mensaje: “Let's meet earlier.”",
+      "audioText": "He suggested meeting earlier.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "targetPhrase": "He suggested meeting earlier.",
+      "requiredTokens": [
+        "suggested",
+        "meeting",
+        "earlier"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: He suggested meeting earlier.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: He suggested meeting earlier."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "speaking",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-CO-01-01",
+      "canDoId": "RS-B2-CO-01",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Choose the reported message",
+      "titleEs": "Elige el mensaje transmitido",
+      "prompt": "“The figures prove it.” Which version preserves the meaning?",
+      "promptEs": "“The figures prove it.” ¿Qué versión conserva el sentido?",
+      "options": [
+        "They claimed that the figures proved it.",
+        "“The figures prove it.” (direct quotation)"
+      ],
+      "answer": "They claimed that the figures proved it.",
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "communication",
+        "cefr-aligned",
+        "recognition"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-CO-01-02",
+      "canDoId": "RS-B2-CO-01",
+      "type": "complete",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Complete the report",
+      "titleEs": "Completa el mensaje transmitido",
+      "prompt": "“The figures prove it.” → They claimed that the figures ___",
+      "promptEs": "Completa la versión indirecta de: “The figures prove it.”",
+      "answer": "proved it.",
+      "acceptableAnswers": [
+        "it."
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "communication",
+        "cefr-aligned",
+        "controlled"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-CO-01-03",
+      "canDoId": "RS-B2-CO-01",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Listen and identify the message",
+      "titleEs": "Escucha e identifica el mensaje",
+      "prompt": "Listen to the speaker. What did they say?",
+      "promptEs": "Escucha al hablante. ¿Qué dijo?",
+      "options": [
+        "They claimed that the figures proved it.",
+        "They asked a question about report, summarize and qualify meaning."
+      ],
+      "answer": "They claimed that the figures proved it.",
+      "audioText": "“The figures prove it.”",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "communication",
+        "cefr-aligned",
+        "listening"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
+    },
+    {
+      "id": "MIC-RS-B2-CO-01-04",
+      "canDoId": "RS-B2-CO-01",
+      "type": "mini-production",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Report it in your own words",
+      "titleEs": "Transmítelo con tus propias palabras",
+      "prompt": "Report this message: “The figures prove it.”",
+      "promptEs": "Transmite este mensaje: “The figures prove it.”",
+      "audioText": "They claimed that the figures proved it.",
+      "audio": {
+        "language": "en-US",
+        "slowRate": 0.78,
+        "normalRate": 0.94
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves meaning and attribution",
+            "type": "content-point"
+          },
+          {
+            "id": "reported-form",
+            "label": "uses an appropriate reporting form",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      },
+      "feedback": {
+        "correct": "Correct. The report preserves the original meaning.",
+        "correctEs": "Correcto. La versión conserva el sentido original.",
+        "incorrect": "Check the speaker, pronoun and reporting structure. Model: They claimed that the figures proved it.",
+        "incorrectEs": "Revisa quién habla, el pronombre y la estructura indirecta. Modelo: They claimed that the figures proved it."
+      },
+      "tags": [
+        "reported-speech",
+        "b2",
+        "communication",
+        "cefr-aligned",
+        "production"
+      ],
+      "resources": [
+        "grammar",
+        "vocabulary"
+      ],
+      "languageResource": "reported-speech",
+      "errorType": "grammar",
+      "errorTarget": "reported-speech",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "reviewPriority": "high",
+      "spiralReview": {
+        "reviewableFrom": [
+          "A1",
+          "A2",
+          "B1"
+        ]
+      }
     }
   ]
 }
