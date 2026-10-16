@@ -973,7 +973,7 @@ function applyLinguisticReview(response, result = {}, skill = "writing") {
   const activity = { id: `HODIE-${skill}-response`, canDoId: session?.canDoId || practice?.canDoId || "SP-A2-01", level: profile?.level || "A2", skill, type: skill === "writing" ? "mini-production" : "conversation" };
   const linguisticLinks = getLinguisticResourcesForActivity(activity);
   if (!text || !["writing", "speaking"].includes(skill)) return { ...result, linguisticLinks };
-  const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 1 });
+  const review = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 4 });
   const contextualSuggestions = searchLinguisticKnowledge(text, {
     types: ["grammar", "vocabulary"],
     learnerLevel: profile?.level || "A2",
