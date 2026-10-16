@@ -25,6 +25,18 @@ for (const item of cases) {
   assert.equal(result.correctedText, item.expectCorrection, item.id + ": corrected text mismatch");
 }
 
+// Every tested data matcher must have a positive regression case, and its documented
+// negative cases must not trigger that same rule.
+for (const rule of catalog.grammarRules.filter((item) => item.status === "tested" && item.matcher)) {
+  assert.ok(cases.some((item) => item.expectRules.includes(rule.id)), rule.id + " needs a positive regression case");
+  for (const negativeCase of rule.negativeCases || []) {
+    const negativeText = typeof negativeCase === "string" ? negativeCase : negativeCase.text;
+    assert.ok(typeof negativeText === "string" && negativeText.length > 0, rule.id + " has an invalid negative case");
+    const negativeResult = analyzeLanguage(negativeText);
+    assert.ok(!negativeResult.errors.some((error) => error.ruleId === rule.id), rule.id + " falsely matched negative case: " + negativeText);
+  }
+}
+
 const teacher = analyzeLanguage("i am techer");
 assert.equal(teacher.correctedText, "I am a teacher");
 assert.ok(teacher.errors.some((error) => error.ruleId === "CAP-I-001"));
