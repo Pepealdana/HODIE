@@ -57,6 +57,7 @@ function applyRule(text, implementation, pattern, replace, fallback = {}) {
       message: rule?.explanation || fallback.message || "",
       messageEs: rule?.explanationEs || fallback.messageEs || "",
       examples: rule?.examples || [],
+      naturalAlternatives: rule?.naturalAlternatives || [],
       retry: ["high", "critical"].includes(rule?.priority || fallback.priority || "medium"),
       confidence: fallback.confidence || "high"
     });
@@ -101,8 +102,8 @@ function transformVerbForm(value, type) {
     else if(/ied$/.test(lower)) result=lower.slice(0,-3)+"y";
     else if(/ed$/.test(lower)){result=lower.slice(0,-2);if(/(.)\1$/.test(result))result=result.slice(0,-1);}
   } else if(type==="toGerund"){
-    const forms={be:"being",have:"having",make:"making",take:"taking",write:"writing",use:"using",come:"coming",go:"going",run:"running",swim:"swimming",get:"getting",sit:"sitting",put:"putting",lie:"lying",die:"dying",tie:"tying"};
-    if(forms[lower])result=forms[lower];else if(/ie$/.test(lower))result=lower.slice(0,-2)+"ying";else if(/e$/.test(lower)&&!/ee$/.test(lower))result=lower.slice(0,-1)+"ing";else if(/[aeiou][^aeiou]$/.test(lower)&&lower.length<=5)result=lower+lower.slice(-1)+"ing";else result=lower+"ing";
+    const forms={be:"being",have:"having",make:"making",take:"taking",write:"writing",use:"using",come:"coming",go:"going",run:"running",swim:"swimming",get:"getting",sit:"sitting",put:"putting",lie:"lying",die:"dying",tie:"tying",feel:"feeling",keep:"keeping",meet:"meeting",sleep:"sleeping",see:"seeing",play:"playing",study:"studying",try:"trying",carry:"carrying",open:"opening",listen:"listening",visit:"visiting",travel:"traveling",begin:"beginning",prefer:"preferring",admit:"admitting",occur:"occurring",forget:"forgetting",regret:"regretting",stop:"stopping",plan:"planning",shop:"shopping",drop:"dropping",cut:"cutting",win:"winning",dig:"digging",hit:"hitting",let:"letting",set:"setting",hug:"hugging",rub:"rubbing",nod:"nodding",tap:"tapping",chat:"chatting",fix:"fixing",wash:"washing",rain:"raining",buy:"buying",call:"calling",dance:"dancing",sing:"singing",drive:"driving",eat:"eating",drink:"drinking",talk:"talking",walk:"walking",cook:"cooking",watch:"watching",clean:"cleaning",help:"helping",look:"looking",wait:"waiting",stand:"standing"};
+    if(forms[lower])result=forms[lower];else if(/ie$/.test(lower))result=lower.slice(0,-2)+"ying";else if(/e$/.test(lower)&&!/ee$/.test(lower))result=lower.slice(0,-1)+"ing";else result=lower+"ing";
   } else if(type==="pastParticiple") result=participle[lower]||(/e$/.test(lower)?lower+"d":lower+"ed");
   if(original===original.toUpperCase())return result.toUpperCase();
   if(original[0]&&original[0]===original[0].toUpperCase())return result[0].toUpperCase()+result.slice(1);
@@ -155,6 +156,7 @@ function applyCatalogMatcher(text, rule) {
       message: rule.explanation || "",
       messageEs: rule.explanationEs || "",
       examples: rule.examples || [],
+      naturalAlternatives: rule.naturalAlternatives || [],
       retry: ["high", "critical"].includes(rule.priority || rule.severity || "medium"),
       confidence: matcher.confidence || "high"
     });
@@ -185,9 +187,7 @@ function analyzeLanguage(input, options = {}) {
       (m, subject, job) => subject + " " + (/^[aeiou]/i.test(job) ? "an" : "a") + " " + job],
     ["article-a-an", /\b(a)\s+(engineer|architect|accountant|artist|administrator)\b/gi, (m, article, noun) => preserveCase(article, "an") + " " + noun],
     ["enjoy-gerund", /\b(enjoy|enjoys|enjoyed)\s+to\s+([a-z]+)\b/gi, (m, verb, base) => {
-      const irregular = { be: "being", have: "having", make: "making", take: "taking", write: "writing", use: "using", come: "coming", go: "going", run: "running", swim: "swimming", get: "getting", sit: "sitting", put: "putting" };
-      const gerund = irregular[base.toLowerCase()] || (/ie$/i.test(base) ? base.slice(0, -2) + "ying" : /e$/i.test(base) && !/ee$/i.test(base) ? base.slice(0, -1) + "ing" : /[aeiou][^aeiou]$/i.test(base) && base.length <= 5 ? base + base.slice(-1) + "ing" : base + "ing");
-      return verb + " " + gerund;
+      return verb + " " + transformVerbForm(base, "toGerund");
     }],
     ["plural-agreement", /\b(my students|the students|students|my teachers|the teachers|teachers|children|people|they|we)\s+(is|has|does|works|teaches|builds|uses|likes|enjoys|goes|studies|watches|fixes|makes|plays|reads|writes|speaks|lives|needs|wants|helps|explains|creates)\b/gi,
       (m, subject, verb) => subject + " " + (PLURAL_FORMS[verb.toLowerCase()] || ({ is: "are", has: "have", does: "do" })[verb.toLowerCase()] || verb)],
