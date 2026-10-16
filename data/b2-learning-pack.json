@@ -1,0 +1,2781 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "HODIE-B2-LEARNING-PACK",
+  "framework": "CEFR Companion Volume",
+  "visibility": "locked-until-b2-readiness",
+  "gateId": "B2-READINESS-V1",
+  "note": "Built-in B2 content stored separately from active learning banks. Drafted against CEFR descriptors; expert editorial review is required before representing it as a validated assessment.",
+  "canDos": [
+    {
+      "id": "SP-B2-01",
+      "skill": "speaking",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can develop a clear argument and respond spontaneously to follow-up questions.",
+      "spanish": "Puedo desarrollar argumentos y responder preguntas espontáneas.",
+      "prerequisites": [
+        "SP-B1-04"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "speaking",
+        "task": "I can develop a clear argument and respond spontaneously to follow-up questions."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "SP-B1-04"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "LI-B2-01",
+      "skill": "listening",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can follow extended speech and identify argument structure, implications and relevant details.",
+      "spanish": "Puedo seguir discursos extensos e identificar argumentos e implicaciones.",
+      "prerequisites": [
+        "LI-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "listening",
+        "task": "I can follow extended speech and identify argument structure, implications and relevant details."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "LI-B1-01"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "RE-B2-01",
+      "skill": "reading",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can understand complex articles and distinguish claims, evidence, tone and implied meaning.",
+      "spanish": "Puedo comprender textos complejos y distinguir afirmaciones, evidencias y tono.",
+      "prerequisites": [
+        "RE-B1-05"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "reading",
+        "task": "I can understand complex articles and distinguish claims, evidence, tone and implied meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "RE-B1-05"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "WR-B2-01",
+      "skill": "writing",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can write clear, well-structured texts that develop arguments with supporting reasons and examples.",
+      "spanish": "Puedo escribir textos bien estructurados con razones y ejemplos.",
+      "prerequisites": [
+        "WR-B1-06"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "writing",
+        "task": "I can write clear, well-structured texts that develop arguments with supporting reasons and examples."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "WR-B1-06"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "VO-B2-01",
+      "skill": "vocabulary",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can express nuance and paraphrase precisely when a word or expression is unavailable.",
+      "spanish": "Puedo expresar matices y parafrasear con precisión.",
+      "prerequisites": [
+        "VO-B1-05"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "vocabulary",
+        "task": "I can express nuance and paraphrase precisely when a word or expression is unavailable."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "VO-B1-05"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "GR-B2-01",
+      "skill": "grammar",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can use complex structures to express hypothesis, concession, emphasis and qualification.",
+      "spanish": "Puedo usar estructuras complejas para expresar hipótesis y concesión.",
+      "prerequisites": [
+        "GR-B1-07"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "grammar",
+        "task": "I can use complex structures to express hypothesis, concession, emphasis and qualification."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "GR-B1-07"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "CO-B2-01",
+      "skill": "communication",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can sustain interaction, negotiate positions and respond tactfully to disagreement.",
+      "spanish": "Puedo sostener interacciones y negociar desacuerdos con tacto.",
+      "prerequisites": [
+        "CO-B1-05"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "communication",
+        "task": "I can sustain interaction, negotiate positions and respond tactfully to disagreement."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "CO-B1-05"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "PR-B2-01",
+      "skill": "pronunciation",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can use stress, rhythm and intonation to convey emphasis, attitude and distinctions in meaning.",
+      "spanish": "Puedo usar acento, ritmo y entonación para expresar matices.",
+      "prerequisites": [
+        "PR-B1-02"
+      ],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": []
+      },
+      "evidence": {
+        "type": "pronunciation",
+        "task": "I can use stress, rhythm and intonation to convey emphasis, attitude and distinctions in meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.85,
+        "confidence": 4
+      },
+      "recovery": [
+        "PR-B1-02"
+      ],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 3,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    }
+  ],
+  "activities": [
+    {
+      "id": "MIC-B2-SP-01",
+      "level": "B2",
+      "skill": "speaking",
+      "canDoId": "SP-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Build a balanced argument",
+      "titleEs": "Construye un argumento equilibrado",
+      "prompt": "Should cities restrict private cars in their centres? Present a position, two reasons and a counterargument.",
+      "promptEs": "¿Deberían las ciudades restringir los carros particulares en el centro? Presenta una postura, dos razones y un contraargumento.",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Develop a clear argument and respond spontaneously."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-SP-02",
+      "level": "B2",
+      "skill": "speaking",
+      "canDoId": "SP-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Respond to a challenge",
+      "titleEs": "Responde una objeción",
+      "prompt": "A listener says your proposal is too expensive. Respond tactfully and defend your point with evidence.",
+      "promptEs": "Un oyente dice que tu propuesta es costosa. Responde con tacto y defiende tu idea con evidencia.",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Develop a clear argument and respond spontaneously."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-SP-03",
+      "level": "B2",
+      "skill": "speaking",
+      "canDoId": "SP-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Compare nuanced options",
+      "titleEs": "Compara opciones con matices",
+      "prompt": "Compare two ways of learning a language, weighing effectiveness, cost, flexibility and motivation.",
+      "promptEs": "Compara dos formas de aprender un idioma, valorando eficacia, costo, flexibilidad y motivación.",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Develop a clear argument and respond spontaneously."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-SP-04",
+      "level": "B2",
+      "skill": "speaking",
+      "canDoId": "SP-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Summarise and conclude",
+      "titleEs": "Resume y concluye",
+      "prompt": "Summarise a discussion and state the conclusion best supported by the arguments.",
+      "promptEs": "Resume una discusión y presenta la conclusión mejor sustentada.",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Develop a clear argument and respond spontaneously."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-LI-05",
+      "level": "B2",
+      "skill": "listening",
+      "canDoId": "LI-B2-01",
+      "type": "listening",
+      "context": "public-life",
+      "title": "Separate claims from evidence",
+      "titleEs": "Distingue afirmaciones y evidencias",
+      "prompt": "What evidence supports the proposal?",
+      "promptEs": "¿Qué evidencia respalda la propuesta?",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Follow extended speech and complex lines of argument."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "audioText": "A six-month trial found that staff completed the same workload with fewer interruptions. The speaker acknowledges that some roles still require fixed hours.",
+      "options": [
+        "Fewer interruptions during a six-month trial",
+        "A survey about commuting costs",
+        "A reduction in staff numbers"
+      ],
+      "answer": "Fewer interruptions during a six-month trial",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-LI-06",
+      "level": "B2",
+      "skill": "listening",
+      "canDoId": "LI-B2-01",
+      "type": "listening",
+      "context": "public-life",
+      "title": "Identify a concession",
+      "titleEs": "Identifica una concesión",
+      "prompt": "Which limitation does the speaker acknowledge?",
+      "promptEs": "¿Qué limitación reconoce quien habla?",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Follow extended speech and complex lines of argument."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "audioText": "Although remote work reduces commuting, it can make informal collaboration harder for new employees. The speaker recommends hybrid schedules rather than a fully remote policy.",
+      "options": [
+        "Informal collaboration may be harder for new employees",
+        "Remote work always lowers productivity",
+        "Hybrid schedules cost nothing"
+      ],
+      "answer": "Informal collaboration may be harder for new employees",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-LI-07",
+      "level": "B2",
+      "skill": "listening",
+      "canDoId": "LI-B2-01",
+      "type": "listening",
+      "context": "public-life",
+      "title": "Follow an extended explanation",
+      "titleEs": "Sigue una explicación extensa",
+      "prompt": "Which step happens before the recommendation?",
+      "promptEs": "¿Qué paso ocurre antes de la recomendación?",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Follow extended speech and complex lines of argument."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "audioText": "The committee compared three proposals, consulted residents, revised the budget and assessed environmental effects. Only then did it recommend the second proposal.",
+      "options": [
+        "The committee consulted residents and revised the budget",
+        "It approved the first proposal immediately",
+        "It cancelled the assessment"
+      ],
+      "answer": "The committee consulted residents and revised the budget",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-LI-08",
+      "level": "B2",
+      "skill": "listening",
+      "canDoId": "LI-B2-01",
+      "type": "listening",
+      "context": "public-life",
+      "title": "Infer speaker attitude",
+      "titleEs": "Deduce la actitud",
+      "prompt": "Is the speaker cautiously supportive, strongly opposed or fully convinced?",
+      "promptEs": "¿Quien habla está a favor con cautela, en contra o totalmente convencido?",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Follow extended speech and complex lines of argument."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "audioText": "The results are promising, but the sample was small, so I would avoid firm conclusions at this stage.",
+      "options": [
+        "Cautiously supportive",
+        "Strongly opposed",
+        "Completely convinced"
+      ],
+      "answer": "Cautiously supportive",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-RE-09",
+      "level": "B2",
+      "skill": "reading",
+      "canDoId": "RE-B2-01",
+      "type": "match",
+      "context": "education",
+      "title": "Distinguish claim and evidence",
+      "titleEs": "Distingue afirmación y evidencia",
+      "prompt": "A pilot programme reported fewer repeated discussions, although it did not measure long-term outcomes. What limitation is stated?",
+      "promptEs": "Un programa piloto reportó menos discusiones repetidas, aunque no midió resultados a largo plazo. ¿Qué limitación se menciona?",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Distinguish claims, evidence, viewpoints and implied meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "Long-term outcomes were not measured",
+      "options": [
+        "Long-term outcomes were not measured",
+        "Teams refused to participate",
+        "Meetings became longer"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-RE-10",
+      "level": "B2",
+      "skill": "reading",
+      "canDoId": "RE-B2-01",
+      "type": "match",
+      "context": "education",
+      "title": "Infer a qualified position",
+      "titleEs": "Deduce una postura matizada",
+      "prompt": "The policy is not without drawbacks, but its benefits appear to outweigh its costs when implementation is gradual. What is the author's position?",
+      "promptEs": "¿Cuál es la postura del autor?",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Distinguish claims, evidence, viewpoints and implied meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "The author supports gradual implementation despite drawbacks",
+      "options": [
+        "The author supports gradual implementation despite drawbacks",
+        "The author rejects the policy completely",
+        "Costs are irrelevant"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-RE-11",
+      "level": "B2",
+      "skill": "reading",
+      "canDoId": "RE-B2-01",
+      "type": "match",
+      "context": "education",
+      "title": "Recognise tone",
+      "titleEs": "Reconoce el tono",
+      "prompt": "The proposal sounds attractive on paper; however, its assumptions deserve closer scrutiny. What is the tone?",
+      "promptEs": "¿Cuál es el tono?",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Distinguish claims, evidence, viewpoints and implied meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "Cautious and critical",
+      "options": [
+        "Cautious and critical",
+        "Entirely enthusiastic",
+        "Indifferent"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-RE-12",
+      "level": "B2",
+      "skill": "reading",
+      "canDoId": "RE-B2-01",
+      "type": "match",
+      "context": "education",
+      "title": "Track reasoning",
+      "titleEs": "Sigue el razonamiento",
+      "prompt": "Which reason best supports a recommendation to expand public transport?",
+      "promptEs": "¿Qué razón respalda mejor la recomendación de ampliar el transporte público?",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Distinguish claims, evidence, viewpoints and implied meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "It balances access, cost and environmental impact",
+      "options": [
+        "It balances access, cost and environmental impact",
+        "It is the newest option",
+        "It needs no public consultation"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-WR-13",
+      "level": "B2",
+      "skill": "writing",
+      "canDoId": "WR-B2-01",
+      "type": "mini-production",
+      "context": "education",
+      "title": "Develop a structured argument",
+      "titleEs": "Desarrolla un argumento estructurado",
+      "prompt": "Write 180–220 words arguing whether digital citizenship should be a core school subject. Include a thesis, two reasons, a counterargument and conclusion.",
+      "promptEs": "Escribe 180–220 palabras argumentando si la ciudadanía digital debe ser una asignatura básica. Incluye tesis, dos razones, contraargumento y conclusión.",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Write clear, detailed, well-structured texts."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-WR-14",
+      "level": "B2",
+      "skill": "writing",
+      "canDoId": "WR-B2-01",
+      "type": "mini-production",
+      "context": "education",
+      "title": "Synthesize viewpoints",
+      "titleEs": "Sintetiza posturas",
+      "prompt": "Compare two viewpoints on flexible work fairly before stating your own position.",
+      "promptEs": "Compara con justicia dos posturas sobre el trabajo flexible antes de expresar la tuya.",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Write clear, detailed, well-structured texts."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-WR-15",
+      "level": "B2",
+      "skill": "writing",
+      "canDoId": "WR-B2-01",
+      "type": "mini-production",
+      "context": "education",
+      "title": "Write a formal recommendation",
+      "titleEs": "Redacta una recomendación formal",
+      "prompt": "Recommend an improvement to a service. Explain the problem, compare alternatives and justify your preferred option.",
+      "promptEs": "Recomienda una mejora para un servicio. Explica el problema, compara alternativas y justifica tu opción.",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Write clear, detailed, well-structured texts."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-WR-16",
+      "level": "B2",
+      "skill": "writing",
+      "canDoId": "WR-B2-01",
+      "type": "mini-production",
+      "context": "education",
+      "title": "Revise for cohesion",
+      "titleEs": "Revisa la cohesión",
+      "prompt": "Rewrite an opinion text to reduce repetition and add precise concession and qualification.",
+      "promptEs": "Reescribe un texto de opinión para reducir repeticiones y añadir concesión y matices.",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Write clear, detailed, well-structured texts."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-VO-17",
+      "level": "B2",
+      "skill": "vocabulary",
+      "canDoId": "VO-B2-01",
+      "type": "match",
+      "context": "professional",
+      "title": "Choose a precise qualifier",
+      "titleEs": "Elige un matizador",
+      "prompt": "Which phrase shows that evidence supports a claim without proving it completely?",
+      "promptEs": "¿Qué frase indica que la evidencia respalda una afirmación sin probarla por completo?",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Express nuance and paraphrase precisely."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "The evidence suggests that…",
+      "options": [
+        "The evidence suggests that…",
+        "It is impossible that…",
+        "Everyone knows that…"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-VO-18",
+      "level": "B2",
+      "skill": "vocabulary",
+      "canDoId": "VO-B2-01",
+      "type": "match",
+      "context": "professional",
+      "title": "Paraphrase a complex idea",
+      "titleEs": "Parafrasea una idea compleja",
+      "prompt": "Paraphrase: The proposal is feasible, provided that funding remains stable.",
+      "promptEs": "Parafrasea: La propuesta es viable siempre que la financiación se mantenga estable.",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Express nuance and paraphrase precisely."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "The plan can work if funding remains stable",
+      "options": [
+        "The plan can work if funding remains stable",
+        "The plan is impossible because it needs money",
+        "Funding is no longer necessary"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-VO-19",
+      "level": "B2",
+      "skill": "vocabulary",
+      "canDoId": "VO-B2-01",
+      "type": "match",
+      "context": "professional",
+      "title": "Distinguish near-synonyms",
+      "titleEs": "Distingue palabras cercanas",
+      "prompt": "Which word describes a conclusion supported by evidence but still open to revision?",
+      "promptEs": "¿Qué palabra describe una conclusión respaldada por evidencia, pero revisable?",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Express nuance and paraphrase precisely."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "tentative",
+      "options": [
+        "tentative",
+        "careless",
+        "irrelevant"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-VO-20",
+      "level": "B2",
+      "skill": "vocabulary",
+      "canDoId": "VO-B2-01",
+      "type": "match",
+      "context": "professional",
+      "title": "Choose a collocation",
+      "titleEs": "Elige una colocación",
+      "prompt": "Complete: The report ___ serious concerns about privacy.",
+      "promptEs": "Completa: The report ___ serious concerns about privacy.",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Express nuance and paraphrase precisely."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "raises",
+      "options": [
+        "raises",
+        "lifts",
+        "rises"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-GR-21",
+      "level": "B2",
+      "skill": "grammar",
+      "canDoId": "GR-B2-01",
+      "type": "choose",
+      "context": "professional",
+      "title": "Concession clauses",
+      "titleEs": "Cláusulas concesivas",
+      "prompt": "___ the initial cost is high, the long-term savings may justify the investment.",
+      "promptEs": "___ el costo inicial es alto, el ahorro a largo plazo puede justificar la inversión.",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use complex structures to express hypothesis and concession."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "Although",
+      "options": [
+        "Although",
+        "Because of",
+        "Despite that"
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-GR-22",
+      "level": "B2",
+      "skill": "grammar",
+      "canDoId": "GR-B2-01",
+      "type": "choose",
+      "context": "professional",
+      "title": "Mixed conditionals",
+      "titleEs": "Condicionales mixtos",
+      "prompt": "Choose the unreal past condition with a present result.",
+      "promptEs": "Elige la condición pasada irreal con resultado presente.",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use complex structures to express hypothesis and concession."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "If I had accepted the role, I would be living abroad now.",
+      "options": [
+        "If I had accepted the role, I would be living abroad now.",
+        "If I accept the role, I moved abroad yesterday.",
+        "If I had accepted the role, I will live abroad now."
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-GR-23",
+      "level": "B2",
+      "skill": "grammar",
+      "canDoId": "GR-B2-01",
+      "type": "choose",
+      "context": "professional",
+      "title": "Emphasis structures",
+      "titleEs": "Estructuras de énfasis",
+      "prompt": "Which sentence emphasises the main reason?",
+      "promptEs": "¿Qué oración enfatiza la razón principal?",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use complex structures to express hypothesis and concession."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "What matters most is whether the plan is sustainable.",
+      "options": [
+        "What matters most is whether the plan is sustainable.",
+        "The plan matters most whether is sustainable.",
+        "What matters most whether the plan is sustainable."
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-GR-24",
+      "level": "B2",
+      "skill": "grammar",
+      "canDoId": "GR-B2-01",
+      "type": "choose",
+      "context": "professional",
+      "title": "Passive reporting",
+      "titleEs": "Pasiva de reporte",
+      "prompt": "Choose the formal reporting structure.",
+      "promptEs": "Elige la estructura formal de reporte.",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use complex structures to express hypothesis and concession."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "answer": "The proposal is believed to reduce waste.",
+      "options": [
+        "The proposal is believed to reduce waste.",
+        "The proposal believes reducing waste.",
+        "The proposal is believe to reducing waste."
+      ],
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-CO-25",
+      "level": "B2",
+      "skill": "communication",
+      "canDoId": "CO-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Negotiate a compromise",
+      "titleEs": "Negocia un acuerdo",
+      "prompt": "A team disagrees about a deadline. Acknowledge both concerns, propose a compromise and check agreement.",
+      "promptEs": "Un equipo discrepa sobre una fecha límite. Reconoce ambas preocupaciones, propón un acuerdo y confirma si lo aceptan.",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Negotiate positions and respond tactfully."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-CO-26",
+      "level": "B2",
+      "skill": "communication",
+      "canDoId": "CO-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Respond tactfully to criticism",
+      "titleEs": "Responde con tacto",
+      "prompt": "A colleague says your presentation ignores evidence. Respond calmly and ask which evidence they mean.",
+      "promptEs": "Un colega dice que tu presentación ignora evidencia. Responde con calma y pregunta a qué evidencia se refiere.",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Negotiate positions and respond tactfully."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-CO-27",
+      "level": "B2",
+      "skill": "communication",
+      "canDoId": "CO-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Reframe disagreement",
+      "titleEs": "Reformula un desacuerdo",
+      "prompt": "Explain where you agree, where you differ and what evidence could resolve the disagreement.",
+      "promptEs": "Explica en qué coincides, en qué discrepas y qué evidencia podría resolver el desacuerdo.",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Negotiate positions and respond tactfully."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-CO-28",
+      "level": "B2",
+      "skill": "communication",
+      "canDoId": "CO-B2-01",
+      "type": "mini-production",
+      "context": "public-life",
+      "title": "Summarise opposing views",
+      "titleEs": "Resume posturas opuestas",
+      "prompt": "Summarise two opposing views fairly and identify one shared priority.",
+      "promptEs": "Resume con equilibrio dos posturas opuestas e identifica una prioridad compartida.",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Negotiate positions and respond tactfully."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "requirements": {
+        "minResponseCharacters": 75
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 75,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "relevant-response",
+            "label": "Develop a relevant, connected response",
+            "patterns": [
+              "\\b(because|although|however|for example|in my view|therefore|on the other hand)\\b"
+            ],
+            "missingMessage": "Develop the response and connect your ideas.",
+            "missingMessageEs": "Desarrolla la respuesta y conecta las ideas."
+          }
+        ]
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-PR-29",
+      "level": "B2",
+      "skill": "pronunciation",
+      "canDoId": "PR-B2-01",
+      "type": "speak",
+      "context": "professional",
+      "title": "Stress a contrast",
+      "titleEs": "Enfatiza un contraste",
+      "prompt": "Read aloud: The proposal is affordable, but it is not necessarily sustainable.",
+      "promptEs": "Lee en voz alta: The proposal is affordable, but it is not necessarily sustainable.",
+      "primarySkill": "pronunciation",
+      "tags": [
+        "pronunciation",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "pronunciation"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use stress and intonation to convey shades of meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "targetPhrase": "The proposal is affordable, but it is not necessarily sustainable.",
+      "requiredTokens": [
+        "affordable",
+        "but",
+        "not",
+        "sustainable"
+      ],
+      "audioText": "The proposal is affordable, but it is not necessarily sustainable.",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-PR-30",
+      "level": "B2",
+      "skill": "pronunciation",
+      "canDoId": "PR-B2-01",
+      "type": "speak",
+      "context": "professional",
+      "title": "Signal qualification",
+      "titleEs": "Marca un matiz",
+      "prompt": "Read aloud: To some extent, the evidence supports this view; nevertheless, further research is needed.",
+      "promptEs": "Lee en voz alta la oración y marca los matices.",
+      "primarySkill": "pronunciation",
+      "tags": [
+        "pronunciation",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "pronunciation"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use stress and intonation to convey shades of meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "targetPhrase": "To some extent, the evidence supports this view; nevertheless, further research is needed.",
+      "requiredTokens": [
+        "extent",
+        "supports",
+        "nevertheless",
+        "research"
+      ],
+      "audioText": "To some extent, the evidence supports this view; nevertheless, further research is needed.",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-PR-31",
+      "level": "B2",
+      "skill": "pronunciation",
+      "canDoId": "PR-B2-01",
+      "type": "speak",
+      "context": "professional",
+      "title": "Use pauses",
+      "titleEs": "Usa pausas",
+      "prompt": "Read aloud: First, the costs are manageable. More importantly, the benefits are long-term.",
+      "promptEs": "Lee en voz alta y pausa tras los conectores.",
+      "primarySkill": "pronunciation",
+      "tags": [
+        "pronunciation",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "pronunciation"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use stress and intonation to convey shades of meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "targetPhrase": "First, the costs are manageable. More importantly, the benefits are long-term.",
+      "requiredTokens": [
+        "first",
+        "costs",
+        "importantly",
+        "benefits"
+      ],
+      "audioText": "First, the costs are manageable. More importantly, the benefits are long-term.",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    },
+    {
+      "id": "MIC-B2-PR-32",
+      "level": "B2",
+      "skill": "pronunciation",
+      "canDoId": "PR-B2-01",
+      "type": "speak",
+      "context": "professional",
+      "title": "Convey respectful disagreement",
+      "titleEs": "Expresa desacuerdo respetuoso",
+      "prompt": "Read aloud: I understand the concern; I would, however, interpret the evidence differently.",
+      "promptEs": "Lee con entonación moderada.",
+      "primarySkill": "pronunciation",
+      "tags": [
+        "pronunciation",
+        "B2",
+        "CEFR"
+      ],
+      "resources": [
+        "pronunciation"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR Companion Volume",
+        "level": "B2",
+        "descriptor": "Use stress and intonation to convey shades of meaning."
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      },
+      "targetPhrase": "I understand the concern; I would, however, interpret the evidence differently.",
+      "requiredTokens": [
+        "understand",
+        "however",
+        "interpret",
+        "differently"
+      ],
+      "audioText": "I understand the concern; I would, however, interpret the evidence differently.",
+      "audio": {
+        "normalRate": 0.95,
+        "slowRate": 0.75,
+        "language": "en-US"
+      },
+      "feedback": {
+        "correct": "Correct. Explain the reasoning behind your choice.",
+        "correctEs": "Correcto. Explica el razonamiento detrás de tu elección.",
+        "incorrect": "Review the nuance, evidence and structure, then try again.",
+        "incorrectEs": "Revisa el matiz, la evidencia y la estructura; después inténtalo de nuevo."
+      }
+    }
+  ],
+  "fullActivities": [
+    {
+      "id": "ACT-B2-SP-01",
+      "canDoId": "SP-B2-01",
+      "activityType": "independent-production",
+      "level": "B2",
+      "skill": "speaking",
+      "context": "academic-and-public-life",
+      "title": "Present and defend a proposal",
+      "titleEs": "Presenta y defiende una propuesta",
+      "objective": "Give a 3–4 minute proposal, support it with reasons and examples, then respond to two objections.",
+      "objectiveEs": "Give a 3–4 minute proposal, support it with reasons and examples, then respond to two objections.",
+      "instructions": "Give a 3–4 minute proposal, support it with reasons and examples, then respond to two objections.",
+      "task": "Give a 3–4 minute proposal, support it with reasons and examples, then respond to two objections.",
+      "taskEs": "Give a 3–4 minute proposal, support it with reasons and examples, then respond to two objections.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "speaking",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-LI-01",
+      "canDoId": "LI-B2-01",
+      "activityType": "comprehension",
+      "level": "B2",
+      "skill": "listening",
+      "context": "academic-and-public-life",
+      "title": "Analyse an extended talk",
+      "titleEs": "Analiza una exposición extensa",
+      "objective": "Record the thesis, two supporting points, one concession and the speaker's attitude.",
+      "objectiveEs": "Record the thesis, two supporting points, one concession and the speaker's attitude.",
+      "instructions": "Record the thesis, two supporting points, one concession and the speaker's attitude.",
+      "task": "Record the thesis, two supporting points, one concession and the speaker's attitude.",
+      "taskEs": "Record the thesis, two supporting points, one concession and the speaker's attitude.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "listening",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-RE-01",
+      "canDoId": "RE-B2-01",
+      "activityType": "critical-reading",
+      "level": "B2",
+      "skill": "reading",
+      "context": "academic-and-public-life",
+      "title": "Evaluate a complex article",
+      "titleEs": "Evalúa un artículo complejo",
+      "objective": "Map the main claim, evidence, assumptions, tone and conclusion in a complex article.",
+      "objectiveEs": "Map the main claim, evidence, assumptions, tone and conclusion in a complex article.",
+      "instructions": "Map the main claim, evidence, assumptions, tone and conclusion in a complex article.",
+      "task": "Map the main claim, evidence, assumptions, tone and conclusion in a complex article.",
+      "taskEs": "Map the main claim, evidence, assumptions, tone and conclusion in a complex article.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "reading",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-WR-01",
+      "canDoId": "WR-B2-01",
+      "activityType": "independent-production",
+      "level": "B2",
+      "skill": "writing",
+      "context": "academic-and-public-life",
+      "title": "Write a balanced essay",
+      "titleEs": "Escribe un ensayo equilibrado",
+      "objective": "Write a 220–280 word essay with a thesis, developed reasons, counterargument, cohesive links and conclusion.",
+      "objectiveEs": "Write a 220–280 word essay with a thesis, developed reasons, counterargument, cohesive links and conclusion.",
+      "instructions": "Write a 220–280 word essay with a thesis, developed reasons, counterargument, cohesive links and conclusion.",
+      "task": "Write a 220–280 word essay with a thesis, developed reasons, counterargument, cohesive links and conclusion.",
+      "taskEs": "Write a 220–280 word essay with a thesis, developed reasons, counterargument, cohesive links and conclusion.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "writing",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-VO-01",
+      "canDoId": "VO-B2-01",
+      "activityType": "independent-production",
+      "level": "B2",
+      "skill": "vocabulary",
+      "context": "academic-and-public-life",
+      "title": "Paraphrase with precision",
+      "titleEs": "Parafrasea con precisión",
+      "objective": "Explain five unfamiliar concepts using definitions, examples, contrast or paraphrase.",
+      "objectiveEs": "Explain five unfamiliar concepts using definitions, examples, contrast or paraphrase.",
+      "instructions": "Explain five unfamiliar concepts using definitions, examples, contrast or paraphrase.",
+      "task": "Explain five unfamiliar concepts using definitions, examples, contrast or paraphrase.",
+      "taskEs": "Explain five unfamiliar concepts using definitions, examples, contrast or paraphrase.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "vocabulary",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-GR-01",
+      "canDoId": "GR-B2-01",
+      "activityType": "independent-production",
+      "level": "B2",
+      "skill": "grammar",
+      "context": "academic-and-public-life",
+      "title": "Combine complex structures",
+      "titleEs": "Combina estructuras complejas",
+      "objective": "Rewrite statements using concession, hypothesis, passive reporting and emphasis while preserving meaning.",
+      "objectiveEs": "Rewrite statements using concession, hypothesis, passive reporting and emphasis while preserving meaning.",
+      "instructions": "Rewrite statements using concession, hypothesis, passive reporting and emphasis while preserving meaning.",
+      "task": "Rewrite statements using concession, hypothesis, passive reporting and emphasis while preserving meaning.",
+      "taskEs": "Rewrite statements using concession, hypothesis, passive reporting and emphasis while preserving meaning.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "grammar",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-CO-01",
+      "canDoId": "CO-B2-01",
+      "activityType": "interaction",
+      "level": "B2",
+      "skill": "communication",
+      "context": "academic-and-public-life",
+      "title": "Negotiate a multi-step agreement",
+      "titleEs": "Negocia un acuerdo de varios pasos",
+      "objective": "Resolve a disagreement, acknowledge priorities, propose alternatives and confirm a workable agreement.",
+      "objectiveEs": "Resolve a disagreement, acknowledge priorities, propose alternatives and confirm a workable agreement.",
+      "instructions": "Resolve a disagreement, acknowledge priorities, propose alternatives and confirm a workable agreement.",
+      "task": "Resolve a disagreement, acknowledge priorities, propose alternatives and confirm a workable agreement.",
+      "taskEs": "Resolve a disagreement, acknowledge priorities, propose alternatives and confirm a workable agreement.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "communication",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    },
+    {
+      "id": "ACT-B2-PR-01",
+      "canDoId": "PR-B2-01",
+      "activityType": "independent-production",
+      "level": "B2",
+      "skill": "pronunciation",
+      "context": "academic-and-public-life",
+      "title": "Deliver a nuanced spoken argument",
+      "titleEs": "Presenta un argumento oral con matices",
+      "objective": "Deliver a two-minute argument using pauses, stress and intonation to signal contrast and stance.",
+      "objectiveEs": "Deliver a two-minute argument using pauses, stress and intonation to signal contrast and stance.",
+      "instructions": "Deliver a two-minute argument using pauses, stress and intonation to signal contrast and stance.",
+      "task": "Deliver a two-minute argument using pauses, stress and intonation to signal contrast and stance.",
+      "taskEs": "Deliver a two-minute argument using pauses, stress and intonation to signal contrast and stance.",
+      "support": {
+        "optionalSentenceStarters": [
+          "One argument in favour is…",
+          "A possible limitation is…",
+          "The evidence suggests that…"
+        ]
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "clarity": 0.8,
+          "cohesion": 0.8,
+          "range": 0.75,
+          "accuracy": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 3
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 15,
+        "tags": [
+          "pronunciation",
+          "B2",
+          "CEFR"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "relevance",
+            "label": "Responds to the task",
+            "type": "rubric"
+          },
+          {
+            "id": "cohesion",
+            "label": "Develops and connects ideas",
+            "type": "rubric"
+          },
+          {
+            "id": "language-range",
+            "label": "Uses appropriate language range",
+            "type": "rubric"
+          }
+        ],
+        "minimumCriteria": 2
+      },
+      "validation": {
+        "status": "ready-for-editorial-review",
+        "reviewedBy": null,
+        "framework": "CEFR Companion Volume"
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "id": "EXP-B2-DEBATE-01",
+      "kind": "simulation",
+      "mode": "role-play",
+      "title": "Structured debate",
+      "titleEs": "Debate estructurado",
+      "description": "Defend a position, respond to counterarguments and summarise shared ground.",
+      "descriptionEs": "Defiende una postura, responde contraargumentos y resume puntos comunes.",
+      "levels": [
+        "B2"
+      ],
+      "contexts": [
+        "public-life",
+        "education"
+      ],
+      "role": {
+        "assistant": "A discussion partner who challenges claims and asks for evidence.",
+        "learner": "A participant defending a reasoned position."
+      },
+      "stages": [
+        {
+          "id": "claim",
+          "title": "State your position",
+          "titleEs": "Expón tu postura",
+          "prompt": "Should schools teach digital citizenship as a core subject? State your position and main reason.",
+          "promptEs": "¿Deberían los colegios enseñar ciudadanía digital como asignatura básica? Expón tu postura y razón principal.",
+          "criteria": [
+            {
+              "id": "position",
+              "label": "States a clear position",
+              "patterns": [
+                "\\b(i believe|in my view|i would argue|i think)\\b"
+              ],
+              "missingMessage": "State your position clearly.",
+              "missingMessageEs": "Expón tu postura con claridad."
+            }
+          ]
+        },
+        {
+          "id": "evidence",
+          "title": "Support your argument",
+          "titleEs": "Sustenta tu argumento",
+          "prompt": "Give an example or evidence that supports your position.",
+          "promptEs": "Da un ejemplo o evidencia que respalde tu postura.",
+          "criteria": [
+            {
+              "id": "evidence",
+              "label": "Supports the claim",
+              "patterns": [
+                "\\b(for example|because|evidence|research|such as)\\b"
+              ],
+              "missingMessage": "Add a reason or example.",
+              "missingMessageEs": "Añade una razón o ejemplo."
+            }
+          ]
+        },
+        {
+          "id": "counter",
+          "title": "Respond to a counterargument",
+          "titleEs": "Responde un contraargumento",
+          "prompt": "A partner says this subject would take time away from other lessons. Respond fairly.",
+          "promptEs": "Tu interlocutor dice que la asignatura quitaría tiempo a otras clases. Responde con equilibrio.",
+          "criteria": [
+            {
+              "id": "concession",
+              "label": "Acknowledges an opposing concern",
+              "patterns": [
+                "\\b(although|while|i understand|admittedly|nevertheless|however)\\b"
+              ],
+              "missingMessage": "Acknowledge the concern before responding.",
+              "missingMessageEs": "Reconoce la preocupación antes de responder."
+            }
+          ]
+        },
+        {
+          "id": "conclusion",
+          "title": "Summarise and conclude",
+          "titleEs": "Resume y concluye",
+          "prompt": "Summarise the strongest point on each side and give a qualified conclusion.",
+          "promptEs": "Resume el argumento más fuerte de cada postura y da una conclusión matizada.",
+          "criteria": [
+            {
+              "id": "conclusion",
+              "label": "Summarises both sides",
+              "patterns": [
+                "\\b(on the one hand|on the other hand|overall|to some extent|in conclusion)\\b"
+              ],
+              "missingMessage": "Summarise both sides and give a conclusion.",
+              "missingMessageEs": "Resume ambas posturas y presenta una conclusión."
+            }
+          ]
+        }
+      ],
+      "correctionPolicy": "high-confidence",
+      "evidencePolicy": {
+        "independent": true,
+        "confidenceMinimum": 4
+      }
+    },
+    {
+      "id": "EXP-B2-PROBLEM-01",
+      "kind": "simulation",
+      "mode": "role-play",
+      "title": "Solve a complex problem",
+      "titleEs": "Resuelve un problema complejo",
+      "description": "Analyse constraints, compare solutions and negotiate a practical decision.",
+      "descriptionEs": "Analiza restricciones, compara soluciones y negocia una decisión práctica.",
+      "levels": [
+        "B2"
+      ],
+      "contexts": [
+        "work",
+        "community"
+      ],
+      "role": {
+        "assistant": "A colleague with competing priorities.",
+        "learner": "A problem-solver facilitating a decision."
+      },
+      "stages": [
+        {
+          "id": "define",
+          "title": "Define the problem",
+          "titleEs": "Define el problema",
+          "prompt": "Describe the problem, its causes and the people affected.",
+          "promptEs": "Describe el problema, sus causas y las personas afectadas.",
+          "criteria": [
+            {
+              "id": "problem",
+              "label": "Defines problem and impact",
+              "patterns": [
+                "\\b(problem|issue|challenge|impact|because)\\b"
+              ],
+              "missingMessage": "Define the problem and its impact.",
+              "missingMessageEs": "Define el problema y su impacto."
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "title": "Compare solutions",
+          "titleEs": "Compara soluciones",
+          "prompt": "Compare at least two solutions and their trade-offs.",
+          "promptEs": "Compara al menos dos soluciones y sus ventajas y desventajas.",
+          "criteria": [
+            {
+              "id": "tradeoffs",
+              "label": "Compares options",
+              "patterns": [
+                "\\b(although|whereas|compared with|on the other hand|advantage|drawback)\\b"
+              ],
+              "missingMessage": "Compare options and trade-offs.",
+              "missingMessageEs": "Compara las opciones y sus ventajas y desventajas."
+            }
+          ]
+        },
+        {
+          "id": "recommend",
+          "title": "Recommend a solution",
+          "titleEs": "Recomienda una solución",
+          "prompt": "Recommend one option and explain the conditions for success.",
+          "promptEs": "Recomienda una opción y explica las condiciones para que funcione.",
+          "criteria": [
+            {
+              "id": "recommendation",
+              "label": "Gives a reasoned recommendation",
+              "patterns": [
+                "\\b(recommend|suggest|provided that|in order to|would be)\\b"
+              ],
+              "missingMessage": "Give a recommendation and conditions.",
+              "missingMessageEs": "Da una recomendación y sus condiciones."
+            }
+          ]
+        }
+      ],
+      "correctionPolicy": "high-confidence",
+      "evidencePolicy": {
+        "independent": true,
+        "confidenceMinimum": 4
+      }
+    },
+    {
+      "id": "EXP-B2-INTERVIEW-01",
+      "kind": "simulation",
+      "mode": "role-play",
+      "title": "Expert interview",
+      "titleEs": "Entrevista especializada",
+      "description": "Explain a complex familiar topic and clarify nuanced points.",
+      "descriptionEs": "Explica un tema complejo conocido y aclara sus matices.",
+      "levels": [
+        "B2"
+      ],
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "role": {
+        "assistant": "An interviewer asking for examples and clarification.",
+        "learner": "A knowledgeable interviewee."
+      },
+      "stages": [
+        {
+          "id": "overview",
+          "title": "Explain the topic",
+          "titleEs": "Explica el tema",
+          "prompt": "Explain a topic you know well and why it matters.",
+          "promptEs": "Explica un tema que conozcas bien y por qué es importante.",
+          "criteria": [
+            {
+              "id": "overview",
+              "label": "Provides a clear overview",
+              "patterns": [
+                "\\b(essential|important|because|involves|refers to)\\b"
+              ],
+              "missingMessage": "Give a clear overview and explain its importance.",
+              "missingMessageEs": "Ofrece una visión clara y explica su importancia."
+            }
+          ]
+        },
+        {
+          "id": "detail",
+          "title": "Develop the explanation",
+          "titleEs": "Desarrolla la explicación",
+          "prompt": "Give an example and explain one limitation or alternative interpretation.",
+          "promptEs": "Da un ejemplo y explica una limitación o interpretación alternativa.",
+          "criteria": [
+            {
+              "id": "nuance",
+              "label": "Adds example and qualification",
+              "patterns": [
+                "\\b(for example|although|however|to some extent|whereas)\\b"
+              ],
+              "missingMessage": "Add an example and a qualification.",
+              "missingMessageEs": "Añade un ejemplo y un matiz."
+            }
+          ]
+        },
+        {
+          "id": "clarify",
+          "title": "Answer a follow-up",
+          "titleEs": "Responde una pregunta de seguimiento",
+          "prompt": "Clarify one point and reformulate it in a different way.",
+          "promptEs": "Aclara un punto y reformúlalo de otra manera.",
+          "criteria": [
+            {
+              "id": "reformulation",
+              "label": "Clarifies or paraphrases",
+              "patterns": [
+                "\\b(in other words|what i mean|to put it another way|that is to say)\\b"
+              ],
+              "missingMessage": "Rephrase the point for clarity.",
+              "missingMessageEs": "Reformula la idea para que quede clara."
+            }
+          ]
+        }
+      ],
+      "correctionPolicy": "high-confidence",
+      "evidencePolicy": {
+        "independent": true,
+        "confidenceMinimum": 4
+      }
+    }
+  ]
+}
