@@ -5005,7 +5005,7 @@
     {
       "id": "MIC-GR-RS-A1-01",
       "canDoId": "GR-RS-A1-01",
-      "type": "match",
+      "type": "choose",
       "skill": "reading",
       "context": "everyday-life",
       "level": "A1",
@@ -5042,25 +5042,16 @@
         "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
       },
       "options": [
-        "Hello!",
-        "Goodbye!",
-        "Thank you!"
+        "A greeting",
+        "A farewell",
+        "Gratitude"
       ],
       "tokens": [
         "A greeting",
         "A farewell",
         "Gratitude"
       ],
-      "acceptableAnswers": [
-        "A greeting",
-        "A farewell",
-        "Gratitude"
-      ],
-      "answer": [
-        "A greeting",
-        "A farewell",
-        "Gratitude"
-      ]
+      "answer": "A greeting"
     },
     {
       "id": "MIC-GR-RS-A1-02",
@@ -5307,7 +5298,7 @@
     {
       "id": "MIC-GR-RS-A2-03",
       "canDoId": "GR-RS-A2-01",
-      "type": "match",
+      "type": "choose",
       "skill": "reading",
       "context": "everyday-life",
       "level": "A2",
@@ -5344,25 +5335,16 @@
         "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
       },
       "options": [
-        "“I am busy.”",
-        "“I like music.”",
-        "“I work here.”"
+        "She said she was busy.",
+        "She said she is busy.",
+        "She said she busy."
       ],
       "tokens": [
         "She said she was busy.",
         "He said he liked music.",
         "They said they worked there."
       ],
-      "acceptableAnswers": [
-        "She said she was busy.",
-        "He said he liked music.",
-        "They said they worked there."
-      ],
-      "answer": [
-        "She said she was busy.",
-        "He said he liked music.",
-        "They said they worked there."
-      ]
+      "answer": "She said she was busy."
     },
     {
       "id": "MIC-GR-RS-A2-04",
@@ -5510,7 +5492,7 @@
     {
       "id": "MIC-GR-RS-B1-03",
       "canDoId": "GR-RS-B1-01",
-      "type": "match",
+      "type": "choose",
       "skill": "reading",
       "context": "everyday-life",
       "level": "B1",
@@ -5547,25 +5529,16 @@
         "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
       },
       "options": [
-        "“Can you help me?”",
-        "“Where is the station?”",
-        "“Please wait.”"
+        "She asked if I could help her.",
+        "He asked where the station was.",
+        "She asked me to wait."
       ],
       "tokens": [
         "She asked if I could help her.",
         "He asked where the station was.",
         "She asked me to wait."
       ],
-      "acceptableAnswers": [
-        "She asked if I could help her.",
-        "He asked where the station was.",
-        "She asked me to wait."
-      ],
-      "answer": [
-        "She asked if I could help her.",
-        "He asked where the station was.",
-        "She asked me to wait."
-      ]
+      "answer": "She asked if I could help her."
     },
     {
       "id": "MIC-GR-RS-B1-04",
@@ -5711,7 +5684,7 @@
     {
       "id": "MIC-GR-RS-B2-03",
       "canDoId": "GR-RS-B2-01",
-      "type": "match",
+      "type": "choose",
       "skill": "reading",
       "context": "everyday-life",
       "level": "B2",
@@ -5748,25 +5721,16 @@
         "incorrectEs": "Revisa quién habla, los pronombres y la estructura indirecta. Compara con el modelo e inténtalo de nuevo."
       },
       "options": [
-        "“It may be a problem.”",
-        "“I strongly disagree.”",
-        "“Perhaps we should wait.”"
+        "She asked if I could help her.",
+        "He asked where the station was.",
+        "She asked me to wait."
       ],
       "tokens": [
         "She said it might be a problem.",
         "He strongly disagreed.",
         "She suggested that they wait."
       ],
-      "acceptableAnswers": [
-        "She said it might be a problem.",
-        "He strongly disagreed.",
-        "She suggested that they wait."
-      ],
-      "answer": [
-        "She said it might be a problem.",
-        "He strongly disagreed.",
-        "She suggested that they wait."
-      ]
+      "answer": "She asked if I could help her."
     },
     {
       "id": "MIC-GR-RS-B2-04",
