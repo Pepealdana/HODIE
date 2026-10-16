@@ -7346,6 +7346,1551 @@
       "reviewTargets": [
         "writing"
       ]
+    },
+    {
+      "id": "MIC-B1-SP-MISS-01",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-02",
+      "title": "Describe a professional experience",
+      "titleEs": "Describe una experiencia profesional",
+      "prompt": "Describe a professional experience that taught you something useful.",
+      "promptEs": "Describe una experiencia profesional de la que aprendiste algo útil.",
+      "type": "mini-production",
+      "context": "work",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-02",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-03",
+      "title": "Explain a completed project",
+      "titleEs": "Explica un proyecto terminado",
+      "prompt": "Explain a project you completed, the goal, the steps and the result.",
+      "promptEs": "Explica un proyecto que terminaste, su objetivo, los pasos y el resultado.",
+      "type": "mini-production",
+      "context": "work",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-03",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-05",
+      "title": "Describe a problem",
+      "titleEs": "Describe un problema",
+      "prompt": "Describe a problem you faced, what caused it and how it affected people.",
+      "promptEs": "Describe un problema que enfrentaste, su causa y cómo afectó a las personas.",
+      "type": "mini-production",
+      "context": "daily-life",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-04",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-06",
+      "title": "Suggest a solution",
+      "titleEs": "Propón una solución",
+      "prompt": "Suggest a solution to reduce food waste at home or school and explain why it could work.",
+      "promptEs": "Propón una solución para reducir el desperdicio de comida en casa o en el colegio y explica por qué funcionaría.",
+      "type": "mini-production",
+      "context": "environment",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-05",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-08",
+      "title": "Explain your plans and goals",
+      "titleEs": "Explica tus planes y metas",
+      "prompt": "Talk about one goal for next year, the steps you will take and a possible challenge.",
+      "promptEs": "Habla de una meta para el próximo año, los pasos que darás y un posible reto.",
+      "type": "mini-production",
+      "context": "personal",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-06",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-09",
+      "title": "Talk about something you learned",
+      "titleEs": "Habla de algo que aprendiste",
+      "prompt": "Describe a skill you have learned recently and explain how you learned it.",
+      "promptEs": "Describe una habilidad que aprendiste recientemente y explica cómo la aprendiste.",
+      "type": "mini-production",
+      "context": "education",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-07",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-10",
+      "title": "Join a familiar-topic conversation",
+      "titleEs": "Participa en una conversación",
+      "prompt": "Give your view on whether public parks should have more sports facilities, then ask a follow-up question.",
+      "promptEs": "Da tu opinión sobre si los parques deberían tener más instalaciones deportivas y haz una pregunta de seguimiento.",
+      "type": "mini-production",
+      "context": "community",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-SP-MISS-08",
+      "level": "B1",
+      "skill": "speaking",
+      "canDoId": "SP-B1-12",
+      "title": "Speak for several minutes",
+      "titleEs": "Habla durante varios minutos",
+      "prompt": "Speak for two minutes about a place you recommend visiting. Explain what people can do there and why you recommend it.",
+      "promptEs": "Habla durante dos minutos sobre un lugar que recomiendas visitar. Explica qué se puede hacer allí y por qué lo recomiendas.",
+      "type": "mini-production",
+      "context": "travel",
+      "primarySkill": "speaking",
+      "tags": [
+        "speaking",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "speaking"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "speaking",
+      "errorTarget": "speaking",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "speaking"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-LI-MISS-01",
+      "level": "B1",
+      "skill": "listening",
+      "canDoId": "LI-B1-03",
+      "title": "Understand a short interview",
+      "titleEs": "Comprende una entrevista breve",
+      "prompt": "What has the guest changed in their daily routine?",
+      "promptEs": "¿Qué ha cambiado la persona entrevistada en su rutina diaria?",
+      "type": "listening",
+      "context": "personal",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "listening-comprehension",
+      "errorTarget": "listening",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "listening"
+      ],
+      "answer": "They walk to work twice a week",
+      "options": [
+        "They walk to work twice a week",
+        "They have moved to another city",
+        "They have changed jobs"
+      ],
+      "audioText": "Interviewer: What have you changed recently? Guest: I used to drive every day, but now I walk to work twice a week. It saves money and gives me time to think.",
+      "audio": {
+        "normalRate": 0.9,
+        "slowRate": 0.7,
+        "language": "en-US"
+      }
+    },
+    {
+      "id": "MIC-B1-LI-MISS-02",
+      "level": "B1",
+      "skill": "listening",
+      "canDoId": "LI-B1-04",
+      "title": "Follow a professional explanation",
+      "titleEs": "Sigue una explicación profesional",
+      "prompt": "What should the team check before restarting the machine?",
+      "promptEs": "¿Qué debe revisar el equipo antes de reiniciar la máquina?",
+      "type": "listening",
+      "context": "work",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "listening-comprehension",
+      "errorTarget": "listening",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "listening"
+      ],
+      "answer": "The safety guard and power connection",
+      "options": [
+        "The safety guard and power connection",
+        "The colour of the control panel",
+        "The delivery date"
+      ],
+      "audioText": "Before restarting the machine, check that the safety guard is in place and the power connection is secure. Then test the emergency stop before normal operation.",
+      "audio": {
+        "normalRate": 0.9,
+        "slowRate": 0.7,
+        "language": "en-US"
+      }
+    },
+    {
+      "id": "MIC-B1-LI-MISS-03",
+      "level": "B1",
+      "skill": "listening",
+      "canDoId": "LI-B1-06",
+      "title": "Follow a short story",
+      "titleEs": "Sigue una historia breve",
+      "prompt": "Why did the speaker miss the bus?",
+      "promptEs": "¿Por qué perdió el autobús quien habla?",
+      "type": "listening",
+      "context": "daily-life",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "listening-comprehension",
+      "errorTarget": "listening",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "listening"
+      ],
+      "answer": "They helped a neighbour",
+      "options": [
+        "They helped a neighbour",
+        "They woke up late",
+        "They bought a ticket"
+      ],
+      "audioText": "I was leaving home when my neighbour dropped a bag of groceries. I stopped to help, and by the time I reached the stop, the bus had already left.",
+      "audio": {
+        "normalRate": 0.9,
+        "slowRate": 0.7,
+        "language": "en-US"
+      }
+    },
+    {
+      "id": "MIC-B1-LI-MISS-04",
+      "level": "B1",
+      "skill": "listening",
+      "canDoId": "LI-B1-07",
+      "title": "Identify the speaker's intention",
+      "titleEs": "Identifica la intención",
+      "prompt": "What does the speaker want the listener to do?",
+      "promptEs": "¿Qué quiere quien habla que haga la otra persona?",
+      "type": "listening",
+      "context": "work",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "listening-comprehension",
+      "errorTarget": "listening",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "listening"
+      ],
+      "answer": "Send the revised document today",
+      "options": [
+        "Send the revised document today",
+        "Cancel the meeting",
+        "Print the old version"
+      ],
+      "audioText": "The meeting starts early tomorrow, so could you send me the revised document today? That way, I can read it before we meet.",
+      "audio": {
+        "normalRate": 0.9,
+        "slowRate": 0.7,
+        "language": "en-US"
+      }
+    },
+    {
+      "id": "MIC-B1-LI-MISS-05",
+      "level": "B1",
+      "skill": "listening",
+      "canDoId": "LI-B1-08",
+      "title": "Follow without every word",
+      "titleEs": "Sigue la idea general",
+      "prompt": "What is the main point of the conversation?",
+      "promptEs": "¿Cuál es la idea principal de la conversación?",
+      "type": "listening",
+      "context": "social",
+      "primarySkill": "listening",
+      "tags": [
+        "listening",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "listening"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "listening-comprehension",
+      "errorTarget": "listening",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "listening"
+      ],
+      "answer": "They are choosing a more convenient meeting place",
+      "options": [
+        "They are choosing a more convenient meeting place",
+        "They are discussing a new job",
+        "They are cancelling a trip"
+      ],
+      "audioText": "A: The café is quite far from the station. B: True. What about the place across from the library? A: Good idea. It is easier to find, and we can get there on foot.",
+      "audio": {
+        "normalRate": 0.9,
+        "slowRate": 0.7,
+        "language": "en-US"
+      }
+    },
+    {
+      "id": "MIC-B1-RE-MISS-01",
+      "level": "B1",
+      "skill": "reading",
+      "canDoId": "RE-B1-03",
+      "title": "Understand an email",
+      "titleEs": "Comprende un correo",
+      "prompt": "Email: “Could we move our lunch to Thursday? I have a medical appointment on Wednesday, but I am free after 1 p.m. on Thursday.” When is the writer available?",
+      "promptEs": "Correo: «¿Podemos pasar el almuerzo al jueves? Tengo una cita médica el miércoles, pero estoy libre después de la 1 p. m. del jueves». ¿Cuándo está disponible quien escribe?",
+      "type": "match",
+      "context": "personal",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "reading-comprehension",
+      "errorTarget": "reading",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading"
+      ],
+      "answer": "After 1 p.m. on Thursday",
+      "options": [
+        "After 1 p.m. on Thursday",
+        "Any time on Wednesday",
+        "Before noon on Thursday"
+      ]
+    },
+    {
+      "id": "MIC-B1-RE-MISS-02",
+      "level": "B1",
+      "skill": "reading",
+      "canDoId": "RE-B1-04",
+      "title": "Read simple documentation",
+      "titleEs": "Lee documentación sencilla",
+      "prompt": "A device manual says: “Disconnect the power supply before opening the cover. Do not touch internal parts while the indicator light is on.” What must happen first?",
+      "promptEs": "Un manual dice que desconectes la alimentación antes de abrir la cubierta. ¿Qué debes hacer primero?",
+      "type": "match",
+      "context": "work",
+      "primarySkill": "reading",
+      "tags": [
+        "reading",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "reading"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "reading-comprehension",
+      "errorTarget": "reading",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reading"
+      ],
+      "answer": "Disconnect the power supply",
+      "options": [
+        "Disconnect the power supply",
+        "Open the cover",
+        "Touch the indicator light"
+      ]
+    },
+    {
+      "id": "MIC-B1-WR-MISS-01",
+      "level": "B1",
+      "skill": "writing",
+      "canDoId": "WR-B1-02",
+      "title": "Write a professional message",
+      "titleEs": "Escribe un mensaje profesional",
+      "prompt": "Write a short professional message explaining that a task will be delayed, why it is delayed and when you expect to finish.",
+      "promptEs": "Escribe un mensaje profesional breve explicando que una tarea se retrasará, por qué y cuándo esperas terminar.",
+      "type": "mini-production",
+      "context": "work",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "writing",
+      "errorTarget": "writing",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "writing"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-WR-MISS-02",
+      "level": "B1",
+      "skill": "writing",
+      "canDoId": "WR-B1-03",
+      "title": "Describe a project",
+      "titleEs": "Describe un proyecto",
+      "prompt": "Describe a project you worked on: its purpose, the main steps and the result.",
+      "promptEs": "Describe un proyecto en el que trabajaste: propósito, pasos principales y resultado.",
+      "type": "mini-production",
+      "context": "education",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "writing",
+      "errorTarget": "writing",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "writing"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-WR-MISS-03",
+      "level": "B1",
+      "skill": "writing",
+      "canDoId": "WR-B1-05",
+      "title": "Describe a past experience",
+      "titleEs": "Describe una experiencia pasada",
+      "prompt": "Write about an experience that changed your opinion. Explain what happened and what you learned.",
+      "promptEs": "Escribe sobre una experiencia que cambió tu opinión. Explica qué pasó y qué aprendiste.",
+      "type": "mini-production",
+      "context": "personal",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "writing",
+      "errorTarget": "writing",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "writing"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-WR-MISS-04",
+      "level": "B1",
+      "skill": "writing",
+      "canDoId": "WR-B1-07",
+      "title": "Connect ideas into a coherent text",
+      "titleEs": "Conecta ideas en un texto coherente",
+      "prompt": "Write one paragraph about a community activity. Use at least three connectors to show sequence, reason or contrast.",
+      "promptEs": "Escribe un párrafo sobre una actividad comunitaria. Usa al menos tres conectores para indicar secuencia, causa o contraste.",
+      "type": "mini-production",
+      "context": "community",
+      "primarySkill": "writing",
+      "tags": [
+        "writing",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "writing"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "writing",
+      "errorTarget": "writing",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "writing"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-VO-MISS-01",
+      "level": "B1",
+      "skill": "vocabulary",
+      "canDoId": "VO-B1-04",
+      "title": "Express an opinion precisely",
+      "titleEs": "Expresa una opinión con precisión",
+      "prompt": "Which phrase gives a qualified opinion rather than an absolute claim?",
+      "promptEs": "¿Qué expresión presenta una opinión matizada y no absoluta?",
+      "type": "match",
+      "context": "education",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "vocabulary",
+      "errorTarget": "vocabulary",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "vocabulary"
+      ],
+      "answer": "It seems likely that…",
+      "options": [
+        "It seems likely that…",
+        "It is always true that…",
+        "There is no possible doubt that…"
+      ]
+    },
+    {
+      "id": "MIC-B1-VO-MISS-02",
+      "level": "B1",
+      "skill": "vocabulary",
+      "canDoId": "VO-B1-06",
+      "title": "Retrieve familiar vocabulary",
+      "titleEs": "Recupera vocabulario conocido",
+      "prompt": "Complete the natural collocation: “make a ___” (when you decide something).",
+      "promptEs": "Completa la colocación natural: “make a ___” (cuando decides algo).",
+      "type": "choose",
+      "context": "daily-life",
+      "primarySkill": "vocabulary",
+      "tags": [
+        "vocabulary",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "vocabulary"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "vocabulary",
+      "errorTarget": "vocabulary",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "vocabulary"
+      ],
+      "answer": "decision",
+      "options": [
+        "decision",
+        "choiceful",
+        "deciding"
+      ]
+    },
+    {
+      "id": "MIC-B1-CO-MISS-01",
+      "level": "B1",
+      "skill": "communication",
+      "canDoId": "CO-B1-03",
+      "title": "Change the subject naturally",
+      "titleEs": "Cambia de tema con naturalidad",
+      "prompt": "You have finished discussing the weather. Introduce a related topic about weekend plans naturally.",
+      "promptEs": "Terminaste de hablar del clima. Introduce de forma natural un tema relacionado con los planes del fin de semana.",
+      "type": "mini-production",
+      "context": "social",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "task-completion",
+      "errorTarget": "communication",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-CO-MISS-02",
+      "level": "B1",
+      "skill": "communication",
+      "canDoId": "CO-B1-04",
+      "title": "Explain an unknown word",
+      "titleEs": "Explica una palabra desconocida",
+      "prompt": "You cannot remember the word “thermometer”. Explain what it is used for without naming it.",
+      "promptEs": "No recuerdas la palabra “thermometer”. Explica para qué sirve sin nombrarla.",
+      "type": "mini-production",
+      "context": "daily-life",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "task-completion",
+      "errorTarget": "communication",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-CO-MISS-03",
+      "level": "B1",
+      "skill": "communication",
+      "canDoId": "CO-B1-06",
+      "title": "Keep a conversation going",
+      "titleEs": "Mantén una conversación",
+      "prompt": "A partner says they are nervous about a job interview. Respond supportively and ask a question that keeps the conversation going.",
+      "promptEs": "Tu interlocutor dice que está nervioso por una entrevista de trabajo. Responde con apoyo y haz una pregunta para continuar.",
+      "type": "mini-production",
+      "context": "work",
+      "primarySkill": "communication",
+      "tags": [
+        "communication",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "communication"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "task-completion",
+      "errorTarget": "communication",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication"
+      ],
+      "requirements": {
+        "minResponseCharacters": 40
+      },
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 40,
+        "minimumCriteria": 1,
+        "criteria": [
+          {
+            "id": "task-response",
+            "label": "Respond to the task with relevant information",
+            "patterns": [
+              "\\b(i|we|because|although|for example|first|then|however|in my view|I would)\\b"
+            ],
+            "missingMessage": "Add relevant details to complete the task.",
+            "missingMessageEs": "Añade detalles pertinentes para completar la tarea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "MIC-B1-GR-MISS-01",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-03",
+      "title": "Future forms",
+      "titleEs": "Formas de futuro",
+      "prompt": "Look at those dark clouds. It ___ rain soon.",
+      "promptEs": "Mira esas nubes oscuras. Pronto ___ llover.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "is going to",
+      "options": [
+        "is going to",
+        "has",
+        "would"
+      ]
+    },
+    {
+      "id": "MIC-B1-GR-MISS-02",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-04",
+      "title": "Modals for advice",
+      "titleEs": "Modales para dar consejos",
+      "prompt": "You look exhausted. You ___ take a short break.",
+      "promptEs": "Pareces agotado. ___ tomar un descanso breve.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "should",
+      "options": [
+        "should",
+        "might have",
+        "mustn't"
+      ]
+    },
+    {
+      "id": "MIC-B1-GR-MISS-03",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-06",
+      "title": "Relative clauses",
+      "titleEs": "Oraciones de relativo",
+      "prompt": "The woman ___ lives next door is a doctor.",
+      "promptEs": "La mujer ___ vive al lado es médica.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "who",
+      "options": [
+        "who",
+        "where",
+        "whose"
+      ]
+    },
+    {
+      "id": "MIC-B1-GR-MISS-04",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-08",
+      "title": "Past continuous",
+      "titleEs": "Pasado continuo",
+      "prompt": "I ___ dinner when the phone rang.",
+      "promptEs": "Yo ___ la cena cuando sonó el teléfono.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "was cooking",
+      "options": [
+        "was cooking",
+        "cooked",
+        "have cooked"
+      ]
+    },
+    {
+      "id": "MIC-B1-GR-MISS-05",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-09",
+      "title": "Gerund or infinitive",
+      "titleEs": "Gerundio o infinitivo",
+      "prompt": "They decided ___ early to avoid traffic.",
+      "promptEs": "Decidieron ___ temprano para evitar el tráfico.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "to leave",
+      "options": [
+        "to leave",
+        "leaving",
+        "leave"
+      ]
+    },
+    {
+      "id": "MIC-B1-GR-MISS-06",
+      "level": "B1",
+      "skill": "grammar",
+      "canDoId": "GR-B1-10",
+      "title": "Passive process",
+      "titleEs": "Proceso en voz pasiva",
+      "prompt": "First, the samples ___ and labelled before they are tested.",
+      "promptEs": "Primero, las muestras ___ y se etiquetan antes de analizarlas.",
+      "type": "choose",
+      "context": "work",
+      "primarySkill": "grammar",
+      "tags": [
+        "grammar",
+        "b1",
+        "cefr"
+      ],
+      "resources": [
+        "grammar"
+      ],
+      "cefrAlignment": {
+        "framework": "CEFR",
+        "level": "B1"
+      },
+      "feedback": {
+        "correct": "Correct. Check how the response fits the situation.",
+        "correctEs": "Correcto. Comprueba cómo encaja la respuesta en la situación.",
+        "incorrect": "Review the key information and try again.",
+        "incorrectEs": "Revisa la información clave e inténtalo de nuevo."
+      },
+      "errorType": "grammar",
+      "errorTarget": "grammar",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar"
+      ],
+      "answer": "are collected",
+      "options": [
+        "are collected",
+        "collect",
+        "are collecting"
+      ]
     }
   ]
 }
