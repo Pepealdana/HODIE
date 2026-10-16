@@ -25,7 +25,7 @@ const conversationFeedback = createFeedbackContract({
   response: "I am a technology an robotics teacher. I work at a school.",
   result: conversationResult
 });
-assert.equal(conversationFeedback.contractVersion, "1.0.0");
+assert.equal(conversationFeedback.contractVersion, "1.1.0");
 assert.equal(conversationFeedback.surface, "conversation");
 assert.equal(conversationFeedback.status, "partial");
 assert.equal(conversationFeedback.metrics.wordCount, 12);
