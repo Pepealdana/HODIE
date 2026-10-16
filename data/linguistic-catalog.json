@@ -3492,6 +3492,55 @@
         "WR-A2-01",
         "LI-A2-01"
       ]
+    },
+    {
+      "id": "REPORT_MESSAGES_AND_CONVERSATIONS",
+      "level": "A1-B2",
+      "canDoIds": [
+        "GR-RS-A1-01",
+        "GR-RS-A2-01",
+        "GR-RS-B1-01",
+        "GR-RS-B2-01"
+      ],
+      "label": "Report messages and conversations",
+      "labelEs": "Transmitir mensajes y conversaciones",
+      "skills": [
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "communication",
+        "grammar"
+      ],
+      "structures": [
+        "reported-speech",
+        "say",
+        "tell",
+        "reported-questions",
+        "reported-requests",
+        "reporting-verbs",
+        "stance"
+      ],
+      "vocabularyDomains": [
+        "messages",
+        "daily-life",
+        "communication",
+        "opinions"
+      ],
+      "contexts": [
+        "everyday-life",
+        "study",
+        "work",
+        "travel",
+        "social"
+      ],
+      "searchTerms": [
+        "reported speech",
+        "indirect speech",
+        "say tell ask",
+        "report a conversation",
+        "estilo indirecto"
+      ]
     }
   ],
   "grammarRules": [
@@ -11101,6 +11150,285 @@
       ],
       "relatedVocabularyIds": [
         "VOC-NOUN-DEVICE"
+      ]
+    },
+    {
+      "id": "RS-SAY-ME-001",
+      "implementation": "reported-speech-say-tell-object",
+      "level": "A2",
+      "category": "syntax",
+      "title": "Use tell + object, not say + object",
+      "titleEs": "Usa tell + objeto, no say + objeto",
+      "explanation": "Use tell when you name the person who receives the message: “She told me that…” Use say without a personal object, or say something to someone.",
+      "explanationEs": "Usa tell cuando nombras a la persona que recibe el mensaje: «She told me that…». Usa say sin objeto personal, o say something to someone.",
+      "examples": [
+        "She told me that she was tired.",
+        "He said that he was busy.",
+        "He said hello to me."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She told me that she was tired.",
+          "es": "Ella me dijo que estaba cansada."
+        },
+        {
+          "en": "He said that he was busy.",
+          "es": "Él dijo que estaba ocupado."
+        },
+        {
+          "en": "He said hello to me.",
+          "es": "Él me saludó."
+        }
+      ],
+      "incorrect": [
+        "She said me that she was tired."
+      ],
+      "exceptions": [
+        "Say can be followed by a noun phrase without a person object: “She said something important.”",
+        "Both “She told me that…” and “She said that…” are correct."
+      ],
+      "negativeCases": [
+        {
+          "text": "She told me that she was tired.",
+          "reason": "Tell + person is correct."
+        },
+        {
+          "text": "She said that she was tired.",
+          "reason": "Say without a personal object is correct."
+        },
+        {
+          "text": "He said hello to me.",
+          "reason": "Say + message + to + person is correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct: She said me that she was tired.",
+          "promptEs": "Corrige: She said me that she was tired.",
+          "answer": "She told me that she was tired."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "writing",
+          "speaking",
+          "reading",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "match",
+          "mini-production",
+          "listening"
+        ],
+        "tags": [
+          "reported-speech",
+          "say",
+          "tell",
+          "reported-statements"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(she|he|they|we|i|you)\\\\s+said\\\\s+(me|him|her|us|them)\\\\s+that\\\\b",
+        "flags": "gi",
+        "replacement": "$1 told $2 that",
+        "confidence": "high"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "searchTerms": [
+        "reported speech",
+        "say tell",
+        "said me",
+        "told me",
+        "reported statements"
+      ]
+    },
+    {
+      "id": "RS-TELL-THAT-001",
+      "implementation": "reported-speech-tell-that",
+      "level": "B1",
+      "category": "syntax",
+      "title": "Use say when no listener is named after tell",
+      "titleEs": "Usa say cuando no se nombra al destinatario después de tell",
+      "explanation": "In this pattern, “told that + clause” is not the correct reporting structure. Use “said that + clause”, or name the listener after “told”.",
+      "explanationEs": "En este patrón, «told that + oración» no es la estructura correcta para transmitir lo dicho. Usa «said that + oración» o nombra al destinatario después de «told».",
+      "examples": [
+        "She said that she was tired.",
+        "She told me that she was tired."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She said that she was tired.",
+          "es": "Ella dijo que estaba cansada."
+        },
+        {
+          "en": "She told me that she was tired.",
+          "es": "Ella me dijo que estaba cansada."
+        }
+      ],
+      "incorrect": [
+        "She told that she was tired."
+      ],
+      "exceptions": [
+        "“He told that story yesterday” is grammatical because “that story” is the direct object; this rule only covers a pronoun followed by a verb."
+      ],
+      "negativeCases": [
+        {
+          "text": "She said that she was tired.",
+          "reason": "Say + that-clause is correct."
+        },
+        {
+          "text": "She told me that she was tired.",
+          "reason": "Tell + listener + that-clause is correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct: She told that she was tired.",
+          "promptEs": "Corrige: She told that she was tired.",
+          "answer": "She said that she was tired."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "writing",
+          "speaking",
+          "reading",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "match",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "say",
+          "tell",
+          "reported-statements"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(she|he|they|we|i|you)\\\\s+told\\\\s+that\\\\s+(i|he|she|they|we|you|it)\\\\s+(was|were|is|are|had|has|have|could|would|will|can)\\\\b",
+        "flags": "gi",
+        "replacement": "$1 said that $2 $3",
+        "confidence": "high"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "searchTerms": [
+        "reported speech",
+        "told that",
+        "say tell",
+        "reported statements"
+      ]
+    },
+    {
+      "id": "RS-INDIRECT-QUESTIONS-001",
+      "implementation": "reported-speech-indirect-question-order",
+      "level": "B1",
+      "category": "syntax",
+      "title": "Use statement word order in reported questions",
+      "titleEs": "Usa el orden de una oración afirmativa en preguntas indirectas",
+      "explanation": "Reported questions use statement word order, not direct-question inversion. HODIE currently teaches this contrast, but it does not auto-correct every verb-tense combination.",
+      "explanationEs": "Las preguntas indirectas usan el orden de una oración afirmativa, no la inversión de una pregunta directa. HODIE enseña este contraste, pero no corrige automáticamente todas las combinaciones de tiempos verbales.",
+      "examples": [
+        "He asked where I lived.",
+        "She asked me what I wanted."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He asked where I lived.",
+          "es": "Él preguntó dónde vivía."
+        },
+        {
+          "en": "She asked me what I wanted.",
+          "es": "Ella me preguntó qué quería."
+        }
+      ],
+      "incorrect": [
+        "He asked where did I live."
+      ],
+      "exceptions": [
+        "The verb tense depends on the context; a present-tense report can remain present when the information is still current."
+      ],
+      "negativeCases": [
+        {
+          "text": "He asked where I lived.",
+          "reason": "Reported question uses statement order."
+        },
+        {
+          "text": "She asked me what I wanted.",
+          "reason": "Reported question uses statement order."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct the word order: He asked where did I live.",
+          "promptEs": "Corrige el orden: He asked where did I live.",
+          "answer": "He asked where I lived."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "writing",
+          "speaking",
+          "reading",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "match",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "reported-questions",
+          "indirect-questions",
+          "word-order"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "explain-only-until-tested",
+      "searchTerms": [
+        "reported questions",
+        "indirect questions",
+        "reported speech",
+        "word order"
       ]
     }
   ],
@@ -33675,6 +34003,22 @@
       "text": "Some information is available online.",
       "expectRules": [],
       "expectCorrection": "Some information is available online."
+    },
+    {
+      "id": "TC-RS-SAY-ME-001",
+      "text": "She said me that she was tired.",
+      "expectRules": [
+        "RS-SAY-ME-001"
+      ],
+      "expectCorrection": "She told me that she was tired."
+    },
+    {
+      "id": "TC-RS-TELL-THAT-001",
+      "text": "She told that she was tired.",
+      "expectRules": [
+        "RS-TELL-THAT-001"
+      ],
+      "expectCorrection": "She said that she was tired."
     }
   ],
   "cefrDimensions": {
