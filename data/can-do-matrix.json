@@ -5,7 +5,7 @@
   "scope": {
     "from": "A2",
     "to": "B1",
-    "note": "HODIE estimates functional progress; it does not provide official CEFR certification."
+    "note": "The core matrix focuses on A2-B1. A bounded reported-speech extension adds A1 foundation and B2 transfer targets; HODIE's internal readiness signal is not official CEFR certification."
   },
   "philosophy": "Can-Do -> Try -> Evidence -> Gap -> Practice -> Retry -> Master",
   "confidenceScale": [
@@ -6970,5 +6970,25 @@
     "assessmentReference": "Cambridge English B1 Preliminary",
     "practicalCanDoReference": "British Council LearnEnglish B1",
     "note": "These references guide functional outcomes and assessment design; HODIE is not an official CEFR or Cambridge certification system."
-  }
+  },
+  "extensions": [
+    {
+      "id": "reported-speech-cefr-pathway",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "skills": [
+        "grammar",
+        "listening",
+        "reading",
+        "writing",
+        "speaking",
+        "communication"
+      ],
+      "note": "A bounded communicative pathway, not an official CEFR grammar syllabus."
+    }
+  ]
 }
