@@ -2,6 +2,7 @@ import { createSession } from "./src/learning-session.js";
 import { startSession, requestEvidence } from "./src/session-state.js";
 import { runSessionEvidenceCycle } from "./src/session-runner.js";
 import { getStatus } from "./src/learning-engine.js";
+import { getB2UnlockStatus } from "./src/level-unlock.js";
 import { selectMicroActivities, evaluateMicroActivity, getModeLabel } from "./src/micro-practice.js";
 import { getExperience, selectExperiences, createExperienceSession, evaluateExperienceTurn, advanceExperienceSession, isExperienceComplete, summarizeExperience } from "./src/experience-engine.js";
 import { chooseLearningSurface } from "./src/learning-orchestrator.js";
@@ -486,6 +487,7 @@ function renderPracticeHome() {
   `;
 
   document.querySelector("#recommendedLearningButton").addEventListener("click", recommendedAction);
+  document.querySelector("#startReportedSpeechButton")?.addEventListener("click", startReportedSpeech);
   document.querySelector("#startIntegratedUnitButton")?.addEventListener("click", startIntegratedUnit);
 
   document.querySelectorAll("[data-primary-mode]").forEach((button) => {
@@ -543,8 +545,32 @@ function getActivitySkill(activity) {
   return "grammar";
 }
 
+function startReportedSpeech() {
+  const level = document.querySelector("#reportedSpeechLevel")?.value || (session?.target?.level === "A2+" ? "A2" : session?.target?.level || "A2");
+  if (level === "B2" && !getB2UnlockStatus(matrix, profile).unlocked) {
+    renderError(new Error("B2 remains locked until the B1 readiness requirements are met."));
+    return;
+  }
+  if (level !== session?.target?.level) {
+    try {
+      session = createSession(matrix, library, profile, {
+        levels: [level], allowUnmetPrerequisites: true,
+        contextTerms: ["daily-life", "messages", "conversation", "reported-speech"],
+        sessionId: "reported-speech-" + Date.now()
+      });
+      saveSession();
+      levelBadge.textContent = session.target.level;
+    } catch {
+      renderError(new Error("No learning target is available for " + level + " yet."));
+      return;
+    }
+  }
+  startPractice("mixed", "REPORTED-SPEECH");
+}
+
 function changeHomeLevel(level) {
-  if (!["A1", "A2", "B1"].includes(level) || level === session?.target?.level) return;
+  if (!["A1", "A2", "B1", "B2"].includes(level) || level === session?.target?.level) return;
+  if (level === "B2" && !getB2UnlockStatus(matrix, profile).unlocked) return;
   try {
     session = createSession(matrix, library, profile, {
       levels: [level],
@@ -618,7 +644,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     '<section class="level-picker" aria-label="Choose your English level">' +
       '<div class="level-picker-heading"><span class="kicker">' + (isBeginner ? "Tu nivel de inglés" : "Your English level") + '</span><span class="level-picker-note">' + (isBeginner ? "Puedes cambiarlo cuando quieras." : "Change it whenever you need.") + '</span></div>' +
       '<div class="level-options" role="group" aria-label="English level">' +
-        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" ? 'disabled aria-disabled="true" title="B2 will unlock after its learning content is validated."' : 'aria-pressed="' + String(item === level) + '"') + '>' + item + (item === "B2" ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") +
+        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? 'disabled aria-disabled="true" title="B2 unlocks after consistent B1 evidence across skills."' : 'aria-pressed="' + String(item === level) + '"' ) + '>' + item + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") ++
       '</div>' +
     '</section>' +
     '<section class="conversation-start" aria-labelledby="conversationStartTitle">' +
@@ -634,6 +660,13 @@ function applyConversationFirstHome(level, targetActivity, statement) {
             Object.entries(modeLabels).map(([value, label]) => '<button type="button" data-conversation-mode="' + value + '" ' + (modeAvailable[value] ? "" : "disabled") + ' class="' + (value === selectedConversationMode ? "is-selected" : "") + '">' + label + '<span>' + (value === "conversation" ? "Guided conversation" : value === "interview" ? "Interview practice" : value === "roleplay" ? "Practise a real situation" : "Guided topic discussion") + '</span></button>').join("") +
           '</div></div><button class="composer-send" type="submit" aria-label="Start conversation">↑</button></div>' +
       '</form><p class="composer-hint">' + (isBeginner ? "También puedes elegir una habilidad y practicar con actividades guiadas." : "Choose a skill below for focused practice.") + '</p>' +
+    '</section>' +
+    '<section class="reported-speech-pathway" aria-labelledby="reportedSpeechTitle">' +
+      '<div class="reported-speech-heading"><p class="kicker">LANGUAGE IN CONTEXT · GRAMMAR + COMMUNICATION</p><h3 id="reportedSpeechTitle">Reported speech</h3><p class="spanish">Estilo indirecto: cuenta lo que otra persona dijo sin cambiar su sentido.</p><p>Learn to pass on messages, report questions and summarize what people said.</p></div>' +
+      '<div class="reported-speech-controls"><label for="reportedSpeechLevel">Practice level · Nivel</label><select id="reportedSpeechLevel">' +
+        ["A1","A2","B1","B2"].map((item) => '<option value="' + item + '" ' + (item === (level === "A2+" ? "A2" : level) ? "selected" : "") + ' ' + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? "disabled" : "") + '>' + item + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? " · Locked" : "") + '</option>').join("") +
+      '</select><button class="primary" id="startReportedSpeechButton" type="button">Start pathway →</button></div>' +
+      '<p class="reported-speech-note">Short practice in grammar, reading, listening, writing, speaking and interaction. B2 activities are prepared but remain hidden until the readiness gate is met.</p>' +
     '</section>' +
     '<section class="skill-picker" aria-labelledby="skillPickerTitle"><div class="section-heading skill-picker-heading"><div><h3 id="skillPickerTitle">' + (isBeginner ? "Elige una habilidad" : "Choose a skill") + '</h3>' +
       (isBeginner ? '<p class="spanish">Toca una opción para ver una actividad recomendada.</p>' : '<p>Select a skill to see a recommended activity.</p>') + '</div>' +
@@ -1261,6 +1294,15 @@ function renderActivityCatalog() {
   const level = document.querySelector("#catalogLevel")?.value || "A2";
   const skill = document.querySelector("#catalogSkill")?.value || "all";
   if (!results || !microLibrary?.activities) return;
+  const b2Unlock = getB2UnlockStatus(matrix, profile);
+  const catalogLevel = document.querySelector("#catalogLevel");
+  const b2Option = catalogLevel?.querySelector('option[value="B2"]');
+  if (b2Option) { b2Option.disabled = !b2Unlock.unlocked; b2Option.textContent = b2Unlock.unlocked ? "B2 · Advanced" : "B2 · Locked"; }
+  if (level === "B2" && !b2Unlock.unlocked) {
+    summary.textContent = "B2 is locked until your B1 evidence is consistent across all skills.";
+    results.innerHTML = '<div class="b2-lock-panel"><strong>B2 is not unlocked yet.</strong><p>Build reliable evidence across speaking, listening, reading, writing, communication, grammar, vocabulary and pronunciation.</p><p class="spanish">B2 se desbloquea cuando demuestras un desempeño consistente en todas las habilidades y recursos lingüísticos.</p><ul>' + b2Unlock.unmet.map((reason) => '<li>' + escapeHtml(reason) + '</li>').join("") + '</ul></div>';
+    return;
+  }
   const names = { reading:"Reading", pronunciation:"Pronunciation", communication:"Communication", speaking:"Speaking", listening:"Listening", writing:"Writing", grammar:"Grammar", vocabulary:"Vocabulary" };
   const classify = (a) => {
     if (a.skill === "pronunciation" || a.resources?.includes("pronunciation") || a.languageResource === "pronunciation") return "pronunciation";
@@ -1293,9 +1335,22 @@ function renderActivityCatalog() {
 }
 function startPractice(mode, activityId = null) {
   const options = { mode, limit: 6, profile };
-  let selectedActivities = activityId
-    ? microLibrary.activities.filter((activity) => activity.id === activityId)
-    : selectMicroActivities(microLibrary, { ...options, canDoId: session.target.canDoId });
+  let selectedActivities;
+  if (activityId === "REPORTED-SPEECH") {
+    const level = session?.target?.level === "A2+" ? "A2" : session?.target?.level || "A2";
+    if (level === "B2" && !getB2UnlockStatus(matrix, profile).unlocked) {
+      renderError(new Error("B2 is locked until your B1 evidence meets the readiness criteria."));
+      return;
+    }
+    const priority = ["grammar", "reading", "listening", "writing", "speaking", "communication"];
+    const pool = microLibrary.activities.filter((activity) => activity.level === level && activity.tags?.includes("reported-speech"));
+    selectedActivities = priority.map((skill) => pool.find((activity) => activity.skill === skill)).filter(Boolean);
+    if (selectedActivities.length < 4) selectedActivities = pool.slice(0, 6);
+  } else {
+    selectedActivities = activityId
+      ? microLibrary.activities.filter((activity) => activity.id === activityId)
+      : selectMicroActivities(microLibrary, { ...options, canDoId: session.target.canDoId });
+  }
 
   // A focused skill may use a related Can-Do rather than the current session target.
   // Do not show an empty-mode error when the library has valid practice for that skill.
