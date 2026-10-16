@@ -4,21 +4,21 @@
 
 | Skill | A1 | A2 | B1 | B2 (locked pack) |
 |---|---:|---:|---:|---:|
-| Grammar | 3 | 27 | 5 | 4 |
-| Vocabulary | 3 | 15 | 4 | 4 |
-| Listening | 3 | 12 | 5 | 4 |
-| Speaking | 3 | 14 | 4 | 4 |
-| Writing | 3 | 8 | 5 | 4 |
-| Reading | 3 | 7 | 6 | 4 |
+| Grammar | 3 | 27 | 11 | 4 |
+| Vocabulary | 3 | 15 | 6 | 4 |
+| Listening | 3 | 12 | 10 | 4 |
+| Speaking | 3 | 14 | 12 | 4 |
+| Writing | 3 | 8 | 9 | 4 |
+| Reading | 3 | 7 | 8 | 4 |
 | Pronunciation | 3 | 8 | 6 | 4 |
-| Communication | 4 | 7 | 6 | 4 |
-| **Active activities total** | **25** | **98** | **41** | **32** |
+| Communication | 4 | 7 | 9 | 4 |
+| **Active activities total** | **25** | **98** | **71** | **32** |
 
 The A1/A2/B1 totals in this table include the current full-activity bank as well as micro-practice. B2 remains in a separate package and is not counted as active practice.
 
 Additional content in the separate B2 package: **8 full tasks, 3 guided simulations and 8 B2 Can-Do targets**, in addition to its 32 micro-activities. The B2 package is built now but stays outside the active banks until the learner gate passes.
 
-The A1 matrix now has eight Can-Do targets, one for each HODIE skill. Previously A1 had only reading, pronunciation and communication targets, which made its foundational coverage incomplete.
+The A1 matrix now has eight Can-Do targets, one for each HODIE skill. The B1 bank now has at least one linked activity for all 60 B1 Can-Do targets, rather than concentrating exercises on only a subset of the level. Previously A1 had only reading, pronunciation and communication targets, which made its foundational coverage incomplete.
 
 ## Design principles
 
@@ -55,7 +55,7 @@ File: `data/b2-learning-pack.json`
 
 ## Automated guardrails
 
-- At least three active activities for every skill at each of A1, A2 and B1.
+- At least three active activities for every skill at each of A1, A2 and B1, plus at least one linked activity for every B1 Can-Do.
 - No B2 activity in the active micro/full banks before the gate passes.
 - A separate test verifies B2 package completeness and isolation.
 - A separate gate test verifies that repeated independent evidence and transfer are required; activity counts alone do not unlock B2.
