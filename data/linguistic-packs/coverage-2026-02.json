@@ -1381,7 +1381,8 @@
       ],
       "exceptions": [
         "Be + adjective/noun is valid: I am ready; They are students.",
-        "Stative verbs are not normally continuous in common meanings: I know the answer."
+        "Stative verbs are not normally continuous in common meanings: I know the answer.",
+        "Some words can also be adjectives: “I am open to new ideas” and “I am clean” are valid; do not force the present continuous in these contexts."
       ],
       "negativeCases": [
         {
@@ -1391,6 +1392,14 @@
         {
           "text": "I know the answer.",
           "reason": "Know is stative in this meaning."
+        },
+        {
+          "text": "I am open to new ideas.",
+          "reason": "Open is an adjective here, not a bare verb."
+        },
+        {
+          "text": "I am clean.",
+          "reason": "Clean is an adjective here, not a bare verb."
         }
       ],
       "practice": [
@@ -1435,7 +1444,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(work|teach|build|study|learn|write|read|use|play|eat|drink|talk|walk|run|swim|cook|sleep|drive|watch|listen|open|clean|help|look|wait|sit|stand|get|put|take|come|go|dance|sing|buy|call|meet|keep|make|try|carry|wash|rain|shop|stop|plan|cut|win|dig|hit|let|set|hug|rub|nod|tap|chat)\\\\b",
+        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(work|teach|build|study|learn|write|read|use|play|eat|drink|talk|walk|run|swim|cook|sleep|drive|watch|listen|help|look|wait|sit|stand|get|put|take|come|go|dance|sing|buy|call|meet|keep|make|try|carry|wash|rain|shop|stop|plan|win|dig|hit|let|set|hug|rub|nod|tap|chat)\\\\b",
         "flags": "gi",
         "replacement": "$1 $2",
         "transform": {
@@ -6264,6 +6273,106 @@
         "feel tired",
         "feeling",
         "I'm doing well."
+      ]
+    },
+    {
+      "id": "PRES-CONT-OPEN-001",
+      "implementation": "present-continuous-open-object",
+      "level": "A2",
+      "category": "present-continuous",
+      "title": "Use opening before an object after am/is/are",
+      "titleEs": "Usa opening antes de un objeto después de am/is/are",
+      "explanation": "When open is an action followed by an object, use the -ing form after am/is/are: “She is opening the window.” Do not apply this to adjective uses such as “The shop is open” or “I am open to new ideas.”",
+      "explanationEs": "Cuando open expresa una acción seguida de un objeto, usa la forma -ing después de am/is/are: «She is opening the window». No apliques esta regla a usos adjetivales como «The shop is open» o «I am open to new ideas».",
+      "examples": [
+        "She is opening the window.",
+        "He is opening the door."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She is opening the window.",
+          "es": "Ella está abriendo la ventana."
+        },
+        {
+          "en": "He is opening the door.",
+          "es": "Él está abriendo la puerta."
+        }
+      ],
+      "incorrect": [
+        "She is open the window.",
+        "He is open the door."
+      ],
+      "exceptions": [
+        "Open can be an adjective: The shop is open.",
+        "Open to + noun is a valid adjective phrase: I am open to new ideas."
+      ],
+      "negativeCases": [
+        {
+          "text": "I am open to new ideas.",
+          "reason": "Open is an adjective followed by to, not an unfinished action."
+        },
+        {
+          "text": "The shop is open.",
+          "reason": "Open describes the shop's state."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Correct: She is open the window.",
+          "promptEs": "Corrige: She is open the window.",
+          "answer": "She is opening the window."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading",
+          "interaction"
+        ],
+        "activityTypes": [
+          "mini-production",
+          "conversation",
+          "correct"
+        ],
+        "tags": [
+          "present-continuous",
+          "open",
+          "actions",
+          "objects"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(I am|he is|she is|it is|we are|they are|you are)\\\\s+(open)\\\\s+(the|a|an|my|your|his|her|our|their)\\\\s+(window|door|book|box|file|app|website|gate|bottle|bag|drawer)\\\\b",
+        "flags": "gi",
+        "replacement": "$1 $2 $3 $4",
+        "transform": {
+          "type": "toGerund",
+          "capture": 2
+        }
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "PRES-CONT-OPEN-001",
+        "present-continuous-open-object",
+        "open the window",
+        "open the door",
+        "opening"
       ]
     }
   ],
@@ -12598,9 +12707,15 @@
       "id": "TC-PRES-CONT-OPEN-001",
       "text": "She is open the window.",
       "expectRules": [
-        "PRES-CONT-BASE-001"
+        "PRES-CONT-OPEN-001"
       ],
       "expectCorrection": "She is opening the window."
+    },
+    {
+      "id": "TC-PRES-CONT-OPEN-NEG-001",
+      "text": "I am open to new ideas.",
+      "expectRules": [],
+      "expectCorrection": "I am open to new ideas."
     }
   ]
 }
