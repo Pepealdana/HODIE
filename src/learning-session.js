@@ -18,6 +18,7 @@ const DEFAULT_SESSION_MINUTES = {
 function buildSession(matrix, library, profile, target, options = {}) {
   const planningOptions = {
     levels: options.levels || ["A2", "A2+", "B1"],
+    allowUnmetPrerequisites: options.allowUnmetPrerequisites === true,
     contextTerms: options.contextTerms || [],
     recentEvidenceLimit: options.recentEvidenceLimit || 8,
     recentGapLimit: options.recentGapLimit || 5,
