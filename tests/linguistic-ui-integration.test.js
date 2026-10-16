@@ -50,3 +50,6 @@ for (const id of ["MIC-RE-A2-90-01", "MIC-RE-A2-90-02", "MIC-PR-A2-90-01", "MIC-
 }
 
 console.log("HODIE linguistic UI integration contract: PASS");
+
+assert.match(app, /naturalAlternatives/);
+assert.match(app, /More natural · Más natural/);
