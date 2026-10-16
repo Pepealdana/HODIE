@@ -281,6 +281,20 @@ function renderProgress() {
 
 function renderPracticeHome() {
   const b2Unlock = refreshB2Pack();
+  const progressionLabel = (level) => {
+    const item = b2Unlock.progression.levels.find((entry) => entry.level === level);
+    return item?.ready ? "Ready · Listo" : "In progress · En progreso";
+  };
+  const b2ReadinessItems = [
+    ["A1 foundations", Math.round(b2Unlock.a1.coverage * 100) + "% / " + Math.round(b2Unlock.a1.threshold * 100) + "%", b2Unlock.a1.ready],
+    ["A2 readiness", progressionLabel("A2"), b2Unlock.progression.levels.find((entry) => entry.level === "A2")?.ready],
+    ["A2+ readiness", progressionLabel("A2+"), b2Unlock.progression.levels.find((entry) => entry.level === "A2+")?.ready],
+    ["B1 readiness", progressionLabel("B1"), b2Unlock.progression.levels.find((entry) => entry.level === "B1")?.ready],
+    ["B1 Can-Do mastery", Math.round(b2Unlock.b1.coverage * 100) + "% / " + Math.round(b2Unlock.b1.threshold * 100) + "%", b2Unlock.b1.ready],
+    ...Object.entries(b2Unlock.b1.skillCoverage).map(([skill, value]) => [skill, (value === null ? "n/a" : Math.round(value * 100) + "%") + " / " + Math.round(b2Unlock.b1.skillThreshold * 100) + "%", value === null || value >= b2Unlock.b1.skillThreshold]),
+    ["Independent transfer", b2Unlock.transfer.canDoCount + "/" + b2Unlock.transfer.requiredCanDos + " Can-Dos · " + b2Unlock.transfer.contextCount + "/" + b2Unlock.transfer.requiredContexts + " contexts", b2Unlock.transfer.ready]
+  ];
+  const b2ReadinessMarkup = '<details class="b2-readiness-details"><summary>View unlock requirements · Ver requisitos</summary><ul>' + b2ReadinessItems.map(([label, value, ready]) => '<li><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value) + '</strong><small>' + (ready ? 'Met · Cumplido' : 'Not met yet · Pendiente') + '</small></li>').join('') + '</ul></details>';
   const targetActivity = session.stages.find((stage) => stage.kind === "target")?.activity;
   const statement = session.target.statement;
   const spanish = session.target.spanish || "";
@@ -650,6 +664,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
       (b2Unlock.unlocked
         ? '<p class="b2-unlock-note">B2 unlocked · Unidad B2 desbloqueada. Your B2 activities are now available. · Ya puedes acceder al paquete B2.</p>'
         : '<p class="b2-unlock-note">B2 unlocks through demonstrated mastery, not lesson count: A1 foundations, A2/A2+/B1 readiness, at least 75% mastered B1 Can-Dos with core-skill balance, and independent transfer across two B1 tasks and two contexts. · B2 se desbloquea por dominio demostrado, no por cantidad de lecciones: fundamentos A1, preparación A2/A2+/B1, al menos 75% de Can-Dos B1 dominados, equilibrio entre habilidades y transferencia independiente en dos tareas y dos contextos.</p>') +
+      b2ReadinessMarkup +
     '</section>' +
     '<section class="conversation-start" aria-labelledby="conversationStartTitle">' +
       '<div class="conversation-heading"><p class="kicker">HODIE · ' + escapeHtml(level) + '</p><h2 id="conversationStartTitle">' + (isBeginner ? "¿Qué quieres practicar hoy?" : "What would you like to practise today?") + '</h2>' +
