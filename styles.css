@@ -1106,3 +1106,7 @@ html[data-theme="dark"] body { background: #101827; }
 .b2-lock-panel p { line-height:1.5; }
 .b2-lock-panel li { margin:5px 0; }
 @media (max-width:420px) { .reported-speech-controls { grid-template-columns:minmax(0,1fr); } .reported-speech-controls label { grid-column:auto; } .reported-speech-controls button { width:100%; } }
+
+.practice-confidence { display:grid; gap:7px; margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:12px; }
+.practice-confidence label { font-weight:700; font-size:.9rem; }
+.practice-confidence select { width:100%; min-width:0; }
