@@ -5161,19 +5161,14 @@
     {
       "id": "MIC-RS-A1-GR-01-04",
       "canDoId": "RS-A1-GR-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "grammar",
       "context": "daily-life",
       "level": "A1",
-      "title": "Check the structure",
-      "titleEs": "Revisa la estructura",
-      "prompt": "Which is correct for this context?",
-      "promptEs": "¿Cuál es correcta en este contexto?",
-      "options": [
-        "Tom said hello.",
-        "He asked me where did I live."
-      ],
-      "answer": "Tom said hello.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Tom said hello.",
+      "promptEs": "Transmite este mensaje en una oración: Tom said hello.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -5206,6 +5201,40 @@
         "reviewableFrom": [
           "A1"
         ]
+      },
+      "targetPhrase": "Tom said hello.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -5379,19 +5408,14 @@
     {
       "id": "MIC-RS-A1-LI-01-04",
       "canDoId": "RS-A1-LI-01",
-      "type": "listening",
+      "type": "mini-production",
       "skill": "listening",
       "context": "daily-life",
       "level": "A1",
-      "title": "Check the meaning",
-      "titleEs": "Comprueba el sentido",
-      "prompt": "Listen once more. Which sentence preserves the meaning?",
-      "promptEs": "Escucha una vez más. ¿Qué oración conserva el sentido?",
-      "options": [
-        "Tom said hello.",
-        "Tom: “Hello!”"
-      ],
-      "answer": "Tom said hello.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Tom: “Hello!”",
+      "promptEs": "Transmite este mensaje en una oración: Tom: “Hello!”",
       "audioText": "Tom: “Hello!”",
       "audio": {
         "language": "en-US",
@@ -5430,6 +5454,40 @@
         "reviewableFrom": [
           "A1"
         ]
+      },
+      "targetPhrase": "Tom: “Hello!”",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -5581,19 +5639,14 @@
     {
       "id": "MIC-RS-A1-RE-01-04",
       "canDoId": "RS-A1-RE-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "reading",
       "context": "daily-life",
       "level": "A1",
-      "title": "Separate quote and report",
-      "titleEs": "Distingue cita y reporte",
-      "prompt": "Which option reports the message instead of quoting it?",
-      "promptEs": "¿Qué opción transmite el mensaje en lugar de citarlo?",
-      "options": [
-        "Tom said hello.",
-        "Tom: “Hello!”"
-      ],
-      "answer": "Tom said hello.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Tom said hello.",
+      "promptEs": "Transmite este mensaje en una oración: Tom said hello.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -5626,6 +5679,40 @@
         "reviewableFrom": [
           "A1"
         ]
+      },
+      "targetPhrase": "Tom said hello.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -5854,16 +5941,16 @@
       "skill": "writing",
       "context": "daily-life",
       "level": "A1",
-      "title": "Report without quoting",
-      "titleEs": "Transmite sin citar",
-      "prompt": "Rewrite the message indirectly: Tom: “Hello!”",
-      "promptEs": "Reescribe el mensaje en estilo indirecto: Tom: “Hello!”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Rewrite the message indirectly: Tom: “Hello!”",
+      "promptEs": "Transmite este mensaje en una oración: Reescribe el mensaje en estilo indirecto: Tom: “Hello!”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -5875,10 +5962,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
-              "said"
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -5918,7 +6010,8 @@
         "reviewableFrom": [
           "A1"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-A1-SP-01-01",
@@ -6094,14 +6187,14 @@
     {
       "id": "MIC-RS-A1-SP-01-04",
       "canDoId": "RS-A1-SP-01",
-      "type": "speak",
+      "type": "mini-production",
       "skill": "speaking",
       "context": "daily-life",
       "level": "A1",
-      "title": "Keep the meaning",
-      "titleEs": "Mantén el sentido",
-      "prompt": "Say a short report without changing the meaning: Tom: “Hello!”",
-      "promptEs": "Di una versión breve sin cambiar el sentido: Tom: “Hello!”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Tom said hello.",
+      "promptEs": "Transmite este mensaje en una oración: Tom said hello.",
       "targetPhrase": "Tom said hello.",
       "requiredTokens": [
         "Tom",
@@ -6146,6 +6239,39 @@
         "reviewableFrom": [
           "A1"
         ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -6328,16 +6454,16 @@
       "skill": "communication",
       "context": "daily-life",
       "level": "A1",
-      "title": "Relay the information",
-      "titleEs": "Comunica la información",
-      "prompt": "Pass this information to another person: Tom: “Hello!”",
-      "promptEs": "Transmite esta información a otra persona: Tom: “Hello!”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Pass this information to another person: Tom: “Hello!”",
+      "promptEs": "Transmite este mensaje en una oración: Transmite esta información a otra persona: Tom: “Hello!”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -6349,10 +6475,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
-              "said"
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -6392,7 +6523,8 @@
         "reviewableFrom": [
           "A1"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-A2-GR-01-01",
@@ -6562,19 +6694,14 @@
     {
       "id": "MIC-RS-A2-GR-01-04",
       "canDoId": "RS-A2-GR-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "grammar",
       "context": "daily-life",
       "level": "A2",
-      "title": "Check the structure",
-      "titleEs": "Revisa la estructura",
-      "prompt": "Which is correct for this context?",
-      "promptEs": "¿Cuál es correcta en este contexto?",
-      "options": [
-        "Ana said she was tired.",
-        "He asked me where did I live."
-      ],
-      "answer": "Ana said she was tired.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Ana said she was tired.",
+      "promptEs": "Transmite este mensaje en una oración: Ana said she was tired.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -6608,6 +6735,40 @@
           "A1",
           "A2"
         ]
+      },
+      "targetPhrase": "Ana said she was tired.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -6784,19 +6945,14 @@
     {
       "id": "MIC-RS-A2-LI-01-04",
       "canDoId": "RS-A2-LI-01",
-      "type": "listening",
+      "type": "mini-production",
       "skill": "listening",
       "context": "daily-life",
       "level": "A2",
-      "title": "Check the meaning",
-      "titleEs": "Comprueba el sentido",
-      "prompt": "Listen once more. Which sentence preserves the meaning?",
-      "promptEs": "Escucha una vez más. ¿Qué oración conserva el sentido?",
-      "options": [
-        "Ana said she was tired.",
-        "Ana: “I am tired.”"
-      ],
-      "answer": "Ana said she was tired.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Ana: “I am tired.”",
+      "promptEs": "Transmite este mensaje en una oración: Ana: “I am tired.”",
       "audioText": "Ana: “I am tired.”",
       "audio": {
         "language": "en-US",
@@ -6836,6 +6992,40 @@
           "A1",
           "A2"
         ]
+      },
+      "targetPhrase": "Ana: “I am tired.”",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -6990,19 +7180,14 @@
     {
       "id": "MIC-RS-A2-RE-01-04",
       "canDoId": "RS-A2-RE-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "reading",
       "context": "daily-life",
       "level": "A2",
-      "title": "Separate quote and report",
-      "titleEs": "Distingue cita y reporte",
-      "prompt": "Which option reports the message instead of quoting it?",
-      "promptEs": "¿Qué opción transmite el mensaje en lugar de citarlo?",
-      "options": [
-        "Ana said she was tired.",
-        "Ana: “I am tired.”"
-      ],
-      "answer": "Ana said she was tired.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Ana said she was tired.",
+      "promptEs": "Transmite este mensaje en una oración: Ana said she was tired.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -7036,6 +7221,40 @@
           "A1",
           "A2"
         ]
+      },
+      "targetPhrase": "Ana said she was tired.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -7270,16 +7489,16 @@
       "skill": "writing",
       "context": "daily-life",
       "level": "A2",
-      "title": "Report without quoting",
-      "titleEs": "Transmite sin citar",
-      "prompt": "Rewrite the message indirectly: Ana: “I am tired.”",
-      "promptEs": "Reescribe el mensaje en estilo indirecto: Ana: “I am tired.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Rewrite the message indirectly: Ana: “I am tired.”",
+      "promptEs": "Transmite este mensaje en una oración: Reescribe el mensaje en estilo indirecto: Ana: “I am tired.”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -7291,11 +7510,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
               "said",
-              "told"
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -7336,7 +7559,8 @@
           "A1",
           "A2"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-A2-SP-01-01",
@@ -7521,14 +7745,14 @@
     {
       "id": "MIC-RS-A2-SP-01-04",
       "canDoId": "RS-A2-SP-01",
-      "type": "speak",
+      "type": "mini-production",
       "skill": "speaking",
       "context": "daily-life",
       "level": "A2",
-      "title": "Keep the meaning",
-      "titleEs": "Mantén el sentido",
-      "prompt": "Say a short report without changing the meaning: Ana: “I am tired.”",
-      "promptEs": "Di una versión breve sin cambiar el sentido: Ana: “I am tired.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Ana said she was tired.",
+      "promptEs": "Transmite este mensaje en una oración: Ana said she was tired.",
       "targetPhrase": "Ana said she was tired.",
       "requiredTokens": [
         "Ana",
@@ -7576,6 +7800,39 @@
           "A1",
           "A2"
         ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -7762,16 +8019,16 @@
       "skill": "communication",
       "context": "daily-life",
       "level": "A2",
-      "title": "Relay the information",
-      "titleEs": "Comunica la información",
-      "prompt": "Pass this information to another person: Ana: “I am tired.”",
-      "promptEs": "Transmite esta información a otra persona: Ana: “I am tired.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Pass this information to another person: Ana: “I am tired.”",
+      "promptEs": "Transmite este mensaje en una oración: Transmite esta información a otra persona: Ana: “I am tired.”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -7783,11 +8040,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
               "said",
-              "told"
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -7828,7 +8089,8 @@
           "A1",
           "A2"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-B1-GR-01-01",
@@ -8004,19 +8266,14 @@
     {
       "id": "MIC-RS-B1-GR-01-04",
       "canDoId": "RS-B1-GR-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "grammar",
       "context": "daily-life",
       "level": "B1",
-      "title": "Check the structure",
-      "titleEs": "Revisa la estructura",
-      "prompt": "Which is correct for this context?",
-      "promptEs": "¿Cuál es correcta en este contexto?",
-      "options": [
-        "He asked me where I lived.",
-        "He asked me where did I live."
-      ],
-      "answer": "He asked me where I lived.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He asked me where I lived.",
+      "promptEs": "Transmite este mensaje en una oración: He asked me where I lived.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -8051,6 +8308,40 @@
           "A2",
           "B1"
         ]
+      },
+      "targetPhrase": "He asked me where I lived.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -8230,19 +8521,14 @@
     {
       "id": "MIC-RS-B1-LI-01-04",
       "canDoId": "RS-B1-LI-01",
-      "type": "listening",
+      "type": "mini-production",
       "skill": "listening",
       "context": "daily-life",
       "level": "B1",
-      "title": "Check the meaning",
-      "titleEs": "Comprueba el sentido",
-      "prompt": "Listen once more. Which sentence preserves the meaning?",
-      "promptEs": "Escucha una vez más. ¿Qué oración conserva el sentido?",
-      "options": [
-        "He asked me where I lived.",
-        "“Where do you live?”"
-      ],
-      "answer": "He asked me where I lived.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: “Where do you live?”",
+      "promptEs": "Transmite este mensaje en una oración: “Where do you live?”",
       "audioText": "“Where do you live?”",
       "audio": {
         "language": "en-US",
@@ -8283,6 +8569,40 @@
           "A2",
           "B1"
         ]
+      },
+      "targetPhrase": "“Where do you live?”",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -8440,19 +8760,14 @@
     {
       "id": "MIC-RS-B1-RE-01-04",
       "canDoId": "RS-B1-RE-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "reading",
       "context": "daily-life",
       "level": "B1",
-      "title": "Separate quote and report",
-      "titleEs": "Distingue cita y reporte",
-      "prompt": "Which option reports the message instead of quoting it?",
-      "promptEs": "¿Qué opción transmite el mensaje en lugar de citarlo?",
-      "options": [
-        "He asked me where I lived.",
-        "“Where do you live?”"
-      ],
-      "answer": "He asked me where I lived.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He asked me where I lived.",
+      "promptEs": "Transmite este mensaje en una oración: He asked me where I lived.",
       "feedback": {
         "correct": "Correct. The report preserves the speaker's meaning.",
         "correctEs": "Correcto. El reporte conserva el sentido del hablante.",
@@ -8487,6 +8802,40 @@
           "A2",
           "B1"
         ]
+      },
+      "targetPhrase": "He asked me where I lived.",
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -8727,16 +9076,16 @@
       "skill": "writing",
       "context": "daily-life",
       "level": "B1",
-      "title": "Report without quoting",
-      "titleEs": "Transmite sin citar",
-      "prompt": "Rewrite the message indirectly: “Where do you live?”",
-      "promptEs": "Reescribe el mensaje en estilo indirecto: “Where do you live?”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Rewrite the message indirectly: “Where do you live?”",
+      "promptEs": "Transmite este mensaje en una oración: Reescribe el mensaje en estilo indirecto: “Where do you live?”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -8748,12 +9097,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
               "said",
               "told",
-              "asked"
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -8795,7 +9147,8 @@
           "A2",
           "B1"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-B1-SP-01-01",
@@ -8977,14 +9330,14 @@
     {
       "id": "MIC-RS-B1-SP-01-04",
       "canDoId": "RS-B1-SP-01",
-      "type": "speak",
+      "type": "mini-production",
       "skill": "speaking",
       "context": "daily-life",
       "level": "B1",
-      "title": "Keep the meaning",
-      "titleEs": "Mantén el sentido",
-      "prompt": "Say a short report without changing the meaning: “Where do you live?”",
-      "promptEs": "Di una versión breve sin cambiar el sentido: “Where do you live?”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He asked me where I lived.",
+      "promptEs": "Transmite este mensaje en una oración: He asked me where I lived.",
       "targetPhrase": "He asked me where I lived.",
       "requiredTokens": [
         "asked",
@@ -9031,6 +9384,39 @@
           "A2",
           "B1"
         ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
+          },
+          {
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
+        "errorMapping": "structured-error-model-v1"
       }
     },
     {
@@ -9221,16 +9607,16 @@
       "skill": "communication",
       "context": "daily-life",
       "level": "B1",
-      "title": "Relay the information",
-      "titleEs": "Comunica la información",
-      "prompt": "Pass this information to another person: “Where do you live?”",
-      "promptEs": "Transmite esta información a otra persona: “Where do you live?”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Pass this information to another person: “Where do you live?”",
+      "promptEs": "Transmite este mensaje en una oración: Transmite esta información a otra persona: “Where do you live?”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves the original message",
+            "label": "preserves the original meaning",
             "patterns": [
               "said",
               "told",
@@ -9242,12 +9628,15 @@
             ]
           },
           {
-            "id": "structure",
-            "label": "uses a level-appropriate reporting structure",
+            "id": "form",
+            "label": "uses an appropriate reported form",
             "patterns": [
               "said",
               "told",
-              "asked"
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
             ]
           }
         ],
@@ -9289,7 +9678,8 @@
           "A2",
           "B1"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-B2-GR-01-01",
@@ -9525,19 +9915,14 @@
     {
       "id": "MIC-RS-B2-GR-01-04",
       "canDoId": "RS-B2-GR-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "grammar",
       "context": "daily-life",
       "level": "B2",
-      "title": "Check the structure",
-      "titleEs": "Revisa la estructura",
-      "prompt": "Which is correct for this context?",
-      "promptEs": "¿Cuál es correcta en este contexto?",
-      "options": [
-        "He suggested meeting earlier.",
-        "He asked me where did I live."
-      ],
-      "answer": "He suggested meeting earlier.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He suggested meeting earlier.",
+      "promptEs": "Transmite este mensaje en una oración: He suggested meeting earlier.",
       "validation": {
         "status": "validated",
         "reviewedBy": "HODIE internal content QA",
@@ -9583,18 +9968,35 @@
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
-      }
+      },
+      "targetPhrase": "He suggested meeting earlier."
     },
     {
       "id": "MIC-RS-B2-LI-01-01",
@@ -9839,19 +10241,14 @@
     {
       "id": "MIC-RS-B2-LI-01-04",
       "canDoId": "RS-B2-LI-01",
-      "type": "listening",
+      "type": "mini-production",
       "skill": "listening",
       "context": "daily-life",
       "level": "B2",
-      "title": "Check the meaning",
-      "titleEs": "Comprueba el sentido",
-      "prompt": "Listen once more. Which sentence preserves the meaning?",
-      "promptEs": "Escucha una vez más. ¿Qué oración conserva el sentido?",
-      "options": [
-        "He suggested meeting earlier.",
-        "“Let's meet earlier.”"
-      ],
-      "answer": "He suggested meeting earlier.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: “Let's meet earlier.”",
+      "promptEs": "Transmite este mensaje en una oración: “Let's meet earlier.”",
       "audioText": "“Let's meet earlier.”",
       "audio": {
         "language": "en-US",
@@ -9903,18 +10300,35 @@
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
-      }
+      },
+      "targetPhrase": "“Let's meet earlier.”"
     },
     {
       "id": "MIC-RS-B2-RE-01-01",
@@ -10137,19 +10551,14 @@
     {
       "id": "MIC-RS-B2-RE-01-04",
       "canDoId": "RS-B2-RE-01",
-      "type": "choose",
+      "type": "mini-production",
       "skill": "reading",
       "context": "daily-life",
       "level": "B2",
-      "title": "Separate quote and report",
-      "titleEs": "Distingue cita y reporte",
-      "prompt": "Which option reports the message instead of quoting it?",
-      "promptEs": "¿Qué opción transmite el mensaje en lugar de citarlo?",
-      "options": [
-        "He suggested meeting earlier.",
-        "“Let's meet earlier.”"
-      ],
-      "answer": "He suggested meeting earlier.",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He suggested meeting earlier.",
+      "promptEs": "Transmite este mensaje en una oración: He suggested meeting earlier.",
       "validation": {
         "status": "validated",
         "reviewedBy": "HODIE internal content QA",
@@ -10195,18 +10604,35 @@
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
-      }
+      },
+      "targetPhrase": "He suggested meeting earlier."
     },
     {
       "id": "MIC-RS-B2-WR-01-01",
@@ -10422,25 +10848,41 @@
       "skill": "writing",
       "context": "daily-life",
       "level": "B2",
-      "title": "Report without quoting",
-      "titleEs": "Transmite sin citar",
-      "prompt": "Rewrite the message indirectly: “Let's meet earlier.”",
-      "promptEs": "Reescribe el mensaje en estilo indirecto: “Let's meet earlier.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Rewrite the message indirectly: “Let's meet earlier.”",
+      "promptEs": "Transmite este mensaje en una oración: Reescribe el mensaje en estilo indirecto: “Let's meet earlier.”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
       },
       "validation": {
@@ -10482,7 +10924,8 @@
           "A2",
           "B1"
         ]
-      }
+      },
+      "targetPhrase": ""
     },
     {
       "id": "MIC-RS-B2-SP-01-01",
@@ -10730,14 +11173,14 @@
     {
       "id": "MIC-RS-B2-SP-01-04",
       "canDoId": "RS-B2-SP-01",
-      "type": "speak",
+      "type": "mini-production",
       "skill": "speaking",
       "context": "daily-life",
       "level": "B2",
-      "title": "Keep the meaning",
-      "titleEs": "Mantén el sentido",
-      "prompt": "Say a short report without changing the meaning: “Let's meet earlier.”",
-      "promptEs": "Di una versión breve sin cambiar el sentido: “Let's meet earlier.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: He suggested meeting earlier.",
+      "promptEs": "Transmite este mensaje en una oración: He suggested meeting earlier.",
       "targetPhrase": "He suggested meeting earlier.",
       "requiredTokens": [
         "suggested",
@@ -10795,16 +11238,32 @@
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
       }
     },
@@ -11032,25 +11491,41 @@
       "skill": "communication",
       "context": "daily-life",
       "level": "B2",
-      "title": "Relay the information",
-      "titleEs": "Comunica la información",
-      "prompt": "Pass this information to another person: “Let's meet earlier.”",
-      "promptEs": "Transmite esta información a otra persona: “Let's meet earlier.”",
+      "title": "Report the message in your own words",
+      "titleEs": "Transmite el mensaje con tus palabras",
+      "prompt": "Report this message in one sentence: Pass this information to another person: “Let's meet earlier.”",
+      "promptEs": "Transmite este mensaje en una oración: Transmite esta información a otra persona: “Let's meet earlier.”",
       "evaluation": {
         "observable": true,
         "criteria": [
           {
             "id": "meaning",
-            "label": "preserves meaning and attribution",
-            "type": "content-point"
+            "label": "preserves the original meaning",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "reported",
+              "suggested",
+              "claimed",
+              "admitted"
+            ]
           },
           {
-            "id": "reported-form",
-            "label": "uses an appropriate reporting form",
-            "type": "language-feature"
+            "id": "form",
+            "label": "uses an appropriate reported form",
+            "patterns": [
+              "said",
+              "told",
+              "asked",
+              "suggested",
+              "admitted",
+              "claimed"
+            ]
           }
         ],
         "minimumCriteria": 1,
+        "minimumResponseCharacters": 6,
         "errorMapping": "structured-error-model-v1"
       },
       "validation": {
@@ -11092,7 +11567,8 @@
           "A2",
           "B1"
         ]
-      }
+      },
+      "targetPhrase": ""
     }
   ]
 }
