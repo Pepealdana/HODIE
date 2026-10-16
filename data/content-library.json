@@ -995,9 +995,8 @@
       },
       "evidence": {
         "dimensions": {
-          "taskCompletion": 0.8,
+          "taskCompletion": 0.9,
           "interaction": 0.8,
-          "repair": 0.9,
           "confidence": 0.7
         },
         "independent": false,
@@ -1080,9 +1079,9 @@
       },
       "evidence": {
         "dimensions": {
-          "taskCompletion": 0.9,
-          "comprehension": 0.8,
-          "accuracy": 0.8
+          "accuracy": 0.8,
+          "details": 0.8,
+          "confidence": 0.7
         },
         "independent": false
       },
@@ -1149,9 +1148,9 @@
       },
       "evidence": {
         "dimensions": {
-          "taskCompletion": 0.9,
           "intelligibility": 0.8,
-          "wordClarity": 0.8
+          "prosody": 0.7,
+          "confidence": 0.7
         },
         "independent": false
       },
