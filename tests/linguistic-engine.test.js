@@ -92,6 +92,14 @@ for (const valid of ["I feel good.", "I am feeling good.", "I am ready.", "I am 
   assert.equal(analyzeLanguage(valid).errors.length, 0, valid + " must remain valid");
 }
 
+const validDoesQuestion = analyzeLanguage("Does she work here?");
+assert.equal(validDoesQuestion.correctedText, "Does she work here.");
+assert.equal(validDoesQuestion.errors.some((error) => error.ruleId === "DOES-BASE-001"), false);
+
+const invalidDoesQuestion = analyzeLanguage("Does she works here?");
+assert.equal(invalidDoesQuestion.correctedText, "Does she work here?");
+assert.ok(invalidDoesQuestion.errors.some((error) => error.ruleId === "DOES-BASE-001"));
+
 const knownA2Negation = analyzeLanguage("She doesn't works on Sundays.");
 assert.equal(knownA2Negation.correctedText, "She doesn't work on Sundays.");
 assert.ok(knownA2Negation.errors.some((error) => error.ruleId === "DO-NEG-BASE-001"));
