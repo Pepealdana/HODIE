@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "HODIE-B2-UNLOCK-1",
+  "name": "B2 evidence-based readiness",
+  "nameEs": "Preparación para B2 basada en evidencias",
+  "principles": [
+    "Content availability is separate from learner access.",
+    "Completion count alone never unlocks B2.",
+    "Readiness requires breadth across communicative skills and language resources.",
+    "A consolidated Can-Do already represents repeated independent success in distinct contexts.",
+    "This is an internal learning readiness signal, not official CEFR certification."
+  ],
+  "requirements": [
+    {
+      "skill": "speaking",
+      "minimumFunctional": 3,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "listening",
+      "minimumFunctional": 3,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "reading",
+      "minimumFunctional": 3,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "writing",
+      "minimumFunctional": 3,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "communication",
+      "minimumFunctional": 2,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "grammar",
+      "minimumFunctional": 2,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "vocabulary",
+      "minimumFunctional": 2,
+      "minimumConsolidated": 1
+    },
+    {
+      "skill": "pronunciation",
+      "minimumFunctional": 2,
+      "minimumConsolidated": 1
+    }
+  ]
+}

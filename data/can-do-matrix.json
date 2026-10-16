@@ -5,7 +5,7 @@
   "scope": {
     "from": "A2",
     "to": "B1",
-    "note": "HODIE estimates functional progress; it does not provide official CEFR certification."
+    "note": "The core matrix focuses on A2-B1. A bounded reported-speech extension adds A1 foundation and B2 transfer targets; HODIE's internal readiness signal is not official CEFR certification."
   },
   "philosophy": "Can-Do -> Try -> Evidence -> Gap -> Practice -> Retry -> Master",
   "confidenceScale": [
@@ -5624,6 +5624,1242 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "communicative"
+    },
+    {
+      "id": "RS-A1-GR-01",
+      "skill": "grammar",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can form reported messages appropriate to my level. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo transmitir mensajes con estilo indirecto apropiados para mi nivel. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Transform or select a reported message."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A1-LI-01",
+      "skill": "listening",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can identify the key information and speaker intention in spoken messages. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo identificar la información clave y la intención del hablante en mensajes orales. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Listen to a short message and identify what was said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A1-RE-01",
+      "skill": "reading",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can identify reported information and distinguish it from a direct quotation. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo identificar información transmitida y distinguirla de una cita directa. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Read a short exchange and identify the reported meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A1-WR-01",
+      "skill": "writing",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can write a clear, accurate report of a message or short exchange. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo redactar una transmisión clara y precisa de un mensaje o intercambio breve. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Write a short report of what another person said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A1-SP-01",
+      "skill": "speaking",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can report what someone said clearly and intelligibly. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo contar con claridad e inteligibilidad lo que alguien dijo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Say what another person said using the target structure."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A1-CO-01",
+      "skill": "communication",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can pass on information from another person while preserving the intended meaning. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "spanish": "Puedo transmitir información de otra persona conservando el sentido pretendido. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Pass on a message to another person without changing its meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-GR-01",
+      "skill": "grammar",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can form reported messages appropriate to my level. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo transmitir mensajes con estilo indirecto apropiados para mi nivel. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-GR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Transform or select a reported message."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-LI-01",
+      "skill": "listening",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can identify the key information and speaker intention in spoken messages. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo identificar la información clave y la intención del hablante en mensajes orales. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-LI-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Listen to a short message and identify what was said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-RE-01",
+      "skill": "reading",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can identify reported information and distinguish it from a direct quotation. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo identificar información transmitida y distinguirla de una cita directa. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-RE-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Read a short exchange and identify the reported meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-WR-01",
+      "skill": "writing",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can write a clear, accurate report of a message or short exchange. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo redactar una transmisión clara y precisa de un mensaje o intercambio breve. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-WR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Write a short report of what another person said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-SP-01",
+      "skill": "speaking",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report what someone said clearly and intelligibly. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo contar con claridad e inteligibilidad lo que alguien dijo. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-SP-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Say what another person said using the target structure."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-A2-CO-01",
+      "skill": "communication",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can pass on information from another person while preserving the intended meaning. Report familiar statements using say/tell, pronouns and basic time references.",
+      "spanish": "Puedo transmitir información de otra persona conservando el sentido pretendido. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "prerequisites": [
+        "RS-A1-CO-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Pass on a message to another person without changing its meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-GR-01",
+      "skill": "grammar",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can form reported messages appropriate to my level. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo transmitir mensajes con estilo indirecto apropiados para mi nivel. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-GR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Transform or select a reported message."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-LI-01",
+      "skill": "listening",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can identify the key information and speaker intention in spoken messages. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo identificar la información clave y la intención del hablante en mensajes orales. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-LI-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Listen to a short message and identify what was said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-RE-01",
+      "skill": "reading",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can identify reported information and distinguish it from a direct quotation. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo identificar información transmitida y distinguirla de una cita directa. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-RE-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Read a short exchange and identify the reported meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-WR-01",
+      "skill": "writing",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can write a clear, accurate report of a message or short exchange. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo redactar una transmisión clara y precisa de un mensaje o intercambio breve. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-WR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Write a short report of what another person said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-SP-01",
+      "skill": "speaking",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what someone said clearly and intelligibly. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo contar con claridad e inteligibilidad lo que alguien dijo. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-SP-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Say what another person said using the target structure."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B1-CO-01",
+      "skill": "communication",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can pass on information from another person while preserving the intended meaning. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "spanish": "Puedo transmitir información de otra persona conservando el sentido pretendido. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "prerequisites": [
+        "RS-A2-CO-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Pass on a message to another person without changing its meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-GR-01",
+      "skill": "grammar",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can form reported messages appropriate to my level. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo transmitir mensajes con estilo indirecto apropiados para mi nivel. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-GR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Transform or select a reported message."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-LI-01",
+      "skill": "listening",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can identify the key information and speaker intention in spoken messages. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo identificar la información clave y la intención del hablante en mensajes orales. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-LI-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Listen to a short message and identify what was said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-RE-01",
+      "skill": "reading",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can identify reported information and distinguish it from a direct quotation. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo identificar información transmitida y distinguirla de una cita directa. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-RE-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Read a short exchange and identify the reported meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-WR-01",
+      "skill": "writing",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can write a clear, accurate report of a message or short exchange. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo redactar una transmisión clara y precisa de un mensaje o intercambio breve. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-WR-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Write a short report of what another person said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-SP-01",
+      "skill": "speaking",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can report what someone said clearly and intelligibly. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo contar con claridad e inteligibilidad lo que alguien dijo. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-SP-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Say what another person said using the target structure."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
+    },
+    {
+      "id": "RS-B2-CO-01",
+      "skill": "communication",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can pass on information from another person while preserving the intended meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "spanish": "Puedo transmitir información de otra persona conservando el sentido pretendido. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "prerequisites": [
+        "RS-B1-CO-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs"
+        ],
+        "vocabulary": [
+          "reported-messages",
+          "attribution",
+          "time-reference"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 30,
+          "max": 180
+        },
+        "task": "Pass on a message to another person without changing its meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative",
+      "metadata": {
+        "topic": "reported-speech",
+        "framework": "CEFR-aligned communicative progression",
+        "notOfficialGrammarSyllabus": true
+      }
     }
   ],
   "metaCanDos": [
@@ -5734,5 +6970,25 @@
     "assessmentReference": "Cambridge English B1 Preliminary",
     "practicalCanDoReference": "British Council LearnEnglish B1",
     "note": "These references guide functional outcomes and assessment design; HODIE is not an official CEFR or Cambridge certification system."
-  }
+  },
+  "extensions": [
+    {
+      "id": "reported-speech-cefr-pathway",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "skills": [
+        "grammar",
+        "listening",
+        "reading",
+        "writing",
+        "speaking",
+        "communication"
+      ],
+      "note": "A bounded communicative pathway, not an official CEFR grammar syllabus."
+    }
+  ]
 }

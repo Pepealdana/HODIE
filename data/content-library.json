@@ -1056,6 +1056,1916 @@
         "introductions",
         "personal-information"
       ]
+    },
+    {
+      "id": "ACT-RS-A1-GR-01",
+      "canDoId": "RS-A1-GR-01",
+      "activityType": "controlled-practice",
+      "level": "A1",
+      "skill": "grammar",
+      "context": "daily-life",
+      "title": "Reported speech: Grammar",
+      "titleEs": "Estilo indirecto: Gramática",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Choose or write a reported version. Keep the original meaning.",
+      "instructionsEs": "Elige o escribe una versión en estilo indirecto. Conserva el sentido original.",
+      "task": "Transform Tom: “Hello!” into reported speech: Tom said hello.",
+      "taskEs": "Transforma el mensaje: Tom: “Hello!”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Tom said hello.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "communicativeUse": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "grammar",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A1-LI-01",
+      "canDoId": "RS-A1-LI-01",
+      "activityType": "listening-comprehension",
+      "level": "A1",
+      "skill": "listening",
+      "context": "daily-life",
+      "title": "Reported speech: Listening",
+      "titleEs": "Estilo indirecto: Escucha",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Listen to the message, then choose or say what the speaker communicated.",
+      "instructionsEs": "Escucha el mensaje y luego elige o di qué comunicó el hablante.",
+      "task": "Listen to this message and report it: Mia: “Thank you.”",
+      "taskEs": "Escucha y transmite el mensaje: Mia: “Thank you.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Mia said thank you.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "gist": 0.85,
+          "details": 0.8,
+          "accuracy": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "listening",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A1-RE-01",
+      "canDoId": "RS-A1-RE-01",
+      "activityType": "reading-comprehension",
+      "level": "A1",
+      "skill": "reading",
+      "context": "daily-life",
+      "title": "Reported speech: Reading",
+      "titleEs": "Estilo indirecto: Lectura",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Read the direct message and compare its meaning with the reported version.",
+      "instructionsEs": "Lee el mensaje directo y compara su sentido con la versión indirecta.",
+      "task": "Read Leo: “Goodbye!” and identify the reported version: Leo said goodbye.",
+      "taskEs": "Lee e identifica el mensaje: Leo: “Goodbye!”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Leo said goodbye.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "details": 0.8,
+          "gist": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "reading",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A1-WR-01",
+      "canDoId": "RS-A1-WR-01",
+      "activityType": "guided-production",
+      "level": "A1",
+      "skill": "writing",
+      "context": "daily-life",
+      "title": "Reported speech: Writing",
+      "titleEs": "Estilo indirecto: Escritura",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Write one or two sentences reporting this message: Tom: “Hello!”",
+      "taskEs": "Escribe el mensaje: Tom: “Hello!”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Tom said hello.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "taskCompletion": 0.85,
+          "coherence": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "writing",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 10,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A1-SP-01",
+      "canDoId": "RS-A1-SP-01",
+      "activityType": "guided-production",
+      "level": "A1",
+      "skill": "speaking",
+      "context": "daily-life",
+      "title": "Reported speech: Speaking",
+      "titleEs": "Estilo indirecto: Expresión oral",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Say this message indirectly: Mia: “Thank you.”",
+      "taskEs": "Di el mensaje: Mia: “Thank you.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Mia said thank you.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "fluency": 0.8,
+          "pronunciation": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "speaking",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A1-CO-01",
+      "canDoId": "RS-A1-CO-01",
+      "activityType": "interaction",
+      "level": "A1",
+      "skill": "communication",
+      "context": "daily-life",
+      "title": "Reported speech: Communication",
+      "titleEs": "Estilo indirecto: Interacción",
+      "objective": "Report a simple message. Identify who speaks and report greetings or short messages without demanding tense backshift.",
+      "objectiveEs": "Transmitir un mensaje sencillo. Identifica quién habla y transmite saludos o mensajes breves sin exigir cambios complejos de tiempo verbal.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Tell a partner what the speaker said: Leo: “Goodbye!”",
+      "taskEs": "Cuenta el mensaje: Leo: “Goodbye!”",
+      "support": {
+        "optionalSentenceStarters": [
+          "He said hello.",
+          "She said thank you."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Leo said goodbye.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "interaction": 0.8,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a1",
+          "communication",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-GR-01",
+      "canDoId": "RS-A2-GR-01",
+      "activityType": "controlled-practice",
+      "level": "A2",
+      "skill": "grammar",
+      "context": "daily-life",
+      "title": "Reported speech: Grammar",
+      "titleEs": "Estilo indirecto: Gramática",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Choose or write a reported version. Keep the original meaning.",
+      "instructionsEs": "Elige o escribe una versión en estilo indirecto. Conserva el sentido original.",
+      "task": "Transform Ana: “I am tired.” into reported speech: Ana said she was tired.",
+      "taskEs": "Transforma el mensaje: Ana: “I am tired.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Ana said she was tired.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "communicativeUse": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "grammar",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-LI-01",
+      "canDoId": "RS-A2-LI-01",
+      "activityType": "listening-comprehension",
+      "level": "A2",
+      "skill": "listening",
+      "context": "daily-life",
+      "title": "Reported speech: Listening",
+      "titleEs": "Estilo indirecto: Escucha",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Listen to the message, then choose or say what the speaker communicated.",
+      "instructionsEs": "Escucha el mensaje y luego elige o di qué comunicó el hablante.",
+      "task": "Listen to this message and report it: Ben: “I live here.”",
+      "taskEs": "Escucha y transmite el mensaje: Ben: “I live here.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Ben said he lived there.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "gist": 0.85,
+          "details": 0.8,
+          "accuracy": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "listening",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-RE-01",
+      "canDoId": "RS-A2-RE-01",
+      "activityType": "reading-comprehension",
+      "level": "A2",
+      "skill": "reading",
+      "context": "daily-life",
+      "title": "Reported speech: Reading",
+      "titleEs": "Estilo indirecto: Lectura",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Read the direct message and compare its meaning with the reported version.",
+      "instructionsEs": "Lee el mensaje directo y compara su sentido con la versión indirecta.",
+      "task": "Read Mia: “I can help.” and identify the reported version: Mia said she could help.",
+      "taskEs": "Lee e identifica el mensaje: Mia: “I can help.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Mia said she could help.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "details": 0.8,
+          "gist": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "reading",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-WR-01",
+      "canDoId": "RS-A2-WR-01",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "writing",
+      "context": "daily-life",
+      "title": "Reported speech: Writing",
+      "titleEs": "Estilo indirecto: Escritura",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Write one or two sentences reporting this message: Ana: “I am tired.”",
+      "taskEs": "Escribe el mensaje: Ana: “I am tired.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Ana said she was tired.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "taskCompletion": 0.85,
+          "coherence": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "writing",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 10,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-SP-01",
+      "canDoId": "RS-A2-SP-01",
+      "activityType": "guided-production",
+      "level": "A2",
+      "skill": "speaking",
+      "context": "daily-life",
+      "title": "Reported speech: Speaking",
+      "titleEs": "Estilo indirecto: Expresión oral",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Say this message indirectly: Ben: “I live here.”",
+      "taskEs": "Di el mensaje: Ben: “I live here.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Ben said he lived there.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "fluency": 0.8,
+          "pronunciation": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "speaking",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-A2-CO-01",
+      "canDoId": "RS-A2-CO-01",
+      "activityType": "interaction",
+      "level": "A2",
+      "skill": "communication",
+      "context": "daily-life",
+      "title": "Reported speech: Communication",
+      "titleEs": "Estilo indirecto: Interacción",
+      "objective": "Report short statements. Report familiar statements using say/tell, pronouns and basic time references.",
+      "objectiveEs": "Transmitir afirmaciones breves. Transmite afirmaciones familiares con say/tell, pronombres y referencias temporales básicas.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Tell a partner what the speaker said: Mia: “I can help.”",
+      "taskEs": "Cuenta el mensaje: Mia: “I can help.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said (that)...",
+          "He told me (that)..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "Mia said she could help.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "interaction": 0.8,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "a2",
+          "communication",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-GR-01",
+      "canDoId": "RS-B1-GR-01",
+      "activityType": "controlled-practice",
+      "level": "B1",
+      "skill": "grammar",
+      "context": "daily-life",
+      "title": "Reported speech: Grammar",
+      "titleEs": "Estilo indirecto: Gramática",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Choose or write a reported version. Keep the original meaning.",
+      "instructionsEs": "Elige o escribe una versión en estilo indirecto. Conserva el sentido original.",
+      "task": "Transform “Where do you live?” into reported speech: He asked me where I lived.",
+      "taskEs": "Transforma el mensaje: “Where do you live?”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He asked me where I lived.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "communicativeUse": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "grammar",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-LI-01",
+      "canDoId": "RS-B1-LI-01",
+      "activityType": "listening-comprehension",
+      "level": "B1",
+      "skill": "listening",
+      "context": "daily-life",
+      "title": "Reported speech: Listening",
+      "titleEs": "Estilo indirecto: Escucha",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Listen to the message, then choose or say what the speaker communicated.",
+      "instructionsEs": "Escucha el mensaje y luego elige o di qué comunicó el hablante.",
+      "task": "Listen to this message and report it: “Do you like tea?”",
+      "taskEs": "Escucha y transmite el mensaje: “Do you like tea?”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "She asked if I liked tea.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "gist": 0.85,
+          "details": 0.8,
+          "accuracy": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "listening",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-RE-01",
+      "canDoId": "RS-B1-RE-01",
+      "activityType": "reading-comprehension",
+      "level": "B1",
+      "skill": "reading",
+      "context": "daily-life",
+      "title": "Reported speech: Reading",
+      "titleEs": "Estilo indirecto: Lectura",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Read the direct message and compare its meaning with the reported version.",
+      "instructionsEs": "Lee el mensaje directo y compara su sentido con la versión indirecta.",
+      "task": "Read “Please wait.” and identify the reported version: He asked me to wait.",
+      "taskEs": "Lee e identifica el mensaje: “Please wait.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He asked me to wait.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "details": 0.8,
+          "gist": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "reading",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-WR-01",
+      "canDoId": "RS-B1-WR-01",
+      "activityType": "guided-production",
+      "level": "B1",
+      "skill": "writing",
+      "context": "daily-life",
+      "title": "Reported speech: Writing",
+      "titleEs": "Estilo indirecto: Escritura",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Write one or two sentences reporting this message: “Where do you live?”",
+      "taskEs": "Escribe el mensaje: “Where do you live?”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He asked me where I lived.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "taskCompletion": 0.85,
+          "coherence": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "writing",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 10,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-SP-01",
+      "canDoId": "RS-B1-SP-01",
+      "activityType": "guided-production",
+      "level": "B1",
+      "skill": "speaking",
+      "context": "daily-life",
+      "title": "Reported speech: Speaking",
+      "titleEs": "Estilo indirecto: Expresión oral",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Say this message indirectly: “Do you like tea?”",
+      "taskEs": "Di el mensaje: “Do you like tea?”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "She asked if I liked tea.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "fluency": 0.8,
+          "pronunciation": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "speaking",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B1-CO-01",
+      "canDoId": "RS-B1-CO-01",
+      "activityType": "interaction",
+      "level": "B1",
+      "skill": "communication",
+      "context": "daily-life",
+      "title": "Reported speech: Communication",
+      "titleEs": "Estilo indirecto: Interacción",
+      "objective": "Report statements, questions and requests. Backshift common tenses where appropriate, report wh-/yes-no questions and requests, and adjust time expressions to the reporting context.",
+      "objectiveEs": "Transmitir afirmaciones, preguntas y peticiones. Cambia tiempos verbales frecuentes cuando corresponde, transmite preguntas abiertas y de sí/no, y ajusta expresiones temporales al contexto.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Tell a partner what the speaker said: “Please wait.”",
+      "taskEs": "Cuenta el mensaje: “Please wait.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She said that...",
+          "He asked me if...",
+          "They told us to..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He asked me to wait.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "interaction": 0.8,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b1",
+          "communication",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ]
+    },
+    {
+      "id": "ACT-RS-B2-GR-01",
+      "canDoId": "RS-B2-GR-01",
+      "activityType": "controlled-practice",
+      "level": "B2",
+      "skill": "grammar",
+      "context": "daily-life",
+      "title": "Reported speech: Grammar",
+      "titleEs": "Estilo indirecto: Gramática",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Choose or write a reported version. Keep the original meaning.",
+      "instructionsEs": "Elige o escribe una versión en estilo indirecto. Conserva el sentido original.",
+      "task": "Transform “I may have made a mistake.” into reported speech: She admitted that she might have made a mistake.",
+      "taskEs": "Transforma el mensaje: “I may have made a mistake.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "She admitted that she might have made a mistake.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "communicativeUse": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "grammar",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
+    },
+    {
+      "id": "ACT-RS-B2-LI-01",
+      "canDoId": "RS-B2-LI-01",
+      "activityType": "listening-comprehension",
+      "level": "B2",
+      "skill": "listening",
+      "context": "daily-life",
+      "title": "Reported speech: Listening",
+      "titleEs": "Estilo indirecto: Escucha",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Listen to the message, then choose or say what the speaker communicated.",
+      "instructionsEs": "Escucha el mensaje y luego elige o di qué comunicó el hablante.",
+      "task": "Listen to this message and report it: “Let's meet earlier.”",
+      "taskEs": "Escucha y transmite el mensaje: “Let's meet earlier.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He suggested meeting earlier.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "gist": 0.85,
+          "details": 0.8,
+          "accuracy": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "listening",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
+    },
+    {
+      "id": "ACT-RS-B2-RE-01",
+      "canDoId": "RS-B2-RE-01",
+      "activityType": "reading-comprehension",
+      "level": "B2",
+      "skill": "reading",
+      "context": "daily-life",
+      "title": "Reported speech: Reading",
+      "titleEs": "Estilo indirecto: Lectura",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Read the direct message and compare its meaning with the reported version.",
+      "instructionsEs": "Lee el mensaje directo y compara su sentido con la versión indirecta.",
+      "task": "Read “The figures prove it.” and identify the reported version: They claimed that the figures proved it.",
+      "taskEs": "Lee e identifica el mensaje: “The figures prove it.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "They claimed that the figures proved it.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.85,
+          "details": 0.8,
+          "gist": 0.8
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "reading",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
+    },
+    {
+      "id": "ACT-RS-B2-WR-01",
+      "canDoId": "RS-B2-WR-01",
+      "activityType": "guided-production",
+      "level": "B2",
+      "skill": "writing",
+      "context": "daily-life",
+      "title": "Reported speech: Writing",
+      "titleEs": "Estilo indirecto: Escritura",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Write one or two sentences reporting this message: “I may have made a mistake.”",
+      "taskEs": "Escribe el mensaje: “I may have made a mistake.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "She admitted that she might have made a mistake.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "accuracy": 0.8,
+          "taskCompletion": 0.85,
+          "coherence": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "writing",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 10,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
+    },
+    {
+      "id": "ACT-RS-B2-SP-01",
+      "canDoId": "RS-B2-SP-01",
+      "activityType": "guided-production",
+      "level": "B2",
+      "skill": "speaking",
+      "context": "daily-life",
+      "title": "Reported speech: Speaking",
+      "titleEs": "Estilo indirecto: Expresión oral",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Say this message indirectly: “Let's meet earlier.”",
+      "taskEs": "Di el mensaje: “Let's meet earlier.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "He suggested meeting earlier.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "fluency": 0.8,
+          "pronunciation": 0.75
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "speaking",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
+    },
+    {
+      "id": "ACT-RS-B2-CO-01",
+      "canDoId": "RS-B2-CO-01",
+      "activityType": "interaction",
+      "level": "B2",
+      "skill": "communication",
+      "context": "daily-life",
+      "title": "Reported speech: Communication",
+      "titleEs": "Estilo indirecto: Interacción",
+      "objective": "Report, summarize and qualify meaning. Summarize interviews and discussions accurately; choose reporting verbs and preserve stance, uncertainty, emphasis and attribution.",
+      "objectiveEs": "Informar, resumir y matizar el mensaje. Resume entrevistas y debates con precisión; elige verbos de reporte y conserva postura, incertidumbre, énfasis y atribución.",
+      "instructions": "Produce a short report in English. Use the model only as support, not as a sentence to copy.",
+      "instructionsEs": "Produce una transmisión breve en inglés. Usa el modelo como apoyo, no como frase para copiar.",
+      "task": "Tell a partner what the speaker said: “The figures prove it.”",
+      "taskEs": "Cuenta el mensaje: “The figures prove it.”",
+      "support": {
+        "optionalSentenceStarters": [
+          "She admitted that...",
+          "He suggested + -ing...",
+          "They claimed that..."
+        ]
+      },
+      "expectedResponse": {
+        "example": "They claimed that the figures proved it.",
+        "preserveMeaning": true
+      },
+      "evidence": {
+        "dimensions": {
+          "taskCompletion": 0.85,
+          "interaction": 0.8,
+          "confidence": 0.7
+        },
+        "independent": true,
+        "confidenceRequiredForMastery": 4
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "maxPriorityCorrections": 2
+      },
+      "retry": {
+        "requiredAfterPriorityError": true,
+        "preserveOriginalTask": true
+      },
+      "metadata": {
+        "durationMinutes": 4,
+        "tags": [
+          "reported-speech",
+          "b2",
+          "communication",
+          "cefr-aligned"
+        ]
+      },
+      "evaluation": {
+        "observable": true,
+        "criteria": [
+          {
+            "id": "meaning",
+            "label": "preserves the speaker's intended meaning",
+            "type": "content-point"
+          },
+          {
+            "id": "form",
+            "label": "uses the target reporting structure for this level",
+            "type": "language-feature"
+          }
+        ],
+        "minimumCriteria": 1,
+        "minimumResponseCharacters": 1,
+        "errorMapping": "structured-error-model-v1"
+      },
+      "reviewTargets": [
+        "reported-speech",
+        "say-tell-ask",
+        "reporting-verbs"
+      ],
+      "validation": {
+        "status": "validated",
+        "reviewedBy": "HODIE internal content QA",
+        "reviewScope": "schema, answer key and progression; not official CEFR certification"
+      }
     }
   ]
 }

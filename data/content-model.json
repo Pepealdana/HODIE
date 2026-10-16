@@ -10,7 +10,8 @@
     "Feedback is actionable and bilingual when appropriate.",
     "Personal contexts increase relevance but do not reduce transfer.",
     "Content can be reused by multiple activity types.",
-    "All learner-facing activity guidance has an English version and a Spanish support translation at A2."
+    "All learner-facing activity guidance has an English version and a Spanish support translation at A2.",
+    "Advanced content can be authored and quality-checked before it is unlocked for an individual learner."
   ],
   "activitySchema": {
     "required": [
@@ -36,7 +37,7 @@
       "id": "Unique stable activity identifier.",
       "canDoId": "Primary Can-Do being practiced or assessed.",
       "activityType": "Reference to an activity type from activity-model.json.",
-      "level": "A2, A2+ or B1.",
+      "level": "A1, A2, A2+, B1 or B2; B2 activities may be authored in advance but are hidden until the evidence-based readiness gate is met.",
       "skill": "Primary HODIE skill.",
       "context": "Optional real-world context.",
       "title": "Short learner-facing title.",

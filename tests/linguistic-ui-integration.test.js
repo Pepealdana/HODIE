@@ -25,7 +25,7 @@ assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v35/);
+assert.match(worker, /hodie-shell-v36/);
 assert.match(app, /function applyConversationFirstHome\(level, targetActivity, statement\)/);
 assert.match(app, /id="conversationComposer"/);
 assert.match(app, /data-home-level/);
@@ -50,3 +50,10 @@ for (const id of ["MIC-RE-A2-90-01", "MIC-RE-A2-90-02", "MIC-PR-A2-90-01", "MIC-
 }
 
 console.log("HODIE linguistic UI integration contract: PASS");
+
+assert.match(app, /Reported speech/);
+assert.match(app, /startReportedSpeech/);
+assert.match(app, /getB2UnlockStatus/);
+
+assert.match(app, /practiceConfidence/);
+assert.match(app, /dimensionsBySkill/);
