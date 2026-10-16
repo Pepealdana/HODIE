@@ -57,3 +57,10 @@ Before merging a new automatic rule:
 - Related knowledge is displayed as a study resource, never as a confirmed diagnosis.
 - The new A1–A2 rules pass positive and negative regression cases.
 - The PWA cache version is incremented when runtime code changes.
+
+
+## October 2026 rule refinement
+
+- PRES-CONT-BASE-001 now covers a reviewed set of common dynamic verbs and uses one shared gerund transformer. The transformer avoids false doubling in forms such as feeling and opening, while retaining reviewed forms such as running, sitting and beginning.
+- PRES-CONT-FEEL-001 handles the narrow, high-confidence pattern be + feel + adjective (for example, I am feel good → I am feeling good). It preserves correct alternatives such as I feel good, I am feeling good, I am ready and I am happy.
+- A natural rephrasing such as Good, I am doing well is presented as an optional natural alternative, separate from the grammatical correction. It must not replace the learner's intended sentence silently.
