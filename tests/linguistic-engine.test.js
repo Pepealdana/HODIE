@@ -93,7 +93,7 @@ for (const valid of ["I feel good.", "I am feeling good.", "I am ready.", "I am 
 }
 
 const validDoesQuestion = analyzeLanguage("Does she work here?");
-assert.equal(validDoesQuestion.correctedText, "Does she work here.");
+assert.equal(validDoesQuestion.correctedText, "Does she work here?");
 assert.equal(validDoesQuestion.errors.some((error) => error.ruleId === "DOES-BASE-001"), false);
 
 const invalidDoesQuestion = analyzeLanguage("Does she works here?");
