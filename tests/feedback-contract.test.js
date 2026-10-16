@@ -124,6 +124,21 @@ assert.equal(clean.strengths.length, 1);
 assert.equal(clean.nextAction.kind, "self-review", "rule-based no-match must invite review rather than imply verified correctness");
 assert.ok(clean.limits.some((item) => /not a full grammar check/i.test(item)));
 
+const naturalAlternativeFeedback = createFeedbackContract({
+  activity: { id: "natural-alternative", skill: "speaking" },
+  surface: "conversation",
+  response: "Good, I am feel good.",
+  result: { errors: [{
+    ruleId: "PRES-CONT-FEEL-001",
+    type: "grammar",
+    actual: "I am feel good",
+    expected: "I am feeling good",
+    naturalAlternatives: [{ en: "Good, I'm doing well.", es: "Bien, me encuentro bien." }]
+  }] },
+  source: "rule-based"
+});
+assert.equal(naturalAlternativeFeedback.corrections[0].naturalAlternatives[0].en, "Good, I'm doing well.");
+
 const detectedIssue = createFeedbackContract({
   activity: { id: "known-error", skill: "speaking" },
   surface: "conversation",
