@@ -191,7 +191,7 @@ function analyzeLanguage(input, options = {}) {
     }],
     ["plural-agreement", /\b(my students|the students|students|my teachers|the teachers|teachers|children|people|they|we)\s+(is|has|does|works|teaches|builds|uses|likes|enjoys|goes|studies|watches|fixes|makes|plays|reads|writes|speaks|lives|needs|wants|helps|explains|creates)\b/gi,
       (m, subject, verb) => subject + " " + (PLURAL_FORMS[verb.toLowerCase()] || ({ is: "are", has: "have", does: "do" })[verb.toLowerCase()] || verb)],
-    ["third-person-singular", /\b(he|she|it|the robot|a robot|my school|the school|my student|the student)\s+(work|teach|build|use|like|enjoy|have|do|go|study|watch|fix|make|play|read|write|speak|live|need|want|help|explain|create)\b/gi,
+    ["third-person-singular", /(?<!does\s)\b(he|she|it|the robot|a robot|my school|the school|my student|the student)\s+(work|teach|build|use|like|enjoy|have|do|go|study|watch|fix|make|play|read|write|speak|live|need|want|help|explain|create)\b/gi,
       (m, subject, verb) => subject + " " + (THIRD_PERSON_FORMS[verb.toLowerCase()] || verb + "s")],
     ["work-place", /\b(work|works|worked)\s+as\s+at\s+(?:a\s+)?(school)\b/gi, (m, verb, place) => verb + " at a " + place],
     ["work-place", /\b(work|works|worked)\s+on\s+(a|the)\s+(school|company|office)\b/gi, (m, verb, article, place) => verb + " at " + article + " " + place],
