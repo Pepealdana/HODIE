@@ -539,7 +539,135 @@
       ]
     }
   ],
-  "grammarRules": [],
+  "grammarRules": [
+    {
+      "id": "GRAM-REPORTED-SPEECH-001",
+      "implementation": "reported-speech-knowledge",
+      "level": "A1-B2",
+      "category": "reported-speech",
+      "title": "Report what someone said",
+      "titleEs": "Transmitir lo que alguien dijo",
+      "explanation": "Reported speech tells another person what someone said without repeating the exact words. The form depends on the message, the reporting verb and the context. Backshift is common after a past reporting verb, but it is not automatic in every situation.",
+      "explanationEs": "El estilo indirecto permite contarle a otra persona lo que alguien dijo sin repetir exactamente sus palabras. La forma depende del mensaje, del verbo introductor y del contexto. El cambio de tiempo es frecuente después de un verbo introductor en pasado, pero no es automático en todos los casos.",
+      "examples": [
+        "Tom said hello.",
+        "Ana said (that) she was tired.",
+        "He asked me where I lived.",
+        "She asked if I could help.",
+        "They suggested meeting earlier."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "Tom said hello.",
+          "es": "Tom saludó."
+        },
+        {
+          "en": "Ana said (that) she was tired.",
+          "es": "Ana dijo que estaba cansada."
+        },
+        {
+          "en": "He asked me where I lived.",
+          "es": "Él me preguntó dónde vivía."
+        },
+        {
+          "en": "She asked if I could help.",
+          "es": "Ella preguntó si podía ayudar."
+        },
+        {
+          "en": "They suggested meeting earlier.",
+          "es": "Sugirieron reunirse más temprano."
+        }
+      ],
+      "incorrect": [
+        "He asked me where did I live.",
+        "She told that she was tired.",
+        "They suggested to meet earlier."
+      ],
+      "exceptions": [
+        "That can often be omitted after say in reported statements.",
+        "Say does not normally take an indirect object directly; tell usually needs a person.",
+        "Indirect questions use statement word order.",
+        "Tense backshift depends on reporting time and whether the information remains true or relevant.",
+        "Reporting verbs such as suggest, admit and deny take different complements."
+      ],
+      "negativeCases": [
+        {
+          "text": "She says she is tired.",
+          "reason": "Present reporting verb; no automatic backshift."
+        },
+        {
+          "text": "He asked me where I lived.",
+          "reason": "Correct indirect-question word order."
+        },
+        {
+          "text": "She told me she was tired.",
+          "reason": "Correct tell + person structure."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "Choose the accurate report: “I am tired.” (Ana said...)",
+          "promptEs": "Elige la versión correcta: “I am tired.” (Ana said...)",
+          "options": [
+            "Ana said she was tired.",
+            "Ana asked where she was."
+          ],
+          "answer": "Ana said she was tired."
+        },
+        {
+          "type": "correct",
+          "prompt": "Correct: He asked me where did I live.",
+          "promptEs": "Corrige: He asked me where did I live.",
+          "answer": "He asked me where I lived."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "communication"
+        ],
+        "activityTypes": [
+          "recognition",
+          "controlled-practice",
+          "reading-comprehension",
+          "listening-comprehension",
+          "guided-production",
+          "interaction"
+        ],
+        "tags": [
+          "reported-speech",
+          "say-tell-ask",
+          "reporting-verbs",
+          "indirect-questions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft",
+      "correctionPolicy": "explain-only-until-pattern-tested",
+      "depthProfile": {
+        "targetLevel": "A1-B2",
+        "correctionIgnoresProgression": false,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "reported speech",
+        "indirect speech",
+        "say",
+        "tell",
+        "ask",
+        "reporting verbs",
+        "backshift",
+        "reported questions",
+        "reported requests"
+      ]
+    }
+  ],
   "vocabularyEntries": [
     {
       "id": "VOC-GLOBAL-001",
