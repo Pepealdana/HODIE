@@ -1135,8 +1135,8 @@ function handleExperienceResponse(experience, stage, response) {
     </section>` : "";
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
   const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Not fully checked · Revisión parcial";
-  const correctionExamples = firstCorrection ? (firstCorrection.examples || []).slice(0, 2).map(example => "<p><strong>Example · Ejemplo:</strong> " + escapeHtml(typeof example === "string" ? example : example.en || "") + "</p>" + (typeof example === "object" && example.es ? "<p class=\\\"spanish\\\">" + escapeHtml(example.es) + "</p>" : "")).join("") : "";
-  const naturalAlternativeMarkup = firstCorrection ? (firstCorrection.naturalAlternatives || []).slice(0, 1).map(option => "<p><strong>More natural · Más natural:</strong> " + escapeHtml(option.en || "") + "</p><p class=\\\"spanish\\\">" + escapeHtml(option.es || "") + "</p>").join("") : "";
+  const correctionExamples = firstCorrection ? (firstCorrection.examples || []).slice(0, 2).map(example => '<p><strong>Example · Ejemplo:</strong> ' + escapeHtml(typeof example === "string" ? example : example.en || "") + '</p>' + (typeof example === "object" && example.es ? '<p class="spanish">' + escapeHtml(example.es) + '</p>' : "")).join("") : "";
+  const naturalAlternativeMarkup = firstCorrection ? (firstCorrection.naturalAlternatives || []).slice(0, 1).map(option => '<p><strong>More natural · Más natural:</strong> ' + escapeHtml(option.en || "") + '</p><p class="spanish">' + escapeHtml(option.es || "") + '</p>').join("") : "";
   const feedbackBody = firstCorrection
     ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>" + correctionExamples + naturalAlternativeMarkup
     : missingLabels.length
