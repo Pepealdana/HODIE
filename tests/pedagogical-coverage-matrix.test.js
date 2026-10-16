@@ -56,6 +56,10 @@ for (const level of ["A1", "A2", "B1"]) {
   }
 }
 assert.equal(b2Activities.length, 0, "B2 must remain outside the active banks until the learner passes the readiness gate");
+const b1CanDos = canDo.canDos.filter((item) => item.level === "B1");
+const coveredB1CanDos = new Set(activities.filter((item) => item.level === "B1").map((item) => item.canDoId));
+assert.ok(b1CanDos.every((item) => coveredB1CanDos.has(item.id)),
+  "Every B1 Can-Do must have at least one linked activity: " + b1CanDos.filter((item) => !coveredB1CanDos.has(item.id)).map((item) => item.id).join(", "));
 assert.ok(blueprints.categories.some((x) => x.id === "reading"), "Reading progression blueprint must remain available");
 assert.ok(blueprints.categories.some((x) => x.id === "pronunciation"), "Pronunciation progression blueprint must remain available");
 
