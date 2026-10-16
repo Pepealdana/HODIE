@@ -5117,7 +5117,11 @@
         "framework": "CEFR",
         "level": "A1"
       },
-      "answer": "I like music.",
+      "answer": [
+        "I",
+        "like",
+        "music."
+      ],
       "tokens": [
         "I",
         "like",
