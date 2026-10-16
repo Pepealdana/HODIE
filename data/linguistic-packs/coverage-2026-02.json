@@ -6112,6 +6112,182 @@
       "relatedVocabularyIds": [
         "VOC-NOUN-DEVICE"
       ]
+    },
+    {
+      "id": "REPORTED-SPEECH-SHE-AM-TIRED-001",
+      "implementation": "reported-speech-she-am-tired-001",
+      "level": "A2",
+      "category": "reported-speech",
+      "title": "Report a quoted statement with said",
+      "titleEs": "Transmite una afirmación citada con said",
+      "explanation": "When reporting this quoted statement later, said that + subject + past form is a common pattern. Pronouns change to match the person being reported.",
+      "explanationEs": "Al transmitir después esta afirmación citada, una estructura frecuente es said that + sujeto + forma de pasado. Los pronombres cambian para referirse a la persona de la que se habla.",
+      "examples": [
+        "She said that she was tired.",
+        "She said that she was ready."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She said that she was tired.",
+          "es": "Ella dijo que ella estaba cansada."
+        }
+      ],
+      "incorrect": [
+        "She said, \"I am tired.\""
+      ],
+      "exceptions": [
+        "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
+        "The reporting pronoun depends on who is speaking and who reports the message."
+      ],
+      "negativeCases": [
+        {
+          "text": "She says, \"I am tired.\"",
+          "reason": "The reporting verb is present; this tested backshift pattern does not apply."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Report: She said, \"I am tired.\"",
+          "promptEs": "Transmite la frase citada con estilo indirecto.",
+          "answer": "She said that she was tired."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-continuous",
+          "actions",
+          "now"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(She) said,?\\\\s*[\"“]I am tired\\\\.?[\"”]",
+        "flags": "gi",
+        "replacement": "$1 said that she was tired.",
+        "confidence": "high"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "REPORTED-SPEECH-SHE-AM-TIRED-001",
+        "reported speech",
+        "estilo indirecto",
+        "said that",
+        "tired"
+      ]
+    },
+    {
+      "id": "REPORTED-SPEECH-HE-AM-BUSY-001",
+      "implementation": "reported-speech-he-am-busy-001",
+      "level": "A2",
+      "category": "reported-speech",
+      "title": "Report a quoted statement with said",
+      "titleEs": "Transmite una afirmación citada con said",
+      "explanation": "When reporting this quoted statement later, said that + subject + past form is a common pattern. Pronouns change to match the person being reported.",
+      "explanationEs": "Al transmitir después esta afirmación citada, una estructura frecuente es said that + sujeto + forma de pasado. Los pronombres cambian para referirse a la persona de la que se habla.",
+      "examples": [
+        "He said that he was busy.",
+        "He said that he was ready."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He said that he was busy.",
+          "es": "Él dijo que él estaba ocupado."
+        }
+      ],
+      "incorrect": [
+        "He said, \"I am busy.\""
+      ],
+      "exceptions": [
+        "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
+        "The reporting pronoun depends on who is speaking and who reports the message."
+      ],
+      "negativeCases": [
+        {
+          "text": "He says, \"I am busy.\"",
+          "reason": "The reporting verb is present; this tested backshift pattern does not apply."
+        }
+      ],
+      "practice": [
+        {
+          "type": "correct",
+          "prompt": "Report: He said, \"I am busy.\"",
+          "promptEs": "Transmite la frase citada con estilo indirecto.",
+          "answer": "He said that he was busy."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-continuous",
+          "actions",
+          "now"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\\\b(He) said,?\\\\s*[\"“]I am busy\\\\.?[\"”]",
+        "flags": "gi",
+        "replacement": "$1 said that he was busy.",
+        "confidence": "high"
+      },
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": true
+      },
+      "correctionPolicy": "automatic-tested",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "REPORTED-SPEECH-HE-AM-BUSY-001",
+        "reported speech",
+        "estilo indirecto",
+        "said that",
+        "busy"
+      ]
     }
   ],
   "vocabularyEntries": [
@@ -12416,6 +12592,28 @@
       "text": "Some information is available online.",
       "expectRules": [],
       "expectCorrection": "Some information is available online."
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-SHE-TIRED-001",
+      "text": "She said, \"I am tired.\"",
+      "expectRules": [
+        "REPORTED-SPEECH-SHE-AM-TIRED-001"
+      ],
+      "expectCorrection": "She said that she was tired."
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-HE-BUSY-001",
+      "text": "He said, \"I am busy.\"",
+      "expectRules": [
+        "REPORTED-SPEECH-HE-AM-BUSY-001"
+      ],
+      "expectCorrection": "He said that he was busy."
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-VALID-001",
+      "text": "She says, \"I am tired.\"",
+      "expectRules": [],
+      "expectCorrection": "She says, \"I am tired.\""
     }
   ]
 }
