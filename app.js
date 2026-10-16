@@ -403,12 +403,12 @@ function renderPracticeHome() {
       </details>
 
       <section class="activity-catalog card" id="activityCatalog" aria-label="Activity catalogue">
-        <p class="kicker">ACTIVITY LIBRARY · A1–B1</p>
+        <p class="kicker">ACTIVITY LIBRARY · A1–B2</p>
         <h3>Explore activities</h3>
         <p class="spanish">Explora las actividades disponibles y abre una directamente.</p>
         <div class="catalog-filters">
           <label for="catalogLevel">Level / Nivel</label>
-          <select id="catalogLevel"><option value="A1">A1 · Foundation</option><option value="A2" selected>A2 · Elementary</option><option value="B1">B1 · Intermediate</option></select>
+          <select id="catalogLevel"><option value="A1">A1 · Foundation</option><option value="A2" selected>A2 · Elementary</option><option value="B1">B1 · Intermediate</option><option value="B2" disabled>B2 · Locked</option></select>
           <label for="catalogSkill">Skill / Habilidad</label>
           <select id="catalogSkill"><option value="all">All skills · Todas</option><option value="reading">Reading · Leer</option><option value="pronunciation">Pronunciation · Pronunciación</option><option value="communication">Communication · Comunicación</option><option value="speaking">Speaking · Hablar</option><option value="listening">Listening · Escuchar</option><option value="writing">Writing · Escribir</option><option value="grammar">Grammar · Gramática</option><option value="vocabulary">Vocabulary · Vocabulario</option></select>
         </div>
@@ -644,7 +644,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     '<section class="level-picker" aria-label="Choose your English level">' +
       '<div class="level-picker-heading"><span class="kicker">' + (isBeginner ? "Tu nivel de inglés" : "Your English level") + '</span><span class="level-picker-note">' + (isBeginner ? "Puedes cambiarlo cuando quieras." : "Change it whenever you need.") + '</span></div>' +
       '<div class="level-options" role="group" aria-label="English level">' +
-        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? 'disabled aria-disabled="true" title="B2 unlocks after consistent B1 evidence across skills."' : 'aria-pressed="' + String(item === level) + '"' ) + '>' + item + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") ++
+        ["A1", "A2", "B1", "B2"].map((item) => '<button class="level-option ' + (item === level ? "is-selected" : "") + '" data-home-level="' + item + '" type="button" ' + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? 'disabled aria-disabled="true" title="B2 unlocks after consistent B1 evidence across skills."' : 'aria-pressed="' + String(item === level) + '"' ) + '>' + item + (item === "B2" && !getB2UnlockStatus(matrix, profile).unlocked ? '<span class="level-lock" aria-hidden="true">⌑</span>' : "") + '</button>').join("") +
       '</div>' +
     '</section>' +
     '<section class="conversation-start" aria-labelledby="conversationStartTitle">' +
