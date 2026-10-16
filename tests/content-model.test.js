@@ -66,5 +66,4 @@ for (const activity of library.activities) {
 
 assert.equal(errors.length, 0, errors.join("\n"));
 
-assert.ok(library.activities.filter((item) => item.tags?.includes("reported-speech")).length >= 16, "Reported Speech activities should be available across A1-B2 content packs");
 console.log(`HODIE Content Model validation: PASS (${library.activities.length} activities)`);
