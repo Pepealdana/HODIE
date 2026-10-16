@@ -46,7 +46,7 @@ function evaluateB2Unlock(matrix, profile = {}, policy = B2_POLICY) {
       evidenceScore(item) >= 0.75;
   });
   const transferCanDos = new Set(transferEvidence.map((item) => item.canDoId));
-  const transferContexts = new Set(transferEvidence.map((item) => item.contextId || "default");
+  const transferContexts = new Set(transferEvidence.map((item) => item.contextId || "default"));
   const transferReady = transferCanDos.size >= policy.requiredTransferCanDos &&
     transferContexts.size >= policy.requiredTransferContexts;
 
