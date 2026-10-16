@@ -931,11 +931,6 @@ function getConversationScaffold(experience, stage, level) {
 
   const stage = experience.stages[experienceSession.index];
   const learnerLevel = session?.target?.level || "A2";
-  const writingGuide = learnerLevel === "A1"
-    ? { structure: "Greeting + I am... + one simple question.", structureEs: "Saludo + I am... (soy/me llamo...) + una pregunta sencilla. Usa frases cortas.", example: "Hello! My name is Peters. How are you?", exampleEs: "¡Hola! Me llamo Peters. ¿Cómo estás?" }
-    : learnerLevel === "B1"
-      ? { structure: "Main idea + reason (because/although) + a specific example.", structureEs: "Idea principal + razón (because = porque / although = aunque) + un ejemplo concreto. Conecta las ideas y explica por qué.", example: "I enjoy teaching technology because students learn by creating projects. For example, we build simple robots.", exampleEs: "Disfruto enseñar tecnología porque los estudiantes aprenden creando proyectos. Por ejemplo, construimos robots sencillos." }
-      : { structure: "I... + detail + because... / For example,...", structureEs: "Sujeto + verbo + detalle + because (porque) o for example (por ejemplo). Escribe una idea y amplíala.", example: "I teach technology. I enjoy robotics because I can create projects with my students.", exampleEs: "Enseño tecnología. Disfruto la robótica porque puedo crear proyectos con mis estudiantes." };
   app.innerHTML = `
     <section class="card experience-session">
       <div class="practice-nav">
