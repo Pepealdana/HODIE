@@ -235,5 +235,37 @@
     },
     "overdueRiskMultiplier": 2,
     "rule": "Do not downgrade mastery merely because a review is overdue. Downgrade only when new evidence demonstrates deterioration."
+  },
+  "b2Unlock": {
+    "gateId": "B2-READINESS-V1",
+    "description": "Unlock B2 only after the learner demonstrates foundational A1 retention, A2/A2+/B1 readiness, broad B1 Can-Do mastery and transfer to new contexts. Activity completion count alone is insufficient.",
+    "a1CoverageThreshold": 0.7,
+    "b1CoverageThreshold": 0.75,
+    "coreSkills": [
+      "speaking",
+      "listening",
+      "reading",
+      "writing",
+      "communication"
+    ],
+    "coreSkillCoverageThreshold": 0.6,
+    "requiredIndependentTransferCanDos": 2,
+    "requiredIndependentTransferContexts": 2,
+    "evidenceRequirements": {
+      "independent": true,
+      "minimumConfidence": 4,
+      "minimumDimensionScore": 0.75,
+      "differentContextsForCanDoMastery": 2,
+      "canDoMasteryStatuses": [
+        "consolidated",
+        "transferred"
+      ]
+    },
+    "dependencies": [
+      "A2 readiness",
+      "A2+ readiness",
+      "B1 readiness"
+    ],
+    "certification": false
   }
 }
