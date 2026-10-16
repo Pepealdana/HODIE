@@ -6288,6 +6288,97 @@
         "said that",
         "busy"
       ]
+    },
+    {
+      "id": "REPORTED-SPEECH-QUESTIONS-001",
+      "implementation": "reported-speech-indirect-questions",
+      "level": "B1",
+      "category": "reported-speech",
+      "title": "Report questions with statement word order",
+      "titleEs": "Transmite preguntas con orden de afirmación",
+      "explanation": "In reported questions, keep statement word order after the question word: subject + verb. Do not use do/does/did inversion.",
+      "explanationEs": "En las preguntas indirectas, conserva el orden de afirmación después de la palabra interrogativa: sujeto + verbo. No uses la inversión con do/does/did.",
+      "examples": [
+        "He asked me where I lived.",
+        "She asked what time the train left."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He asked me where I lived.",
+          "es": "Él me preguntó dónde vivía."
+        },
+        {
+          "en": "She asked what time the train left.",
+          "es": "Ella preguntó a qué hora salía el tren."
+        }
+      ],
+      "incorrect": [
+        "He asked me where did I live.",
+        "She asked what time did the train leave."
+      ],
+      "exceptions": [
+        "Yes/no reported questions commonly use if or whether.",
+        "This is a learning resource only until a safe, context-aware automatic matcher is implemented."
+      ],
+      "negativeCases": [
+        {
+          "text": "Where do you live?",
+          "reason": "This is a direct question, not a reported question."
+        }
+      ],
+      "practice": [
+        {
+          "type": "choose",
+          "prompt": "Choose the reported question.",
+          "promptEs": "Elige la pregunta indirecta.",
+          "options": [
+            "He asked where I lived.",
+            "He asked where did I live."
+          ],
+          "answer": "He asked where I lived."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "writing",
+          "speaking",
+          "reading"
+        ],
+        "activityTypes": [
+          "complete",
+          "choose",
+          "mini-production",
+          "conversation",
+          "listening"
+        ],
+        "tags": [
+          "present-continuous",
+          "actions",
+          "now"
+        ]
+      },
+      "severity": "medium",
+      "priority": "medium",
+      "status": "draft",
+      "knowledgeAccess": {
+        "scope": "global",
+        "searchable": true,
+        "activityIndependent": true,
+        "availableForCorrection": false
+      },
+      "correctionPolicy": "feedback-only",
+      "depthProfile": {
+        "targetLevel": "A2",
+        "correctionIgnoresProgression": true,
+        "stageSet": "cefr-depth-v1"
+      },
+      "searchTerms": [
+        "reported speech",
+        "reported questions",
+        "indirect questions",
+        "estilo indirecto",
+        "preguntas indirectas"
+      ]
     }
   ],
   "vocabularyEntries": [
