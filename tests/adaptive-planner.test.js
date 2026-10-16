@@ -217,4 +217,15 @@ console.log("HODIE Adaptive Planner v2 progression/retention: PASS");
  assert.ok(selectableB1.length>0,"Manual level choice must permit a diagnostic target without claiming mastery");
  assert.ok(selectableB1.every(item=>item.canDo.level==="B1"));
 }
-\n{\n  const explicitB1 = selectNextActivityTarget(matrix, library, { evidence: [], reviews: [] }, { levels: ["B1"], allowUnmetPrerequisites: true, now });\n  assert.ok(explicitB1, "An explicitly selected level should offer practice even before prerequisite mastery.");\n  assert.equal(explicitB1.level, "B1");\n}\n\n{\n  const explicitA1 = selectNextActivityTarget(matrix, library, { evidence: [], reviews: [] }, { levels: ["A1"], allowUnmetPrerequisites: true, now });\n  assert.ok(explicitA1, "A1 should have at least one content-backed learning target.");\n  assert.equal(explicitA1.level, "A1");\n}
+
+{
+  const explicitB1 = selectNextActivityTarget(matrix, library, { evidence: [], reviews: [] }, { levels: ["B1"], allowUnmetPrerequisites: true, now });
+  assert.ok(explicitB1, "An explicitly selected level should offer practice even before prerequisite mastery.");
+  assert.equal(explicitB1.level, "B1");
+}
+
+{
+  const explicitA1 = selectNextActivityTarget(matrix, library, { evidence: [], reviews: [] }, { levels: ["A1"], allowUnmetPrerequisites: true, now });
+  assert.ok(explicitA1, "A1 should have at least one content-backed learning target.");
+  assert.equal(explicitA1.level, "A1");
+}
