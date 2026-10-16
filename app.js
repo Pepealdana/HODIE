@@ -955,12 +955,7 @@ function getConversationScaffold(experience, stage, level) {
         <p class="spanish">${escapeHtml(stage.promptEs)}</p>
       </div>
 
-      <section class="conversation-writing-guide" aria-labelledby="writingGuideTitle">
-        <h3 id="writingGuideTitle">Build your answer · Construye tu respuesta</h3>
-        <p class="guide-structure"><strong>English structure:</strong> ${escapeHtml(writingGuide.structure)}</p>
-        <p class="spanish"><strong>Estructura en español:</strong> ${escapeHtml(writingGuide.structureEs)}</p>
-        <div class="guide-example"><p><strong>Example · Ejemplo:</strong> ${escapeHtml(writingGuide.example)}</p><p class="spanish">${escapeHtml(writingGuide.exampleEs)}</p></div>
-      </section>
+      ${getConversationScaffold(experience, stage, learnerLevel)}
       <details class="learning-hints">
         <summary>Need more help? <span class="spanish">¿Necesitas más ayuda?</span></summary>
         <div class="hint-content">
@@ -1140,8 +1135,8 @@ function handleExperienceResponse(experience, stage, response) {
     </section>` : "";
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
   const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Not fully checked · Revisión parcial";
-  const feedbackBody = firstCorrection
-    ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>"
+  const correctionExamples = firstCorrection ? (firstCorrection.examples || []).slice(0, 2).map(example => "<p><strong>Example · Ejemplo:</strong> " + escapeHtml(typeof example === "string" ? example : example.en || "") + "</p>" + (typeof example === "object" && example.es ? "<p class=\\\"spanish\\\">" + escapeHtml(example.es) + "</p>" : "")).join("") : "";\n  const feedbackBody = firstCorrection
+    ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>" + correctionExamples
     : missingLabels.length
       ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
       : "<p>No known rule matched this response. HODIE has not verified that every sentence is correct. Review the transcript and edit any word that does not express what you meant.</p><p class=\"spanish\">Ninguna regla conocida coincidió con esta respuesta. HODIE no ha verificado que todas las frases sean correctas. Revisa la transcripción y edita las palabras que no expresen lo que querías decir.</p>";
