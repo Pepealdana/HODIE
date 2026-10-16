@@ -51,4 +51,4 @@ assert.match(app, /data-catalog-activity/);
 assert.match(app, /function startPractice\(mode, activityId = null\)/);
 assert.match(css, /\.catalog-results/);
 console.log("HODIE visible activity catalogue contract: PASS");
-\nassert.match(app, /function getConversationScaffold\\(/);\nassert.match(app, /id="liveWritingCoach"/);\nassert.match(app, /maxCorrections: 4/);\n
+\nassert.match(app, /function getConversationScaffold\\(/);\nassert.match(app, /id="liveWritingCoach"/);\nassert.match(app, /maxCorrections: 4/);
