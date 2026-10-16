@@ -81,9 +81,5 @@ assert.equal(fs.existsSync(path.join(root, "assets/icons/icon-light-512.png")), 
 
 console.log("HODIE PWA contract: PASS");
 // Cache version assertions must track service-worker invalidations.
-
-assert.match(worker, /hodie-shell-v36/);
-assert.doesNotMatch(worker, /hodie-shell-v35/);
-
 assert.match(worker, /hodie-shell-v36/);
 assert.doesNotMatch(worker, /hodie-shell-v35/);
