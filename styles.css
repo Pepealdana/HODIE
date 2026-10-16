@@ -1093,3 +1093,11 @@ html[data-theme="dark"] body { background: #101827; }
 
 .b2-unlock-note { margin:10px 0 0; color:var(--muted); font-size:.86rem; line-height:1.5; }
 [data-theme="dark"] .b2-unlock-note { color:#b8c2d5; }
+
+.b2-readiness-details { margin-top:8px; font-size:.84rem; }
+.b2-readiness-details summary { cursor:pointer; color:var(--accent); font-weight:600; }
+.b2-readiness-details ul { list-style:none; margin:8px 0 0; padding:0; display:grid; gap:6px; }
+.b2-readiness-details li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:2px 10px; padding:7px 9px; border:1px solid var(--line); border-radius:9px; }
+.b2-readiness-details li strong { text-align:right; }
+.b2-readiness-details li small { grid-column:1/-1; color:var(--muted); }
+[data-theme="dark"] .b2-readiness-details li { border-color:#334155; }
