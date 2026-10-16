@@ -1009,13 +1009,36 @@ function renderLiveWritingCoach(experience, stage, response) {
   const output = document.querySelector("#liveWritingCoach");
   if (!output) return;
   const text = String(response || "").trim();
-  if (text.length < 3) { output.innerHTML = '<p>Write a little more to see guidance.</p><p class="spanish">Escribe un poco más para ver sugerencias.</p>'; return; }
-  const languageReview = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 2 });
+  if (text.length < 3) {
+    output.innerHTML = '<p>Write a little more to see guidance.</p><p class="spanish">Escribe un poco más para ver sugerencias.</p>';
+    return;
+  }
+  const languageReview = analyzeLanguage(text, { vocabulary: linguisticLibrary?.vocabularyEntries || [], maxCorrections: 4 });
   const turnReview = evaluateExperienceTurn(experience, stage, text);
-  const corrections = languageReview.errors.slice(0, 2), missing = (turnReview.missing || []).slice(0, 2), sections = [];
-  if (corrections.length) sections.push('<div class="live-coach-section"><strong>Possible correction · Posible corrección</strong><p class="live-coach-comparison"><span>' + escapeHtml(text) + '</span><span aria-hidden="true"> → </span><strong>' + escapeHtml(languageReview.correctedText) + '</strong></p>' + corrections.map(item => '<p>' + escapeHtml(item.message || 'Review this language pattern.') + '</p><p class="spanish">' + escapeHtml(item.messageEs || 'Revisa este patrón de inglés.') + '</p>').join('') + '</div>');
-  if (missing.length) sections.push('<div class="live-coach-section"><strong>What to add · Qué hace falta</strong>' + missing.map(item => '<p>' + escapeHtml(item.label || item.id) + '</p><p class="spanish">' + escapeHtml(item.missingMessageEs || 'Incluye esta información para responder mejor a la pregunta.') + '</p>').join('') + '</div>');
-  if (!sections.length) sections.push('<div class="live-coach-section"><strong>No known issue detected yet · No se detecta un problema conocido por ahora</strong><p>Your sentence may still contain errors that HODIE does not recognize.</p><p class="spanish">Tu oración aún podría tener errores que HODIE no reconoce. Esta revisión no garantiza que todo esté correcto.</p></div>');
+  const corrections = languageReview.errors.slice(0, 4);
+  const missing = (turnReview.missing || []).slice(0, 2);
+  const sections = [];
+  if (corrections.length) {
+    const correctionMarkup = corrections.map((item) => {
+      const example = Array.isArray(item.examples) ? item.examples[0] : "";
+      const exampleText = typeof example === "string" ? example : (example?.en || "");
+      const exampleEs = typeof example === "object" && example ? example.es || "" : "";
+      const exampleMarkup = exampleText
+        ? '<p><strong>Example · Ejemplo:</strong> ' + escapeHtml(exampleText) + '</p>' + (exampleEs ? '<p class="spanish">' + escapeHtml(exampleEs) + '</p>' : '')
+        : "";
+      const naturalMarkup = (item.naturalAlternatives || []).slice(0, 1).map((option) =>
+        '<p><strong>More natural · Más natural:</strong> ' + escapeHtml(option.en || "") + '</p><p class="spanish">' + escapeHtml(option.es || "") + '</p>'
+      ).join("");
+      return '<div class="live-coach-item"><p><strong>' + escapeHtml(item.actual || "") + ' → ' + escapeHtml(item.expected || item.correction || "") + '</strong></p><p>' + escapeHtml(item.message || "Review this language pattern.") + '</p><p class="spanish">' + escapeHtml(item.messageEs || "Revisa este patrón de inglés.") + '</p>' + exampleMarkup + naturalMarkup + '</div>';
+    }).join("");
+    sections.push('<div class="live-coach-section"><strong>Possible correction · Posible corrección</strong><p class="live-coach-comparison"><span>' + escapeHtml(text) + '</span><span aria-hidden="true"> → </span><strong>' + escapeHtml(languageReview.correctedText) + '</strong></p>' + correctionMarkup + '</div>');
+  }
+  if (missing.length) {
+    sections.push('<div class="live-coach-section"><strong>What to add · Qué hace falta</strong>' + missing.map(item => '<p>' + escapeHtml(item.label || item.id) + '</p><p class="spanish">' + escapeHtml(item.missingMessageEs || 'Incluye esta información para responder mejor a la pregunta.') + '</p>').join('') + '</div>');
+  }
+  if (!sections.length) {
+    sections.push('<div class="live-coach-section"><strong>No known issue detected yet · No se detecta un problema conocido por ahora</strong><p>Your sentence may still contain errors that HODIE does not recognize.</p><p class="spanish">Tu oración aún podría tener errores que HODIE no reconoce. Esta revisión no garantiza que todo esté correcto.</p></div>');
+  }
   output.innerHTML = sections.join('');
 }
 
@@ -1088,8 +1111,10 @@ function handleExperienceResponse(experience, stage, response) {
     </section>` : "";
   const inlineCorrection = languageNotes.length && result.correctedText ? renderInlineComparison(response, result.correctedText) : "";
   const feedbackTitle = languageNotes.length ? "One correction · Una corrección" : missingLabels.length ? "Add one detail · Añade un detalle" : "Not fully checked · Revisión parcial";
+  const correctionExamples = firstCorrection ? (firstCorrection.examples || []).slice(0, 2).map(example => '<p><strong>Example · Ejemplo:</strong> ' + escapeHtml(typeof example === "string" ? example : example.en || "") + '</p>' + (typeof example === "object" && example.es ? '<p class="spanish">' + escapeHtml(example.es) + '</p>' : "")).join("") : "";
+  const naturalAlternativeMarkup = firstCorrection ? (firstCorrection.naturalAlternatives || []).slice(0, 1).map(option => '<p><strong>More natural · Más natural:</strong> ' + escapeHtml(option.en || "") + '</p><p class="spanish">' + escapeHtml(option.es || "") + '</p>').join("") : "";
   const feedbackBody = firstCorrection
-    ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>"
+    ? "<p>" + escapeHtml(firstCorrection.message) + "</p><p class=\"spanish\">" + escapeHtml(firstCorrection.messageEs || "") + "</p>" + correctionExamples + naturalAlternativeMarkup
     : missingLabels.length
       ? "<p>Try to include: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p><p class=\"spanish\">Intenta incluir: <strong>" + escapeHtml(missingLabels[0]) + "</strong>.</p>"
       : "<p>No known rule matched this response. HODIE has not verified that every sentence is correct. Review the transcript and edit any word that does not express what you meant.</p><p class=\"spanish\">Ninguna regla conocida coincidió con esta respuesta. HODIE no ha verificado que todas las frases sean correctas. Revisa la transcripción y edita las palabras que no expresen lo que querías decir.</p>";
