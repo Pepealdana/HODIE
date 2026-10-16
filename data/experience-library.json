@@ -425,6 +425,247 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EXP-CONV-DAILY-A1-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Everyday conversation",
+      "titleEs": "Conversación cotidiana",
+      "description": "Practise everyday topics such as routines, food, free time, places and plans.",
+      "descriptionEs": "Practica temas cotidianos como rutinas, comida, tiempo libre, lugares y planes.",
+      "levels": [
+        "A1",
+        "A2",
+        "A2+",
+        "B1"
+      ],
+      "contexts": [
+        "daily-life",
+        "personal",
+        "travel",
+        "food",
+        "hobbies",
+        "family",
+        "community"
+      ],
+      "correctionPolicy": "live-and-after-turn",
+      "evidencePolicy": "practice-only",
+      "stages": [
+        {
+          "id": "d1",
+          "title": "Start with your day",
+          "titleEs": "Empieza por tu día",
+          "prompt": "What do you usually do in the morning?",
+          "promptEs": "¿Qué haces normalmente por la mañana?",
+          "criteria": [
+            {
+              "id": "routine",
+              "label": "Mention one routine or daily activity",
+              "patterns": [
+                "\\\\b(i usually|i often|i always|i get up|i have|i go|i start)\\\\b"
+              ],
+              "missingMessage": "Mention one thing you usually do.",
+              "missingMessageEs": "Menciona algo que haces normalmente."
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "title": "Talk about preferences",
+          "titleEs": "Habla de tus preferencias",
+          "prompt": "What do you like doing in your free time?",
+          "promptEs": "¿Qué te gusta hacer en tu tiempo libre?",
+          "criteria": [
+            {
+              "id": "preference",
+              "label": "Express a preference or interest",
+              "patterns": [
+                "\\\\b(i like|i love|i enjoy|i prefer|i don't like)\\\\b"
+              ],
+              "missingMessage": "Say what you like or prefer.",
+              "missingMessageEs": "Di qué te gusta o qué prefieres."
+            }
+          ]
+        },
+        {
+          "id": "d3",
+          "title": "Describe a place",
+          "titleEs": "Describe un lugar",
+          "prompt": "Tell me about a place you like to visit.",
+          "promptEs": "Háblame de un lugar que te gusta visitar.",
+          "criteria": [
+            {
+              "id": "place",
+              "label": "Name or describe a place",
+              "patterns": [
+                "\\\\b(place|park|city|town|home|restaurant|beach|library|visit|there is|there are)\\\\b"
+              ],
+              "missingMessage": "Name a place and add one detail.",
+              "missingMessageEs": "Nombra un lugar y añade un detalle."
+            }
+          ]
+        },
+        {
+          "id": "d4",
+          "title": "Explain a choice",
+          "titleEs": "Explica una elección",
+          "prompt": "Would you rather stay at home or go out? Why?",
+          "promptEs": "¿Preferirías quedarte en casa o salir? ¿Por qué?",
+          "criteria": [
+            {
+              "id": "choice",
+              "label": "Choose an option and give a reason",
+              "patterns": [
+                "\\\\b(i prefer|i would rather|because|i like|i think)\\\\b"
+              ],
+              "missingMessage": "Choose one option and give a reason.",
+              "missingMessageEs": "Elige una opción y da una razón."
+            }
+          ]
+        },
+        {
+          "id": "d5",
+          "title": "Ask a follow-up question",
+          "titleEs": "Haz una pregunta de seguimiento",
+          "prompt": "Ask me one question about my free time.",
+          "promptEs": "Hazme una pregunta sobre mi tiempo libre.",
+          "criteria": [
+            {
+              "id": "question",
+              "label": "Ask a relevant question",
+              "patterns": [
+                "\\\\?",
+                "\\\\b(what|where|when|why|how|do you|can you)\\\\b"
+              ],
+              "missingMessage": "Ask one question about free time.",
+              "missingMessageEs": "Haz una pregunta sobre el tiempo libre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EXP-CONV-IDEAS-B1-01",
+      "kind": "conversation",
+      "mode": "guided-open",
+      "title": "Opinions and experiences",
+      "titleEs": "Opiniones y experiencias",
+      "description": "Develop ideas, explain reasons, describe experiences and ask follow-up questions.",
+      "descriptionEs": "Desarrolla ideas, explica razones, describe experiencias y formula preguntas de seguimiento.",
+      "levels": [
+        "A2",
+        "A2+",
+        "B1"
+      ],
+      "contexts": [
+        "personal",
+        "community",
+        "education",
+        "work",
+        "travel",
+        "culture",
+        "technology",
+        "environment",
+        "health",
+        "hobbies",
+        "general"
+      ],
+      "correctionPolicy": "live-and-after-turn",
+      "evidencePolicy": "practice-only",
+      "stages": [
+        {
+          "id": "o1",
+          "title": "Share an opinion",
+          "titleEs": "Comparte una opinión",
+          "prompt": "What is something you think is important in everyday life?",
+          "promptEs": "¿Qué consideras importante en la vida cotidiana?",
+          "criteria": [
+            {
+              "id": "opinion",
+              "label": "State an opinion or belief",
+              "patterns": [
+                "\\\\b(i think|i believe|in my opinion|i feel)\\\\b"
+              ],
+              "missingMessage": "State what you think and why.",
+              "missingMessageEs": "Di qué piensas y por qué."
+            }
+          ]
+        },
+        {
+          "id": "o2",
+          "title": "Support your idea",
+          "titleEs": "Apoya tu idea",
+          "prompt": "Why is it important to you? Give a reason or example.",
+          "promptEs": "¿Por qué es importante para ti? Da una razón o un ejemplo.",
+          "criteria": [
+            {
+              "id": "reason",
+              "label": "Give a reason or example",
+              "patterns": [
+                "\\\\b(because|for example|for instance|one reason|such as)\\\\b"
+              ],
+              "missingMessage": "Support your idea with a reason or example.",
+              "missingMessageEs": "Apoya tu idea con una razón o un ejemplo."
+            }
+          ]
+        },
+        {
+          "id": "o3",
+          "title": "Describe an experience",
+          "titleEs": "Describe una experiencia",
+          "prompt": "Tell me about a time you learned something useful.",
+          "promptEs": "Háblame de una ocasión en que aprendiste algo útil.",
+          "criteria": [
+            {
+              "id": "experience",
+              "label": "Describe a past event or experience",
+              "patterns": [
+                "\\\\b(i learned|i learnt|i tried|i worked|i went|i made|i did|last|when i)\\\\b"
+              ],
+              "missingMessage": "Describe one experience in the past.",
+              "missingMessageEs": "Describe una experiencia pasada."
+            }
+          ]
+        },
+        {
+          "id": "o4",
+          "title": "Consider another view",
+          "titleEs": "Considera otro punto de vista",
+          "prompt": "Can you think of a different point of view?",
+          "promptEs": "¿Puedes pensar en un punto de vista diferente?",
+          "criteria": [
+            {
+              "id": "contrast",
+              "label": "Introduce a different or contrasting view",
+              "patterns": [
+                "\\\\b(however|although|but|on the other hand|some people)\\\\b"
+              ],
+              "missingMessage": "Mention a different point of view or a contrast.",
+              "missingMessageEs": "Menciona otro punto de vista o una idea opuesta."
+            }
+          ]
+        },
+        {
+          "id": "o5",
+          "title": "Keep the discussion going",
+          "titleEs": "Continúa la conversación",
+          "prompt": "Ask me a follow-up question about my opinion.",
+          "promptEs": "Hazme una pregunta de seguimiento sobre mi opinión.",
+          "criteria": [
+            {
+              "id": "follow-up",
+              "label": "Ask a relevant follow-up question",
+              "patterns": [
+                "\\\\?",
+                "\\\\b(why|how|what|could you|do you think)\\\\b"
+              ],
+              "missingMessage": "Ask one follow-up question.",
+              "missingMessageEs": "Haz una pregunta de seguimiento."
+            }
+          ]
+        }
+      ]
     }
   ]
-}
+}\n
