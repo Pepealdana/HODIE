@@ -14,6 +14,7 @@ function normalizeCorrection(item = {}) {
     message: item.message || item.feedback || "",
     messageEs: item.messageEs || item.feedbackEs || "",
     examples: Array.isArray(item.examples) ? item.examples : [],
+    naturalAlternatives: Array.isArray(item.naturalAlternatives) ? item.naturalAlternatives : [],
     priority: item.priority || item.severity || "medium",
     retry: item.retry !== false
   };
