@@ -88,7 +88,7 @@ for (const [input, expected] of [
 ]) {
   assert.equal(analyzeLanguage(input).correctedText, expected, input);
 }
-for (const valid of ["I feel good.", "I am feeling good.", "I am ready.", "I know the answer.", "I like this song.", "I am happy."]) {
+for (const valid of ["I feel good.", "I am feeling good.", "I am ready.", "I am open to new ideas.", "I am clean.", "I know the answer.", "I like this song.", "I am happy."]) {
   assert.equal(analyzeLanguage(valid).errors.length, 0, valid + " must remain valid");
 }
 
