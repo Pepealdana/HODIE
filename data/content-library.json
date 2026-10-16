@@ -1062,7 +1062,7 @@
       "canDoId": "GR-RS-A1-01",
       "activityType": "recognition",
       "level": "A1",
-      "skill": "reading",
+      "skill": "communication",
       "context": "everyday-life",
       "title": "Pass on a short message",
       "objective": "Read a short greeting or message and tell another person its basic meaning.",
@@ -1077,8 +1077,8 @@
       "evidence": {
         "dimensions": {
           "taskCompletion": 0.85,
-          "accuracy": 0.8,
-          "details": 0.8,
+          "interaction": 0.8,
+          "repair": 0.7,
           "confidence": 0.7
         },
         "independent": false,
@@ -1142,7 +1142,7 @@
       "canDoId": "GR-RS-A2-01",
       "activityType": "guided-production",
       "level": "A2",
-      "skill": "writing",
+      "skill": "communication",
       "context": "everyday-life",
       "title": "Report a familiar message",
       "objective": "Report a familiar person's message in one or two sentences.",
@@ -1157,8 +1157,8 @@
       "evidence": {
         "dimensions": {
           "taskCompletion": 0.85,
-          "accuracy": 0.8,
-          "details": 0.8,
+          "interaction": 0.8,
+          "repair": 0.7,
           "confidence": 0.7
         },
         "independent": false,
@@ -1238,8 +1238,8 @@
       "evidence": {
         "dimensions": {
           "taskCompletion": 0.85,
-          "accuracy": 0.8,
-          "details": 0.8,
+          "interaction": 0.8,
+          "repair": 0.7,
           "confidence": 0.7
         },
         "independent": false,
@@ -1303,7 +1303,7 @@
       "canDoId": "GR-RS-B2-01",
       "activityType": "integrated-task",
       "level": "B2",
-      "skill": "writing",
+      "skill": "communication",
       "context": "everyday-life",
       "title": "Summarise a nuanced discussion",
       "objective": "Summarise two viewpoints and preserve the original speakers' stance and uncertainty.",
@@ -1319,8 +1319,8 @@
       "evidence": {
         "dimensions": {
           "taskCompletion": 0.85,
-          "accuracy": 0.8,
-          "details": 0.8,
+          "interaction": 0.8,
+          "repair": 0.7,
           "confidence": 0.7
         },
         "independent": true,
