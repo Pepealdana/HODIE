@@ -402,13 +402,13 @@ function renderPracticeHome() {
       </details>
 
       <section class="activity-catalog card" id="activityCatalog" aria-label="Activity catalogue">
-        <p class="kicker">ACTIVITY LIBRARY · A1–B1</p>
+        <p class="kicker">ACTIVITY LIBRARY · A1–B2</p>
         <h3>Explore activities</h3>
         <p class="spanish">Explora las actividades disponibles y abre una directamente.</p>
         <div class="catalog-filters">
           <label for="catalogLevel">Level / Nivel</label>
-          <select id="catalogLevel"><option value="A1">A1 · Foundation</option><option value="A2" selected>A2 · Elementary</option><option value="B1">B1 · Intermediate</option></select>
-          <label for="catalogSkill">Skill / Habilidad</label>
+          <select id="catalogLevel"><option value="A1">A1 · Foundation</option><option value="A2" selected>A2 · Elementary</option><option value="B1">B1 · Intermediate</option><option value="B2" disabled title="Unlock B2 after validated multi-skill evidence">B2 · Locked</option></select>
+          <label for="catalogSearch">Topic / Tema</label><input id="catalogSearch" type="search" placeholder="Reported Speech / Estilo indirecto" autocomplete="off" /><label for="catalogSkill">Skill / Habilidad</label>
           <select id="catalogSkill"><option value="all">All skills · Todas</option><option value="reading">Reading · Leer</option><option value="pronunciation">Pronunciation · Pronunciación</option><option value="communication">Communication · Comunicación</option><option value="speaking">Speaking · Hablar</option><option value="listening">Listening · Escuchar</option><option value="writing">Writing · Escribir</option><option value="grammar">Grammar · Gramática</option><option value="vocabulary">Vocabulary · Vocabulario</option></select>
         </div>
         <p id="catalogSummary" class="catalog-summary" aria-live="polite"></p>
@@ -520,6 +520,7 @@ function renderPracticeHome() {
   });
   document.querySelector("#catalogLevel")?.addEventListener("change", renderActivityCatalog);
   document.querySelector("#catalogSkill")?.addEventListener("change", renderActivityCatalog);
+  document.querySelector("#catalogSearch")?.addEventListener("input", renderActivityCatalog);
   renderActivityCatalog();
   document.querySelectorAll("[data-experience]").forEach((button) => {
     button.addEventListener("click", () => startExperience(button.dataset.experience));
@@ -1255,11 +1256,17 @@ function prepareSessionForPractice() {
   throw new Error(`This session cannot start from state: ${session.state}`);
 }
 
+function isB2Unlocked() {
+  // B2 activities are authored now but stay hidden until the evidence-based unlock is implemented.
+  return false;
+}
+
 function renderActivityCatalog() {
   const results = document.querySelector("#catalogResults");
   const summary = document.querySelector("#catalogSummary");
   const level = document.querySelector("#catalogLevel")?.value || "A2";
   const skill = document.querySelector("#catalogSkill")?.value || "all";
+  const topic = String(document.querySelector("#catalogSearch")?.value || "").trim().toLowerCase();
   if (!results || !microLibrary?.activities) return;
   const names = { reading:"Reading", pronunciation:"Pronunciation", communication:"Communication", speaking:"Speaking", listening:"Listening", writing:"Writing", grammar:"Grammar", vocabulary:"Vocabulary" };
   const classify = (a) => {
@@ -1272,7 +1279,13 @@ function renderActivityCatalog() {
     if (a.resources?.includes("vocabulary") || a.languageResource === "vocabulary" || String(a.canDoId || "").startsWith("VO-")) return "vocabulary";
     return "grammar";
   };
-  const matching = microLibrary.activities.filter((a) => a.level === level && (skill === "all" || classify(a) === skill));
+  const matching = microLibrary.activities.filter((a) => {
+    if (a.level !== level || (skill !== "all" && classify(a) !== skill)) return false;
+    if (a.level === "B2" && !isB2Unlocked()) return false;
+    if (!topic) return true;
+    const searchable = [a.title, a.titleEs, a.prompt, a.promptEs, ...(a.tags || []), ...(a.reviewTargets || [])].join(" ").toLowerCase();
+    return searchable.includes(topic);
+  });
   const goals = new Map((matrix.canDos || []).map((item) => [item.id, item]));
   const byGoal = new Map();
   for (const item of microLibrary.activities) { if (!byGoal.has(item.canDoId)) byGoal.set(item.canDoId, []); byGoal.get(item.canDoId).push(item); }

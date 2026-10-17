@@ -113,5 +113,7 @@ const memory = collectErrorMemory({ knowledgeEvidence: [
 assert.equal(memory[0].target, "ART-JOB-001", "error memory should group by stable rule id across practice surfaces");
 assert.equal(memory[0].count, 2);
 
+assert.ok(catalog.grammarRules.some((rule) => rule.id === "REPORTED-SPEECH-SHE-AM-TIRED-001" && rule.status === "tested"));
+assert.ok(catalog.grammarRules.some((rule) => rule.id === "REPORTED-SPEECH-HE-AM-BUSY-001" && rule.status === "tested"));
 assert.equal(linguisticCatalog.schemaVersion, catalog.schemaVersion);
 console.log("HODIE linguistic catalog and open-vocabulary engine: PASS");

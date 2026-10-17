@@ -51,3 +51,7 @@ assert.match(app, /data-catalog-activity/);
 assert.match(app, /function startPractice\(mode, activityId = null\)/);
 assert.match(css, /\.catalog-results/);
 console.log("HODIE visible activity catalogue contract: PASS");
+
+assert.match(app, /Reported Speech \/ Estilo indirecto/);
+assert.match(app, /function isB2Unlocked\(\)/);
+assert.match(app, /catalogSearch/);

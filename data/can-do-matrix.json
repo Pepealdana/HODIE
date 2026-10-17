@@ -5624,6 +5624,786 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "communicative"
+    },
+    {
+      "id": "RS-A1-GRAM",
+      "skill": "grammar",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can recognise who said a short, familiar message and match it to the speaker.",
+      "spanish": "Puedo reconocer quién dijo un mensaje breve y familiar y relacionarlo con quien lo dijo.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A1-READ",
+      "skill": "reading",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can recognise who said a short, familiar message and match it to the speaker.",
+      "spanish": "Puedo reconocer quién dijo un mensaje breve y familiar y relacionarlo con quien lo dijo.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A1-LISTEN",
+      "skill": "listening",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can recognise who said a short, familiar message and match it to the speaker.",
+      "spanish": "Puedo reconocer quién dijo un mensaje breve y familiar y relacionarlo con quien lo dijo.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A1-COMM",
+      "skill": "communication",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can recognise who said a short, familiar message and match it to the speaker.",
+      "spanish": "Puedo reconocer quién dijo un mensaje breve y familiar y relacionarlo con quien lo dijo.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "RS-A2-GRAM",
+      "skill": "grammar",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
+      "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
+      "prerequisites": [
+        "SP-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A2-READ",
+      "skill": "reading",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
+      "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
+      "prerequisites": [
+        "SP-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A2-LISTEN",
+      "skill": "listening",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
+      "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
+      "prerequisites": [
+        "SP-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A2-COMM",
+      "skill": "communication",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
+      "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
+      "prerequisites": [
+        "SP-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "RS-B1-GRAM",
+      "skill": "grammar",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
+      "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
+      "prerequisites": [
+        "SP-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B1-READ",
+      "skill": "reading",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
+      "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
+      "prerequisites": [
+        "SP-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B1-LISTEN",
+      "skill": "listening",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
+      "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
+      "prerequisites": [
+        "SP-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B1-COMM",
+      "skill": "communication",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
+      "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
+      "prerequisites": [
+        "SP-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "RS-B2-GRAM",
+      "skill": "grammar",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
+      "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B2-READ",
+      "skill": "reading",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
+      "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "reading",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B2-LISTEN",
+      "skill": "listening",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
+      "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B2-COMM",
+      "skill": "communication",
+      "level": "B2",
+      "priority": "high",
+      "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
+      "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "communication",
+        "durationSeconds": {
+          "min": 20,
+          "max": 90
+        },
+        "task": "Complete a short reported-speech task and identify or report the original meaning."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
     }
   ],
   "metaCanDos": [

@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "HODIE-REPORTED-SPEECH-B2",
+  "title": "Reported Speech · B2",
+  "framework": "CEFR-informed HODIE learning content; not official certification.",
+  "unlockRequirement": "B2",
+  "visibility": "locked-until-evidence-gate",
+  "note": "These activities are authored and versioned in advance but must not be shown or counted as active B2 content until the evidence-based progression gate unlocks B2.",
+  "activities": [
+    {
+      "id": "MIC-RS-B2-01",
+      "canDoId": "RS-B2-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: reporting nuance",
+      "titleEs": "Estilo indirecto: matiza lo que se comunica",
+      "prompt": "Which report presents the claim as the speaker's, not a confirmed fact?",
+      "promptEs": "¿Qué versión presenta la afirmación como algo dicho por la persona, no como un hecho confirmado?",
+      "options": [
+        "She claimed that the figures were inaccurate.",
+        "The figures were inaccurate.",
+        "She said the figures were inaccurate, so it is certainly true."
+      ],
+      "answer": "She claimed that the figures were inaccurate.",
+      "feedback": {
+        "correct": "Claimed attributes the statement to the speaker without treating it as independently verified.",
+        "correctEs": "Claimed atribuye la afirmación a quien habla sin presentarla como verificada de forma independiente.",
+        "incorrect": "Choose the option that attributes the claim rather than endorsing it.",
+        "incorrectEs": "Elige la opción que atribuye la afirmación sin respaldarla como hecho."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-02",
+      "canDoId": "RS-B2-READ",
+      "type": "match",
+      "skill": "reading",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: distinguish stance",
+      "titleEs": "Estilo indirecto: distingue la postura",
+      "prompt": "Match the reporting verb to its communicative function.",
+      "promptEs": "Relaciona el verbo de reporte con su función comunicativa.",
+      "options": [
+        "admitted → accepted something difficult or potentially negative",
+        "denied → said something was true",
+        "suggested → issued a direct order"
+      ],
+      "answer": "admitted → accepted something difficult or potentially negative",
+      "feedback": {
+        "correct": "Reporting verbs convey stance; choose them according to the source and context.",
+        "correctEs": "Los verbos de reporte transmiten postura; elígelos según la fuente y el contexto.",
+        "incorrect": "Check the meaning and pragmatic force of each reporting verb.",
+        "incorrectEs": "Revisa el significado y la fuerza pragmática de cada verbo de reporte."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-03",
+      "canDoId": "RS-B2-LISTEN",
+      "type": "order",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: summarise a discussion",
+      "titleEs": "Estilo indirecto: resume una discusión",
+      "prompt": "Arrange a balanced summary of a discussion.",
+      "promptEs": "Organiza un resumen equilibrado de una discusión.",
+      "options": [
+        "The team concluded that more evidence was needed.",
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first."
+      ],
+      "tokens": [
+        "The team concluded that more evidence was needed.",
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first."
+      ],
+      "answer": [
+        "One participant argued that the plan was too expensive.",
+        "Another participant suggested testing a smaller version first.",
+        "The team concluded that more evidence was needed."
+      ],
+      "feedback": {
+        "correct": "A balanced report distinguishes a concern, a proposal and the group's conclusion.",
+        "correctEs": "Un reporte equilibrado distingue una preocupación, una propuesta y la conclusión del grupo.",
+        "incorrect": "Present the concern, then the proposal, and finally the conclusion.",
+        "incorrectEs": "Presenta la preocupación, luego la propuesta y finalmente la conclusión."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    },
+    {
+      "id": "MIC-RS-B2-04",
+      "canDoId": "RS-B2-COMM",
+      "type": "complete",
+      "skill": "writing",
+      "context": "daily-life",
+      "level": "B2",
+      "title": "Reported Speech: attribute a viewpoint",
+      "titleEs": "Estilo indirecto: atribuye un punto de vista",
+      "prompt": "“This policy may fail,” the analyst said. → The analyst warned that the policy ___ fail.",
+      "promptEs": "«Esta política puede fracasar», dijo el analista. → The analyst warned that the policy ___ fail.",
+      "answer": "might",
+      "feedback": {
+        "correct": "Might can report a possibility with appropriate distance or tentativeness.",
+        "correctEs": "Might puede transmitir una posibilidad con cierto distanciamiento o cautela.",
+        "incorrect": "Use might to report the original possibility in this pattern.",
+        "incorrectEs": "Usa might para transmitir la posibilidad original en este patrón."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b2",
+        "nuance"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-nuance",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reporting-verbs",
+        "tense-shift",
+        "pronouns",
+        "nuance"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "unlockRequirement": "B2"
+    }
+  ]
+}
