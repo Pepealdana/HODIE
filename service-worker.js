@@ -24,6 +24,7 @@ const APP_SHELL = [
   "./data/can-do-matrix.json",
   "./data/content-library.json",
   "./data/micro-practice-library.json",
+  "./data/reported-speech-b2-pack.json",
   "./data/experience-library.json",
   "./data/learning-contexts.json",
   "./data/practice-taxonomy.json",
