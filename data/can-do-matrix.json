@@ -5820,7 +5820,9 @@
       "priority": "high",
       "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
       "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-A2-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -5867,7 +5869,9 @@
       "priority": "high",
       "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
       "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-A2-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -5914,7 +5918,9 @@
       "priority": "high",
       "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
       "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-A2-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -5961,7 +5967,9 @@
       "priority": "high",
       "canDo": "I can report simple statements and messages using common reporting verbs and familiar tense patterns.",
       "spanish": "Puedo transmitir afirmaciones y mensajes sencillos con verbos frecuentes y estructuras verbales conocidas.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-A2-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6008,7 +6016,9 @@
       "priority": "high",
       "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
       "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6055,7 +6065,9 @@
       "priority": "high",
       "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
       "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6102,7 +6114,9 @@
       "priority": "high",
       "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
       "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6149,7 +6163,9 @@
       "priority": "high",
       "canDo": "I can report what someone said, asked or requested, keeping the original meaning clear.",
       "spanish": "Puedo contar lo que alguien dijo, preguntó o pidió, conservando el sentido original.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6196,7 +6212,10 @@
       "priority": "high",
       "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
       "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6243,7 +6262,10 @@
       "priority": "high",
       "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
       "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6290,7 +6312,10 @@
       "priority": "high",
       "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
       "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
@@ -6337,7 +6362,10 @@
       "priority": "high",
       "canDo": "I can accurately summarise and report viewpoints, claims and requests, choosing reporting language appropriate to context.",
       "spanish": "Puedo resumir y transmitir con precisión opiniones, afirmaciones y peticiones, eligiendo expresiones adecuadas al contexto.",
-      "prerequisites": [],
+      "prerequisites": [
+        "SP-B1-01",
+        "CO-B1-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
