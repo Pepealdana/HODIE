@@ -6176,7 +6176,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(She) said,?\\\\s*[\"“]I am tired\\\\.?[\"”]",
+        "pattern": "\\b(She) said,?\\s*[\"“]I am tired\\.?[\"”]",
         "flags": "gi",
         "replacement": "$1 said that she was tired.",
         "confidence": "high"
@@ -6264,7 +6264,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\b(He) said,?\\\\s*[\"“]I am busy\\\\.?[\"”]",
+        "pattern": "\\b(He) said,?\\s*[\"“]I am busy\\.?[\"”]",
         "flags": "gi",
         "replacement": "$1 said that he was busy.",
         "confidence": "high"
