@@ -6733,7 +6733,33 @@
         "greetings",
         "mediation"
       ],
-      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can say what another person says in a short, familiar exchange, using a model.",
+      "priority": "high",
+      "prerequisites": [],
+      "recovery": [],
+      "evidence": {
+        "type": "speaking",
+        "task": "Pass on a simple greeting",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
     },
     {
       "id": "RS-A1-WRITE",
@@ -6748,7 +6774,33 @@
         "writing",
         "mediation"
       ],
-      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can complete a short, modelled sentence to pass on a basic message.",
+      "priority": "high",
+      "prerequisites": [],
+      "recovery": [],
+      "evidence": {
+        "type": "writing",
+        "task": "Write a simple reported message",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
     },
     {
       "id": "RS-A2-SPEAK",
@@ -6763,7 +6815,37 @@
         "speaking",
         "mediation"
       ],
-      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can report the main point of a short, familiar statement with support.",
+      "priority": "high",
+      "prerequisites": [
+        "RS-A1-COMM"
+      ],
+      "recovery": [
+        "RS-A1-COMM"
+      ],
+      "evidence": {
+        "type": "speaking",
+        "task": "Report a familiar message",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
     },
     {
       "id": "RS-B1-SPEAK",
@@ -6778,7 +6860,37 @@
         "speaking",
         "mediation"
       ],
-      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can relay the main points of a clear conversation or interview, preserving speakers' meaning.",
+      "priority": "high",
+      "prerequisites": [
+        "RS-A2-COMM"
+      ],
+      "recovery": [
+        "RS-A1-COMM"
+      ],
+      "evidence": {
+        "type": "speaking",
+        "task": "Summarise what someone said",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
     }
   ],
   "metaCanDos": [
