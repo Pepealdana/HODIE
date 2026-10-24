@@ -6451,6 +6451,10 @@
         "reported speech",
         "reported-speech",
         "backshift"
+      ],
+      "incorrectCases": [
+        "She says, \"I am happy.\"",
+        "She said that she was happy."
       ]
     },
     {
@@ -6524,6 +6528,10 @@
         "reported speech",
         "reported-speech",
         "place-reference"
+      ],
+      "incorrectCases": [
+        "He says, \"I work here.\"",
+        "He said that he worked there."
       ]
     },
     {
@@ -6597,6 +6605,10 @@
         "reported speech",
         "reported-speech",
         "indirect-questions"
+      ],
+      "incorrectCases": [
+        "Where do you live?",
+        "She asked me where I lived."
       ]
     },
     {
@@ -6670,6 +6682,10 @@
         "reported speech",
         "reported-speech",
         "modal-backshift"
+      ],
+      "incorrectCases": [
+        "He says, \"I can help.\"",
+        "He said that he could help."
       ]
     }
   ],
