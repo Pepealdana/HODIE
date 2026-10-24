@@ -11537,7 +11537,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\bShe asked me where did I live\\\\?",
+        "pattern": "\\bShe asked me where did I live\\?",
         "flags": "gi",
         "replacement": "She asked me where I lived.",
         "confidence": "high"
