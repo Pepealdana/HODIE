@@ -16,8 +16,8 @@ assert.ok(catalog.vocabularyEntries.length >= 440, "expanded vocabulary must be 
 assert.ok(catalog.grammarRules.length >= 110, "draft and tested grammar references must be present");
 assert.ok(catalog.communicativeFunctions.length >= 68, "communicative functions should connect language to real tasks");
 assert.ok(catalog.testCases.length >= 115, "regression corpus must grow with the content");
-assert.ok(micro.activities.length >= 70, "micro-practice should cover multiple modes");
-assert.ok(content.activities.length >= 12, "full activity bank should extend beyond speaking");
+assert.ok(micro.activities.length >= 200, "micro-practice should provide a robust activity bank");
+assert.ok(content.activities.length >= 35, "full activity bank should cover more than a small starter set");
 assert.ok(new Set(micro.activities.map(x=>x.type)).size >= 7);
 assert.ok(new Set(content.activities.map(x=>x.activityType)).size >= 9);
 const correctionRules = new Set(getCorrectionRuleSet().map(x=>x.id));
@@ -52,3 +52,7 @@ console.log("HODIE expanded learning suite: PASS",JSON.stringify({
   contentActivities:content.activities.length,
   linkedCanDoResources:linked.functions.length+linked.rules.length+linked.vocabulary.length
 }));
+
+const reportedSpeechByLevel = Object.fromEntries(["A1","A2","B1"].map(level => [level, micro.activities.filter(item => item.level === level && item.tags?.includes("reported-speech")).length]));
+assert.ok(reportedSpeechByLevel.A1 >= 4 && reportedSpeechByLevel.A2 >= 4 && reportedSpeechByLevel.B1 >= 4);
+assert.ok(micro.activities.some(item => item.tags?.includes("reported-speech") && item.type === "listening" && item.audioText));
