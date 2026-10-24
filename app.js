@@ -640,7 +640,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
       (isBeginner ? '<p class="spanish">Toca una opción para ver una actividad recomendada.</p>' : '<p>Select a skill to see a recommended activity.</p>') + '</div>' +
       '<button class="text-link" id="openCatalogButton" type="button">' + (isBeginner ? "Todas las actividades" : "All activities") + ' ↗</button></div>' +
       '<div class="skill-grid">' + skills.map(([value, en, es, icon]) => '<button class="skill-tile ' + (value === selectedHomeSkill ? "is-selected" : "") + '" data-home-skill="' + value + '" type="button" aria-pressed="' + String(value === selectedHomeSkill) + '"><span class="skill-icon" aria-hidden="true">' + icon + '</span><span class="skill-label">' + en + '</span>' + (isBeginner ? '<span class="skill-label-es">' + es + '</span>' : "") + '</button>').join("") + '</div>' +
-    '</section><section class="selected-skill-card" id="selectedSkillCard" aria-live="polite"></section>' +
+    '</section><section class="reported-speech-shortcut card" aria-labelledby="reportedSpeechShortcutTitle"><div class="reported-speech-icon" aria-hidden="true">“ ”</div><div class="reported-speech-copy"><h3 id="reportedSpeechShortcutTitle">Reported Speech</h3><p class="spanish">Estilo indirecto · Cuenta lo que alguien dijo, preguntó o pidió.</p><p>Practise reporting messages, questions and requests.</p></div><button class="secondary compact" id="reportedSpeechShortcut" type="button">' + (isBeginner ? "Practicar" : "Practise") + ' →</button></section><section class="selected-skill-card" id="selectedSkillCard" aria-live="polite"></section>' +
     '<div class="redesign-resume-slot"></div>' +
   '</section>');
 
@@ -658,6 +658,19 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     const summary = focusDisclosure.querySelector("summary");
     if (summary) summary.textContent = isBeginner ? "Focus en una habilidad o recurso" : "Focus on a skill or resource";
   }
+
+  home.querySelector("#reportedSpeechShortcut")?.addEventListener("click", () => {
+    const disclosure = home.querySelector("#activityCatalogDisclosure");
+    const levelFilter = home.querySelector("#catalogLevel");
+    const skillFilter = home.querySelector("#catalogSkill");
+    const searchFilter = home.querySelector("#catalogSearch");
+    if (levelFilter) levelFilter.value = session?.target?.level || "A2";
+    if (skillFilter) skillFilter.value = "all";
+    if (searchFilter) searchFilter.value = "reported speech";
+    renderActivityCatalog();
+    if (disclosure) disclosure.open = true;
+    disclosure?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
   const catalog = home.querySelector("#activityCatalog");
   if (catalog) {
@@ -1360,6 +1373,8 @@ function startPractice(mode, activityId = null) {
 }
 
 function renderMicroActivity() {
+  if (practice?.timerInterval) clearInterval(practice.timerInterval);
+  if (practice) practice.timerInterval = null;
   practice.answered = false;
   const activity = practice.activities[practice.index];
   if (!activity) {
@@ -1390,8 +1405,11 @@ function renderMicroActivity() {
       <div class="micro-prompt">
         <p class="prompt-en">${escapeHtml(activity.prompt)}</p>
         <p class="spanish">${escapeHtml(activity.promptEs || "")}</p>
+        ${activity.gameMode === "timed-challenge" && activity.timeLimitSeconds ? '<p class="activity-timer" id="activityTimer">Time · Tiempo: ' + escapeHtml(String(activity.timeLimitSeconds)) + 's</p>' : ''}
+        ${activity.gameMode && activity.gameMode !== "guided" ? '<span class="activity-game-mode">' + escapeHtml(({riddle:"Riddle · Acertijo","memory-recall":"Memory · Memoria","timed-challenge":"Timed challenge · Reto cronometrado","error-detective":"Error detective · Detecta el error","quick-recall":"Quick recall · Recuerdo rápido",sequence:"Sequence · Secuencia"})[activity.gameMode] || activity.gameMode) + '</span>' : ''}
       </div>
 
+      <div id="memoryChallenge"></div>
       <div id="microInteraction"></div>
       <div id="microFeedback" aria-live="polite"></div>
 
@@ -1407,6 +1425,38 @@ function renderMicroActivity() {
   });
 
   renderInteraction(activity);
+  renderMemoryChallenge(activity);
+  startTimedChallenge(activity);
+}
+
+function renderMemoryChallenge(activity) {
+  const node = document.querySelector("#memoryChallenge");
+  if (!node) return;
+  if (activity.gameMode !== "memory-recall" || !activity.memoryText) { node.innerHTML = ""; return; }
+  node.innerHTML = '<section class="memory-challenge"><strong>Memory challenge · Reto de memoria</strong><p id="memoryPromptText">' + escapeHtml(activity.memoryText) + '</p><button class="secondary compact" id="hideMemoryPrompt" type="button">Hide and recall · Ocultar y recordar</button></section>';
+  document.querySelector("#hideMemoryPrompt")?.addEventListener("click", () => {
+    const prompt = document.querySelector("#memoryPromptText");
+    if (prompt) prompt.hidden = true;
+    const button = document.querySelector("#hideMemoryPrompt");
+    if (button) { button.disabled = true; button.textContent = "Now answer from memory · Responde de memoria"; }
+  });
+}
+
+function startTimedChallenge(activity) {
+  const timer = document.querySelector("#activityTimer");
+  const seconds = Number(activity.timeLimitSeconds || 0);
+  if (!timer || activity.gameMode !== "timed-challenge" || !seconds || ["mini-production", "speak"].includes(activity.type)) return;
+  let remaining = seconds;
+  timer.textContent = "Time · Tiempo: " + remaining + "s";
+  practice.timerInterval = setInterval(() => {
+    remaining -= 1;
+    timer.textContent = "Time · Tiempo: " + remaining + "s";
+    if (remaining <= 0) {
+      clearInterval(practice.timerInterval);
+      practice.timerInterval = null;
+      if (!practice.answered) evaluateCurrent(activity.type === "order" ? [] : "");
+    }
+  }, 1000);
 }
 
 function renderInteraction(activity) {
@@ -1579,6 +1629,8 @@ function bindTextAnswer() {
 
 function evaluateCurrent(response) {
   if (!practice || practice.answered) return;
+  if (practice.timerInterval) clearInterval(practice.timerInterval);
+  practice.timerInterval = null;
   practice.answered = true;
   document.querySelectorAll("#microInteraction button, #microInteraction input, #microInteraction textarea")
     .forEach((control) => { control.disabled = true; });
