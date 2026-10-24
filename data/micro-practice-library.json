@@ -11648,6 +11648,407 @@
       ],
       "knowledgeScope": "global",
       "gameMode": "error-detective"
+    },
+    {
+      "id": "MIC-RS-A1-07",
+      "canDoId": "RS-A1-SPEAK",
+      "type": "speak",
+      "skill": "speaking",
+      "primarySkill": "speaking",
+      "context": "everyday",
+      "level": "A1",
+      "title": "Say the message aloud",
+      "titleEs": "Di el mensaje en voz alta",
+      "prompt": "Tom says, “Hello!” Tell someone what Tom says.",
+      "promptEs": "Tom dice: «¡Hola!». Cuéntale a alguien lo que dice Tom.",
+      "targetPhrase": "Tom says hello.",
+      "requiredTokens": [
+        "tom",
+        "says",
+        "hello"
+      ],
+      "feedback": {
+        "correct": "Good. You passed on the message and kept its meaning.",
+        "correctEs": "Bien. Transmitiste el mensaje y conservaste su sentido.",
+        "partial": "Try again. Keep the speaker and message clear.",
+        "partialEs": "Inténtalo otra vez. Deja claro quién habla y cuál es el mensaje.",
+        "unavailable": "Speech recognition is unavailable. Type the sentence to check its key information.",
+        "unavailableEs": "El reconocimiento de voz no está disponible. Escribe la oración para comprobar la información clave."
+      },
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation",
+        "quick-recall"
+      ],
+      "errorType": "communication",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reported-speech",
+        "speaking",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "knowledgeScope": "global",
+      "audioText": "Tom says hello.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.65,
+        "language": "en-US"
+      },
+      "relatedCanDoIds": [
+        "RS-A1-SPEAK"
+      ],
+      "gameMode": "quick-recall"
+    },
+    {
+      "id": "MIC-RS-A1-08",
+      "canDoId": "RS-A1-WRITE",
+      "type": "mini-production",
+      "skill": "writing",
+      "primarySkill": "writing",
+      "context": "everyday",
+      "level": "A1",
+      "title": "Write a simple message",
+      "titleEs": "Escribe un mensaje sencillo",
+      "prompt": "Complete the message: “Anna says, ‘Good morning!’” → Anna says ___.",
+      "promptEs": "Completa el mensaje: «Anna dice: “¡Buenos días!”» → Anna dice ___.",
+      "requirements": {
+        "minResponseCharacters": 8
+      },
+      "feedback": {
+        "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
+        "short": "Write a complete sentence and include the speaker plus the reported message.",
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+      },
+      "tags": [
+        "reported-speech",
+        "writing",
+        "mediation"
+      ],
+      "errorType": "task-completion",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "writing",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "writing"
+      ],
+      "knowledgeScope": "global",
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 8,
+        "minimumCriteria": 2,
+        "criteria": [
+          {
+            "id": "speaker",
+            "label": "Names the speaker Anna.",
+            "patterns": [
+              "\\\\banna\\\\b"
+            ],
+            "missingMessage": "Include Anna as the speaker.",
+            "missingMessageEs": "Incluye a Anna como hablante."
+          },
+          {
+            "id": "message",
+            "label": "Passes on the greeting.",
+            "patterns": [
+              "\\\\b(good morning|hello|hi)\\\\b"
+            ],
+            "missingMessage": "Include the greeting.",
+            "missingMessageEs": "Incluye el saludo."
+          }
+        ],
+        "practiceMinimumCriteria": 1
+      },
+      "relatedCanDoIds": [
+        "RS-A1-WRITE"
+      ]
+    },
+    {
+      "id": "MIC-RS-A2-07",
+      "canDoId": "RS-A2-SPEAK",
+      "type": "speak",
+      "skill": "speaking",
+      "primarySkill": "speaking",
+      "context": "everyday",
+      "level": "A2",
+      "title": "Relay a plan",
+      "titleEs": "Transmite un plan",
+      "prompt": "Alex said, “I will call you tomorrow.” Report Alex’s plan to a friend.",
+      "promptEs": "Alex dijo: «Te llamaré mañana». Transmite el plan de Alex a un amigo.",
+      "targetPhrase": "Alex said he would call me the next day.",
+      "requiredTokens": [
+        "alex",
+        "said",
+        "would",
+        "call"
+      ],
+      "feedback": {
+        "correct": "Good. You passed on the message and kept its meaning.",
+        "correctEs": "Bien. Transmitiste el mensaje y conservaste su sentido.",
+        "partial": "Try again. Keep the speaker and message clear.",
+        "partialEs": "Inténtalo otra vez. Deja claro quién habla y cuál es el mensaje.",
+        "unavailable": "Speech recognition is unavailable. Type the sentence to check its key information.",
+        "unavailableEs": "El reconocimiento de voz no está disponible. Escribe la oración para comprobar la información clave."
+      },
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation",
+        "memory-recall"
+      ],
+      "errorType": "communication",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reported-speech",
+        "speaking",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "knowledgeScope": "global",
+      "audioText": "Alex said he would call me the next day.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.65,
+        "language": "en-US"
+      },
+      "relatedCanDoIds": [
+        "RS-A2-SPEAK"
+      ],
+      "gameMode": "memory-recall"
+    },
+    {
+      "id": "MIC-RS-A2-08",
+      "canDoId": "RS-A2-WRITE",
+      "type": "mini-production",
+      "skill": "writing",
+      "primarySkill": "writing",
+      "context": "everyday",
+      "level": "A2",
+      "title": "Report a short update",
+      "titleEs": "Transmite una actualización breve",
+      "prompt": "Write one sentence reporting this message: “I am working today,” Sara said.",
+      "promptEs": "Escribe una oración para transmitir este mensaje: «Estoy trabajando hoy», dijo Sara.",
+      "requirements": {
+        "minResponseCharacters": 20
+      },
+      "feedback": {
+        "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
+        "short": "Write a complete sentence and include the speaker plus the reported message.",
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+      },
+      "tags": [
+        "reported-speech",
+        "writing",
+        "mediation"
+      ],
+      "errorType": "task-completion",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "writing",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "writing"
+      ],
+      "knowledgeScope": "global",
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 20,
+        "minimumCriteria": 3,
+        "criteria": [
+          {
+            "id": "speaker",
+            "label": "Identifies Sara as the speaker.",
+            "patterns": [
+              "\\\\bsara\\\\b"
+            ],
+            "missingMessage": "Name Sara as the speaker.",
+            "missingMessageEs": "Nombra a Sara como hablante."
+          },
+          {
+            "id": "reporting-verb",
+            "label": "Uses a reporting verb.",
+            "patterns": [
+              "\\\\b(said|told)\\\\b"
+            ],
+            "missingMessage": "Use said or told + an appropriate structure.",
+            "missingMessageEs": "Usa said o told con una estructura apropiada."
+          },
+          {
+            "id": "reported-content",
+            "label": "Reports work using a suitable verb form.",
+            "patterns": [
+              "\\\\b(worked|was working|is working)\\\\b"
+            ],
+            "missingMessage": "Report the work information with a suitable verb form.",
+            "missingMessageEs": "Transmite la información sobre el trabajo con una forma verbal adecuada."
+          }
+        ],
+        "practiceMinimumCriteria": 2
+      },
+      "relatedCanDoIds": [
+        "RS-A2-WRITE"
+      ]
+    },
+    {
+      "id": "MIC-RS-B1-07",
+      "canDoId": "RS-B1-SPEAK",
+      "type": "speak",
+      "skill": "speaking",
+      "primarySkill": "speaking",
+      "context": "everyday",
+      "level": "B1",
+      "title": "Summarise an interview",
+      "titleEs": "Resume una entrevista",
+      "prompt": "An interviewer asked, “What do you want to change?” Jo replied, “I want to reduce waste.” Report Jo’s answer.",
+      "promptEs": "Un entrevistador preguntó: «¿Qué quieres cambiar?». Jo respondió: «Quiero reducir los residuos». Transmite la respuesta de Jo.",
+      "targetPhrase": "Jo said she wanted to reduce waste.",
+      "requiredTokens": [
+        "jo",
+        "said",
+        "wanted",
+        "reduce",
+        "waste"
+      ],
+      "feedback": {
+        "correct": "Good. You passed on the message and kept its meaning.",
+        "correctEs": "Bien. Transmitiste el mensaje y conservaste su sentido.",
+        "partial": "Try again. Keep the speaker and message clear.",
+        "partialEs": "Inténtalo otra vez. Deja claro quién habla y cuál es el mensaje.",
+        "unavailable": "Speech recognition is unavailable. Type the sentence to check its key information.",
+        "unavailableEs": "El reconocimiento de voz no está disponible. Escribe la oración para comprobar la información clave."
+      },
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation",
+        "timed-challenge"
+      ],
+      "errorType": "communication",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "reported-speech",
+        "speaking",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "knowledgeScope": "global",
+      "audioText": "Jo said she wanted to reduce waste.",
+      "audio": {
+        "normalRate": 0.88,
+        "slowRate": 0.65,
+        "language": "en-US"
+      },
+      "relatedCanDoIds": [
+        "RS-B1-SPEAK"
+      ],
+      "gameMode": "timed-challenge"
+    },
+    {
+      "id": "MIC-RS-B1-08",
+      "canDoId": "RS-B1-WRITE",
+      "type": "mini-production",
+      "skill": "writing",
+      "primarySkill": "writing",
+      "context": "everyday",
+      "level": "B1",
+      "title": "Report two viewpoints",
+      "titleEs": "Transmite dos puntos de vista",
+      "prompt": "Write two sentences reporting both views: “The plan is too expensive,” Marta said. “We should test a smaller version,” David suggested.",
+      "promptEs": "Escribe dos oraciones transmitiendo ambos puntos de vista: «El plan es demasiado costoso», dijo Marta. «Deberíamos probar una versión más pequeña», propuso David.",
+      "requirements": {
+        "minResponseCharacters": 45
+      },
+      "feedback": {
+        "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
+        "short": "Write a complete sentence and include the speaker plus the reported message.",
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+      },
+      "tags": [
+        "reported-speech",
+        "writing",
+        "mediation"
+      ],
+      "errorType": "task-completion",
+      "errorTarget": "reported-message",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "writing",
+        "meaning-preservation"
+      ],
+      "reviewPriority": "high",
+      "resources": [
+        "grammar",
+        "writing"
+      ],
+      "knowledgeScope": "global",
+      "evaluation": {
+        "responseType": "free-production",
+        "minimumResponseCharacters": 45,
+        "minimumCriteria": 2,
+        "criteria": [
+          {
+            "id": "marta-view",
+            "label": "Reports Marta’s objection.",
+            "patterns": [
+              "\\\\bmarta\\\\b",
+              "\\\\b(too expensive|expensive|costly)\\\\b"
+            ],
+            "missingMessage": "Include Marta's objection about the cost.",
+            "missingMessageEs": "Incluye la objeción de Marta sobre el costo."
+          },
+          {
+            "id": "david-view",
+            "label": "Reports David’s proposal.",
+            "patterns": [
+              "\\\\bdavid\\\\b",
+              "\\\\b(suggested|proposed|should test|try)\\\\b"
+            ],
+            "missingMessage": "Include David's proposal for a smaller test.",
+            "missingMessageEs": "Incluye la propuesta de David de hacer una prueba más pequeña."
+          }
+        ],
+        "practiceMinimumCriteria": 1
+      },
+      "relatedCanDoIds": [
+        "RS-B1-WRITE"
+      ]
     }
   ]
 }
