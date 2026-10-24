@@ -165,8 +165,13 @@ assert.ok(reportedSpeechB2Pack.activities.every((item) => item.level === "B2" &&
 assert.equal(reportedSpeechB2Pack.visibility, "locked-until-evidence-gate");
 
 const reportedSpeechExpanded = library.activities.filter(item => item.tags?.includes("reported-speech"));
-assert.ok(reportedSpeechExpanded.length >= 16, "Reported Speech should have a useful cross-level practice set");
+assert.ok(reportedSpeechExpanded.length >= 24, "Reported Speech should have a useful cross-level practice set");
 assert.ok(reportedSpeechExpanded.some(item => item.type === "listening" && item.audioText), "Reported Speech must include real listening tasks");
+for (const level of ["A1","A2","B1"]) {
+  assert.ok(reportedSpeechExpanded.filter(item => item.level === level).length >= 8, level + " needs at least eight Reported Speech activities");
+  assert.ok(reportedSpeechExpanded.some(item => item.level === level && item.skill === "speaking"), level + " needs speaking practice");
+  assert.ok(reportedSpeechExpanded.some(item => item.level === level && item.skill === "writing"), level + " needs writing practice");
+}
 assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "speaking").length >= 8);
 assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "writing").length >= 8);
 
