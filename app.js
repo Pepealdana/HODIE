@@ -660,7 +660,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
   }
 
   home.querySelector("#reportedSpeechShortcut")?.addEventListener("click", () => {
-    const disclosure = home.querySelector("#activityCatalogDisclosure");
+    const catalogSection = home.querySelector("#activityCatalog");
     const levelFilter = home.querySelector("#catalogLevel");
     const skillFilter = home.querySelector("#catalogSkill");
     const searchFilter = home.querySelector("#catalogSearch");
@@ -668,8 +668,7 @@ function applyConversationFirstHome(level, targetActivity, statement) {
     if (skillFilter) skillFilter.value = "all";
     if (searchFilter) searchFilter.value = "reported speech";
     renderActivityCatalog();
-    if (disclosure) disclosure.open = true;
-    disclosure?.scrollIntoView({ behavior: "smooth", block: "start" });
+    catalogSection?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   const catalog = home.querySelector("#activityCatalog");
