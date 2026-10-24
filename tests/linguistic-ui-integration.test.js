@@ -57,3 +57,5 @@ assert.ok(app.includes("startTimedChallenge"));
 assert.ok(app.includes("reported speech"));
 
 assert.ok(app.includes('home.querySelector("#activityCatalog")'));
+
+assert.ok(app.includes("catalogSection?.scrollIntoView"));
