@@ -5106,7 +5106,7 @@
     {
       "id": "MIC-RS-A1-03",
       "canDoId": "RS-A1-LISTEN",
-      "type": "choose",
+      "type": "listening",
       "skill": "listening",
       "context": "daily-life",
       "level": "A1",
@@ -5116,8 +5116,8 @@
       "promptEs": "Imagina que escuchas: «Ben dice que está en casa». ¿Qué sabes?",
       "options": [
         "Ben says he is at home.",
-        "Ben asks where home is.",
-        "Ben says he was at school."
+        "Ben says he is at school.",
+        "Ben says he is tired."
       ],
       "answer": "Ben says he is at home.",
       "feedback": {
@@ -5152,7 +5152,10 @@
         "communication"
       ],
       "languageResource": "grammar",
-      "knowledgeScope": "global"
+      "knowledgeScope": "global",
+      "audioText": "Ben says he is at home.",
+      "gameMode": "timed-challenge",
+      "timeLimitSeconds": 25
     },
     {
       "id": "MIC-RS-A1-04",
@@ -5620,6 +5623,311 @@
       ],
       "languageResource": "grammar",
       "knowledgeScope": "global"
+    },
+    {
+      "id": "MIC-RS-A1-05",
+      "canDoId": "RS-A1-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: identify the message",
+      "titleEs": "Estilo indirecto: identifica el mensaje",
+      "prompt": "Mia says, “Good morning!” What is the message doing?",
+      "promptEs": "Mia dice: «¡Buenos días!». ¿Qué función tiene el mensaje?",
+      "options": [
+        "Greeting someone",
+        "Asking for directions",
+        "Saying goodbye"
+      ],
+      "answer": "Greeting someone",
+      "feedback": {
+        "correct": "A greeting can be reported by naming its function.",
+        "correctEs": "Un saludo puede transmitirse indicando su función.",
+        "incorrect": "Choose what Mia communicates.",
+        "incorrectEs": "Elige lo que comunica Mia."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "speaker-identification",
+        "riddle"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "speaker-identification",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "speaker-identification"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "riddle"
+    },
+    {
+      "id": "MIC-RS-A1-06",
+      "canDoId": "RS-A1-LISTEN",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "A1",
+      "title": "Reported Speech: listen and identify",
+      "titleEs": "Estilo indirecto: escucha e identifica",
+      "prompt": "Listen and choose the message you hear.",
+      "promptEs": "Escucha y elige el mensaje que oyes.",
+      "options": [
+        "Lina says she is at home.",
+        "Lina says she is at school.",
+        "Lina says she is tired."
+      ],
+      "answer": "Lina says she is at home.",
+      "feedback": {
+        "correct": "The audio reports that Lina is at home.",
+        "correctEs": "El audio transmite que Lina está en casa.",
+        "incorrect": "Listen for the place, “at home”.",
+        "incorrectEs": "Escucha el lugar, «at home»."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a1",
+        "short-message",
+        "timed-challenge"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "short-message",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "short-message"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "timed-challenge",
+      "audioText": "Lina says she is at home.",
+      "timeLimitSeconds": 25
+    },
+    {
+      "id": "MIC-RS-A2-05",
+      "canDoId": "RS-A2-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: report a routine",
+      "titleEs": "Estilo indirecto: transmite una rutina",
+      "prompt": "Direct: “I work here,” Leo said. Choose the usual report when speaking later from another place.",
+      "promptEs": "Directo: «Trabajo aquí», dijo Leo. Elige el reporte habitual al contarlo después desde otro lugar.",
+      "options": [
+        "Leo said that he worked there.",
+        "Leo said that I work here.",
+        "Leo told that he worked here."
+      ],
+      "answer": "Leo said that he worked there.",
+      "feedback": {
+        "correct": "The pronoun, place reference and tense reflect the reporting perspective.",
+        "correctEs": "El pronombre, el lugar y el tiempo verbal reflejan la perspectiva de quien transmite.",
+        "incorrect": "Use he for Leo and there for the other place.",
+        "incorrectEs": "Usa he para Leo y there para el otro lugar."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "backshift",
+        "error-detective"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "backshift",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "backshift"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "error-detective"
+    },
+    {
+      "id": "MIC-RS-A2-06",
+      "canDoId": "RS-A2-COMM",
+      "type": "choose",
+      "skill": "communication",
+      "context": "daily-life",
+      "level": "A2",
+      "title": "Reported Speech: relay a message",
+      "titleEs": "Estilo indirecto: transmite un mensaje",
+      "prompt": "Maya said, “I can't attend today.” Choose the clearest report.",
+      "promptEs": "Maya dijo: «No puedo asistir hoy». Elige el reporte más claro.",
+      "options": [
+        "Maya said she couldn't attend that day.",
+        "Maya told she can't attended today.",
+        "Maya said I couldn't attend that day."
+      ],
+      "answer": "Maya said she couldn't attend that day.",
+      "feedback": {
+        "correct": "Can commonly changes to could, and today may become that day.",
+        "correctEs": "Can suele cambiar a could y today puede pasar a that day.",
+        "incorrect": "Keep Maya as the person who cannot attend.",
+        "incorrectEs": "Mantén a Maya como la persona que no puede asistir."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "a2",
+        "reported-messages",
+        "riddle"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-messages",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-messages"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "communication",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "riddle"
+    },
+    {
+      "id": "MIC-RS-B1-05",
+      "canDoId": "RS-B1-GRAM",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: indirect question order",
+      "titleEs": "Estilo indirecto: orden de pregunta indirecta",
+      "prompt": "Direct: “Where does Nina work?” he asked. Choose the report.",
+      "promptEs": "Directo: «¿Dónde trabaja Nina?», preguntó él. Elige el reporte.",
+      "options": [
+        "He asked where Nina worked.",
+        "He asked where did Nina work.",
+        "He asked where does Nina worked."
+      ],
+      "answer": "He asked where Nina worked.",
+      "feedback": {
+        "correct": "Reported questions use statement word order and do not keep do-support.",
+        "correctEs": "Las preguntas indirectas usan orden afirmativo y no conservan el auxiliar do.",
+        "incorrect": "Put the subject before the verb: Nina worked.",
+        "incorrectEs": "Pon el sujeto antes del verbo: Nina worked."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "indirect-questions",
+        "error-detective"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "indirect-questions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "indirect-questions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "error-detective",
+      "timeLimitSeconds": 30
+    },
+    {
+      "id": "MIC-RS-B1-06",
+      "canDoId": "RS-B1-LISTEN",
+      "type": "listening",
+      "skill": "listening",
+      "context": "daily-life",
+      "level": "B1",
+      "title": "Reported Speech: listen for viewpoints",
+      "titleEs": "Estilo indirecto: escucha los puntos de vista",
+      "prompt": "Listen and choose the balanced report.",
+      "promptEs": "Escucha y elige el reporte equilibrado.",
+      "options": [
+        "Marta opposed the plan; David suggested a smaller trial.",
+        "Both speakers agreed that the plan had succeeded.",
+        "Neither speaker discussed the plan."
+      ],
+      "answer": "Marta opposed the plan; David suggested a smaller trial.",
+      "feedback": {
+        "correct": "The report keeps both speakers' positions distinct.",
+        "correctEs": "El reporte mantiene diferenciadas las posturas de ambos hablantes.",
+        "incorrect": "Listen for the objection and the proposed trial.",
+        "incorrectEs": "Escucha la objeción y la prueba propuesta."
+      },
+      "tags": [
+        "reported-speech",
+        "reported speech",
+        "estilo indirecto",
+        "cefr",
+        "b1",
+        "reported-opinions",
+        "memory-recall"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-opinions",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "reported-opinions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "listening",
+      "resources": [
+        "grammar",
+        "communication"
+      ],
+      "languageResource": "grammar",
+      "knowledgeScope": "global",
+      "gameMode": "memory-recall",
+      "audioText": "Marta said the plan was too expensive. David suggested trying a smaller version first.",
+      "memoryText": "Marta: too expensive. David: try a smaller version first."
     }
   ]
 }
