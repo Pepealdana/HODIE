@@ -2586,20 +2586,28 @@
       "prompt": "Put the words in order.",
       "promptEs": "Ordena las palabras.",
       "tokens": [
-        "you",
         "How",
         "often",
         "do",
+        "you",
         "practise",
         "English",
         "?"
       ],
-      "answer": "How often do you practise English?",
+      "answer": [
+        "How",
+        "often",
+        "do",
+        "you",
+        "practise",
+        "English",
+        "?"
+      ],
       "feedback": {
-        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
-        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
-        "incorrect": "Start with the subject: \"I...\"",
-        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+        "correct": "Correct. A wh-question starts with the question phrase, then the auxiliary and subject.",
+        "correctEs": "Correcto. Una pregunta con wh empieza con la expresión interrogativa, luego el auxiliar y el sujeto.",
+        "incorrect": "Use question phrase + auxiliary + subject + base verb.",
+        "incorrectEs": "Usa expresión interrogativa + auxiliar + sujeto + verbo base."
       },
       "tags": [
         "question-forms",
@@ -2618,7 +2626,8 @@
         "grammar"
       ],
       "target": "question-order",
-      "reviewPriority": "medium"
+      "reviewPriority": "medium",
+      "gameMode": "sequence"
     },
     {
       "id": "MIC-GR-A2-07-01",
@@ -2641,12 +2650,21 @@
         "improve",
         "."
       ],
-      "answer": "I practise because I want to improve.",
+      "answer": [
+        "I",
+        "practise",
+        "because",
+        "I",
+        "want",
+        "to",
+        "improve",
+        "."
+      ],
       "feedback": {
-        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
-        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
-        "incorrect": "Start with the subject: \"I...\"",
-        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+        "correct": "Correct. Because introduces the reason.",
+        "correctEs": "Correcto. Because introduce la razón.",
+        "incorrect": "State the main idea, then add the reason with because.",
+        "incorrectEs": "Expresa la idea principal y luego añade la razón con because."
       },
       "tags": [
         "because",
@@ -2667,7 +2685,8 @@
         "vocabulary"
       ],
       "target": "connectors",
-      "reviewPriority": "medium"
+      "reviewPriority": "medium",
+      "gameMode": "sequence"
     },
     {
       "id": "MIC-WR-A2-01-01",
@@ -2689,12 +2708,20 @@
         "robot",
         "."
       ],
-      "answer": "My students are building a robot.",
+      "answer": [
+        "My",
+        "students",
+        "are",
+        "building",
+        "a",
+        "robot",
+        "."
+      ],
       "feedback": {
-        "correct": "Correct. \"I enjoy programming.\" Good sentence.",
-        "correctEs": "Correcto. \"I enjoy programming.\" Buena oración.",
-        "incorrect": "Start with the subject: \"I...\"",
-        "incorrectEs": "Comienza con el sujeto: \"I...\"."
+        "correct": "Correct. Present continuous uses subject + be + verb-ing.",
+        "correctEs": "Correcto. El presente continuo usa sujeto + be + verbo-ing.",
+        "incorrect": "Use subject + be + verb-ing.",
+        "incorrectEs": "Usa sujeto + be + verbo-ing."
       },
       "tags": [
         "word-order",
@@ -2714,7 +2741,8 @@
         "writing"
       ],
       "target": "present-continuous",
-      "reviewPriority": "medium"
+      "reviewPriority": "medium",
+      "gameMode": "sequence"
     },
     {
       "id": "MIC-VO-A2-02-01",
@@ -6089,7 +6117,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "The bus was late, ___ we took a taxi.",
       "promptEs": [
@@ -6179,7 +6207,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "She is ___ engineer.",
       "promptEs": [
@@ -6194,8 +6222,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. Usa an antes de un sonido vocálico.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "She is ___ engineer."
+      }
     },
     {
       "id": "MIC-CEFR-A1-VOCABULARY-01",
@@ -6315,7 +6342,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which phrase means “resolver un problema”?",
       "promptEs": [
@@ -6405,7 +6432,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Choose the natural phrase: ___ a decision.",
       "promptEs": [
@@ -6420,8 +6447,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. Make a decision es la colocación habitual.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "Choose the natural phrase: ___ a decision."
+      }
     },
     {
       "id": "MIC-CEFR-A1-VOCABULARY-06",
@@ -6628,7 +6654,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“The idea is promising, although the cost is unclear.” What is the writer's position?",
       "promptEs": [
@@ -6718,7 +6744,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Read: “Bus 8 leaves at 9:10.” What time does it leave?",
       "promptEs": [
@@ -6733,8 +6759,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. El mensaje indica la hora exacta de salida.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "Read: “Bus 8 leaves at 9:10.” What time does it leave?"
+      }
     },
     {
       "id": "MIC-CEFR-A1-LISTENING-01",
@@ -6810,7 +6835,7 @@
         "listening"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "listening",
       "prompt": "Listen: what solution do they suggest?",
       "promptEs": "Escucha: ¿qué solución sugieren?",
@@ -7042,7 +7067,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Explain one thing you like and one thing you do not like.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7323,7 +7348,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Give an opinion and support it with a reason.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7473,7 +7498,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Introduce yourself and say where you live.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7686,7 +7711,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write an invitation with a day and an activity.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7967,7 +7992,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write an opinion and support it with a reason.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -8106,7 +8131,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write a short message introducing yourself.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -8280,7 +8305,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -8383,7 +8408,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -8480,7 +8505,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "You don't understand. What is the best response?",
       "promptEs": "No entiendes. ¿Cuál es la mejor respuesta?",
@@ -8570,7 +8595,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which reply disagrees politely?",
       "promptEs": "¿Qué respuesta discrepa de forma cortés?",
@@ -8585,8 +8610,7 @@
         "correctEs": "Correcto. Reconocer el otro punto de vista suaviza el desacuerdo.",
         "incorrect": "Not quite. Acknowledging the other view softens disagreement.",
         "incorrectEs": "No exactamente. Reconocer el otro punto de vista suaviza el desacuerdo."
-      },
-      "memoryText": "Which reply disagrees politely?"
+      }
     },
     {
       "id": "MIC-CEFR-A2-READING-01",
@@ -8661,7 +8685,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Read: “Bus 8 leaves at 9:10.” What time does it leave?",
       "promptEs": [
@@ -8676,8 +8700,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. El mensaje indica la hora exacta de salida.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "Read: “Bus 8 leaves at 9:10.” What time does it leave?"
+      }
     },
     {
       "id": "MIC-CEFR-A2-WRITING-01",
@@ -8707,7 +8730,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write a short message introducing yourself.",
       "promptEs": "Responde con frases conectadas sobre una situación familiar.",
@@ -8831,7 +8854,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -8928,7 +8951,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which reply disagrees politely?",
       "promptEs": "¿Qué respuesta discrepa de forma cortés?",
@@ -8943,8 +8966,7 @@
         "correctEs": "Correcto. Reconocer el otro punto de vista suaviza el desacuerdo.",
         "incorrect": "Not quite. Acknowledging the other view softens disagreement.",
         "incorrectEs": "No exactamente. Reconocer el otro punto de vista suaviza el desacuerdo."
-      },
-      "memoryText": "Which reply disagrees politely?"
+      }
     },
     {
       "id": "MIC-CEFR-B1-GRAMMAR-01",
@@ -8974,7 +8996,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "complete",
       "prompt": "I have ___ this book before.",
       "promptEs": null,
@@ -9060,7 +9082,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "She asked me where I ___.",
       "promptEs": [
@@ -9075,8 +9097,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. Las preguntas indirectas usan orden afirmativo; el cambio verbal es común tras un introductor en pasado.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "She asked me where I ___."
+      }
     },
     {
       "id": "MIC-CEFR-B1-GRAMMAR-04",
@@ -9152,7 +9173,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "The adjective from “care” is ___.",
       "promptEs": [
@@ -9242,7 +9263,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which phrase introduces a cautious opinion?",
       "promptEs": [
@@ -9257,8 +9278,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. It seems that expresa una opinión matizada.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "Which phrase introduces a cautious opinion?"
+      }
     },
     {
       "id": "MIC-CEFR-B1-VOCABULARY-04",
@@ -9420,7 +9440,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“Look after” means ___.",
       "promptEs": [
@@ -9465,7 +9485,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“I packed my suitcase and checked in online.” What is likely next?",
       "promptEs": [
@@ -9555,7 +9575,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“Three users found the menu easier to navigate.” What is supported?",
       "promptEs": [
@@ -9570,8 +9590,7 @@
         "correctEs": "Correcto. undefined",
         "incorrect": "Not quite. No generalices más allá de la evidencia indicada.",
         "incorrectEs": "No exactamente. undefined"
-      },
-      "memoryText": "“Three users found the menu easier to navigate.” What is supported?"
+      }
     },
     {
       "id": "MIC-CEFR-B1-READING-04",
@@ -10021,7 +10040,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Describe a problem and suggest a solution.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10160,7 +10179,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Retell a short event using first, then and finally.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10522,7 +10541,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write steps for using a familiar device.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10663,7 +10682,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write two sentences reporting what a colleague told you.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10854,7 +10873,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -10956,7 +10975,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -11060,7 +11079,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "sequence",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "A colleague helps you. What do you say?",
       "promptEs": "Un compañero te ayuda. ¿Qué dices?",
@@ -11150,7 +11169,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "memory-recall",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "A colleague says, “I changed the plan.” What is a useful follow-up?",
       "promptEs": "Un compañero dice: «Cambié el plan». ¿Qué pregunta sirve?",
@@ -11165,8 +11184,7 @@
         "correctEs": "Correcto. Una pregunta de seguimiento pide una razón o un detalle.",
         "incorrect": "Not quite. A follow-up asks for a reason or detail.",
         "incorrectEs": "No exactamente. Una pregunta de seguimiento pide una razón o un detalle."
-      },
-      "memoryText": "A colleague says, “I changed the plan.” What is a useful follow-up?"
+      }
     },
     {
       "id": "MIC-CEFR-B1-COMMUNICATION-04",
