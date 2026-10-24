@@ -6257,7 +6257,7 @@
       "matcher": {
         "pattern": "\\bShe said that she am tired\\b",
         "flags": "gi",
-        "replacement": "She said that she was tired.",
+        "replacement": "She said that she was tired",
         "confidence": "high"
       }
     },
@@ -6357,7 +6357,7 @@
       "matcher": {
         "pattern": "\\bHe said that he be busy\\b",
         "flags": "gi",
-        "replacement": "He said that he was busy.",
+        "replacement": "He said that he was busy",
         "confidence": "high"
       }
     },
