@@ -54,7 +54,7 @@ console.log("HODIE expanded learning suite: PASS",JSON.stringify({
 }));
 
 const reportedSpeechByLevel = Object.fromEntries(["A1","A2","B1"].map(level => [level, micro.activities.filter(item => item.level === level && item.tags?.includes("reported-speech")).length]));
-assert.ok(reportedSpeechByLevel.A1 >= 4 && reportedSpeechByLevel.A2 >= 4 && reportedSpeechByLevel.B1 >= 4);
+assert.ok(reportedSpeechByLevel.A1 >= 8 && reportedSpeechByLevel.A2 >= 8 && reportedSpeechByLevel.B1 >= 8);
 assert.ok(micro.activities.some(item => item.tags?.includes("reported-speech") && item.type === "listening" && item.audioText));
 
 const coreActivityIds = content.activities.filter(item => /^ACT-(A1|A2|B1)-[A-Z]+-CORE-01$/.test(item.id));
