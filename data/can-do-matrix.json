@@ -6719,6 +6719,66 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A1-SPEAK",
+      "level": "A1",
+      "skill": "speaking",
+      "title": "Pass on a simple greeting",
+      "titleEs": "Transmitir un saludo sencillo",
+      "descriptor": "Can say what another person says in a short, familiar exchange, using a model.",
+      "descriptorEs": "Puede transmitir lo que otra persona dice en un intercambio breve y familiar, usando un modelo.",
+      "tags": [
+        "reported-speech",
+        "greetings",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+    },
+    {
+      "id": "RS-A1-WRITE",
+      "level": "A1",
+      "skill": "writing",
+      "title": "Write a simple reported message",
+      "titleEs": "Escribir un mensaje indirecto sencillo",
+      "descriptor": "Can complete a short, modelled sentence to pass on a basic message.",
+      "descriptorEs": "Puede completar una oración breve siguiendo un modelo para transmitir un mensaje básico.",
+      "tags": [
+        "reported-speech",
+        "writing",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+    },
+    {
+      "id": "RS-A2-SPEAK",
+      "level": "A2",
+      "skill": "speaking",
+      "title": "Report a familiar message",
+      "titleEs": "Transmitir un mensaje conocido",
+      "descriptor": "Can report the main point of a short, familiar statement with support.",
+      "descriptorEs": "Puede transmitir la idea principal de una afirmación breve y familiar con apoyo.",
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
+    },
+    {
+      "id": "RS-B1-SPEAK",
+      "level": "B1",
+      "skill": "speaking",
+      "title": "Summarise what someone said",
+      "titleEs": "Resumir lo que alguien dijo",
+      "descriptor": "Can relay the main points of a clear conversation or interview, preserving speakers' meaning.",
+      "descriptorEs": "Puede transmitir las ideas principales de una conversación o entrevista clara, conservando el sentido de los hablantes.",
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation."
     }
   ],
   "metaCanDos": [
