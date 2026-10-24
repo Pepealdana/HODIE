@@ -55,3 +55,12 @@ Run `npm test`. The suite builds the linguistic catalog, tests the deterministic
 ## Visible activity catalogue integration
 
 The practice home exposes a filterable catalogue for A1, A2 and B1 micro-practice with skill filters. Each result launches its selected activity by ID through the existing practice/evaluation/feedback/retry flow. Counts represent runnable micro-activities, not all full-content experiences or complete coverage of every Can-Do. Manual desktop and mobile verification is still required after deployment.
+
+
+## Expanded activity bank (October 2026)
+
+- The micro-practice library now targets at least eight activities per skill and level across A1, A2 and B1, using the eight HODIE skill strands and existing Can-Do links.
+- Activity metadata distinguishes riddles, memory recall, timed challenges, error-detection and sequence tasks. The interface renders memory recall and countdown mechanics where the underlying response type supports deterministic evaluation.
+- A dedicated Reported Speech home shortcut opens the activity catalogue with the topic filter applied. The active A1/A2/B1 pack is available locally; B2 remains separate behind the evidence-based unlock gate.
+- The complete activity library includes level-specific tasks for all eight skills. This supplements, rather than replaces, the micro-practice bank.
+- This is CEFR-informed learning content, not an official CEFR assessment or certification.
