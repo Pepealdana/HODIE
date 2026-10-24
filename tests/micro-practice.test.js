@@ -155,8 +155,8 @@ for (const [mode, expectedSkill] of [
 }
 
 const reportedSpeech = library.activities.filter((item) => item.tags?.includes("reported-speech"));
-assert.equal(reportedSpeech.length, 12);
-for (const level of ["A1", "A2", "B1"]) assert.equal(reportedSpeech.filter((item) => item.level === level).length, 4, level + " Reported Speech coverage");
+assert.ok(reportedSpeech.length >= 16);
+for (const level of ["A1", "A2", "B1"]) assert.ok(reportedSpeech.filter((item) => item.level === level).length >= 4, level + " Reported Speech coverage");
 assert.ok(reportedSpeech.every((item) => item.prompt && item.promptEs && item.feedback.correct && item.feedback.correctEs));
 
 const reportedSpeechB2Pack = JSON.parse(fs.readFileSync(new URL("../data/reported-speech-b2-pack.json", import.meta.url), "utf8"));
