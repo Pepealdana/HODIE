@@ -163,3 +163,9 @@ const reportedSpeechB2Pack = JSON.parse(fs.readFileSync(new URL("../data/reporte
 assert.equal(reportedSpeechB2Pack.activities.length, 4);
 assert.ok(reportedSpeechB2Pack.activities.every((item) => item.level === "B2" && item.unlockRequirement === "B2"));
 assert.equal(reportedSpeechB2Pack.visibility, "locked-until-evidence-gate");
+
+const reportedSpeechExpanded = library.activities.filter(item => item.tags?.includes("reported-speech"));
+assert.ok(reportedSpeechExpanded.length >= 16, "Reported Speech should have a useful cross-level practice set");
+assert.ok(reportedSpeechExpanded.some(item => item.type === "listening" && item.audioText), "Reported Speech must include real listening tasks");
+assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "speaking").length >= 8);
+assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "writing").length >= 8);
