@@ -11168,11 +11168,12 @@
         }
       ],
       "incorrect": [
-        "She said, \"I am tired.\""
+        "She said that she am tired."
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
-        "The reporting pronoun depends on who is speaking and who reports the message."
+        "The reporting pronoun depends on who is speaking and who reports the message.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
@@ -11209,13 +11210,7 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "tested",
-      "matcher": {
-        "pattern": "\\b(She) said,?\\s*[\"“]I am tired\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "$1 said that she was tired.",
-        "confidence": "high"
-      },
+      "status": "draft",
       "knowledgeAccess": {
         "scope": "global",
         "searchable": true,
@@ -11259,11 +11254,12 @@
         }
       ],
       "incorrect": [
-        "He said, \"I am busy.\""
+        "He said that he be busy."
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
-        "The reporting pronoun depends on who is speaking and who reports the message."
+        "The reporting pronoun depends on who is speaking and who reports the message.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
@@ -11300,13 +11296,7 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "tested",
-      "matcher": {
-        "pattern": "\\b(He) said,?\\s*[\"“]I am busy\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "$1 said that he was busy.",
-        "confidence": "high"
-      },
+      "status": "draft",
       "knowledgeAccess": {
         "scope": "global",
         "searchable": true,
@@ -11351,7 +11341,8 @@
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
-        "Pronouns and time/place references depend on who is reporting and the context."
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
@@ -11390,13 +11381,7 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "tested",
-      "matcher": {
-        "pattern": "\\bShe said,?\\s*[\"“]I am happy\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "She said that she was happy.",
-        "confidence": "high"
-      },
+      "status": "draft",
       "searchTerms": [
         "reported speech",
         "reported-speech",
@@ -11407,7 +11392,7 @@
         "She said that she was happy."
       ],
       "incorrect": [
-        "She said, “I am happy.”"
+        "She said that she are happy."
       ]
     },
     {
@@ -11431,7 +11416,8 @@
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
-        "Pronouns and time/place references depend on who is reporting and the context."
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
@@ -11470,13 +11456,7 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "tested",
-      "matcher": {
-        "pattern": "\\bHe said,?\\s*[\"“]I work here\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "He said that he worked there.",
-        "confidence": "high"
-      },
+      "status": "draft",
       "searchTerms": [
         "reported speech",
         "reported-speech",
@@ -11487,7 +11467,7 @@
         "He said that he worked there."
       ],
       "incorrect": [
-        "He said, “I work here.”"
+        "He said that he work there."
       ]
     },
     {
@@ -11495,13 +11475,13 @@
       "implementation": "reported-speech-she-asked-where-001",
       "level": "B1",
       "category": "grammar",
-      "title": "Use statement word order in a reported question",
-      "titleEs": "Usa orden afirmativo en una pregunta indirecta",
-      "explanation": "Reported questions use statement word order: “Where do you live?” becomes “She asked me where I lived.” This exact pattern assumes the question was addressed to the reporter.",
-      "explanationEs": "Las preguntas indirectas usan orden afirmativo: «Where do you live?» pasa a «She asked me where I lived». Este patrón concreto supone que la pregunta iba dirigida a quien la transmite.",
+      "title": "Correct word order in a reported question",
+      "titleEs": "Corrige el orden en una pregunta indirecta",
+      "explanation": "A reported question uses statement word order. “She asked me where did I live?” is incorrect in this context; use “She asked me where I lived.”",
+      "explanationEs": "Una pregunta indirecta usa orden afirmativo. «She asked me where did I live?» es incorrecto en este contexto; usa «She asked me where I lived»",
       "examples": [
-        "She asked me, “Where do you live?”",
-        "She asked me where I lived."
+        "She asked me where I lived.",
+        "He asked me what time the train left."
       ],
       "examplesBilingual": [
         {
@@ -11510,8 +11490,9 @@
         }
       ],
       "exceptions": [
-        "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
-        "Pronouns and time/place references depend on who is reporting and the context."
+        "Do not use do/does/did in the reported clause.",
+        "The tense and pronouns depend on the original question and reporting context.",
+        "Direct questions and quoted direct speech are valid and must not be rewritten automatically."
       ],
       "negativeCases": [
         {
@@ -11520,7 +11501,11 @@
         },
         {
           "text": "She asked me where I lived.",
-          "reason": "This report is already correct."
+          "reason": "This is already a correct reported question."
+        },
+        {
+          "text": "She asked me, “Where do you live?”",
+          "reason": "Direct speech is valid and must not be rewritten."
         }
       ],
       "practice": [
@@ -11552,7 +11537,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\bShe asked me,?\\s*[\"“]Where do you live\\?[\"”]",
+        "pattern": "\\\\bShe asked me where did I live\\\\?",
         "flags": "gi",
         "replacement": "She asked me where I lived.",
         "confidence": "high"
@@ -11567,7 +11552,8 @@
         "She asked me where I lived."
       ],
       "incorrect": [
-        "She asked me, “Where do you live?”"
+        "She asked me where did I live?",
+        "He asked me what time did the train leave."
       ]
     },
     {
@@ -11591,7 +11577,8 @@
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
-        "Pronouns and time/place references depend on who is reporting and the context."
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
@@ -11630,13 +11617,7 @@
       },
       "severity": "medium",
       "priority": "high",
-      "status": "tested",
-      "matcher": {
-        "pattern": "\\bHe said,?\\s*[\"“]I can help\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "He said that he could help.",
-        "confidence": "high"
-      },
+      "status": "draft",
       "searchTerms": [
         "reported speech",
         "reported-speech",
@@ -11647,7 +11628,7 @@
         "He said that he could help."
       ],
       "incorrect": [
-        "He said, “I can help.”"
+        "He said that he can to help."
       ]
     },
     {
@@ -34449,36 +34430,12 @@
       "expectCorrection": "She says, \"I am tired.\""
     },
     {
-      "id": "TC-REPORTED-SPEECH-SHE-HAPPY-001",
-      "text": "She said, \"I am happy.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-SHE-HAPPY-001"
-      ],
-      "expectCorrection": "She said that she was happy."
-    },
-    {
-      "id": "TC-REPORTED-SPEECH-HE-WORK-HERE-001",
-      "text": "He said, \"I work here.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-HE-WORK-HERE-001"
-      ],
-      "expectCorrection": "He said that he worked there."
-    },
-    {
       "id": "TC-REPORTED-SPEECH-SHE-ASKED-WHERE-001",
-      "text": "She asked me, \"Where do you live?\"",
+      "text": "She asked me where did I live?",
       "expectRules": [
         "REPORTED-SPEECH-SHE-ASKED-WHERE-001"
       ],
       "expectCorrection": "She asked me where I lived."
-    },
-    {
-      "id": "TC-REPORTED-SPEECH-HE-CAN-HELP-001",
-      "text": "He said, \"I can help.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-HE-CAN-HELP-001"
-      ],
-      "expectCorrection": "He said that he could help."
     }
   ],
   "cefrDimensions": {
