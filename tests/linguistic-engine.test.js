@@ -117,3 +117,20 @@ assert.ok(catalog.grammarRules.some((rule) => rule.id === "REPORTED-SPEECH-SHE-A
 assert.ok(catalog.grammarRules.some((rule) => rule.id === "REPORTED-SPEECH-HE-AM-BUSY-001" && rule.status === "tested"));
 assert.equal(linguisticCatalog.schemaVersion, catalog.schemaVersion);
 console.log("HODIE linguistic catalog and open-vocabulary engine: PASS");
+
+for (const [input, expected] of [
+  ['She said, "I am happy."', "She said that she was happy."],
+  ['He said, "I work here."', "He said that he worked there."],
+  ['She asked me, "Where do you live?"', "She asked me where I lived."],
+  ['He said, "I can help."', "He said that he could help."]
+]) {
+  const result = analyzeLanguage(input);
+  assert.equal(result.correctedText, expected, input);
+  assert.ok(result.errors.some(error => error.ruleId.startsWith("REPORTED-SPEECH-")), input);
+}
+for (const valid of [
+  'She says, "I am happy."',
+  "She said that she was happy.",
+  "Where do you live?",
+  "He said that he could help."
+]) assert.equal(analyzeLanguage(valid).errors.filter(error => error.ruleId.startsWith("REPORTED-SPEECH-")).length, 0, valid);
