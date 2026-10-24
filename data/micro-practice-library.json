@@ -11726,7 +11726,9 @@
         "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
         "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
         "short": "Write a complete sentence and include the speaker plus the reported message.",
-        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido.",
+        "correct": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "correctEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria."
       },
       "tags": [
         "reported-speech",
@@ -11856,7 +11858,9 @@
         "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
         "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
         "short": "Write a complete sentence and include the speaker plus the reported message.",
-        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido.",
+        "correct": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "correctEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria."
       },
       "tags": [
         "reported-speech",
@@ -11996,7 +12000,9 @@
         "ready": "Your report preserves the main message. Review the pronoun and reporting pattern.",
         "readyEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria.",
         "short": "Write a complete sentence and include the speaker plus the reported message.",
-        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido."
+        "shortEs": "Escribe una oración completa e incluye quién habla y el mensaje transmitido.",
+        "correct": "Your report preserves the main message. Review the pronoun and reporting pattern.",
+        "correctEs": "Tu reporte conserva el mensaje principal. Revisa el pronombre y la estructura introductoria."
       },
       "tags": [
         "reported-speech",
