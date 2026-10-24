@@ -6442,7 +6442,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\bShe said,?\\\\s*[\"“]I am happy\\\\.?[\"”]",
+        "pattern": "\\bShe said,?\\s*[\"“]I am happy\\.?[\"”]",
         "flags": "gi",
         "replacement": "She said that she was happy.",
         "confidence": "high"
@@ -6515,7 +6515,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\bHe said,?\\\\s*[\"“]I work here\\\\.?[\"”]",
+        "pattern": "\\bHe said,?\\s*[\"“]I work here\\.?[\"”]",
         "flags": "gi",
         "replacement": "He said that he worked there.",
         "confidence": "high"
@@ -6588,7 +6588,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\bShe asked me,?\\\\s*[\"“]Where do you live\\\\?[\"”]",
+        "pattern": "\\bShe asked me,?\\s*[\"“]Where do you live\\?[\"”]",
         "flags": "gi",
         "replacement": "She asked me where I lived.",
         "confidence": "high"
@@ -6661,7 +6661,7 @@
       "priority": "high",
       "status": "tested",
       "matcher": {
-        "pattern": "\\\\bHe said,?\\\\s*[\"“]I can help\\\\.?[\"”]",
+        "pattern": "\\bHe said,?\\s*[\"“]I can help\\.?[\"”]",
         "flags": "gi",
         "replacement": "He said that he could help.",
         "confidence": "high"
