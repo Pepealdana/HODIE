@@ -178,3 +178,9 @@ for (const activity of library.activities) {
   assert.equal(goal.level, activity.level, activity.id + " must link to the same level");
   assert.ok(goal.skill === activity.skill || goal.skill === activity.primarySkill, activity.id + " must link to its exercise skill or primary learning skill");
 }
+
+assert.ok(library.activities.some(item => item.gameMode === "timed-challenge" && item.timeLimitSeconds > 0 && ["choose","complete","match","listening","order"].includes(item.type)));
+assert.ok(library.activities.some(item => item.gameMode === "memory-recall" && item.type === "listening" && item.memoryText));
+assert.ok(library.activities.some(item => item.gameMode === "riddle"));
+assert.ok(library.activities.some(item => item.gameMode === "error-detective"));
+assert.ok(library.activities.some(item => item.gameMode === "sequence" && item.type === "order"));
