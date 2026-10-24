@@ -41,6 +41,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -81,6 +84,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -126,6 +132,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -166,6 +175,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -205,7 +217,10 @@
         "key-information",
         "listening"
       ],
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-06",
@@ -253,7 +268,10 @@
         "slowRate": 0.62,
         "language": "en-US"
       },
-      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher"
+      "pronunciationHint": "ai am a tek-NÓ-lo-yi and rou-BÓ-tiks TÍ-cher",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-07",
@@ -328,7 +346,10 @@
         "personal-preference",
         "speaking"
       ],
-      "reviewPriority": "high"
+      "reviewPriority": "high",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-08",
@@ -370,6 +391,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -410,6 +434,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -451,6 +478,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -493,6 +523,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -531,7 +564,10 @@
         "listening"
       ],
       "reviewPriority": "high",
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-13",
@@ -570,7 +606,10 @@
         "listening"
       ],
       "reviewPriority": "high",
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-14",
@@ -645,7 +684,10 @@
         "personal-preference",
         "writing"
       ],
-      "reviewPriority": "high"
+      "reviewPriority": "high",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-01-15",
@@ -686,6 +728,9 @@
         "work",
         "works",
         "working"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -725,6 +770,9 @@
       ],
       "acceptableAnswers": [
         "work"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -766,6 +814,9 @@
         "building",
         "build",
         "builds"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -813,6 +864,9 @@
         "work",
         "with",
         "students"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -854,6 +908,9 @@
         "robotics",
         "Monday",
         "quickly"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -895,6 +952,9 @@
         "profesor",
         "estudiante",
         "escuela"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -936,6 +996,9 @@
         "school",
         "robot",
         "students"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -977,6 +1040,9 @@
         "trabajar con",
         "trabajar en",
         "enseñar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
       ]
     },
     {
@@ -1025,7 +1091,10 @@
         "slowRate": 0.62,
         "language": "en-US"
       },
-      "pronunciationHint": "ai work with STÚ-dents and bild RÓ-bots"
+      "pronunciationHint": "ai work with STÚ-dents and bild RÓ-bots",
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     },
     {
       "id": "MIC-SP-A2-02-01",
@@ -1067,6 +1136,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-02"
       ]
     },
     {
@@ -1107,6 +1179,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-02"
       ]
     },
     {
@@ -1154,6 +1229,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-02"
       ]
     },
     {
@@ -1194,6 +1272,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-02"
       ]
     },
     {
@@ -1232,7 +1313,10 @@
         "key-information",
         "listening"
       ],
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-02"
+      ]
     },
     {
       "id": "MIC-SP-A2-02-06",
@@ -1280,7 +1364,10 @@
         "language": "en-US"
       },
       "resources": [],
-      "pronunciationHint": "ai jav a smol FÁ-mi-li. ai liv with mai PÉ-rents"
+      "pronunciationHint": "ai jav a smol FÁ-mi-li. ai liv with mai PÉ-rents",
+      "relatedCanDoIds": [
+        "SP-A2-02"
+      ]
     },
     {
       "id": "MIC-SP-A2-02-07",
@@ -1355,7 +1442,10 @@
         "speaking"
       ],
       "reviewPriority": "high",
-      "errorTarget": "family-description"
+      "errorTarget": "family-description",
+      "relatedCanDoIds": [
+        "SP-A2-02"
+      ]
     },
     {
       "id": "MIC-SP-A2-02-08",
@@ -1429,7 +1519,10 @@
         "family",
         "writing"
       ],
-      "reviewPriority": "high"
+      "reviewPriority": "high",
+      "relatedCanDoIds": [
+        "SP-A2-02"
+      ]
     },
     {
       "id": "MIC-SP-A2-03-01",
@@ -1471,6 +1564,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-03"
       ]
     },
     {
@@ -1511,6 +1607,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-03"
       ]
     },
     {
@@ -1560,6 +1659,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-03"
       ]
     },
     {
@@ -1600,6 +1702,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-03"
       ]
     },
     {
@@ -1638,7 +1743,10 @@
         "time-information",
         "listening"
       ],
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-03"
+      ]
     },
     {
       "id": "MIC-SP-A2-03-06",
@@ -1687,7 +1795,10 @@
         "language": "en-US"
       },
       "resources": [],
-      "pronunciationHint": "ai get ap at siks and gou tu work in de MÓR-ning"
+      "pronunciationHint": "ai get ap at siks and gou tu work in de MÓR-ning",
+      "relatedCanDoIds": [
+        "SP-A2-03"
+      ]
     },
     {
       "id": "MIC-SP-A2-03-07",
@@ -1760,7 +1871,10 @@
         "speaking"
       ],
       "reviewPriority": "high",
-      "errorTarget": "routine-description"
+      "errorTarget": "routine-description",
+      "relatedCanDoIds": [
+        "SP-A2-03"
+      ]
     },
     {
       "id": "MIC-SP-A2-03-08",
@@ -1832,7 +1946,10 @@
         "routine",
         "writing"
       ],
-      "reviewPriority": "high"
+      "reviewPriority": "high",
+      "relatedCanDoIds": [
+        "SP-A2-03"
+      ]
     },
     {
       "id": "MIC-SP-A2-04-01",
@@ -1874,6 +1991,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-04"
       ]
     },
     {
@@ -1914,6 +2034,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-04"
       ]
     },
     {
@@ -1965,6 +2088,9 @@
       "primarySkill": "speaking",
       "resources": [
         "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-04"
       ]
     },
     {
@@ -2005,6 +2131,9 @@
       "primarySkill": "speaking",
       "resources": [
         "vocabulary"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-04"
       ]
     },
     {
@@ -2043,7 +2172,10 @@
         "preference-detail",
         "listening"
       ],
-      "primarySkill": "listening"
+      "primarySkill": "listening",
+      "relatedCanDoIds": [
+        "SP-A2-04"
+      ]
     },
     {
       "id": "MIC-SP-A2-04-06",
@@ -2092,7 +2224,10 @@
         "language": "en-US"
       },
       "resources": [],
-      "pronunciationHint": "ai laik BÍL-ding RÓ-bots, bat ai dount laik GÉ-ting ap ÉR-li"
+      "pronunciationHint": "ai laik BÍL-ding RÓ-bots, bat ai dount laik GÉ-ting ap ÉR-li",
+      "relatedCanDoIds": [
+        "SP-A2-04"
+      ]
     },
     {
       "id": "MIC-SP-A2-04-07",
@@ -2165,7 +2300,10 @@
         "speaking"
       ],
       "reviewPriority": "high",
-      "errorTarget": "preference-description"
+      "errorTarget": "preference-description",
+      "relatedCanDoIds": [
+        "SP-A2-04"
+      ]
     },
     {
       "id": "MIC-SP-A2-04-08",
@@ -2237,7 +2375,10 @@
         "preferences",
         "writing"
       ],
-      "reviewPriority": "high"
+      "reviewPriority": "high",
+      "relatedCanDoIds": [
+        "SP-A2-04"
+      ]
     },
     {
       "id": "MIC-GR-A2-01-01",
