@@ -169,3 +169,12 @@ assert.ok(reportedSpeechExpanded.length >= 16, "Reported Speech should have a us
 assert.ok(reportedSpeechExpanded.some(item => item.type === "listening" && item.audioText), "Reported Speech must include real listening tasks");
 assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "speaking").length >= 8);
 assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "writing").length >= 8);
+
+const canDoMatrixForMicro = JSON.parse(fs.readFileSync(new URL("../data/can-do-matrix.json", import.meta.url), "utf8"));
+const canDoById = new Map(canDoMatrixForMicro.canDos.map(item => [item.id, item]));
+for (const activity of library.activities) {
+  const goal = canDoById.get(activity.canDoId);
+  assert.ok(goal, activity.id + " must link to an existing Can-Do");
+  assert.equal(goal.level, activity.level, activity.id + " must link to the same level");
+  assert.equal(goal.skill, activity.skill, activity.id + " must link to the same skill");
+}
