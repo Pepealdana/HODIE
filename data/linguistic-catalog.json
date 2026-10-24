@@ -34410,18 +34410,14 @@
     {
       "id": "TC-REPORTED-SPEECH-SHE-TIRED-001",
       "text": "She said, \"I am tired.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-SHE-AM-TIRED-001"
-      ],
-      "expectCorrection": "She said that she was tired."
+      "expectRules": [],
+      "expectCorrection": "She said, \"I am tired.\""
     },
     {
       "id": "TC-REPORTED-SPEECH-HE-BUSY-001",
       "text": "He said, \"I am busy.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-HE-AM-BUSY-001"
-      ],
-      "expectCorrection": "He said that he was busy."
+      "expectRules": [],
+      "expectCorrection": "He said, \"I am busy.\""
     },
     {
       "id": "TC-REPORTED-SPEECH-VALID-001",
