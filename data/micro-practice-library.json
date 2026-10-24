@@ -5841,7 +5841,7 @@
       ],
       "languageResource": "grammar",
       "knowledgeScope": "global",
-      "gameMode": "riddle"
+      "gameMode": "quick-recall"
     },
     {
       "id": "MIC-RS-A1-06",
@@ -5943,7 +5943,7 @@
       ],
       "languageResource": "grammar",
       "knowledgeScope": "global",
-      "gameMode": "error-detective"
+      "gameMode": "quick-recall"
     },
     {
       "id": "MIC-RS-A2-06",
@@ -5993,7 +5993,7 @@
       ],
       "languageResource": "grammar",
       "knowledgeScope": "global",
-      "gameMode": "riddle"
+      "gameMode": "quick-recall"
     },
     {
       "id": "MIC-RS-B1-05",
@@ -6043,7 +6043,7 @@
       ],
       "languageResource": "grammar",
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "timeLimitSeconds": 30
     },
     {
@@ -6172,7 +6172,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "You ___ save a copy before editing the file.",
       "promptEs": [
@@ -6303,7 +6303,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "She asked me where I ___.",
       "promptEs": [
@@ -6393,7 +6393,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "A person with a sore throat may visit a ___.",
       "promptEs": [
@@ -6528,7 +6528,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which phrase introduces a cautious opinion?",
       "promptEs": [
@@ -6664,7 +6664,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "complete",
       "prompt": "A person who repairs electrical systems is an ___.",
       "promptEs": null,
@@ -6840,7 +6840,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“Three users found the menu easier to navigate.” What is supported?",
       "promptEs": [
@@ -7022,7 +7022,7 @@
         "listening"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "listening",
       "prompt": "Listen and choose the balanced report.",
       "promptEs": "Escucha y elige el reporte equilibrado.",
@@ -7162,7 +7162,7 @@
         "listening"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "listening",
       "prompt": "Listen and choose the direction.",
       "promptEs": "Escucha y elige la dirección.",
@@ -7350,7 +7350,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Explain a plan and why you want to do it.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7560,7 +7560,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Retell a short event using first, then and finally.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7781,7 +7781,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write a short paragraph about your routine.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -7993,7 +7993,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write a polite email asking to change an appointment.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -8204,7 +8204,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write two sentences reporting what a colleague told you.",
       "promptEs": "Responde con frases cortas y conocidas.",
@@ -8344,7 +8344,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -8497,7 +8497,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -8691,7 +8691,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "A colleague says, “I changed the plan.” What is a useful follow-up?",
       "promptEs": "Un compañero dice: «Cambié el plan». ¿Qué pregunta sirve?",
@@ -8781,7 +8781,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“Three users found the menu easier to navigate.” What is supported?",
       "promptEs": [
@@ -8943,7 +8943,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -9047,7 +9047,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "A colleague says, “I changed the plan.” What is a useful follow-up?",
       "promptEs": "Un compañero dice: «Cambié el plan». ¿Qué pregunta sirve?",
@@ -9178,7 +9178,7 @@
         "grammar"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "The bus was late, ___ we took a taxi.",
       "promptEs": [
@@ -9359,7 +9359,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "Which phrase means “resolver un problema”?",
       "promptEs": [
@@ -9495,7 +9495,7 @@
         "vocabulary"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "match",
       "prompt": "Where do passengers show passports before boarding?",
       "promptEs": [
@@ -9671,7 +9671,7 @@
         "reading"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "“The idea is promising, although the cost is unclear.” What is the writer's position?",
       "promptEs": [
@@ -9807,7 +9807,7 @@
         "listening"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "listening",
       "prompt": "Listen: what solution do they suggest?",
       "promptEs": "Escucha: ¿qué solución sugieren?",
@@ -9947,7 +9947,7 @@
         "listening"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "listening",
       "prompt": "Listen: what time is the appointment?",
       "promptEs": "Escucha: ¿a qué hora es la cita?",
@@ -10039,7 +10039,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Describe a person and give a reason for your description.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10249,7 +10249,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Give an opinion and support it with a reason.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10470,7 +10470,7 @@
         "speaking"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Describe two things you usually do and when you do them.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10541,7 +10541,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "error-detective",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Describe a place and say why you like it.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -10752,7 +10752,7 @@
         "writing"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "mini-production",
       "prompt": "Write an opinion and support it with a reason.",
       "promptEs": "Desarrolla una respuesta clara con detalles y conectores.",
@@ -11065,7 +11065,7 @@
         "pronunciation"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "speak",
       "prompt": "Listen to the model, then repeat it clearly.",
       "promptEs": "Escucha el modelo y repítelo con claridad.",
@@ -11265,7 +11265,7 @@
         "communication"
       ],
       "knowledgeScope": "global",
-      "gameMode": "riddle",
+      "gameMode": "quick-recall",
       "type": "choose",
       "prompt": "You don't understand. What is the best response?",
       "promptEs": "No entiendes. ¿Cuál es la mejor respuesta?",
@@ -11372,6 +11372,282 @@
         "incorrectEs": "No exactamente. Reconocer el otro punto de vista suaviza el desacuerdo."
       },
       "timeLimitSeconds": 45
+    },
+    {
+      "id": "MIC-GAME-RIDDLE-A1-01",
+      "canDoId": "VO-A1-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "level": "A1",
+      "context": "daily-life",
+      "title": "Riddle: the thing with pages",
+      "titleEs": "Acertijo: el objeto con páginas",
+      "prompt": "I have pages and words. You can read me. What am I?",
+      "promptEs": "Tengo páginas y palabras. Puedes leerme. ¿Qué soy?",
+      "options": [
+        "A book",
+        "A shoe",
+        "A spoon"
+      ],
+      "answer": "A book",
+      "feedback": {
+        "correct": "A book has pages and words.",
+        "correctEs": "Un libro tiene páginas y palabras.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "a1",
+        "vocabulary",
+        "riddle",
+        "game-based"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "riddle",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "vocabulary",
+        "riddle"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "riddle"
+    },
+    {
+      "id": "MIC-GAME-RIDDLE-A2-01",
+      "canDoId": "VO-A2-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "level": "A2",
+      "context": "daily-life",
+      "title": "Riddle: borrow, don't buy",
+      "titleEs": "Acertijo: pedir prestado, no comprar",
+      "prompt": "You can borrow books here, read quietly and return them later. Where are you?",
+      "promptEs": "Aquí puedes pedir libros prestados, leer en silencio y devolverlos después. ¿Dónde estás?",
+      "options": [
+        "At a library",
+        "At a bakery",
+        "At a station"
+      ],
+      "answer": "At a library",
+      "feedback": {
+        "correct": "A library lends books.",
+        "correctEs": "Una biblioteca presta libros.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "a2",
+        "vocabulary",
+        "riddle",
+        "game-based"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "riddle",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "vocabulary",
+        "riddle"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "riddle"
+    },
+    {
+      "id": "MIC-GAME-RIDDLE-B1-01",
+      "canDoId": "VO-B1-01",
+      "type": "choose",
+      "skill": "vocabulary",
+      "level": "B1",
+      "context": "daily-life",
+      "title": "Riddle: evidence and sources",
+      "titleEs": "Acertijo: evidencia y fuentes",
+      "prompt": "I present information about a topic, often with evidence and sources, so readers can understand a finding. What am I?",
+      "promptEs": "Presento información sobre un tema, a menudo con evidencias y fuentes, para que los lectores comprendan un hallazgo. ¿Qué soy?",
+      "options": [
+        "A report",
+        "A greeting",
+        "A shopping list"
+      ],
+      "answer": "A report",
+      "feedback": {
+        "correct": "A report presents findings and supporting information.",
+        "correctEs": "Un informe presenta hallazgos e información de apoyo.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "b1",
+        "vocabulary",
+        "riddle",
+        "game-based"
+      ],
+      "errorType": "vocabulary",
+      "errorTarget": "riddle",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "vocabulary",
+        "riddle"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "vocabulary",
+      "resources": [
+        "vocabulary"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "riddle"
+    },
+    {
+      "id": "MIC-GAME-ERROR-A1-01",
+      "canDoId": "GR-A1-01",
+      "type": "choose",
+      "skill": "grammar",
+      "level": "A1",
+      "context": "daily-life",
+      "title": "Error detective: be",
+      "titleEs": "Detective de errores: be",
+      "prompt": "Which sentence has a grammar mistake?",
+      "promptEs": "¿Qué oración tiene un error gramatical?",
+      "options": [
+        "She are my friend.",
+        "She is my friend.",
+        "They are my friends."
+      ],
+      "answer": "She are my friend.",
+      "feedback": {
+        "correct": "She takes is, not are.",
+        "correctEs": "She lleva is, no are.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "a1",
+        "grammar",
+        "error-detective",
+        "game-based"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "error-detective",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar",
+        "error-detective"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "error-detective"
+    },
+    {
+      "id": "MIC-GAME-ERROR-A2-01",
+      "canDoId": "GR-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "level": "A2",
+      "context": "daily-life",
+      "title": "Error detective: past simple",
+      "titleEs": "Detective de errores: pasado simple",
+      "prompt": "Which sentence has a grammar mistake?",
+      "promptEs": "¿Qué oración tiene un error gramatical?",
+      "options": [
+        "We visited the museum yesterday.",
+        "He didn't went to work.",
+        "They were at home."
+      ],
+      "answer": "He didn't went to work.",
+      "feedback": {
+        "correct": "After didn't, use the base form: go.",
+        "correctEs": "Después de didn't, usa la forma base: go.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "a2",
+        "grammar",
+        "error-detective",
+        "game-based"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "error-detective",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "grammar",
+        "error-detective"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "grammar",
+      "resources": [
+        "grammar"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "error-detective"
+    },
+    {
+      "id": "MIC-GAME-ERROR-B1-01",
+      "canDoId": "CO-B1-01",
+      "type": "choose",
+      "skill": "communication",
+      "level": "B1",
+      "context": "daily-life",
+      "title": "Error detective: indirect questions",
+      "titleEs": "Detective de errores: preguntas indirectas",
+      "prompt": "Which sentence has a word-order mistake?",
+      "promptEs": "¿Qué oración tiene un error de orden?",
+      "options": [
+        "She asked where I lived.",
+        "He asked me what time the train left.",
+        "They asked where did we work."
+      ],
+      "answer": "They asked where did we work.",
+      "feedback": {
+        "correct": "Reported questions use statement word order: where we worked.",
+        "correctEs": "Las preguntas indirectas usan orden afirmativo: where we worked.",
+        "incorrect": "Check the clue and try again.",
+        "incorrectEs": "Revisa la pista e inténtalo de nuevo."
+      },
+      "tags": [
+        "cefr-informed",
+        "b1",
+        "communication",
+        "error-detective",
+        "game-based"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "error-detective",
+      "errorSeverity": "medium",
+      "errorPriority": "medium",
+      "reviewTargets": [
+        "communication",
+        "error-detective"
+      ],
+      "reviewPriority": "medium",
+      "primarySkill": "communication",
+      "resources": [
+        "communication"
+      ],
+      "knowledgeScope": "global",
+      "gameMode": "error-detective"
     }
   ]
 }
