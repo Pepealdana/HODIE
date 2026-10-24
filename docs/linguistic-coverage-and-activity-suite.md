@@ -64,3 +64,5 @@ The practice home exposes a filterable catalogue for A1, A2 and B1 micro-practic
 - A dedicated Reported Speech home shortcut opens the activity catalogue with the topic filter applied. The active A1/A2/B1 pack is available locally; B2 remains separate behind the evidence-based unlock gate.
 - The complete activity library includes level-specific tasks for all eight skills. This supplements, rather than replaces, the micro-practice bank.
 - This is CEFR-informed learning content, not an official CEFR assessment or certification.
+
+- Every micro-activity links to a Can-Do at the same CEFR level and skill. A1 foundational Can-Dos are explicit; Reported Speech has separate writing Can-Dos for A2 and B1 instead of incorrectly linking writing tasks to communication targets.
