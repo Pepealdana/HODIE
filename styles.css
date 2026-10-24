@@ -1101,3 +1101,5 @@ html[data-theme="dark"] body { background: #101827; }
 .memory-challenge { margin:0 0 12px; padding:12px; border:1px dashed var(--line); border-radius:12px; background:var(--surface-alt); }
 .memory-challenge p { margin:8px 0; }
 @media (max-width:520px) { .reported-speech-shortcut { grid-template-columns:auto minmax(0,1fr); } .reported-speech-shortcut > button { grid-column:1 / -1; width:100%; } }
+
+.activity-timeout-note { margin:0 0 10px; padding:10px 12px; border-radius:10px; background:var(--surface-alt); border:1px solid var(--line); line-height:1.45; }
