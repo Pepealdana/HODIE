@@ -3,9 +3,14 @@
   "project": "HODIE",
   "framework": "CEFR-aligned functional Can-Do model",
   "scope": {
-    "from": "A1",
+    "from": "A2",
     "to": "B1",
-    "note": "HODIE estimates functional progress using CEFR-informed Can-Do evidence; it does not provide official CEFR certification."
+    "note": "A1 can be selected manually for diagnostics and recovery. Normal progression uses CEFR-informed prerequisite evidence; this is not official CEFR certification.",
+    "manualLevels": [
+      "A1",
+      "A2",
+      "B1"
+    ]
   },
   "philosophy": "Can-Do -> Try -> Evidence -> Gap -> Practice -> Retry -> Master",
   "confidenceScale": [
@@ -6673,7 +6678,9 @@
       "priority": "high",
       "canDo": "I can write a clear account of what someone said, asked or requested, preserving the main meaning.",
       "spanish": "Puedo redactar una explicación clara de lo que alguien dijo, preguntó o pidió, conservando el sentido principal.",
-      "prerequisites": [],
+      "prerequisites": [
+        "WR-A2-01"
+      ],
       "languageResources": {
         "grammar": [
           "reported-speech",
