@@ -3,9 +3,9 @@
   "project": "HODIE",
   "framework": "CEFR-aligned functional Can-Do model",
   "scope": {
-    "from": "A2",
+    "from": "A1",
     "to": "B1",
-    "note": "HODIE estimates functional progress; it does not provide official CEFR certification."
+    "note": "HODIE estimates functional progress using CEFR-informed Can-Do evidence; it does not provide official CEFR certification."
   },
   "philosophy": "Can-Do -> Try -> Evidence -> Gap -> Practice -> Retry -> Master",
   "confidenceScale": [
@@ -6605,6 +6605,100 @@
       "mastery": {
         "taskCompletion": 0.75,
         "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A2-WRITE",
+      "skill": "writing",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can write short reports of simple messages and statements using familiar language.",
+      "spanish": "Puedo escribir reportes breves de mensajes y afirmaciones sencillas con lenguaje conocido.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Write a short message reporting what someone said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B1-WRITE",
+      "skill": "writing",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can write a clear account of what someone said, asked or requested, preserving the main meaning.",
+      "spanish": "Puedo redactar una explicación clara de lo que alguien dijo, preguntó o pidió, conservando el sentido principal.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Write a short account of a conversation using reported speech."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
       },
       "recovery": [],
       "feedback": {
