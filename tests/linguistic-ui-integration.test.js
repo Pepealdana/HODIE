@@ -55,3 +55,5 @@ assert.ok(app.includes("reportedSpeechShortcut"));
 assert.ok(app.includes("renderMemoryChallenge"));
 assert.ok(app.includes("startTimedChallenge"));
 assert.ok(app.includes("reported speech"));
+
+assert.ok(app.includes('home.querySelector("#activityCatalog")'));
