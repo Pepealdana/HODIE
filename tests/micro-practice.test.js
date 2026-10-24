@@ -88,7 +88,7 @@ for (const [canDoId, productionResponse] of [
   ["SP-A2-03", "I get up at six. I have breakfast and I go to work in the morning."],
   ["SP-A2-04", "I like building robots, but I don't like getting up early because I am tired."]
 ]) {
-  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId);
+  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId || item.relatedCanDoIds?.includes(canDoId));
   assert.ok(targetActivities.length >= 7, `Missing micro-practice coverage for ${canDoId}`);
   const targetMixed = selectMicroActivities(library, { canDoId, mode: "mixed", limit: 6 });
   assert.equal(targetMixed.length, 6, `Mixed practice should be available for ${canDoId}`);
