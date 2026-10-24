@@ -3,7 +3,7 @@
   "activities": [
     {
       "id": "MIC-SP-A2-01-01",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "professional",
@@ -45,7 +45,7 @@
     },
     {
       "id": "MIC-SP-A2-01-02",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "professional",
@@ -85,7 +85,7 @@
     },
     {
       "id": "MIC-SP-A2-01-03",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "order",
       "skill": "grammar",
       "context": "personal",
@@ -130,7 +130,7 @@
     },
     {
       "id": "MIC-SP-A2-01-04",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "professional",
@@ -170,7 +170,7 @@
     },
     {
       "id": "MIC-SP-A2-01-05",
-      "canDoId": "SP-A2-01",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "professional",
@@ -332,7 +332,7 @@
     },
     {
       "id": "MIC-SP-A2-01-08",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "professional",
@@ -374,7 +374,7 @@
     },
     {
       "id": "MIC-SP-A2-01-09",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "professional",
@@ -414,7 +414,7 @@
     },
     {
       "id": "MIC-SP-A2-01-10",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "professional",
@@ -455,7 +455,7 @@
     },
     {
       "id": "MIC-SP-A2-01-11",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "choose",
       "skill": "vocabulary",
       "context": "professional",
@@ -497,7 +497,7 @@
     },
     {
       "id": "MIC-SP-A2-01-12",
-      "canDoId": "SP-A2-01",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "professional",
@@ -535,7 +535,7 @@
     },
     {
       "id": "MIC-SP-A2-01-13",
-      "canDoId": "SP-A2-01",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "professional",
@@ -574,7 +574,7 @@
     },
     {
       "id": "MIC-SP-A2-01-14",
-      "canDoId": "SP-A2-01",
+      "canDoId": "WR-A2-01",
       "type": "mini-production",
       "skill": "writing",
       "context": "professional",
@@ -649,7 +649,7 @@
     },
     {
       "id": "MIC-SP-A2-01-15",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "professional",
@@ -690,7 +690,7 @@
     },
     {
       "id": "MIC-SP-A2-01-16",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "professional",
@@ -729,7 +729,7 @@
     },
     {
       "id": "MIC-SP-A2-01-17",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "professional",
@@ -770,7 +770,7 @@
     },
     {
       "id": "MIC-SP-A2-01-18",
-      "canDoId": "SP-A2-01",
+      "canDoId": "GR-A2-01",
       "type": "order",
       "skill": "grammar",
       "context": "professional",
@@ -817,7 +817,7 @@
     },
     {
       "id": "MIC-SP-A2-01-19",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "choose",
       "skill": "vocabulary",
       "context": "professional",
@@ -858,7 +858,7 @@
     },
     {
       "id": "MIC-SP-A2-01-20",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "professional",
@@ -899,7 +899,7 @@
     },
     {
       "id": "MIC-SP-A2-01-21",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "choose",
       "skill": "vocabulary",
       "context": "professional",
@@ -940,7 +940,7 @@
     },
     {
       "id": "MIC-SP-A2-01-22",
-      "canDoId": "SP-A2-01",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "professional",
@@ -1029,7 +1029,7 @@
     },
     {
       "id": "MIC-SP-A2-02-01",
-      "canDoId": "SP-A2-02",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "family",
@@ -1071,7 +1071,7 @@
     },
     {
       "id": "MIC-SP-A2-02-02",
-      "canDoId": "SP-A2-02",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "family",
@@ -1111,7 +1111,7 @@
     },
     {
       "id": "MIC-SP-A2-02-03",
-      "canDoId": "SP-A2-02",
+      "canDoId": "GR-A2-01",
       "type": "order",
       "skill": "grammar",
       "context": "family",
@@ -1158,7 +1158,7 @@
     },
     {
       "id": "MIC-SP-A2-02-04",
-      "canDoId": "SP-A2-02",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "family",
@@ -1198,7 +1198,7 @@
     },
     {
       "id": "MIC-SP-A2-02-05",
-      "canDoId": "SP-A2-02",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "family",
@@ -1359,7 +1359,7 @@
     },
     {
       "id": "MIC-SP-A2-02-08",
-      "canDoId": "SP-A2-02",
+      "canDoId": "WR-A2-01",
       "type": "mini-production",
       "skill": "writing",
       "context": "family",
@@ -1433,7 +1433,7 @@
     },
     {
       "id": "MIC-SP-A2-03-01",
-      "canDoId": "SP-A2-03",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "daily-life",
@@ -1475,7 +1475,7 @@
     },
     {
       "id": "MIC-SP-A2-03-02",
-      "canDoId": "SP-A2-03",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "daily-life",
@@ -1515,7 +1515,7 @@
     },
     {
       "id": "MIC-SP-A2-03-03",
-      "canDoId": "SP-A2-03",
+      "canDoId": "GR-A2-01",
       "type": "order",
       "skill": "grammar",
       "context": "daily-life",
@@ -1564,7 +1564,7 @@
     },
     {
       "id": "MIC-SP-A2-03-04",
-      "canDoId": "SP-A2-03",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "daily-life",
@@ -1604,7 +1604,7 @@
     },
     {
       "id": "MIC-SP-A2-03-05",
-      "canDoId": "SP-A2-03",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "daily-life",
@@ -1764,7 +1764,7 @@
     },
     {
       "id": "MIC-SP-A2-03-08",
-      "canDoId": "SP-A2-03",
+      "canDoId": "WR-A2-01",
       "type": "mini-production",
       "skill": "writing",
       "context": "daily-life",
@@ -1836,7 +1836,7 @@
     },
     {
       "id": "MIC-SP-A2-04-01",
-      "canDoId": "SP-A2-04",
+      "canDoId": "GR-A2-01",
       "type": "choose",
       "skill": "grammar",
       "context": "preferences",
@@ -1878,7 +1878,7 @@
     },
     {
       "id": "MIC-SP-A2-04-02",
-      "canDoId": "SP-A2-04",
+      "canDoId": "GR-A2-01",
       "type": "complete",
       "skill": "grammar",
       "context": "preferences",
@@ -1918,7 +1918,7 @@
     },
     {
       "id": "MIC-SP-A2-04-03",
-      "canDoId": "SP-A2-04",
+      "canDoId": "GR-A2-01",
       "type": "order",
       "skill": "grammar",
       "context": "preferences",
@@ -1969,7 +1969,7 @@
     },
     {
       "id": "MIC-SP-A2-04-04",
-      "canDoId": "SP-A2-04",
+      "canDoId": "VO-A2-01",
       "type": "match",
       "skill": "vocabulary",
       "context": "preferences",
@@ -2009,7 +2009,7 @@
     },
     {
       "id": "MIC-SP-A2-04-05",
-      "canDoId": "SP-A2-04",
+      "canDoId": "LI-A2-01",
       "type": "listening",
       "skill": "listening",
       "context": "preferences",
@@ -2169,7 +2169,7 @@
     },
     {
       "id": "MIC-SP-A2-04-08",
-      "canDoId": "SP-A2-04",
+      "canDoId": "WR-A2-01",
       "type": "mini-production",
       "skill": "writing",
       "context": "preferences",
@@ -5400,7 +5400,7 @@
     },
     {
       "id": "MIC-RS-A2-04",
-      "canDoId": "RS-A2-COMM",
+      "canDoId": "RS-A2-WRITE",
       "type": "complete",
       "skill": "writing",
       "context": "daily-life",
@@ -5548,7 +5548,7 @@
     },
     {
       "id": "MIC-RS-B1-03",
-      "canDoId": "RS-B1-LISTEN",
+      "canDoId": "RS-B1-COMM",
       "type": "order",
       "skill": "communication",
       "context": "daily-life",
@@ -5608,7 +5608,7 @@
     },
     {
       "id": "MIC-RS-B1-04",
-      "canDoId": "RS-B1-COMM",
+      "canDoId": "RS-B1-WRITE",
       "type": "complete",
       "skill": "writing",
       "context": "daily-life",
