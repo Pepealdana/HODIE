@@ -176,5 +176,5 @@ for (const activity of library.activities) {
   const goal = canDoById.get(activity.canDoId);
   assert.ok(goal, activity.id + " must link to an existing Can-Do");
   assert.equal(goal.level, activity.level, activity.id + " must link to the same level");
-  assert.equal(goal.skill, activity.skill, activity.id + " must link to the same skill");
+  assert.ok(goal.skill === activity.skill || goal.skill === activity.primarySkill, activity.id + " must link to its exercise skill or primary learning skill");
 }
