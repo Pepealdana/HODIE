@@ -171,7 +171,7 @@ function selectMicroActivities(
   { canDoId, mode = "mixed", limit = 6, profile = {} } = {}
 ) {
   const scopedActivities = (library.activities || []).filter(
-    (item) => !canDoId || item.canDoId === canDoId
+    (item) => !canDoId || item.canDoId === canDoId || (item.relatedCanDoIds || []).includes(canDoId)
   );
   // Review is deliberately cross-level: retrieval practice must be able to revisit
   // foundational A1 material even when the current learning target is A2 or B1.

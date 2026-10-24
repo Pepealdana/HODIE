@@ -5,7 +5,12 @@
   "scope": {
     "from": "A2",
     "to": "B1",
-    "note": "HODIE estimates functional progress; it does not provide official CEFR certification."
+    "note": "A1 can be selected manually for diagnostics and recovery. Normal progression uses CEFR-informed prerequisite evidence; this is not official CEFR certification.",
+    "manualLevels": [
+      "A1",
+      "A2",
+      "B1"
+    ]
   },
   "philosophy": "Can-Do -> Try -> Evidence -> Gap -> Practice -> Retry -> Master",
   "confidenceScale": [
@@ -6404,6 +6409,488 @@
         "requireRetryForPriorityErrors": true
       },
       "canDoType": "communicative"
+    },
+    {
+      "id": "SP-A1-01",
+      "skill": "speaking",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can say simple sentences about myself and familiar things.",
+      "spanish": "Puedo decir frases sencillas sobre mí y cosas conocidas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "subject-pronouns"
+        ],
+        "vocabulary": [
+          "high-frequency-words",
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "speaking",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Say three short sentences about yourself."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "LI-A1-01",
+      "skill": "listening",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can understand short, slow and clear phrases about familiar needs.",
+      "spanish": "Puedo comprender frases breves, lentas y claras sobre necesidades conocidas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "basic-questions"
+        ],
+        "vocabulary": [
+          "high-frequency-words",
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "listening",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Listen to a short familiar exchange and identify a key detail."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "receptive"
+    },
+    {
+      "id": "WR-A1-01",
+      "skill": "writing",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can write short phrases and simple sentences about familiar information.",
+      "spanish": "Puedo escribir frases y oraciones sencillas sobre información conocida.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "articles",
+          "basic-word-order"
+        ],
+        "vocabulary": [
+          "high-frequency-words",
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Write three simple sentences using familiar vocabulary."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "communicative"
+    },
+    {
+      "id": "VO-A1-01",
+      "skill": "vocabulary",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can recognise and use basic words for people, places, objects and routines.",
+      "spanish": "Puedo reconocer y usar palabras básicas para personas, lugares, objetos y rutinas.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [],
+        "vocabulary": [
+          "high-frequency-words",
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "vocabulary",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Identify and use familiar words in short contexts."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "GR-A1-01",
+      "skill": "grammar",
+      "level": "A1",
+      "priority": "high",
+      "canDo": "I can build simple statements and questions with familiar basic patterns.",
+      "spanish": "Puedo construir afirmaciones y preguntas sencillas con patrones básicos conocidos.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "be",
+          "articles",
+          "subject-pronouns",
+          "basic-questions"
+        ],
+        "vocabulary": [
+          "high-frequency-words",
+          "everyday-communication"
+        ]
+      },
+      "evidence": {
+        "type": "grammar",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Choose and produce simple statements and questions."
+      },
+      "mastery": {
+        "taskCompletion": 0.75,
+        "confidence": 3
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A2-WRITE",
+      "skill": "writing",
+      "level": "A2",
+      "priority": "high",
+      "canDo": "I can write short reports of simple messages and statements using familiar language.",
+      "spanish": "Puedo escribir reportes breves de mensajes y afirmaciones sencillas con lenguaje conocido.",
+      "prerequisites": [],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Write a short message reporting what someone said."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-B1-WRITE",
+      "skill": "writing",
+      "level": "B1",
+      "priority": "high",
+      "canDo": "I can write a clear account of what someone said, asked or requested, preserving the main meaning.",
+      "spanish": "Puedo redactar una explicación clara de lo que alguien dijo, preguntó o pidió, conservando el sentido principal.",
+      "prerequisites": [
+        "WR-A2-01"
+      ],
+      "languageResources": {
+        "grammar": [
+          "reported-speech",
+          "reporting-verbs",
+          "pronouns",
+          "tense-shift"
+        ],
+        "vocabulary": [
+          "communication",
+          "messages",
+          "people",
+          "opinions"
+        ]
+      },
+      "evidence": {
+        "type": "writing",
+        "durationSeconds": {
+          "min": 30,
+          "max": 120
+        },
+        "task": "Write a short account of a conversation using reported speech."
+      },
+      "mastery": {
+        "taskCompletion": 0.8,
+        "confidence": 4
+      },
+      "recovery": [],
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "style": "concise-actionable",
+        "maxCorrections": 2,
+        "showCorrectedExample": true,
+        "requireRetryForPriorityErrors": true
+      },
+      "canDoType": "language-resource"
+    },
+    {
+      "id": "RS-A1-SPEAK",
+      "level": "A1",
+      "skill": "speaking",
+      "title": "Pass on a simple greeting",
+      "titleEs": "Transmitir un saludo sencillo",
+      "descriptor": "Can say what another person says in a short, familiar exchange, using a model.",
+      "descriptorEs": "Puede transmitir lo que otra persona dice en un intercambio breve y familiar, usando un modelo.",
+      "tags": [
+        "reported-speech",
+        "greetings",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can say what another person says in a short, familiar exchange, using a model.",
+      "priority": "high",
+      "prerequisites": [],
+      "recovery": [],
+      "evidence": {
+        "type": "speaking",
+        "task": "Pass on a simple greeting",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "RS-A1-WRITE",
+      "level": "A1",
+      "skill": "writing",
+      "title": "Write a simple reported message",
+      "titleEs": "Escribir un mensaje indirecto sencillo",
+      "descriptor": "Can complete a short, modelled sentence to pass on a basic message.",
+      "descriptorEs": "Puede completar una oración breve siguiendo un modelo para transmitir un mensaje básico.",
+      "tags": [
+        "reported-speech",
+        "writing",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can complete a short, modelled sentence to pass on a basic message.",
+      "priority": "high",
+      "prerequisites": [],
+      "recovery": [],
+      "evidence": {
+        "type": "writing",
+        "task": "Write a simple reported message",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "RS-A2-SPEAK",
+      "level": "A2",
+      "skill": "speaking",
+      "title": "Report a familiar message",
+      "titleEs": "Transmitir un mensaje conocido",
+      "descriptor": "Can report the main point of a short, familiar statement with support.",
+      "descriptorEs": "Puede transmitir la idea principal de una afirmación breve y familiar con apoyo.",
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can report the main point of a short, familiar statement with support.",
+      "priority": "high",
+      "prerequisites": [
+        "RS-A1-COMM"
+      ],
+      "recovery": [
+        "RS-A1-COMM"
+      ],
+      "evidence": {
+        "type": "speaking",
+        "task": "Report a familiar message",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
+    },
+    {
+      "id": "RS-B1-SPEAK",
+      "level": "B1",
+      "skill": "speaking",
+      "title": "Summarise what someone said",
+      "titleEs": "Resumir lo que alguien dijo",
+      "descriptor": "Can relay the main points of a clear conversation or interview, preserving speakers' meaning.",
+      "descriptorEs": "Puede transmitir las ideas principales de una conversación o entrevista clara, conservando el sentido de los hablantes.",
+      "tags": [
+        "reported-speech",
+        "speaking",
+        "mediation"
+      ],
+      "source": "HODIE curricular mapping informed by CEFR Companion Volume; locally authored descriptor, not an official CEFR quotation.",
+      "canDo": "Can relay the main points of a clear conversation or interview, preserving speakers' meaning.",
+      "priority": "high",
+      "prerequisites": [
+        "RS-A2-COMM"
+      ],
+      "recovery": [
+        "RS-A1-COMM"
+      ],
+      "evidence": {
+        "type": "speaking",
+        "task": "Summarise what someone said",
+        "observable": true
+      },
+      "mastery": {
+        "minimumAttempts": 2,
+        "minimumIndependentSuccesses": 2,
+        "minimumConfidence": 3,
+        "dimensions": [
+          "taskCompletion",
+          "meaningPreservation",
+          "languageControl"
+        ]
+      },
+      "feedback": {
+        "languages": [
+          "en",
+          "es"
+        ],
+        "requireRetryForPriorityErrors": true
+      }
     }
   ],
   "metaCanDos": [

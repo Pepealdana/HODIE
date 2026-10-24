@@ -88,7 +88,7 @@ for (const [canDoId, productionResponse] of [
   ["SP-A2-03", "I get up at six. I have breakfast and I go to work in the morning."],
   ["SP-A2-04", "I like building robots, but I don't like getting up early because I am tired."]
 ]) {
-  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId);
+  const targetActivities = library.activities.filter((item) => item.canDoId === canDoId || item.relatedCanDoIds?.includes(canDoId));
   assert.ok(targetActivities.length >= 7, `Missing micro-practice coverage for ${canDoId}`);
   const targetMixed = selectMicroActivities(library, { canDoId, mode: "mixed", limit: 6 });
   assert.equal(targetMixed.length, 6, `Mixed practice should be available for ${canDoId}`);
@@ -155,11 +155,37 @@ for (const [mode, expectedSkill] of [
 }
 
 const reportedSpeech = library.activities.filter((item) => item.tags?.includes("reported-speech"));
-assert.equal(reportedSpeech.length, 12);
-for (const level of ["A1", "A2", "B1"]) assert.equal(reportedSpeech.filter((item) => item.level === level).length, 4, level + " Reported Speech coverage");
+assert.ok(reportedSpeech.length >= 16);
+for (const level of ["A1", "A2", "B1"]) assert.ok(reportedSpeech.filter((item) => item.level === level).length >= 4, level + " Reported Speech coverage");
 assert.ok(reportedSpeech.every((item) => item.prompt && item.promptEs && item.feedback.correct && item.feedback.correctEs));
 
 const reportedSpeechB2Pack = JSON.parse(fs.readFileSync(new URL("../data/reported-speech-b2-pack.json", import.meta.url), "utf8"));
 assert.equal(reportedSpeechB2Pack.activities.length, 4);
 assert.ok(reportedSpeechB2Pack.activities.every((item) => item.level === "B2" && item.unlockRequirement === "B2"));
 assert.equal(reportedSpeechB2Pack.visibility, "locked-until-evidence-gate");
+
+const reportedSpeechExpanded = library.activities.filter(item => item.tags?.includes("reported-speech"));
+assert.ok(reportedSpeechExpanded.length >= 24, "Reported Speech should have a useful cross-level practice set");
+assert.ok(reportedSpeechExpanded.some(item => item.type === "listening" && item.audioText), "Reported Speech must include real listening tasks");
+for (const level of ["A1","A2","B1"]) {
+  assert.ok(reportedSpeechExpanded.filter(item => item.level === level).length >= 8, level + " needs at least eight Reported Speech activities");
+  assert.ok(reportedSpeechExpanded.some(item => item.level === level && item.skill === "speaking"), level + " needs speaking practice");
+  assert.ok(reportedSpeechExpanded.some(item => item.level === level && item.skill === "writing"), level + " needs writing practice");
+}
+assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "speaking").length >= 8);
+assert.ok(library.activities.filter(item => item.level === "A1" && item.skill === "writing").length >= 8);
+
+const canDoMatrixForMicro = JSON.parse(fs.readFileSync(new URL("../data/can-do-matrix.json", import.meta.url), "utf8"));
+const canDoById = new Map(canDoMatrixForMicro.canDos.map(item => [item.id, item]));
+for (const activity of library.activities) {
+  const goal = canDoById.get(activity.canDoId);
+  assert.ok(goal, activity.id + " must link to an existing Can-Do");
+  assert.equal(goal.level, activity.level, activity.id + " must link to the same level");
+  assert.ok(goal.skill === activity.skill || goal.skill === activity.primarySkill, activity.id + " must link to its exercise skill or primary learning skill");
+}
+
+assert.ok(library.activities.some(item => item.gameMode === "timed-challenge" && item.timeLimitSeconds > 0 && ["choose","complete","match","listening","order"].includes(item.type)));
+assert.ok(library.activities.some(item => item.gameMode === "memory-recall" && item.type === "listening" && item.memoryText));
+assert.ok(library.activities.some(item => item.gameMode === "riddle"));
+assert.ok(library.activities.some(item => item.gameMode === "error-detective"));
+assert.ok(library.activities.some(item => item.gameMode === "sequence" && item.type === "order"));

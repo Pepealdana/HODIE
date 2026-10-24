@@ -913,6 +913,9 @@
         "Usa sustantivos en plural después de números mayores que uno",
         "count-nouns",
         "numbers"
+      ],
+      "incorrectCases": [
+        "I have two robot."
       ]
     },
     {
@@ -1015,6 +1018,9 @@
         "Usa there is con un sustantivo contable singular",
         "singular",
         "places"
+      ],
+      "incorrectCases": [
+        "There is two robots in the lab."
       ]
     },
     {
@@ -1122,6 +1128,9 @@
         "present-simple",
         "does",
         "questions"
+      ],
+      "incorrectCases": [
+        "Does she works here?"
       ]
     },
     {
@@ -1228,6 +1237,9 @@
         "Usa el verbo base después de un modal",
         "ability",
         "advice"
+      ],
+      "incorrectCases": [
+        "She can builds a robot."
       ]
     },
     {
@@ -1334,6 +1346,9 @@
         "Usa el verbo base después de did",
         "did",
         "questions"
+      ],
+      "incorrectCases": [
+        "Did you went to the lab?"
       ]
     },
     {
@@ -1440,6 +1455,9 @@
         "Usa la forma -ing después de be en presente continuo",
         "actions",
         "now"
+      ],
+      "incorrectCases": [
+        "I am teach now."
       ]
     },
     {
@@ -3286,6 +3304,9 @@
         "Capitalize the pronoun I",
         "Escribe I con mayúscula",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "i am a teacher."
       ]
     },
     {
@@ -3382,6 +3403,9 @@
         "Escribe teacher correctamente",
         "teacher",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "I am a techer."
       ]
     },
     {
@@ -3478,6 +3502,9 @@
         "Usa un artículo antes de una profesión singular",
         "jobs",
         "a-an"
+      ],
+      "incorrectCases": [
+        "She is engineer."
       ]
     },
     {
@@ -3575,6 +3602,9 @@
         "Elige a o an según el sonido",
         "a-an",
         "pronunciation"
+      ],
+      "incorrectCases": [
+        "She is an engineer."
       ]
     },
     {
@@ -3676,6 +3706,9 @@
         "Conjuga be según el sujeto",
         "be",
         "subject-verb-agreement"
+      ],
+      "incorrectCases": [
+        "I is ready."
       ]
     },
     {
@@ -3771,6 +3804,9 @@
         "Evita repetir conectores por accidente",
         "repetition",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "I teach robotics and I teach robotics."
       ]
     },
     {
@@ -3882,6 +3918,9 @@
         "negative present simple",
         "negación",
         "presente simple"
+      ],
+      "incorrectCases": [
+        "She doesn't works on Sundays."
       ]
     },
     {
@@ -3991,6 +4030,9 @@
         "base verb",
         "pasado simple",
         "negación en pasado"
+      ],
+      "incorrectCases": [
+        "I didn't went to school yesterday."
       ]
     },
     {
@@ -4099,6 +4141,9 @@
         "base verb",
         "modal + infinitive",
         "verbos modales"
+      ],
+      "incorrectCases": [
+        "I can to build a robot."
       ]
     },
     {
@@ -4208,6 +4253,9 @@
         "be before main verb",
         "present simple",
         "verbos léxicos"
+      ],
+      "incorrectCases": [
+        "I am agree with you."
       ]
     },
     {
@@ -6133,16 +6181,25 @@
         }
       ],
       "incorrect": [
-        "She said, \"I am tired.\""
+        "She said that she am tired."
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
-        "The reporting pronoun depends on who is speaking and who reports the message."
+        "The reporting pronoun depends on who is speaking and who reports the message.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
           "text": "She says, \"I am tired.\"",
-          "reason": "The reporting verb is present; this tested backshift pattern does not apply."
+          "reason": "The reporting verb is present, so this past-reporting correction does not apply."
+        },
+        {
+          "text": "She said that she was tired.",
+          "reason": "This reported statement is already correct."
+        },
+        {
+          "text": "She said, \"I am tired.\"",
+          "reason": "Direct speech is valid and must not be rewritten as an error."
         }
       ],
       "practice": [
@@ -6175,12 +6232,6 @@
       "severity": "medium",
       "priority": "high",
       "status": "tested",
-      "matcher": {
-        "pattern": "\\b(She) said,?\\s*[\"“]I am tired\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "$1 said that she was tired.",
-        "confidence": "high"
-      },
       "knowledgeAccess": {
         "scope": "global",
         "searchable": true,
@@ -6199,7 +6250,16 @@
         "estilo indirecto",
         "said that",
         "tired"
-      ]
+      ],
+      "incorrectCases": [
+        "She said that she am tired."
+      ],
+      "matcher": {
+        "pattern": "\\bShe said that she am tired\\b",
+        "flags": "gi",
+        "replacement": "She said that she was tired",
+        "confidence": "high"
+      }
     },
     {
       "id": "REPORTED-SPEECH-HE-AM-BUSY-001",
@@ -6221,16 +6281,25 @@
         }
       ],
       "incorrect": [
-        "He said, \"I am busy.\""
+        "He said that he be busy."
       ],
       "exceptions": [
         "Backshift is common after a past reporting verb but is not always required when information remains true or context makes another form appropriate.",
-        "The reporting pronoun depends on who is speaking and who reports the message."
+        "The reporting pronoun depends on who is speaking and who reports the message.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
       ],
       "negativeCases": [
         {
           "text": "He says, \"I am busy.\"",
-          "reason": "The reporting verb is present; this tested backshift pattern does not apply."
+          "reason": "The reporting verb is present, so this past-reporting correction does not apply."
+        },
+        {
+          "text": "He said that he was busy.",
+          "reason": "This reported statement is already correct."
+        },
+        {
+          "text": "He said, \"I am busy.\"",
+          "reason": "Direct speech is valid and must not be rewritten as an error."
         }
       ],
       "practice": [
@@ -6263,12 +6332,6 @@
       "severity": "medium",
       "priority": "high",
       "status": "tested",
-      "matcher": {
-        "pattern": "\\b(He) said,?\\s*[\"“]I am busy\\.?[\"”]",
-        "flags": "gi",
-        "replacement": "$1 said that he was busy.",
-        "confidence": "high"
-      },
       "knowledgeAccess": {
         "scope": "global",
         "searchable": true,
@@ -6287,7 +6350,16 @@
         "estilo indirecto",
         "said that",
         "busy"
-      ]
+      ],
+      "incorrectCases": [
+        "He said that he be busy."
+      ],
+      "matcher": {
+        "pattern": "\\bHe said that he be busy\\b",
+        "flags": "gi",
+        "replacement": "He said that he was busy",
+        "confidence": "high"
+      }
     },
     {
       "id": "REPORTED-SPEECH-QUESTIONS-001",
@@ -6378,6 +6450,317 @@
         "indirect questions",
         "estilo indirecto",
         "preguntas indirectas"
+      ]
+    },
+    {
+      "id": "REPORTED-SPEECH-SHE-HAPPY-001",
+      "implementation": "reported-speech-she-happy-001",
+      "level": "A2",
+      "category": "grammar",
+      "title": "Report a simple statement with backshift",
+      "titleEs": "Transmite una afirmación sencilla con cambio verbal",
+      "explanation": "After a past reporting verb, “I am” commonly changes to “she was” when reporting the statement later.",
+      "explanationEs": "Después de un verbo introductor en pasado, «I am» suele cambiar a «she was» al transmitir la afirmación después.",
+      "examples": [
+        "She said, “I am happy.”",
+        "She said that she was happy."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She said that she was happy.",
+          "es": "Ella dijo: «Estoy feliz»."
+        }
+      ],
+      "exceptions": [
+        "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
+      ],
+      "negativeCases": [
+        {
+          "text": "She says, \"I am happy.\"",
+          "reason": "The reporting verb is present."
+        },
+        {
+          "text": "She said that she was happy.",
+          "reason": "This report is already correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "transform",
+          "prompt": "She said, “I am happy.”",
+          "answer": "She said that she was happy."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "reading",
+          "writing",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "transform",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "backshift"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft",
+      "searchTerms": [
+        "reported speech",
+        "reported-speech",
+        "backshift"
+      ],
+      "incorrectCases": [
+        "She says, \"I am happy.\"",
+        "She said that she was happy."
+      ],
+      "incorrect": [
+        "She said that she are happy."
+      ]
+    },
+    {
+      "id": "REPORTED-SPEECH-HE-WORK-HERE-001",
+      "implementation": "reported-speech-he-work-here-001",
+      "level": "A2",
+      "category": "grammar",
+      "title": "Report a routine with a place reference",
+      "titleEs": "Transmite una rutina con referencia al lugar",
+      "explanation": "In this specific context, “I work here” becomes “he worked there” when reported later from another place.",
+      "explanationEs": "En este contexto específico, «I work here» pasa a «he worked there» al contarlo después desde otro lugar.",
+      "examples": [
+        "He said, “I work here.”",
+        "He said that he worked there."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He said that he worked there.",
+          "es": "Él dijo: «Trabajo aquí»."
+        }
+      ],
+      "exceptions": [
+        "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
+      ],
+      "negativeCases": [
+        {
+          "text": "He says, \"I work here.\"",
+          "reason": "The reporting verb is present."
+        },
+        {
+          "text": "He said that he worked there.",
+          "reason": "This report is already correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "transform",
+          "prompt": "He said, “I work here.”",
+          "answer": "He said that he worked there."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "reading",
+          "writing",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "transform",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "place-reference"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft",
+      "searchTerms": [
+        "reported speech",
+        "reported-speech",
+        "place-reference"
+      ],
+      "incorrectCases": [
+        "He says, \"I work here.\"",
+        "He said that he worked there."
+      ],
+      "incorrect": [
+        "He said that he work there."
+      ]
+    },
+    {
+      "id": "REPORTED-SPEECH-SHE-ASKED-WHERE-001",
+      "implementation": "reported-speech-she-asked-where-001",
+      "level": "B1",
+      "category": "grammar",
+      "title": "Correct word order in a reported question",
+      "titleEs": "Corrige el orden en una pregunta indirecta",
+      "explanation": "A reported question uses statement word order. “She asked me where did I live?” is incorrect in this context; use “She asked me where I lived.”",
+      "explanationEs": "Una pregunta indirecta usa orden afirmativo. «She asked me where did I live?» es incorrecto en este contexto; usa «She asked me where I lived»",
+      "examples": [
+        "She asked me where I lived.",
+        "He asked me what time the train left."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "She asked me where I lived.",
+          "es": "Ella me preguntó: «¿Dónde vives?»."
+        }
+      ],
+      "exceptions": [
+        "Do not use do/does/did in the reported clause.",
+        "The tense and pronouns depend on the original question and reporting context.",
+        "Direct questions and quoted direct speech are valid and must not be rewritten automatically."
+      ],
+      "negativeCases": [
+        {
+          "text": "Where do you live?",
+          "reason": "This is a direct question."
+        },
+        {
+          "text": "She asked me where I lived.",
+          "reason": "This is already a correct reported question."
+        },
+        {
+          "text": "She asked me, “Where do you live?”",
+          "reason": "Direct speech is valid and must not be rewritten."
+        }
+      ],
+      "practice": [
+        {
+          "type": "transform",
+          "prompt": "She asked me, “Where do you live?”",
+          "answer": "She asked me where I lived."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "reading",
+          "writing",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "transform",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "indirect-questions"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "tested",
+      "matcher": {
+        "pattern": "\\bShe asked me where did I live\\?",
+        "flags": "gi",
+        "replacement": "She asked me where I lived.",
+        "confidence": "high"
+      },
+      "searchTerms": [
+        "reported speech",
+        "reported-speech",
+        "indirect-questions"
+      ],
+      "incorrectCases": [
+        "Where do you live?",
+        "She asked me where I lived."
+      ],
+      "incorrect": [
+        "She asked me where did I live?",
+        "He asked me what time did the train leave."
+      ]
+    },
+    {
+      "id": "REPORTED-SPEECH-HE-CAN-HELP-001",
+      "implementation": "reported-speech-he-can-help-001",
+      "level": "A2",
+      "category": "grammar",
+      "title": "Report ability with could",
+      "titleEs": "Transmite capacidad con could",
+      "explanation": "When reporting this past statement, can commonly changes to could: “I can help” → “he could help.”",
+      "explanationEs": "Al transmitir esta afirmación pasada, can suele cambiar a could: «I can help» → «he could help».",
+      "examples": [
+        "He said, “I can help.”",
+        "He said that he could help."
+      ],
+      "examplesBilingual": [
+        {
+          "en": "He said that he could help.",
+          "es": "Él dijo: «Puedo ayudar»."
+        }
+      ],
+      "exceptions": [
+        "Backshift is common after a past reporting verb but is not always required when the information remains true or the reporting context makes another tense appropriate.",
+        "Pronouns and time/place references depend on who is reporting and the context.",
+        "Direct speech is grammatically valid and must not be automatically rewritten as reported speech. These examples teach a contrast; they are not a universal correction rule."
+      ],
+      "negativeCases": [
+        {
+          "text": "He says, \"I can help.\"",
+          "reason": "The reporting verb is present."
+        },
+        {
+          "text": "He said that he could help.",
+          "reason": "This report is already correct."
+        }
+      ],
+      "practice": [
+        {
+          "type": "transform",
+          "prompt": "He said, “I can help.”",
+          "answer": "He said that he could help."
+        }
+      ],
+      "activityLinks": {
+        "skills": [
+          "grammar",
+          "reading",
+          "writing",
+          "communication"
+        ],
+        "activityTypes": [
+          "choose",
+          "complete",
+          "transform",
+          "mini-production"
+        ],
+        "tags": [
+          "reported-speech",
+          "modal-backshift"
+        ]
+      },
+      "severity": "medium",
+      "priority": "high",
+      "status": "draft",
+      "searchTerms": [
+        "reported speech",
+        "reported-speech",
+        "modal-backshift"
+      ],
+      "incorrectCases": [
+        "He says, \"I can help.\"",
+        "He said that he could help."
+      ],
+      "incorrect": [
+        "He said that he can to help."
       ]
     }
   ],
@@ -12687,24 +13070,44 @@
     {
       "id": "TC-REPORTED-SPEECH-SHE-TIRED-001",
       "text": "She said, \"I am tired.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-SHE-AM-TIRED-001"
-      ],
-      "expectCorrection": "She said that she was tired."
+      "expectRules": [],
+      "expectCorrection": "She said, \"I am tired.\""
     },
     {
       "id": "TC-REPORTED-SPEECH-HE-BUSY-001",
       "text": "He said, \"I am busy.\"",
-      "expectRules": [
-        "REPORTED-SPEECH-HE-AM-BUSY-001"
-      ],
-      "expectCorrection": "He said that he was busy."
+      "expectRules": [],
+      "expectCorrection": "He said, \"I am busy.\""
     },
     {
       "id": "TC-REPORTED-SPEECH-VALID-001",
       "text": "She says, \"I am tired.\"",
       "expectRules": [],
       "expectCorrection": "She says, \"I am tired.\""
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-SHE-ASKED-WHERE-001",
+      "text": "She asked me where did I live?",
+      "expectRules": [
+        "REPORTED-SPEECH-SHE-ASKED-WHERE-001"
+      ],
+      "expectCorrection": "She asked me where I lived."
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-SHE-AM-TIRED-001",
+      "text": "She said that she am tired.",
+      "expectRules": [
+        "REPORTED-SPEECH-SHE-AM-TIRED-001"
+      ],
+      "expectCorrection": "She said that she was tired."
+    },
+    {
+      "id": "TC-REPORTED-SPEECH-HE-AM-BUSY-001",
+      "text": "He said that he be busy.",
+      "expectRules": [
+        "REPORTED-SPEECH-HE-AM-BUSY-001"
+      ],
+      "expectCorrection": "He said that he was busy."
     }
   ]
 }

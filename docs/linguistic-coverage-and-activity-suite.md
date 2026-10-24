@@ -55,3 +55,17 @@ Run `npm test`. The suite builds the linguistic catalog, tests the deterministic
 ## Visible activity catalogue integration
 
 The practice home exposes a filterable catalogue for A1, A2 and B1 micro-practice with skill filters. Each result launches its selected activity by ID through the existing practice/evaluation/feedback/retry flow. Counts represent runnable micro-activities, not all full-content experiences or complete coverage of every Can-Do. Manual desktop and mobile verification is still required after deployment.
+
+
+## Expanded activity bank (October 2026)
+
+- The micro-practice library now targets at least eight microactivities per skill and level across A1, A2 and B1, using the eight HODIE skill strands and existing Can-Do links.
+- Activity metadata distinguishes riddles, memory recall, timed challenges, error-detection and sequence tasks. The interface renders memory recall and countdown mechanics where the underlying response type supports deterministic evaluation.
+- A dedicated Reported Speech home shortcut opens the activity catalogue with the topic filter applied. The active A1/A2/B1 pack is available locally; B2 remains separate behind the evidence-based unlock gate.
+- The complete activity library includes level-specific tasks for all eight skills. This supplements, rather than replaces, the micro-practice bank.
+- This is CEFR-informed learning content, not an official CEFR assessment or certification.
+
+- Every micro-activity links to a Can-Do at the same CEFR level and skill. A1 foundational Can-Dos are explicit; Reported Speech has separate writing Can-Dos for A2 and B1 instead of incorrectly linking writing tasks to communication targets.
+
+- The library now contains 226 microactivities, including actual level-specific riddle prompts and error-detection tasks; game labels are reserved for tasks that match the named mode. Timed challenges have a countdown and timeout feedback; memory-recall tasks hide the prompt and disable replay after the learner commits to recall.
+- Reported Speech has 18 microactivities (six at each active level) and six tested rules and one draft entry in the source pack, including four new narrow high-confidence correction patterns. Corrections only fire for the specific quoted patterns documented in the rule tests; the engine does not claim unrestricted reported-speech correction.

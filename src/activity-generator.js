@@ -18,11 +18,14 @@ function findContent(library, canDoId, preferredTypes = []) {
   return matches.find((item) => preferredTypes.includes(item.activityType)) || matches[0];
 }
 
-function findResourceActivity(library, matrix, gap) {
+function findResourceActivity(library, matrix, gap, targetCanDo) {
   if (!gap?.target) return null;
   const target = String(gap.target).toLowerCase();
 
+  const expectedSkill = gap.type === "grammar" ? "grammar" : gap.type === "vocabulary" ? "vocabulary" : gap.type === "pronunciation" ? "pronunciation" : null;
   return (library.activities || []).find((activity) => {
+    if (targetCanDo?.level && activity.level !== targetCanDo.level) return false;
+    if (expectedSkill && activity.skill !== expectedSkill) return false;
     const canDo = getCanDo(matrix, activity.canDoId);
     return resourceValues(canDo).some((resource) =>
       resource.value === target
@@ -83,7 +86,7 @@ function createActivityPlan(matrix, library, canDoId, options = {}) {
   const recoveryActivities = [];
 
   if (gap.type !== "none") {
-    const targeted = findResourceActivity(library, matrix, gap);
+    const targeted = findResourceActivity(library, matrix, gap, canDo);
     if (targeted) recoveryActivities.push(targeted);
     else if (gap.target) recoveryActivities.push(createSyntheticRecovery(canDo, gap));
 

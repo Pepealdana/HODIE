@@ -1090,3 +1090,16 @@ html[data-theme="dark"] body { background: #101827; }
 .live-coach-comparison { display:grid; gap:4px; }
 .live-coach-comparison strong { color:var(--success, #23734d); overflow-wrap:anywhere; }
 [data-theme="dark"] .conversation-writing-guide, [data-theme="dark"] .live-writing-coach { background:#172033; }
+
+/* CEFR activity expansion: direct topic access and varied practice mechanics. */
+.reported-speech-shortcut { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:14px; margin:18px 0; padding:16px; }
+.reported-speech-icon { display:grid; place-items:center; width:46px; height:46px; border-radius:14px; background:var(--surface-alt); color:var(--accent); font-size:25px; font-weight:800; }
+.reported-speech-copy h3 { margin:0 0 4px; }
+.reported-speech-copy p { margin:4px 0 0; }
+.activity-game-mode { display:inline-flex; margin-top:8px; padding:5px 8px; border-radius:999px; background:var(--surface-alt); color:var(--muted); font-size:.78rem; font-weight:650; }
+.activity-timer { display:inline-block; margin:8px 0 0; padding:5px 9px; border-radius:9px; background:var(--surface-alt); font-weight:750; font-variant-numeric:tabular-nums; }
+.memory-challenge { margin:0 0 12px; padding:12px; border:1px dashed var(--line); border-radius:12px; background:var(--surface-alt); }
+.memory-challenge p { margin:8px 0; }
+@media (max-width:520px) { .reported-speech-shortcut { grid-template-columns:auto minmax(0,1fr); } .reported-speech-shortcut > button { grid-column:1 / -1; width:100%; } }
+
+.activity-timeout-note { margin:0 0 10px; padding:10px 12px; border-radius:10px; background:var(--surface-alt); border:1px solid var(--line); line-height:1.45; }
