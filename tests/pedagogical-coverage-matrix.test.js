@@ -115,3 +115,8 @@ console.log("HODIE pedagogical coverage matrix: PASS", JSON.stringify({
   missingSkillLevels,
   missingSkillStages
 }, null, 2));
+
+for (const skill of skills) for (const level of ["A1","A2","B1"]) {
+  const count = activities.filter((item) => item.skill === skill && item.level === level).length;
+  assert.ok(count >= 8, `Expected at least 8 ${level} ${skill} activities, found ${count}`);
+}
