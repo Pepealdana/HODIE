@@ -6509,6 +6509,9 @@
       "incorrectCases": [
         "She says, \"I am happy.\"",
         "She said that she was happy."
+      ],
+      "incorrect": [
+        "She said, “I am happy.”"
       ]
     },
     {
@@ -6586,6 +6589,9 @@
       "incorrectCases": [
         "He says, \"I work here.\"",
         "He said that he worked there."
+      ],
+      "incorrect": [
+        "He said, “I work here.”"
       ]
     },
     {
@@ -6663,6 +6669,9 @@
       "incorrectCases": [
         "Where do you live?",
         "She asked me where I lived."
+      ],
+      "incorrect": [
+        "She asked me, “Where do you live?”"
       ]
     },
     {
@@ -6740,6 +6749,9 @@
       "incorrectCases": [
         "He says, \"I can help.\"",
         "He said that he could help."
+      ],
+      "incorrect": [
+        "He said, “I can help.”"
       ]
     }
   ],
