@@ -119,17 +119,18 @@ assert.equal(linguisticCatalog.schemaVersion, catalog.schemaVersion);
 console.log("HODIE linguistic catalog and open-vocabulary engine: PASS");
 
 for (const [input, expected] of [
-  ['She said, "I am happy."', "She said that she was happy."],
-  ['He said, "I work here."', "He said that he worked there."],
-  ['She asked me, "Where do you live?"', "She asked me where I lived."],
-  ['He said, "I can help."', "He said that he could help."]
+  ["She asked me where did I live?", "She asked me where I lived."]
 ]) {
   const result = analyzeLanguage(input);
   assert.equal(result.correctedText, expected, input);
-  assert.ok(result.errors.some(error => error.ruleId.startsWith("REPORTED-SPEECH-")), input);
+  assert.ok(result.errors.some(error => error.ruleId === "REPORTED-SPEECH-SHE-ASKED-WHERE-001"), input);
 }
 for (const valid of [
   'She says, "I am happy."',
+  'She said, "I am happy."',
+  'He said, "I work here."',
+  'He said, "I can help."',
+  'She asked me, "Where do you live?"',
   "She said that she was happy.",
   "Where do you live?",
   "He said that he could help."
