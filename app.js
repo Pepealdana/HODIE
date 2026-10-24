@@ -1438,6 +1438,8 @@ function renderMemoryChallenge(activity) {
     if (prompt) prompt.hidden = true;
     const button = document.querySelector("#hideMemoryPrompt");
     if (button) { button.disabled = true; button.textContent = "Now answer from memory · Responde de memoria"; }
+    const listenButton = document.querySelector("#listenButton");
+    if (listenButton && practice?.activities?.[practice.index]?.gameMode === "memory-recall") listenButton.disabled = true;
   });
 }
 
@@ -1453,7 +1455,10 @@ function startTimedChallenge(activity) {
     if (remaining <= 0) {
       clearInterval(practice.timerInterval);
       practice.timerInterval = null;
-      if (!practice.answered) evaluateCurrent(activity.type === "order" ? [] : "");
+      if (!practice.answered) {
+        practice.timedOut = true;
+        evaluateCurrent(activity.type === "order" ? [] : "");
+      }
     }
   }, 1000);
 }
@@ -1646,6 +1651,11 @@ function evaluateCurrent(response) {
     : linkedEvaluation;
   practice.currentResponse = response;
   showFeedback(activity, result, response);
+  if (practice.timedOut) {
+    const feedbackNode = document.querySelector("#microFeedback");
+    if (feedbackNode) feedbackNode.insertAdjacentHTML("afterbegin", '<p class="activity-timeout-note"><strong>Time is up · Se acabó el tiempo.</strong> Review the example and retry this skill. · Revisa el ejemplo y vuelve a practicar esta habilidad.</p>');
+    practice.timedOut = false;
+  }
 }
 
 function showFeedback(activity, result, response, options = {}) {
