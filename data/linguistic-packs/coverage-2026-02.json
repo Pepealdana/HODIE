@@ -913,6 +913,9 @@
         "Usa sustantivos en plural después de números mayores que uno",
         "count-nouns",
         "numbers"
+      ],
+      "incorrectCases": [
+        "I have two robot."
       ]
     },
     {
@@ -1015,6 +1018,9 @@
         "Usa there is con un sustantivo contable singular",
         "singular",
         "places"
+      ],
+      "incorrectCases": [
+        "There is two robots in the lab."
       ]
     },
     {
@@ -1122,6 +1128,9 @@
         "present-simple",
         "does",
         "questions"
+      ],
+      "incorrectCases": [
+        "Does she works here?"
       ]
     },
     {
@@ -1228,6 +1237,9 @@
         "Usa el verbo base después de un modal",
         "ability",
         "advice"
+      ],
+      "incorrectCases": [
+        "She can builds a robot."
       ]
     },
     {
@@ -1334,6 +1346,9 @@
         "Usa el verbo base después de did",
         "did",
         "questions"
+      ],
+      "incorrectCases": [
+        "Did you went to the lab?"
       ]
     },
     {
@@ -1440,6 +1455,9 @@
         "Usa la forma -ing después de be en presente continuo",
         "actions",
         "now"
+      ],
+      "incorrectCases": [
+        "I am teach now."
       ]
     },
     {
@@ -3286,6 +3304,9 @@
         "Capitalize the pronoun I",
         "Escribe I con mayúscula",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "i am a teacher."
       ]
     },
     {
@@ -3382,6 +3403,9 @@
         "Escribe teacher correctamente",
         "teacher",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "I am a techer."
       ]
     },
     {
@@ -3478,6 +3502,9 @@
         "Usa un artículo antes de una profesión singular",
         "jobs",
         "a-an"
+      ],
+      "incorrectCases": [
+        "She is engineer."
       ]
     },
     {
@@ -3575,6 +3602,9 @@
         "Elige a o an según el sonido",
         "a-an",
         "pronunciation"
+      ],
+      "incorrectCases": [
+        "She is an engineer."
       ]
     },
     {
@@ -3676,6 +3706,9 @@
         "Conjuga be según el sujeto",
         "be",
         "subject-verb-agreement"
+      ],
+      "incorrectCases": [
+        "I is ready."
       ]
     },
     {
@@ -3771,6 +3804,9 @@
         "Evita repetir conectores por accidente",
         "repetition",
         "writing-accuracy"
+      ],
+      "incorrectCases": [
+        "I teach robotics and I teach robotics."
       ]
     },
     {
@@ -3882,6 +3918,9 @@
         "negative present simple",
         "negación",
         "presente simple"
+      ],
+      "incorrectCases": [
+        "She doesn't works on Sundays."
       ]
     },
     {
@@ -3991,6 +4030,9 @@
         "base verb",
         "pasado simple",
         "negación en pasado"
+      ],
+      "incorrectCases": [
+        "I didn't went to school yesterday."
       ]
     },
     {
@@ -4099,6 +4141,9 @@
         "base verb",
         "modal + infinitive",
         "verbos modales"
+      ],
+      "incorrectCases": [
+        "I can to build a robot."
       ]
     },
     {
@@ -4208,6 +4253,9 @@
         "be before main verb",
         "present simple",
         "verbos léxicos"
+      ],
+      "incorrectCases": [
+        "I am agree with you."
       ]
     },
     {
@@ -6199,6 +6247,9 @@
         "estilo indirecto",
         "said that",
         "tired"
+      ],
+      "incorrectCases": [
+        "She said, “I am tired.”"
       ]
     },
     {
@@ -6287,6 +6338,9 @@
         "estilo indirecto",
         "said that",
         "busy"
+      ],
+      "incorrectCases": [
+        "He said, “I am busy.”"
       ]
     },
     {
