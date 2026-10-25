@@ -12064,7 +12064,7 @@
     },
     {
       "id": "MIC-RS-A2-09",
-      "canDoId": "SP-A2-01",
+      "canDoId": "RS-A2-GRAM",
       "type": "choose",
       "skill": "grammar",
       "context": "personal",
@@ -12101,17 +12101,18 @@
         "pronouns"
       ],
       "reviewPriority": "high",
-      "primarySkill": "reading",
+      "primarySkill": "grammar",
       "resources": [
         "grammar"
       ],
       "relatedCanDoIds": [
-        "SP-A2-01"
+        "RS-A2-GRAM",
+        "RS-A2-READ"
       ]
     },
     {
       "id": "MIC-RS-A2-10",
-      "canDoId": "SP-A2-01",
+      "canDoId": "RS-A2-GRAM",
       "type": "complete",
       "skill": "grammar",
       "context": "professional",
@@ -12146,17 +12147,18 @@
         "time-expressions"
       ],
       "reviewPriority": "high",
-      "primarySkill": "writing",
+      "primarySkill": "grammar",
       "resources": [
         "grammar"
       ],
       "relatedCanDoIds": [
-        "SP-A2-01"
+        "RS-A2-GRAM",
+        "RS-A2-READ"
       ]
     },
     {
       "id": "MIC-RS-A2-11",
-      "canDoId": "SP-A2-01",
+      "canDoId": "RS-A2-GRAM",
       "type": "choose",
       "skill": "grammar",
       "context": "personal",
@@ -12195,17 +12197,18 @@
         "time-expressions"
       ],
       "reviewPriority": "high",
-      "primarySkill": "reading",
+      "primarySkill": "grammar",
       "resources": [
         "grammar"
       ],
       "relatedCanDoIds": [
-        "SP-A2-01"
+        "RS-A2-GRAM",
+        "RS-A2-READ"
       ]
     },
     {
       "id": "MIC-RS-A2-12",
-      "canDoId": "SP-A2-01",
+      "canDoId": "RS-A2-GRAM",
       "type": "complete",
       "skill": "grammar",
       "context": "professional",
@@ -12238,12 +12241,13 @@
         "said-told"
       ],
       "reviewPriority": "high",
-      "primarySkill": "writing",
+      "primarySkill": "grammar",
       "resources": [
         "grammar"
       ],
       "relatedCanDoIds": [
-        "SP-A2-01"
+        "RS-A2-GRAM",
+        "RS-A2-READ"
       ]
     }
   ]
