@@ -58,7 +58,7 @@ assert.match(app, /startPractice\("grammar", activityIds\)/);
 assert.match(app, /Array\.isArray\(activityId\) \? activityId\.includes\(activity\.id\)/);
 assert.ok(app.includes("renderMemoryChallenge"));
 assert.ok(app.includes("startTimedChallenge"));
-assert.ok(app.includes("reported speech"));
+assert.match(app, /reported speech/i);
 
 assert.ok(app.includes('home.querySelector("#activityCatalog")'));
 
