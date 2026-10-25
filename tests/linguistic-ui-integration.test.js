@@ -8,7 +8,8 @@ const microEngine = fs.readFileSync(new URL("../src/micro-practice.js", import.m
 const microLibrary = JSON.parse(fs.readFileSync(new URL("../data/micro-practice-library.json", import.meta.url), "utf8"));
 
 assert.match(app, /import \{ analyzeLanguage \} from "\.\/src\/linguistic-engine\.js"/);
-assert.match(app, /linguisticLinks: getLinguisticResourcesForActivity\(activity\)/);
+assert.match(app, /const linguisticLinks = getLinguisticResourcesForActivity\(activity\)/);
+assert.match(app, /return \{ \.\.\.result, linguisticLinks/);
 assert.match(app, /correctionIndependentOfActivity: true/);
 assert.match(app, /knowledgeAvailability: "global"/);
 assert.match(app, /function applyLinguisticReview\(response, result = \{\}, skill = "writing"\)/);
