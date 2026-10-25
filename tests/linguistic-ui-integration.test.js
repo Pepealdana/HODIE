@@ -52,6 +52,9 @@ for (const id of ["MIC-RE-A2-90-01", "MIC-RE-A2-90-02", "MIC-PR-A2-90-01", "MIC-
 console.log("HODIE linguistic UI integration contract: PASS");
 
 assert.ok(app.includes("reportedSpeechShortcut"));
+assert.match(app, /filter\(\(activity\) => activity\.id\.startsWith\(`MIC-RS-\$\{level\}-`\)\)/);
+assert.match(app, /startPractice\("grammar", activityIds\)/);
+assert.match(app, /Array\.isArray\(activityId\) \? activityId\.includes\(activity\.id\)/);
 assert.ok(app.includes("renderMemoryChallenge"));
 assert.ok(app.includes("startTimedChallenge"));
 assert.ok(app.includes("reported speech"));
