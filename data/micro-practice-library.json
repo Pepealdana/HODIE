@@ -12055,6 +12055,190 @@
       "relatedCanDoIds": [
         "RS-B1-WRITE"
       ]
+    },
+    {
+      "id": "MIC-RS-A2-09",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "personal",
+      "level": "A2",
+      "title": "Report a past statement",
+      "titleEs": "Transmite una afirmación en pasado",
+      "prompt": "Direct: “I have finished my homework,” Sara said. Choose the usual report.",
+      "promptEs": "Directo: «He terminado mi tarea», dijo Sara. Elige la versión indirecta habitual.",
+      "options": [
+        "Sara said that she had finished her homework.",
+        "Sara said that she has finished my homework.",
+        "Sara told that she finished her homework."
+      ],
+      "answer": "Sara said that she had finished her homework.",
+      "feedback": {
+        "correct": "Correct. With a past reporting verb, present perfect commonly shifts to past perfect: have finished → had finished. “My” changes to “her” because Sara is the speaker.",
+        "correctEs": "Correcto. Con un verbo introductorio en pasado, el presente perfecto suele pasar a pasado perfecto: have finished → had finished. “My” cambia a “her” porque Sara es quien habla.",
+        "incorrect": "Check two changes: have finished usually becomes had finished, and my must refer to Sara, so use her.",
+        "incorrectEs": "Revisa dos cambios: have finished suele convertirse en had finished y my se refiere a Sara, por eso se usa her."
+      },
+      "tags": [
+        "reported-speech",
+        "present-perfect",
+        "backshift",
+        "pronouns"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-backshift-perfect",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "present-perfect",
+        "pronouns"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
+    },
+    {
+      "id": "MIC-RS-A2-10",
+      "canDoId": "SP-A2-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Report a future plan",
+      "titleEs": "Transmite un plan futuro",
+      "prompt": "“We will send the file tomorrow,” they said. → They said they ___ send the file the next day.",
+      "promptEs": "«Enviaremos el archivo mañana», dijeron. → Dijeron que ___ enviar el archivo al día siguiente.",
+      "answer": "would",
+      "acceptableAnswers": [
+        "would"
+      ],
+      "feedback": {
+        "correct": "Correct. Will commonly changes to would after said in the past. Tomorrow changes to the next day when the reporting time is later.",
+        "correctEs": "Correcto. Will suele cambiar a would después de said en pasado. Tomorrow cambia a the next day cuando se transmite el mensaje más tarde.",
+        "incorrect": "Use would after said, not will, in the usual backshift pattern: will → would.",
+        "incorrectEs": "Usa would después de said en pasado, no will, siguiendo el cambio temporal habitual: will → would."
+      },
+      "tags": [
+        "reported-speech",
+        "future",
+        "backshift",
+        "time-expressions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-will-would",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "will-would",
+        "time-expressions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
+    },
+    {
+      "id": "MIC-RS-A2-11",
+      "canDoId": "SP-A2-01",
+      "type": "choose",
+      "skill": "grammar",
+      "context": "personal",
+      "level": "A2",
+      "title": "Report a place and time",
+      "titleEs": "Transmite lugar y tiempo",
+      "prompt": "Direct: “I am staying here today,” Leo said. You report it tomorrow from another place. Choose the best option.",
+      "promptEs": "Directo: «Me quedo aquí hoy», dijo Leo. Lo cuentas mañana desde otro lugar. Elige la mejor opción.",
+      "options": [
+        "Leo said that he was staying there that day.",
+        "Leo said that I am staying here today.",
+        "Leo told that he stayed there tomorrow."
+      ],
+      "answer": "Leo said that he was staying there that day.",
+      "feedback": {
+        "correct": "Correct. Am staying commonly shifts to was staying; here becomes there and today becomes that day because the reporting context changed.",
+        "correctEs": "Correcto. Am staying suele cambiar a was staying; here pasa a there y today a that day porque cambió el contexto desde el que se cuenta.",
+        "incorrect": "Check the speaker, tense and context words: I → he, am staying → was staying, here → there, today → that day.",
+        "incorrectEs": "Revisa quién habla, el tiempo y las expresiones de contexto: I → he, am staying → was staying, here → there, today → that day."
+      },
+      "tags": [
+        "reported-speech",
+        "continuous",
+        "pronouns",
+        "place",
+        "time-expressions"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-context-shift",
+      "errorSeverity": "high",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "pronouns",
+        "backshift",
+        "time-expressions"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "reading",
+      "resources": [
+        "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
+    },
+    {
+      "id": "MIC-RS-A2-12",
+      "canDoId": "SP-A2-01",
+      "type": "complete",
+      "skill": "grammar",
+      "context": "professional",
+      "level": "A2",
+      "title": "Choose said or told",
+      "titleEs": "Elige entre said y told",
+      "prompt": "“I need help,” Omar said to me. → Omar ___ me that he needed help.",
+      "promptEs": "«Necesito ayuda», me dijo Omar. → Omar ___ que necesitaba ayuda.",
+      "answer": "told",
+      "acceptableAnswers": [
+        "told"
+      ],
+      "feedback": {
+        "correct": "Correct. Use told + person: told me. Said does not take the listener directly without “to” (said to me).",
+        "correctEs": "Correcto. Usa told + persona: told me. Said no lleva directamente a la persona que escucha sin “to” (said to me).",
+        "incorrect": "Because the listener “me” follows the verb, use told: told me. Another correct pattern is said to me.",
+        "incorrectEs": "Como después del verbo aparece la persona que escucha (“me”), usa told: told me. Otra estructura correcta es said to me."
+      },
+      "tags": [
+        "reported-speech",
+        "said-told",
+        "reporting-verbs"
+      ],
+      "errorType": "grammar",
+      "errorTarget": "reported-speech-said-told",
+      "errorSeverity": "medium",
+      "errorPriority": "high",
+      "reviewTargets": [
+        "reported-speech",
+        "said-told"
+      ],
+      "reviewPriority": "high",
+      "primarySkill": "writing",
+      "resources": [
+        "grammar"
+      ],
+      "relatedCanDoIds": [
+        "SP-A2-01"
+      ]
     }
   ]
 }
