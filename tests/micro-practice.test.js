@@ -12,6 +12,8 @@ assert.ok(mixed.some((item) => item.type === "listening"));
 assert.ok(mixed.some((item) => item.type === "speak"));
 assert.ok(mixed.some((item) => item.resources?.includes("grammar")));
 assert.ok(mixed.some((item) => item.resources?.includes("vocabulary")));
+assert.ok(mixed.some((item) => item.type === "speak"), "Mixed practice must include an actual speaking task");
+assert.ok(mixed.some((item) => item.type === "listening"), "Mixed practice must include an actual listening task");
 
 const grammar = selectMicroActivities(library, { canDoId: "SP-A2-01", mode: "grammar", limit: 4 });
 assert.ok(grammar.length >= 3);
@@ -39,6 +41,15 @@ assert.equal(writing.length, 1);
 assert.equal(writing[0].type, "mini-production");
 assert.equal(writing[0].skill, "writing");
 assert.ok(writing[0].evaluation?.criteria?.length >= 3);
+
+const reportedSpeechA2 = library.activities.filter((item) => item.id.startsWith("MIC-RS-A2-"));
+assert.ok(reportedSpeechA2.length >= 12, "A2 Reported Speech should include at least twelve activities");
+assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-09"));
+assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-10"));
+assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-11"));
+assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-12"));
+assert.ok(reportedSpeechA2.every((item) => item.feedback?.correctEs && item.feedback?.incorrectEs),
+  "Reported Speech A2 objective activities must provide bilingual correction feedback");
 
 const speakActivity = library.activities.find((item) => item.type === "speak");
 assert.equal(speakActivity.audioText, speakActivity.targetPhrase);
