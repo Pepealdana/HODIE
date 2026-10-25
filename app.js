@@ -660,15 +660,15 @@ function applyConversationFirstHome(level, targetActivity, statement) {
   }
 
   home.querySelector("#reportedSpeechShortcut")?.addEventListener("click", () => {
-    const catalogSection = home.querySelector("#activityCatalog");
-    const levelFilter = home.querySelector("#catalogLevel");
-    const skillFilter = home.querySelector("#catalogSkill");
-    const searchFilter = home.querySelector("#catalogSearch");
-    if (levelFilter) levelFilter.value = session?.target?.level || "A2";
-    if (skillFilter) skillFilter.value = "all";
-    if (searchFilter) searchFilter.value = "reported speech";
-    renderActivityCatalog();
-    catalogSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const level = session?.target?.level || "A2";
+    const activityIds = microLibrary.activities
+      .filter((activity) => activity.id.startsWith(`MIC-RS-${level}-`))
+      .map((activity) => activity.id);
+    if (!activityIds.length) {
+      renderError(new Error(`Reported Speech practice is not available for ${level} yet.`));
+      return;
+    }
+    startPractice("grammar", activityIds);
   });
 
   const catalog = home.querySelector("#activityCatalog");
@@ -1319,7 +1319,7 @@ function renderActivityCatalog() {
 function startPractice(mode, activityId = null) {
   const options = { mode, limit: 6, profile };
   let selectedActivities = activityId
-    ? microLibrary.activities.filter((activity) => activity.id === activityId)
+    ? microLibrary.activities.filter((activity) => Array.isArray(activityId) ? activityId.includes(activity.id) : activity.id === activityId)
     : selectMicroActivities(microLibrary, { ...options, canDoId: session.target.canDoId });
 
   // A focused skill may use a related Can-Do rather than the current session target.
