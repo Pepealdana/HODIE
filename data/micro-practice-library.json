@@ -3383,17 +3383,20 @@
           {
             "id": "habit",
             "label": "describes a learning habit",
-            "type": "content-point"
+            "type": "content-point",
+            "patterns": []
           },
           {
             "id": "frequency",
             "label": "uses a frequency adverb",
-            "type": "language-feature"
+            "type": "language-feature",
+            "patterns": []
           },
           {
             "id": "reason",
             "label": "gives a reason with because",
-            "type": "language-feature"
+            "type": "language-feature",
+            "patterns": []
           }
         ]
       },
@@ -3443,17 +3446,20 @@
           {
             "id": "comparison",
             "label": "compares two methods",
-            "type": "content-point"
+            "type": "content-point",
+            "patterns": []
           },
           {
             "id": "comparative",
             "label": "uses a comparative form",
-            "type": "language-feature"
+            "type": "language-feature",
+            "patterns": []
           },
           {
             "id": "balance",
             "label": "states an advantage and disadvantage",
-            "type": "content-point"
+            "type": "content-point",
+            "patterns": []
           }
         ]
       },
@@ -11759,7 +11765,7 @@
             "id": "speaker",
             "label": "Names the speaker Anna.",
             "patterns": [
-              "\\\\banna\\\\b"
+              "\\banna\\b"
             ],
             "missingMessage": "Include Anna as the speaker.",
             "missingMessageEs": "Incluye a Anna como hablante."
@@ -11768,7 +11774,7 @@
             "id": "message",
             "label": "Passes on the greeting.",
             "patterns": [
-              "\\\\b(good morning|hello|hi)\\\\b"
+              "\\b(good morning|hello|hi)\\b"
             ],
             "missingMessage": "Include the greeting.",
             "missingMessageEs": "Incluye el saludo."
@@ -11891,7 +11897,7 @@
             "id": "speaker",
             "label": "Identifies Sara as the speaker.",
             "patterns": [
-              "\\\\bsara\\\\b"
+              "\\bsara\\b"
             ],
             "missingMessage": "Name Sara as the speaker.",
             "missingMessageEs": "Nombra a Sara como hablante."
@@ -11900,7 +11906,7 @@
             "id": "reporting-verb",
             "label": "Uses a reporting verb.",
             "patterns": [
-              "\\\\b(said|told)\\\\b"
+              "\\b(said|told)\\b"
             ],
             "missingMessage": "Use said or told + an appropriate structure.",
             "missingMessageEs": "Usa said o told con una estructura apropiada."
@@ -11909,7 +11915,7 @@
             "id": "reported-content",
             "label": "Reports work using a suitable verb form.",
             "patterns": [
-              "\\\\b(worked|was working|is working)\\\\b"
+              "\\b(worked|was working|is working)\\b"
             ],
             "missingMessage": "Report the work information with a suitable verb form.",
             "missingMessageEs": "Transmite la información sobre el trabajo con una forma verbal adecuada."
@@ -12033,8 +12039,8 @@
             "id": "marta-view",
             "label": "Reports Marta’s objection.",
             "patterns": [
-              "\\\\bmarta\\\\b",
-              "\\\\b(too expensive|expensive|costly)\\\\b"
+              "\\bmarta\\b",
+              "\\b(too expensive|expensive|costly)\\b"
             ],
             "missingMessage": "Include Marta's objection about the cost.",
             "missingMessageEs": "Incluye la objeción de Marta sobre el costo."
@@ -12043,8 +12049,8 @@
             "id": "david-view",
             "label": "Reports David’s proposal.",
             "patterns": [
-              "\\\\bdavid\\\\b",
-              "\\\\b(suggested|proposed|should test|try)\\\\b"
+              "\\bdavid\\b",
+              "\\b(suggested|proposed|should test|try)\\b"
             ],
             "missingMessage": "Include David's proposal for a smaller test.",
             "missingMessageEs": "Incluye la propuesta de David de hacer una prueba más pequeña."
