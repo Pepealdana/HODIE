@@ -25,7 +25,7 @@ assert.match(app, /Not fully checked · Revisión parcial/);
 assert.match(app, /Review transcript · Revisar transcripción/);
 assert.match(app, /Related learning tip · Recurso relacionado/);
 assert.match(app, /No known rule matched this response/);
-assert.match(worker, /hodie-shell-v39/);
+assert.match(worker, /hodie-shell-v40/);
 assert.match(app, /function applyConversationFirstHome\(level, targetActivity, statement\)/);
 assert.match(app, /id="conversationComposer"/);
 assert.match(app, /data-home-level/);
