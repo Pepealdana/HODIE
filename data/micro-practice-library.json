@@ -6858,9 +6858,9 @@
       "answer": "Do not generalise beyond the stated evidence.",
       "feedback": {
         "correct": "Correct. No generalices más allá de la evidencia indicada.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. La evidencia solo permite afirmar que tres usuarios encontraron el menú más fácil de usar.",
         "incorrect": "Not quite. No generalices más allá de la evidencia indicada.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Limítate a lo que indica la evidencia: tres usuarios encontraron el menú más fácil de usar."
       }
     },
     {
@@ -6903,9 +6903,9 @@
       "answer": "The message gives the exact departure time.",
       "feedback": {
         "correct": "Correct. El mensaje indica la hora exacta de salida.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. El mensaje indica que el autobús número 8 sale a las 9:10.",
         "incorrect": "Not quite. El mensaje indica la hora exacta de salida.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Busca la hora indicada explícitamente en el mensaje: 9:10."
       }
     },
     {
@@ -8799,9 +8799,9 @@
       "answer": "Do not generalise beyond the stated evidence.",
       "feedback": {
         "correct": "Correct. No generalices más allá de la evidencia indicada.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. La evidencia solo permite afirmar que tres usuarios encontraron el menú más fácil de usar.",
         "incorrect": "Not quite. No generalices más allá de la evidencia indicada.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Limítate a lo que indica la evidencia: tres usuarios encontraron el menú más fácil de usar."
       }
     },
     {
@@ -8844,9 +8844,9 @@
       "answer": "The message gives the exact departure time.",
       "feedback": {
         "correct": "Correct. El mensaje indica la hora exacta de salida.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. El mensaje indica que el autobús número 8 sale a las 9:10.",
         "incorrect": "Not quite. El mensaje indica la hora exacta de salida.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Busca la hora indicada explícitamente en el mensaje: 9:10."
       }
     },
     {
@@ -9734,9 +9734,9 @@
       "answer": "Do not generalise beyond the stated evidence.",
       "feedback": {
         "correct": "Correct. No generalices más allá de la evidencia indicada.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. La evidencia solo permite afirmar que tres usuarios encontraron el menú más fácil de usar.",
         "incorrect": "Not quite. No generalices más allá de la evidencia indicada.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Limítate a lo que indica la evidencia: tres usuarios encontraron el menú más fácil de usar."
       }
     },
     {
@@ -9779,9 +9779,9 @@
       "answer": "The message gives the exact departure time.",
       "feedback": {
         "correct": "Correct. El mensaje indica la hora exacta de salida.",
-        "correctEs": "Correcto. undefined",
+        "correctEs": "Correcto. El mensaje indica que el autobús número 8 sale a las 9:10.",
         "incorrect": "Not quite. El mensaje indica la hora exacta de salida.",
-        "incorrectEs": "No exactamente. undefined"
+        "incorrectEs": "No exactamente. Busca la hora indicada explícitamente en el mensaje: 9:10."
       },
       "timeLimitSeconds": 45
     },
