@@ -93,7 +93,10 @@ function selectMixed(activities, limit, mini) {
   for (const skill of MIXED_SKILL_ORDER) {
     const candidate = pool.find((item) => {
       const itemSkill = item.primarySkill || item.skill;
-      return itemSkill === skill && !usedSkills.has(itemSkill);
+      if (itemSkill !== skill || usedSkills.has(itemSkill)) return false;
+      if (skill === "speaking") return item.type === "speak";
+      if (skill === "listening") return item.type === "listening";
+      return true;
     });
     if (candidate) {
       selected.push(candidate);
