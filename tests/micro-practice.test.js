@@ -51,6 +51,21 @@ assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-12"));
 assert.ok(reportedSpeechA2.every((item) => item.feedback?.correctEs && item.feedback?.incorrectEs),
   "Reported Speech A2 objective activities must provide bilingual correction feedback");
 
+const reportedProductionA2 = library.activities.find((item) => item.id === "MIC-RS-A2-08");
+const reportedProductionA2Result = evaluateMicroActivity(
+  reportedProductionA2,
+  "Sara said that she was working that day."
+);
+assert.equal(reportedProductionA2Result.correct, true,
+  "Reported Speech A2 production criteria should recognize a valid report");
+const reportedProductionB1 = library.activities.find((item) => item.id === "MIC-RS-B1-08");
+const reportedProductionB1Result = evaluateMicroActivity(
+  reportedProductionB1,
+  "Marta said the plan was too expensive, while David suggested testing a smaller version."
+);
+assert.equal(reportedProductionB1Result.correct, true,
+  "Reported Speech B1 criteria should recognize both reported viewpoints");
+
 const speakActivity = library.activities.find((item) => item.type === "speak");
 assert.equal(speakActivity.audioText, speakActivity.targetPhrase);
 assert.equal(speakActivity.audio?.language, "en-US");
