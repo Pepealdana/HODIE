@@ -48,7 +48,9 @@ assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-09"));
 assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-10"));
 assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-11"));
 assert.ok(reportedSpeechA2.some((item) => item.id === "MIC-RS-A2-12"));
-assert.ok(reportedSpeechA2.every((item) => item.feedback?.correctEs && item.feedback?.incorrectEs),
+assert.ok(reportedSpeechA2
+  .filter((item) => ["choose", "complete", "match", "listening", "order"].includes(item.type))
+  .every((item) => item.feedback?.correctEs && item.feedback?.incorrectEs),
   "Reported Speech A2 objective activities must provide bilingual correction feedback");
 
 const reportedProductionA2 = library.activities.find((item) => item.id === "MIC-RS-A2-08");
