@@ -1328,10 +1328,10 @@ function startPractice(mode, activityId = null) {
     selectedActivities = selectMicroActivities(microLibrary, options);
   }
 
+  // Keep launch work small: linguistic links are computed for the activity
+  // being rendered, not eagerly for every activity in a practice sequence.
   const activities = selectedActivities.map((activity) => ({
     ...activity,
-    // Learning links tailor the activity; they never limit the correction engine.
-    linguisticLinks: getLinguisticResourcesForActivity(activity),
     knowledgeAvailability: "global",
     correctionIndependentOfActivity: true
   }));
@@ -1353,7 +1353,9 @@ function startPractice(mode, activityId = null) {
     mode,
     surface: "practice",
     canDoId: session.target.canDoId,
-    knowledgeIds: [...new Set(activities.flatMap((activity) => getKnowledgeForCanDo(knowledgeGraph, activity.canDoId).map((node) => node.id)))]
+    // Record knowledge relevant to the first item now; avoid scanning the graph
+    // for every queued activity during the button's click handler.
+    knowledgeIds: [...new Set(getKnowledgeForCanDo(knowledgeGraph, activities[0].canDoId).map((node) => node.id))]
   });
   saveProfile();
 
@@ -1376,6 +1378,10 @@ function renderMicroActivity() {
   if (practice) practice.timerInterval = null;
   practice.answered = false;
   const activity = practice.activities[practice.index];
+  if (activity && !activity.linguisticLinks) {
+    // Defer the more expensive linguistic-resource search until this item is visible.
+    activity.linguisticLinks = getLinguisticResourcesForActivity(activity);
+  }
   if (!activity) {
     finishPractice();
     return;
